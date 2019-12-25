@@ -8,13 +8,13 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_UMG_enums.hpp"
-#include "SoT_SlateCore_classes.hpp"
-#include "SoT_Engine_classes.hpp"
-#include "SoT_InputCore_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_MovieScene_classes.hpp"
+#include "SoT_Engine_classes.hpp"
+#include "SoT_SlateCore_classes.hpp"
 #include "SoT_MovieSceneTracks_classes.hpp"
+#include "SoT_MovieScene_classes.hpp"
 #include "SoT_Slate_classes.hpp"
+#include "SoT_InputCore_classes.hpp"
 
 namespace SDK
 {
@@ -38,24 +38,6 @@ struct FPropertyPathSegment
 struct FDynamicPropertyPath
 {
 	TArray<struct FPropertyPathSegment>                Segments;                                                 // 0x0000(0x0010) (ZeroConstructor)
-};
-
-// ScriptStruct UMG.AnchorData
-// 0x0028
-struct FAnchorData
-{
-	struct FMargin                                     Offsets;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible)
-	struct FAnchors                                    Anchors;                                                  // 0x0010(0x0010) (Edit, BlueprintVisible)
-	struct FVector2D                                   Alignment;                                                // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct UMG.SlateChildSize
-// 0x0008
-struct FSlateChildSize
-{
-	float                                              Value;                                                    // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ESlateSizeRule>                        SizeRule;                                                 // 0x0004(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct UMG.WidgetTransform
@@ -88,6 +70,24 @@ struct FNamedSlotBinding
 struct FPaintContext
 {
 	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
+};
+
+// ScriptStruct UMG.AnchorData
+// 0x0028
+struct FAnchorData
+{
+	struct FMargin                                     Offsets;                                                  // 0x0000(0x0010) (Edit, BlueprintVisible)
+	struct FAnchors                                    Anchors;                                                  // 0x0010(0x0010) (Edit, BlueprintVisible)
+	struct FVector2D                                   Alignment;                                                // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct UMG.SlateChildSize
+// 0x0008
+struct FSlateChildSize
+{
+	float                                              Value;                                                    // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESlateSizeRule>                        SizeRule;                                                 // 0x0004(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
 };
 
 // ScriptStruct UMG.WidgetAnimationBinding

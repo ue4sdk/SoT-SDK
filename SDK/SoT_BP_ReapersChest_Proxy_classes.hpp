@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ReapersChest_Proxy.BP_ReapersChest_Proxy_C
-// 0x0020 (0x0900 - 0x08E0)
+// 0x0020 (0x0870 - 0x0850)
 class ABP_ReapersChest_Proxy_C : public ABP_TreasureChestProxy_C
 {
 public:
-	class UWorldMarkerOnDigPositionComponent*          WorldMarkerOnDigPosition;                                 // 0x08E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_reapers_chest_smoke;                                  // 0x08E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWorldMarkerOnSpawnPositionComponent*        WorldMarkerOnSpawnPosition;                               // 0x08F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UReapersMarkTrackedItemComponent*            ReapersMarkTrackedItem;                                   // 0x08F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWorldMarkerOnDigPositionComponent*          WorldMarkerOnDigPosition;                                 // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_reapers_chest_smoke;                                  // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWorldMarkerOnSpawnPositionComponent*        WorldMarkerOnSpawnPosition;                               // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UReapersMarkTrackedItemComponent*            ReapersMarkTrackedItem;                                   // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

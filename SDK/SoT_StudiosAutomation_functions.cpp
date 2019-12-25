@@ -1381,6 +1381,27 @@ void UAutomationBlueprintFunctionLibrary::DelayForFrames(class UObject* WorldCon
 }
 
 
+// Function StudiosAutomation.AutomationBlueprintFunctionLibrary.CollectGarbageNow
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// bool                           FullPurge                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAutomationBlueprintFunctionLibrary::CollectGarbageNow(bool FullPurge)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.CollectGarbageNow"));
+
+	struct
+	{
+		bool                           FullPurge;
+	} params;
+
+	params.FullPurge = FullPurge;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BlockAsyncLoading
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:

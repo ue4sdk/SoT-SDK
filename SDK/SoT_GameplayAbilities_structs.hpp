@@ -8,16 +8,86 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_GameplayAbilities_enums.hpp"
-#include "SoT_CoreUObject_classes.hpp"
-#include "SoT_GameplayTasks_classes.hpp"
-#include "SoT_GameplayTags_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
+#include "SoT_GameplayTasks_classes.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct GameplayAbilities.GameplayEffectContextHandle
+// 0x0020
+struct FGameplayEffectContextHandle
+{
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
+};
+
+// ScriptStruct GameplayAbilities.GameplayCueParameters
+// 0x0088
+struct FGameplayCueParameters
+{
+	float                                              NormalizedMagnitude;                                      // 0x0000(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              RawMagnitude;                                             // 0x0004(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FGameplayEffectContextHandle                EffectContext;                                            // 0x0008(0x0020) (BlueprintVisible)
+	struct FName                                       MatchedTagName;                                           // 0x0028(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FGameplayTag                                OriginalTag;                                              // 0x0030(0x0008) (BlueprintVisible)
+	struct FGameplayTagContainer                       AggregatedSourceTags;                                     // 0x0038(0x0028) (BlueprintVisible)
+	struct FGameplayTagContainer                       AggregatedTargetTags;                                     // 0x0060(0x0028) (BlueprintVisible)
+};
+
+// ScriptStruct GameplayAbilities.GameplayAbilityTargetDataHandle
+// 0x0010
+struct FGameplayAbilityTargetDataHandle
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct GameplayAbilities.GameplayEffectSpecHandle
+// 0x0020
+struct FGameplayEffectSpecHandle
+{
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
+};
+
+// ScriptStruct GameplayAbilities.GameplayEventData
+// 0x00A0
+struct FGameplayEventData
+{
+	struct FGameplayTag                                EventTag;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible)
+	class AActor*                                      Instigator;                                               // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Target;                                                   // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     OptionalObject;                                           // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UObject*                                     OptionalObject2;                                          // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FGameplayEffectContextHandle                ContextHandle;                                            // 0x0028(0x0020) (Edit, BlueprintVisible)
+	struct FGameplayTagContainer                       InstigatorTags;                                           // 0x0048(0x0028) (Edit, BlueprintVisible)
+	struct FGameplayTagContainer                       TargetTags;                                               // 0x0070(0x0028) (Edit, BlueprintVisible)
+	float                                              EventMagnitude;                                           // 0x0098(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct GameplayAbilities.GameplayTargetDataFilter
+// 0x0028
+struct FGameplayTargetDataFilter
+{
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	class AActor*                                      SelfActor;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ETargetDataFilterSelf>                 SelfFilter;                                               // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
+	class UClass*                                      RequiredActorClass;                                       // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               bReverseFilter;                                           // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
+};
+
+// ScriptStruct GameplayAbilities.GameplayTargetDataFilterHandle
+// 0x0018
+struct FGameplayTargetDataFilterHandle
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
+};
 
 // ScriptStruct GameplayAbilities.GameplayAttribute
 // 0x0008
@@ -26,14 +96,33 @@ struct FGameplayAttribute
 	class UProperty*                                   Attribute;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
-// ScriptStruct GameplayAbilities.GameplayEffectAttributeCaptureDefinition
-// 0x0010
-struct FGameplayEffectAttributeCaptureDefinition
+// ScriptStruct GameplayAbilities.ActiveGameplayEffectHandle
+// 0x0004
+struct FActiveGameplayEffectHandle
 {
-	struct FGameplayAttribute                          AttributeToCapture;                                       // 0x0000(0x0008) (Edit, DisableEditOnInstance)
-	TEnumAsByte<EGameplayEffectAttributeCaptureSource> AttributeSource;                                          // 0x0008(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               bSnapshot;                                                // 0x0009(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x000A(0x0006) MISSED OFFSET
+	int                                                Handle;                                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct GameplayAbilities.GameplayTagRequirements
+// 0x0050
+struct FGameplayTagRequirements
+{
+	struct FGameplayTagContainer                       RequireTags;                                              // 0x0000(0x0028) (Edit, BlueprintVisible)
+	struct FGameplayTagContainer                       IgnoreTags;                                               // 0x0028(0x0028) (Edit, BlueprintVisible)
+};
+
+// ScriptStruct GameplayAbilities.GameplayAbilityTargetingLocationInfo
+// 0x0070
+struct FGameplayAbilityTargetingLocationInfo
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+	TEnumAsByte<EGameplayAbilityTargetingLocationType> LocationType;                                             // 0x0010(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xF];                                       // 0x0011(0x000F) MISSED OFFSET
+	struct FTransform                                  LiteralTransform;                                         // 0x0020(0x0030) (BlueprintVisible, IsPlainOldData)
+	class AActor*                                      SourceActor;                                              // 0x0050(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMeshComponent*                              SourceComponent;                                          // 0x0058(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UGameplayAbility*                            SourceAbility;                                            // 0x0060(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       SourceSocketName;                                         // 0x0068(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct GameplayAbilities.ScalableFloat
@@ -44,6 +133,16 @@ struct FScalableFloat
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
 	struct FCurveTableRowHandle                        Curve;                                                    // 0x0008(0x0010) (Edit, DisableEditOnInstance)
 	unsigned char                                      UnknownData01[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct GameplayAbilities.GameplayEffectAttributeCaptureDefinition
+// 0x0010
+struct FGameplayEffectAttributeCaptureDefinition
+{
+	struct FGameplayAttribute                          AttributeToCapture;                                       // 0x0000(0x0008) (Edit, DisableEditOnInstance)
+	TEnumAsByte<EGameplayEffectAttributeCaptureSource> AttributeSource;                                          // 0x0008(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               bSnapshot;                                                // 0x0009(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x000A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct GameplayAbilities.AttributeBasedFloat
@@ -88,14 +187,6 @@ struct FGameplayEffectModifierMagnitude
 	struct FAttributeBasedFloat                        AttributeBasedMagnitude;                                  // 0x0028(0x00D8) (Edit, DisableEditOnInstance)
 	struct FCustomCalculationBasedFloat                CustomMagnitude;                                          // 0x0100(0x0068) (Edit, DisableEditOnInstance)
 	struct FSetByCallerFloat                           SetByCallerMagnitude;                                     // 0x0168(0x0008) (Edit, DisableEditOnInstance)
-};
-
-// ScriptStruct GameplayAbilities.GameplayTagRequirements
-// 0x0050
-struct FGameplayTagRequirements
-{
-	struct FGameplayTagContainer                       RequireTags;                                              // 0x0000(0x0028) (Edit, BlueprintVisible)
-	struct FGameplayTagContainer                       IgnoreTags;                                               // 0x0028(0x0028) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct GameplayAbilities.GameplayModifierInfo
@@ -196,29 +287,6 @@ struct FGameplayAbilityActivationInfo
 	struct FPredictionKey                              PredictionKeyWhenActivated;                               // 0x0008(0x0018)
 };
 
-// ScriptStruct GameplayAbilities.GameplayEffectContextHandle
-// 0x0020
-struct FGameplayEffectContextHandle
-{
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
-};
-
-// ScriptStruct GameplayAbilities.GameplayEventData
-// 0x00A0
-struct FGameplayEventData
-{
-	struct FGameplayTag                                EventTag;                                                 // 0x0000(0x0008) (Edit, BlueprintVisible)
-	class AActor*                                      Instigator;                                               // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Target;                                                   // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     OptionalObject;                                           // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     OptionalObject2;                                          // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FGameplayEffectContextHandle                ContextHandle;                                            // 0x0028(0x0020) (Edit, BlueprintVisible)
-	struct FGameplayTagContainer                       InstigatorTags;                                           // 0x0048(0x0028) (Edit, BlueprintVisible)
-	struct FGameplayTagContainer                       TargetTags;                                               // 0x0070(0x0028) (Edit, BlueprintVisible)
-	float                                              EventMagnitude;                                           // 0x0098(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
-};
-
 // ScriptStruct GameplayAbilities.AbilityTriggerData
 // 0x000C
 struct FAbilityTriggerData
@@ -226,27 +294,6 @@ struct FAbilityTriggerData
 	struct FGameplayTag                                TriggerTag;                                               // 0x0000(0x0008) (Edit)
 	TEnumAsByte<EGameplayAbilityTriggerSource>         TriggerSource;                                            // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct GameplayAbilities.GameplayAbilityTargetingLocationInfo
-// 0x0070
-struct FGameplayAbilityTargetingLocationInfo
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-	TEnumAsByte<EGameplayAbilityTargetingLocationType> LocationType;                                             // 0x0010(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xF];                                       // 0x0011(0x000F) MISSED OFFSET
-	struct FTransform                                  LiteralTransform;                                         // 0x0020(0x0030) (BlueprintVisible, IsPlainOldData)
-	class AActor*                                      SourceActor;                                              // 0x0050(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMeshComponent*                              SourceComponent;                                          // 0x0058(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UGameplayAbility*                            SourceAbility;                                            // 0x0060(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SourceSocketName;                                         // 0x0068(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct GameplayAbilities.GameplayEffectSpecHandle
-// 0x0020
-struct FGameplayEffectSpecHandle
-{
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct GameplayAbilities.GameplayAbilityActorInfo
@@ -260,53 +307,6 @@ struct FGameplayAbilityActorInfo
 	TWeakObjectPtr<class UAbilitySystemComponent>      AbilitySystemComponent;                                   // 0x0020(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
 	TWeakObjectPtr<class UAnimInstance>                AnimInstance;                                             // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	TWeakObjectPtr<class UMovementComponent>           MovementComponent;                                        // 0x0030(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-};
-
-// ScriptStruct GameplayAbilities.GameplayCueParameters
-// 0x0088
-struct FGameplayCueParameters
-{
-	float                                              NormalizedMagnitude;                                      // 0x0000(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              RawMagnitude;                                             // 0x0004(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FGameplayEffectContextHandle                EffectContext;                                            // 0x0008(0x0020) (BlueprintVisible)
-	struct FName                                       MatchedTagName;                                           // 0x0028(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FGameplayTag                                OriginalTag;                                              // 0x0030(0x0008) (BlueprintVisible)
-	struct FGameplayTagContainer                       AggregatedSourceTags;                                     // 0x0038(0x0028) (BlueprintVisible)
-	struct FGameplayTagContainer                       AggregatedTargetTags;                                     // 0x0060(0x0028) (BlueprintVisible)
-};
-
-// ScriptStruct GameplayAbilities.GameplayAbilityTargetDataHandle
-// 0x0010
-struct FGameplayAbilityTargetDataHandle
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-};
-
-// ScriptStruct GameplayAbilities.ActiveGameplayEffectHandle
-// 0x0004
-struct FActiveGameplayEffectHandle
-{
-	int                                                Handle;                                                   // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct GameplayAbilities.GameplayTargetDataFilter
-// 0x0028
-struct FGameplayTargetDataFilter
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	class AActor*                                      SelfActor;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ETargetDataFilterSelf>                 SelfFilter;                                               // 0x0010(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
-	class UClass*                                      RequiredActorClass;                                       // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               bReverseFilter;                                           // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x0021(0x0007) MISSED OFFSET
-};
-
-// ScriptStruct GameplayAbilities.GameplayTargetDataFilterHandle
-// 0x0018
-struct FGameplayTargetDataFilterHandle
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct GameplayAbilities.AttributeDefaults
@@ -500,6 +500,13 @@ struct FGameplayEffectSpecForRPC
 	unsigned char                                      UnknownData00[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct GameplayAbilities.WorldReticleParameters
+// 0x000C
+struct FWorldReticleParameters
+{
+	struct FVector                                     AOEScale;                                                 // 0x0000(0x000C) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct GameplayAbilities.GameplayAbilityBindInfo
 // 0x0010
 struct FGameplayAbilityBindInfo
@@ -507,13 +514,6 @@ struct FGameplayAbilityBindInfo
 	TEnumAsByte<EGameplayAbilityInputBinds>            Command;                                                  // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
 	class UClass*                                      GameplayAbilityClass;                                     // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct GameplayAbilities.WorldReticleParameters
-// 0x000C
-struct FWorldReticleParameters
-{
-	struct FVector                                     AOEScale;                                                 // 0x0000(0x000C) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct GameplayAbilities.GameplayCuePendingExecute
@@ -654,6 +654,14 @@ struct FGameplayAbilityTargetData_LocationInfo : public FGameplayAbilityTargetDa
 	struct FGameplayAbilityTargetingLocationInfo       TargetLocation;                                           // 0x0080(0x0070) (Edit, BlueprintVisible)
 };
 
+// ScriptStruct GameplayAbilities.GameplayAbilitySpecHandleAndPredictionKey
+// 0x0008
+struct FGameplayAbilitySpecHandleAndPredictionKey
+{
+	struct FGameplayAbilitySpecHandle                  AbilityHandle;                                            // 0x0000(0x0004)
+	int                                                PredictionKeyAtCreation;                                  // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct GameplayAbilities.ActiveGameplayEffectQuery
 // 0x0050
 struct FActiveGameplayEffectQuery
@@ -673,14 +681,6 @@ struct FGameplayEffectQuery
 	class UObject*                                     EffectSource;                                             // 0x00B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	class UGameplayEffect*                             EffectDefinition;                                         // 0x00B8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x10];                                      // 0x00C0(0x0010) MISSED OFFSET
-};
-
-// ScriptStruct GameplayAbilities.GameplayAbilitySpecHandleAndPredictionKey
-// 0x0008
-struct FGameplayAbilitySpecHandleAndPredictionKey
-{
-	struct FGameplayAbilitySpecHandle                  AbilityHandle;                                            // 0x0000(0x0004)
-	int                                                PredictionKeyAtCreation;                                  // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 }

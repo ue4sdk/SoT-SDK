@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AthenaRigging_enums.hpp"
-#include "SoT_Tethering_classes.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_AthenaSocketLookup_classes.hpp"
+#include "SoT_Tethering_classes.hpp"
 
 namespace SDK
 {
@@ -168,21 +168,6 @@ struct FRiggingSystemLineGroup
 {
 	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TArray<struct FRiggingSystemLineParams>            Lines;                                                    // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-};
-
-// ScriptStruct AthenaRigging.RopeAggregateTickFunction
-// 0x0018 (0x0060 - 0x0048)
-struct FRopeAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
-};
-
-// ScriptStruct AthenaRigging.RiggingSystemAggregateTickFunction
-// 0x0018 (0x0060 - 0x0048)
-struct FRiggingSystemAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
-	TArray<class ARiggingSystem*>                      RiggingSystems;                                           // 0x0050(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct AthenaRigging.RopeCatenaryLengthPair

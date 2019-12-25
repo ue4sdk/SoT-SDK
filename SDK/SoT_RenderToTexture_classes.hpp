@@ -14,6 +14,24 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class RenderToTexture.RenderToTextureFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class URenderToTextureFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RenderToTexture.RenderToTextureFunctionLibrary"));
+		return ptr;
+	}
+
+
+	static class URenderToTextureSceneDetails* GetRenderToTexture(const struct FName& Identifier);
+	static class URenderToTextureSceneDetails* CreateRenderToTexture(const struct FName& Identifier, class UClass* ClassToSpawn, const struct FIntPoint& Resolution, bool bForceLinearGamma);
+};
+
+
 // Class RenderToTexture.RenderToTextureSceneDetails
 // 0x0080 (0x00A8 - 0x0028)
 class URenderToTextureSceneDetails : public UObject
@@ -37,24 +55,6 @@ public:
 	class UTextureRenderTarget2D* GetTexture();
 	class AActor* GetInstance();
 	void DestroyTexture();
-};
-
-
-// Class RenderToTexture.RenderToTextureFunctionLibrary
-// 0x0000 (0x0028 - 0x0028)
-class URenderToTextureFunctionLibrary : public UBlueprintFunctionLibrary
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RenderToTexture.RenderToTextureFunctionLibrary"));
-		return ptr;
-	}
-
-
-	static class URenderToTextureSceneDetails* GetRenderToTexture(const struct FName& Identifier);
-	static class URenderToTextureSceneDetails* CreateRenderToTexture(const struct FName& Identifier, class UClass* ClassToSpawn, const struct FIntPoint& Resolution, bool bForceLinearGamma);
 };
 
 

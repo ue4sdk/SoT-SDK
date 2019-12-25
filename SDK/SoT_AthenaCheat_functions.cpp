@@ -657,6 +657,22 @@ void UAthenaCheatManager::ToggleDeathCamera()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.ToggleDamageAllowedToPlayerShip
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ToggleDamageAllowedToPlayerShip()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ToggleDamageAllowedToPlayerShip"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.ToggleContestScoreDebug
 // (Final, Exec, Native, Public)
 
@@ -864,6 +880,35 @@ void UAthenaCheatManager::TeleportPlayerToSafety()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.TeleportPlayerToOffsetAndReturn
+// (Final, Exec, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          OffsetX                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          OffsetY                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          OffsetZ                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::TeleportPlayerToOffsetAndReturn(float OffsetX, float OffsetY, float OffsetZ, float ReturnTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.TeleportPlayerToOffsetAndReturn"));
+
+	struct
+	{
+		float                          OffsetX;
+		float                          OffsetY;
+		float                          OffsetZ;
+		float                          ReturnTime;
+	} params;
+
+	params.OffsetX = OffsetX;
+	params.OffsetY = OffsetY;
+	params.OffsetZ = OffsetZ;
+	params.ReturnTime = ReturnTime;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -2575,6 +2620,22 @@ void UAthenaCheatManager::SlowMotionOverride(bool InValue)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SkipToEndOfOnboarding
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::SkipToEndOfOnboarding()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SkipToEndOfOnboarding"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SinkShipWithKeelOverIndex
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -3454,6 +3515,26 @@ void UAthenaCheatManager::SetNonCrewChatSpatialisation(bool Enabled)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.SetMaxNumOfSpawnedAI
+// (Final, Exec, Native, Public)
+// Parameters:
+// int                            MaxNumOfSpawnedActors          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SetMaxNumOfSpawnedAI(int MaxNumOfSpawnedActors)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SetMaxNumOfSpawnedAI"));
+
+	struct
+	{
+		int                            MaxNumOfSpawnedActors;
+	} params;
+
+	params.MaxNumOfSpawnedActors = MaxNumOfSpawnedActors;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.SetMaxMovingPetsOnShips
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -3721,6 +3802,26 @@ void UAthenaCheatManager::SetDeathPenaltyRespawnTimer(float InSpawnTimer)
 	} params;
 
 	params.InSpawnTimer = InSpawnTimer;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SetDamageAllowedToPlayerShip
+// (Final, Exec, Native, Public)
+// Parameters:
+// bool                           InAllowDamage                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SetDamageAllowedToPlayerShip(bool InAllowDamage)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SetDamageAllowedToPlayerShip"));
+
+	struct
+	{
+		bool                           InAllowDamage;
+	} params;
+
+	params.InAllowDamage = InAllowDamage;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -4139,6 +4240,22 @@ void UAthenaCheatManager::ResetStats()
 void UAthenaCheatManager::ResetMouseDelta()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ResetMouseDelta"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.ResetMaxNumOfSpawnedAI
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::ResetMaxNumOfSpawnedAI()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ResetMaxNumOfSpawnedAI"));
 
 	struct
 	{
@@ -5164,6 +5281,22 @@ void UAthenaCheatManager::KillAllSkeletons()
 void UAthenaCheatManager::KillAllPlayers()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.KillAllPlayers"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.KillAllDebugAISpawners
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::KillAllDebugAISpawners()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.KillAllDebugAISpawners"));
 
 	struct
 	{
@@ -7127,6 +7260,49 @@ void UAthenaCheatManager::CreateDebugReapersChestMarkerAtPlayerLocation()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.CreateDebugAISpawnerAt
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  SpawnerAssetName               (Parm, ZeroConstructor)
+// class FString                  LocationActorName              (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::CreateDebugAISpawnerAt(const class FString& SpawnerAssetName, const class FString& LocationActorName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.CreateDebugAISpawnerAt"));
+
+	struct
+	{
+		class FString                  SpawnerAssetName;
+		class FString                  LocationActorName;
+	} params;
+
+	params.SpawnerAssetName = SpawnerAssetName;
+	params.LocationActorName = LocationActorName;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.CreateDebugAISpawner
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  SpawnerAssetName               (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::CreateDebugAISpawner(const class FString& SpawnerAssetName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.CreateDebugAISpawner"));
+
+	struct
+	{
+		class FString                  SpawnerAssetName;
+	} params;
+
+	params.SpawnerAssetName = SpawnerAssetName;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.CompleteVoyage
 // (Final, Exec, Native, Public)
 
@@ -7764,20 +7940,20 @@ void UAthenaCheatManager::AddPlayerToCrew(const class FString& ActorIdString, co
 // (Final, Exec, Native, Public)
 // Parameters:
 // int                            PetTypeIndex                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            PetCustomisationIndex          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            PetPartIndex                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaCheatManager::AddPetForPlayer(int PetTypeIndex, int PetCustomisationIndex)
+void UAthenaCheatManager::AddPetForPlayer(int PetTypeIndex, int PetPartIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.AddPetForPlayer"));
 
 	struct
 	{
 		int                            PetTypeIndex;
-		int                            PetCustomisationIndex;
+		int                            PetPartIndex;
 	} params;
 
 	params.PetTypeIndex = PetTypeIndex;
-	params.PetCustomisationIndex = PetCustomisationIndex;
+	params.PetPartIndex = PetPartIndex;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -7787,20 +7963,20 @@ void UAthenaCheatManager::AddPetForPlayer(int PetTypeIndex, int PetCustomisation
 // (Final, Exec, Native, Public)
 // Parameters:
 // int                            PetTypeIndex                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            PetCustomisationIndex          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            PetPartIndex                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaCheatManager::AddPetForAllPlayers(int PetTypeIndex, int PetCustomisationIndex)
+void UAthenaCheatManager::AddPetForAllPlayers(int PetTypeIndex, int PetPartIndex)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.AddPetForAllPlayers"));
 
 	struct
 	{
 		int                            PetTypeIndex;
-		int                            PetCustomisationIndex;
+		int                            PetPartIndex;
 	} params;
 
 	params.PetTypeIndex = PetTypeIndex;
-	params.PetCustomisationIndex = PetCustomisationIndex;
+	params.PetPartIndex = PetPartIndex;
 
 	UObject::ProcessEvent(fn, &params);
 }

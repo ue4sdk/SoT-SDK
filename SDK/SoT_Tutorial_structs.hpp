@@ -8,12 +8,24 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct Tutorial.ContextualTutorialPromptDesc
+// 0x0018
+struct FContextualTutorialPromptDesc
+{
+	class UClass*                                      PromptActorClass;                                         // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      AccessKey;                                                // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MustBeUnderCount;                                         // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
 
 // ScriptStruct Tutorial.TutorialStepEndedTelemetryEvent
 // 0x0028
@@ -31,6 +43,13 @@ struct FTutorialStepEndedTelemetryEvent
 struct FTutorialShowTutorialLegendaryTavernStrangerEvent
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Tutorial.TutorialPromptsIncrementEvent
+// 0x0008
+struct FTutorialPromptsIncrementEvent
+{
+	class UClass*                                      AccessKey;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

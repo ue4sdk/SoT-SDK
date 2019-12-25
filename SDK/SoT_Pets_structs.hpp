@@ -8,14 +8,14 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Pets_enums.hpp"
+#include "SoT_Interaction_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_AthenaAI_classes.hpp"
-#include "SoT_RareAudio_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
-#include "SoT_Athena_classes.hpp"
-#include "SoT_Engine_classes.hpp"
-#include "SoT_Interaction_classes.hpp"
+#include "SoT_RareAudio_classes.hpp"
 
 namespace SDK
 {
@@ -40,13 +40,14 @@ struct FPetHangoutSpotParams
 };
 
 // ScriptStruct Pets.HangoutSpotParams
-// 0x0020
+// 0x0028
 struct FHangoutSpotParams
 {
 	struct FName                                       HangoutSpotName;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	TArray<struct FPetHangoutSpotParams>               PetParams;                                                // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       FeatureName;                                              // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Pets.PetDangerHearingThreatResponse
@@ -125,7 +126,7 @@ struct FPetCustomisation
 // 0x0038
 struct FPetListingTypeEntry
 {
-	TArray<struct FPetCustomisation>                   PetCustomisations;                                        // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       PetPartsCategory;                                         // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FStringClassReference                       PetType;                                                  // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FName                                       FeatureToggleName;                                        // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class FString                                      PetListingName;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
@@ -198,18 +199,18 @@ struct FWieldablePetHungerAnimationData
 	float                                              AnimTimeout;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
-// ScriptStruct Pets.WieldablePetAggregateTickFunction
-// 0x0098 (0x00E0 - 0x0048)
-struct FWieldablePetAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x98];                                      // 0x0048(0x0098) MISSED OFFSET
-};
-
 // ScriptStruct Pets.EventWieldablePetPendingDrop
 // 0x0001
 struct FEventWieldablePetPendingDrop
 {
 	TEnumAsByte<EWieldablePetDropRequestReason>        DropRequestReason;                                        // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Pets.EventNewPetThreatDetected
+// 0x0001
+struct FEventNewPetThreatDetected
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Pets.EventPetDismissed
@@ -275,6 +276,20 @@ struct FEventPetPerchSpotEnabledStateChanged
 struct FEventPetLeftHangout
 {
 	class AActor*                                      Pet;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Pets.EventPetSadnessEnd
+// 0x0001
+struct FEventPetSadnessEnd
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Pets.EventPetSadnessBegin
+// 0x0001
+struct FEventPetSadnessBegin
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Pets.EventPetOwnerAssigned

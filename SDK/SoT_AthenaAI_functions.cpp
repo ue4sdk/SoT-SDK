@@ -1256,251 +1256,6 @@ void AAthenaAICharacterController::ClearOverridePrioritiseInteractablesBeforeEne
 }
 
 
-// Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// TAssetPtr<class UClass>        AIType                         (ConstParm, Parm)
-// TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset                       (ConstParm, Parm)
-// TAssetPtr<class ULoadoutAsset> Loadout                        (ConstParm, Parm)
-// TAssetPtr<class UAthenaAIFormDataAsset> Form                           (ConstParm, Parm)
-// class UClass*                  ClassId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Pos                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                Rot                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FName                   Region                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AActor*                  TriggerActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   NavMeshOverride                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          Delay                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, class UClass* ClassId, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings"));
-
-	struct
-	{
-		TAssetPtr<class UClass>        AIType;
-		TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset;
-		TAssetPtr<class ULoadoutAsset> Loadout;
-		TAssetPtr<class UAthenaAIFormDataAsset> Form;
-		class UClass*                  ClassId;
-		struct FVector                 Pos;
-		struct FRotator                Rot;
-		struct FName                   Region;
-		class AActor*                  TriggerActor;
-		struct FName                   NavMeshOverride;
-		float                          Delay;
-	} params;
-
-	params.AIType = AIType;
-	params.Skillset = Skillset;
-	params.Loadout = Loadout;
-	params.Form = Form;
-	params.ClassId = ClassId;
-	params.Pos = Pos;
-	params.Rot = Rot;
-	params.Region = Region;
-	params.TriggerActor = TriggerActor;
-	params.NavMeshOverride = NavMeshOverride;
-	params.Delay = Delay;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// TAssetPtr<class UClass>        AIClass                        (ConstParm, Parm)
-// class UAIEncounterSettings*    EncounterSettings              (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Pos                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FRotator                Rot                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           RequireNavMesh                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          Delay                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           MakeAIPermanentlyNetRelevant   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  InstancedNavMesh               (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaAIDebugFunctionLibrary::SpawnAI(TAssetPtr<class UClass> AIClass, class UAIEncounterSettings* EncounterSettings, const struct FVector& Pos, const struct FRotator& Rot, bool RequireNavMesh, float Delay, bool MakeAIPermanentlyNetRelevant, class AActor* InstancedNavMesh)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI"));
-
-	struct
-	{
-		TAssetPtr<class UClass>        AIClass;
-		class UAIEncounterSettings*    EncounterSettings;
-		struct FVector                 Pos;
-		struct FRotator                Rot;
-		bool                           RequireNavMesh;
-		float                          Delay;
-		bool                           MakeAIPermanentlyNetRelevant;
-		class AActor*                  InstancedNavMesh;
-	} params;
-
-	params.AIClass = AIClass;
-	params.EncounterSettings = EncounterSettings;
-	params.Pos = Pos;
-	params.Rot = Rot;
-	params.RequireNavMesh = RequireNavMesh;
-	params.Delay = Delay;
-	params.MakeAIPermanentlyNetRelevant = MakeAIPermanentlyNetRelevant;
-	params.InstancedNavMesh = InstancedNavMesh;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIDebugFunctionLibrary.SetEnvQueryManagerMaxAllowedSeconds
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// float                          InMaxAllowedSeconds            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 QueryOwner                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaAIDebugFunctionLibrary::SetEnvQueryManagerMaxAllowedSeconds(float InMaxAllowedSeconds, class UObject* QueryOwner)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SetEnvQueryManagerMaxAllowedSeconds"));
-
-	struct
-	{
-		float                          InMaxAllowedSeconds;
-		class UObject*                 QueryOwner;
-	} params;
-
-	params.InMaxAllowedSeconds = InMaxAllowedSeconds;
-	params.QueryOwner = QueryOwner;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIDebugFunctionLibrary.GetEnvQueryManagerNumRunningQueries
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 QueryOwner                     (Parm, ZeroConstructor, IsPlainOldData)
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UAthenaAIDebugFunctionLibrary::GetEnvQueryManagerNumRunningQueries(class UObject* QueryOwner)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.GetEnvQueryManagerNumRunningQueries"));
-
-	struct
-	{
-		class UObject*                 QueryOwner;
-		int                            ReturnValue;
-	} params;
-
-	params.QueryOwner = QueryOwner;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableMaximumSightSettings
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class AAthenaAIController*     AIController                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UAthenaAIControllerParamsDataAsset* ControllerParams               (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaAIDebugFunctionLibrary::EnableMaximumSightSettings(class AAthenaAIController* AIController, class UAthenaAIControllerParamsDataAsset* ControllerParams)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableMaximumSightSettings"));
-
-	struct
-	{
-		class AAthenaAIController*     AIController;
-		class UAthenaAIControllerParamsDataAsset* ControllerParams;
-	} params;
-
-	params.AIController = AIController;
-	params.ControllerParams = ControllerParams;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableBehaviorTreeLogging
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaAIDebugFunctionLibrary::EnableBehaviorTreeLogging(class UObject* WorldContext)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableBehaviorTreeLogging"));
-
-	struct
-	{
-		class UObject*                 WorldContext;
-	} params;
-
-	params.WorldContext = WorldContext;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIDebugFunctionLibrary.DespawnAIPawn
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaAIDebugFunctionLibrary::DespawnAIPawn(class APawn* Pawn)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.DespawnAIPawn"));
-
-	struct
-	{
-		class APawn*                   Pawn;
-	} params;
-
-	params.Pawn = Pawn;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIDebugFunctionLibrary.CanProjectPointToNavigation
-// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Point                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class ANavigationData*         NavData                        (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  FilterClass                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 QueryExtent                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FVector UAthenaAIDebugFunctionLibrary::CanProjectPointToNavigation(class UObject* WorldContext, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.CanProjectPointToNavigation"));
-
-	struct
-	{
-		class UObject*                 WorldContext;
-		struct FVector                 Point;
-		class ANavigationData*         NavData;
-		class UClass*                  FilterClass;
-		struct FVector                 QueryExtent;
-		struct FVector                 ReturnValue;
-	} params;
-
-	params.WorldContext = WorldContext;
-	params.Point = Point;
-	params.NavData = NavData;
-	params.FilterClass = FilterClass;
-	params.QueryExtent = QueryExtent;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
 // Function AthenaAI.AthenaAIPerceptionComponent.IsPerceptionSenseEnabled
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -1666,6 +1421,325 @@ class UClass* AAICreatureCharacter::GetAIStrategy()
 }
 
 
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// TAssetPtr<class UClass>        AIType                         (ConstParm, Parm)
+// TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset                       (ConstParm, Parm)
+// TAssetPtr<class ULoadoutAsset> Loadout                        (ConstParm, Parm)
+// TAssetPtr<class UAthenaAIFormDataAsset> Form                           (ConstParm, Parm)
+// TAssetPtr<class UClass>        AIItemSpawnComponent           (ConstParm, Parm)
+// class UClass*                  ClassId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Pos                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator                Rot                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FName                   Region                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor*                  TriggerActor                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   NavMeshOverride                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          Delay                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, TAssetPtr<class UClass> AIItemSpawnComponent, class UClass* ClassId, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings"));
+
+	struct
+	{
+		TAssetPtr<class UClass>        AIType;
+		TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset;
+		TAssetPtr<class ULoadoutAsset> Loadout;
+		TAssetPtr<class UAthenaAIFormDataAsset> Form;
+		TAssetPtr<class UClass>        AIItemSpawnComponent;
+		class UClass*                  ClassId;
+		struct FVector                 Pos;
+		struct FRotator                Rot;
+		struct FName                   Region;
+		class AActor*                  TriggerActor;
+		struct FName                   NavMeshOverride;
+		float                          Delay;
+	} params;
+
+	params.AIType = AIType;
+	params.Skillset = Skillset;
+	params.Loadout = Loadout;
+	params.Form = Form;
+	params.AIItemSpawnComponent = AIItemSpawnComponent;
+	params.ClassId = ClassId;
+	params.Pos = Pos;
+	params.Rot = Rot;
+	params.Region = Region;
+	params.TriggerActor = TriggerActor;
+	params.NavMeshOverride = NavMeshOverride;
+	params.Delay = Delay;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// TAssetPtr<class UClass>        AIClass                        (ConstParm, Parm)
+// class UAIEncounterSettings*    EncounterSettings              (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Pos                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator                Rot                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           RequireNavMesh                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          Delay                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           MakeAIPermanentlyNetRelevant   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  InstancedNavMesh               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaAIDebugFunctionLibrary::SpawnAI(TAssetPtr<class UClass> AIClass, class UAIEncounterSettings* EncounterSettings, const struct FVector& Pos, const struct FRotator& Rot, bool RequireNavMesh, float Delay, bool MakeAIPermanentlyNetRelevant, class AActor* InstancedNavMesh)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI"));
+
+	struct
+	{
+		TAssetPtr<class UClass>        AIClass;
+		class UAIEncounterSettings*    EncounterSettings;
+		struct FVector                 Pos;
+		struct FRotator                Rot;
+		bool                           RequireNavMesh;
+		float                          Delay;
+		bool                           MakeAIPermanentlyNetRelevant;
+		class AActor*                  InstancedNavMesh;
+	} params;
+
+	params.AIClass = AIClass;
+	params.EncounterSettings = EncounterSettings;
+	params.Pos = Pos;
+	params.Rot = Rot;
+	params.RequireNavMesh = RequireNavMesh;
+	params.Delay = Delay;
+	params.MakeAIPermanentlyNetRelevant = MakeAIPermanentlyNetRelevant;
+	params.InstancedNavMesh = InstancedNavMesh;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.SetEnvQueryManagerMaxAllowedSeconds
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// float                          InMaxAllowedSeconds            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 QueryOwner                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaAIDebugFunctionLibrary::SetEnvQueryManagerMaxAllowedSeconds(float InMaxAllowedSeconds, class UObject* QueryOwner)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SetEnvQueryManagerMaxAllowedSeconds"));
+
+	struct
+	{
+		float                          InMaxAllowedSeconds;
+		class UObject*                 QueryOwner;
+	} params;
+
+	params.InMaxAllowedSeconds = InMaxAllowedSeconds;
+	params.QueryOwner = QueryOwner;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.KillAllDebugAISpawners
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UAthenaAIDebugFunctionLibrary::KillAllDebugAISpawners()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.KillAllDebugAISpawners"));
+
+	struct
+	{
+	} params;
+
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.GetEnvQueryManagerNumRunningQueries
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 QueryOwner                     (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UAthenaAIDebugFunctionLibrary::GetEnvQueryManagerNumRunningQueries(class UObject* QueryOwner)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.GetEnvQueryManagerNumRunningQueries"));
+
+	struct
+	{
+		class UObject*                 QueryOwner;
+		int                            ReturnValue;
+	} params;
+
+	params.QueryOwner = QueryOwner;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableMaximumSightSettings
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AAthenaAIController*     AIController                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UAthenaAIControllerParamsDataAsset* ControllerParams               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaAIDebugFunctionLibrary::EnableMaximumSightSettings(class AAthenaAIController* AIController, class UAthenaAIControllerParamsDataAsset* ControllerParams)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableMaximumSightSettings"));
+
+	struct
+	{
+		class AAthenaAIController*     AIController;
+		class UAthenaAIControllerParamsDataAsset* ControllerParams;
+	} params;
+
+	params.AIController = AIController;
+	params.ControllerParams = ControllerParams;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableBehaviorTreeLogging
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaAIDebugFunctionLibrary::EnableBehaviorTreeLogging(class UObject* WorldContext)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableBehaviorTreeLogging"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+	} params;
+
+	params.WorldContext = WorldContext;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.DespawnAIPawn
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APawn*                   Pawn                           (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaAIDebugFunctionLibrary::DespawnAIPawn(class APawn* Pawn)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.DespawnAIPawn"));
+
+	struct
+	{
+		class APawn*                   Pawn;
+	} params;
+
+	params.Pawn = Pawn;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.CreateAISpawnerAtPosition
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UAISpawner*              SpawnerAsset                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Pos                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UAthenaAIDebugFunctionLibrary::CreateAISpawnerAtPosition(class UObject* WorldContext, class UAISpawner* SpawnerAsset, const struct FVector& Pos)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.CreateAISpawnerAtPosition"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		class UAISpawner*              SpawnerAsset;
+		struct FVector                 Pos;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.SpawnerAsset = SpawnerAsset;
+	params.Pos = Pos;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.CreateAISpawnerAtActor
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// class UAISpawner*              SpawnerAsset                   (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  SpawnLocationActor             (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaAIDebugFunctionLibrary::CreateAISpawnerAtActor(class UObject* WorldContext, class UAISpawner* SpawnerAsset, class AActor* SpawnLocationActor)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.CreateAISpawnerAtActor"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		class UAISpawner*              SpawnerAsset;
+		class AActor*                  SpawnLocationActor;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.SpawnerAsset = SpawnerAsset;
+	params.SpawnLocationActor = SpawnLocationActor;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIDebugFunctionLibrary.CanProjectPointToNavigation
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContext                   (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Point                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class ANavigationData*         NavData                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  FilterClass                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 QueryExtent                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FVector UAthenaAIDebugFunctionLibrary::CanProjectPointToNavigation(class UObject* WorldContext, const struct FVector& Point, class ANavigationData* NavData, class UClass* FilterClass, const struct FVector& QueryExtent)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.CanProjectPointToNavigation"));
+
+	struct
+	{
+		class UObject*                 WorldContext;
+		struct FVector                 Point;
+		class ANavigationData*         NavData;
+		class UClass*                  FilterClass;
+		struct FVector                 QueryExtent;
+		struct FVector                 ReturnValue;
+	} params;
+
+	params.WorldContext = WorldContext;
+	params.Point = Point;
+	params.NavData = NavData;
+	params.FilterClass = FilterClass;
+	params.QueryExtent = QueryExtent;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup
 // (Final, Native, Public, BlueprintCallable)
 
@@ -1677,6 +1751,26 @@ void UAIFaunaSpawner::SpawnFaunaGroup()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaFaunaAIController.SetDormancyCheckingEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           InDormancyCheckingEnabledInAutomation (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaFaunaAIController::SetDormancyCheckingEnabled(bool InDormancyCheckingEnabledInAutomation)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.SetDormancyCheckingEnabled"));
+
+	struct
+	{
+		bool                           InDormancyCheckingEnabledInAutomation;
+	} params;
+
+	params.InDormancyCheckingEnabledInAutomation = InDormancyCheckingEnabledInAutomation;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -2220,6 +2314,22 @@ void APet::OnRep_RollRequest()
 void APet::OnRep_PetOwner()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_PetOwner"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Pet.OnRep_PetIsSad
+// (Final, Native, Private)
+
+void APet::OnRep_PetIsSad()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_PetIsSad"));
 
 	struct
 	{

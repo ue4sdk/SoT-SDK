@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Spyglass_01_a_Wieldable.BP_Spyglass_01_a_Wieldable_C
-// 0x0000 (0x0940 - 0x0940)
+// 0x0000 (0x08A0 - 0x08A0)
 class ABP_Spyglass_01_a_Wieldable_C : public ABP_Spyglass_C
 {
 public:

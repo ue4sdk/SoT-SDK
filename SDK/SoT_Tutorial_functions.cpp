@@ -12,6 +12,53 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Tutorial.CompanyTutorialVoyageProgress.IsSameVoyage
+// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FText                   VoyageName                     (ConstParm, Parm, OutParm, ReferenceParm)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UCompanyTutorialVoyageProgress::IsSameVoyage(const struct FText& VoyageName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.CompanyTutorialVoyageProgress.IsSameVoyage"));
+
+	struct
+	{
+		struct FText                   VoyageName;
+		bool                           ReturnValue;
+	} params;
+
+	params.VoyageName = VoyageName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Tutorial.CompanyTutorialVoyageProgress.AssignVoyage
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  VoyageProposalDescClass        (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  TaleRankDescClass              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCompanyTutorialVoyageProgress::AssignVoyage(class UClass* VoyageProposalDescClass, class UClass* TaleRankDescClass)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.CompanyTutorialVoyageProgress.AssignVoyage"));
+
+	struct
+	{
+		class UClass*                  VoyageProposalDescClass;
+		class UClass*                  TaleRankDescClass;
+	} params;
+
+	params.VoyageProposalDescClass = VoyageProposalDescClass;
+	params.TaleRankDescClass = TaleRankDescClass;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Tutorial.Tutorial2019Component.ReceiveTutorial2019BeginPlayOnServer
 // (Event, Public, BlueprintEvent)
 
@@ -44,6 +91,58 @@ void UTutorial2019Component::ReceiveTutorial2019BeginPlayOnClient()
 }
 
 
+// Function Tutorial.Tutorial2019Component.ReceiveIntroBeginPlayOnServer
+// (Event, Public, BlueprintEvent)
+
+void UTutorial2019Component::ReceiveIntroBeginPlayOnServer()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.ReceiveIntroBeginPlayOnServer"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Tutorial.Tutorial2019Component.ReceiveIntroBeginPlayOnClient
+// (Event, Public, BlueprintEvent)
+
+void UTutorial2019Component::ReceiveIntroBeginPlayOnClient()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.ReceiveIntroBeginPlayOnClient"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Tutorial.Tutorial2019Component.OnRep_IsIntroEnabledByServer
+// (Final, Native, Private)
+// Parameters:
+// bool                           OldIsIntroEnabled              (Parm, ZeroConstructor, IsPlainOldData)
+
+void UTutorial2019Component::OnRep_IsIntroEnabledByServer(bool OldIsIntroEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.OnRep_IsIntroEnabledByServer"));
+
+	struct
+	{
+		bool                           OldIsIntroEnabled;
+	} params;
+
+	params.OldIsIntroEnabled = OldIsIntroEnabled;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Tutorial.Tutorial2019Component.OnRep_IsEnabledByServer
 // (Final, Native, Private)
 // Parameters:
@@ -64,6 +163,47 @@ void UTutorial2019Component::OnRep_IsEnabledByServer(bool OldIsEnabled)
 }
 
 
+// Function Tutorial.Tutorial2019Component.OnRep_HasCheckedTutorialStatus
+// (Final, Native, Private)
+// Parameters:
+// bool                           OldHasCheckedTutorialStatus    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UTutorial2019Component::OnRep_HasCheckedTutorialStatus(bool OldHasCheckedTutorialStatus)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.OnRep_HasCheckedTutorialStatus"));
+
+	struct
+	{
+		bool                           OldHasCheckedTutorialStatus;
+	} params;
+
+	params.OldHasCheckedTutorialStatus = OldHasCheckedTutorialStatus;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Tutorial.Tutorial2019Component.HasPrerequisites
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UTutorial2019Component::HasPrerequisites()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.HasPrerequisites"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Tutorial.Tutorial2019Component.ForceDisableComponent_Blueprint
 // (Event, Public, BlueprintEvent)
 
@@ -77,6 +217,47 @@ void UTutorial2019Component::ForceDisableComponent_Blueprint()
 
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Tutorial.Tutorial2019Component.BeginOnServer
+// (Final, Native, Public, BlueprintCallable)
+
+void UTutorial2019Component::BeginOnServer()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.BeginOnServer"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Tutorial.Tutorial2019FunctionLibrary.GetNearestOnboardingSpawnPoint
+// (Final, BlueprintAuthorityOnly, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  CharacterToTeleport            (Parm, ZeroConstructor, IsPlainOldData)
+// struct FTeleportLocation       ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FTeleportLocation UTutorial2019FunctionLibrary::GetNearestOnboardingSpawnPoint(class AActor* CharacterToTeleport)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019FunctionLibrary.GetNearestOnboardingSpawnPoint"));
+
+	struct
+	{
+		class AActor*                  CharacterToTeleport;
+		struct FTeleportLocation       ReturnValue;
+	} params;
+
+	params.CharacterToTeleport = CharacterToTeleport;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 

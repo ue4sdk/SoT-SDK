@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_enums.hpp"
-#include "SoT_InputCore_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_InputCore_classes.hpp"
 #include "SoT_SlateCore_classes.hpp"
 #include "SoT_Slate_classes.hpp"
 
@@ -23,16 +23,16 @@ namespace SDK
 // 0x0048
 struct FTickFunction
 {
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	TEnumAsByte<ETickingGroup>                         TickGroup;                                                // 0x0008(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1];                                       // 0x0009(0x0001) MISSED OFFSET
-	unsigned char                                      bTickEvenWhenPaused : 1;                                  // 0x000A(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bCanEverTick : 1;                                         // 0x000A(0x0001)
-	unsigned char                                      bStartWithTickEnabled : 1;                                // 0x000A(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      bAllowTickOnDedicatedServer : 1;                          // 0x000A(0x0001) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData02[0x31];                                      // 0x000B(0x0031) MISSED OFFSET
-	float                                              TickInterval;                                             // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x8];                                       // 0x0040(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
+	TEnumAsByte<ETickingGroup>                         TickGroup;                                                // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x0031(0x0001) MISSED OFFSET
+	unsigned char                                      bTickEvenWhenPaused : 1;                                  // 0x0032(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bCanEverTick : 1;                                         // 0x0032(0x0001)
+	unsigned char                                      bStartWithTickEnabled : 1;                                // 0x0032(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      bAllowTickOnDedicatedServer : 1;                          // 0x0032(0x0001) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData02[0xD];                                       // 0x0033(0x000D) MISSED OFFSET
+	float                                              TickInterval;                                             // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Engine.ActorComponentTickFunction
@@ -138,6 +138,63 @@ struct FHitResult
 	int                                                FaceIndex;                                                // 0x007C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Engine.BasedMovementInfo
+// 0x0038
+struct FBasedMovementInfo
+{
+	class UPrimitiveComponent*                         MovementBase;                                             // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName                                       BoneName;                                                 // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FVector_NetQuantize100                      Location;                                                 // 0x0010(0x000C)
+	struct FRotator                                    Rotation;                                                 // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData)
+	bool                                               bServerHasBaseComponent;                                  // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bRelativeRotation;                                        // 0x0029(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x002A(0x0002) MISSED OFFSET
+	struct FVector                                     LinearVelocity;                                           // 0x002C(0x000C) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.RootMotionMovementParams
+// 0x0040
+struct FRootMotionMovementParams
+{
+	bool                                               bHasRootMotion;                                           // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	float                                              BlendWeight;                                              // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
+	struct FTransform                                  RootMotionTransform;                                      // 0x0010(0x0030) (IsPlainOldData)
+};
+
+// ScriptStruct Engine.Vector_NetQuantize10
+// 0x0000 (0x000C - 0x000C)
+struct FVector_NetQuantize10 : public FVector
+{
+
+};
+
+// ScriptStruct Engine.RepRootMotionMontage
+// 0x0040
+struct FRepRootMotionMontage
+{
+	class UAnimMontage*                                AnimMontage;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	float                                              Position;                                                 // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector_NetQuantize10                       Location;                                                 // 0x000C(0x000C)
+	struct FRotator                                    Rotation;                                                 // 0x0018(0x000C) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+	class UPrimitiveComponent*                         MovementBase;                                             // 0x0028(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FName                                       MovementBaseBoneName;                                     // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               bRelativePosition;                                        // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bRelativeRotation;                                        // 0x0039(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
+};
+
+// ScriptStruct Engine.SimulatedRootMotionReplicatedMove
+// 0x0048
+struct FSimulatedRootMotionReplicatedMove
+{
+	float                                              Time;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	struct FRepRootMotionMontage                       RootMotion;                                               // 0x0008(0x0040)
+};
+
 // ScriptStruct Engine.AnimTickRecord
 // 0x0040
 struct FAnimTickRecord
@@ -203,63 +260,6 @@ struct FAnimNotifyEvent : public FAnimLinkableElement
 	bool                                               bTriggerOnDedicatedServer;                                // 0x00A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x3];                                       // 0x00A1(0x0003) MISSED OFFSET
 	int                                                TrackIndex;                                               // 0x00A4(0x0004) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.BasedMovementInfo
-// 0x0038
-struct FBasedMovementInfo
-{
-	class UPrimitiveComponent*                         MovementBase;                                             // 0x0000(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FName                                       BoneName;                                                 // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVector_NetQuantize100                      Location;                                                 // 0x0010(0x000C)
-	struct FRotator                                    Rotation;                                                 // 0x001C(0x000C) (ZeroConstructor, IsPlainOldData)
-	bool                                               bServerHasBaseComponent;                                  // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bRelativeRotation;                                        // 0x0029(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x002A(0x0002) MISSED OFFSET
-	struct FVector                                     LinearVelocity;                                           // 0x002C(0x000C) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.RootMotionMovementParams
-// 0x0040
-struct FRootMotionMovementParams
-{
-	bool                                               bHasRootMotion;                                           // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	float                                              BlendWeight;                                              // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
-	struct FTransform                                  RootMotionTransform;                                      // 0x0010(0x0030) (IsPlainOldData)
-};
-
-// ScriptStruct Engine.Vector_NetQuantize10
-// 0x0000 (0x000C - 0x000C)
-struct FVector_NetQuantize10 : public FVector
-{
-
-};
-
-// ScriptStruct Engine.RepRootMotionMontage
-// 0x0040
-struct FRepRootMotionMontage
-{
-	class UAnimMontage*                                AnimMontage;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	float                                              Position;                                                 // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FVector_NetQuantize10                       Location;                                                 // 0x000C(0x000C)
-	struct FRotator                                    Rotation;                                                 // 0x0018(0x000C) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-	class UPrimitiveComponent*                         MovementBase;                                             // 0x0028(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FName                                       MovementBaseBoneName;                                     // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               bRelativePosition;                                        // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               bRelativeRotation;                                        // 0x0039(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
-};
-
-// ScriptStruct Engine.SimulatedRootMotionReplicatedMove
-// 0x0048
-struct FSimulatedRootMotionReplicatedMove
-{
-	float                                              Time;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	struct FRepRootMotionMontage                       RootMotion;                                               // 0x0008(0x0040)
 };
 
 // ScriptStruct Engine.RainPostProcessSettings
@@ -2991,16 +2991,16 @@ struct FFormatTextArgument
 };
 
 // ScriptStruct Engine.BakedStateExitTransition
-// 0x0028
+// 0x0020
 struct FBakedStateExitTransition
 {
 	int                                                CanTakeDelegateIndex;                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                CustomResultNodeIndex;                                    // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                TransitionIndex;                                          // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                StateSequencePlayerToQueryIndex;                          // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bDesiredTransitionReturnValue;                            // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
-	TArray<int>                                        PoseEvaluatorLinks;                                       // 0x0018(0x0010) (ZeroConstructor)
+	bool                                               bDesiredTransitionReturnValue;                            // 0x000C(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               bAutomaticRemainingTimeRule;                              // 0x000D(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x000E(0x0002) MISSED OFFSET
+	TArray<int>                                        PoseEvaluatorLinks;                                       // 0x0010(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Engine.BakedAnimationState
@@ -4451,22 +4451,22 @@ struct FPacketDiscardStats
 };
 
 // ScriptStruct Engine.ExposedValueCopyRecord
-// 0x0068
+// 0x0070
 struct FExposedValueCopyRecord
 {
 	class UProperty*                                   SourceProperty;                                           // 0x0000(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
 	struct FName                                       SourcePropertyName;                                       // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       SourceSubPropertyName;                                    // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                SourceArrayIndex;                                         // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
-	class UProperty*                                   DestProperty;                                             // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                DestArrayIndex;                                           // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                Size;                                                     // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EPostCopyOperation>                    PostCopyOperation;                                        // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
-	class UBoolProperty*                               CachedBoolSourceProperty;                                 // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UBoolProperty*                               CachedBoolDestProperty;                                   // 0x0040(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x20];                                      // 0x0048(0x0020) MISSED OFFSET
+	TArray<struct FName>                               SourceSubPropertyNames;                                   // 0x0010(0x0010) (ZeroConstructor)
+	int                                                SourceArrayIndex;                                         // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+	class UProperty*                                   DestProperty;                                             // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                DestArrayIndex;                                           // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                Size;                                                     // 0x0034(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPostCopyOperation>                    PostCopyOperation;                                        // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	class UBoolProperty*                               CachedBoolSourceProperty;                                 // 0x0040(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UBoolProperty*                               CachedBoolDestProperty;                                   // 0x0048(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x20];                                      // 0x0050(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct Engine.ExposedValueHandler
@@ -4507,6 +4507,38 @@ struct FPoseLinkBase
 struct FComponentSpacePoseLink : public FPoseLinkBase
 {
 
+};
+
+// ScriptStruct Engine.ExposureSettings
+// 0x0008
+struct FExposureSettings
+{
+	int                                                LogOffset;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool                                               bFixed;                                                   // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Engine.URL
+// 0x0070
+struct FURL
+{
+	class FString                                      Protocol;                                                 // 0x0000(0x0010) (ZeroConstructor)
+	class FString                                      Host;                                                     // 0x0010(0x0010) (ZeroConstructor)
+	int                                                Port;                                                     // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
+	class FString                                      Map;                                                      // 0x0028(0x0010) (ZeroConstructor)
+	class FString                                      RedirectURL;                                              // 0x0038(0x0010) (ZeroConstructor)
+	TArray<class FString>                              Op;                                                       // 0x0048(0x0010) (ZeroConstructor)
+	class FString                                      Portal;                                                   // 0x0058(0x0010) (ZeroConstructor)
+	int                                                Valid;                                                    // 0x0068(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Engine.TickPrerequisite
+// 0x0010
+struct FTickPrerequisite
+{
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Engine.DepthFieldGlowInfo
@@ -4857,38 +4889,6 @@ struct FRigidBodyState
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 };
 
-// ScriptStruct Engine.ExposureSettings
-// 0x0008
-struct FExposureSettings
-{
-	int                                                LogOffset;                                                // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	bool                                               bFixed;                                                   // 0x0004(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0005(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct Engine.URL
-// 0x0070
-struct FURL
-{
-	class FString                                      Protocol;                                                 // 0x0000(0x0010) (ZeroConstructor)
-	class FString                                      Host;                                                     // 0x0010(0x0010) (ZeroConstructor)
-	int                                                Port;                                                     // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-	class FString                                      Map;                                                      // 0x0028(0x0010) (ZeroConstructor)
-	class FString                                      RedirectURL;                                              // 0x0038(0x0010) (ZeroConstructor)
-	TArray<class FString>                              Op;                                                       // 0x0048(0x0010) (ZeroConstructor)
-	class FString                                      Portal;                                                   // 0x0058(0x0010) (ZeroConstructor)
-	int                                                Valid;                                                    // 0x0068(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x006C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Engine.TickPrerequisite
-// 0x0010
-struct FTickPrerequisite
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-};
-
 // ScriptStruct Engine.EditedDocumentInfo
 // 0x0018
 struct FEditedDocumentInfo
@@ -4933,13 +4933,6 @@ struct FMemberReference
 	bool                                               bSelfContext;                                             // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               bWasDeprecated;                                           // 0x0031(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x0032(0x0006) MISSED OFFSET
-};
-
-// ScriptStruct Engine.SceneComponentCachedVelocityAggregateTickFunction
-// 0x0010 (0x0058 - 0x0048)
-struct FSceneComponentCachedVelocityAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0048(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Engine.LatentActionManager
@@ -5106,15 +5099,6 @@ struct FSpriteCategoryInfo
 	struct FName                                       Category;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FText                                       DisplayName;                                              // 0x0008(0x0038)
 	struct FText                                       Description;                                              // 0x0040(0x0038)
-};
-
-// ScriptStruct Engine.ParticleSystemAggregateTickFunction
-// 0x0030 (0x0078 - 0x0048)
-struct FParticleSystemAggregateTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
-	class UParticleSystemAggregateTickSettings*        Settings;                                                 // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0058(0x0020) MISSED OFFSET
 };
 
 // ScriptStruct Engine.TriIndices
@@ -5663,6 +5647,53 @@ struct FCanvasIcon
 	float                                              VL;                                                       // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Engine.FuncStatEntry
+// 0x0020
+struct FFuncStatEntry
+{
+	class FString                                      Name;                                                     // 0x0000(0x0010) (ZeroConstructor)
+	uint64_t                                           RPCId;                                                    // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	uint32_t                                           Count;                                                    // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Engine.SpikeStatEntry
+// 0x0018
+struct FSpikeStatEntry
+{
+	TArray<struct FFuncStatEntry>                      WorstRPCs;                                                // 0x0000(0x0010) (ZeroConstructor)
+	uint32_t                                           TotalRPCCount;                                            // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      SpikeDetected;                                            // 0x0014(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Engine.RPCStatEntry
+// 0x0060
+struct FRPCStatEntry
+{
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0000(0x0030) MISSED OFFSET
+	double                                             AccumulatedPayloadInKB;                                   // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	double                                             TimeIntervalInSec;                                        // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FSpikeStatEntry                             WorstSpike;                                               // 0x0040(0x0018)
+	uint32_t                                           RPCCount;                                                 // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Engine.RPCStats
+// 0x00C8
+struct FRPCStats
+{
+	struct FRPCStatEntry                               Entries[0x2];                                             // 0x0000(0x0060)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C0(0x0008) MISSED OFFSET
+};
+
+// ScriptStruct Engine.FuncStatHolder
+// 0x0028
+struct FFuncStatHolder
+{
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0000(0x0028) MISSED OFFSET
+};
+
 // ScriptStruct Engine.AutoCompleteNode
 // 0x0028
 struct FAutoCompleteNode
@@ -5863,55 +5894,6 @@ struct FClientReceiveData
 	class APlayerState*                                RelatedPlayerState_2;                                     // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 	class APlayerState*                                RelatedPlayerState_3;                                     // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UObject*                                     OptionalObject;                                           // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.FuncStatEntry
-// 0x0020
-struct FFuncStatEntry
-{
-	uint16_t                                           RPCId;                                                    // 0x0000(0x0002) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0002(0x0006) MISSED OFFSET
-	class FString                                      Name;                                                     // 0x0008(0x0010) (ZeroConstructor)
-	uint32_t                                           Count;                                                    // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Engine.SpikeStatEntry
-// 0x0020
-struct FSpikeStatEntry
-{
-	unsigned char                                      SpikeDetected;                                            // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	TArray<struct FFuncStatEntry>                      WorstRPCs;                                                // 0x0008(0x0010) (ZeroConstructor)
-	uint32_t                                           TotalRPCCount;                                            // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Engine.RPCStatEntry
-// 0x0088
-struct FRPCStatEntry
-{
-	uint32_t                                           RPCCount;                                                 // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	double                                             AccumulatedPayloadInKB;                                   // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	double                                             TimeIntervalInSec;                                        // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FSpikeStatEntry                             WorstSpike;                                               // 0x0018(0x0020)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x0038(0x0050) MISSED OFFSET
-};
-
-// ScriptStruct Engine.RPCStats
-// 0x0118
-struct FRPCStats
-{
-	struct FRPCStatEntry                               Entries[0x2];                                             // 0x0000(0x0088)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0110(0x0008) MISSED OFFSET
-};
-
-// ScriptStruct Engine.FuncStatHolder
-// 0x0028
-struct FFuncStatHolder
-{
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0000(0x0028) MISSED OFFSET
 };
 
 // ScriptStruct Engine.ParticleCurvePair

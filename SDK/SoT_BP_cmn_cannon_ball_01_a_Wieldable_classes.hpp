@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2.0) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_cannon_ball_01_a_Wieldable.BP_cmn_cannon_ball_01_a_Wieldable_C
-// 0x0000 (0x07F0 - 0x07F0)
+// 0x0000 (0x07D8 - 0x07D8)
 class ABP_cmn_cannon_ball_01_a_Wieldable_C : public ABP_CannonBall_C
 {
 public:

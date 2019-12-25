@@ -59,6 +59,21 @@ public:
 };
 
 
+// Class AthenaEngine.GameInstanceSessionIdProviderInterface
+// 0x0000 (0x0028 - 0x0028)
+class UGameInstanceSessionIdProviderInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.GameInstanceSessionIdProviderInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaEngine.NestedWorldRootDataAsset
 // 0x0020 (0x0048 - 0x0028)
 class UNestedWorldRootDataAsset : public UDataAsset

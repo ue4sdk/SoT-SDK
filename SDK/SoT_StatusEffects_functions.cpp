@@ -12,59 +12,56 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function StatusEffects.StatusEffectOverlapZone.OnOverlapZoneEndOverlap
+// Function StatusEffects.StatusEffectOverlapZone.OnStatusDelayEnd
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
+// int                            InStatusIndex                  (Parm, ZeroConstructor, IsPlainOldData)
+// class AActor*                  ActorRef                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void AStatusEffectOverlapZone::OnOverlapZoneEndOverlap(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex)
+void AStatusEffectOverlapZone::OnStatusDelayEnd(int InStatusIndex, class AActor* ActorRef)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.StatusEffectOverlapZone.OnOverlapZoneEndOverlap"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.StatusEffectOverlapZone.OnStatusDelayEnd"));
 
 	struct
 	{
-		class AActor*                  OtherActor;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
+		int                            InStatusIndex;
+		class AActor*                  ActorRef;
 	} params;
 
-	params.OtherActor = OtherActor;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
+	params.InStatusIndex = InStatusIndex;
+	params.ActorRef = ActorRef;
 
 	UObject::ProcessEvent(fn, &params);
 }
 
 
-// Function StatusEffects.StatusEffectOverlapZone.OnOverlapZoneBeginOverlap
-// (Final, Native, Private, HasOutParms)
-// Parameters:
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-// int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           FromSweep                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
+// Function StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent.OnRep_SetDebugDrawColour
+// (Final, Native, Private)
 
-void AStatusEffectOverlapZone::OnOverlapZoneBeginOverlap(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const struct FHitResult& SweepResult)
+void UDebugStatusEffectOverlapZoneVisualizerComponent::OnRep_SetDebugDrawColour()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.StatusEffectOverlapZone.OnOverlapZoneBeginOverlap"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent.OnRep_SetDebugDrawColour"));
 
 	struct
 	{
-		class AActor*                  OtherActor;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
-		bool                           FromSweep;
-		struct FHitResult              SweepResult;
 	} params;
 
-	params.OtherActor = OtherActor;
-	params.OtherComp = OtherComp;
-	params.OtherBodyIndex = OtherBodyIndex;
-	params.FromSweep = FromSweep;
-	params.SweepResult = SweepResult;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent.OnRep_DebugBoxDimensions
+// (Final, Native, Private)
+
+void UDebugStatusEffectOverlapZoneVisualizerComponent::OnRep_DebugBoxDimensions()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.DebugStatusEffectOverlapZoneVisualizerComponent.OnRep_DebugBoxDimensions"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -125,6 +122,26 @@ void UStatusEffectManagerComponent::OnRep_ActiveEffects(TArray<struct FActiveSta
 	} params;
 
 	params.OldEffects = OldEffects;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function StatusEffects.StatusEffectManagerComponent.MultiCast_ApplyOneShotStatus
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// TArray<struct FActiveStatusEffect> ActivatedEffects               (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+
+void UStatusEffectManagerComponent::MultiCast_ApplyOneShotStatus(TArray<struct FActiveStatusEffect> ActivatedEffects)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StatusEffects.StatusEffectManagerComponent.MultiCast_ApplyOneShotStatus"));
+
+	struct
+	{
+		TArray<struct FActiveStatusEffect> ActivatedEffects;
+	} params;
+
+	params.ActivatedEffects = ActivatedEffects;
 
 	UObject::ProcessEvent(fn, &params);
 }

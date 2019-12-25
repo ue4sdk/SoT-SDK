@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PetPreview_Monkey.BP_PetPreview_Monkey_C
-// 0x0000 (0x0588 - 0x0588)
+// 0x0000 (0x04E8 - 0x04E8)
 class ABP_PetPreview_Monkey_C : public ABP_PetPreview_Base_C
 {
 public:

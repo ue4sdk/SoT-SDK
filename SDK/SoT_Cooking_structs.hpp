@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Cooking_enums.hpp"
-#include "SoT_CoreUObject_classes.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_StatusEffects_classes.hpp"
+#include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 
 namespace SDK
@@ -62,6 +62,13 @@ struct FCookingClientRepresentation
 struct FCookingInfo
 {
 	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
+};
+
+// ScriptStruct Cooking.OnPlacedItemInCookingPot
+// 0x0008
+struct FOnPlacedItemInCookingPot
+{
+	class AItemInfo*                                   ItemToCook;                                               // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Cooking.OnItemStartedCooking

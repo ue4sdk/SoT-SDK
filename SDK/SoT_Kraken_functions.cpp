@@ -32,6 +32,38 @@ void AKrakenTentacle::OnDamageToTentacle(const struct FImpactDamageEvent& Impact
 }
 
 
+// Function Kraken.Murk.DeactivateMurkBP
+// (Final, Native, Public, BlueprintCallable)
+
+void AMurk::DeactivateMurkBP()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.Murk.DeactivateMurkBP"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Kraken.Murk.ActivateMurkBP
+// (Final, Native, Public, BlueprintCallable)
+
+void AMurk::ActivateMurkBP()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.Murk.ActivateMurkBP"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Kraken.KrakenShipWrappingTentacle.OnRep_CurrentServerAnimationState
 // (Final, Native, Private)
 

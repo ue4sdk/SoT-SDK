@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_GreatWarrior_E.BP_Constellation_GreatWarrior_E_C
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x04B0 - 0x04B0)
 class ABP_Constellation_GreatWarrior_E_C : public ABP_Constellation_C
 {
 public:

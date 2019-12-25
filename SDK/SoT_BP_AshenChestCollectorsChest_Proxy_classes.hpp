@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AshenChestCollectorsChest_Proxy.BP_AshenChestCollectorsChest_Proxy_C
-// 0x0000 (0x09B1 - 0x09B1)
+// 0x0000 (0x0921 - 0x0921)
 class ABP_AshenChestCollectorsChest_Proxy_C : public ABP_BaseLockableCollectorsChest_Proxy_C
 {
 public:

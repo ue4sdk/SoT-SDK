@@ -8,6 +8,7 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_BP_TreasureArtifact_Proxy_Base_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {

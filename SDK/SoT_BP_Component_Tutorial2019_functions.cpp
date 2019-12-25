@@ -12,6 +12,59 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.HasPrerequisites
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UBP_Component_Tutorial2019_C::HasPrerequisites()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.HasPrerequisites"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.SwapMysteriousStrangerToTutorialModeOnClient
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_Component_Tutorial2019_C::SwapMysteriousStrangerToTutorialModeOnClient()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.SwapMysteriousStrangerToTutorialModeOnClient"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.TeleportPlayerToOnboardingSpawnPoint
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void UBP_Component_Tutorial2019_C::TeleportPlayerToOnboardingSpawnPoint()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.TeleportPlayerToOnboardingSpawnPoint"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.GetPlayerController
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -200,26 +253,6 @@ void UBP_Component_Tutorial2019_C::ReceiveTutorial2019BeginPlayOnServer()
 }
 
 
-// Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.On Start Destructing
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FEventPlayerControllerDestroyedCalled Event_Params                   (Parm)
-
-void UBP_Component_Tutorial2019_C::On_Start_Destructing(const struct FEventPlayerControllerDestroyedCalled& Event_Params)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.On Start Destructing"));
-
-	struct
-	{
-		struct FEventPlayerControllerDestroyedCalled Event_Params;
-	} params;
-
-	params.Event_Params = Event_Params;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ForceDisableComponent_Blueprint
 // (Event, Public, BlueprintEvent)
 
@@ -231,6 +264,84 @@ void UBP_Component_Tutorial2019_C::ForceDisableComponent_Blueprint()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ReceiveIntroBeginPlayOnServer
+// (Event, Public, BlueprintEvent)
+
+void UBP_Component_Tutorial2019_C::ReceiveIntroBeginPlayOnServer()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ReceiveIntroBeginPlayOnServer"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ReceiveIntroBeginPlayOnClient
+// (Event, Public, BlueprintEvent)
+
+void UBP_Component_Tutorial2019_C::ReceiveIntroBeginPlayOnClient()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ReceiveIntroBeginPlayOnClient"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.Set Prompts Visibility
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           IsHIdden                       (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReEvaluate                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          Delay_In_Seconds               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_Component_Tutorial2019_C::Set_Prompts_Visibility(bool IsHIdden, bool ReEvaluate, float Delay_In_Seconds)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.Set Prompts Visibility"));
+
+	struct
+	{
+		bool                           IsHIdden;
+		bool                           ReEvaluate;
+		float                          Delay_In_Seconds;
+	} params;
+
+	params.IsHIdden = IsHIdden;
+	params.ReEvaluate = ReEvaluate;
+	params.Delay_In_Seconds = Delay_In_Seconds;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ControllerOnEndPlay
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TEnumAsByte<EEndPlayReason>    EndPlayReason                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void UBP_Component_Tutorial2019_C::ControllerOnEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ControllerOnEndPlay"));
+
+	struct
+	{
+		TEnumAsByte<EEndPlayReason>    EndPlayReason;
+	} params;
+
+	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
 }

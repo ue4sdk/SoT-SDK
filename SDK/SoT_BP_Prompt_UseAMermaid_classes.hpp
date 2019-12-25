@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C
-// 0x0148 (0x0260 - 0x0118)
+// 0x0158 (0x0270 - 0x0118)
 class UBP_Prompt_UseAMermaid_C : public UBP_PromptCoordinator_Base_C
 {
 public:
@@ -27,7 +27,7 @@ public:
 	struct FObjectMessagingHandle                      Handle_OnMermaidUsed;                                     // 0x01B8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                               State_MermaidUsed;                                        // 0x0200(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0201(0x0007) MISSED OFFSET
-	struct FPrioritisedPromptWithHandle                Prompt_UseMermaid;                                        // 0x0208(0x0058) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPrioritisedPromptWithHandle                Prompt_UseMermaid;                                        // 0x0208(0x0068) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -36,10 +36,13 @@ public:
 	}
 
 
+	void MermaidUsed();
+	void MermaidDeactivatedLocally(const struct FAthena_FMermaidDeactivatedLocally& MermaidDeactivatedLocally);
+	void MermaidActivatedLocally(const struct FAthena_FMermaidActivatedLocally& MermaidActivatedLocally);
 	struct FPromptEvaluation EvaluatePromptDisplayState();
 	void PostInitialize();
-	void Prompt_MermaidActivatedLocally(const struct FMermaidActivatedLocally& Ev);
-	void Prompt_MermaidDeactivatedLocally(const struct FMermaidDeactivatedLocally& Ev);
+	void Prompt_MermaidActivatedLocally(const struct FAthena_FMermaidActivatedLocally& Ev);
+	void Prompt_MermaidDeactivatedLocally(const struct FAthena_FMermaidDeactivatedLocally& Ev);
 	void Prompt_MermaidUsed(const struct FMermaidUsedEvent& Ev);
 	void UnregisterOtherEvents_Implementable();
 	void ExecuteUbergraph_BP_Prompt_UseAMermaid(int EntryPoint);

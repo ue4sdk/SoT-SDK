@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rudder_SmallShip.BP_Rudder_SmallShip_C
-// 0x0010 (0x0538 - 0x0528)
+// 0x0010 (0x0498 - 0x0488)
 class ABP_Rudder_SmallShip_C : public ARudder
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0528(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             Root;                                                     // 0x0530(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0488(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Root;                                                     // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

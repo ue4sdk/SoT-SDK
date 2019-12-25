@@ -21,7 +21,8 @@ class UAthenaCheatManager : public UCheatManager
 public:
 	class ACinematicCameraController*                  CinematicCameraController;                                // 0x0078(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UClass*                                      CinematicCameraControllerClass;                           // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0088(0x0038) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0088(0x0028) MISSED OFFSET
+	TArray<struct FWorldMarkerDesc>                    CreatedWorldMarkers;                                      // 0x00B0(0x0010) (ZeroConstructor, Transient)
 	float                                              TeleportToDigsiteHeightOffset;                            // 0x00C0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x14];                                      // 0x00C4(0x0014) MISSED OFFSET
 
@@ -68,6 +69,7 @@ public:
 	void ToggleDisplayCannonAISpawnerZones();
 	void ToggleDebugFlying();
 	void ToggleDeathCamera();
+	void ToggleDamageAllowedToPlayerShip();
 	void ToggleContestScoreDebug();
 	void ToggleCinematicCamera();
 	void ToggleAttributeOverride();
@@ -80,6 +82,7 @@ public:
 	void TeleportToHideout();
 	void TeleportShip(float X, float Y, float Z);
 	void TeleportPlayerToSafety();
+	void TeleportPlayerToOffsetAndReturn(float OffsetX, float OffsetY, float OffsetZ, float ReturnTime);
 	void TeleportPlayerToKraken();
 	void TeleportPlayersCrewShipToPlayerLocation();
 	void TeleportOutOfHideout();
@@ -164,6 +167,7 @@ public:
 	void SmoulderClosestShipFire();
 	void SmoulderAllShipFires();
 	void SlowMotionOverride(bool InValue);
+	void SkipToEndOfOnboarding();
 	void SinkShipWithKeelOverIndex(int KeelOverConfigIndex);
 	void SinkShipByActorId(const class FString& ShipActorIdString);
 	void SinkShip();
@@ -212,6 +216,7 @@ public:
 	void SetPhotoMode(bool Enabled);
 	void SetPetMovementTimeWindow(float TimeWindow);
 	void SetNonCrewChatSpatialisation(bool Enabled);
+	void SetMaxNumOfSpawnedAI(int MaxNumOfSpawnedActors);
 	void SetMaxMovingPetsOnShips(int MaxMovingPets);
 	void SetMaxMovingPetsOnServer(int MaxMovingPets);
 	void SetMaxMovingPetsOnLand(int MaxMovingPets);
@@ -226,6 +231,7 @@ public:
 	void SetDebugItemSource(const class FString& Source);
 	void SetDebugCameraUseProjectileCollisionChannel(bool bUseProjectileChannel);
 	void SetDeathPenaltyRespawnTimer(float InSpawnTimer);
+	void SetDamageAllowedToPlayerShip(bool InAllowDamage);
 	void SetCapstanPosition(float Position);
 	void SetAITeamAttitude(const class FString& TeamAString, const class FString& TeamBString, const class FString& AttitudeString);
 	void SetAIExclusiveAbility(const class FString& AIAbilityString);
@@ -249,6 +255,7 @@ public:
 	void ResetTinySharkSpawnTimer();
 	void ResetStats();
 	void ResetMouseDelta();
+	void ResetMaxNumOfSpawnedAI();
 	void ResetMaxMovingPetsOnServerToDefault();
 	void ResetDemoSession(bool StartNewSession);
 	void ResetAllMechanisms();
@@ -309,6 +316,7 @@ public:
 	void KillCrew(const class FString& CrewId);
 	void KillAllSkeletons();
 	void KillAllPlayers();
+	void KillAllDebugAISpawners();
 	void KillAllCrews();
 	void JoinAlliance(const class FString& OfferingCrew, const class FString& AcceptingCrew);
 	void IPGOverride(const struct FName& BodyShape, float Distance);
@@ -412,6 +420,8 @@ public:
 	void DamagePlayer(float Strength);
 	void CureAllAilings();
 	void CreateDebugReapersChestMarkerAtPlayerLocation();
+	void CreateDebugAISpawnerAt(const class FString& SpawnerAssetName, const class FString& LocationActorName);
+	void CreateDebugAISpawner(const class FString& SpawnerAssetName);
 	void CompleteVoyage();
 	void CompleteAllActivePuzzleVaults();
 	void CompleteActiveQuests();
@@ -447,8 +457,8 @@ public:
 	void AddShipToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddRandomPetForAllPlayers();
 	void AddPlayerToCrew(const class FString& ActorIdString, const class FString& CrewId);
-	void AddPetForPlayer(int PetTypeIndex, int PetCustomisationIndex);
-	void AddPetForAllPlayers(int PetTypeIndex, int PetCustomisationIndex);
+	void AddPetForPlayer(int PetTypeIndex, int PetPartIndex);
+	void AddPetForAllPlayers(int PetTypeIndex, int PetPartIndex);
 	void AddDrunkenness(int DrunkennessType, float DrunkennessChange);
 	void ActivateSkellyFortOfTheDamned(const class FString& FortName);
 	void ActivateSkellyFort(const class FString& FortName);

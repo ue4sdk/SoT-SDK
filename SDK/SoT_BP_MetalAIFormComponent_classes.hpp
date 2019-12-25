@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MetalAIFormComponent.BP_MetalAIFormComponent_C
-// 0x0000 (0x0210 - 0x0210)
+// 0x0000 (0x01E0 - 0x01E0)
 class UBP_MetalAIFormComponent_C : public UMetalAIFormComponent
 {
 public:

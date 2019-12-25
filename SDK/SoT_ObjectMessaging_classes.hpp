@@ -30,11 +30,11 @@ public:
 
 
 // Class ObjectMessaging.ObjectMessagingDispatcherComponent
-// 0x00A8 (0x0178 - 0x00D0)
+// 0x00A8 (0x0170 - 0x00C8)
 class UObjectMessagingDispatcherComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x00D0(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x00C8(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

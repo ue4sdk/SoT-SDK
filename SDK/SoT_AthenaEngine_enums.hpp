@@ -15,9 +15,9 @@ namespace SDK
 // Enum AthenaEngine.EPlayModeVariant
 enum class EPlayModeVariant : uint8_t
 {
-	EPlayModeVariant__Invalid      = 0,
-	EPlayModeVariant__Normal       = 1,
-	EPlayModeVariant__Creator      = 2,
+	EPlayModeVariant__Normal       = 0,
+	EPlayModeVariant__Creator      = 1,
+	EPlayModeVariant__Invalid      = 2,
 	EPlayModeVariant__MAX          = 3,
 	EPlayModeVariant__EPlayModeVariant_MAX = 4
 };

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Fire_WSW.BP_Constellation_Fire_WSW_C
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x04B0 - 0x04B0)
 class ABP_Constellation_Fire_WSW_C : public ABP_Constellation_C
 {
 public:

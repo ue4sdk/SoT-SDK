@@ -12,6 +12,162 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function RareAudio.AudioEventToComponentMap.ClearMappings
+// (Final, Native, Public, BlueprintCallable)
+
+void AAudioEventToComponentMap::ClearMappings()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMap.ClearMappings"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function RareAudio.AudioEventToComponentMap.AddMappingWithSingleEmitterComponent
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UWwiseEvent*             PlayEvent                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UWwiseEvent*             StopEvent                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UWwiseEmitterComponent*  WwiseEmitterComponent          (Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
+// class UWwiseObjectPoolWrapper* WwiseEmitterPool               (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAudioEventToComponentMap::AddMappingWithSingleEmitterComponent(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, class UWwiseEmitterComponent** WwiseEmitterComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMap.AddMappingWithSingleEmitterComponent"));
+
+	struct
+	{
+		class UWwiseEvent*             PlayEvent;
+		class UWwiseEvent*             StopEvent;
+		class UWwiseEmitterComponent*  WwiseEmitterComponent;
+		class UWwiseObjectPoolWrapper* WwiseEmitterPool;
+	} params;
+
+	params.PlayEvent = PlayEvent;
+	params.StopEvent = StopEvent;
+	params.WwiseEmitterPool = WwiseEmitterPool;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (WwiseEmitterComponent != nullptr)
+		*WwiseEmitterComponent = params.WwiseEmitterComponent;
+}
+
+
+// Function RareAudio.AudioEventToComponentMap.AddMapping
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UWwiseEvent*             PlayEvent                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UWwiseEvent*             StopEvent                      (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UWwiseEmitterComponent*> WwiseEmitterComponents         (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UWwiseObjectPoolWrapper* WwiseEmitterPool               (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAudioEventToComponentMap::AddMapping(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<class UWwiseEmitterComponent*>* WwiseEmitterComponents)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMap.AddMapping"));
+
+	struct
+	{
+		class UWwiseEvent*             PlayEvent;
+		class UWwiseEvent*             StopEvent;
+		TArray<class UWwiseEmitterComponent*> WwiseEmitterComponents;
+		class UWwiseObjectPoolWrapper* WwiseEmitterPool;
+	} params;
+
+	params.PlayEvent = PlayEvent;
+	params.StopEvent = StopEvent;
+	params.WwiseEmitterPool = WwiseEmitterPool;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (WwiseEmitterComponents != nullptr)
+		*WwiseEmitterComponents = params.WwiseEmitterComponents;
+}
+
+
+// Function RareAudio.AudioEventToComponentMapComponent.ClearMappings
+// (Final, Native, Public, BlueprintCallable)
+
+void UAudioEventToComponentMapComponent::ClearMappings()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMapComponent.ClearMappings"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function RareAudio.AudioEventToComponentMapComponent.AddMappingWithSingleEmitterComponent
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UWwiseEvent*             PlayEvent                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UWwiseEvent*             StopEvent                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UWwiseEmitterComponent*  WwiseEmitterComponent          (Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
+// class UWwiseObjectPoolWrapper* WwiseEmitterPool               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAudioEventToComponentMapComponent::AddMappingWithSingleEmitterComponent(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, class UWwiseEmitterComponent** WwiseEmitterComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMapComponent.AddMappingWithSingleEmitterComponent"));
+
+	struct
+	{
+		class UWwiseEvent*             PlayEvent;
+		class UWwiseEvent*             StopEvent;
+		class UWwiseEmitterComponent*  WwiseEmitterComponent;
+		class UWwiseObjectPoolWrapper* WwiseEmitterPool;
+	} params;
+
+	params.PlayEvent = PlayEvent;
+	params.StopEvent = StopEvent;
+	params.WwiseEmitterPool = WwiseEmitterPool;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (WwiseEmitterComponent != nullptr)
+		*WwiseEmitterComponent = params.WwiseEmitterComponent;
+}
+
+
+// Function RareAudio.AudioEventToComponentMapComponent.AddMapping
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UWwiseEvent*             PlayEvent                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UWwiseEvent*             StopEvent                      (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UWwiseEmitterComponent*> WwiseEmitterComponents         (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UWwiseObjectPoolWrapper* WwiseEmitterPool               (Parm, ZeroConstructor, IsPlainOldData)
+
+void UAudioEventToComponentMapComponent::AddMapping(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<class UWwiseEmitterComponent*>* WwiseEmitterComponents)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMapComponent.AddMapping"));
+
+	struct
+	{
+		class UWwiseEvent*             PlayEvent;
+		class UWwiseEvent*             StopEvent;
+		TArray<class UWwiseEmitterComponent*> WwiseEmitterComponents;
+		class UWwiseObjectPoolWrapper* WwiseEmitterPool;
+	} params;
+
+	params.PlayEvent = PlayEvent;
+	params.StopEvent = StopEvent;
+	params.WwiseEmitterPool = WwiseEmitterPool;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (WwiseEmitterComponents != nullptr)
+		*WwiseEmitterComponents = params.WwiseEmitterComponents;
+}
+
+
 // Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseStopGlobalEvent
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -309,45 +465,6 @@ bool UWwiseEmitterBlueprintLibrary::WwiseGetGlobalRTPC(const struct FName& RTPCN
 
 	if (RTPCValue != nullptr)
 		*RTPCValue = params.RTPCValue;
-
-	return params.ReturnValue;
-}
-
-
-// Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetEmitter
-// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FWwiseEmitter           Emitter                        (Parm, OutParm)
-// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 Owner                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UWwiseObjectPoolWrapper* EmitterPool                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Offset                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UWwiseEmitterBlueprintLibrary::WwiseGetEmitter(const struct FName& Name, class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FVector& Offset, struct FWwiseEmitter* Emitter)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseGetEmitter"));
-
-	struct
-	{
-		struct FWwiseEmitter           Emitter;
-		struct FName                   Name;
-		class UObject*                 Owner;
-		class UWwiseObjectPoolWrapper* EmitterPool;
-		struct FVector                 Offset;
-		bool                           ReturnValue;
-	} params;
-
-	params.Name = Name;
-	params.Owner = Owner;
-	params.EmitterPool = EmitterPool;
-	params.Offset = Offset;
-
-	static auto defaultObj = StaticClass()->CreateDefaultObject();
-	defaultObj->ProcessEvent(fn, &params);
-
-	if (Emitter != nullptr)
-		*Emitter = params.Emitter;
 
 	return params.ReturnValue;
 }
@@ -855,6 +972,45 @@ int UWwiseEmitterBlueprintLibrary::WwiseEmitterComponentPostEvent(class UWwiseEm
 }
 
 
+// Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseCreateEmitter
+// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FWwiseEmitter           Emitter                        (Parm, OutParm)
+// struct FName                   Name                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 Owner                          (Parm, ZeroConstructor, IsPlainOldData)
+// class UWwiseObjectPoolWrapper* EmitterPool                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 Offset                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWwiseEmitterBlueprintLibrary::WwiseCreateEmitter(const struct FName& Name, class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FVector& Offset, struct FWwiseEmitter* Emitter)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseCreateEmitter"));
+
+	struct
+	{
+		struct FWwiseEmitter           Emitter;
+		struct FName                   Name;
+		class UObject*                 Owner;
+		class UWwiseObjectPoolWrapper* EmitterPool;
+		struct FVector                 Offset;
+		bool                           ReturnValue;
+	} params;
+
+	params.Name = Name;
+	params.Owner = Owner;
+	params.EmitterPool = EmitterPool;
+	params.Offset = Offset;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	if (Emitter != nullptr)
+		*Emitter = params.Emitter;
+
+	return params.ReturnValue;
+}
+
+
 // Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseCreateDetachedEmitter
 // (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -970,162 +1126,6 @@ bool UWwiseEmitterBlueprintLibrary::GetPlaybackPosition(const struct FWwiseEmitt
 }
 
 
-// Function RareAudio.AudioEventToComponentMap.ClearMappings
-// (Final, Native, Public, BlueprintCallable)
-
-void AAudioEventToComponentMap::ClearMappings()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMap.ClearMappings"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function RareAudio.AudioEventToComponentMap.AddMappingWithSingleEmitterComponent
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class UWwiseEvent*             PlayEvent                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UWwiseEvent*             StopEvent                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UWwiseEmitterComponent*  WwiseEmitterComponent          (Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
-// class UWwiseObjectPoolWrapper* WwiseEmitterPool               (Parm, ZeroConstructor, IsPlainOldData)
-
-void AAudioEventToComponentMap::AddMappingWithSingleEmitterComponent(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, class UWwiseEmitterComponent** WwiseEmitterComponent)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMap.AddMappingWithSingleEmitterComponent"));
-
-	struct
-	{
-		class UWwiseEvent*             PlayEvent;
-		class UWwiseEvent*             StopEvent;
-		class UWwiseEmitterComponent*  WwiseEmitterComponent;
-		class UWwiseObjectPoolWrapper* WwiseEmitterPool;
-	} params;
-
-	params.PlayEvent = PlayEvent;
-	params.StopEvent = StopEvent;
-	params.WwiseEmitterPool = WwiseEmitterPool;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (WwiseEmitterComponent != nullptr)
-		*WwiseEmitterComponent = params.WwiseEmitterComponent;
-}
-
-
-// Function RareAudio.AudioEventToComponentMap.AddMapping
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class UWwiseEvent*             PlayEvent                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UWwiseEvent*             StopEvent                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UWwiseEmitterComponent*> WwiseEmitterComponents         (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UWwiseObjectPoolWrapper* WwiseEmitterPool               (Parm, ZeroConstructor, IsPlainOldData)
-
-void AAudioEventToComponentMap::AddMapping(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<class UWwiseEmitterComponent*>* WwiseEmitterComponents)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMap.AddMapping"));
-
-	struct
-	{
-		class UWwiseEvent*             PlayEvent;
-		class UWwiseEvent*             StopEvent;
-		TArray<class UWwiseEmitterComponent*> WwiseEmitterComponents;
-		class UWwiseObjectPoolWrapper* WwiseEmitterPool;
-	} params;
-
-	params.PlayEvent = PlayEvent;
-	params.StopEvent = StopEvent;
-	params.WwiseEmitterPool = WwiseEmitterPool;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (WwiseEmitterComponents != nullptr)
-		*WwiseEmitterComponents = params.WwiseEmitterComponents;
-}
-
-
-// Function RareAudio.AudioEventToComponentMapComponent.ClearMappings
-// (Final, Native, Public, BlueprintCallable)
-
-void UAudioEventToComponentMapComponent::ClearMappings()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMapComponent.ClearMappings"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function RareAudio.AudioEventToComponentMapComponent.AddMappingWithSingleEmitterComponent
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class UWwiseEvent*             PlayEvent                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UWwiseEvent*             StopEvent                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UWwiseEmitterComponent*  WwiseEmitterComponent          (Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, IsPlainOldData)
-// class UWwiseObjectPoolWrapper* WwiseEmitterPool               (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAudioEventToComponentMapComponent::AddMappingWithSingleEmitterComponent(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, class UWwiseEmitterComponent** WwiseEmitterComponent)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMapComponent.AddMappingWithSingleEmitterComponent"));
-
-	struct
-	{
-		class UWwiseEvent*             PlayEvent;
-		class UWwiseEvent*             StopEvent;
-		class UWwiseEmitterComponent*  WwiseEmitterComponent;
-		class UWwiseObjectPoolWrapper* WwiseEmitterPool;
-	} params;
-
-	params.PlayEvent = PlayEvent;
-	params.StopEvent = StopEvent;
-	params.WwiseEmitterPool = WwiseEmitterPool;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (WwiseEmitterComponent != nullptr)
-		*WwiseEmitterComponent = params.WwiseEmitterComponent;
-}
-
-
-// Function RareAudio.AudioEventToComponentMapComponent.AddMapping
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// class UWwiseEvent*             PlayEvent                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UWwiseEvent*             StopEvent                      (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UWwiseEmitterComponent*> WwiseEmitterComponents         (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UWwiseObjectPoolWrapper* WwiseEmitterPool               (Parm, ZeroConstructor, IsPlainOldData)
-
-void UAudioEventToComponentMapComponent::AddMapping(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<class UWwiseEmitterComponent*>* WwiseEmitterComponents)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioEventToComponentMapComponent.AddMapping"));
-
-	struct
-	{
-		class UWwiseEvent*             PlayEvent;
-		class UWwiseEvent*             StopEvent;
-		TArray<class UWwiseEmitterComponent*> WwiseEmitterComponents;
-		class UWwiseObjectPoolWrapper* WwiseEmitterPool;
-	} params;
-
-	params.PlayEvent = PlayEvent;
-	params.StopEvent = StopEvent;
-	params.WwiseEmitterPool = WwiseEmitterPool;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (WwiseEmitterComponents != nullptr)
-		*WwiseEmitterComponents = params.WwiseEmitterComponents;
-}
-
-
 // Function RareAudio.WwiseEmitterComponentBlueprintLibrary.GetNamedEmitter
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -1223,27 +1223,6 @@ bool UWwiseEmitterComponentBlueprintLibrary::GetClosestEmitter(const struct FVec
 
 	if (OutEmitter != nullptr)
 		*OutEmitter = params.OutEmitter;
-
-	return params.ReturnValue;
-}
-
-
-// Function RareAudio.AudioSpaceDataAsset.GetRtpcName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-struct FName UAudioSpaceDataAsset::GetRtpcName()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioSpaceDataAsset.GetRtpcName"));
-
-	struct
-	{
-		struct FName                   ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }
@@ -1415,6 +1394,27 @@ void UAudioSpaceComponent::OnOverlapBegin(class AActor* OtherActor, class UPrimi
 	params.SweepResult = SweepResult;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function RareAudio.AudioSpaceDataAsset.GetRtpcName
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+struct FName UAudioSpaceDataAsset::GetRtpcName()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.AudioSpaceDataAsset.GetRtpcName"));
+
+	struct
+	{
+		struct FName                   ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 

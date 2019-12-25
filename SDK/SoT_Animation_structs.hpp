@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Animation_enums.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 
 namespace SDK
@@ -72,9 +72,9 @@ struct FAnimationDataStoreAssetEntry
 	class UClass*                                      AnimDataTypeCooked;                                       // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Animation.AnimationDataStoreAssetReferenceEntry
+// ScriptStruct Animation.AnimationDataStoreAssetWeakReferenceEntry
 // 0x0028
-struct FAnimationDataStoreAssetReferenceEntry
+struct FAnimationDataStoreAssetWeakReferenceEntry
 {
 	class UClass*                                      AnimDataId;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TAssetPtr<class UClass>                            AnimData;                                                 // 0x0008(0x0020) (Edit)
@@ -141,11 +141,53 @@ struct FEventCosmeticItemAttachmentSwitched
 	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Animation.EventCosmeticItemSpawned
+// 0x0008
+struct FEventCosmeticItemSpawned
+{
+	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Animation.EventDockableObjectDestroyed
 // 0x0001
 struct FEventDockableObjectDestroyed
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Animation.EventHitReactAnimationFinished
+// 0x0001
+struct FEventHitReactAnimationFinished
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Animation.EventHitReactAnimationRequested
+// 0x001C
+struct FEventHitReactAnimationRequested
+{
+	struct FVector                                     HitNormal;                                                // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     HitVelocity;                                              // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECharacterHitReactionAnimType>         ReactionAnimType;                                         // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
+};
+
+// ScriptStruct Animation.HitReactionAnimationData
+// 0x0008
+struct FHitReactionAnimationData
+{
+	class UBlendSpace1D*                               HitReactBlendSpace;                                       // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Animation.HitReactionAnimationState
+// 0x0028
+struct FHitReactionAnimationState
+{
+	float                                              Yaw;                                                      // 0x0000(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              AdditiveBlend;                                            // 0x0004(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECharacterHitReactionAnimType>         ReactType;                                                // 0x0008(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               ActivateNewHitReact;                                      // 0x0009(0x0001) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1E];                                      // 0x000A(0x001E) MISSED OFFSET
 };
 
 // ScriptStruct Animation.EventPreviewCharacterAnimationRequest

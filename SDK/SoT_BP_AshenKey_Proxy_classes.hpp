@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AshenKey_Proxy.BP_AshenKey_Proxy_C
-// 0x0000 (0x0848 - 0x0848)
+// 0x0000 (0x07B8 - 0x07B8)
 class ABP_AshenKey_Proxy_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:
@@ -27,6 +27,7 @@ public:
 	}
 
 
+	struct FVector GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius);
 	void UserConstructionScript();
 };
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_DarkRelic_Proxy_DarkCoffer.BP_DarkRelic_Proxy_DarkCoffer_C
-// 0x0000 (0x08E0 - 0x08E0)
+// 0x0000 (0x0850 - 0x0850)
 class ABP_DarkRelic_Proxy_DarkCoffer_C : public ABP_TreasureChestProxy_C
 {
 public:

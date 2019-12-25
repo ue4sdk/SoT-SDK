@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Emote_Sit_Desc.BP_Emote_Sit_Desc_C
-// 0x0000 (0x0100 - 0x0100)
+// 0x0000 (0x0108 - 0x0108)
 class UBP_Emote_Sit_Desc_C : public UEmoteDesc
 {
 public:

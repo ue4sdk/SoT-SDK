@@ -44,7 +44,7 @@ void ABP_Mast_C::AttemptToAddDamageDecal(TEnumAsByte<ERepairableState> Repairabl
 
 
 // Function BP_Mast.BP_Mast_C.IsMastVisuallyFractured
-// (Event, Protected, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
@@ -61,22 +61,6 @@ bool ABP_Mast_C::IsMastVisuallyFractured()
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
-}
-
-
-// Function BP_Mast.BP_Mast_C.DrawDebugSkeleton
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-
-void ABP_Mast_C::DrawDebugSkeleton()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Mast.BP_Mast_C.DrawDebugSkeleton"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -261,19 +245,22 @@ void ABP_Mast_C::OnMastMeshSwapRequested(class UStaticMesh* NewMeshBottom, class
 // (BlueprintEvent)
 // Parameters:
 // TEnumAsByte<ERepairableState>  State                          (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ERepairableState>  PreviousState                  (Parm, ZeroConstructor, IsPlainOldData)
 // class URepairableComponent*    RepairableComponent            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Mast_C::BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State, class URepairableComponent* RepairableComponent)
+void ABP_Mast_C::BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State, TEnumAsByte<ERepairableState> PreviousState, class URepairableComponent* RepairableComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_RepairableStateChangedDelegate__DelegateSignature"));
 
 	struct
 	{
 		TEnumAsByte<ERepairableState>  State;
+		TEnumAsByte<ERepairableState>  PreviousState;
 		class URepairableComponent*    RepairableComponent;
 	} params;
 
 	params.State = State;
+	params.PreviousState = PreviousState;
 	params.RepairableComponent = RepairableComponent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -284,19 +271,22 @@ void ABP_Mast_C::BndEvt__RepairableComponentFirst_K2Node_ComponentBoundEvent_3_R
 // (BlueprintEvent)
 // Parameters:
 // TEnumAsByte<ERepairableState>  State                          (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ERepairableState>  PreviousState                  (Parm, ZeroConstructor, IsPlainOldData)
 // class URepairableComponent*    RepairableComponent            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Mast_C::BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State, class URepairableComponent* RepairableComponent)
+void ABP_Mast_C::BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State, TEnumAsByte<ERepairableState> PreviousState, class URepairableComponent* RepairableComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_RepairableStateChangedDelegate__DelegateSignature"));
 
 	struct
 	{
 		TEnumAsByte<ERepairableState>  State;
+		TEnumAsByte<ERepairableState>  PreviousState;
 		class URepairableComponent*    RepairableComponent;
 	} params;
 
 	params.State = State;
+	params.PreviousState = PreviousState;
 	params.RepairableComponent = RepairableComponent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -307,19 +297,22 @@ void ABP_Mast_C::BndEvt__RepairableComponentSecond_K2Node_ComponentBoundEvent_6_
 // (BlueprintEvent)
 // Parameters:
 // TEnumAsByte<ERepairableState>  State                          (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<ERepairableState>  PreviousState                  (Parm, ZeroConstructor, IsPlainOldData)
 // class URepairableComponent*    RepairableComponent            (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Mast_C::BndEvt__RepairableComponentThird_K2Node_ComponentBoundEvent_10_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State, class URepairableComponent* RepairableComponent)
+void ABP_Mast_C::BndEvt__RepairableComponentThird_K2Node_ComponentBoundEvent_10_RepairableStateChangedDelegate__DelegateSignature(TEnumAsByte<ERepairableState> State, TEnumAsByte<ERepairableState> PreviousState, class URepairableComponent* RepairableComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Mast.BP_Mast_C.BndEvt__RepairableComponentThird_K2Node_ComponentBoundEvent_10_RepairableStateChangedDelegate__DelegateSignature"));
 
 	struct
 	{
 		TEnumAsByte<ERepairableState>  State;
+		TEnumAsByte<ERepairableState>  PreviousState;
 		class URepairableComponent*    RepairableComponent;
 	} params;
 
 	params.State = State;
+	params.PreviousState = PreviousState;
 	params.RepairableComponent = RepairableComponent;
 
 	UObject::ProcessEvent(fn, &params);

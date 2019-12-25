@@ -12,22 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Campaign018_ReapersBones_01_c_Proxy.BP_Campaign018_ReapersBones_01_c_Proxy_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_Campaign018_ReapersBones_01_c_Proxy_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Campaign018_ReapersBones_01_c_Proxy.BP_Campaign018_ReapersBones_01_c_Proxy_C.UserConstructionScript"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 }
 
 #ifdef _MSC_VER

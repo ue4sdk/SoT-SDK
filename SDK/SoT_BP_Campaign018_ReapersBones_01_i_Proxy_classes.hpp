@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Campaign018_ReapersBones_01_i_Proxy.BP_Campaign018_ReapersBones_01_i_Proxy_C
-// 0x0008 (0x0870 - 0x0868)
-class ABP_Campaign018_ReapersBones_01_i_Proxy_C : public ACargoRunCrateItemProxy
+// 0x0008 (0x07E8 - 0x07E0)
+class ABP_Campaign018_ReapersBones_01_i_Proxy_C : public ABP_Campaign018_ReapersBones_Proxy_Base_C
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable_1;                                           // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

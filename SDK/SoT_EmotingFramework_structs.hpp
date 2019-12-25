@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -17,13 +17,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct EmotingFramework.EmoteData
-// 0x0048
+// 0x0050
 struct FEmoteData
 {
 	struct FName                                       EmoteIdentifier;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FText                                       EmoteDisplayName;                                         // 0x0008(0x0038) (Edit)
 	float                                              DelayBeforeAllowingExit;                                  // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              VerticalOffsetFactorWhenZoomed;                           // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               HideNameplate;                                            // 0x0048(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct EmotingFramework.EventEmoteEndRequested
@@ -51,20 +53,20 @@ struct FEventEmoteCompleted
 };
 
 // ScriptStruct EmotingFramework.EventEmoteStarted
-// 0x0048
+// 0x0050
 struct FEventEmoteStarted
 {
-	struct FEmoteData                                  EmoteData;                                                // 0x0000(0x0048)
+	struct FEmoteData                                  EmoteData;                                                // 0x0000(0x0050)
 };
 
 // ScriptStruct EmotingFramework.EventEmoteRequested
-// 0x0058
+// 0x0060
 struct FEventEmoteRequested
 {
-	struct FEmoteData                                  EmoteData;                                                // 0x0000(0x0048)
-	struct FName                                       ForcedEmoteIdentifier;                                    // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               ForcedEmote;                                              // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
+	struct FEmoteData                                  EmoteData;                                                // 0x0000(0x0050)
+	struct FName                                       ForcedEmoteIdentifier;                                    // 0x0050(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               ForcedEmote;                                              // 0x0058(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0059(0x0007) MISSED OFFSET
 };
 
 // ScriptStruct EmotingFramework.EmoteId
