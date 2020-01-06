@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_IslandChestSpawner.BP_IslandChestSpawner_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x04D0 - 0x04D0)
 class UBP_IslandChestSpawner_C : public UIslandItemSpawnComponent
 {
 public:

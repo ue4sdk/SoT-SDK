@@ -12,6 +12,42 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_cmn_cannonball_cur_fire_01_a_Wieldable.BP_cmn_cannonball_cur_fire_01_a_Wieldable_C.SetLightVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           Visibility                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_cmn_cannonball_cur_fire_01_a_Wieldable_C::SetLightVisibility(bool Visibility)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_cmn_cannonball_cur_fire_01_a_Wieldable.BP_cmn_cannonball_cur_fire_01_a_Wieldable_C.SetLightVisibility"));
+
+	struct
+	{
+		bool                           Visibility;
+	} params;
+
+	params.Visibility = Visibility;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_cmn_cannonball_cur_fire_01_a_Wieldable.BP_cmn_cannonball_cur_fire_01_a_Wieldable_C.OnRep_IsWielded
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_cmn_cannonball_cur_fire_01_a_Wieldable_C::OnRep_IsWielded()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_cmn_cannonball_cur_fire_01_a_Wieldable.BP_cmn_cannonball_cur_fire_01_a_Wieldable_C.OnRep_IsWielded"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_cmn_cannonball_cur_fire_01_a_Wieldable.BP_cmn_cannonball_cur_fire_01_a_Wieldable_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

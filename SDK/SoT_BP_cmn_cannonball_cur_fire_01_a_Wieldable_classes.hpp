@@ -15,13 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_cannonball_cur_fire_01_a_Wieldable.BP_cmn_cannonball_cur_fire_01_a_Wieldable_C
-// 0x0058 (0x09C0 - 0x0968)
+// 0x0059 (0x0921 - 0x08C8)
 class ABP_cmn_cannonball_cur_fire_01_a_Wieldable_C : public ABP_Grenade_Wieldable_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0968(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UPointLightComponent*                        PointLight;                                               // 0x0970(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FObjectMessagingHandle                      OnWieldedHandle;                                          // 0x0978(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x08C8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UPointLightComponent*                        PointLight;                                               // 0x08D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FObjectMessagingHandle                      OnWieldedHandle;                                          // 0x08D8(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	bool                                               IsWielded;                                                // 0x0920(0x0001) (Edit, BlueprintVisible, Net, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,6 +31,8 @@ public:
 	}
 
 
+	void SetLightVisibility(bool Visibility);
+	void OnRep_IsWielded();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();
 	void OnIsWielded(const struct FEventWieldableItemSetIsWielded& NewParam);

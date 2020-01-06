@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AI_wpn_cutlass_Wieldable.BP_AI_wpn_cutlass_Wieldable_C
-// 0x0000 (0x0AC8 - 0x0AC8)
+// 0x0000 (0x0A28 - 0x0A28)
 class ABP_AI_wpn_cutlass_Wieldable_C : public ABP_Skeleton_Cutlass_Item_C
 {
 public:

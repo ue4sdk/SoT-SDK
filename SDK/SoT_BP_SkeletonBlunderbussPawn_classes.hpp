@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SkeletonBlunderbussPawn.BP_SkeletonBlunderbussPawn_C
-// 0x0000 (0x1178 - 0x1178)
+// 0x0000 (0x10F8 - 0x10F8)
 class ABP_SkeletonBlunderbussPawn_C : public ABP_SkeletonPawnBase_C
 {
 public:

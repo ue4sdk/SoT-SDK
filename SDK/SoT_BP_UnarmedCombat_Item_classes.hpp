@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_UnarmedCombat_Item.BP_UnarmedCombat_Item_C
-// 0x0008 (0x0AC8 - 0x0AC0)
+// 0x0008 (0x0A28 - 0x0A20)
 class ABP_UnarmedCombat_Item_C : public AMeleeWeapon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0AC0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A20(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

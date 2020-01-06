@@ -32,36 +32,6 @@ void UBP_Humanoid_Skeleton_C::SetInitialAthenaCharacterAndAnimSet(class UClass* 
 }
 
 
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.ExtractEmotesFromPersonas
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FAthenaAnimationDiverseEmotes> Diverse                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FAthenaAnimationEmotePersonas> Personas                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FAthenaAnimationEmoteAnimations> Emotes                         (Parm, OutParm, ZeroConstructor)
-
-void UBP_Humanoid_Skeleton_C::ExtractEmotesFromPersonas(TArray<struct FAthenaAnimationDiverseEmotes>* Diverse, TArray<struct FAthenaAnimationEmotePersonas>* Personas, TArray<struct FAthenaAnimationEmoteAnimations>* Emotes)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.ExtractEmotesFromPersonas"));
-
-	struct
-	{
-		TArray<struct FAthenaAnimationDiverseEmotes> Diverse;
-		TArray<struct FAthenaAnimationEmotePersonas> Personas;
-		TArray<struct FAthenaAnimationEmoteAnimations> Emotes;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (Diverse != nullptr)
-		*Diverse = params.Diverse;
-	if (Personas != nullptr)
-		*Personas = params.Personas;
-	if (Emotes != nullptr)
-		*Emotes = params.Emotes;
-}
-
-
 // Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.ParametricBlendFunction
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -392,22 +362,6 @@ void UBP_Humanoid_Skeleton_C::IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> Limb
 }
 
 
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_85388A9F4164CFC802365B87DEC2791A
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_85388A9F4164CFC802365B87DEC2791A()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_85388A9F4164CFC802365B87DEC2791A"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_E7E0005C47169BB918F6DEB6F169776B
 // (BlueprintEvent)
 
@@ -510,22 +464,6 @@ void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Hum
 void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_E63F58D2436F2FCD4B9956B1F716AB66()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_E63F58D2436F2FCD4B9956B1F716AB66"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_49EB917F4F2DC1FA616CA28F523A3C01
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_49EB917F4F2DC1FA616CA28F523A3C01()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_49EB917F4F2DC1FA616CA28F523A3C01"));
 
 	struct
 	{
@@ -3112,204 +3050,12 @@ void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Hum
 }
 
 
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_D13DE8BE45499C3736A00094F1515BF8
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_D13DE8BE45499C3736A00094F1515BF8()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_D13DE8BE45499C3736A00094F1515BF8"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_2FBF5DF642BD00B8B04BFB90ECA9698F
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_2FBF5DF642BD00B8B04BFB90ECA9698F()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_2FBF5DF642BD00B8B04BFB90ECA9698F"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_03AEE73448255478D2727D8C31F31460
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_03AEE73448255478D2727D8C31F31460()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_03AEE73448255478D2727D8C31F31460"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_14BDDDC147203C028F7F5682A8A1ACC2
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_14BDDDC147203C028F7F5682A8A1ACC2()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_14BDDDC147203C028F7F5682A8A1ACC2"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_A5F201CA48985233542146B09045E4D4
 // (BlueprintEvent)
 
 void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_A5F201CA48985233542146B09045E4D4()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_A5F201CA48985233542146B09045E4D4"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_A5C078CA4129027695894E891B535619
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_A5C078CA4129027695894E891B535619()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_A5C078CA4129027695894E891B535619"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_8F3143FB45106353B2F248BB4275C8AB
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_8F3143FB45106353B2F248BB4275C8AB()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_8F3143FB45106353B2F248BB4275C8AB"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_35CBE7684216060E630BE7AA593B671E
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_35CBE7684216060E630BE7AA593B671E()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_35CBE7684216060E630BE7AA593B671E"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_7E534F7A48E57C24CBA94CB0E02D112F
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_7E534F7A48E57C24CBA94CB0E02D112F()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_7E534F7A48E57C24CBA94CB0E02D112F"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_77DAD0024FE490F029A370920973AE02
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_77DAD0024FE490F029A370920973AE02()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_77DAD0024FE490F029A370920973AE02"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_97418C5E4431D57068ACF79156D6B992
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_97418C5E4431D57068ACF79156D6B992()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_97418C5E4431D57068ACF79156D6B992"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_B155339F4DB054D4B1B6D481BCC511AD
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_B155339F4DB054D4B1B6D481BCC511AD()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_B155339F4DB054D4B1B6D481BCC511AD"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_57250F9341097A9CE3CE28975FBB2F7C
-// (BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_57250F9341097A9CE3CE28975FBB2F7C()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_Skeleton_AnimGraphNode_TransitionResult_57250F9341097A9CE3CE28975FBB2F7C"));
 
 	struct
 	{
@@ -9188,54 +8934,6 @@ void UBP_Humanoid_Skeleton_C::OnRelinqusihedControl(const struct FEventRelinquis
 }
 
 
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_AllocateEmoteSlotB
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::AnimNotify_AllocateEmoteSlotB()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_AllocateEmoteSlotB"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_AllocateEmoteSlotA
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::AnimNotify_AllocateEmoteSlotA()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_AllocateEmoteSlotA"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_EndContinuousEmote
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::AnimNotify_EndContinuousEmote()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_EndContinuousEmote"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.DigBespokeCheck
 // (BlueprintCallable, BlueprintEvent)
 
@@ -9450,38 +9148,6 @@ void UBP_Humanoid_Skeleton_C::AnimNotify_UnEquipLinstock()
 void UBP_Humanoid_Skeleton_C::AnimNotify_EndCannonFire()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_EndCannonFire"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_StopEmote
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::AnimNotify_StopEmote()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_StopEmote"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_StartEmote
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::AnimNotify_StartEmote()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_StartEmote"));
 
 	struct
 	{
@@ -9910,22 +9576,6 @@ void UBP_Humanoid_Skeleton_C::ItemStowed(const TScriptInterface<class UWieldable
 
 	params.Item = Item;
 	params.FastStow = FastStow;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_SetSailsLookatAngle
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_Humanoid_Skeleton_C::AnimNotify_SetSailsLookatAngle()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Skeleton.BP_Humanoid_Skeleton_C.AnimNotify_SetSailsLookatAngle"));
-
-	struct
-	{
-	} params;
-
 
 	UObject::ProcessEvent(fn, &params);
 }

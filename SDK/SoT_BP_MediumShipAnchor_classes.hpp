@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MediumShipAnchor.BP_MediumShipAnchor_C
-// 0x0008 (0x04F0 - 0x04E8)
+// 0x0008 (0x0450 - 0x0448)
 class ABP_MediumShipAnchor_C : public AAnchor
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0448(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

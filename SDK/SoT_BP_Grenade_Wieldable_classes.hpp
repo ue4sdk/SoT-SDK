@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Grenade_Wieldable.BP_Grenade_Wieldable_C
-// 0x0018 (0x0968 - 0x0950)
+// 0x0018 (0x08C8 - 0x08B0)
 class ABP_Grenade_Wieldable_C : public AGrenade
 {
 public:
-	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0950(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0958(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPickupableComponent*                        Pickupable;                                               // 0x0960(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x08B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x08B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPickupableComponent*                        Pickupable;                                               // 0x08C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
