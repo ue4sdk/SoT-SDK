@@ -33881,6 +33881,22 @@ void ATutorialTavernStrangerNPC::OnAnimationsLoaded()
 }
 
 
+// Function Athena.TutorialTavernStrangerNPC.CleanTutorialCutScene
+// (Event, Protected, BlueprintCallable, BlueprintEvent)
+
+void ATutorialTavernStrangerNPC::CleanTutorialCutScene()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.TutorialTavernStrangerNPC.CleanTutorialCutScene"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.VoyageProposalContainer.SetTaleManifest
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -59521,6 +59537,26 @@ int UShantyInterface::GetNumberOfInstrumentsPlayingOnEnsemble(int EnsembleIndex)
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.ProjectileCooldownService.SetValidationEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           InIsValidationEnabled          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AProjectileCooldownService::SetValidationEnabled(bool InIsValidationEnabled)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.ProjectileCooldownService.SetValidationEnabled"));
+
+	struct
+	{
+		bool                           InIsValidationEnabled;
+	} params;
+
+	params.InIsValidationEnabled = InIsValidationEnabled;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

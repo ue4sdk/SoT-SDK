@@ -1757,7 +1757,8 @@ public:
 	bool                                               DestroyProxiesOnEndPlay;                                  // 0x02F0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               SpawnWithPhysicsEnabled;                                  // 0x02F1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               DropItemsOnSpawn;                                         // 0x02F2(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x15];                                      // 0x02F3(0x0015) MISSED OFFSET
+	bool                                               DropItemsUsingPriorityAIDropParams;                       // 0x02F3(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x14];                                      // 0x02F4(0x0014) MISSED OFFSET
 	TArray<struct FSpawnInstance>                      SpawnList;                                                // 0x0308(0x0010) (ZeroConstructor)
 	TArray<struct FSpawnInstance>                      SingleItemInstances;                                      // 0x0318(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData03[0x10];                                      // 0x0328(0x0010) MISSED OFFSET
@@ -4379,7 +4380,7 @@ public:
 
 
 // Class Athena.AthenaGameState
-// 0x0460 (0x09E8 - 0x0588)
+// 0x0468 (0x09F0 - 0x0588)
 class AAthenaGameState : public AServiceProviderGameState
 {
 public:
@@ -4439,12 +4440,13 @@ public:
 	class UShipFactory*                                ShipFactory;                                              // 0x0798(0x0008) (ZeroConstructor, IsPlainOldData)
 	class URewindPhysicsService*                       RewindPhysicsService;                                     // 0x07A0(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UNotificationMessagesDataAsset*              NotificationMessagesDataAsset;                            // 0x07A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1D0];                                     // 0x07B0(0x01D0) MISSED OFFSET
-	struct FGameServiceCoordinator                     ServiceCoordinator;                                       // 0x0980(0x0010)
-	unsigned char                                      UnknownData02[0x50];                                      // 0x0990(0x0050) MISSED OFFSET
-	bool                                               IsXboxGamePadOnlyServer;                                  // 0x09E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               ShouldDisableAsyncOcclusionCheck;                         // 0x09E1(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x6];                                       // 0x09E2(0x0006) MISSED OFFSET
+	class AProjectileCooldownService*                  ProjectileCooldownService;                                // 0x07B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1D0];                                     // 0x07B8(0x01D0) MISSED OFFSET
+	struct FGameServiceCoordinator                     ServiceCoordinator;                                       // 0x0988(0x0010)
+	unsigned char                                      UnknownData02[0x50];                                      // 0x0998(0x0050) MISSED OFFSET
+	bool                                               IsXboxGamePadOnlyServer;                                  // 0x09E8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldDisableAsyncOcclusionCheck;                         // 0x09E9(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x6];                                       // 0x09EA(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -23787,6 +23789,7 @@ public:
 
 
 	void OnAnimationsLoaded();
+	void CleanTutorialCutScene();
 };
 
 
@@ -42953,13 +42956,14 @@ public:
 
 
 // Class Athena.ItemSettings
-// 0x0050 (0x0088 - 0x0038)
+// 0x00A8 (0x00E0 - 0x0038)
 class UItemSettings : public UDeveloperSettings
 {
 public:
-	struct FDropItemParams                             DropItemParams;                                           // 0x0038(0x0048) (Edit, Config, DisableEditOnInstance)
-	TEnumAsByte<ECollisionChannel>                     AutoAimCollisionChannel;                                  // 0x0080(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0081(0x0007) MISSED OFFSET
+	struct FDropItemParams                             DropItemParams;                                           // 0x0038(0x0050) (Edit, Config, DisableEditOnInstance)
+	struct FDropItemParams                             AIPriorityDropItemParams;                                 // 0x0088(0x0050) (Edit, Config, DisableEditOnInstance)
+	TEnumAsByte<ECollisionChannel>                     AutoAimCollisionChannel;                                  // 0x00D8(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00D9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -52392,6 +52396,59 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ShantyItemDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ProjectileCooldownServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UProjectileCooldownServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ProjectileCooldownServiceInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Athena.ProjectileCooldownService
+// 0x0030 (0x0440 - 0x0410)
+class AProjectileCooldownService : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0410(0x0020) MISSED OFFSET
+	class UProjectileCooldownServiceSettings*          ProjectileCooldownSettings;                               // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UWorld*                                      CachedWorld;                                              // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ProjectileCooldownService"));
+		return ptr;
+	}
+
+
+	void SetValidationEnabled(bool InIsValidationEnabled);
+};
+
+
+// Class Athena.ProjectileCooldownServiceSettings
+// 0x0018 (0x0050 - 0x0038)
+class UProjectileCooldownServiceSettings : public UDeveloperSettings
+{
+public:
+	float                                              ProjectileCooldownTime;                                   // 0x0038(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
+	TArray<class UClass*>                              ClassesRequiringValidation;                               // 0x0040(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Athena.ProjectileCooldownServiceSettings"));
 		return ptr;
 	}
 

@@ -235,6 +235,30 @@ struct FRotator
 
     inline FRotator(float pitch, float yaw, float roll) : Pitch(pitch), Yaw(yaw), Roll(roll) {}
 
+    inline FRotator operator + (const FRotator& other) const { return FRotator(Pitch + other.Pitch, Yaw + other.Yaw, Roll + other.Roll); }
+
+    inline FRotator operator - (const FRotator& other) const { return FRotator(Pitch - other.Pitch,Yaw - other.Yaw, Roll - other.Roll); }
+
+    inline FRotator operator * (float scalar) const { return FRotator(Pitch * scalar,Yaw * scalar, Roll * scalar); }
+
+    inline FRotator& operator=  (const FRotator& other) { Pitch = other.Pitch; Yaw = other.Yaw; Roll = other.Roll; return *this; }
+
+    inline FRotator& operator+= (const FRotator& other) { Pitch += other.Pitch; Yaw += other.Yaw; Roll += other.Roll; return *this; }
+
+    inline FRotator& operator-= (const FRotator& other) { Pitch -= other.Pitch; Yaw -= other.Yaw; Roll -= other.Roll; return *this; }
+
+    inline FRotator& operator*= (const float other)    { Yaw *= other; Pitch *= other; Roll *= other; return *this; }
+
+   friend bool operator==(const FRotator& first, const FRotator& second)
+	{
+		return first.Pitch == second.Pitch && first.Yaw == second.Yaw && first.Roll == second.Roll;
+	}
+
+    friend bool operator!=(const FRotator& first, const FRotator& second)
+	{
+		return !(first == second);
+	}
+
 };
 
 // ScriptStruct CoreUObject.Quat

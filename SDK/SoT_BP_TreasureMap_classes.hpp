@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureMap.BP_TreasureMap_C
-// 0x0000 (0x0928 - 0x0928)
+// 0x0000 (0x08F0 - 0x08F0)
 class ABP_TreasureMap_C : public AXMarksTheSpotMap
 {
 public:

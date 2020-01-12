@@ -477,6 +477,13 @@ struct FPetPickedUpTelemetryEvent
 	bool                                               IsOnPerch;                                                // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Pets.PetControllerSetTickOrderEvent
+// 0x0008
+struct FPetControllerSetTickOrderEvent
+{
+	class AActor*                                      Actor;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Pets.EventPerchHangoutSpotSetEnabledState
 // 0x000C
 struct FEventPerchHangoutSpotSetEnabledState

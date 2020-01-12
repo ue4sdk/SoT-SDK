@@ -9368,7 +9368,7 @@ struct FWeightedRewardTable
 };
 
 // ScriptStruct Athena.DropItemParams
-// 0x0048
+// 0x0050
 struct FDropItemParams
 {
 	TArray<TAssetPtr<class UClass>>                    AttachOnDropParentTypes;                                  // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
@@ -9385,6 +9385,8 @@ struct FDropItemParams
 	float                                              LineTraceOffsetWhenBelowDefaultLineTraceDepth;            // 0x003C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              SweepPercentageOnHit;                                     // 0x0040(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              HitDiffTolerance;                                         // 0x0044(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              LineTraceOffsetUpwardsFromStart;                          // 0x0048(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Athena.PhraseData
@@ -25935,6 +25937,14 @@ struct FPrepareTavernForContestMigration
 struct FContestParticipantJoinedServerEvent
 {
 	struct FGuid                                       NewCrewJoining;                                           // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Athena.RequestAuthoritativeFire
+// 0x0020
+struct FRequestAuthoritativeFire
+{
+	class UObject*                                     RequestingObject;                                         // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0008(0x0018) MISSED OFFSET
 };
 
 }

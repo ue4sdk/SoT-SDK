@@ -1294,6 +1294,8 @@ public:
 	}
 
 
+	static class AItemInfo* SpawnItemFromAI(class APawn* Pawn, class UClass* ItemDesc);
+	static int GetFrameCounter();
 	static void AddNameplateToAI(class AActor* Actor, const class FString& DisplayName);
 };
 
