@@ -29,24 +29,22 @@ public:
 };
 
 
-// Class Landscape.LandscapeGrassType
-// 0x0030 (0x0058 - 0x0028)
-class ULandscapeGrassType : public UObject
+// Class Landscape.LandscapeInfo
+// 0x01E8 (0x0210 - 0x0028)
+class ULandscapeInfo : public UObject
 {
 public:
-	TArray<struct FGrassVariety>                       GrassVarieties;                                           // 0x0028(0x0010) (Edit, ZeroConstructor)
-	class UStaticMesh*                                 GrassMesh;                                                // 0x0038(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
-	float                                              GrassDensity;                                             // 0x0040(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	float                                              PlacementJitter;                                          // 0x0044(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	int                                                StartCullDistance;                                        // 0x0048(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	int                                                EndCullDistance;                                          // 0x004C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	bool                                               RandomRotation;                                           // 0x0050(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
-	bool                                               AlignToSurface;                                           // 0x0051(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x0052(0x0006) MISSED OFFSET
+	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0028(0x001C) (IsPlainOldData)
+	struct FGuid                                       LandscapeGuid;                                            // 0x0044(0x0010) (ZeroConstructor, IsPlainOldData)
+	int                                                ComponentSizeQuads;                                       // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SubsectionSizeQuads;                                      // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                ComponentNumSubsections;                                  // 0x005C(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DrawScale;                                                // 0x0060(0x000C) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1A4];                                     // 0x006C(0x01A4) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeGrassType"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeInfo"));
 		return ptr;
 	}
 
@@ -148,6 +146,30 @@ public:
 };
 
 
+// Class Landscape.LandscapeGrassType
+// 0x0030 (0x0058 - 0x0028)
+class ULandscapeGrassType : public UObject
+{
+public:
+	TArray<struct FGrassVariety>                       GrassVarieties;                                           // 0x0028(0x0010) (Edit, ZeroConstructor)
+	class UStaticMesh*                                 GrassMesh;                                                // 0x0038(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
+	float                                              GrassDensity;                                             // 0x0040(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	float                                              PlacementJitter;                                          // 0x0044(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	int                                                StartCullDistance;                                        // 0x0048(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	int                                                EndCullDistance;                                          // 0x004C(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
+	bool                                               RandomRotation;                                           // 0x0050(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
+	bool                                               AlignToSurface;                                           // 0x0051(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0052(0x0006) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeGrassType"));
+		return ptr;
+	}
+
+};
+
+
 // Class Landscape.LandscapeHeightfieldCollisionComponent
 // 0x00E0 (0x0650 - 0x0570)
 class ULandscapeHeightfieldCollisionComponent : public UPrimitiveComponent
@@ -185,28 +207,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeMeshCollisionComponent"));
-		return ptr;
-	}
-
-};
-
-
-// Class Landscape.LandscapeInfo
-// 0x01E8 (0x0210 - 0x0028)
-class ULandscapeInfo : public UObject
-{
-public:
-	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0028(0x001C) (IsPlainOldData)
-	struct FGuid                                       LandscapeGuid;                                            // 0x0044(0x0010) (ZeroConstructor, IsPlainOldData)
-	int                                                ComponentSizeQuads;                                       // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SubsectionSizeQuads;                                      // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                ComponentNumSubsections;                                  // 0x005C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     DrawScale;                                                // 0x0060(0x000C) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1A4];                                     // 0x006C(0x01A4) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeInfo"));
 		return ptr;
 	}
 
@@ -284,25 +284,6 @@ public:
 };
 
 
-// Class Landscape.LandscapeMeshProxyComponent
-// 0x0030 (0x0600 - 0x05D0)
-class ULandscapeMeshProxyComponent : public UStaticMeshComponent
-{
-public:
-	struct FGuid                                       LandscapeGuid;                                            // 0x05D0(0x0010) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FIntPoint>                           ProxyComponentBases;                                      // 0x05E0(0x0010) (ZeroConstructor)
-	int8_t                                             ProxyLOD;                                                 // 0x05F0(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xF];                                       // 0x05F1(0x000F) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeMeshProxyComponent"));
-		return ptr;
-	}
-
-};
-
-
 // Class Landscape.LandscapeProxy
 // 0x0390 (0x07A0 - 0x0410)
 class ALandscapeProxy : public AActor
@@ -360,6 +341,25 @@ public:
 
 	void EditorApplySpline(class USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, class ULandscapeLayerInfoObject* PaintLayer);
 	void ChangeLODDistanceFactor(float InLODDistanceFactor);
+};
+
+
+// Class Landscape.LandscapeMeshProxyComponent
+// 0x0030 (0x0600 - 0x05D0)
+class ULandscapeMeshProxyComponent : public UStaticMeshComponent
+{
+public:
+	struct FGuid                                       LandscapeGuid;                                            // 0x05D0(0x0010) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FIntPoint>                           ProxyComponentBases;                                      // 0x05E0(0x0010) (ZeroConstructor)
+	int8_t                                             ProxyLOD;                                                 // 0x05F0(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xF];                                       // 0x05F1(0x000F) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Landscape.LandscapeMeshProxyComponent"));
+		return ptr;
+	}
+
 };
 
 

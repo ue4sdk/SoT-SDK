@@ -60,6 +60,7 @@ public:
 	}
 
 
+	void ShowAppropriateMerchantPrompt();
 	void SetIsHidden(bool NewHidden);
 	void PlayerLeftGoldhoarderRadiusFunc(class AActor* Actor);
 	void PlayerEnteredGoldhoarderRadiusFunc(class AActor* Actor);

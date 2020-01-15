@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RiddleMap.BP_RiddleMap_C
-// 0x0000 (0x09E0 - 0x09E0)
+// 0x0000 (0x0940 - 0x0940)
 class ABP_RiddleMap_C : public ARiddleMap
 {
 public:

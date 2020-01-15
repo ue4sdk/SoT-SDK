@@ -885,6 +885,35 @@ void UAthenaCheatManager::TeleportPlayerToSafety()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.TeleportPlayerToOffsetAndReturn
+// (Final, Exec, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          OffsetX                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          OffsetY                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          OffsetZ                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnTime                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::TeleportPlayerToOffsetAndReturn(float OffsetX, float OffsetY, float OffsetZ, float ReturnTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.TeleportPlayerToOffsetAndReturn"));
+
+	struct
+	{
+		float                          OffsetX;
+		float                          OffsetY;
+		float                          OffsetZ;
+		float                          ReturnTime;
+	} params;
+
+	params.OffsetX = OffsetX;
+	params.OffsetY = OffsetY;
+	params.OffsetZ = OffsetZ;
+	params.ReturnTime = ReturnTime;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.TeleportPlayerToKraken
 // (Final, Exec, Native, Public)
 
@@ -5262,6 +5291,22 @@ void UAthenaCheatManager::KillAllPlayers()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.KillAllDebugAISpawners
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::KillAllDebugAISpawners()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.KillAllDebugAISpawners"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.KillAllCrews
 // (Final, Exec, Native, Public)
 
@@ -7210,6 +7255,49 @@ void UAthenaCheatManager::CreateDebugReapersChestMarkerAtPlayerLocation()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.CreateDebugAISpawnerAt
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  SpawnerAssetName               (Parm, ZeroConstructor)
+// class FString                  LocationActorName              (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::CreateDebugAISpawnerAt(const class FString& SpawnerAssetName, const class FString& LocationActorName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.CreateDebugAISpawnerAt"));
+
+	struct
+	{
+		class FString                  SpawnerAssetName;
+		class FString                  LocationActorName;
+	} params;
+
+	params.SpawnerAssetName = SpawnerAssetName;
+	params.LocationActorName = LocationActorName;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.CreateDebugAISpawner
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  SpawnerAssetName               (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::CreateDebugAISpawner(const class FString& SpawnerAssetName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.CreateDebugAISpawner"));
+
+	struct
+	{
+		class FString                  SpawnerAssetName;
+	} params;
+
+	params.SpawnerAssetName = SpawnerAssetName;
 
 	UObject::ProcessEvent(fn, &params);
 }

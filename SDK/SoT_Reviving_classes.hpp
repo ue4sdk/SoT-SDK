@@ -69,6 +69,23 @@ public:
 };
 
 
+// Class Reviving.ReviveGhost
+// 0x0010 (0x0420 - 0x0410)
+class AReviveGhost : public AActor
+{
+public:
+	class USkeletalMeshComponent*                      MeshComponent;                                            // 0x0410(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UAnimationDataStoreComponent*                AnimationDataStoreComponent;                              // 0x0418(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Reviving.ReviveGhost"));
+		return ptr;
+	}
+
+};
+
+
 // Class Reviving.RevivePlayerActionStateId
 // 0x0000 (0x0028 - 0x0028)
 class URevivePlayerActionStateId : public UActionStateId

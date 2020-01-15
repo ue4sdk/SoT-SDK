@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SkellyShip_ShipCloud_Red.BP_SkellyShip_ShipCloud_Red_C
-// 0x0000 (0x0558 - 0x0558)
+// 0x0000 (0x04B8 - 0x04B8)
 class ABP_SkellyShip_ShipCloud_Red_C : public ABP_SkellyFort_SkullCloud_C
 {
 public:

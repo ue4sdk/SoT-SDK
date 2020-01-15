@@ -41,14 +41,6 @@ struct FLimbIK
 	unsigned char                                      UnknownData00[0x60];                                      // 0x0000(0x0060) MISSED OFFSET
 };
 
-// ScriptStruct Animation.NamedFirstPersonAnimatic
-// 0x0018
-struct FNamedFirstPersonAnimatic
-{
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       Anim;                                                     // 0x0008(0x0010) (Edit, ZeroConstructor)
-};
-
 // ScriptStruct Animation.AnimDataEntryStructWrapper
 // 0x0018
 struct FAnimDataEntryStructWrapper
@@ -80,9 +72,9 @@ struct FAnimationDataStoreAssetEntry
 	class UClass*                                      AnimDataTypeCooked;                                       // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Animation.AnimationDataStoreAssetReferenceEntry
+// ScriptStruct Animation.AnimationDataStoreAssetWeakReferenceEntry
 // 0x0028
-struct FAnimationDataStoreAssetReferenceEntry
+struct FAnimationDataStoreAssetWeakReferenceEntry
 {
 	class UClass*                                      AnimDataId;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TAssetPtr<class UClass>                            AnimData;                                                 // 0x0008(0x0020) (Edit)
@@ -145,6 +137,13 @@ struct FTransformBlendCurve
 // ScriptStruct Animation.EventCosmeticItemAttachmentSwitched
 // 0x0008
 struct FEventCosmeticItemAttachmentSwitched
+{
+	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Animation.EventCosmeticItemSpawned
+// 0x0008
+struct FEventCosmeticItemSpawned
 {
 	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };

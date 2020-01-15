@@ -61,6 +61,16 @@ enum class EAbilityGenericReplicatedEvent : uint8_t
 };
 
 
+// Enum GameplayAbilities.ETargetDataFilterSelf
+enum class ETargetDataFilterSelf : uint8_t
+{
+	ETargetDataFilterSelf__TDFS_Any = 0,
+	ETargetDataFilterSelf__TDFS_NoSelf = 1,
+	ETargetDataFilterSelf__TDFS_NoOthers = 2,
+	ETargetDataFilterSelf__TDFS_MAX = 3
+};
+
+
 // Enum GameplayAbilities.EGameplayTagEventType
 enum class EGameplayTagEventType : uint8_t
 {
@@ -124,6 +134,46 @@ enum class EGameplayTargetingConfirmation : uint8_t
 };
 
 
+// Enum GameplayAbilities.EGameplayAbilityTriggerSource
+enum class EGameplayAbilityTriggerSource : uint8_t
+{
+	EGameplayAbilityTriggerSource__GameplayEvent = 0,
+	EGameplayAbilityTriggerSource__OwnedTagAdded = 1,
+	EGameplayAbilityTriggerSource__OwnedTagPresent = 2,
+	EGameplayAbilityTriggerSource__EGameplayAbilityTriggerSource_MAX = 3
+};
+
+
+// Enum GameplayAbilities.EGameplayAbilityReplicationPolicy
+enum class EGameplayAbilityReplicationPolicy : uint8_t
+{
+	EGameplayAbilityReplicationPolicy__ReplicateNo = 0,
+	EGameplayAbilityReplicationPolicy__ReplicateYes = 1,
+	EGameplayAbilityReplicationPolicy__EGameplayAbilityReplicationPolicy_MAX = 2
+};
+
+
+// Enum GameplayAbilities.EGameplayAbilityNetExecutionPolicy
+enum class EGameplayAbilityNetExecutionPolicy : uint8_t
+{
+	EGameplayAbilityNetExecutionPolicy__LocalPredicted = 0,
+	EGameplayAbilityNetExecutionPolicy__LocalOnly = 1,
+	EGameplayAbilityNetExecutionPolicy__ServerInitiated = 2,
+	EGameplayAbilityNetExecutionPolicy__ServerOnly = 3,
+	EGameplayAbilityNetExecutionPolicy__EGameplayAbilityNetExecutionPolicy_MAX = 4
+};
+
+
+// Enum GameplayAbilities.EGameplayAbilityInstancingPolicy
+enum class EGameplayAbilityInstancingPolicy : uint8_t
+{
+	EGameplayAbilityInstancingPolicy__NonInstanced = 0,
+	EGameplayAbilityInstancingPolicy__InstancedPerActor = 1,
+	EGameplayAbilityInstancingPolicy__InstancedPerExecution = 2,
+	EGameplayAbilityInstancingPolicy__EGameplayAbilityInstancingPolicy_MAX = 3
+};
+
+
 // Enum GameplayAbilities.EGameplayEffectStackingPeriodPolicy
 enum class EGameplayEffectStackingPeriodPolicy : uint8_t
 {
@@ -173,56 +223,6 @@ enum class EGameplayEffectMagnitudeCalculation : uint8_t
 };
 
 
-// Enum GameplayAbilities.EGameplayAbilityTriggerSource
-enum class EGameplayAbilityTriggerSource : uint8_t
-{
-	EGameplayAbilityTriggerSource__GameplayEvent = 0,
-	EGameplayAbilityTriggerSource__OwnedTagAdded = 1,
-	EGameplayAbilityTriggerSource__OwnedTagPresent = 2,
-	EGameplayAbilityTriggerSource__EGameplayAbilityTriggerSource_MAX = 3
-};
-
-
-// Enum GameplayAbilities.EGameplayAbilityReplicationPolicy
-enum class EGameplayAbilityReplicationPolicy : uint8_t
-{
-	EGameplayAbilityReplicationPolicy__ReplicateNo = 0,
-	EGameplayAbilityReplicationPolicy__ReplicateYes = 1,
-	EGameplayAbilityReplicationPolicy__EGameplayAbilityReplicationPolicy_MAX = 2
-};
-
-
-// Enum GameplayAbilities.EGameplayAbilityNetExecutionPolicy
-enum class EGameplayAbilityNetExecutionPolicy : uint8_t
-{
-	EGameplayAbilityNetExecutionPolicy__LocalPredicted = 0,
-	EGameplayAbilityNetExecutionPolicy__LocalOnly = 1,
-	EGameplayAbilityNetExecutionPolicy__ServerInitiated = 2,
-	EGameplayAbilityNetExecutionPolicy__ServerOnly = 3,
-	EGameplayAbilityNetExecutionPolicy__EGameplayAbilityNetExecutionPolicy_MAX = 4
-};
-
-
-// Enum GameplayAbilities.EGameplayAbilityInstancingPolicy
-enum class EGameplayAbilityInstancingPolicy : uint8_t
-{
-	EGameplayAbilityInstancingPolicy__NonInstanced = 0,
-	EGameplayAbilityInstancingPolicy__InstancedPerActor = 1,
-	EGameplayAbilityInstancingPolicy__InstancedPerExecution = 2,
-	EGameplayAbilityInstancingPolicy__EGameplayAbilityInstancingPolicy_MAX = 3
-};
-
-
-// Enum GameplayAbilities.ETargetDataFilterSelf
-enum class ETargetDataFilterSelf : uint8_t
-{
-	ETargetDataFilterSelf__TDFS_Any = 0,
-	ETargetDataFilterSelf__TDFS_NoSelf = 1,
-	ETargetDataFilterSelf__TDFS_NoOthers = 2,
-	ETargetDataFilterSelf__TDFS_MAX = 3
-};
-
-
 // Enum GameplayAbilities.EAbilityTaskNetSyncType
 enum class EAbilityTaskNetSyncType : uint8_t
 {
@@ -230,6 +230,16 @@ enum class EAbilityTaskNetSyncType : uint8_t
 	EAbilityTaskNetSyncType__OnlyServerWait = 1,
 	EAbilityTaskNetSyncType__OnlyClientWait = 2,
 	EAbilityTaskNetSyncType__EAbilityTaskNetSyncType_MAX = 3
+};
+
+
+// Enum GameplayAbilities.ETargetAbilitySelfSelection
+enum class ETargetAbilitySelfSelection : uint8_t
+{
+	ETargetAbilitySelfSelection__TASS_Permit = 0,
+	ETargetAbilitySelfSelection__TASS_Forbid = 1,
+	ETargetAbilitySelfSelection__TASS_Require = 2,
+	ETargetAbilitySelfSelection__TASS_MAX = 3
 };
 
 
@@ -261,16 +271,6 @@ enum class EGameplayAbilityInputBinds : uint8_t
 	EGameplayAbilityInputBinds__Ability8 = 7,
 	EGameplayAbilityInputBinds__Ability9 = 8,
 	EGameplayAbilityInputBinds__EGameplayAbilityInputBinds_MAX = 9
-};
-
-
-// Enum GameplayAbilities.ETargetAbilitySelfSelection
-enum class ETargetAbilitySelfSelection : uint8_t
-{
-	ETargetAbilitySelfSelection__TASS_Permit = 0,
-	ETargetAbilitySelfSelection__TASS_Forbid = 1,
-	ETargetAbilitySelfSelection__TASS_Require = 2,
-	ETargetAbilitySelfSelection__TASS_MAX = 3
 };
 
 

@@ -26,6 +26,15 @@ struct FWwiseEmitter
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
 };
 
+// ScriptStruct RareAudio.EventToComponentMapping
+// 0x0020
+struct FEventToComponentMapping
+{
+	class UWwiseEvent*                                 PlayEvent;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 StopEvent;                                                // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UWwiseEmitterComponent*>              WwiseEmitterComponents;                                   // 0x0010(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
+};
+
 // ScriptStruct RareAudio.WwiseEmitterCreationParams
 // 0x0028
 struct FWwiseEmitterCreationParams
@@ -36,15 +45,6 @@ struct FWwiseEmitterCreationParams
 	struct FName                                       SwitchGroup;                                              // 0x0014(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	struct FName                                       SwitchValue;                                              // 0x001C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct RareAudio.EventToComponentMapping
-// 0x0020
-struct FEventToComponentMapping
-{
-	class UWwiseEvent*                                 PlayEvent;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 StopEvent;                                                // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UWwiseEmitterComponent*>              WwiseEmitterComponents;                                   // 0x0010(0x0010) (Edit, BlueprintVisible, ExportObject, ZeroConstructor)
 };
 
 // ScriptStruct RareAudio.StaticMeshWwiseEmitterData

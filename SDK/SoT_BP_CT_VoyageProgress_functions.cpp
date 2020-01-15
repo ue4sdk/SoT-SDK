@@ -12,14 +12,14 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.EntitlementQuery: Has Rank
+// Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsPurchaseable
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
 // bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_CT_VoyageProgress_C::EntitlementQuery__Has_Rank(bool* Result)
+void UBP_CT_VoyageProgress_C::IsPurchaseable(bool* Result)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.EntitlementQuery: Has Rank"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsPurchaseable"));
 
 	struct
 	{
@@ -101,49 +101,6 @@ void UBP_CT_VoyageProgress_C::IsPast(TEnumAsByte<ETutorialVoyageInternalState> P
 
 	if (Result != nullptr)
 		*Result = params.Result;
-}
-
-
-// Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.EntitlementQuery: Has Completed Voyage
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// bool                           Result                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-
-void UBP_CT_VoyageProgress_C::EntitlementQuery__Has_Completed_Voyage(bool* Result)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.EntitlementQuery: Has Completed Voyage"));
-
-	struct
-	{
-		bool                           Result;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (Result != nullptr)
-		*Result = params.Result;
-}
-
-
-// Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.EntitlementQuery: Has Bought Voyage
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UBP_CT_VoyageProgress_C::EntitlementQuery__Has_Bought_Voyage()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.EntitlementQuery: Has Bought Voyage"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 

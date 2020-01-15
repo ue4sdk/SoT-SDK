@@ -35,6 +35,10 @@ public:
 	}
 
 
+	void GetCompanyTutorials(const struct FName& CompanyName, TArray<class UBP_CT_VoyageProgress_C*>* CompanyTutorials);
+	void GetOrderOfSoulsTutorials(TArray<class UBP_CT_VoyageProgress_C*>* Result);
+	void GetMerchantAllianceTutorials(TArray<class UBP_CT_VoyageProgress_C*>* Result);
+	void GetGoldhoarderTutorials(TArray<class UBP_CT_VoyageProgress_C*>* Result);
 	void AreAllTutorialsOnState(TEnumAsByte<ETutorialVoyageInternalState> QueryVoyageState, bool* Result);
 	void IsAnyTutorialOnState(TEnumAsByte<ETutorialVoyageInternalState> QueryVoyageState, bool* Result);
 	void FindTutorialProgressObject(const struct FText& VoyageName, class UBP_CT_VoyageProgress_C** Voyage);

@@ -24,17 +24,6 @@ enum class EFontHinting : uint8_t
 };
 
 
-// Enum SlateCore.ESlateColorStylingMode
-enum class ESlateColorStylingMode : uint8_t
-{
-	ESlateColorStylingMode__UseColor_Specified = 0,
-	ESlateColorStylingMode__UseColor_Specified_Link = 1,
-	ESlateColorStylingMode__UseColor_Foreground = 2,
-	ESlateColorStylingMode__UseColor_Foreground_Subdued = 3,
-	ESlateColorStylingMode__UseColor_MAX = 4
-};
-
-
 // Enum SlateCore.ESelectInfo
 enum class ESelectInfo : uint8_t
 {
@@ -154,6 +143,17 @@ enum class EButtonClickMethod : uint8_t
 	EButtonClickMethod__MouseUp    = 2,
 	EButtonClickMethod__PreciseClick = 3,
 	EButtonClickMethod__EButtonClickMethod_MAX = 4
+};
+
+
+// Enum SlateCore.ESlateColorStylingMode
+enum class ESlateColorStylingMode : uint8_t
+{
+	ESlateColorStylingMode__UseColor_Specified = 0,
+	ESlateColorStylingMode__UseColor_Specified_Link = 1,
+	ESlateColorStylingMode__UseColor_Foreground = 2,
+	ESlateColorStylingMode__UseColor_Foreground_Subdued = 3,
+	ESlateColorStylingMode__UseColor_MAX = 4
 };
 
 

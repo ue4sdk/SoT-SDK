@@ -38,21 +38,6 @@ public:
 };
 
 
-// Class Animation.AIAnimationInstanceInterface
-// 0x0000 (0x0028 - 0x0028)
-class UAIAnimationInstanceInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AIAnimationInstanceInterface"));
-		return ptr;
-	}
-
-};
-
-
 // Class Animation.AnimationData
 // 0x0000 (0x0028 - 0x0028)
 class UAnimationData : public UObject
@@ -68,32 +53,30 @@ public:
 };
 
 
-// Class Animation.FirstPersonAnimaticList
-// 0x0010 (0x0038 - 0x0028)
-class UFirstPersonAnimaticList : public UDataAsset
+// Class Animation.AIAnimationInstanceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAIAnimationInstanceInterface : public UInterface
 {
 public:
-	TArray<struct FNamedFirstPersonAnimatic>           NamedFirstPersonAnimatics;                                // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.FirstPersonAnimaticList"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AIAnimationInstanceInterface"));
 		return ptr;
 	}
 
 };
 
 
-// Class Animation.FirstPersonAnimationData
-// 0x0008 (0x0030 - 0x0028)
-class UFirstPersonAnimationData : public UAnimationData
+// Class Animation.AnimationDataConsumerInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAnimationDataConsumerInterface : public UInterface
 {
 public:
-	class UFirstPersonAnimaticList*                    FirstPersonAnimaticList;                                  // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.FirstPersonAnimationData"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataConsumerInterface"));
 		return ptr;
 	}
 
@@ -184,12 +167,11 @@ public:
 
 
 // Class Animation.AnimationDataStoreAsset
-// 0x0020 (0x0048 - 0x0028)
+// 0x0010 (0x0038 - 0x0028)
 class UAnimationDataStoreAsset : public UDataAsset
 {
 public:
 	TArray<struct FAnimationDataStoreAssetEntry>       AssetRefs;                                                // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FAnimationDataStoreAssetReferenceEntry> AssetStringRefs;                                          // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -200,6 +182,55 @@ public:
 
 	class UAnimationData* LookupAnimationData(class UClass* AnimDataId);
 	static class UClass* GetAnimationDataClass(struct FAnimationDataStoreAssetEntry* Entry);
+};
+
+
+// Class Animation.AnimationDataStoreWeakReferenceAsset
+// 0x0010 (0x0038 - 0x0028)
+class UAnimationDataStoreWeakReferenceAsset : public UDataAsset
+{
+public:
+	TArray<struct FAnimationDataStoreAssetWeakReferenceEntry> AssetWeakRefs;                                            // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataStoreWeakReferenceAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.AnimationDataStoreLoaderInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAnimationDataStoreLoaderInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataStoreLoaderInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.AnimationDataStoreComponent
+// 0x0078 (0x0140 - 0x00C8)
+class UAnimationDataStoreComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	class UAnimationDataStoreWeakReferenceAsset*       AnimationDataStoreWeakReferences;                         // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x68];                                      // 0x00D8(0x0068) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimationDataStoreComponent"));
+		return ptr;
+	}
+
 };
 
 

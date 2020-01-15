@@ -40,13 +40,14 @@ struct FPetHangoutSpotParams
 };
 
 // ScriptStruct Pets.HangoutSpotParams
-// 0x0020
+// 0x0028
 struct FHangoutSpotParams
 {
 	struct FName                                       HangoutSpotName;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	TArray<struct FPetHangoutSpotParams>               PetParams;                                                // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       FeatureName;                                              // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Pets.PetDangerHearingThreatResponse
@@ -205,6 +206,13 @@ struct FEventWieldablePetPendingDrop
 	TEnumAsByte<EWieldablePetDropRequestReason>        DropRequestReason;                                        // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Pets.EventNewPetThreatDetected
+// 0x0001
+struct FEventNewPetThreatDetected
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 // ScriptStruct Pets.EventPetDismissed
 // 0x0008
 struct FEventPetDismissed
@@ -268,6 +276,20 @@ struct FEventPetPerchSpotEnabledStateChanged
 struct FEventPetLeftHangout
 {
 	class AActor*                                      Pet;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Pets.EventPetSadnessEnd
+// 0x0001
+struct FEventPetSadnessEnd
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Pets.EventPetSadnessBegin
+// 0x0001
+struct FEventPetSadnessBegin
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Pets.EventPetOwnerAssigned
@@ -453,6 +475,13 @@ struct FPetDroppedTelemetryEvent
 struct FPetPickedUpTelemetryEvent
 {
 	bool                                               IsOnPerch;                                                // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Pets.PetControllerSetTickOrderEvent
+// 0x0008
+struct FPetControllerSetTickOrderEvent
+{
+	class AActor*                                      Actor;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPerchHangoutSpotSetEnabledState

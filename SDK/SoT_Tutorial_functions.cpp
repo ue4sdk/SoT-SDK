@@ -163,6 +163,26 @@ void UTutorial2019Component::OnRep_IsEnabledByServer(bool OldIsEnabled)
 }
 
 
+// Function Tutorial.Tutorial2019Component.OnRep_HasCheckedTutorialStatus
+// (Final, Native, Private)
+// Parameters:
+// bool                           OldHasCheckedTutorialStatus    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UTutorial2019Component::OnRep_HasCheckedTutorialStatus(bool OldHasCheckedTutorialStatus)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.Tutorial2019Component.OnRep_HasCheckedTutorialStatus"));
+
+	struct
+	{
+		bool                           OldHasCheckedTutorialStatus;
+	} params;
+
+	params.OldHasCheckedTutorialStatus = OldHasCheckedTutorialStatus;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Tutorial.Tutorial2019Component.HasPrerequisites
 // (Native, Event, Public, BlueprintEvent)
 // Parameters:

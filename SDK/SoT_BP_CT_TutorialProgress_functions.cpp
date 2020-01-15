@@ -12,6 +12,97 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_CT_TutorialProgress.BP_CT_TutorialProgress_C.GetCompanyTutorials
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// struct FName                   CompanyName                    (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UBP_CT_VoyageProgress_C*> CompanyTutorials               (Parm, OutParm, ZeroConstructor)
+
+void UBP_CT_TutorialProgress_C::GetCompanyTutorials(const struct FName& CompanyName, TArray<class UBP_CT_VoyageProgress_C*>* CompanyTutorials)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_TutorialProgress.BP_CT_TutorialProgress_C.GetCompanyTutorials"));
+
+	struct
+	{
+		struct FName                   CompanyName;
+		TArray<class UBP_CT_VoyageProgress_C*> CompanyTutorials;
+	} params;
+
+	params.CompanyName = CompanyName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (CompanyTutorials != nullptr)
+		*CompanyTutorials = params.CompanyTutorials;
+}
+
+
+// Function BP_CT_TutorialProgress.BP_CT_TutorialProgress_C.GetOrderOfSoulsTutorials
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class UBP_CT_VoyageProgress_C*> Result                         (Parm, OutParm, ZeroConstructor)
+
+void UBP_CT_TutorialProgress_C::GetOrderOfSoulsTutorials(TArray<class UBP_CT_VoyageProgress_C*>* Result)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_TutorialProgress.BP_CT_TutorialProgress_C.GetOrderOfSoulsTutorials"));
+
+	struct
+	{
+		TArray<class UBP_CT_VoyageProgress_C*> Result;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Result != nullptr)
+		*Result = params.Result;
+}
+
+
+// Function BP_CT_TutorialProgress.BP_CT_TutorialProgress_C.GetMerchantAllianceTutorials
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class UBP_CT_VoyageProgress_C*> Result                         (Parm, OutParm, ZeroConstructor)
+
+void UBP_CT_TutorialProgress_C::GetMerchantAllianceTutorials(TArray<class UBP_CT_VoyageProgress_C*>* Result)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_TutorialProgress.BP_CT_TutorialProgress_C.GetMerchantAllianceTutorials"));
+
+	struct
+	{
+		TArray<class UBP_CT_VoyageProgress_C*> Result;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Result != nullptr)
+		*Result = params.Result;
+}
+
+
+// Function BP_CT_TutorialProgress.BP_CT_TutorialProgress_C.GetGoldhoarderTutorials
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// TArray<class UBP_CT_VoyageProgress_C*> Result                         (Parm, OutParm, ZeroConstructor)
+
+void UBP_CT_TutorialProgress_C::GetGoldhoarderTutorials(TArray<class UBP_CT_VoyageProgress_C*>* Result)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_TutorialProgress.BP_CT_TutorialProgress_C.GetGoldhoarderTutorials"));
+
+	struct
+	{
+		TArray<class UBP_CT_VoyageProgress_C*> Result;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (Result != nullptr)
+		*Result = params.Result;
+}
+
+
 // Function BP_CT_TutorialProgress.BP_CT_TutorialProgress_C.AreAllTutorialsOnState
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:

@@ -10,9 +10,9 @@
 #include "SoT_Tales_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_PrioritisedPrompts_classes.hpp"
 #include "SoT_MerchantContracts_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_PrioritisedPrompts_classes.hpp"
 
 namespace SDK
 {

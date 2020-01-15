@@ -12,64 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function RenderToTexture.RenderToTextureSceneDetails.GetTexture
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UTextureRenderTarget2D*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UTextureRenderTarget2D* URenderToTextureSceneDetails::GetTexture()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.GetTexture"));
-
-	struct
-	{
-		class UTextureRenderTarget2D*  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function RenderToTexture.RenderToTextureSceneDetails.GetInstance
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AActor* URenderToTextureSceneDetails::GetInstance()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.GetInstance"));
-
-	struct
-	{
-		class AActor*                  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function RenderToTexture.RenderToTextureSceneDetails.DestroyTexture
-// (Final, Native, Public, BlueprintCallable)
-
-void URenderToTextureSceneDetails::DestroyTexture()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.DestroyTexture"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function RenderToTexture.RenderToTextureFunctionLibrary.GetRenderToTexture
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -126,6 +68,64 @@ class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::CreateRende
 	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function RenderToTexture.RenderToTextureSceneDetails.GetTexture
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UTextureRenderTarget2D*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UTextureRenderTarget2D* URenderToTextureSceneDetails::GetTexture()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.GetTexture"));
+
+	struct
+	{
+		class UTextureRenderTarget2D*  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function RenderToTexture.RenderToTextureSceneDetails.GetInstance
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* URenderToTextureSceneDetails::GetInstance()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.GetInstance"));
+
+	struct
+	{
+		class AActor*                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function RenderToTexture.RenderToTextureSceneDetails.DestroyTexture
+// (Final, Native, Public, BlueprintCallable)
+
+void URenderToTextureSceneDetails::DestroyTexture()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.DestroyTexture"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

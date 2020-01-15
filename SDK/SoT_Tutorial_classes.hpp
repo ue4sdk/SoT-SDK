@@ -86,15 +86,16 @@ public:
 
 
 // Class Tutorial.Tutorial2019Component
-// 0x0008 (0x00D0 - 0x00C8)
+// 0x0020 (0x00E8 - 0x00C8)
 class UTutorial2019Component : public UActorComponent
 {
 public:
 	bool                                               HasEverPlayedWakeupAnimation;                             // 0x00C8(0x0001) (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
 	bool                                               IsEnabledByServer;                                        // 0x00C9(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	bool                                               IsIntroEnabledByServer;                                   // 0x00CA(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               IsInTutorialTale;                                         // 0x00CB(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00CC(0x0004) MISSED OFFSET
+	bool                                               HasCheckedTutorialStatus;                                 // 0x00CB(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               IsInTutorialTale;                                         // 0x00CC(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1B];                                      // 0x00CD(0x001B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -109,6 +110,7 @@ public:
 	void ReceiveIntroBeginPlayOnClient();
 	void OnRep_IsIntroEnabledByServer(bool OldIsIntroEnabled);
 	void OnRep_IsEnabledByServer(bool OldIsEnabled);
+	void OnRep_HasCheckedTutorialStatus(bool OldHasCheckedTutorialStatus);
 	bool HasPrerequisites();
 	void ForceDisableComponent_Blueprint();
 	void BeginOnServer();
@@ -116,11 +118,11 @@ public:
 
 
 // Class Tutorial.Tutorial2019ContextualDelegatingComponent
-// 0x0008 (0x00D8 - 0x00D0)
+// 0x0008 (0x00F0 - 0x00E8)
 class UTutorial2019ContextualDelegatingComponent : public UTutorial2019Component
 {
 public:
-	class UContextualTutorialComponent*                ContextualTutorialComponent;                              // 0x00D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UContextualTutorialComponent*                ContextualTutorialComponent;                              // 0x00E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
