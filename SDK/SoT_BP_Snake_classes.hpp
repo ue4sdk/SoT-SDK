@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Snake.BP_Snake_C
-// 0x0020 (0x0C20 - 0x0C00)
+// 0x0020 (0x0B80 - 0x0B60)
 class ABP_Snake_C : public ABP_Fauna_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0C00(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UAIItemSpawnComponent*                       AIItemSpawn;                                              // 0x0C08(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UVenomComponent*                             Venom;                                                    // 0x0C10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      SnakeSkeletalMesh;                                        // 0x0C18(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0B60(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UAIItemSpawnComponent*                       AIItemSpawn;                                              // 0x0B68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UVenomComponent*                             Venom;                                                    // 0x0B70(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      SnakeSkeletalMesh;                                        // 0x0B78(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

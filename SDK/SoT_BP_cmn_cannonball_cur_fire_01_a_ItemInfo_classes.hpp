@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_cannonball_cur_fire_01_a_ItemInfo.BP_cmn_cannonball_cur_fire_01_a_ItemInfo_C
-// 0x0008 (0x0548 - 0x0540)
+// 0x0008 (0x0558 - 0x0550)
 class ABP_cmn_cannonball_cur_fire_01_a_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

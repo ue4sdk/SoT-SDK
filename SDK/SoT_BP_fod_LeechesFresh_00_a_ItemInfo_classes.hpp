@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_LeechesFresh_00_a_ItemInfo.BP_fod_LeechesFresh_00_a_ItemInfo_C
-// 0x0020 (0x0560 - 0x0540)
+// 0x0020 (0x0570 - 0x0550)
 class ABP_fod_LeechesFresh_00_a_ItemInfo_C : public AItemInfo
 {
 public:
-	class UMaterialManipulationSettingsComponent*      MaterialManipulationSettings;                             // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class ULightWeightStatusEffectManagerComponent*    LightweightStatusEffectManager;                           // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCookableComponent*                          Cookable;                                                 // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialManipulationSettingsComponent*      MaterialManipulationSettings;                             // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class ULightWeightStatusEffectManagerComponent*    LightweightStatusEffectManager;                           // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCookableComponent*                          Cookable;                                                 // 0x0560(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0568(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

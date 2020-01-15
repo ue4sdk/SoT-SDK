@@ -10,8 +10,8 @@
 #include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_BP_SailStructure_classes.hpp"
 #include "SoT_Repair_classes.hpp"
+#include "SoT_BP_SailStructure_classes.hpp"
 
 namespace SDK
 {
