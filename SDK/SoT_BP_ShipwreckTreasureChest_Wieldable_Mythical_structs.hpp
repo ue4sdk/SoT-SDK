@@ -7,7 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_BP_TreasureChest_classes.hpp"
+#include "SoT_BP_TreasureChest_Wieldable_Mythical_classes.hpp"
 
 namespace SDK
 {

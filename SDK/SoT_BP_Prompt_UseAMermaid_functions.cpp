@@ -12,62 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.MermaidUsed
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UBP_Prompt_UseAMermaid_C::MermaidUsed()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.MermaidUsed"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.MermaidDeactivatedLocally
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FAthena_FMermaidDeactivatedLocally MermaidDeactivatedLocally      (ConstParm, Parm, OutParm, ReferenceParm)
-
-void UBP_Prompt_UseAMermaid_C::MermaidDeactivatedLocally(const struct FAthena_FMermaidDeactivatedLocally& MermaidDeactivatedLocally)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.MermaidDeactivatedLocally"));
-
-	struct
-	{
-		struct FAthena_FMermaidDeactivatedLocally MermaidDeactivatedLocally;
-	} params;
-
-	params.MermaidDeactivatedLocally = MermaidDeactivatedLocally;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.MermaidActivatedLocally
-// (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FAthena_FMermaidActivatedLocally MermaidActivatedLocally        (ConstParm, Parm, OutParm, ReferenceParm)
-
-void UBP_Prompt_UseAMermaid_C::MermaidActivatedLocally(const struct FAthena_FMermaidActivatedLocally& MermaidActivatedLocally)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.MermaidActivatedLocally"));
-
-	struct
-	{
-		struct FAthena_FMermaidActivatedLocally MermaidActivatedLocally;
-	} params;
-
-	params.MermaidActivatedLocally = MermaidActivatedLocally;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.EvaluatePromptDisplayState
 // (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -108,15 +52,15 @@ void UBP_Prompt_UseAMermaid_C::PostInitialize()
 // Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.Prompt_MermaidActivatedLocally
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FAthena_FMermaidActivatedLocally Ev                             (Parm)
+// struct FMermaidActivatedLocally Ev                             (Parm)
 
-void UBP_Prompt_UseAMermaid_C::Prompt_MermaidActivatedLocally(const struct FAthena_FMermaidActivatedLocally& Ev)
+void UBP_Prompt_UseAMermaid_C::Prompt_MermaidActivatedLocally(const struct FMermaidActivatedLocally& Ev)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.Prompt_MermaidActivatedLocally"));
 
 	struct
 	{
-		struct FAthena_FMermaidActivatedLocally Ev;
+		struct FMermaidActivatedLocally Ev;
 	} params;
 
 	params.Ev = Ev;
@@ -128,15 +72,15 @@ void UBP_Prompt_UseAMermaid_C::Prompt_MermaidActivatedLocally(const struct FAthe
 // Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.Prompt_MermaidDeactivatedLocally
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FAthena_FMermaidDeactivatedLocally Ev                             (Parm)
+// struct FMermaidDeactivatedLocally Ev                             (Parm)
 
-void UBP_Prompt_UseAMermaid_C::Prompt_MermaidDeactivatedLocally(const struct FAthena_FMermaidDeactivatedLocally& Ev)
+void UBP_Prompt_UseAMermaid_C::Prompt_MermaidDeactivatedLocally(const struct FMermaidDeactivatedLocally& Ev)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_UseAMermaid.BP_Prompt_UseAMermaid_C.Prompt_MermaidDeactivatedLocally"));
 
 	struct
 	{
-		struct FAthena_FMermaidDeactivatedLocally Ev;
+		struct FMermaidDeactivatedLocally Ev;
 	} params;
 
 	params.Ev = Ev;

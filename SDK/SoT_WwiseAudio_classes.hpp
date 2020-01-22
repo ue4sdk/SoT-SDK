@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class WwiseAudio.WwiseAudioSettings
-// 0x02A0 (0x02C8 - 0x0028)
+// 0x02A8 (0x02D0 - 0x0028)
 class UWwiseAudioSettings : public UObject
 {
 public:
@@ -35,16 +35,18 @@ public:
 	struct FStringAssetReference                       StopAllEvent;                                             // 0x0168(0x0010) (Edit, ZeroConstructor, Config)
 	struct FWwiseNetworkRelationship                   NetworkRelationship;                                      // 0x0178(0x0018) (Edit, Config)
 	struct FWwiseAudioGameStateSettings                AudioStateSettings;                                       // 0x0190(0x0080) (Edit, Config)
-	class UWwiseEvent*                                 PauseEventStartInstance;                                  // 0x0210(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UWwiseEvent*                                 PauseEventReleaseInstance;                                // 0x0218(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UWwiseEvent*                                 StopAllEventInstance;                                     // 0x0220(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x40];                                      // 0x0228(0x0040) MISSED OFFSET
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendStartInstance;                      // 0x0268(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendEndInstance;                        // 0x0278(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingStartInstance;                       // 0x0288(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingEndInstance;                         // 0x0298(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingStartInstance;             // 0x02A8(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingEndInstance;               // 0x02B8(0x0010) (ZeroConstructor, Transient)
+	uint32_t                                           WaapiInterpreterPort;                                     // 0x0210(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0214(0x0004) MISSED OFFSET
+	class UWwiseEvent*                                 PauseEventStartInstance;                                  // 0x0218(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UWwiseEvent*                                 PauseEventReleaseInstance;                                // 0x0220(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UWwiseEvent*                                 StopAllEventInstance;                                     // 0x0228(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x40];                                      // 0x0230(0x0040) MISSED OFFSET
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendStartInstance;                      // 0x0270(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendEndInstance;                        // 0x0280(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingStartInstance;                       // 0x0290(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingEndInstance;                         // 0x02A0(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingStartInstance;             // 0x02B0(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingEndInstance;               // 0x02C0(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{

@@ -14,6 +14,21 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class Reviving.ReviveableActionStateId
+// 0x0000 (0x0028 - 0x0028)
+class UReviveableActionStateId : public UActionStateId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Reviving.ReviveableActionStateId"));
+		return ptr;
+	}
+
+};
+
+
 // Class Reviving.ReviveableCharacterInterface
 // 0x0000 (0x0028 - 0x0028)
 class UReviveableCharacterInterface : public UInterface

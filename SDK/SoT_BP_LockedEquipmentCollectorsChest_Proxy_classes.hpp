@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LockedEquipmentCollectorsChest_Proxy.BP_LockedEquipmentCollectorsChest_Proxy_C
-// 0x0000 (0x0921 - 0x0921)
+// 0x0000 (0x0941 - 0x0941)
 class ABP_LockedEquipmentCollectorsChest_Proxy_C : public ABP_BaseLockableCollectorsChest_Proxy_C
 {
 public:

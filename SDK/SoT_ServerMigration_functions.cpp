@@ -102,6 +102,34 @@ void UNetworkTestingBlueprintFunctionLibrary::PausePropertyTrackingOnNextSend(cl
 }
 
 
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsComponentNetDormant
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            ClientConnectionIdx            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent*         TargetComponent                (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UNetworkTestingBlueprintFunctionLibrary::IsComponentNetDormant(int ClientConnectionIdx, class UActorComponent* TargetComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsComponentNetDormant"));
+
+	struct
+	{
+		int                            ClientConnectionIdx;
+		class UActorComponent*         TargetComponent;
+		bool                           ReturnValue;
+	} params;
+
+	params.ClientConnectionIdx = ClientConnectionIdx;
+	params.TargetComponent = TargetComponent;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorNetRelevantFor
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -264,6 +292,34 @@ bool UNetworkTestingBlueprintFunctionLibrary::IsActorInLevelNetworkCluster(class
 }
 
 
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.HasComponentReplicator
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int                            ClientConnectionIdx            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UActorComponent*         TargetComponent                (ConstParm, Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UNetworkTestingBlueprintFunctionLibrary::HasComponentReplicator(int ClientConnectionIdx, class UActorComponent* TargetComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.HasComponentReplicator"));
+
+	struct
+	{
+		int                            ClientConnectionIdx;
+		class UActorComponent*         TargetComponent;
+		bool                           ReturnValue;
+	} params;
+
+	params.ClientConnectionIdx = ClientConnectionIdx;
+	params.TargetComponent = TargetComponent;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.GetReliableBufferBunchCount
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -281,6 +337,31 @@ int UNetworkTestingBlueprintFunctionLibrary::GetReliableBufferBunchCount(class A
 	} params;
 
 	params.TargetActor = TargetActor;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.FlushComponentNetDormancy
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UActorComponent*         TargetComponent                (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UNetworkTestingBlueprintFunctionLibrary::FlushComponentNetDormancy(class UActorComponent* TargetComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.FlushComponentNetDormancy"));
+
+	struct
+	{
+		class UActorComponent*         TargetComponent;
+		bool                           ReturnValue;
+	} params;
+
+	params.TargetComponent = TargetComponent;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);

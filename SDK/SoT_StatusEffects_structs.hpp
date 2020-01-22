@@ -70,6 +70,14 @@ struct FActiveStatusEffect
 	unsigned char                                      UnknownData01[0x17];                                      // 0x0039(0x0017) MISSED OFFSET
 };
 
+// ScriptStruct StatusEffects.EventAppliedStatusToTargets
+// 0x0020
+struct FEventAppliedStatusToTargets
+{
+	TArray<class UClass*>                              StatusApplied;                                            // 0x0000(0x0010) (ZeroConstructor)
+	TArray<class AActor*>                              Targets;                                                  // 0x0010(0x0010) (ZeroConstructor)
+};
+
 // ScriptStruct StatusEffects.StatusEffectPersistenceKey
 // 0x0018
 struct FStatusEffectPersistenceKey

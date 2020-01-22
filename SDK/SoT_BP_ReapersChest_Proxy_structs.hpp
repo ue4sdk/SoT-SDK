@@ -7,7 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_BP_TreasureChestProxy_classes.hpp"
+#include "SoT_BP_TreasureChestProxy_Static_classes.hpp"
 
 namespace SDK
 {

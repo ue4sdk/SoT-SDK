@@ -326,6 +326,27 @@ bool UActorComponent::IsActive()
 }
 
 
+// Function Engine.ActorComponent.GetTargetNetDormancy
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TEnumAsByte<EComponentNetDormancy> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+TEnumAsByte<EComponentNetDormancy> UActorComponent::GetTargetNetDormancy()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ActorComponent.GetTargetNetDormancy"));
+
+	struct
+	{
+		TEnumAsByte<EComponentNetDormancy> ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Engine.ActorComponent.GetOwner
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -338,6 +359,27 @@ class AActor* UActorComponent::GetOwner()
 	struct
 	{
 		class AActor*                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Engine.ActorComponent.FlushNetDormancy
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UActorComponent::FlushNetDormancy()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.ActorComponent.FlushNetDormancy"));
+
+	struct
+	{
+		bool                           ReturnValue;
 	} params;
 
 
@@ -2939,17 +2981,22 @@ void AActor::ForceNetUpdate()
 
 // Function Engine.Actor.FlushNetDormancy
 // (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-void AActor::FlushNetDormancy()
+bool AActor::FlushNetDormancy()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.Actor.FlushNetDormancy"));
 
 	struct
 	{
+		bool                           ReturnValue;
 	} params;
 
 
 	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -14209,6 +14256,29 @@ void APlayerController::ClientVoiceHandshakeComplete()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.PlayerController.ClientUpdateLevelStreamingStatusBatched
+// (Net, NetReliable, Native, Event, Public, NetClient)
+// Parameters:
+// class FString                  PackageBasePath                (Parm, ZeroConstructor)
+// TArray<struct FLevelStreamingStatusUpdateInfo> LevelStreamingStatusUpdateInfo (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+
+void APlayerController::ClientUpdateLevelStreamingStatusBatched(const class FString& PackageBasePath, TArray<struct FLevelStreamingStatusUpdateInfo> LevelStreamingStatusUpdateInfo)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerController.ClientUpdateLevelStreamingStatusBatched"));
+
+	struct
+	{
+		class FString                  PackageBasePath;
+		TArray<struct FLevelStreamingStatusUpdateInfo> LevelStreamingStatusUpdateInfo;
+	} params;
+
+	params.PackageBasePath = PackageBasePath;
+	params.LevelStreamingStatusUpdateInfo = LevelStreamingStatusUpdateInfo;
 
 	UObject::ProcessEvent(fn, &params);
 }

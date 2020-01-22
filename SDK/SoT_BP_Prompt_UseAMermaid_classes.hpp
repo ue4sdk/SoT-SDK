@@ -36,13 +36,10 @@ public:
 	}
 
 
-	void MermaidUsed();
-	void MermaidDeactivatedLocally(const struct FAthena_FMermaidDeactivatedLocally& MermaidDeactivatedLocally);
-	void MermaidActivatedLocally(const struct FAthena_FMermaidActivatedLocally& MermaidActivatedLocally);
 	struct FPromptEvaluation EvaluatePromptDisplayState();
 	void PostInitialize();
-	void Prompt_MermaidActivatedLocally(const struct FAthena_FMermaidActivatedLocally& Ev);
-	void Prompt_MermaidDeactivatedLocally(const struct FAthena_FMermaidDeactivatedLocally& Ev);
+	void Prompt_MermaidActivatedLocally(const struct FMermaidActivatedLocally& Ev);
+	void Prompt_MermaidDeactivatedLocally(const struct FMermaidDeactivatedLocally& Ev);
 	void Prompt_MermaidUsed(const struct FMermaidUsedEvent& Ev);
 	void UnregisterOtherEvents_Implementable();
 	void ExecuteUbergraph_BP_Prompt_UseAMermaid(int EntryPoint);

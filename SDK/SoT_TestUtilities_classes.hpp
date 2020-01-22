@@ -158,6 +158,21 @@ public:
 };
 
 
+// Class TestUtilities.TestController
+// 0x0000 (0x0470 - 0x0470)
+class ATestController : public AController
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestController"));
+		return ptr;
+	}
+
+};
+
+
 // Class TestUtilities.TestEnvQueryContextPoints
 // 0x0000 (0x0028 - 0x0028)
 class UTestEnvQueryContextPoints : public UEnvQueryContext

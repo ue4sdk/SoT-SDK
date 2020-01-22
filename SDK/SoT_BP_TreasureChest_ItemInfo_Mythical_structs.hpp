@@ -7,7 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Athena_classes.hpp"
+#include "SoT_BP_TreasureChest_GoldHoarderLockable_Base_ItemInfo_classes.hpp"
 
 namespace SDK
 {

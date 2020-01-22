@@ -261,6 +261,30 @@ struct FTeleportLocation UTutorial2019FunctionLibrary::GetNearestOnboardingSpawn
 }
 
 
+// Function Tutorial.TutorialHelpersBlueprintLibrary.FirePromptCompleted
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  AccessKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+
+void UTutorialHelpersBlueprintLibrary::FirePromptCompleted(class UClass* AccessKey, class UObject* WorldContextObject)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tutorial.TutorialHelpersBlueprintLibrary.FirePromptCompleted"));
+
+	struct
+	{
+		class UClass*                  AccessKey;
+		class UObject*                 WorldContextObject;
+	} params;
+
+	params.AccessKey = AccessKey;
+	params.WorldContextObject = WorldContextObject;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

@@ -47,13 +47,16 @@ public:
 	static void SetConnectionLastReceiveTime(class APlayerController* PlayerController, float OffsetFromDriverTime);
 	static void ResumePropertyTracking(class AActor* TargetActor);
 	static void PausePropertyTrackingOnNextSend(class AActor* TargetActor);
+	static bool IsComponentNetDormant(int ClientConnectionIdx, class UActorComponent* TargetComponent);
 	static bool IsActorNetRelevantFor(class AActor* TargetActor, class APlayerController* PlayerController);
 	static bool IsActorNetDormant(class AActor* TargetActor);
 	static bool IsActorInNetworkClusterGlobal(class AActor* TargetActor);
 	static bool IsActorInNetworkCluster(class AActor* TargetActor, class AActor* NetworkClusterOwner);
 	static bool IsActorInLevelNetworkClusterOnOwner(class AActor* TargetActor, class AActor* LevelOwner);
 	static bool IsActorInLevelNetworkCluster(class AActor* TargetActor, const struct FName& Level);
+	static bool HasComponentReplicator(int ClientConnectionIdx, class UActorComponent* TargetComponent);
 	static int GetReliableBufferBunchCount(class AActor* TargetActor);
+	static bool FlushComponentNetDormancy(class UActorComponent* TargetComponent);
 	static void ClearRecentRelevanceTimerForPlayer(class AActor* TargetActor, class APlayerController* PlayerController);
 	static void ClearRecentRelevanceTimer(class AActor* TargetActor);
 };

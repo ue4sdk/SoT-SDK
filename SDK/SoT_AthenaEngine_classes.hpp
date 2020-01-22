@@ -59,6 +59,23 @@ public:
 };
 
 
+// Class AthenaEngine.ForceFeedbackCondition
+// 0x0000 (0x0028 - 0x0028)
+class UForceFeedbackCondition : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.ForceFeedbackCondition"));
+		return ptr;
+	}
+
+
+	bool CanPlayForceFeedback(class AActor* InOwner);
+};
+
+
 // Class AthenaEngine.GameInstanceSessionIdProviderInterface
 // 0x0000 (0x0028 - 0x0028)
 class UGameInstanceSessionIdProviderInterface : public UInterface

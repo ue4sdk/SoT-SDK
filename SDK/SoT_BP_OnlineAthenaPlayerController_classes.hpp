@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_OnlineAthenaPlayerController.BP_OnlineAthenaPlayerController_C
-// 0x0008 (0x1408 - 0x1400)
+// 0x0008 (0x1428 - 0x1420)
 class ABP_OnlineAthenaPlayerController_C : public AOnlineAthenaPlayerController
 {
 public:
-	class UBP_Component_Tutorial2019_C*                VisitShopkeepersTutorialComponent;                        // 0x1400(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBP_Component_Tutorial2019_C*                VisitShopkeepersTutorialComponent;                        // 0x1420(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

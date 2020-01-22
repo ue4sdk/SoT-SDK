@@ -132,6 +132,18 @@ enum class ENavPathEvent : uint8_t
 };
 
 
+// Enum Engine.EComponentNetDormancy
+enum class EComponentNetDormancy : uint8_t
+{
+	EComponentNetDormancy__Never   = 0,
+	EComponentNetDormancy__Awake   = 1,
+	EComponentNetDormancy__FollowOwner = 2,
+	EComponentNetDormancy__Dormant = 3,
+	EComponentNetDormancy__Count   = 4,
+	EComponentNetDormancy__EComponentNetDormancy_MAX = 5
+};
+
+
 // Enum Engine.EComponentCreationMethod
 enum class EComponentCreationMethod : uint8_t
 {
@@ -353,6 +365,46 @@ enum class EQuitPreference : uint8_t
 };
 
 
+// Enum Engine.ENodeAdvancedPins
+enum class ENodeAdvancedPins : uint8_t
+{
+	ENodeAdvancedPins__NoPins      = 0,
+	ENodeAdvancedPins__Shown       = 1,
+	ENodeAdvancedPins__Hidden      = 2,
+	ENodeAdvancedPins__ENodeAdvancedPins_MAX = 3
+};
+
+
+// Enum Engine.ENodeTitleType
+enum class ENodeTitleType : uint8_t
+{
+	ENodeTitleType__FullTitle      = 0,
+	ENodeTitleType__ListView       = 1,
+	ENodeTitleType__EditableTitle  = 2,
+	ENodeTitleType__MenuTitle      = 3,
+	ENodeTitleType__MAX_TitleTypes = 4,
+	ENodeTitleType__ENodeTitleType_MAX = 5
+};
+
+
+// Enum Engine.EEdGraphPinDirection
+enum class EEdGraphPinDirection : uint8_t
+{
+	EGPD_Input                     = 0,
+	EGPD_Output                    = 1,
+	EGPD_MAX                       = 2
+};
+
+
+// Enum Engine.EBlueprintPinStyleType
+enum class EBlueprintPinStyleType : uint8_t
+{
+	BPST_Original                  = 0,
+	BPST_VariantA                  = 1,
+	BPST_MAX                       = 2
+};
+
+
 // Enum Engine.EViewModeIndex
 enum class EViewModeIndex : uint8_t
 {
@@ -440,9 +492,10 @@ enum class ENetworkFailure : uint8_t
 	ENetworkFailure__PlayerDeemedInactive = 14,
 	ENetworkFailure__CrewMigrationRequested = 15,
 	ENetworkFailure__ServerAtMatchmakingCapacity = 16,
-	ENetworkFailure__ServerShuttingDown = 17,
-	ENetworkFailure__CrewSessionLost = 18,
-	ENetworkFailure__ENetworkFailure_MAX = 19
+	ENetworkFailure__ServerShuttingDownWhilstMigrationOngoing = 17,
+	ENetworkFailure__ServerShuttingDown = 18,
+	ENetworkFailure__CrewSessionLost = 19,
+	ENetworkFailure__ENetworkFailure_MAX = 20
 };
 
 
@@ -455,46 +508,6 @@ enum class EInputEvent : uint8_t
 	IE_DoubleClick                 = 3,
 	IE_Axis                        = 4,
 	IE_MAX                         = 5
-};
-
-
-// Enum Engine.ENodeAdvancedPins
-enum class ENodeAdvancedPins : uint8_t
-{
-	ENodeAdvancedPins__NoPins      = 0,
-	ENodeAdvancedPins__Shown       = 1,
-	ENodeAdvancedPins__Hidden      = 2,
-	ENodeAdvancedPins__ENodeAdvancedPins_MAX = 3
-};
-
-
-// Enum Engine.ENodeTitleType
-enum class ENodeTitleType : uint8_t
-{
-	ENodeTitleType__FullTitle      = 0,
-	ENodeTitleType__ListView       = 1,
-	ENodeTitleType__EditableTitle  = 2,
-	ENodeTitleType__MenuTitle      = 3,
-	ENodeTitleType__MAX_TitleTypes = 4,
-	ENodeTitleType__ENodeTitleType_MAX = 5
-};
-
-
-// Enum Engine.EEdGraphPinDirection
-enum class EEdGraphPinDirection : uint8_t
-{
-	EGPD_Input                     = 0,
-	EGPD_Output                    = 1,
-	EGPD_MAX                       = 2
-};
-
-
-// Enum Engine.EBlueprintPinStyleType
-enum class EBlueprintPinStyleType : uint8_t
-{
-	BPST_Original                  = 0,
-	BPST_VariantA                  = 1,
-	BPST_MAX                       = 2
 };
 
 
@@ -629,8 +642,7 @@ enum class ENetDormancy : uint8_t
 	DORM_DormantAll                = 2,
 	DORM_DormantPartial            = 3,
 	DORM_Initial                   = 4,
-	DORN_MAX                       = 5,
-	ENetDormancy_MAX               = 6
+	DORM_MAX                       = 5
 };
 
 

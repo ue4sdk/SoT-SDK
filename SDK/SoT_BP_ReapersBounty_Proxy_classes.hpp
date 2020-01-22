@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass BP_ReapersBounty_Proxy.BP_ReapersBounty_Proxy_C
 // 0x0020 (0x0870 - 0x0850)
-class ABP_ReapersBounty_Proxy_C : public ABP_TreasureChestProxy_C
+class ABP_ReapersBounty_Proxy_C : public ABP_TreasureChestProxy_Static_C
 {
 public:
 	class UWorldMarkerOnDigPositionComponent*          WorldMarkerOnDigPosition;                                 // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)

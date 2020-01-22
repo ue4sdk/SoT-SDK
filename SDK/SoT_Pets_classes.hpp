@@ -708,18 +708,18 @@ public:
 
 
 // Class Pets.PetItemInfo
-// 0x0060 (0x05B0 - 0x0550)
+// 0x0060 (0x0598 - 0x0538)
 class APetItemInfo : public ANonStorableItemInfo
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0550(0x0018) MISSED OFFSET
-	struct FPetCustomisation                           PetCustomisation;                                         // 0x0568(0x0018) (Net)
-	class AActor*                                      PetOwner;                                                 // 0x0580(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      SpawnedForShip;                                           // 0x0588(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              DropTraceDistance;                                        // 0x0590(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              PointSearchRadius;                                        // 0x0594(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     DropChannel;                                              // 0x0598(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x17];                                      // 0x0599(0x0017) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0538(0x0018) MISSED OFFSET
+	struct FPetCustomisation                           PetCustomisation;                                         // 0x0550(0x0018) (Net)
+	class AActor*                                      PetOwner;                                                 // 0x0568(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	class AActor*                                      SpawnedForShip;                                           // 0x0570(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              DropTraceDistance;                                        // 0x0578(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PointSearchRadius;                                        // 0x057C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<ECollisionChannel>                     DropChannel;                                              // 0x0580(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x17];                                      // 0x0581(0x0017) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

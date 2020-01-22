@@ -63,9 +63,16 @@ struct FPermanentPromptNetworkEvent : public FNetworkEventStruct
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
 };
 
-// ScriptStruct PrioritisedPrompts.PromptTelemetryEvent
+// ScriptStruct PrioritisedPrompts.PromptsCounterIncrementEvent
+// 0x0008
+struct FPromptsCounterIncrementEvent
+{
+	class UClass*                                      AccessKey;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct PrioritisedPrompts.PlayerPromptTelemetryEvent
 // 0x0020
-struct FPromptTelemetryEvent
+struct FPlayerPromptTelemetryEvent
 {
 	class FString                                      Message;                                                  // 0x0000(0x0010) (ZeroConstructor)
 	class FString                                      Key;                                                      // 0x0010(0x0010) (ZeroConstructor)

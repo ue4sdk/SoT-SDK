@@ -48,9 +48,27 @@ public:
 	static struct FPromptEvaluation MakeCompleteCoordinator();
 	void Initialize(class AAthenaPlayerController* PlayerController, class UPrioritisedPromptsManager* PrioritisedPromptsManager);
 	bool GetCompleted();
-	void FirePromptCompleted(class UClass* AccessKey);
 	struct FPromptEvaluation EvaluatePromptDisplayState();
 	void DismissAllPrompts();
+};
+
+
+// Class PrioritisedPrompts.GetPromptsLocalService
+// 0x0018 (0x0040 - 0x0028)
+class UGetPromptsLocalService : public UBlueprintAsyncActionBase
+{
+public:
+	struct FScriptMulticastDelegate                    Loaded;                                                   // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class UObject*                                     WorldContextObject;                                       // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PrioritisedPrompts.GetPromptsLocalService"));
+		return ptr;
+	}
+
+
+	static class UGetPromptsLocalService* GetPromptsLocalService(class UObject* WorldContextObject);
 };
 
 
@@ -66,6 +84,56 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PrioritisedPrompts.PrioritisedPromptsManager"));
+		return ptr;
+	}
+
+};
+
+
+// Class PrioritisedPrompts.PromptCounterAccessKey
+// 0x0010 (0x0038 - 0x0028)
+class UPromptCounterAccessKey : public UObject
+{
+public:
+	class FString                                      Key;                                                      // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PrioritisedPrompts.PromptCounterAccessKey"));
+		return ptr;
+	}
+
+};
+
+
+// Class PrioritisedPrompts.PromptsLocalServiceInterface
+// 0x0000 (0x0028 - 0x0028)
+class UPromptsLocalServiceInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PrioritisedPrompts.PromptsLocalServiceInterface"));
+		return ptr;
+	}
+
+
+	void IncrementCountForKey(class UClass* AccessKey);
+	int GetCountForKey(class UClass* AccessKey);
+};
+
+
+// Class PrioritisedPrompts.PromptsLocalService
+// 0x0070 (0x0098 - 0x0028)
+class UPromptsLocalService : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x70];                                      // 0x0028(0x0070) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class PrioritisedPrompts.PromptsLocalService"));
 		return ptr;
 	}
 

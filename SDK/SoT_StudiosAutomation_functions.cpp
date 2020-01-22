@@ -1124,6 +1124,31 @@ bool UAutomationBlueprintFunctionLibrary::IsTravelFinished(class UObject* WorldC
 }
 
 
+// Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsFeatureToggleEnabled
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FName                   FeatureToggleName              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAutomationBlueprintFunctionLibrary::IsFeatureToggleEnabled(const struct FName& FeatureToggleName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsFeatureToggleEnabled"));
+
+	struct
+	{
+		struct FName                   FeatureToggleName;
+		bool                           ReturnValue;
+	} params;
+
+	params.FeatureToggleName = FeatureToggleName;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsEditor
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:

@@ -104,6 +104,14 @@ struct FAthenaAIAbilityPlayerBasedRanges
 	TArray<struct FAthenaAIAbilityPlayerBasedRange>    AbilityRanges;                                            // 0x0000(0x0010) (Edit, ZeroConstructor)
 };
 
+// ScriptStruct AthenaAI.MinMaxAbilityRange
+// 0x0008
+struct FMinMaxAbilityRange
+{
+	float                                              MinDistanceToTarget;                                      // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDistanceToTarget;                                      // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct AthenaAI.AIAbilityFollowUp
 // 0x0010
 struct FAIAbilityFollowUp
@@ -764,6 +772,15 @@ struct FPetWieldableReactMapping
 {
 	class UClass*                                      WieldableType;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FName                                       ReactId;                                                  // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.AIAbilityDebugReplicatedIntervals
+// 0x000C
+struct FAIAbilityDebugReplicatedIntervals
+{
+	float                                              ActivationTimerCooldown;                                  // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              TimeBeforeNextExecution;                                  // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              DamageBeforeNextExecution;                                // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.AIEncounterSpecification

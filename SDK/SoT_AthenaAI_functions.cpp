@@ -618,6 +618,33 @@ void UDebugAIManagerServiceInterface::SetCharacterNetRelevancy(float InCloseByCh
 }
 
 
+// Function AthenaAI.DebugAIManagerServiceInterface.BlockAIAbility
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  InExclusive                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           InBlockState                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UDebugAIManagerServiceInterface::BlockAIAbility(class UClass* InExclusive, bool InBlockState)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerServiceInterface.BlockAIAbility"));
+
+	struct
+	{
+		class UClass*                  InExclusive;
+		bool                           InBlockState;
+		bool                           ReturnValue;
+	} params;
+
+	params.InExclusive = InExclusive;
+	params.InBlockState = InBlockState;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function AthenaAI.DebugAIManagerService.SetMaxNumOfSpawnedActors
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -775,6 +802,33 @@ void ADebugAIManagerService::SetCharacterNetRelevancy(float InCloseByCharactersR
 	params.InCloseByCharactersRadius = InCloseByCharactersRadius;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.DebugAIManagerService.BlockAIAbility
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  InExclusive                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           InBlockState                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ADebugAIManagerService::BlockAIAbility(class UClass* InExclusive, bool InBlockState)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerService.BlockAIAbility"));
+
+	struct
+	{
+		class UClass*                  InExclusive;
+		bool                           InBlockState;
+		bool                           ReturnValue;
+	} params;
+
+	params.InExclusive = InExclusive;
+	params.InBlockState = InBlockState;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -1480,6 +1534,7 @@ class UClass* AAICreatureCharacter::GetAIStrategy()
 // TAssetPtr<class UAthenaAIFormDataAsset> Form                           (ConstParm, Parm)
 // TAssetPtr<class UClass>        AIItemSpawnComponent           (ConstParm, Parm)
 // class UClass*                  ClassId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TAssetPtr<class UAthenaAIAmmoDataAsset> Ammo                           (ConstParm, Parm)
 // struct FVector                 Pos                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FRotator                Rot                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FName                   Region                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -1487,7 +1542,7 @@ class UClass* AAICreatureCharacter::GetAIStrategy()
 // struct FName                   NavMeshOverride                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          Delay                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, TAssetPtr<class UClass> AIItemSpawnComponent, class UClass* ClassId, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
+void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, TAssetPtr<class UClass> AIItemSpawnComponent, class UClass* ClassId, TAssetPtr<class UAthenaAIAmmoDataAsset> Ammo, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings"));
 
@@ -1499,6 +1554,7 @@ void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> 
 		TAssetPtr<class UAthenaAIFormDataAsset> Form;
 		TAssetPtr<class UClass>        AIItemSpawnComponent;
 		class UClass*                  ClassId;
+		TAssetPtr<class UAthenaAIAmmoDataAsset> Ammo;
 		struct FVector                 Pos;
 		struct FRotator                Rot;
 		struct FName                   Region;
@@ -1513,6 +1569,7 @@ void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> 
 	params.Form = Form;
 	params.AIItemSpawnComponent = AIItemSpawnComponent;
 	params.ClassId = ClassId;
+	params.Ammo = Ammo;
 	params.Pos = Pos;
 	params.Rot = Rot;
 	params.Region = Region;

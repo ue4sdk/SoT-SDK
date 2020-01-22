@@ -39,8 +39,9 @@ public:
 	unsigned char                                      UnknownData06 : 3;                                        // 0x00C3(0x0001)
 	unsigned char                                      bNeedsLoadForClient : 1;                                  // 0x00C3(0x0001) (Edit)
 	unsigned char                                      bNeedsLoadForServer : 1;                                  // 0x00C3(0x0001) (Edit)
-	TEnumAsByte<EComponentCreationMethod>              CreationMethod;                                           // 0x00C4(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x00C5(0x0003) MISSED OFFSET
+	TEnumAsByte<EComponentNetDormancy>                 TargetNetDormancy;                                        // 0x00C4(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EComponentCreationMethod>              CreationMethod;                                           // 0x00C5(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x2];                                       // 0x00C6(0x0002) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -65,7 +66,9 @@ public:
 	bool IsComponentTickEnabled();
 	bool IsBeingDestroyed();
 	bool IsActive();
+	TEnumAsByte<EComponentNetDormancy> GetTargetNetDormancy();
 	class AActor* GetOwner();
+	bool FlushNetDormancy();
 	void Deactivate();
 	bool ComponentHasTag(const struct FName& Tag);
 	void AddTickPrerequisiteComponent(class UActorComponent* PrerequisiteComponent);
@@ -283,7 +286,7 @@ public:
 	bool GetActorEnableCollision();
 	void GetActorBounds(bool bOnlyCollidingComponents, struct FVector* Origin, struct FVector* BoxExtent);
 	void ForceNetUpdate();
-	void FlushNetDormancy();
+	bool FlushNetDormancy();
 	void EnableInput(class APlayerController* PlayerController);
 	void DisableInput(class APlayerController* PlayerController);
 	void DetachRootComponentFromParent(bool bMaintainWorldPosition);
@@ -2038,6 +2041,7 @@ public:
 	void ConsoleKey(const struct FKey& Key);
 	void ClientWasKicked(const struct FText& KickReason);
 	void ClientVoiceHandshakeComplete();
+	void ClientUpdateLevelStreamingStatusBatched(const class FString& PackageBasePath, TArray<struct FLevelStreamingStatusUpdateInfo> LevelStreamingStatusUpdateInfo);
 	void ClientUpdateLevelStreamingStatus(const struct FName& PackageName, bool bNewShouldBeLoaded, bool bNewShouldBeVisible, bool bNewShouldBlockOnLoad, int LODIndex);
 	void ClientUnmutePlayer(const struct FUniqueNetIdRepl& PlayerId);
 	void ClientTravelInternal(const class FString& URL, TEnumAsByte<ETravelType> TravelType, bool bSeamless, const struct FGuid& MapPackageGuid);
@@ -3510,21 +3514,6 @@ public:
 };
 
 
-// Class Engine.EngineBaseTypes
-// 0x0000 (0x0028 - 0x0028)
-class UEngineBaseTypes : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.EngineBaseTypes"));
-		return ptr;
-	}
-
-};
-
-
 // Class Engine.EdGraphNode
 // 0x0068 (0x0090 - 0x0028)
 class UEdGraphNode : public UObject
@@ -3578,6 +3567,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.EdGraphPin"));
+		return ptr;
+	}
+
+};
+
+
+// Class Engine.EngineBaseTypes
+// 0x0000 (0x0028 - 0x0028)
+class UEngineBaseTypes : public UObject
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Engine.EngineBaseTypes"));
 		return ptr;
 	}
 

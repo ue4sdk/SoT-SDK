@@ -7,7 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_BP_TreasureChestProxy_classes.hpp"
+#include "SoT_BP_TreasureChest_GoldHoarderLocked_Base_Proxy_classes.hpp"
 
 namespace SDK
 {

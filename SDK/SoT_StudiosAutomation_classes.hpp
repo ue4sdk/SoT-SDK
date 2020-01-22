@@ -145,6 +145,7 @@ public:
 	static void SetTestTimeoutAsFatal(bool TimeoutIsFatal);
 	static void OpenLevelWithGameMode(class UObject* WorldContextObject, const struct FName& LevelName, class UClass* GameMode, bool Absolute);
 	static bool IsTravelFinished(class UObject* WorldContextObject);
+	static bool IsFeatureToggleEnabled(const struct FName& FeatureToggleName);
 	static bool IsEditor();
 	static bool HasPerformanceDataBeenCaptured();
 	static class ATestLevelScriptActor* GetTestLevelScriptActor(bool ErrorOnFailure);

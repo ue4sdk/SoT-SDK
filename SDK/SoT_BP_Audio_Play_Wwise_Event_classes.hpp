@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Audio_Play_Wwise_Event.BP_Audio_Play_Wwise_Event_C
-// 0x0038 (0x04E8 - 0x04B0)
+// 0x0038 (0x0448 - 0x0410)
 class ABP_Audio_Play_Wwise_Event_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UWwiseEmitterComponent*                      BPAudioEvent;                                             // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UWwiseEvent*>                         WwiseEvent;                                               // 0x04C0(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FName                                       Wwise_Game_Parameter;                                     // 0x04D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              Wwise_Game_Parameter_Value;                               // 0x04D8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x04DC(0x0004) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     Wwise_Object_Pool_Wrapper;                                // 0x04E0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0410(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UWwiseEmitterComponent*                      BPAudioEvent;                                             // 0x0418(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<class UWwiseEvent*>                         WwiseEvent;                                               // 0x0420(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	struct FName                                       Wwise_Game_Parameter;                                     // 0x0430(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Wwise_Game_Parameter_Value;                               // 0x0438(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x043C(0x0004) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     Wwise_Object_Pool_Wrapper;                                // 0x0440(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

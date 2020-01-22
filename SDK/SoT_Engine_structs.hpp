@@ -1135,6 +1135,18 @@ struct FLatentActionInfo
 	class UObject*                                     CallbackTarget;                                           // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Engine.LevelStreamingStatusUpdateInfo
+// 0x0018
+struct FLevelStreamingStatusUpdateInfo
+{
+	class FString                                      PackageName;                                              // 0x0000(0x0010) (ZeroConstructor)
+	int                                                LODIndex;                                                 // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bNewShouldBeLoaded : 1;                                   // 0x0014(0x0001)
+	unsigned char                                      bNewShouldBeVisible : 1;                                  // 0x0014(0x0001)
+	unsigned char                                      bNewShouldBlockOnLoad : 1;                                // 0x0014(0x0001)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
+};
+
 // ScriptStruct Engine.GeomSelection
 // 0x000C
 struct FGeomSelection
@@ -6019,7 +6031,7 @@ struct FAnimNode_BlendListByObject : public FAnimNode_BlendListBase
 };
 
 // ScriptStruct Engine.AnimNode_BlendSpacePlayer
-// 0x00C8 (0x0108 - 0x0040)
+// 0x00D0 (0x0110 - 0x0040)
 struct FAnimNode_BlendSpacePlayer : public FAnimNode_AssetPlayerBase
 {
 	float                                              X;                                                        // 0x0040(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -6034,14 +6046,15 @@ struct FAnimNode_BlendSpacePlayer : public FAnimNode_AssetPlayerBase
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0065(0x0003) MISSED OFFSET
 	struct FBlendFilter                                BlendFilter;                                              // 0x0068(0x0090)
 	TArray<struct FBlendSampleData>                    BlendSampleDataCache;                                     // 0x00F8(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x0108(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct Engine.AnimNode_BlendSpaceEvaluator
-// 0x0008 (0x0110 - 0x0108)
+// 0x0008 (0x0118 - 0x0110)
 struct FAnimNode_BlendSpaceEvaluator : public FAnimNode_BlendSpacePlayer
 {
-	float                                              NormalizedTime;                                           // 0x0108(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x010C(0x0004) MISSED OFFSET
+	float                                              NormalizedTime;                                           // 0x0110(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0114(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Engine.AnimNode_HIKFloorContact
@@ -6294,10 +6307,10 @@ struct FAnimNode_RotateRootBone : public FAnimNode_Base
 };
 
 // ScriptStruct Engine.AnimNode_RotationOffsetBlendSpace
-// 0x0018 (0x0120 - 0x0108)
+// 0x0018 (0x0128 - 0x0110)
 struct FAnimNode_RotationOffsetBlendSpace : public FAnimNode_BlendSpacePlayer
 {
-	struct FPoseLink                                   BasePose;                                                 // 0x0108(0x0018) (Edit, BlueprintVisible)
+	struct FPoseLink                                   BasePose;                                                 // 0x0110(0x0018) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct Engine.AnimNode_SaveCachedPose
@@ -6322,7 +6335,7 @@ struct FAnimNode_SequenceEvaluator : public FAnimNode_AssetPlayerBase
 };
 
 // ScriptStruct Engine.AnimNode_SequencePlayer
-// 0x0018 (0x0058 - 0x0040)
+// 0x0020 (0x0060 - 0x0040)
 struct FAnimNode_SequencePlayer : public FAnimNode_AssetPlayerBase
 {
 	class UAnimSequenceBase*                           Sequence;                                                 // 0x0040(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -6331,7 +6344,7 @@ struct FAnimNode_SequencePlayer : public FAnimNode_AssetPlayerBase
 	float                                              PlayRate;                                                 // 0x004C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                GroupIndex;                                               // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EAnimGroupRole>                        GroupRole;                                                // 0x0054(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0055(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData01[0xB];                                       // 0x0055(0x000B) MISSED OFFSET
 };
 
 // ScriptStruct Engine.AnimNode_Slot

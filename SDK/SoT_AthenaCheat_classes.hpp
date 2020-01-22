@@ -163,7 +163,6 @@ public:
 	void SpawnAIAtCurrentLocationDelayed(const class FString& AIDescString, float Delay);
 	void SpawnAI(const class FString& AIDescString);
 	void SpawnAggressiveGhostShipEncounter();
-	void SpawnAggressiveGhostShip(int DifficultyIndex);
 	void SmoulderClosestShipFire();
 	void SmoulderAllShipFires();
 	void SlowMotionOverride(bool InValue);
@@ -260,6 +259,7 @@ public:
 	void ResetDemoSession(bool StartNewSession);
 	void ResetAllMechanisms();
 	void ResetAITeamAttitudes();
+	void ResetAIExclusiveAbilities();
 	void RequestSmallPassiveAIShip();
 	void RequestSmallAggressiveAIShip();
 	void RequestLargePassiveAIShip();
@@ -326,6 +326,7 @@ public:
 	void InvincibleEverything();
 	void InfiniteGunAmmo(bool Enabled);
 	void IncrementTime(int Hours, int Minutes);
+	void IncreaseEmissaryCount(int Amount);
 	void IgniteShipAtPlayerLocation();
 	void IgniteLocalPlayer();
 	void IgniteClosestShip();
@@ -413,6 +414,7 @@ public:
 	void DebugIslandDelta();
 	void DeactivateSkellyFortOfTheDamned(const class FString& FortName);
 	void DeactivateSkellyFort(const class FString& FortName);
+	void DeactivateEmissaryFlagCompany();
 	void DeactivateDeathEffect();
 	void DamageShipFromRemoteActor(const class FString& ActorIdString, float Strength, float CameraLocationX, float CameraLocationY, float CameraLocationZ, float CameraForwardDirectionX, float CameraForwardDirectionY, float CameraForwardDirectionZ);
 	void DamageShip(float Strength);
@@ -462,6 +464,7 @@ public:
 	void AddDrunkenness(int DrunkennessType, float DrunkennessChange);
 	void ActivateSkellyFortOfTheDamned(const class FString& FortName);
 	void ActivateSkellyFort(const class FString& FortName);
+	void ActivateEmissaryFlagCompany(const class FString& CompanyId);
 };
 
 

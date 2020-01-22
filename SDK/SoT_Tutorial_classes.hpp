@@ -35,31 +35,14 @@ public:
 };
 
 
-// Class Tutorial.TutorialPromptAccessKey
-// 0x0010 (0x0038 - 0x0028)
-class UTutorialPromptAccessKey : public UObject
-{
-public:
-	class FString                                      Key;                                                      // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tutorial.TutorialPromptAccessKey"));
-		return ptr;
-	}
-
-};
-
-
 // Class Tutorial.ContextualTutorialComponent
-// 0x0068 (0x0130 - 0x00C8)
+// 0x0058 (0x0120 - 0x00C8)
 class UContextualTutorialComponent : public UActorComponent
 {
 public:
 	TArray<struct FContextualTutorialPromptDesc>       ContextualTutorialClasses;                                // 0x00C8(0x0010) (Edit, ZeroConstructor)
-	class FString                                      TheScope;                                                 // 0x00D8(0x0010) (Edit, ZeroConstructor)
-	TArray<class AActor*>                              SpawnedPromptActors;                                      // 0x00E8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x38];                                      // 0x00F8(0x0038) MISSED OFFSET
+	TArray<class AActor*>                              SpawnedPromptActors;                                      // 0x00D8(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x38];                                      // 0x00E8(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -147,6 +130,23 @@ public:
 
 
 	static struct FTeleportLocation GetNearestOnboardingSpawnPoint(class AActor* CharacterToTeleport);
+};
+
+
+// Class Tutorial.TutorialHelpersBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UTutorialHelpersBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tutorial.TutorialHelpersBlueprintLibrary"));
+		return ptr;
+	}
+
+
+	static void FirePromptCompleted(class UClass* AccessKey, class UObject* WorldContextObject);
 };
 
 

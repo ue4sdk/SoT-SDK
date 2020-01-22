@@ -15,36 +15,37 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PlayerPirate.BP_PlayerPirate_C
-// 0x00CC (0x18DC - 0x1810)
+// 0x00D4 (0x1904 - 0x1830)
 class ABP_PlayerPirate_C : public AAthenaPlayerCharacter
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1810(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UReviveComponent*                            ReviveComponent;                                          // 0x1818(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStatusEffectComponent*                      StatusEffect;                                             // 0x1820(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x1828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UVomitComponent*                             Vomit;                                                    // 0x1830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UNoiseMakerComponent*                        NoiseMaker;                                               // 0x1838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPlayerNameplateComponent*                   PlayerNameplate;                                          // 0x1840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBodyLightControllerComponent*               BodyLightController;                                      // 0x1848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAmbientLightSourceComponent*                BodyLight;                                                // 0x1850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAudioSpaceTrackerComponent*                 AudioSpaceTracker;                                        // 0x1858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPlayerAtmosphericsAudioComponent*           PlayerAtmosphericsAudio;                                  // 0x1860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBP_CharacterVFXComponent_C*                 BP_CharacterVFXComponent;                                 // 0x1868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWaterInteractionComponent*                  WaterInteraction;                                         // 0x1870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBP_CharacterAudioComponent_C*               BP_PlayerAudioComponent;                                  // 0x1878(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCharacterFootImpactComponent*               CharacterFootImpact;                                      // 0x1880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPlayerOceanAudioComponent*                  PlayerOceanAudio;                                         // 0x1888(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              TattooGlowDuration;                                       // 0x1890(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x1894(0x0004) MISSED OFFSET
-	class UStaticMesh*                                 CurrentStaticMesh;                                        // 0x1898(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USkeletalMesh*                               CurrentSkeletalMesh;                                      // 0x18A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class USkeletalMesh*>                       SkeletalMeshArray;                                        // 0x18A8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UStaticMesh*>                         StaticMeshArray;                                          // 0x18B8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	bool                                               IsSkeletalMesh;                                           // 0x18C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x18C9(0x0003) MISSED OFFSET
-	int                                                ItemSelectArray;                                          // 0x18CC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     ItemScale;                                                // 0x18D0(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x1830(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UStatusApplicationMonitorComponent*          StatusApplicationMonitor;                                 // 0x1838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UReviveComponent*                            ReviveComponent;                                          // 0x1840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStatusEffectComponent*                      StatusEffect;                                             // 0x1848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x1850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UVomitComponent*                             Vomit;                                                    // 0x1858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UNoiseMakerComponent*                        NoiseMaker;                                               // 0x1860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlayerNameplateComponent*                   PlayerNameplate;                                          // 0x1868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBodyLightControllerComponent*               BodyLightController;                                      // 0x1870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAmbientLightSourceComponent*                BodyLight;                                                // 0x1878(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAudioSpaceTrackerComponent*                 AudioSpaceTracker;                                        // 0x1880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlayerAtmosphericsAudioComponent*           PlayerAtmosphericsAudio;                                  // 0x1888(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBP_CharacterVFXComponent_C*                 BP_CharacterVFXComponent;                                 // 0x1890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWaterInteractionComponent*                  WaterInteraction;                                         // 0x1898(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBP_CharacterAudioComponent_C*               BP_PlayerAudioComponent;                                  // 0x18A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCharacterFootImpactComponent*               CharacterFootImpact;                                      // 0x18A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlayerOceanAudioComponent*                  PlayerOceanAudio;                                         // 0x18B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TattooGlowDuration;                                       // 0x18B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x18BC(0x0004) MISSED OFFSET
+	class UStaticMesh*                                 CurrentStaticMesh;                                        // 0x18C0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class USkeletalMesh*                               CurrentSkeletalMesh;                                      // 0x18C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class USkeletalMesh*>                       SkeletalMeshArray;                                        // 0x18D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UStaticMesh*>                         StaticMeshArray;                                          // 0x18E0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	bool                                               IsSkeletalMesh;                                           // 0x18F0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x18F1(0x0003) MISSED OFFSET
+	int                                                ItemSelectArray;                                          // 0x18F4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     ItemScale;                                                // 0x18F8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

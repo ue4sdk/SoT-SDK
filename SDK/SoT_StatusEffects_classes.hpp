@@ -302,6 +302,38 @@ public:
 };
 
 
+// Class StatusEffects.StatusApplicationDesc
+// 0x0020 (0x0048 - 0x0028)
+class UStatusApplicationDesc : public UObject
+{
+public:
+	struct FEventAppliedStatusToTargets                ApplicationEvent;                                         // 0x0028(0x0020)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusApplicationDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class StatusEffects.StatusApplicationMonitorComponent
+// 0x0008 (0x00D0 - 0x00C8)
+class UStatusApplicationMonitorComponent : public UActorComponent
+{
+public:
+	class UClass*                                      StatusApplicationTrigger;                                 // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.StatusApplicationMonitorComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class StatusEffects.StatusEffectTicketDispenserInterface
 // 0x0000 (0x0028 - 0x0028)
 class UStatusEffectTicketDispenserInterface : public UInterface

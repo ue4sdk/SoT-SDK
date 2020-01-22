@@ -32,36 +32,6 @@ void UBP_Humanoid_ThirdPerson_C::SetInitialAthenaCharacterAndAnimSet(class UClas
 }
 
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.ExtractEmotesFromPersonas
-// (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FAthenaAnimationDiverseEmotes> Diverse                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FAthenaAnimationEmotePersonas> Personas                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FAthenaAnimationEmoteAnimations> NewParam                       (Parm, OutParm, ZeroConstructor)
-
-void UBP_Humanoid_ThirdPerson_C::ExtractEmotesFromPersonas(TArray<struct FAthenaAnimationDiverseEmotes>* Diverse, TArray<struct FAthenaAnimationEmotePersonas>* Personas, TArray<struct FAthenaAnimationEmoteAnimations>* NewParam)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.ExtractEmotesFromPersonas"));
-
-	struct
-	{
-		TArray<struct FAthenaAnimationDiverseEmotes> Diverse;
-		TArray<struct FAthenaAnimationEmotePersonas> Personas;
-		TArray<struct FAthenaAnimationEmoteAnimations> NewParam;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (Diverse != nullptr)
-		*Diverse = params.Diverse;
-	if (Personas != nullptr)
-		*Personas = params.Personas;
-	if (NewParam != nullptr)
-		*NewParam = params.NewParam;
-}
-
-
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.ParametricBlendFunction
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -5310,60 +5280,12 @@ void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_
 }
 
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_5AA90AC04049F02EE336CA9367222670
-// (BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_5AA90AC04049F02EE336CA9367222670()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_5AA90AC04049F02EE336CA9367222670"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_123526EE4144B286DBA741B2FEA6E5B7
 // (BlueprintEvent)
 
 void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_123526EE4144B286DBA741B2FEA6E5B7()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_123526EE4144B286DBA741B2FEA6E5B7"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_DCA53CB84E6601BC6FCB9BB03C134C7E
-// (BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_DCA53CB84E6601BC6FCB9BB03C134C7E()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_DCA53CB84E6601BC6FCB9BB03C134C7E"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_4206DD574F23C48A98B04DA1C5762873
-// (BlueprintEvent)
-
-void UBP_Humanoid_ThirdPerson_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_4206DD574F23C48A98B04DA1C5762873()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Humanoid_ThirdPerson_AnimGraphNode_TransitionResult_4206DD574F23C48A98B04DA1C5762873"));
 
 	struct
 	{

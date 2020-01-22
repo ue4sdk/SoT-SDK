@@ -33,7 +33,7 @@ public:
 
 
 // Class AthenaLoadingScreen.SlateLoadingScreenParams
-// 0x01E8 (0x0210 - 0x0028)
+// 0x01F0 (0x0218 - 0x0028)
 class USlateLoadingScreenParams : public UDataAsset
 {
 public:
@@ -69,6 +69,8 @@ public:
 	unsigned char                                      UnknownData02[0x4];                                       // 0x01CC(0x0004) MISSED OFFSET
 	TArray<struct FText>                               LoadingScreenTips;                                        // 0x01D0(0x0010) (Edit, ZeroConstructor)
 	struct FSlateColor                                 LoadingScreenTipColour;                                   // 0x01E0(0x0030) (Edit)
+	bool                                               AllowSyncronousAssetLoad;                                 // 0x0210(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0211(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
