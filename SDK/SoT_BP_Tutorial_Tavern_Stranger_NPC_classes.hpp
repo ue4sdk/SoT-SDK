@@ -34,10 +34,12 @@ public:
 	}
 
 
+	void UnhidePlayerPrompts();
 	bool CanInteract(class AActor* InInteractor);
 	void StartOnboardingCutscene();
 	void UserConstructionScript();
 	void QueueCutsceneActorDestruction();
+	void ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void ExecuteUbergraph_BP_Tutorial_Tavern_Stranger_NPC(int EntryPoint);
 };
 

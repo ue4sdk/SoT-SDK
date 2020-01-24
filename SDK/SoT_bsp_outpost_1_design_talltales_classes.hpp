@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass bsp_outpost_1_design_talltales.bsp_outpost_1_design_talltales_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x0418 - 0x0418)
 class Absp_outpost_1_design_talltales_C : public ALevelScriptActor
 {
 public:
