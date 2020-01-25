@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SkullRitual_Skull.BP_SkullRitual_Skull_C
-// 0x0008 (0x04B8 - 0x04B0)
+// 0x0008 (0x0418 - 0x0410)
 class ABP_SkullRitual_Skull_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        trs_briggsys_skull_01_c;                                  // 0x04B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        trs_briggsys_skull_01_c;                                  // 0x0410(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

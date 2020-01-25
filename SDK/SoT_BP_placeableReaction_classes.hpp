@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_placeableReaction.BP_PlaceableReaction_C
-// 0x0000 (0x04D8 - 0x04D8)
+// 0x0000 (0x0438 - 0x0438)
 class ABP_PlaceableReaction_C : public APlaceableReaction
 {
 public:

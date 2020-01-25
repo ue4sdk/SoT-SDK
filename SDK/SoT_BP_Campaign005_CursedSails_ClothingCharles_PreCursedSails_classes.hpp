@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Campaign005_CursedSails_ClothingCharles_PreCursedSails.BP_Campaign005_CursedSails_ClothingCharles_PreCursedSails_C
-// 0x0000 (0x0680 - 0x0680)
+// 0x0000 (0x05E8 - 0x05E8)
 class ABP_Campaign005_CursedSails_ClothingCharles_PreCursedSails_C : public ABP_Clothing_C
 {
 public:

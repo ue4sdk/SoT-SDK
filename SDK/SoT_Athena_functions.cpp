@@ -3578,12 +3578,12 @@ void UAnimationDataOverriderComponent::OnRep_AnimationDataStoreAssetReference()
 }
 
 
-// Function Athena.AshenLordAIFormComponent.OnRep_HealthChange
+// Function Athena.AshenLordAIFormComponent.OnRep_CachedNormalisedHealthScalar
 // (Final, Native, Private)
 
-void UAshenLordAIFormComponent::OnRep_HealthChange()
+void UAshenLordAIFormComponent::OnRep_CachedNormalisedHealthScalar()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AshenLordAIFormComponent.OnRep_HealthChange"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AshenLordAIFormComponent.OnRep_CachedNormalisedHealthScalar"));
 
 	struct
 	{
@@ -7036,6 +7036,22 @@ void ULocalDisturbanceFunctionLibrary::AddDisturbance(class UObject* WorldContex
 }
 
 
+// Function Athena.AthenaCharacterMovementComponent.UnforceSwimmingClientTrustThreshold
+// (Final, Native, Public, BlueprintCallable)
+
+void UAthenaCharacterMovementComponent::UnforceSwimmingClientTrustThreshold()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaCharacterMovementComponent.UnforceSwimmingClientTrustThreshold"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Athena.AthenaCharacterMovementComponent.SetMovementMode
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -7223,6 +7239,26 @@ float UAthenaCharacterMovementComponent::GetMaxMoveSpeedScalar()
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Athena.AthenaCharacterMovementComponent.ForceSwimmingClientTrustThreshold
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                          NewSwimmingClientTrustThreshold (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCharacterMovementComponent::ForceSwimmingClientTrustThreshold(float NewSwimmingClientTrustThreshold)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.AthenaCharacterMovementComponent.ForceSwimmingClientTrustThreshold"));
+
+	struct
+	{
+		float                          NewSwimmingClientTrustThreshold;
+	} params;
+
+	params.NewSwimmingClientTrustThreshold = NewSwimmingClientTrustThreshold;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -31317,6 +31353,22 @@ void AMapTable::OnRep_MapPins()
 void AMapTable::OnRep_CentreLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.MapTable.OnRep_CentreLocation"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Athena.MapTable.OnRep_CachedIslandEventDatas
+// (Final, Native, Public)
+
+void AMapTable::OnRep_CachedIslandEventDatas()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Athena.MapTable.OnRep_CachedIslandEventDatas"));
 
 	struct
 	{

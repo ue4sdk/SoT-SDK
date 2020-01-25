@@ -712,7 +712,8 @@ enum class EReapersMarkTrackedBootyItemType : uint8_t
 	EReapersMarkTrackedBootyItemType__GenericBooty = 1,
 	EReapersMarkTrackedBootyItemType__FOTDKey = 2,
 	EReapersMarkTrackedBootyItemType__ReapersBounty = 3,
-	EReapersMarkTrackedBootyItemType__EReapersMarkTrackedBootyItemType_MAX = 4
+	EReapersMarkTrackedBootyItemType__DoubloonReapersChest = 4,
+	EReapersMarkTrackedBootyItemType__EReapersMarkTrackedBootyItemType_MAX = 5
 };
 
 
@@ -2010,18 +2011,19 @@ enum class EBootflowError : uint8_t
 	EBootflowError__InvitePrivilegesCheckFailed = 91,
 	EBootflowError__InviteUnableToRetrieveSession = 92,
 	EBootflowError__InviteSessionXboxPadOnly = 93,
-	EBootflowError__InviteSessionFull = 94,
-	EBootflowError__InviteSessionUnknownFailure = 95,
-	EBootflowError__InviteSessionNoTransferHandle = 96,
-	EBootflowError__InviteSessionUnableToFindTargetSession = 97,
-	EBootflowError__InviteSessionIsNotJoinable = 98,
-	EBootflowError__FailedToEnumerateEntitlements = 99,
-	EBootflowError__WhatsNewArticleRetrievalStateInvalidIdentityInterface = 100,
-	EBootflowError__FailedToFetchExistingSessions = 101,
-	EBootflowError__TestFailed     = 102,
-	EBootflowError__TestNetworkError = 103,
-	EBootflowError__Max            = 104,
-	EBootflowError__EBootflowError_MAX = 105
+	EBootflowError__InviteSessionNoBannedData = 94,
+	EBootflowError__InviteSessionFull = 95,
+	EBootflowError__InviteSessionUnknownFailure = 96,
+	EBootflowError__InviteSessionNoTransferHandle = 97,
+	EBootflowError__InviteSessionUnableToFindTargetSession = 98,
+	EBootflowError__InviteSessionIsNotJoinable = 99,
+	EBootflowError__FailedToEnumerateEntitlements = 100,
+	EBootflowError__WhatsNewArticleRetrievalStateInvalidIdentityInterface = 101,
+	EBootflowError__FailedToFetchExistingSessions = 102,
+	EBootflowError__TestFailed     = 103,
+	EBootflowError__TestNetworkError = 104,
+	EBootflowError__Max            = 105,
+	EBootflowError__EBootflowError_MAX = 106
 };
 
 

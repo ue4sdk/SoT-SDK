@@ -29,6 +29,36 @@ public:
 };
 
 
+// Class AthenaEngine.BoxCollisionExtentAdjustOverTimeComponent
+// 0x0030 (0x00F8 - 0x00C8)
+class UBoxCollisionExtentAdjustOverTimeComponent : public UActorComponent
+{
+public:
+	float                                              DelayBeforeExtentAdjustment;                              // 0x00C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ShouldAdjustBoxExtentX;                                   // 0x00CC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x00CD(0x0003) MISSED OFFSET
+	float                                              PostAdjustmentBoxExtentX;                                 // 0x00D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ShouldAdjustBoxExtentY;                                   // 0x00D4(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x00D5(0x0003) MISSED OFFSET
+	float                                              PostAdjustmentBoxExtentY;                                 // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ShouldAdjustBoxExtentZ;                                   // 0x00DC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x00DD(0x0003) MISSED OFFSET
+	float                                              PostAdjustmentBoxExtentZ;                                 // 0x00E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x4];                                       // 0x00E4(0x0004) MISSED OFFSET
+	class UBoxComponent*                               BoxCollisionToAdjust;                                     // 0x00E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWorld*                                      CachedWorld;                                              // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.BoxCollisionExtentAdjustOverTimeComponent"));
+		return ptr;
+	}
+
+
+	void SetBoxCollisionToAdjust(class UBoxComponent* InBoxComponent);
+};
+
+
 // Class AthenaEngine.BoxedRpcDispatcherInterface
 // 0x0000 (0x0028 - 0x0028)
 class UBoxedRpcDispatcherInterface : public UInterface

@@ -115,7 +115,7 @@ struct FCollectionAnimSequenceLimits
 };
 
 // ScriptStruct StudiosAutomation.CollectionLimits
-// 0x0030
+// 0x0034
 struct FCollectionLimits
 {
 	struct FName                                       CollectionName;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
@@ -125,6 +125,9 @@ struct FCollectionLimits
 	struct FCollectionStaticMeshLimits                 StaticMeshLimits;                                         // 0x001C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FCollectionSkeleMeshLimits                  SkeleMeshLimits;                                          // 0x0024(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FCollectionAnimSequenceLimits               AnimLimits;                                               // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               CanUseComplexCollisionAsSimple;                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               CanUseLOD0Collision;                                      // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x0032(0x0002) MISSED OFFSET
 };
 
 // ScriptStruct StudiosAutomation.CollectionLimitsArray

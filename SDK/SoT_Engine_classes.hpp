@@ -11349,7 +11349,7 @@ public:
 
 
 // Class Engine.PhysicsSettings
-// 0x0090 (0x00C8 - 0x0038)
+// 0x0098 (0x00D0 - 0x0038)
 class UPhysicsSettings : public UDeveloperSettings
 {
 public:
@@ -11394,7 +11394,13 @@ public:
 	unsigned char                                      UnknownData04[0x1];                                       // 0x00BB(0x0001) MISSED OFFSET
 	int                                                MBPSubdivisions;                                          // 0x00BC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	float                                              MBPWorldHalfExtentInCM;                                   // 0x00C0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
+	unsigned char                                      AthenaCharacterMaxShapes;                                 // 0x00C4(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      BuoyantStorageContainerMaxShapes;                         // 0x00C5(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      FaunaMaxShapes;                                           // 0x00C6(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      FloatingItemProxyMaxShapes;                               // 0x00C7(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      RowboatMaxShapes;                                         // 0x00C8(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      ShipMaxShapes;                                            // 0x00C9(0x0001) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x6];                                       // 0x00CA(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

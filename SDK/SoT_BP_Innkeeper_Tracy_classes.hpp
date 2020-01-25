@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Innkeeper_Tracy.BP_Innkeeper_Tracy_C
-// 0x0038 (0x06F8 - 0x06C0)
+// 0x0038 (0x0660 - 0x0628)
 class ABP_Innkeeper_Tracy_C : public ABP_Innkeeper_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x06C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UWwiseEvent*                                 SFX_IdleLoopPlay_1;                                       // 0x06C8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 SFX_IdleLoopStop_1;                                       // 0x06D0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWwiseEmitter                               InnkeeperEmitter_1;                                       // 0x06D8(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0628(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UWwiseEvent*                                 SFX_IdleLoopPlay_1;                                       // 0x0630(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 SFX_IdleLoopStop_1;                                       // 0x0638(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FWwiseEmitter                               InnkeeperEmitter_1;                                       // 0x0640(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

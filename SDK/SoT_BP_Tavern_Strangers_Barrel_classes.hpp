@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Tavern_Strangers_Barrel.BP_Tavern_Strangers_Barrel_C
-// 0x0000 (0x04B8 - 0x04B8)
+// 0x0000 (0x0418 - 0x0418)
 class ABP_Tavern_Strangers_Barrel_C : public ATavernStrangersBarrel
 {
 public:
