@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_MercenaryVoyages_DarkRelicTipOff_Voyage_DVR.Proposal_MercenaryVoyages_DarkRelicTipOff_Voyage_DVR_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0138 - 0x0138)
 class UProposal_MercenaryVoyages_DarkRelicTipOff_Voyage_DVR_C : public UVoyageProposalDesc
 {
 public:

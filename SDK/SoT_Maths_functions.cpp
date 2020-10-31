@@ -1026,6 +1026,31 @@ float UGravity::Earth()
 }
 
 
+// Function Maths.OrientedPointBlueprintFunctionLibrary.GetPointAsTransform
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FOrientedPoint          Point                          (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FTransform              ReturnValue                    (Parm, OutParm, ReturnParm, IsPlainOldData)
+
+struct FTransform UOrientedPointBlueprintFunctionLibrary::GetPointAsTransform(const struct FOrientedPoint& Point)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.OrientedPointBlueprintFunctionLibrary.GetPointAsTransform"));
+
+	struct
+	{
+		struct FOrientedPoint          Point;
+		struct FTransform              ReturnValue;
+	} params;
+
+	params.Point = Point;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Maths.PoissonDiscSampling.GeneratePoissonDiscDistributionAcrossPlane
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -1279,6 +1304,37 @@ struct FQuat URotationMaths::RotatorToQuat(const struct FRotator& Rotation)
 	} params;
 
 	params.Rotation = Rotation;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.RotationMaths.AreRotatorsTheSameRotation
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FRotator                Rotator1                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator                Rotator2                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          ErrorTolerance                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool URotationMaths::AreRotatorsTheSameRotation(const struct FRotator& Rotator1, const struct FRotator& Rotator2, float ErrorTolerance)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.RotationMaths.AreRotatorsTheSameRotation"));
+
+	struct
+	{
+		struct FRotator                Rotator1;
+		struct FRotator                Rotator2;
+		float                          ErrorTolerance;
+		bool                           ReturnValue;
+	} params;
+
+	params.Rotator1 = Rotator1;
+	params.Rotator2 = Rotator2;
+	params.ErrorTolerance = ErrorTolerance;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);

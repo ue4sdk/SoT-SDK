@@ -18,13 +18,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct Tutorial.ContextualTutorialPromptDesc
-// 0x0018
+// 0x0020
 struct FContextualTutorialPromptDesc
 {
 	class UClass*                                      PromptActorClass;                                         // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UClass*                                      AccessKey;                                                // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                MustBeUnderCount;                                         // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	struct FName                                       FeatureName;                                              // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                MustBeUnderCount;                                         // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Tutorial.TutorialStepEndedTelemetryEvent
@@ -43,13 +44,6 @@ struct FTutorialStepEndedTelemetryEvent
 struct FTutorialShowTutorialLegendaryTavernStrangerEvent
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct Tutorial.TutorialPromptsIncrementEvent
-// 0x0008
-struct FTutorialPromptsIncrementEvent
-{
-	class UClass*                                      AccessKey;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

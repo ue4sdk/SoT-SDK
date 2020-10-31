@@ -385,7 +385,8 @@ struct FClothingPart
 	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TArray<struct FName>                               Slots;                                                    // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	TEnumAsByte<EIPGGender>                            Gender;                                                   // 0x0018(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
+	TEnumAsByte<EIPGPartType>                          PartType;                                                 // 0x0019(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x001A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct PirateGenerator.ClothingItem

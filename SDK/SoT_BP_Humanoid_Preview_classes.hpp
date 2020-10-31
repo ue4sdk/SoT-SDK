@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Humanoid_Preview.BP_Humanoid_Preview_C
-// 0x0768 (0x0E48 - 0x06E0)
+// 0x0770 (0x0E50 - 0x06E0)
 class UBP_Humanoid_Preview_C : public UPreviewCharacterAnimationInstance
 {
 public:
@@ -40,7 +40,7 @@ public:
 	struct FAnimNode_Root                              AnimGraphNode_StateResult_86845D1748E753EF522488B025872E01;// 0x0CA0(0x0048)
 	struct FAnimNode_StateMachine                      AnimGraphNode_StateMachine_310D09BB4DF7B35D7BC01781E4095B68;// 0x0CE8(0x00A8)
 	struct FAnimNode_Slot                              AnimGraphNode_Slot_8A5246C7402ED8F21203A68057B434BA;      // 0x0D90(0x0060)
-	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_4805FD4F465DBD0A8F5730B95CC35DB3;// 0x0DF0(0x0058)
+	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_4805FD4F465DBD0A8F5730B95CC35DB3;// 0x0DF0(0x0060)
 
 	static UClass* StaticClass()
 	{

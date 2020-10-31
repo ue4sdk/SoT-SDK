@@ -48,6 +48,91 @@ void UFlammableComponent::Multicast_NotifyExtinguished_RPC(const struct FVector&
 }
 
 
+// Function Fire.FlammableComponent.IsOnFire
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UFlammableComponent::IsOnFire()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableComponent.IsOnFire"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Fire.FlammableComponent.IncrementFireSource
+// (Native, Public, BlueprintCallable)
+
+void UFlammableComponent::IncrementFireSource()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableComponent.IncrementFireSource"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Fire.FlammableComponent.DecrementFireSource
+// (Native, Public, BlueprintCallable)
+
+void UFlammableComponent::DecrementFireSource()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableComponent.DecrementFireSource"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Fire.FlammableInterface.IncrementFireSource
+// (Native, Public, BlueprintCallable)
+
+void UFlammableInterface::IncrementFireSource()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableInterface.IncrementFireSource"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Fire.FlammableInterface.DecrementFireSource
+// (Native, Public, BlueprintCallable)
+
+void UFlammableInterface::DecrementFireSource()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableInterface.DecrementFireSource"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Fire.FirePropagationInterface.SetAllCellsState
 // (BlueprintAuthorityOnly, Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:

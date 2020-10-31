@@ -480,199 +480,6 @@ void AFFTWaterService::OnRep_ExtendedPlaneComponent()
 }
 
 
-// Function Water.WaterInteractionComponent.LeaveWaterPlane
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UBaseWaterComponent*     WaterComponent                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UWaterInteractionComponent::LeaveWaterPlane(class UBaseWaterComponent* WaterComponent)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.LeaveWaterPlane"));
-
-	struct
-	{
-		class UBaseWaterComponent*     WaterComponent;
-	} params;
-
-	params.WaterComponent = WaterComponent;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Water.WaterInteractionComponent.LeaveWaterExclusionZone
-// (Final, Native, Public, BlueprintCallable)
-
-void UWaterInteractionComponent::LeaveWaterExclusionZone()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.LeaveWaterExclusionZone"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Water.WaterInteractionComponent.IsUsingNonDefaultWaterPlane
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UWaterInteractionComponent::IsUsingNonDefaultWaterPlane()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.IsUsingNonDefaultWaterPlane"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Water.WaterInteractionComponent.IsInWaterExcludedZone
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UWaterInteractionComponent::IsInWaterExcludedZone()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.IsInWaterExcludedZone"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Water.WaterInteractionComponent.GetWaterPlaneComponent
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UBaseWaterComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UBaseWaterComponent* UWaterInteractionComponent::GetWaterPlaneComponent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.GetWaterPlaneComponent"));
-
-	struct
-	{
-		class UBaseWaterComponent*     ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-unsigned char UWaterInteractionComponent::GetNumberOfWaterPlanes()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes"));
-
-	struct
-	{
-		unsigned char                  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Water.WaterInteractionComponent.EnterWaterPlane
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UBaseWaterComponent*     WaterComponent                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UWaterInteractionComponent::EnterWaterPlane(class UBaseWaterComponent* WaterComponent)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.EnterWaterPlane"));
-
-	struct
-	{
-		class UBaseWaterComponent*     WaterComponent;
-	} params;
-
-	params.WaterComponent = WaterComponent;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Water.WaterInteractionComponent.EnterWaterExclusionZone
-// (Final, Native, Public, BlueprintCallable)
-
-void UWaterInteractionComponent::EnterWaterExclusionZone()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.EnterWaterExclusionZone"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Water.FFTWaterPerformanceCountService.EndScopePerformanceCount
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// struct FFFTWaterPerformanceCountData ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FFFTWaterPerformanceCountData AFFTWaterPerformanceCountService::EndScopePerformanceCount()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterPerformanceCountService.EndScopePerformanceCount"));
-
-	struct
-	{
-		struct FFFTWaterPerformanceCountData ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Water.FFTWaterPerformanceCountService.BeginScopePerformanceCount
-// (Final, Native, Public, BlueprintCallable)
-
-void AFFTWaterPerformanceCountService::BeginScopePerformanceCount()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterPerformanceCountService.BeginScopePerformanceCount"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Water.FlatWaterPlaneComponent.OnActorLeaveWaterPlane
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -999,6 +806,162 @@ void UWaterBuoyancySampleMovementFunctionLibrary::StartMovingVolumeSamplesLocall
 		*InSampleMovement = params.InSampleMovement;
 	if (NewSampleData != nullptr)
 		*NewSampleData = params.NewSampleData;
+}
+
+
+// Function Water.WaterInteractionComponent.LeaveWaterPlane
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UBaseWaterComponent*     WaterComponent                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWaterInteractionComponent::LeaveWaterPlane(class UBaseWaterComponent* WaterComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.LeaveWaterPlane"));
+
+	struct
+	{
+		class UBaseWaterComponent*     WaterComponent;
+	} params;
+
+	params.WaterComponent = WaterComponent;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Water.WaterInteractionComponent.LeaveWaterExclusionZone
+// (Final, Native, Public, BlueprintCallable)
+
+void UWaterInteractionComponent::LeaveWaterExclusionZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.LeaveWaterExclusionZone"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Water.WaterInteractionComponent.IsUsingNonDefaultWaterPlane
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWaterInteractionComponent::IsUsingNonDefaultWaterPlane()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.IsUsingNonDefaultWaterPlane"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Water.WaterInteractionComponent.IsInWaterExcludedZone
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWaterInteractionComponent::IsInWaterExcludedZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.IsInWaterExcludedZone"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Water.WaterInteractionComponent.GetWaterPlaneComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UBaseWaterComponent*     ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UBaseWaterComponent* UWaterInteractionComponent::GetWaterPlaneComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.GetWaterPlaneComponent"));
+
+	struct
+	{
+		class UBaseWaterComponent*     ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+unsigned char UWaterInteractionComponent::GetNumberOfWaterPlanes()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.GetNumberOfWaterPlanes"));
+
+	struct
+	{
+		unsigned char                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Water.WaterInteractionComponent.EnterWaterPlane
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UBaseWaterComponent*     WaterComponent                 (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UWaterInteractionComponent::EnterWaterPlane(class UBaseWaterComponent* WaterComponent)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.EnterWaterPlane"));
+
+	struct
+	{
+		class UBaseWaterComponent*     WaterComponent;
+	} params;
+
+	params.WaterComponent = WaterComponent;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Water.WaterInteractionComponent.EnterWaterExclusionZone
+// (Final, Native, Public, BlueprintCallable)
+
+void UWaterInteractionComponent::EnterWaterExclusionZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.EnterWaterExclusionZone"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

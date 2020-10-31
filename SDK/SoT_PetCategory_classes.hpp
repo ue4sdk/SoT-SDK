@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass PetCategory.PetCategory_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class UPetCategory_C : public UPetEntitlementCategory
 {
 public:

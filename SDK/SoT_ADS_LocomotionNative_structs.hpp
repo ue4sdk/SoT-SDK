@@ -16,10 +16,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimDataEntryStruct ADS_LocomotionNative.ADS_LocomotionNative
-// 0x0048
+// 0x0050
 struct FADS_LocomotionNative
 {
-	struct FAthenaAnimationLocomotionAnimData          Locomotion_29_A586B449410EBBDE851BBD991F7C6A63;           // 0x0000(0x0048) (Edit, BlueprintVisible)
+	struct FAthenaAnimationLocomotionAnimData          Locomotion_29_A586B449410EBBDE851BBD991F7C6A63;           // 0x0000(0x0050) (Edit, BlueprintVisible)
 };
 
 }

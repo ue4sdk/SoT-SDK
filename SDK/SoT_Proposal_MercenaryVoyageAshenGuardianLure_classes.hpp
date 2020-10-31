@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_MercenaryVoyageAshenGuardianLure.Proposal_MercenaryVoyageAshenGuardianLure_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0138 - 0x0138)
 class UProposal_MercenaryVoyageAshenGuardianLure_C : public UVoyageProposalDesc
 {
 public:

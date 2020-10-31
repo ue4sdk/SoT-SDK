@@ -66,10 +66,10 @@ struct FInputEvent
 };
 
 // ScriptStruct SlateCore.PointerEvent
-// 0x0058 (0x0080 - 0x0028)
+// 0x0060 (0x0088 - 0x0028)
 struct FPointerEvent : public FInputEvent
 {
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0028(0x0058) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0028(0x0060) MISSED OFFSET
 };
 
 // ScriptStruct SlateCore.Geometry

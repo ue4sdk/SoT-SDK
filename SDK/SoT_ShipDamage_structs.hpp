@@ -81,10 +81,11 @@ struct FDamageZoneDamageLevelChanged
 };
 
 // ScriptStruct ShipDamage.AppliedDamageToShipEvent
-// 0x0008
+// 0x0010
 struct FAppliedDamageToShipEvent
 {
 	class UClass*                                      ShipType;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      Ship;                                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

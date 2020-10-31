@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_BoilingWaterProjectile_NoSplash.BP_BoilingWaterProjectile_NoSplash_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_BoilingWaterProjectile_NoSplash_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BoilingWaterProjectile_NoSplash.BP_BoilingWaterProjectile_NoSplash_C.UserConstructionScript"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

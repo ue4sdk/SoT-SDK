@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass hulllivery_omen_01_CustomizationDesc.hulllivery_omen_01_CustomizationDesc_C
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x0108 - 0x0108)
 class Uhulllivery_omen_01_CustomizationDesc_C : public UShipCustomizationDesc
 {
 public:

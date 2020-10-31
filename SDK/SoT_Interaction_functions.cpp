@@ -448,26 +448,6 @@ bool UInteractableInterface::ShouldDrawTooltipInWorldSpace(class AActor* InInter
 }
 
 
-// Function Interaction.InteractableInterface.SetInteractionState
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TEnumAsByte<EInteractableState> InNewInteractableState         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void UInteractableInterface::SetInteractionState(TEnumAsByte<EInteractableState> InNewInteractableState)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.SetInteractionState"));
-
-	struct
-	{
-		TEnumAsByte<EInteractableState> InNewInteractableState;
-	} params;
-
-	params.InNewInteractableState = InNewInteractableState;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Interaction.InteractableInterface.IsInteractableDisabled
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
@@ -709,27 +689,6 @@ bool UInteractableInterface::CanInteractWithNotificationInputId(class AActor* In
 
 	params.InInteractor = InInteractor;
 	params.NotificationInputId = NotificationInputId;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function Interaction.InteractableInterface.CanInteractionStatesBeSet
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool UInteractableInterface::CanInteractionStatesBeSet()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.CanInteractionStatesBeSet"));
-
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
 
 	UObject::ProcessEvent(fn, &params);
 

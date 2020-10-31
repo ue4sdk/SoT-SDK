@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_GildedMercenary_AF_Voyage.Proposal_GildedMercenary_AF_Voyage_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0138 - 0x0138)
 class UProposal_GildedMercenary_AF_Voyage_C : public UVoyageProposalDesc
 {
 public:

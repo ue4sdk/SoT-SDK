@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Campaign022_GildedLegends_Proposal_Gilded_AF_Voyage.Campaign022_GildedLegends_Proposal_Gilded_AF_Voyage_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0138 - 0x0138)
 class UCampaign022_GildedLegends_Proposal_Gilded_AF_Voyage_C : public UVoyageProposalDesc
 {
 public:

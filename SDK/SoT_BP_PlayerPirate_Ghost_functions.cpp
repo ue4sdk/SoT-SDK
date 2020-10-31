@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.GetPxActorCapacityForPhysXAggregate
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+unsigned char ABP_PlayerPirate_Ghost_C::GetPxActorCapacityForPhysXAggregate()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.GetPxActorCapacityForPhysXAggregate"));
+
+	struct
+	{
+		unsigned char                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.GetAllMaterialParents
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
@@ -66,29 +87,20 @@ void ABP_PlayerPirate_Ghost_C::CheckBaseMaterial(class UMaterialInstance* Materi
 
 
 // Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.Set Up Ghost Materials
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class USkeletalMeshComponent*  Input_Mesh                     (Parm, ZeroConstructor, IsPlainOldData)
-// float                          Ghost_Fade_Parameter           (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           EnableDither                   (Parm, ZeroConstructor, IsPlainOldData)
-// bool                           FirstPersonMesh                (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_PlayerPirate_Ghost_C::Set_Up_Ghost_Materials(class USkeletalMeshComponent* Input_Mesh, float Ghost_Fade_Parameter, bool EnableDither, bool FirstPersonMesh)
+void ABP_PlayerPirate_Ghost_C::Set_Up_Ghost_Materials(class USkeletalMeshComponent* Input_Mesh)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PlayerPirate_Ghost.BP_PlayerPirate_Ghost_C.Set Up Ghost Materials"));
 
 	struct
 	{
 		class USkeletalMeshComponent*  Input_Mesh;
-		float                          Ghost_Fade_Parameter;
-		bool                           EnableDither;
-		bool                           FirstPersonMesh;
 	} params;
 
 	params.Input_Mesh = Input_Mesh;
-	params.Ghost_Fade_Parameter = Ghost_Fade_Parameter;
-	params.EnableDither = EnableDither;
-	params.FirstPersonMesh = FirstPersonMesh;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass flag_fortreaper_01_CustomizationDesc.flag_fortreaper_01_CustomizationDesc_C
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x0108 - 0x0108)
 class Uflag_fortreaper_01_CustomizationDesc_C : public UShipCustomizationDesc
 {
 public:

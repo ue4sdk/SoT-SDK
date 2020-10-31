@@ -66,6 +66,23 @@ public:
 };
 
 
+// Class RareAudio.AnimNotify_WwiseSoundMeshSwitch
+// 0x0018 (0x0060 - 0x0048)
+class UAnimNotify_WwiseSoundMeshSwitch : public UAnimNotify_WwiseSound
+{
+public:
+	struct FName                                       SkeletalMeshSwitchGroup;                                  // 0x0048(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FAnimNotify_SoundSwitch>             MeshOverrides;                                            // 0x0050(0x0010) (Edit, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.AnimNotify_WwiseSoundMeshSwitch"));
+		return ptr;
+	}
+
+};
+
+
 // Class RareAudio.AnimNotifyState_WwiseSound
 // 0x0060 (0x0088 - 0x0028)
 class UAnimNotifyState_WwiseSound : public UAnimNotifyState
@@ -85,11 +102,11 @@ public:
 
 
 // Class RareAudio.AudioEventToComponentMap
-// 0x0008 (0x0418 - 0x0410)
+// 0x0008 (0x0468 - 0x0460)
 class AAudioEventToComponentMap : public AActor
 {
 public:
-	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0410(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0460(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -149,6 +166,7 @@ public:
 	static bool WwiseGetGlobalRTPC(const struct FName& RTPCName, float* RTPCValue);
 	static bool WwiseEmitterWaitToComplete(const struct FWwiseEmitter& Emitter, int PlayId, class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo);
 	static bool WwiseEmitterStop(const struct FWwiseEmitter& Emitter, int PlayId, float FadeTime);
+	static bool WwiseEmitterSetSwitch(const struct FWwiseEmitter& Emitter, const struct FName& SwitchGroup, const struct FName& Value);
 	static bool WwiseEmitterSetRTPCOnAll(TArray<struct FWwiseEmitter> Emitters, const struct FName& Name, float Value);
 	static bool WwiseEmitterSetRTPC(const struct FWwiseEmitter& Emitter, const struct FName& Name, float Value);
 	static bool WwiseEmitterSetParams(const struct FWwiseEmitter& Emitter, const struct FWwiseEmitterParams& Params);
@@ -267,7 +285,7 @@ public:
 
 
 // Class RareAudio.AudioIslandStaticMeshAssociatorBase
-// 0x0000 (0x0410 - 0x0410)
+// 0x0000 (0x0460 - 0x0460)
 class AAudioIslandStaticMeshAssociatorBase : public AActor
 {
 public:
@@ -445,6 +463,22 @@ public:
 
 
 	void PopulateInstanceAssociations();
+};
+
+
+// Class RareAudio.WwiseObjectPoolWrapperMock
+// 0x0018 (0x0098 - 0x0080)
+class UWwiseObjectPoolWrapperMock : public UWwiseObjectPoolWrapper
+{
+public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0080(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseObjectPoolWrapperMock"));
+		return ptr;
+	}
+
 };
 
 

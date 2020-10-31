@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass sailslivery_ghost_01_v05_CustomizationDesc.sailslivery_ghost_01_v05_CustomizationDesc_C
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x0108 - 0x0108)
 class Usailslivery_ghost_01_v05_CustomizationDesc_C : public UShipCustomizationDesc
 {
 public:

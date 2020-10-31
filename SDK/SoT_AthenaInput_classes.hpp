@@ -189,6 +189,21 @@ public:
 };
 
 
+// Class AthenaInput.MockInputHandlerCharacter
+// 0x0000 (0x0660 - 0x0660)
+class AMockInputHandlerCharacter : public ACharacter
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaInput.MockInputHandlerCharacter"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaInput.NamedNotificationInputInterface
 // 0x0000 (0x0028 - 0x0028)
 class UNamedNotificationInputInterface : public UInterface

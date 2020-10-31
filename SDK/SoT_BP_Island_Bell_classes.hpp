@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Island_Bell.BP_Island_Bell_C
-// 0x0000 (0x0590 - 0x0590)
+// 0x0000 (0x05F8 - 0x05F8)
 class ABP_Island_Bell_C : public ABell
 {
 public:

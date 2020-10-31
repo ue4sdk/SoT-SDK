@@ -57,7 +57,7 @@ struct FInAppPurchaseRestoreInfo
 };
 
 // ScriptStruct OnlineSubsystem.OnlineStoreCatalogItem
-// 0x0080
+// 0x0090
 struct FOnlineStoreCatalogItem
 {
 	class FString                                      ProductId;                                                // 0x0000(0x0010) (ZeroConstructor)
@@ -69,7 +69,8 @@ struct FOnlineStoreCatalogItem
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0051(0x0007) MISSED OFFSET
 	struct FDateTime                                   SaleEndDate;                                              // 0x0058(0x0008) (ZeroConstructor)
 	class FString                                      ImageUri;                                                 // 0x0060(0x0010) (ZeroConstructor)
-	TArray<class FString>                              MetaTags;                                                 // 0x0070(0x0010) (ZeroConstructor)
+	class FString                                      CurrencyCode;                                             // 0x0070(0x0010) (ZeroConstructor)
+	TArray<class FString>                              MetaTags;                                                 // 0x0080(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct OnlineSubsystem.InAppPurchaseProductRequest

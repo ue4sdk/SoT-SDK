@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass sailslivery_mutiny_01_CutomizationDesc.sailslivery_mutiny_01_CutomizationDesc_C
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x0108 - 0x0108)
 class Usailslivery_mutiny_01_CutomizationDesc_C : public UShipCustomizationDesc
 {
 public:

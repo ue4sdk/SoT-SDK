@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_Devilfish_03_Colour_01_Ashen.BP_FishingFish_Devilfish_03_Colour_01_Ashen_C
-// 0x0000 (0x08F0 - 0x08F0)
+// 0x0000 (0x0950 - 0x0950)
 class ABP_FishingFish_Devilfish_03_Colour_01_Ashen_C : public ABP_FishingFish_Devilfish_03_C
 {
 public:

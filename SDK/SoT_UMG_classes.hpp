@@ -63,14 +63,15 @@ public:
 
 
 // Class UMG.MovieScene2DTransformSection
-// 0x0348 (0x0380 - 0x0038)
+// 0x0350 (0x03E8 - 0x0098)
 class UMovieScene2DTransformSection : public UMovieSceneSection
 {
 public:
-	struct FRichCurve                                  Translation[0x2];                                         // 0x0038(0x0078)
-	struct FRichCurve                                  Rotation;                                                 // 0x0128(0x0078)
-	struct FRichCurve                                  Scale[0x2];                                               // 0x01A0(0x0078)
-	struct FRichCurve                                  Shear[0x2];                                               // 0x0290(0x0078)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
+	struct FRichCurve                                  Translation[0x2];                                         // 0x00A0(0x0078)
+	struct FRichCurve                                  Rotation;                                                 // 0x0190(0x0078)
+	struct FRichCurve                                  Scale[0x2];                                               // 0x0208(0x0078)
+	struct FRichCurve                                  Shear[0x2];                                               // 0x02F8(0x0078)
 
 	static UClass* StaticClass()
 	{
@@ -82,7 +83,7 @@ public:
 
 
 // Class UMG.MovieScene2DTransformTrack
-// 0x0000 (0x0058 - 0x0058)
+// 0x0000 (0x00B0 - 0x00B0)
 class UMovieScene2DTransformTrack : public UMovieScenePropertyTrack
 {
 public:
@@ -97,14 +98,15 @@ public:
 
 
 // Class UMG.MovieSceneMarginSection
-// 0x01E0 (0x0218 - 0x0038)
+// 0x01E8 (0x0280 - 0x0098)
 class UMovieSceneMarginSection : public UMovieSceneSection
 {
 public:
-	struct FRichCurve                                  TopCurve;                                                 // 0x0038(0x0078)
-	struct FRichCurve                                  LeftCurve;                                                // 0x00B0(0x0078)
-	struct FRichCurve                                  RightCurve;                                               // 0x0128(0x0078)
-	struct FRichCurve                                  BottomCurve;                                              // 0x01A0(0x0078)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
+	struct FRichCurve                                  TopCurve;                                                 // 0x00A0(0x0078)
+	struct FRichCurve                                  LeftCurve;                                                // 0x0118(0x0078)
+	struct FRichCurve                                  RightCurve;                                               // 0x0190(0x0078)
+	struct FRichCurve                                  BottomCurve;                                              // 0x0208(0x0078)
 
 	static UClass* StaticClass()
 	{
@@ -116,7 +118,7 @@ public:
 
 
 // Class UMG.MovieSceneMarginTrack
-// 0x0000 (0x0058 - 0x0058)
+// 0x0000 (0x00B0 - 0x00B0)
 class UMovieSceneMarginTrack : public UMovieScenePropertyTrack
 {
 public:
@@ -124,6 +126,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.MovieSceneMarginTrack"));
+		return ptr;
+	}
+
+};
+
+
+// Class UMG.MovieSceneWidgetMaterialTrack
+// 0x0018 (0x00B0 - 0x0098)
+class UMovieSceneWidgetMaterialTrack : public UMovieSceneMaterialTrack
+{
+public:
+	TArray<struct FName>                               BrushPropertyNamePath;                                    // 0x0098(0x0010) (ZeroConstructor)
+	struct FName                                       TrackName;                                                // 0x00A8(0x0008) (ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class UMG.MovieSceneWidgetMaterialTrack"));
 		return ptr;
 	}
 
@@ -565,13 +584,13 @@ public:
 
 
 // Class UMG.UMGSequencePlayer
-// 0x00F0 (0x0118 - 0x0028)
+// 0x0600 (0x0628 - 0x0028)
 class UUMGSequencePlayer : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	class UWidgetAnimation*                            Animation;                                                // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xE0];                                      // 0x0038(0x00E0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x368];                                     // 0x0028(0x0368) MISSED OFFSET
+	class UWidgetAnimation*                            Animation;                                                // 0x0390(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x290];                                     // 0x0398(0x0290) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -2122,13 +2141,14 @@ public:
 
 
 // Class UMG.WidgetAnimation
-// 0x0160 (0x0188 - 0x0028)
+// 0x0038 (0x02E0 - 0x02A8)
 class UWidgetAnimation : public UMovieSceneSequence
 {
 public:
-	class UMovieScene*                                 MovieScene;                                               // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FWidgetAnimationBinding>             AnimationBindings;                                        // 0x0030(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x148];                                     // 0x0040(0x0148) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnAnimationStarted;                                       // 0x02A8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    OnAnimationFinished;                                      // 0x02B8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	class UMovieScene*                                 MovieScene;                                               // 0x02C8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<struct FWidgetAnimationBinding>             AnimationBindings;                                        // 0x02D0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

@@ -17,9 +17,10 @@ namespace SDK
 // Parameters:
 // struct FVector                 SoundPosition                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 ListenerPos                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          AttenuationScaler              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UWwiseEvent::IsAudible(const struct FVector& SoundPosition, const struct FVector& ListenerPos)
+bool UWwiseEvent::IsAudible(const struct FVector& SoundPosition, const struct FVector& ListenerPos, float AttenuationScaler)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.IsAudible"));
 
@@ -27,11 +28,13 @@ bool UWwiseEvent::IsAudible(const struct FVector& SoundPosition, const struct FV
 	{
 		struct FVector                 SoundPosition;
 		struct FVector                 ListenerPos;
+		float                          AttenuationScaler;
 		bool                           ReturnValue;
 	} params;
 
 	params.SoundPosition = SoundPosition;
 	params.ListenerPos = ListenerPos;
+	params.AttenuationScaler = AttenuationScaler;
 
 	UObject::ProcessEvent(fn, &params);
 

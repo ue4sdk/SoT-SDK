@@ -317,26 +317,6 @@ bool UBasePromptCoordinator::GetCompleted()
 }
 
 
-// Function PrioritisedPrompts.BasePromptCoordinator.FirePromptCompleted
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  AccessKey                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void UBasePromptCoordinator::FirePromptCompleted(class UClass* AccessKey)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.FirePromptCompleted"));
-
-	struct
-	{
-		class UClass*                  AccessKey;
-	} params;
-
-	params.AccessKey = AccessKey;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function PrioritisedPrompts.BasePromptCoordinator.EvaluatePromptDisplayState
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -371,6 +351,75 @@ void UBasePromptCoordinator::DismissAllPrompts()
 
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function PrioritisedPrompts.GetPromptsLocalService.GetPromptsLocalService
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UGetPromptsLocalService* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UGetPromptsLocalService* UGetPromptsLocalService::GetPromptsLocalService(class UObject* WorldContextObject)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.GetPromptsLocalService.GetPromptsLocalService"));
+
+	struct
+	{
+		class UObject*                 WorldContextObject;
+		class UGetPromptsLocalService* ReturnValue;
+	} params;
+
+	params.WorldContextObject = WorldContextObject;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function PrioritisedPrompts.PromptsLocalServiceInterface.IncrementCountForKey
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  AccessKey                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UPromptsLocalServiceInterface::IncrementCountForKey(class UClass* AccessKey)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.PromptsLocalServiceInterface.IncrementCountForKey"));
+
+	struct
+	{
+		class UClass*                  AccessKey;
+	} params;
+
+	params.AccessKey = AccessKey;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function PrioritisedPrompts.PromptsLocalServiceInterface.GetCountForKey
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass*                  AccessKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UPromptsLocalServiceInterface::GetCountForKey(class UClass* AccessKey)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.PromptsLocalServiceInterface.GetCountForKey"));
+
+	struct
+	{
+		class UClass*                  AccessKey;
+		int                            ReturnValue;
+	} params;
+
+	params.AccessKey = AccessKey;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 

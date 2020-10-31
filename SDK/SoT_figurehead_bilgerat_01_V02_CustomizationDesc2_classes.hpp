@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass figurehead_bilgerat_01_V02_CustomizationDesc2.figurehead_bilgerat_01_v02_CustomizationDesc2_C
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x0108 - 0x0108)
 class Ufigurehead_bilgerat_01_v02_CustomizationDesc2_C : public UShipCustomizationDesc
 {
 public:

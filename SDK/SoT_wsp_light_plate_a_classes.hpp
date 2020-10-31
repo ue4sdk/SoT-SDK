@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_light_plate_a.wsp_light_plate_a_C
-// 0x0008 (0x0428 - 0x0420)
+// 0x0008 (0x0478 - 0x0470)
 class Awsp_light_plate_a_C : public AStaticMeshActor
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem;                                           // 0x0420(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem;                                           // 0x0470(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

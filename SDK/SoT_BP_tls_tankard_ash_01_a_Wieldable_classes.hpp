@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_tankard_ash_01_a_Wieldable.BP_tls_tankard_ash_01_a_Wieldable_C
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x08B0 - 0x08B0)
 class ABP_tls_tankard_ash_01_a_Wieldable_C : public ABP_Tankard_C
 {
 public:

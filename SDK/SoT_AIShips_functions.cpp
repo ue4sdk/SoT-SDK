@@ -64,6 +64,29 @@ struct FAIShipEncounterBattleDesc UAIShipDebugFunctionLibrary::GenerateAIShipBat
 }
 
 
+// Function AIShips.AthenaAIShipController.ApplyControllerParams
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UAthenaAIControllerParamsDataAsset* ParamsAsset                    (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn*                   InPawn                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAIShipController::ApplyControllerParams(class UAthenaAIControllerParamsDataAsset* ParamsAsset, class APawn* InPawn)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AIShips.AthenaAIShipController.ApplyControllerParams"));
+
+	struct
+	{
+		class UAthenaAIControllerParamsDataAsset* ParamsAsset;
+		class APawn*                   InPawn;
+	} params;
+
+	params.ParamsAsset = ParamsAsset;
+	params.InPawn = InPawn;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AIShips.CursedCrewCustomisationInterface.SetCursedCrewCustomisationProperties
 // (Native, Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:

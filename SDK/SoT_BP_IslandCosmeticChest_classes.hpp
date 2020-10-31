@@ -15,10 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_IslandCosmeticChest.BP_IslandCosmeticChest_C
-// 0x0000 (0x05B0 - 0x05B0)
+// 0x0008 (0x0610 - 0x0608)
 class ABP_IslandCosmeticChest_C : public AShipCustomizationChest
 {
 public:
+	class UHarbourComponent*                           Harbour;                                                  // 0x0608(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

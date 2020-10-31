@@ -12,14 +12,15 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
-// Enum MovieSceneCapture.EMovieCaptureType
-enum class EMovieCaptureType : uint8_t
+// Enum MovieSceneCapture.EHDRCaptureGamut
+enum class EHDRCaptureGamut : uint8_t
 {
-	EMovieCaptureType__AVI         = 0,
-	EMovieCaptureType__BMP         = 1,
-	EMovieCaptureType__PNG         = 2,
-	EMovieCaptureType__JPEG        = 3,
-	EMovieCaptureType__EMovieCaptureType_MAX = 4
+	HCGM_Rec709                    = 0,
+	HCGM_P3DCI                     = 1,
+	HCGM_Rec2020                   = 2,
+	HCGM_ACES                      = 3,
+	HCGM_ACEScg                    = 4,
+	HCGM_MAX                       = 5
 };
 
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass figurehead_kraken_01_v02_CustomizationDesc.figurehead_kraken_01_v02_CustomizationDesc_C
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x0108 - 0x0108)
 class Ufigurehead_kraken_01_v02_CustomizationDesc_C : public UShipCustomizationDesc
 {
 public:

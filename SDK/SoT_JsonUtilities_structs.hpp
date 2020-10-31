@@ -44,7 +44,7 @@ struct FTestFloatObject
 // 0x0001
 struct FTestEnumObject
 {
-	TEnumAsByte<EJsonUtilities_ETestEnum>              TestEnum;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EJsonTestEnum>                         TestEnum;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct JsonUtilities.TestMessageTimespan

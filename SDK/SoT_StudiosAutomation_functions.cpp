@@ -862,6 +862,29 @@ void ATestLevelScriptActor::ClearPawnInputBindings(class UObject* WorldContextOb
 }
 
 
+// Function StudiosAutomation.TestLevelScriptActor.AddServerOnNewMap
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// class FString                  Name                           (Parm, ZeroConstructor)
+// class FString                  MapPath                        (Parm, ZeroConstructor)
+
+void ATestLevelScriptActor::AddServerOnNewMap(const class FString& Name, const class FString& MapPath)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.TestLevelScriptActor.AddServerOnNewMap"));
+
+	struct
+	{
+		class FString                  Name;
+		class FString                  MapPath;
+	} params;
+
+	params.Name = Name;
+	params.MapPath = MapPath;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function StudiosAutomation.TestLevelScriptActor.AddServer
 // (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable, Const)
 // Parameters:
@@ -906,7 +929,7 @@ void ATestLevelScriptActor::AddClient(int Port, const class FString& Name)
 
 
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.TestFinished
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                 ContextObject                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1011,7 +1034,7 @@ void UAutomationBlueprintFunctionLibrary::TakeAutomationScreenshot(class UObject
 
 
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.StepStarted
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class FString                  StepName                       (Parm, ZeroConstructor)
 
@@ -1032,7 +1055,7 @@ void UAutomationBlueprintFunctionLibrary::StepStarted(const class FString& StepN
 
 
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.StepFinished
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 
 void UAutomationBlueprintFunctionLibrary::StepFinished()
 {
@@ -1069,6 +1092,23 @@ void UAutomationBlueprintFunctionLibrary::SetTestTimeoutAsFatal(bool TimeoutIsFa
 }
 
 
+// Function StudiosAutomation.AutomationBlueprintFunctionLibrary.PreventGarbageCollection
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UAutomationBlueprintFunctionLibrary::PreventGarbageCollection()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.PreventGarbageCollection"));
+
+	struct
+	{
+	} params;
+
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.OpenLevelWithGameMode
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1099,6 +1139,23 @@ void UAutomationBlueprintFunctionLibrary::OpenLevelWithGameMode(class UObject* W
 }
 
 
+// Function StudiosAutomation.AutomationBlueprintFunctionLibrary.LogPlatformMemoryStats
+// (Final, Native, Static, Public, BlueprintCallable)
+
+void UAutomationBlueprintFunctionLibrary::LogPlatformMemoryStats()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.LogPlatformMemoryStats"));
+
+	struct
+	{
+	} params;
+
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsTravelFinished
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -1116,6 +1173,31 @@ bool UAutomationBlueprintFunctionLibrary::IsTravelFinished(class UObject* WorldC
 	} params;
 
 	params.WorldContextObject = WorldContextObject;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsFeatureToggleEnabled
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FName                   FeatureToggleName              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UAutomationBlueprintFunctionLibrary::IsFeatureToggleEnabled(const struct FName& FeatureToggleName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function StudiosAutomation.AutomationBlueprintFunctionLibrary.IsFeatureToggleEnabled"));
+
+	struct
+	{
+		struct FName                   FeatureToggleName;
+		bool                           ReturnValue;
+	} params;
+
+	params.FeatureToggleName = FeatureToggleName;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -1266,7 +1348,7 @@ class FString UAutomationBlueprintFunctionLibrary::GetCurrentMapTestName()
 
 
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.EndPerformanceCapture
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // bool                           DumpMemReport                  (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -1424,7 +1506,7 @@ void UAutomationBlueprintFunctionLibrary::BlockAsyncLoading(bool EnableBlock)
 
 
 // Function StudiosAutomation.AutomationBlueprintFunctionLibrary.BeginPerformanceCapture
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class FString                  FolderName                     (Parm, ZeroConstructor)
 // bool                           DumpMemReport                  (Parm, ZeroConstructor, IsPlainOldData)

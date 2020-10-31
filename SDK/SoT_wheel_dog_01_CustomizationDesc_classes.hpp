@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wheel_dog_01_CustomizationDesc.wheel_dog_01_CustomizationDesc_C
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x0108 - 0x0108)
 class Uwheel_dog_01_CustomizationDesc_C : public UShipCustomizationDesc
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_GoldMercenaryVoyages_OnDemandRitualSkull.Proposal_GoldMercenaryVoyages_OnDemandRitualSkull_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0138 - 0x0138)
 class UProposal_GoldMercenaryVoyages_OnDemandRitualSkull_C : public UVoyageProposalDesc
 {
 public:

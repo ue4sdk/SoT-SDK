@@ -12,6 +12,17 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum Sessions.ESessionGrouping
+enum class ESessionGrouping : uint8_t
+{
+	ESessionGrouping__Invalid      = 0,
+	ESessionGrouping__Default      = 1,
+	ESessionGrouping__MediumLargeShip = 2,
+	ESessionGrouping__Max          = 3,
+	ESessionGrouping__ESessionGrouping_MAX = 4
+};
+
+
 // Enum Sessions.ECrewSessionType
 enum class ECrewSessionType : uint8_t
 {
@@ -21,7 +32,8 @@ enum class ECrewSessionType : uint8_t
 	ECrewSessionType__LargeShip    = 3,
 	ECrewSessionType__ServerLarge  = 4,
 	ECrewSessionType__SloopSolo    = 5,
-	ECrewSessionType__ECrewSessionType_MAX = 6
+	ECrewSessionType__Lobby        = 6,
+	ECrewSessionType__ECrewSessionType_MAX = 7
 };
 
 
@@ -32,6 +44,17 @@ enum class ESessionVisibility : uint8_t
 	ESessionVisibility__Open       = 1,
 	ESessionVisibility__Closed     = 2,
 	ESessionVisibility__ESessionVisibility_MAX = 3
+};
+
+
+// Enum Sessions.ECrewSessionQoSServerResolveResult
+enum class ECrewSessionQoSServerResolveResult : uint8_t
+{
+	ECrewSessionQoSServerResolveResult__Success = 0,
+	ECrewSessionQoSServerResolveResult__InvalidLocation = 1,
+	ECrewSessionQoSServerResolveResult__TimedOut = 2,
+	ECrewSessionQoSServerResolveResult__Failed = 3,
+	ECrewSessionQoSServerResolveResult__ECrewSessionQoSServerResolveResult_MAX = 4
 };
 
 

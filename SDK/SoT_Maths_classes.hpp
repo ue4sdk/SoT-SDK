@@ -195,6 +195,23 @@ public:
 };
 
 
+// Class Maths.OrientedPointBlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UOrientedPointBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Maths.OrientedPointBlueprintFunctionLibrary"));
+		return ptr;
+	}
+
+
+	static struct FTransform GetPointAsTransform(const struct FOrientedPoint& Point);
+};
+
+
 // Class Maths.PoissonDiscSampling
 // 0x0000 (0x0028 - 0x0028)
 class UPoissonDiscSampling : public UBlueprintFunctionLibrary
@@ -247,6 +264,7 @@ public:
 
 	static struct FTransform TransformAroundArbitraryPivot(const struct FTransform& TargetTransform, const struct FTransform& BaseTransform, const struct FTransform& TransformToApply, bool LockFinalOrientation);
 	static struct FQuat RotatorToQuat(const struct FRotator& Rotation);
+	static bool AreRotatorsTheSameRotation(const struct FRotator& Rotator1, const struct FRotator& Rotator2, float ErrorTolerance);
 };
 
 

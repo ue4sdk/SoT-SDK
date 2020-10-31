@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Drum.BP_Drum_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x08D0 - 0x08D0)
 class ABP_Drum_C : public AMusicalInstrumentStaticMesh
 {
 public:

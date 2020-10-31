@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass cannon_parrot_01_v02_CustomizationDesc.cannon_parrot_01_v02_CustomizationDesc_C
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x0108 - 0x0108)
 class Ucannon_parrot_01_v02_CustomizationDesc_C : public UShipCustomizationDesc
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_MercenaryVoyageKeySeekerWSP.Proposal_MercenaryVoyageKeySeekerWSP_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0138 - 0x0138)
 class UProposal_MercenaryVoyageKeySeekerWSP_C : public UVoyageProposalDesc
 {
 public:

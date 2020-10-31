@@ -10,6 +10,26 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// Class AnimGraphRuntime.AnimSequencerInstance
+// 0x01A0 (0x05E0 - 0x0440)
+class UAnimSequencerInstance : public UAnimInstance
+{
+public:
+	unsigned char                                      UnknownData00[0x1A0];                                     // 0x0440(0x01A0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AnimGraphRuntime.AnimSequencerInstance"));
+		return ptr;
+	}
+
+};
+
+
 }
 
 #ifdef _MSC_VER

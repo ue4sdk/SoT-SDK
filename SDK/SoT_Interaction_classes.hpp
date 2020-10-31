@@ -52,13 +52,29 @@ public:
 };
 
 
+// Class Interaction.InteractionValidatorSetterInterface
+// 0x0000 (0x0028 - 0x0028)
+class UInteractionValidatorSetterInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.InteractionValidatorSetterInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class Interaction.CharacterInteractionComponent
 // 0x00C0 (0x0660 - 0x05A0)
 class UCharacterInteractionComponent : public UBoxComponent
 {
 public:
-	class UInteractableArea*                           CurrentOptimalInteractable;                               // 0x05A0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xB8];                                      // 0x05A8(0x00B8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05A0(0x0008) MISSED OFFSET
+	class UInteractableArea*                           CurrentOptimalInteractable;                               // 0x05A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB0];                                      // 0x05B0(0x00B0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -133,7 +149,6 @@ public:
 
 
 	bool ShouldDrawTooltipInWorldSpace(class AActor* InInteractor, struct FVector* DesiredTooltipWorldPosition);
-	void SetInteractionState(TEnumAsByte<EInteractableState> InNewInteractableState);
 	bool IsInteractableDisabled();
 	void Interact(class AActor* InInteractor, class UClass* NotificationInputId);
 	TEnumAsByte<EInteractableState> GetInteractionState();
@@ -145,8 +160,22 @@ public:
 	bool DoesRequireNotBeingAirborne();
 	bool DoesRequireFacingFront();
 	bool CanInteractWithNotificationInputId(class AActor* InInteractor, class UClass* NotificationInputId);
-	bool CanInteractionStatesBeSet();
 	bool CanInteract(class AActor* InInteractor);
+};
+
+
+// Class Interaction.InteractableIdentifierInterface
+// 0x0000 (0x0028 - 0x0028)
+class UInteractableIdentifierInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.InteractableIdentifierInterface"));
+		return ptr;
+	}
+
 };
 
 
@@ -183,6 +212,21 @@ public:
 };
 
 
+// Class Interaction.InteractionValidatorOwnerInterface
+// 0x0000 (0x0028 - 0x0028)
+class UInteractionValidatorOwnerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.InteractionValidatorOwnerInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class Interaction.InteractorInterface
 // 0x0000 (0x0028 - 0x0028)
 class UInteractorInterface : public UInterface
@@ -199,13 +243,13 @@ public:
 
 
 // Class Interaction.MockActorWithCharacterInteractionComponent
-// 0x00B0 (0x04C0 - 0x0410)
-class AMockActorWithCharacterInteractionComponent : public AActor
+// 0x00B0 (0x0710 - 0x0660)
+class AMockActorWithCharacterInteractionComponent : public ACharacter
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0410(0x0008) MISSED OFFSET
-	class UCharacterInteractionComponent*              CharacterInteractionComponent;                            // 0x0418(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x0420(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0660(0x0008) MISSED OFFSET
+	class UCharacterInteractionComponent*              CharacterInteractionComponent;                            // 0x0668(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x0670(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -233,19 +277,34 @@ public:
 
 
 // Class Interaction.MockInteractorActor
-// 0x0028 (0x0438 - 0x0410)
+// 0x0028 (0x0488 - 0x0460)
 class AMockInteractorActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0410(0x0008) MISSED OFFSET
-	class UObject*                                     FocusedInteractable;                                      // 0x0418(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UObject*                                     InteractedObject;                                         // 0x0420(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      InteractNotificationType;                                 // 0x0428(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0460(0x0008) MISSED OFFSET
+	class UObject*                                     FocusedInteractable;                                      // 0x0468(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UObject*                                     InteractedObject;                                         // 0x0470(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      InteractNotificationType;                                 // 0x0478(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0480(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.MockInteractorActor"));
+		return ptr;
+	}
+
+};
+
+
+// Class Interaction.SelfInteractionInterface
+// 0x0000 (0x0028 - 0x0028)
+class USelfInteractionInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Interaction.SelfInteractionInterface"));
 		return ptr;
 	}
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AllIslandsWashedUpAshenGiftSpawner.BP_AllIslandsWashedUpAshenGiftSpawner_C
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x0550 - 0x0550)
 class UBP_AllIslandsWashedUpAshenGiftSpawner_C : public USalvageItemSpawnComponent
 {
 public:

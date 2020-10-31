@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass figurehead_highwayman_01_CustomizationDesc.figurehead_highwayman_01_CustomizationDesc_C
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x0108 - 0x0108)
 class Ufigurehead_highwayman_01_CustomizationDesc_C : public UShipCustomizationDesc
 {
 public:

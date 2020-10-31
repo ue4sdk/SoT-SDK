@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_MercenaryVoyages_DarkRelicTipOff_Voyage_WSP.Proposal_MercenaryVoyages_DarkRelicTipOff_Voyage_WSP_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0138 - 0x0138)
 class UProposal_MercenaryVoyages_DarkRelicTipOff_Voyage_WSP_C : public UVoyageProposalDesc
 {
 public:

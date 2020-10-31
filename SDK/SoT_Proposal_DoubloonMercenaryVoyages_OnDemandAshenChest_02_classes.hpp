@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_DoubloonMercenaryVoyages_OnDemandAshenChest_02.Proposal_DoubloonMercenaryVoyages_OnDemandAshenChest_02_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0138 - 0x0138)
 class UProposal_DoubloonMercenaryVoyages_OnDemandAshenChest_02_C : public UVoyageProposalDesc
 {
 public:

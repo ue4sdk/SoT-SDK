@@ -44,9 +44,10 @@ class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::GetRenderTo
 // class UClass*                  ClassToSpawn                   (Parm, ZeroConstructor, IsPlainOldData)
 // struct FIntPoint               Resolution                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bForceLinearGamma              (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           bCaptureAlpha                  (Parm, ZeroConstructor, IsPlainOldData)
 // class URenderToTextureSceneDetails* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::CreateRenderToTexture(const struct FName& Identifier, class UClass* ClassToSpawn, const struct FIntPoint& Resolution, bool bForceLinearGamma)
+class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::CreateRenderToTexture(const struct FName& Identifier, class UClass* ClassToSpawn, const struct FIntPoint& Resolution, bool bForceLinearGamma, bool bCaptureAlpha)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureFunctionLibrary.CreateRenderToTexture"));
 
@@ -56,6 +57,7 @@ class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::CreateRende
 		class UClass*                  ClassToSpawn;
 		struct FIntPoint               Resolution;
 		bool                           bForceLinearGamma;
+		bool                           bCaptureAlpha;
 		class URenderToTextureSceneDetails* ReturnValue;
 	} params;
 
@@ -63,6 +65,7 @@ class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::CreateRende
 	params.ClassToSpawn = ClassToSpawn;
 	params.Resolution = Resolution;
 	params.bForceLinearGamma = bForceLinearGamma;
+	params.bCaptureAlpha = bCaptureAlpha;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);

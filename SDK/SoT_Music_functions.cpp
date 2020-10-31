@@ -73,6 +73,42 @@ void UMusicZoneComponent::DisableZone()
 }
 
 
+// Function Music.MusicZoneComponent.Client_StopMusicAndDisableZone
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+
+void UMusicZoneComponent::Client_StopMusicAndDisableZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.Client_StopMusicAndDisableZone"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Music.MusicZoneComponent.Client_PlayOneShot
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// int                            Index                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UMusicZoneComponent::Client_PlayOneShot(int Index)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.Client_PlayOneShot"));
+
+	struct
+	{
+		int                            Index;
+	} params;
+
+	params.Index = Index;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Music.MusicZoneComponent.ActivateZone
 // (Final, Native, Public, BlueprintCallable)
 

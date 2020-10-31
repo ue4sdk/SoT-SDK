@@ -10,6 +10,7 @@
 #include "SoT_LiquidContainer_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Interaction_classes.hpp"
 
 namespace SDK
 {

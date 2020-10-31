@@ -125,7 +125,7 @@ int UGameServiceMapFunctions::GetNumServices(struct FGameServiceMap* ServiceMap)
 
 
 // Function GameService.GameServiceProviderInterface.UnregisterService
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                 Service                        (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -145,7 +145,7 @@ void UGameServiceProviderInterface::UnregisterService(class UObject* Service)
 
 
 // Function GameService.GameServiceProviderInterface.RegisterService
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                 Service                        (Parm, ZeroConstructor, IsPlainOldData)
 // class UClass*                  Class                          (Parm, ZeroConstructor, IsPlainOldData)
@@ -168,7 +168,7 @@ void UGameServiceProviderInterface::RegisterService(class UObject* Service, clas
 
 
 // Function GameService.GameServiceProviderInterface.GetService
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent)
+// (Native, Public, BlueprintCallable)
 // Parameters:
 // class UClass*                  Class                          (Parm, ZeroConstructor, IsPlainOldData)
 // class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)

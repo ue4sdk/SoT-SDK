@@ -27,14 +27,6 @@ struct FWaterInformation
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
 };
 
-// ScriptStruct Water.FFTWaterPerformanceCountData
-// 0x0008
-struct FFFTWaterPerformanceCountData
-{
-	int                                                WaterHeightQueryCallCount;                                // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	int                                                WaterInformationQueryCallCount;                           // 0x0004(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Water.BuoyancyVolumeSample
 // 0x0058
 struct FBuoyancyVolumeSample

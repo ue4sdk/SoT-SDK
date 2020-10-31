@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SmallShipLadder.BP_SmallShipLadder_C
-// 0x0028 (0x0618 - 0x05F0)
+// 0x0028 (0x0678 - 0x0650)
 class ABP_SmallShipLadder_C : public ALadder
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x05F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FVector>                             OffTopSplineComponentPositions;                           // 0x05F8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                             OnTopSplineComponentPositions;                            // 0x0608(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	class UInteractableComponent*                      Interactable;                                             // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<struct FVector>                             OffTopSplineComponentPositions;                           // 0x0658(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             OnTopSplineComponentPositions;                            // 0x0668(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

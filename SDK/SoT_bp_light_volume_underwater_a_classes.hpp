@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass bp_light_volume_underwater_a.bp_light_volume_underwater_a_C
-// 0x0010 (0x0420 - 0x0410)
+// 0x0010 (0x0470 - 0x0460)
 class Abp_light_volume_underwater_a_C : public AActor
 {
 public:
-	class UBillboardComponent*                         Billboard;                                                // 0x0410(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMeshComponent0;                                     // 0x0418(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBillboardComponent*                         Billboard;                                                // 0x0460(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMeshComponent0;                                     // 0x0468(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

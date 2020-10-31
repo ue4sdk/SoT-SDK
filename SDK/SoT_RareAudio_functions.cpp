@@ -535,6 +535,37 @@ bool UWwiseEmitterBlueprintLibrary::WwiseEmitterStop(const struct FWwiseEmitter&
 }
 
 
+// Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetSwitch
+// (Final, BlueprintCosmetic, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FWwiseEmitter           Emitter                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FName                   SwitchGroup                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FName                   Value                          (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWwiseEmitterBlueprintLibrary::WwiseEmitterSetSwitch(const struct FWwiseEmitter& Emitter, const struct FName& SwitchGroup, const struct FName& Value)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetSwitch"));
+
+	struct
+	{
+		struct FWwiseEmitter           Emitter;
+		struct FName                   SwitchGroup;
+		struct FName                   Value;
+		bool                           ReturnValue;
+	} params;
+
+	params.Emitter = Emitter;
+	params.SwitchGroup = SwitchGroup;
+	params.Value = Value;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function RareAudio.WwiseEmitterBlueprintLibrary.WwiseEmitterSetRTPCOnAll
 // (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable)
 // Parameters:

@@ -480,14 +480,14 @@ struct FKrakenShipWrappingBehaviourShakeAttackParams
 };
 
 // ScriptStruct Kraken.KrakenShipWrappingBehaviourHeavyAttackParams
-// 0x00A0
+// 0x00D8
 struct FKrakenShipWrappingBehaviourHeavyAttackParams
 {
 	struct FWeightedProbabilityRangeOfRanges           AttackDuration;                                           // 0x0000(0x0030) (Edit, DisableEditOnInstance)
 	float                                              ChanceOfEnteringHeavyAttack;                              // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FKnockBackInfo                              ExteriorKnockbackParams;                                  // 0x0034(0x0034) (Edit, DisableEditOnInstance)
-	struct FKnockBackInfo                              InteriorKnockbackParams;                                  // 0x0068(0x0034) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+	struct FKnockBackInfo                              ExteriorKnockbackParams;                                  // 0x0034(0x0050) (Edit, DisableEditOnInstance)
+	struct FKnockBackInfo                              InteriorKnockbackParams;                                  // 0x0084(0x0050) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00D4(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Kraken.KrakenShipWrappingBehaviourDamageParams
@@ -511,7 +511,7 @@ struct FKrakenShipWrappingBehaviourHealthParams
 };
 
 // ScriptStruct Kraken.KrakenShipWrappingBehaviourParams
-// 0x03F0
+// 0x0420
 struct FKrakenShipWrappingBehaviourParams
 {
 	class UClass*                                      ShipSize;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -520,10 +520,9 @@ struct FKrakenShipWrappingBehaviourParams
 	struct FKrakenShipWrappingBehaviourWrapParams      WrapParams;                                               // 0x00B0(0x0140) (Edit, DisableEditOnInstance)
 	struct FKrakenShipWrappingBehaviourTentacleHeadParams TentacleHeadParams;                                       // 0x01F0(0x0048) (Edit, DisableEditOnInstance)
 	struct FKrakenShipWrappingBehaviourShakeAttackParams ShakeAttackParams;                                        // 0x0238(0x0068) (Edit, DisableEditOnInstance)
-	struct FKrakenShipWrappingBehaviourHeavyAttackParams HeavyAttackParams;                                        // 0x02A0(0x00A0) (Edit, DisableEditOnInstance)
-	struct FKrakenShipWrappingBehaviourDamageParams    DamageParams;                                             // 0x0340(0x0070) (Edit, DisableEditOnInstance)
-	struct FKrakenShipWrappingBehaviourHealthParams    HealthParams;                                             // 0x03B0(0x0038) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x03E8(0x0008) MISSED OFFSET
+	struct FKrakenShipWrappingBehaviourHeavyAttackParams HeavyAttackParams;                                        // 0x02A0(0x00D8) (Edit, DisableEditOnInstance)
+	struct FKrakenShipWrappingBehaviourDamageParams    DamageParams;                                             // 0x0378(0x0070) (Edit, DisableEditOnInstance)
+	struct FKrakenShipWrappingBehaviourHealthParams    HealthParams;                                             // 0x03E8(0x0038) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct Kraken.KrakenWorldSettingsParams

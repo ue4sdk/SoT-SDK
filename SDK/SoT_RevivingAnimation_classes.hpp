@@ -31,11 +31,11 @@ public:
 
 
 // Class RevivingAnimation.ReviveGhostAnimationDataAsset
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UReviveGhostAnimationDataAsset : public UDataAsset
 {
 public:
-	struct FReviveGhostAnimations                      Animations;                                               // 0x0028(0x0020) (Edit, DisableEditOnInstance)
+	struct FReviveGhostAnimations                      Animations;                                               // 0x0028(0x0028) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -47,14 +47,16 @@ public:
 
 
 // Class RevivingAnimation.ReviveGhostAnimationInstance
-// 0x0030 (0x0470 - 0x0440)
+// 0x0050 (0x0490 - 0x0440)
 class UReviveGhostAnimationInstance : public UAnimInstance
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0440(0x0008) MISSED OFFSET
-	struct FReviveGhostAnimations                      ReviveAnimations;                                         // 0x0448(0x0020) (BlueprintVisible, BlueprintReadOnly)
-	bool                                               AnimationsLoaded;                                         // 0x0468(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x0469(0x0007) MISSED OFFSET
+	struct FReviveGhostAnimations                      ReviveAnimations;                                         // 0x0448(0x0028) (BlueprintVisible, BlueprintReadOnly)
+	bool                                               FullyInitialised;                                         // 0x0470(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	bool                                               FullyRevived;                                             // 0x0471(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	bool                                               FromSwimming;                                             // 0x0472(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1D];                                      // 0x0473(0x001D) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

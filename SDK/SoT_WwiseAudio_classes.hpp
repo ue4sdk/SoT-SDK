@@ -14,8 +14,121 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class WwiseAudio.WwiseEvent
+// 0x0028 (0x0050 - 0x0028)
+class UWwiseEvent : public UObject
+{
+public:
+	class UWwiseBank*                                  RequiredBank;                                             // 0x0028(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool                                               WaitForBankToLoad;                                        // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
+	uint32_t                                           WwiseId;                                                  // 0x0034(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	float                                              DurationMin;                                              // 0x0038(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	float                                              DurationMax;                                              // 0x003C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	float                                              MaxAttenuation;                                           // 0x0040(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	TEnumAsByte<EWwiseEventDurationType>               DurationType;                                             // 0x0044(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	bool                                               CookedIsStopEvent;                                        // 0x0045(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA];                                       // 0x0046(0x000A) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.WwiseEvent"));
+		return ptr;
+	}
+
+
+	bool IsAudible(const struct FVector& SoundPosition, const struct FVector& ListenerPos, float AttenuationScaler);
+	float GetMaxAttenuation();
+	TEnumAsByte<EWwiseEventDurationType> GetDurationType();
+	float GetDurationMin();
+	float GetDurationMax();
+};
+
+
+// Class WwiseAudio.MovieSceneAkAudioEventSection
+// 0x0008 (0x00A0 - 0x0098)
+class UMovieSceneAkAudioEventSection : public UMovieSceneSection
+{
+public:
+	class UWwiseEvent*                                 Event;                                                    // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.MovieSceneAkAudioEventSection"));
+		return ptr;
+	}
+
+};
+
+
+// Class WwiseAudio.MovieSceneAkAudioRTPCSection
+// 0x0090 (0x0128 - 0x0098)
+class UMovieSceneAkAudioRTPCSection : public UMovieSceneSection
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
+	class FString                                      Name;                                                     // 0x00A0(0x0010) (Edit, ZeroConstructor)
+	struct FRichCurve                                  FloatCurve;                                               // 0x00B0(0x0078)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.MovieSceneAkAudioRTPCSection"));
+		return ptr;
+	}
+
+};
+
+
+// Class WwiseAudio.MovieSceneAkTrack
+// 0x0018 (0x00A0 - 0x0088)
+class UMovieSceneAkTrack : public UMovieSceneTrack
+{
+public:
+	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	unsigned char                                      bIsAMasterTrack : 1;                                      // 0x0098(0x0001)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.MovieSceneAkTrack"));
+		return ptr;
+	}
+
+};
+
+
+// Class WwiseAudio.MovieSceneAkAudioEventTrack
+// 0x0000 (0x00A0 - 0x00A0)
+class UMovieSceneAkAudioEventTrack : public UMovieSceneAkTrack
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.MovieSceneAkAudioEventTrack"));
+		return ptr;
+	}
+
+};
+
+
+// Class WwiseAudio.MovieSceneAkAudioRTPCTrack
+// 0x0000 (0x00A0 - 0x00A0)
+class UMovieSceneAkAudioRTPCTrack : public UMovieSceneAkTrack
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.MovieSceneAkAudioRTPCTrack"));
+		return ptr;
+	}
+
+};
+
+
 // Class WwiseAudio.WwiseAudioSettings
-// 0x02A0 (0x02C8 - 0x0028)
+// 0x02C8 (0x02F0 - 0x0028)
 class UWwiseAudioSettings : public UObject
 {
 public:
@@ -26,25 +139,28 @@ public:
 	struct FStringAssetReference                       InitBank;                                                 // 0x00D8(0x0010) (Edit, ZeroConstructor, Config)
 	struct FDirectoryPath                              WwiseSoundbanksRoot;                                      // 0x00E8(0x0010) (Edit, Config)
 	struct FDirectoryPath                              WwiseStreamedFilesDirectory;                              // 0x00F8(0x0010) (Edit, Config)
-	TArray<struct FWwiseIOPriorityMappingConfig>       AsyncIOPriorityMappings;                                  // 0x0108(0x0010) (Edit, ZeroConstructor, Config)
-	struct FDirectoryPath                              TritonAcousticMapsDirectory;                              // 0x0118(0x0010) (Edit, Config)
-	class FString                                      DefaultLanguage;                                          // 0x0128(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      SinkSharesetName;                                         // 0x0138(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       PauseEventStart;                                          // 0x0148(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       PauseEventRelease;                                        // 0x0158(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       StopAllEvent;                                             // 0x0168(0x0010) (Edit, ZeroConstructor, Config)
-	struct FWwiseNetworkRelationship                   NetworkRelationship;                                      // 0x0178(0x0018) (Edit, Config)
-	struct FWwiseAudioGameStateSettings                AudioStateSettings;                                       // 0x0190(0x0080) (Edit, Config)
-	class UWwiseEvent*                                 PauseEventStartInstance;                                  // 0x0210(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UWwiseEvent*                                 PauseEventReleaseInstance;                                // 0x0218(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UWwiseEvent*                                 StopAllEventInstance;                                     // 0x0220(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x40];                                      // 0x0228(0x0040) MISSED OFFSET
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendStartInstance;                      // 0x0268(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendEndInstance;                        // 0x0278(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingStartInstance;                       // 0x0288(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingEndInstance;                         // 0x0298(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingStartInstance;             // 0x02A8(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingEndInstance;               // 0x02B8(0x0010) (ZeroConstructor, Transient)
+	struct FDirectoryPath                              NonShippingWwiseStreamedFilesDirectory;                   // 0x0108(0x0010) (Edit, Config)
+	TArray<struct FWwiseIOPriorityMappingConfig>       AsyncIOPriorityMappings;                                  // 0x0118(0x0010) (Edit, ZeroConstructor, Config)
+	struct FDirectoryPath                              TritonAcousticMapsDirectory;                              // 0x0128(0x0010) (Edit, Config)
+	class FString                                      DefaultLanguage;                                          // 0x0138(0x0010) (Edit, ZeroConstructor, Config)
+	class FString                                      SinkSharesetName;                                         // 0x0148(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       PauseEventStart;                                          // 0x0158(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       PauseEventRelease;                                        // 0x0168(0x0010) (Edit, ZeroConstructor, Config)
+	struct FStringAssetReference                       StopAllEvent;                                             // 0x0178(0x0010) (Edit, ZeroConstructor, Config)
+	struct FWwiseNetworkRelationship                   NetworkRelationship;                                      // 0x0188(0x0018) (Edit, Config)
+	struct FWwiseAudioGameStateSettings                AudioStateSettings;                                       // 0x01A0(0x0080) (Edit, Config)
+	uint32_t                                           WaapiInterpreterPort;                                     // 0x0220(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0224(0x0004) MISSED OFFSET
+	class UWwiseEvent*                                 PauseEventStartInstance;                                  // 0x0228(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UWwiseEvent*                                 PauseEventReleaseInstance;                                // 0x0230(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UWwiseEvent*                                 StopAllEventInstance;                                     // 0x0238(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x50];                                      // 0x0240(0x0050) MISSED OFFSET
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendStartInstance;                      // 0x0290(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendEndInstance;                        // 0x02A0(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingStartInstance;                       // 0x02B0(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingEndInstance;                         // 0x02C0(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingStartInstance;             // 0x02D0(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingEndInstance;               // 0x02E0(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{
@@ -132,37 +248,6 @@ public:
 		return ptr;
 	}
 
-};
-
-
-// Class WwiseAudio.WwiseEvent
-// 0x0028 (0x0050 - 0x0028)
-class UWwiseEvent : public UObject
-{
-public:
-	class UWwiseBank*                                  RequiredBank;                                             // 0x0028(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               WaitForBankToLoad;                                        // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
-	uint32_t                                           WwiseId;                                                  // 0x0034(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	float                                              DurationMin;                                              // 0x0038(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	float                                              DurationMax;                                              // 0x003C(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	float                                              MaxAttenuation;                                           // 0x0040(0x0004) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	TEnumAsByte<EWwiseEventDurationType>               DurationType;                                             // 0x0044(0x0001) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	bool                                               CookedIsStopEvent;                                        // 0x0045(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA];                                       // 0x0046(0x000A) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.WwiseEvent"));
-		return ptr;
-	}
-
-
-	bool IsAudible(const struct FVector& SoundPosition, const struct FVector& ListenerPos);
-	float GetMaxAttenuation();
-	TEnumAsByte<EWwiseEventDurationType> GetDurationType();
-	float GetDurationMin();
-	float GetDurationMax();
 };
 
 

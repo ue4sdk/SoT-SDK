@@ -32,7 +32,7 @@ public:
 
 
 // Class Music.MusicZoneComponent
-// 0x00A0 (0x0330 - 0x0290)
+// 0x00B0 (0x0340 - 0x0290)
 class UMusicZoneComponent : public USceneComponent
 {
 public:
@@ -43,10 +43,11 @@ public:
 	unsigned char                                      UnknownData00[0x7];                                       // 0x02A1(0x0007) MISSED OFFSET
 	class UWwiseEvent*                                 PlayEvent;                                                // 0x02A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class UWwiseEvent*                                 StopEvent;                                                // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseObjectPoolWrapper*                     EmitterPool;                                              // 0x02B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableAfterPlayThrough;                                  // 0x02C0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               ActivateOnBeginPlay;                                      // 0x02C1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6E];                                      // 0x02C2(0x006E) MISSED OFFSET
+	TArray<class UWwiseEvent*>                         OneShotEvents;                                            // 0x02B8(0x0010) (Edit, ZeroConstructor)
+	class UWwiseObjectPoolWrapper*                     EmitterPool;                                              // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableAfterPlayThrough;                                  // 0x02D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               ActivateOnBeginPlay;                                      // 0x02D1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6E];                                      // 0x02D2(0x006E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -57,19 +58,21 @@ public:
 
 	struct FWwiseEmitter GetEmitter();
 	void DisableZone();
+	void Client_StopMusicAndDisableZone();
+	void Client_PlayOneShot(int Index);
 	void ActivateZone();
 };
 
 
 // Class Music.AISpawnerMusicZoneComponent
-// 0x0020 (0x0350 - 0x0330)
+// 0x0020 (0x0360 - 0x0340)
 class UAISpawnerMusicZoneComponent : public UMusicZoneComponent
 {
 public:
-	class UAISpawner*                                  AISpawner;                                                // 0x0330(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class APawn*>                               SpawnerPawns;                                             // 0x0338(0x0010) (Net, ZeroConstructor)
-	TEnumAsByte<EAISpawnerMusicZoneState>              SpawnerState;                                             // 0x0348(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0349(0x0007) MISSED OFFSET
+	class UAISpawner*                                  AISpawner;                                                // 0x0340(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class APawn*>                               SpawnerPawns;                                             // 0x0348(0x0010) (Net, ZeroConstructor)
+	TEnumAsByte<EAISpawnerMusicZoneState>              SpawnerState;                                             // 0x0358(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0359(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -83,11 +86,11 @@ public:
 
 
 // Class Music.SynchedMusicZoneComponent
-// 0x0030 (0x0360 - 0x0330)
+// 0x0030 (0x0370 - 0x0340)
 class USynchedMusicZoneComponent : public UMusicZoneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0330(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0340(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -114,11 +117,11 @@ public:
 
 
 // Class Music.MusicZoneService
-// 0x00A8 (0x04B8 - 0x0410)
+// 0x00A8 (0x0508 - 0x0460)
 class AMusicZoneService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0410(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0460(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

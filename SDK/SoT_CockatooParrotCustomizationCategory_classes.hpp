@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass CockatooParrotCustomizationCategory.CockatooParrotCustomizationCategory_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class UCockatooParrotCustomizationCategory_C : public UParrotCustomizationCategory_C
 {
 public:

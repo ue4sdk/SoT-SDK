@@ -163,6 +163,27 @@ struct FTestActionStateConstructionInfoWithObjPointers : public FActionStateCons
 	TArray<class UObject*>                             Array;                                                    // 0x0038(0x0010) (ZeroConstructor)
 };
 
+// ScriptStruct ActionStateMachine.EventWaitingToSpawnActionStateEndedClient
+// 0x0001
+struct FEventWaitingToSpawnActionStateEndedClient
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct ActionStateMachine.EventWaitingToSpawnActionStateStartedClient
+// 0x0001
+struct FEventWaitingToSpawnActionStateStartedClient
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct ActionStateMachine.EventFirstPersonAnimaticActionStateEndedClient
+// 0x0001
+struct FEventFirstPersonAnimaticActionStateEndedClient
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
 // ScriptStruct ActionStateMachine.NullActionStateConstructionInfo
 // 0x0000 (0x0030 - 0x0030)
 struct FNullActionStateConstructionInfo : public FActorActionStateConstructionInfo

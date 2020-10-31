@@ -12,6 +12,18 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum OnlineSubsystem.EOnlineStatsSuccess
+enum class EOnlineStatsSuccess : uint8_t
+{
+	EOnlineStatsSuccess__Success   = 0,
+	EOnlineStatsSuccess__UnknownError = 1,
+	EOnlineStatsSuccess__InvalidStatId = 2,
+	EOnlineStatsSuccess__InvalidArgument = 3,
+	EOnlineStatsSuccess__InvalidUser = 4,
+	EOnlineStatsSuccess__EOnlineStatsSuccess_MAX = 5
+};
+
+
 // Enum OnlineSubsystem.EInAppPurchaseState
 enum class EInAppPurchaseState : uint8_t
 {
@@ -40,6 +52,16 @@ enum class EMPMatchOutcome : uint8_t
 	EMPMatchOutcome__Third         = 8,
 	EMPMatchOutcome__Fourth        = 9,
 	EMPMatchOutcome__EMPMatchOutcome_MAX = 10
+};
+
+
+// Enum OnlineSubsystem.EPlatformId
+enum class EPlatformId : uint8_t
+{
+	EPlatformId__Unknown           = 0,
+	EPlatformId__XboxLive          = 1,
+	EPlatformId__Steam             = 2,
+	EPlatformId__EPlatformId_MAX   = 3
 };
 
 

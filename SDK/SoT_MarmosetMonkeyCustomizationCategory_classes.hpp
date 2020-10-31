@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MarmosetMonkeyCustomizationCategory.MarmosetMonkeyCustomizationCategory_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class UMarmosetMonkeyCustomizationCategory_C : public UMonkeyCustomizationCategory_C
 {
 public:

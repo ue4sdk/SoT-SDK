@@ -31,7 +31,7 @@ public:
 	static void FindSailControlHandIKPositionFromAnimation(const struct FVector& Animation_Hand_IK_Location, const struct FVector& LowerRopeLocation, const struct FVector& UpperRopeLocation, class UObject* __WorldContext, struct FVector* Location_On_Rope);
 	static void ArrayLoadingFromDataDrivenBlendSpace(class UBlendSpace* FallbackBlendspace, class UObject* __WorldContext, TArray<class UBlendSpace*>* TargetArrayBlendspace, TArray<class UBlendSpace*>* LoadedArrayDataBlendspace);
 	static void ArrayLoadingFromDataDriven1DBlendSpace(class UBlendSpace1D* FallbackBlendspace1D, class UObject* __WorldContext, TArray<class UBlendSpace1D*>* TargetArray_1D, TArray<class UBlendSpace1D*>* LoadedArrayData_1D);
-	static void ArrayLoadingFromDataDriven(class UAnimSequence* FallbackAnimation, class UObject* __WorldContext, TArray<class UAnimSequence*>* TargetArray, TArray<class UAnimSequence*>* LoadedArrayData);
+	static void ArrayLoadingFromDataDriven(class UAnimSequence* FallBackAnimation, class UObject* __WorldContext, TArray<class UAnimSequence*>* TargetArray, TArray<class UAnimSequence*>* LoadedArrayData);
 	static void Update_IK_Limb_Controls(class USkeletalMeshComponent* SkeletalMeshComponent, TEnumAsByte<EIKLimbName> Limb_ID, bool Active, TEnumAsByte<ELimbIKSpace> Coordinate_Space, float Translation_Strength, float Rotation_Strength, const struct FTransform& Transform, float BlendIn, float BlendOut, class UObject* __WorldContext);
 	static void Decrement_Integer(int Decrement, class UObject* __WorldContext, int* Value);
 	static void Increment_Integer(int Increment, class UObject* __WorldContext, int* integer);

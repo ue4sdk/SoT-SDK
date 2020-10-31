@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass MacaqueMonkeyCustomizationCategory.MacaqueMonkeyCustomizationCategory_C
-// 0x0000 (0x0080 - 0x0080)
+// 0x0000 (0x0088 - 0x0088)
 class UMacaqueMonkeyCustomizationCategory_C : public UMonkeyCustomizationCategory_C
 {
 public:

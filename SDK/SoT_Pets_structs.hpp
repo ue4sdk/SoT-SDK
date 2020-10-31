@@ -14,8 +14,8 @@
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_RareAudio_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
 
 namespace SDK
 {
@@ -48,6 +48,14 @@ struct FHangoutSpotParams
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 	TArray<struct FPetHangoutSpotParams>               PetParams;                                                // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FName                                       FeatureName;                                              // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct Pets.PetCustomiationOverrideMappingEntry
+// 0x0018
+struct FPetCustomiationOverrideMappingEntry
+{
+	class FString                                      Identifier;                                               // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UPetCustomisationOverrideDataAsset*          OverrideAsset;                                            // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Pets.PetDangerHearingThreatResponse
@@ -199,6 +207,15 @@ struct FWieldablePetHungerAnimationData
 	float                                              AnimTimeout;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
+// ScriptStruct Pets.PetTurnToFaceData
+// 0x0020
+struct FPetTurnToFaceData
+{
+	struct FQuat                                       EndRotation;                                              // 0x0000(0x0010) (IsPlainOldData)
+	float                                              RotationTime;                                             // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0014(0x000C) MISSED OFFSET
+};
+
 // ScriptStruct Pets.EventWieldablePetPendingDrop
 // 0x0001
 struct FEventWieldablePetPendingDrop
@@ -278,6 +295,13 @@ struct FEventPetLeftHangout
 	class AActor*                                      Pet;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Pets.EventPetEnteredHangout
+// 0x0002
+struct FEventPetEnteredHangout
+{
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0000(0x0002) MISSED OFFSET
+};
+
 // ScriptStruct Pets.EventPetSadnessEnd
 // 0x0001
 struct FEventPetSadnessEnd
@@ -321,9 +345,7 @@ struct FEventWieldablePetPutOnPerch
 	struct FName                                       HangoutSpotName;                                          // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	uint32_t                                           HangoutSpotIndex;                                         // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 	TWeakObjectPtr<class AActor>                       WieldingActor;                                            // 0x0014(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               ShouldBlockPetEmoteReactions;                             // 0x001C(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               ShouldIgnorePickupFromHangoutTooltipDisplayOffset;        // 0x001D(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x001E(0x0002) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Pets.EventPetDropped
@@ -350,17 +372,19 @@ struct FEventPetReactBegun
 };
 
 // ScriptStruct Pets.EventPetReactCancellation
-// 0x0008
+// 0x0010
 struct FEventPetReactCancellation
 {
-	struct FName                                       ReactId;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      ReactSource;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReactId;                                                  // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPetReactRequest
-// 0x0008
+// 0x0010
 struct FEventPetReactRequest
 {
-	struct FName                                       ReactId;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      ReactSource;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       ReactId;                                                  // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.RespawnPetEvent

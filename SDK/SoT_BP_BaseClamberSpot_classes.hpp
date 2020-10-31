@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BaseClamberSpot.BP_BaseClamberSpot_C
-// 0x0010 (0x0630 - 0x0620)
+// 0x0010 (0x0690 - 0x0680)
 class ABP_BaseClamberSpot_C : public AClamberSpot
 {
 public:
-	TArray<struct FVector>                             ClamberSplinePoints;                                      // 0x0620(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             ClamberSplinePoints;                                      // 0x0680(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

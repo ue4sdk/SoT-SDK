@@ -42,13 +42,12 @@ enum class EVolcanoTargetType : uint8_t
 };
 
 
-// Enum NaturalDisasters.EVolcanoState
-enum class EVolcanoState : uint8_t
+// Enum NaturalDisasters.EAshenLordWorldEndCloudState
+enum class EAshenLordWorldEndCloudState : uint8_t
 {
-	EVolcanoState__Dormant         = 0,
-	EVolcanoState__WarmingUp       = 1,
-	EVolcanoState__Erupting        = 2,
-	EVolcanoState__EVolcanoState_MAX = 3
+	EAshenLordWorldEndCloudState__Inactive = 0,
+	EAshenLordWorldEndCloudState__Active = 1,
+	EAshenLordWorldEndCloudState__EAshenLordWorldEndCloudState_MAX = 2
 };
 
 
@@ -78,6 +77,16 @@ enum class EGeyserManagerState : uint8_t
 	EGeyserManagerState__Dormant   = 0,
 	EGeyserManagerState__Active    = 1,
 	EGeyserManagerState__EGeyserManagerState_MAX = 2
+};
+
+
+// Enum NaturalDisasters.EVolcanoState
+enum class EVolcanoState : uint8_t
+{
+	EVolcanoState__Dormant         = 0,
+	EVolcanoState__WarmingUp       = 1,
+	EVolcanoState__Erupting        = 2,
+	EVolcanoState__EVolcanoState_MAX = 3
 };
 
 

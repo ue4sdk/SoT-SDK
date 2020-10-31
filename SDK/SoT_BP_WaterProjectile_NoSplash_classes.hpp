@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WaterProjectile_NoSplash.BP_WaterProjectile_NoSplash_C
-// 0x0000 (0x0708 - 0x0708)
+// 0x0000 (0x0790 - 0x0790)
 class ABP_WaterProjectile_NoSplash_C : public ABP_WaterProjectile_C
 {
 public:
@@ -26,6 +26,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

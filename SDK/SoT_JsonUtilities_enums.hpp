@@ -12,12 +12,12 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
-// Enum JsonUtilities.ETestEnum
-enum class EJsonUtilities_ETestEnum : uint8_t
+// Enum JsonUtilities.EJsonTestEnum
+enum class EJsonTestEnum : uint8_t
 {
-	ETestEnum__Value0              = 0,
-	ETestEnum__Value1              = 1,
-	ETestEnum__ETestEnum_MAX       = 2
+	EJsonTestEnum__Value0          = 0,
+	EJsonTestEnum__Value1          = 1,
+	EJsonTestEnum__EJsonTestEnum_MAX = 2
 };
 
 

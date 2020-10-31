@@ -35,31 +35,14 @@ public:
 };
 
 
-// Class Tutorial.TutorialPromptAccessKey
-// 0x0010 (0x0038 - 0x0028)
-class UTutorialPromptAccessKey : public UObject
-{
-public:
-	class FString                                      Key;                                                      // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tutorial.TutorialPromptAccessKey"));
-		return ptr;
-	}
-
-};
-
-
 // Class Tutorial.ContextualTutorialComponent
-// 0x0068 (0x0130 - 0x00C8)
+// 0x0058 (0x0120 - 0x00C8)
 class UContextualTutorialComponent : public UActorComponent
 {
 public:
 	TArray<struct FContextualTutorialPromptDesc>       ContextualTutorialClasses;                                // 0x00C8(0x0010) (Edit, ZeroConstructor)
-	class FString                                      TheScope;                                                 // 0x00D8(0x0010) (Edit, ZeroConstructor)
-	TArray<class AActor*>                              SpawnedPromptActors;                                      // 0x00E8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x38];                                      // 0x00F8(0x0038) MISSED OFFSET
+	TArray<class AActor*>                              SpawnedPromptActors;                                      // 0x00D8(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x38];                                      // 0x00E8(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -86,16 +69,13 @@ public:
 
 
 // Class Tutorial.Tutorial2019Component
-// 0x0020 (0x00E8 - 0x00C8)
+// 0x0008 (0x00D0 - 0x00C8)
 class UTutorial2019Component : public UActorComponent
 {
 public:
-	bool                                               HasEverPlayedWakeupAnimation;                             // 0x00C8(0x0001) (BlueprintVisible, Net, ZeroConstructor, IsPlainOldData)
-	bool                                               IsEnabledByServer;                                        // 0x00C9(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               IsIntroEnabledByServer;                                   // 0x00CA(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               HasCheckedTutorialStatus;                                 // 0x00CB(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	bool                                               IsInTutorialTale;                                         // 0x00CC(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1B];                                      // 0x00CD(0x001B) MISSED OFFSET
+	bool                                               IsEnabledByServer;                                        // 0x00C8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               IsInTutorialTale;                                         // 0x00C9(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x00CA(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -106,23 +86,18 @@ public:
 
 	void ReceiveTutorial2019BeginPlayOnServer();
 	void ReceiveTutorial2019BeginPlayOnClient();
-	void ReceiveIntroBeginPlayOnServer();
-	void ReceiveIntroBeginPlayOnClient();
-	void OnRep_IsIntroEnabledByServer(bool OldIsIntroEnabled);
 	void OnRep_IsEnabledByServer(bool OldIsEnabled);
-	void OnRep_HasCheckedTutorialStatus(bool OldHasCheckedTutorialStatus);
-	bool HasPrerequisites();
 	void ForceDisableComponent_Blueprint();
 	void BeginOnServer();
 };
 
 
 // Class Tutorial.Tutorial2019ContextualDelegatingComponent
-// 0x0008 (0x00F0 - 0x00E8)
+// 0x0008 (0x00D8 - 0x00D0)
 class UTutorial2019ContextualDelegatingComponent : public UTutorial2019Component
 {
 public:
-	class UContextualTutorialComponent*                ContextualTutorialComponent;                              // 0x00E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UContextualTutorialComponent*                ContextualTutorialComponent;                              // 0x00D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -147,6 +122,100 @@ public:
 
 
 	static struct FTeleportLocation GetNearestOnboardingSpawnPoint(class AActor* CharacterToTeleport);
+};
+
+
+// Class Tutorial.TutorialHelpersBlueprintLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UTutorialHelpersBlueprintLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tutorial.TutorialHelpersBlueprintLibrary"));
+		return ptr;
+	}
+
+
+	static void FirePromptCompleted(class UClass* AccessKey, class UObject* WorldContextObject);
+};
+
+
+// Class Tutorial.TutorialManager
+// 0x0040 (0x0108 - 0x00C8)
+class UTutorialManager : public UActorComponent
+{
+public:
+	class UClass*                                      CompanyOnboardingStarterClass;                            // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      MaidenVoyageStarterClass;                                 // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      SelectedTutorialClass;                                    // 0x00D8(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UTutorialStarter*                            SelectedTutorial;                                         // 0x00E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               HasEverPlayedFirstPersonAnimation;                        // 0x00E8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               HasStartedTutorial;                                       // 0x00E9(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               HasReceivedEntitlements;                                  // 0x00EA(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               HasPosessedPawn;                                          // 0x00EB(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1C];                                      // 0x00EC(0x001C) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tutorial.TutorialManager"));
+		return ptr;
+	}
+
+
+	void OnRep_SelectedTutorialClass();
+};
+
+
+// Class Tutorial.TutorialStarter
+// 0x0038 (0x0060 - 0x0028)
+class UTutorialStarter : public UObject
+{
+public:
+	class AAthenaPlayerController*                     AthenaPlayerController;                                   // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldPlayIntroAnimatic;                                  // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
+	struct FFirstPersonAnimaticSettings                IntroAnimationSettings;                                   // 0x0034(0x002C) (Edit, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tutorial.TutorialStarter"));
+		return ptr;
+	}
+
+};
+
+
+// Class Tutorial.CompanyOnboardingStarter
+// 0x0000 (0x0060 - 0x0060)
+class UCompanyOnboardingStarter : public UTutorialStarter
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tutorial.CompanyOnboardingStarter"));
+		return ptr;
+	}
+
+
+	bool HasPrerequisites();
+};
+
+
+// Class Tutorial.MaidenVoyageStarter
+// 0x0000 (0x0060 - 0x0060)
+class UMaidenVoyageStarter : public UTutorialStarter
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tutorial.MaidenVoyageStarter"));
+		return ptr;
+	}
+
 };
 
 

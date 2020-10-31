@@ -149,6 +149,22 @@ void UAIEncounterServiceInterface::RegisterLoadedEncounter(TAssetPtr<class UAIEn
 }
 
 
+// Function AthenaAI.AICombatEncounterInterface.OnVulnerabilityStateEntered
+// (Native, Event, Public, BlueprintEvent)
+
+void UAICombatEncounterInterface::OnVulnerabilityStateEntered()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICombatEncounterInterface.OnVulnerabilityStateEntered"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.AIEncounterService.RegisterLoadedSkillsetProgression
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -299,6 +315,30 @@ int UAIManagerBlueprintFunctionLibrary::GetFrameCounter()
 }
 
 
+// Function AthenaAI.AIManagerBlueprintFunctionLibrary.AddNameplateToAIWithLocalisedName
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FText                   DisplayName                    (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UAIManagerBlueprintFunctionLibrary::AddNameplateToAIWithLocalisedName(class AActor* Actor, const struct FText& DisplayName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerBlueprintFunctionLibrary.AddNameplateToAIWithLocalisedName"));
+
+	struct
+	{
+		class AActor*                  Actor;
+		struct FText                   DisplayName;
+	} params;
+
+	params.Actor = Actor;
+	params.DisplayName = DisplayName;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.AIManagerBlueprintFunctionLibrary.AddNameplateToAI
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -407,54 +447,6 @@ void AAIManagerService::StartDespawnAI(class APawn* AIActor, TEnumAsByte<ECharac
 	params.DeathType = DeathType;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AIManagerService.GetRegionSpawner
-// (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   Region                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// int                            Index                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UAISpawner*              ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UAISpawner* AAIManagerService::GetRegionSpawner(const struct FName& Region, int Index)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerService.GetRegionSpawner"));
-
-	struct
-	{
-		struct FName                   Region;
-		int                            Index;
-		class UAISpawner*              ReturnValue;
-	} params;
-
-	params.Region = Region;
-	params.Index = Index;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AIManagerService.GetNumOfSpawnRequests
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int AAIManagerService::GetNumOfSpawnRequests()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIManagerService.GetNumOfSpawnRequests"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -618,6 +610,33 @@ void UDebugAIManagerServiceInterface::SetCharacterNetRelevancy(float InCloseByCh
 }
 
 
+// Function AthenaAI.DebugAIManagerServiceInterface.BlockAIAbility
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  InExclusive                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           InBlockState                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UDebugAIManagerServiceInterface::BlockAIAbility(class UClass* InExclusive, bool InBlockState)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerServiceInterface.BlockAIAbility"));
+
+	struct
+	{
+		class UClass*                  InExclusive;
+		bool                           InBlockState;
+		bool                           ReturnValue;
+	} params;
+
+	params.InExclusive = InExclusive;
+	params.InBlockState = InBlockState;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function AthenaAI.DebugAIManagerService.SetMaxNumOfSpawnedActors
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -778,12 +797,71 @@ void ADebugAIManagerService::SetCharacterNetRelevancy(float InCloseByCharactersR
 }
 
 
-// Function AthenaAI.AINameplateComponent.OnRep_DisplayName
+// Function AthenaAI.DebugAIManagerService.BlockAIAbility
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  InExclusive                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           InBlockState                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ADebugAIManagerService::BlockAIAbility(class UClass* InExclusive, bool InBlockState)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.DebugAIManagerService.BlockAIAbility"));
+
+	struct
+	{
+		class UClass*                  InExclusive;
+		bool                           InBlockState;
+		bool                           ReturnValue;
+	} params;
+
+	params.InExclusive = InExclusive;
+	params.InBlockState = InBlockState;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AINameplateComponent.OnRep_Title
 // (Final, Native, Private)
 
-void UAINameplateComponent::OnRep_DisplayName()
+void UAINameplateComponent::OnRep_Title()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AINameplateComponent.OnRep_DisplayName"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AINameplateComponent.OnRep_Title"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AINameplateComponent.OnRep_DisplayNameAsText
+// (Final, Native, Private)
+
+void UAINameplateComponent::OnRep_DisplayNameAsText()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AINameplateComponent.OnRep_DisplayNameAsText"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AINameplateComponent.OnRep_DisplayNameAsString
+// (Final, Native, Private)
+
+void UAINameplateComponent::OnRep_DisplayNameAsString()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AINameplateComponent.OnRep_DisplayNameAsString"));
 
 	struct
 	{
@@ -869,27 +947,6 @@ void UAIPerPlayerSpawner::PlayerDeath(class AActor* Player)
 	params.Player = Player;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AIPerPlayerSpawner.GetNumOfPlayers
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-int UAIPerPlayerSpawner::GetNumOfPlayers()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIPerPlayerSpawner.GetNumOfPlayers"));
-
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -1290,6 +1347,26 @@ void AAthenaAICharacterController::SetItemSpecificNamedControllerParam(class UCl
 }
 
 
+// Function AthenaAI.AthenaAICharacterController.SetDisableTurningForTest
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           InDisableTurningForTest        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAICharacterController::SetDisableTurningForTest(bool InDisableTurningForTest)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAICharacterController.SetDisableTurningForTest"));
+
+	struct
+	{
+		bool                           InDisableTurningForTest;
+	} params;
+
+	params.InDisableTurningForTest = InDisableTurningForTest;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.AthenaAICharacterController.ClearOverridePrioritiseInteractablesBeforeEnemies
 // (Final, Native, Public, BlueprintCallable)
 
@@ -1480,6 +1557,7 @@ class UClass* AAICreatureCharacter::GetAIStrategy()
 // TAssetPtr<class UAthenaAIFormDataAsset> Form                           (ConstParm, Parm)
 // TAssetPtr<class UClass>        AIItemSpawnComponent           (ConstParm, Parm)
 // class UClass*                  ClassId                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TAssetPtr<class UAthenaAIAmmoDataAsset> Ammo                           (ConstParm, Parm)
 // struct FVector                 Pos                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FRotator                Rot                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FName                   Region                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
@@ -1487,7 +1565,7 @@ class UClass* AAICreatureCharacter::GetAIStrategy()
 // struct FName                   NavMeshOverride                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          Delay                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, TAssetPtr<class UClass> AIItemSpawnComponent, class UClass* ClassId, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
+void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> AIType, TAssetPtr<class UAthenaAIControllerParamsDataAsset> Skillset, TAssetPtr<class ULoadoutAsset> Loadout, TAssetPtr<class UAthenaAIFormDataAsset> Form, TAssetPtr<class UClass> AIItemSpawnComponent, class UClass* ClassId, TAssetPtr<class UAthenaAIAmmoDataAsset> Ammo, const struct FVector& Pos, const struct FRotator& Rot, const struct FName& Region, class AActor* TriggerActor, const struct FName& NavMeshOverride, float Delay)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAIWithSettings"));
 
@@ -1499,6 +1577,7 @@ void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> 
 		TAssetPtr<class UAthenaAIFormDataAsset> Form;
 		TAssetPtr<class UClass>        AIItemSpawnComponent;
 		class UClass*                  ClassId;
+		TAssetPtr<class UAthenaAIAmmoDataAsset> Ammo;
 		struct FVector                 Pos;
 		struct FRotator                Rot;
 		struct FName                   Region;
@@ -1513,6 +1592,7 @@ void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> 
 	params.Form = Form;
 	params.AIItemSpawnComponent = AIItemSpawnComponent;
 	params.ClassId = ClassId;
+	params.Ammo = Ammo;
 	params.Pos = Pos;
 	params.Rot = Rot;
 	params.Region = Region;
@@ -1528,42 +1608,40 @@ void UAthenaAIDebugFunctionLibrary::SpawnAIWithSettings(TAssetPtr<class UClass> 
 // Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// TAssetPtr<class UClass>        AIClass                        (ConstParm, Parm)
 // class UAIEncounterSettings*    EncounterSettings              (Parm, ZeroConstructor, IsPlainOldData)
 // struct FVector                 Pos                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FRotator                Rot                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// bool                           RequireNavMesh                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          Delay                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           MakeAIPermanentlyNetRelevant   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  InstancedNavMesh               (Parm, ZeroConstructor, IsPlainOldData)
+// struct FAIEncounterSpecification ReturnValue                    (Parm, OutParm, ReturnParm)
 
-void UAthenaAIDebugFunctionLibrary::SpawnAI(TAssetPtr<class UClass> AIClass, class UAIEncounterSettings* EncounterSettings, const struct FVector& Pos, const struct FRotator& Rot, bool RequireNavMesh, float Delay, bool MakeAIPermanentlyNetRelevant, class AActor* InstancedNavMesh)
+struct FAIEncounterSpecification UAthenaAIDebugFunctionLibrary::SpawnAI(class UAIEncounterSettings* EncounterSettings, const struct FVector& Pos, const struct FRotator& Rot, float Delay, bool MakeAIPermanentlyNetRelevant, class AActor* InstancedNavMesh)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.SpawnAI"));
 
 	struct
 	{
-		TAssetPtr<class UClass>        AIClass;
 		class UAIEncounterSettings*    EncounterSettings;
 		struct FVector                 Pos;
 		struct FRotator                Rot;
-		bool                           RequireNavMesh;
 		float                          Delay;
 		bool                           MakeAIPermanentlyNetRelevant;
 		class AActor*                  InstancedNavMesh;
+		struct FAIEncounterSpecification ReturnValue;
 	} params;
 
-	params.AIClass = AIClass;
 	params.EncounterSettings = EncounterSettings;
 	params.Pos = Pos;
 	params.Rot = Rot;
-	params.RequireNavMesh = RequireNavMesh;
 	params.Delay = Delay;
 	params.MakeAIPermanentlyNetRelevant = MakeAIPermanentlyNetRelevant;
 	params.InstancedNavMesh = InstancedNavMesh;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
@@ -1637,20 +1715,17 @@ int UAthenaAIDebugFunctionLibrary::GetEnvQueryManagerNumRunningQueries(class UOb
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class AAthenaAIController*     AIController                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UAthenaAIControllerParamsDataAsset* ControllerParams               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UAthenaAIDebugFunctionLibrary::EnableMaximumSightSettings(class AAthenaAIController* AIController, class UAthenaAIControllerParamsDataAsset* ControllerParams)
+void UAthenaAIDebugFunctionLibrary::EnableMaximumSightSettings(class AAthenaAIController* AIController)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIDebugFunctionLibrary.EnableMaximumSightSettings"));
 
 	struct
 	{
 		class AAthenaAIController*     AIController;
-		class UAthenaAIControllerParamsDataAsset* ControllerParams;
 	} params;
 
 	params.AIController = AIController;
-	params.ControllerParams = ControllerParams;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -2125,6 +2200,29 @@ void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
 }
 
 
+// Function AthenaAI.AthenaSwimmingAIController.ApplyControllerParams
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAthenaAIControllerParamsDataAsset* InControllerParametersAsset    (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn*                   InPawn                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaSwimmingAIController::ApplyControllerParams(class UAthenaAIControllerParamsDataAsset* InControllerParametersAsset, class APawn* InPawn)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaSwimmingAIController.ApplyControllerParams"));
+
+	struct
+	{
+		class UAthenaAIControllerParamsDataAsset* InControllerParametersAsset;
+		class APawn*                   InPawn;
+	} params;
+
+	params.InControllerParametersAsset = InControllerParametersAsset;
+	params.InPawn = InPawn;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.TinySharkExperience.TinySharkPawnDestroyed
 // (Final, Native, Private)
 // Parameters:
@@ -2140,6 +2238,26 @@ void ATinySharkExperience::TinySharkPawnDestroyed(class AActor* InDestroyedActor
 	} params;
 
 	params.InDestroyedActor = InDestroyedActor;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.TinySharkExperience.OnRep_TinySharkPawn
+// (Native, Protected)
+// Parameters:
+// class ASharkPawn*              LastTinySharkPawn              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void ATinySharkExperience::OnRep_TinySharkPawn(class ASharkPawn* LastTinySharkPawn)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.TinySharkExperience.OnRep_TinySharkPawn"));
+
+	struct
+	{
+		class ASharkPawn*              LastTinySharkPawn;
+	} params;
+
+	params.LastTinySharkPawn = LastTinySharkPawn;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -2358,6 +2476,38 @@ void APet::OnRep_RollRequest()
 }
 
 
+// Function AthenaAI.Pet.OnRep_ResetRollAndZOffset
+// (Final, Native, Private)
+
+void APet::OnRep_ResetRollAndZOffset()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_ResetRollAndZOffset"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Pet.OnRep_PetTurnToFaceData
+// (Final, Native, Public)
+
+void APet::OnRep_PetTurnToFaceData()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_PetTurnToFaceData"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.Pet.OnRep_PetOwner
 // (Final, Native, Private)
 
@@ -2412,6 +2562,22 @@ void APet::OnRep_PerchedInHangout()
 void APet::OnRep_MovementRequest()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_MovementRequest"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Pet.OnRep_InHangout
+// (Final, Native, Private)
+
+void APet::OnRep_InHangout()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Pet.OnRep_InHangout"));
 
 	struct
 	{

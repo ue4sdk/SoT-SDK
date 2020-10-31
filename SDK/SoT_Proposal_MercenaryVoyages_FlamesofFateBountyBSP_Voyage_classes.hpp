@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass Proposal_MercenaryVoyages_FlamesofFateBountyBSP_Voyage.Proposal_MercenaryVoyages_FlamesofFateBountyBSP_Voyage_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0138 - 0x0138)
 class UProposal_MercenaryVoyages_FlamesofFateBountyBSP_Voyage_C : public UVoyageProposalDesc
 {
 public:

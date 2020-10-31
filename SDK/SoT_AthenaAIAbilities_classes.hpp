@@ -14,8 +14,23 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class AthenaAIAbilities.AIAbilityVulnerableStatus
+// 0x0000 (0x0030 - 0x0030)
+class UAIAbilityVulnerableStatus : public UStatusBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.AIAbilityVulnerableStatus"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAIAbilities.AshenFireStatus
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UAshenFireStatus : public UStatusBase
 {
 public:

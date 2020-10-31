@@ -8,9 +8,9 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Cooking_enums.hpp"
-#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_StatusEffects_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 
 namespace SDK
@@ -38,23 +38,21 @@ struct FCookerSmokeFeedbackEntry
 };
 
 // ScriptStruct Cooking.CookingClientRepresentation
-// 0x00A8
+// 0x0068
 struct FCookingClientRepresentation
 {
 	bool                                               Cooking;                                                  // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               HasItem;                                                  // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x0002(0x0006) MISSED OFFSET
-	struct FText                                       CurrentCookingItemDisplayName;                            // 0x0008(0x0038)
-	class UClass*                                      CurrentCookingItemCategory;                               // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECookingSmokeFeedbackLevel>            SmokeFeedbackLevel;                                       // 0x0048(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0049(0x0003) MISSED OFFSET
-	float                                              VisibleCookedExtent;                                      // 0x004C(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FMaterialManipulationSettings               VisibleMaterialSettings;                                  // 0x0050(0x0030)
-	class UMaterialInstance*                           OverrideMaterial;                                         // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     BurnDownVector;                                           // 0x0088(0x000C) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0094(0x0004) MISSED OFFSET
-	class UAnimationAsset*                             AnimatedPose;                                             // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       CurrentCookableTypeName;                                  // 0x00A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class AItemInfo*                                   CurrentlyCookingItem;                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FText                                       CurrentCookingItemDisplayName;                            // 0x0010(0x0038)
+	class UClass*                                      CurrentCookingItemCategory;                               // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ECookingSmokeFeedbackLevel>            SmokeFeedbackLevel;                                       // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
+	float                                              VisibleCookedExtent;                                      // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              CurrentItemPlacementAngle;                                // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FName                                       CurrentCookableTypeName;                                  // 0x005C(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct Cooking.CookingInfo

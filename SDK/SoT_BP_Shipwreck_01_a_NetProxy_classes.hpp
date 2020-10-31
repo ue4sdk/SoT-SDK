@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shipwreck_01_a_NetProxy.BP_Shipwreck_01_a_NetProxy_C
-// 0x0000 (0x0428 - 0x0428)
+// 0x0000 (0x0488 - 0x0488)
 class ABP_Shipwreck_01_a_NetProxy_C : public ANetProxy
 {
 public:

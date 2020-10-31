@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shroudbreaker_OnShip_Small.BP_Shroudbreaker_OnShip_Small_C
-// 0x0000 (0x0768 - 0x0768)
+// 0x0000 (0x07B8 - 0x07B8)
 class ABP_Shroudbreaker_OnShip_Small_C : public ABP_Shroudbreaker_OnShip_C
 {
 public:

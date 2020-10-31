@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass Proposal_Shroudbreaker_Chapter2.Proposal_Shroudbreaker_Chapter2_C
 // 0x0000 (0x0140 - 0x0140)
-class UProposal_Shroudbreaker_Chapter2_C : public UVoyageProposalDesc
+class UProposal_Shroudbreaker_Chapter2_C : public UVoyageCheckpointProposalDesc
 {
 public:
 

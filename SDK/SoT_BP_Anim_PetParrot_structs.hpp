@@ -10,6 +10,7 @@
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AnimGraphRuntime_classes.hpp"
+#include "SoT_Animation_classes.hpp"
 
 namespace SDK
 {

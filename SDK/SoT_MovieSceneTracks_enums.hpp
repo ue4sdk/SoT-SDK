@@ -25,12 +25,32 @@ enum class EMovieScene3DPathSection_Axis : uint8_t
 };
 
 
+// Enum MovieSceneTracks.EShow3DTrajectory
+enum class EShow3DTrajectory : uint8_t
+{
+	EShow3DTrajectory__EST_OnlyWhenSelected = 0,
+	EShow3DTrajectory__EST_Always  = 1,
+	EShow3DTrajectory__EST_Never   = 2,
+	EShow3DTrajectory__EST_MAX     = 3
+};
+
+
+// Enum MovieSceneTracks.ELevelVisibility
+enum class ELevelVisibility : uint8_t
+{
+	ELevelVisibility__Visible      = 0,
+	ELevelVisibility__Hidden       = 1,
+	ELevelVisibility__ELevelVisibility_MAX = 2
+};
+
+
 // Enum MovieSceneTracks.EParticleKey
 enum class EParticleKey : uint8_t
 {
-	EParticleKey__Active           = 0,
-	EParticleKey__Inactive         = 1,
-	EParticleKey__EParticleKey_MAX = 2
+	EParticleKey__Activate         = 0,
+	EParticleKey__Deactivate       = 1,
+	EParticleKey__Trigger          = 2,
+	EParticleKey__EParticleKey_MAX = 3
 };
 
 

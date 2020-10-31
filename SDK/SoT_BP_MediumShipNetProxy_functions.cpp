@@ -146,6 +146,26 @@ void ABP_MediumShipNetProxy_C::OnLanternStateChanged(int LanternStateBits)
 }
 
 
+// Function BP_MediumShipNetProxy.BP_MediumShipNetProxy_C.OnEmissaryActiveStateChanged
+// (Event, Protected, BlueprintEvent)
+// Parameters:
+// bool                           InNewEmissaryActiveState       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_MediumShipNetProxy_C::OnEmissaryActiveStateChanged(bool InNewEmissaryActiveState)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShipNetProxy.BP_MediumShipNetProxy_C.OnEmissaryActiveStateChanged"));
+
+	struct
+	{
+		bool                           InNewEmissaryActiveState;
+	} params;
+
+	params.InNewEmissaryActiveState = InNewEmissaryActiveState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_MediumShipNetProxy.BP_MediumShipNetProxy_C.ExecuteUbergraph_BP_MediumShipNetProxy
 // ()
 // Parameters:

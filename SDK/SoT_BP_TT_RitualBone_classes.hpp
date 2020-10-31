@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TT_RitualBone.BP_TT_RitualBone_C
-// 0x0008 (0x0418 - 0x0410)
+// 0x0008 (0x0468 - 0x0460)
 class ABP_TT_RitualBone_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        BoneMesh;                                                 // 0x0410(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        BoneMesh;                                                 // 0x0460(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

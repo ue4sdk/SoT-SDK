@@ -34,6 +34,16 @@ enum class ELimbIKSpace : uint8_t
 };
 
 
+// Enum Animation.ECustomAnimationMontageType
+enum class ECustomAnimationMontageType : uint8_t
+{
+	ECustomAnimationMontageType__OneShot = 0,
+	ECustomAnimationMontageType__LoopingOneShot = 1,
+	ECustomAnimationMontageType__LoopingStaged = 2,
+	ECustomAnimationMontageType__ECustomAnimationMontageType_MAX = 3
+};
+
+
 // Enum Animation.EDockableSocketOverlapUpdates
 enum class EDockableSocketOverlapUpdates : uint8_t
 {

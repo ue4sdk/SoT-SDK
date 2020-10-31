@@ -12,6 +12,28 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum AthenaAI.EAthenaAISpawnType
+enum class EAthenaAISpawnType : uint8_t
+{
+	EAthenaAISpawnType__SpawnOnLand = 0,
+	EAthenaAISpawnType__SpawnOnShip = 1,
+	EAthenaAISpawnType__SpawnSummoned = 2,
+	EAthenaAISpawnType__SpawnBoarding = 3,
+	EAthenaAISpawnType__Num        = 4,
+	EAthenaAISpawnType__EAthenaAISpawnType_MAX = 5
+};
+
+
+// Enum AthenaAI.EAIAbilityDamageIntervalCounterMode
+enum class EAIAbilityDamageIntervalCounterMode : uint8_t
+{
+	DontBlock                      = 0,
+	BlockWhenExecutingThisAbility  = 1,
+	BlockWhenExecutingAnyAbility   = 2,
+	EAIAbilityDamageIntervalCounterMode_MAX = 3
+};
+
+
 // Enum AthenaAI.EAIDebugColour
 enum class EAIDebugColour : uint8_t
 {
@@ -48,16 +70,6 @@ enum class EAISpawnRequestResult : uint8_t
 	AISpawnRequestResult__FailedLoadingItemDropComponentClass = 6,
 	AISpawnRequestResult__Cancelled = 7,
 	AISpawnRequestResult__AISpawnRequestResult_MAX = 8
-};
-
-
-// Enum AthenaAI.EAthenaAISpawnType
-enum class EAthenaAISpawnType : uint8_t
-{
-	EAthenaAISpawnType__SpawnOnLand = 0,
-	EAthenaAISpawnType__SpawnOnShip = 1,
-	EAthenaAISpawnType__SpawnSummoned = 2,
-	EAthenaAISpawnType__EAthenaAISpawnType_MAX = 3
 };
 
 
@@ -144,6 +156,19 @@ enum class EAITargetWeaponFiringArcResult : uint8_t
 };
 
 
+// Enum AthenaAI.EBlackboardIntValueComparisonType
+enum class EBlackboardIntValueComparisonType : uint8_t
+{
+	EBlackboardIntValueComparisonType__Equal = 0,
+	EBlackboardIntValueComparisonType__NotEqual = 1,
+	EBlackboardIntValueComparisonType__GreaterThan = 2,
+	EBlackboardIntValueComparisonType__LessThan = 3,
+	EBlackboardIntValueComparisonType__GreaterThanEquals = 4,
+	EBlackboardIntValueComparisonType__LessThanEquals = 5,
+	EBlackboardIntValueComparisonType__EBlackboardIntValueComparisonType_MAX = 6
+};
+
+
 // Enum AthenaAI.EBlackboardValueCompositeType
 enum class EBlackboardValueCompositeType : uint8_t
 {
@@ -226,6 +251,25 @@ enum class EFaunaCratedState : uint8_t
 	EFaunaCratedState__InProxyCrate = 1,
 	EFaunaCratedState__InWieldedCrate = 2,
 	EFaunaCratedState__EFaunaCratedState_MAX = 3
+};
+
+
+// Enum AthenaAI.ESwimRotationMode
+enum class ESwimRotationMode : uint8_t
+{
+	ESwimRotationMode__FaceMovement = 0,
+	ESwimRotationMode__UprightStrafe = 1,
+	ESwimRotationMode__LongwaysStrafe = 2,
+	ESwimRotationMode__ESwimRotationMode_MAX = 3
+};
+
+
+// Enum AthenaAI.EArcFollowingMode
+enum class EArcFollowingMode : uint8_t
+{
+	EArcFollowingMode__SharkArc    = 0,
+	EArcFollowingMode__Simple3DArc = 1,
+	EArcFollowingMode__EArcFollowingMode_MAX = 2
 };
 
 

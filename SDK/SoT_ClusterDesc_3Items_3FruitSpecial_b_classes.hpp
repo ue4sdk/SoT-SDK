@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass ClusterDesc_3Items_3FruitSpecial_b.ClusterDesc_3Items_3FruitSpecial_b_C
-// 0x0000 (0x0140 - 0x0140)
+// 0x0000 (0x0150 - 0x0150)
 class UClusterDesc_3Items_3FruitSpecial_b_C : public UClusterDescription
 {
 public:

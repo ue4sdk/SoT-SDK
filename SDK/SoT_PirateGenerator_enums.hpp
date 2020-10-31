@@ -51,6 +51,15 @@ enum class EIPGTestEnum : uint8_t
 };
 
 
+// Enum PirateGenerator.EIPGPartType
+enum class EIPGPartType : uint8_t
+{
+	EIPGPartType__DEFAULT          = 0,
+	EIPGPartType__INVERSE          = 1,
+	EIPGPartType__EIPGPartType_MAX = 2
+};
+
+
 // Enum PirateGenerator.EIPGSlotType
 enum class EIPGSlotType : uint8_t
 {

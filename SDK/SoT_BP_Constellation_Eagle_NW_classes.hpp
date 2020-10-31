@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Eagle_NW.BP_Constellation_Eagle_NW_C
-// 0x0000 (0x04B0 - 0x04B0)
+// 0x0000 (0x0500 - 0x0500)
 class ABP_Constellation_Eagle_NW_C : public ABP_Constellation_C
 {
 public:

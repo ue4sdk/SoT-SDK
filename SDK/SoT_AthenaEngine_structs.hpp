@@ -17,6 +17,14 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct AthenaEngine.SerialisedRpc
+// 0x0020
+struct FSerialisedRpc
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
+	class UScriptStruct*                               ContentsType;                                             // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct AthenaEngine.StringAssetClassPairFeatureOverride
 // 0x0028
 struct FStringAssetClassPairFeatureOverride
@@ -53,13 +61,11 @@ struct FPlayModeDefiniton
 };
 
 // ScriptStruct AthenaEngine.ActorComponentSelector
-// 0x0020
+// 0x0010
 struct FActorComponentSelector
 {
 	struct FName                                       ComponentName;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UActorComponent*                             CachedComponent;                                          // 0x0008(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UClass*                                      ComponentClass;                                           // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0018(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct AthenaEngine.PlaySoundRpc
@@ -88,6 +94,13 @@ struct FEventTriggerForceFeedback
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
 	struct FName                                       Tag;                                                      // 0x000C(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct AthenaEngine.AthenaAsyncAssetLoaderWrapper
+// 0x0018
+struct FAthenaAsyncAssetLoaderWrapper
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct AthenaEngine.EventMeshAssigned
