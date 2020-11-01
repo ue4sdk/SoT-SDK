@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wpn_cutlass_kra_01_a_ItemInfo.BP_wpn_cutlass_kra_01_a_ItemInfo_C
-// 0x0008 (0x05E0 - 0x05D8)
+// 0x0008 (0x0590 - 0x0588)
 class ABP_wpn_cutlass_kra_01_a_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x05D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

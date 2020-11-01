@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MessageInABottleProxy.BP_MessageInABottleProxy_C
-// 0x0018 (0x07D0 - 0x07B8)
+// 0x0018 (0x0838 - 0x0820)
 class ABP_MessageInABottleProxy_C : public AMessageInABottleItemProxy
 {
 public:
-	class URetractableItemProxyComponent*              RetractableItemProxy;                                     // 0x07B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Glint;                                                    // 0x07C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class URetractableItemProxyComponent*              RetractableItemProxy;                                     // 0x0820(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Glint;                                                    // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

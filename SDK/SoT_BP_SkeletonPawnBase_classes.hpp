@@ -15,17 +15,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SkeletonPawnBase.BP_SkeletonPawnBase_C
-// 0x0038 (0x10F8 - 0x10C0)
+// 0x0040 (0x1250 - 0x1210)
 class ABP_SkeletonPawnBase_C : public AAthenaAICharacter
 {
 public:
-	class UWaterInteractionComponent*                  WaterInteractionClientOnly;                               // 0x10C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x10C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAINameplateComponent*                       AINameplate;                                              // 0x10D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBP_SkeletonAudioComponent_C*                BP_SkeletonAudioComponent;                                // 0x10D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UNoiseMakerComponent*                        NoiseMaker;                                               // 0x10E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBP_EnemyVFXComponent_C*                     BP_EnemyVFXComponent;                                     // 0x10E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCharacterFootImpactComponent*               CharacterFootImpact;                                      // 0x10F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlinkStrafeComponent*                       BlinkStrafe;                                              // 0x1210(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWaterInteractionComponent*                  WaterInteraction;                                         // 0x1218(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x1220(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAINameplateComponent*                       AINameplate;                                              // 0x1228(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBP_SkeletonAudioComponent_C*                BP_SkeletonAudioComponent;                                // 0x1230(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UNoiseMakerComponent*                        NoiseMaker;                                               // 0x1238(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBP_EnemyVFXComponent_C*                     BP_EnemyVFXComponent;                                     // 0x1240(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCharacterFootImpactComponent*               CharacterFootImpact;                                      // 0x1248(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

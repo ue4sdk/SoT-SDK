@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FaunaActionStateCreatorDefinition.BP_FaunaActionStateCreatorDefinition_C
-// 0x0008 (0x0460 - 0x0458)
+// 0x0008 (0x04B0 - 0x04A8)
 class ABP_FaunaActionStateCreatorDefinition_C : public ASharkActionStateCreatorDefinition
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0458(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

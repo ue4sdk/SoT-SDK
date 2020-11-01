@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MessageInABottle_ItemInfo.BP_MessageInABottle_ItemInfo_C
-// 0x0008 (0x0588 - 0x0580)
+// 0x0008 (0x05C0 - 0x05B8)
 class ABP_MessageInABottle_ItemInfo_C : public AItemSpawnTelemetryDispatchingItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0580(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x05B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

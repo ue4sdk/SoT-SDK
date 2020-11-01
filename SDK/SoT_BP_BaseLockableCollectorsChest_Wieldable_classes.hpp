@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BaseLockableCollectorsChest_Wieldable.BP_BaseLockableCollectorsChest_Wieldable_C
-// 0x0018 (0x0870 - 0x0858)
+// 0x0018 (0x08B0 - 0x0898)
 class ABP_BaseLockableCollectorsChest_Wieldable_C : public ABP_CollectorsChest_Wieldable_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0858(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USceneComponent*                             LockSocketsRoot;                                          // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class ULockComponent*                              Lock;                                                     // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0898(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class USceneComponent*                             LockSocketsRoot;                                          // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class ULockComponent*                              Lock;                                                     // 0x08A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

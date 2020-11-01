@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WoodPlankProxy.BP_WoodPlankProxy_C
-// 0x0010 (0x0650 - 0x0640)
+// 0x0010 (0x06A8 - 0x0698)
 class ABP_WoodPlankProxy_C : public AStaticMeshItemProxy
 {
 public:
-	class UTrackedOwnerComponent*                      TrackedOwner;                                             // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTrackedOwnerComponent*                      TrackedOwner;                                             // 0x0698(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

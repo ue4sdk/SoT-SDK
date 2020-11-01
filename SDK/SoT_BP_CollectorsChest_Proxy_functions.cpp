@@ -12,6 +12,43 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.OnRep_HideWaterOcclusionVolume
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_CollectorsChest_Proxy_C::OnRep_HideWaterOcclusionVolume()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.OnRep_HideWaterOcclusionVolume"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.IsAttachedToShip
+// (Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool ABP_CollectorsChest_Proxy_C::IsAttachedToShip()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.IsAttachedToShip"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.GetClosestInteractionPoint
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -108,26 +145,6 @@ void ABP_CollectorsChest_Proxy_C::ItemDropped(const struct FEventWieldableItemDr
 	} params;
 
 	params.EventParam = EventParam;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.HideWaterOcclusion_RPC
-// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                           Visible                        (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_CollectorsChest_Proxy_C::HideWaterOcclusion_RPC(bool Visible)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.HideWaterOcclusion_RPC"));
-
-	struct
-	{
-		bool                           Visible;
-	} params;
-
-	params.Visible = Visible;
 
 	UObject::ProcessEvent(fn, &params);
 }

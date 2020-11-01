@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Bait_Base_Wieldable.BP_Bait_Base_Wieldable_C
-// 0x0000 (0x0868 - 0x0868)
+// 0x0000 (0x08B8 - 0x08B8)
 class ABP_Bait_Base_Wieldable_C : public ABP_StaticWieldableIngestible_C
 {
 public:

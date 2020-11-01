@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_reef_corals_01.BP_cmn_reef_corals_01_C
-// 0x0000 (0x0555 - 0x0555)
+// 0x0000 (0x0505 - 0x0505)
 class ABP_cmn_reef_corals_01_C : public ABP_Placement_Garden_C
 {
 public:

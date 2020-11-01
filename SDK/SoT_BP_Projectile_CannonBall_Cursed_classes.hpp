@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_CannonBall_Cursed.BP_Projectile_CannonBall_Cursed_C
-// 0x0000 (0x0620 - 0x0620)
+// 0x0000 (0x06C8 - 0x06C8)
 class ABP_Projectile_CannonBall_Cursed_C : public ABP_Projectile_CannonBall_C
 {
 public:
@@ -26,6 +26,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PortableAmmoCrate_ItemInfo.BP_PortableAmmoCrate_ItemInfo_C
-// 0x0008 (0x0548 - 0x0540)
-class ABP_PortableAmmoCrate_ItemInfo_C : public ANonStorableItemInfo
+// 0x0008 (0x07B8 - 0x07B0)
+class ABP_PortableAmmoCrate_ItemInfo_C : public ABootyItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x07B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

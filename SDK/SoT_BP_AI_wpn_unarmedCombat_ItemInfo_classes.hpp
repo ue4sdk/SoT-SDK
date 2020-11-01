@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AI_wpn_unarmedCombat_ItemInfo.BP_AI_wpn_unarmedCombat_ItemInfo_C
-// 0x0008 (0x0548 - 0x0540)
+// 0x0008 (0x0590 - 0x0588)
 class ABP_AI_wpn_unarmedCombat_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0588(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

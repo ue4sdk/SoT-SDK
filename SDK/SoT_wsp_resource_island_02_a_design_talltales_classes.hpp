@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_resource_island_02_a_design_talltales.wsp_resource_island_02_a_design_talltales_C
-// 0x0000 (0x0418 - 0x0418)
+// 0x0000 (0x0468 - 0x0468)
 class Awsp_resource_island_02_a_design_talltales_C : public ALevelScriptActor
 {
 public:

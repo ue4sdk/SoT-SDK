@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_EarthwormsFresh_00_a_Wieldable.BP_fod_EarthwormsFresh_00_a_Wieldable_C
-// 0x0000 (0x0868 - 0x0868)
+// 0x0000 (0x08B8 - 0x08B8)
 class ABP_fod_EarthwormsFresh_00_a_Wieldable_C : public ABP_Bait_Base_Wieldable_C
 {
 public:

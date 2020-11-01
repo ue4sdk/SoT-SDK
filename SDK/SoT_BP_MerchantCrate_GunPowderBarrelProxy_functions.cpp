@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_MerchantCrate_GunPowderBarrelProxy.BP_MerchantCrate_GunpowderBarrelProxy_C.GetPxActorCapacityForPhysXAggregate
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, Const)
+// Parameters:
+// unsigned char                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+unsigned char ABP_MerchantCrate_GunpowderBarrelProxy_C::GetPxActorCapacityForPhysXAggregate()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MerchantCrate_GunPowderBarrelProxy.BP_MerchantCrate_GunpowderBarrelProxy_C.GetPxActorCapacityForPhysXAggregate"));
+
+	struct
+	{
+		unsigned char                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_MerchantCrate_GunPowderBarrelProxy.BP_MerchantCrate_GunpowderBarrelProxy_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 
