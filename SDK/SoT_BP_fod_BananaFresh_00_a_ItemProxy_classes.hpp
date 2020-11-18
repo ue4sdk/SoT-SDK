@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_BananaFresh_00_a_ItemProxy.BP_fod_BananaFresh_00_a_ItemProxy_C
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x0818 - 0x0818)
 class ABP_fod_BananaFresh_00_a_ItemProxy_C : public ABP_ProxyIngestible_C
 {
 public:

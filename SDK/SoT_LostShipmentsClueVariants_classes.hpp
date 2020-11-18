@@ -19,7 +19,7 @@ namespace SDK
 class UAbandonedNoteClueDescriptor : public UClueDescriptor
 {
 public:
-	class UClueDestinationDescriptor*                  DestinationDescriptor;                                    // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClueDestinationDescriptor*                  DestinationDescriptor;                                    // 0x0028(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -153,14 +153,14 @@ public:
 
 
 // Class LostShipmentsClueVariants.AbandonedNoteWieldable
-// 0x0020 (0x0820 - 0x0800)
+// 0x0020 (0x0830 - 0x0810)
 class AAbandonedNoteWieldable : public ASkeletalMeshWieldableItem
 {
 public:
-	class UWieldableItemCanvasRenderingComponent*      WieldableItemCanvasRenderingComponent;                    // 0x0800(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAbandonedNoteWieldableRenderingComponent*   AbandonedNoteRenderingComponent;                          // 0x0808(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UInventoryItemComponent*                     InventoryItemComponent;                                   // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UWieldableItemCanvasRenderingComponent*      WieldableItemCanvasRenderingComponent;                    // 0x0810(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAbandonedNoteWieldableRenderingComponent*   AbandonedNoteRenderingComponent;                          // 0x0818(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItemComponent;                                   // 0x0820(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0828(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -220,6 +220,23 @@ public:
 };
 
 
+// Class LostShipmentsClueVariants.IslandByCompassBearingClueDestinationDescriptor
+// 0x0008 (0x0030 - 0x0028)
+class UIslandByCompassBearingClueDestinationDescriptor : public UClueDestinationDescriptor
+{
+public:
+	TEnumAsByte<ECompassDirections>                    CompassDirection;                                         // 0x0028(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.IslandByCompassBearingClueDestinationDescriptor"));
+		return ptr;
+	}
+
+};
+
+
 // Class LostShipmentsClueVariants.IslandByNameClueDestinationDescriptor
 // 0x0008 (0x0030 - 0x0028)
 class UIslandByNameClueDestinationDescriptor : public UClueDestinationDescriptor
@@ -230,6 +247,36 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.IslandByNameClueDestinationDescriptor"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.MerchantCaptainSpawnInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMerchantCaptainSpawnInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.MerchantCaptainSpawnInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.MerchantCaptainSpawnComponent
+// 0x0000 (0x0430 - 0x0430)
+class UMerchantCaptainSpawnComponent : public UItemSpawnComponent
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.MerchantCaptainSpawnComponent"));
 		return ptr;
 	}
 
@@ -313,6 +360,70 @@ public:
 };
 
 
+// Class LostShipmentsClueVariants.SeaLocationByGridSquareClueDestinationDescriptor
+// 0x0010 (0x0038 - 0x0028)
+class USeaLocationByGridSquareClueDestinationDescriptor : public UClueDestinationDescriptor
+{
+public:
+	struct FVector                                     SeaLocationIdentifier;                                    // 0x0028(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.SeaLocationByGridSquareClueDestinationDescriptor"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.ShipwreckClueBlueprintFunctionLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UShipwreckClueBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.ShipwreckClueBlueprintFunctionLibrary"));
+		return ptr;
+	}
+
+
+	static class UClueDescriptor* CreateCluePointingToShipwreck(class UClueConnectionConfig* ConnectionConfiguration, TArray<class UClass*> AllowedClueTypes, class AShipwreck* Shipwreck);
+};
+
+
+// Class LostShipmentsClueVariants.ShipwreckClueDestinationGenerator
+// 0x0000 (0x0028 - 0x0028)
+class UShipwreckClueDestinationGenerator : public UClueDestinationGenerator
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.ShipwreckClueDestinationGenerator"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.ShipwreckClueSiteType
+// 0x0000 (0x0028 - 0x0028)
+class UShipwreckClueSiteType : public UClueSiteType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.ShipwreckClueSiteType"));
+		return ptr;
+	}
+
+};
+
+
 // Class LostShipmentsClueVariants.TaleQuestClueInventoryService
 // 0x00E8 (0x0128 - 0x0040)
 class UTaleQuestClueInventoryService : public UTaleQuestService
@@ -341,6 +452,70 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestClueInventoryServiceDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.TaleQuestGiveClueToNPCClueStep
+// 0x0000 (0x0068 - 0x0068)
+class UTaleQuestGiveClueToNPCClueStep : public UTaleQuestStep
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestGiveClueToNPCClueStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.TaleQuestGiveClueToNPCClueStepDesc
+// 0x0020 (0x0050 - 0x0030)
+class UTaleQuestGiveClueToNPCClueStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableClueDescriptor                ClueDescriptor;                                           // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActor                         NPCWithClueComponent;                                     // 0x0040(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestGiveClueToNPCClueStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.TaleQuestRetrieveSpawnedMerchantCaptainFromShipwreckStep
+// 0x0000 (0x0068 - 0x0068)
+class UTaleQuestRetrieveSpawnedMerchantCaptainFromShipwreckStep : public UTaleQuestStep
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestRetrieveSpawnedMerchantCaptainFromShipwreckStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.TaleQuestRetrieveSpawnedMerchantCaptainFromShipwreckStepDesc
+// 0x0020 (0x0050 - 0x0030)
+class UTaleQuestRetrieveSpawnedMerchantCaptainFromShipwreckStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableShipwreck                     ShipwreckSpawnedOn;                                       // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActor                         SpawnedMerchantCaptain;                                   // 0x0040(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestRetrieveSpawnedMerchantCaptainFromShipwreckStepDesc"));
 		return ptr;
 	}
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Lantern_LargeShip_BrigDeck_OutsideBrig.BP_Lantern_LargeShip_BrigDeck_OutsideBrig_C
-// 0x0000 (0x07DD - 0x07DD)
+// 0x0000 (0x07ED - 0x07ED)
 class ABP_Lantern_LargeShip_BrigDeck_OutsideBrig_C : public ABP_InteractableShipLantern_C
 {
 public:

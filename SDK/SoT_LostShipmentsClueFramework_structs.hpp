@@ -11,6 +11,7 @@
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Tales_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_TradeRouteFramework_classes.hpp"
 
 namespace SDK
 {
@@ -33,6 +34,13 @@ struct FClueSiteTypeSupportedDescribedByEntry
 {
 	class UClass*                                      SiteType;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TArray<class UClass*>                              SupportedDescriptors;                                     // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+};
+
+// ScriptStruct LostShipmentsClueFramework.QuestVariableClueSiteArray
+// 0x0000 (0x0010 - 0x0010)
+struct FQuestVariableClueSiteArray : public FQuestVariable
+{
+
 };
 
 // ScriptStruct LostShipmentsClueFramework.QuestVariableClueSite
@@ -68,10 +76,11 @@ struct FSeaClueCreationChoice
 };
 
 // ScriptStruct LostShipmentsClueFramework.EventClueObtained
-// 0x0008
+// 0x0018
 struct FEventClueObtained
 {
 	class UClueDescriptor*                             ObtainedClue;                                             // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
 };
 
 }

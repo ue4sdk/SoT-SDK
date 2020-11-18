@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MysteriousNote.BP_MysteriousNote_C
-// 0x0000 (0x0910 - 0x0910)
+// 0x0000 (0x0960 - 0x0960)
 class ABP_MysteriousNote_C : public AWieldableMysteriousNote
 {
 public:

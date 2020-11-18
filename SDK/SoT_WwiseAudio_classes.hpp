@@ -14,6 +14,21 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class WwiseAudio.AnimNotifyWwiseEmitterComponentRetrievalInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAnimNotifyWwiseEmitterComponentRetrievalInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.AnimNotifyWwiseEmitterComponentRetrievalInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class WwiseAudio.WwiseEvent
 // 0x0028 (0x0050 - 0x0028)
 class UWwiseEvent : public UObject

@@ -138,13 +138,13 @@ public:
 
 
 // Class PositionalVoice.TestVoiceChatEmitter
-// 0x0068 (0x04C8 - 0x0460)
+// 0x0068 (0x04D8 - 0x0470)
 class ATestVoiceChatEmitter : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0460(0x0058) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     PoolWrapper;                                              // 0x04B8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x04C0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0470(0x0058) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     PoolWrapper;                                              // 0x04C8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x04D0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

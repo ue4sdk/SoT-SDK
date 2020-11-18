@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_vfx.wsp_vfx_C
-// 0x0000 (0x0468 - 0x0468)
+// 0x0000 (0x0478 - 0x0478)
 class Awsp_vfx_C : public ALevelScriptActor
 {
 public:

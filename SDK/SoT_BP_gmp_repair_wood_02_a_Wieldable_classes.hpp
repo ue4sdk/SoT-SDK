@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_gmp_repair_wood_02_a_Wieldable.BP_gmp_repair_wood_02_a_Wieldable_C
-// 0x0000 (0x0838 - 0x0838)
+// 0x0000 (0x0848 - 0x0848)
 class ABP_gmp_repair_wood_02_a_Wieldable_C : public ABP_WoodPlank_C
 {
 public:

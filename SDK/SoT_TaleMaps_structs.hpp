@@ -13,6 +13,17 @@
 
 namespace SDK
 {
+//---------------------------------------------------------------------------
+//Script Structs
+//---------------------------------------------------------------------------
+
+// ScriptStruct TaleMaps.TaleQuestVariableMapMarkType
+// 0x0000 (0x0010 - 0x0010)
+struct FTaleQuestVariableMapMarkType : public FQuestVariable
+{
+
+};
+
 }
 
 #ifdef _MSC_VER

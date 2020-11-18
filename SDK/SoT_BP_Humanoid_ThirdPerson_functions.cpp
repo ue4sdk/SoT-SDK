@@ -9360,12 +9360,12 @@ void UBP_Humanoid_ThirdPerson_C::TestAISpawnVariant()
 }
 
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_EmoteFullyStopped
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_EmoteActionStateLeft
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_EmoteFullyStopped()
+void UBP_Humanoid_ThirdPerson_C::AnimNotify_EmoteActionStateLeft()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_EmoteFullyStopped"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_EmoteActionStateLeft"));
 
 	struct
 	{
@@ -9376,12 +9376,28 @@ void UBP_Humanoid_ThirdPerson_C::AnimNotify_EmoteFullyStopped()
 }
 
 
-// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_ClearEmoteIKFlag
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_EmoteActionStateEntered
 // (BlueprintCallable, BlueprintEvent)
 
-void UBP_Humanoid_ThirdPerson_C::AnimNotify_ClearEmoteIKFlag()
+void UBP_Humanoid_ThirdPerson_C::AnimNotify_EmoteActionStateEntered()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_ClearEmoteIKFlag"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_EmoteActionStateEntered"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_EmoteFullyStopped
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_Humanoid_ThirdPerson_C::AnimNotify_EmoteFullyStopped()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_ThirdPerson.BP_Humanoid_ThirdPerson_C.AnimNotify_EmoteFullyStopped"));
 
 	struct
 	{

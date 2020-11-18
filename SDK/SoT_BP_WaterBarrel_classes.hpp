@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WaterBarrel.BP_WaterBarrel_C
-// 0x0000 (0x0710 - 0x0710)
+// 0x0000 (0x0720 - 0x0720)
 class ABP_WaterBarrel_C : public AWaterBarrel
 {
 public:

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_msc_hurdygurdy_par_01_a_ItemInfo.BP_msc_hurdygurdy_par_01_a_ItemInfo_C
-// 0x0008 (0x0548 - 0x0540)
+// 0x0008 (0x05A0 - 0x0598)
 class ABP_msc_hurdygurdy_par_01_a_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0598(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

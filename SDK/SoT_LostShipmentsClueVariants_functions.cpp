@@ -74,6 +74,37 @@ class UClueDescriptor* UGooseChaseClueBlueprintFunctionLibrary::CreateEndOfGoose
 }
 
 
+// Function LostShipmentsClueVariants.ShipwreckClueBlueprintFunctionLibrary.CreateCluePointingToShipwreck
+// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UClueConnectionConfig*   ConnectionConfiguration        (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<class UClass*>          AllowedClueTypes               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class AShipwreck*              Shipwreck                      (Parm, ZeroConstructor, IsPlainOldData)
+// class UClueDescriptor*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UClueDescriptor* UShipwreckClueBlueprintFunctionLibrary::CreateCluePointingToShipwreck(class UClueConnectionConfig* ConnectionConfiguration, TArray<class UClass*> AllowedClueTypes, class AShipwreck* Shipwreck)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.ShipwreckClueBlueprintFunctionLibrary.CreateCluePointingToShipwreck"));
+
+	struct
+	{
+		class UClueConnectionConfig*   ConnectionConfiguration;
+		TArray<class UClass*>          AllowedClueTypes;
+		class AShipwreck*              Shipwreck;
+		class UClueDescriptor*         ReturnValue;
+	} params;
+
+	params.ConnectionConfiguration = ConnectionConfiguration;
+	params.AllowedClueTypes = AllowedClueTypes;
+	params.Shipwreck = Shipwreck;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 }
 
 #ifdef _MSC_VER

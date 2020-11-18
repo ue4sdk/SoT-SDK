@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_Pondie_05_Colour_01_Charcoal.BP_FishingFish_Pondie_05_Colour_01_Charcoal_C
-// 0x0000 (0x0950 - 0x0950)
+// 0x0000 (0x0960 - 0x0960)
 class ABP_FishingFish_Pondie_05_Colour_01_Charcoal_C : public ABP_FishingFish_Pondie_05_C
 {
 public:

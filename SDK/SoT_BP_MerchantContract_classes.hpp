@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantContract.BP_MerchantContract_C
-// 0x0000 (0x0A00 - 0x0A00)
+// 0x0000 (0x09C0 - 0x09C0)
 class ABP_MerchantContract_C : public AMerchantMap
 {
 public:

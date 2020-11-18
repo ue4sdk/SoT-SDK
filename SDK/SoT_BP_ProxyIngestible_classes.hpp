@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ProxyIngestible.BP_ProxyIngestible_C
-// 0x0018 (0x0818 - 0x0800)
+// 0x0018 (0x0840 - 0x0828)
 class ABP_ProxyIngestible_C : public AStaticMeshFloatingItemProxy
 {
 public:
-	class UTrackedOwnerComponent*                      TrackedOwner;                                             // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialManipulationComponent*              MaterialManipulation;                                     // 0x0808(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0810(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTrackedOwnerComponent*                      TrackedOwner;                                             // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialManipulationComponent*              MaterialManipulation;                                     // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BountyMap.BP_BountyMap_C
-// 0x0000 (0x0930 - 0x0930)
+// 0x0000 (0x0940 - 0x0940)
 class ABP_BountyMap_C : public ABountyMap
 {
 public:

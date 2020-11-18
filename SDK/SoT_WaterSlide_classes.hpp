@@ -32,21 +32,21 @@ public:
 
 
 // Class WaterSlide.WaterSlide
-// 0x0070 (0x04D0 - 0x0460)
+// 0x0070 (0x04E0 - 0x0470)
 class AWaterSlide : public AActor
 {
 public:
-	class USplineComponent*                            SlideSpline;                                              // 0x0460(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             Root;                                                     // 0x0468(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWaterSlideParamsDataAsset*                  WaterSlideParamsDataAsset;                                // 0x0470(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPrimitiveComponent*                         EntranceCollisionComponent;                               // 0x0478(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AWaterSlide*                                 ContinuedWaterSlideRoute;                                 // 0x0480(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class AWaterSlide*                                 LeftWaterSlideRoute;                                      // 0x0488(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class AWaterSlide*                                 RightWaterSlideRoute;                                     // 0x0490(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IsEndOfSlide;                                             // 0x0498(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0499(0x0003) MISSED OFFSET
-	struct FVector                                     EndOfSlideLaunchForce;                                    // 0x049C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x28];                                      // 0x04A8(0x0028) MISSED OFFSET
+	class USplineComponent*                            SlideSpline;                                              // 0x0470(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             Root;                                                     // 0x0478(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWaterSlideParamsDataAsset*                  WaterSlideParamsDataAsset;                                // 0x0480(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent*                         EntranceCollisionComponent;                               // 0x0488(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AWaterSlide*                                 ContinuedWaterSlideRoute;                                 // 0x0490(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class AWaterSlide*                                 LeftWaterSlideRoute;                                      // 0x0498(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class AWaterSlide*                                 RightWaterSlideRoute;                                     // 0x04A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IsEndOfSlide;                                             // 0x04A8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x04A9(0x0003) MISSED OFFSET
+	struct FVector                                     EndOfSlideLaunchForce;                                    // 0x04AC(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x04B8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

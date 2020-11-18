@@ -16729,22 +16729,6 @@ void UStaticMeshComponent::GetLocalBounds(struct FVector* Min, struct FVector* M
 }
 
 
-// Function Engine.StaticMeshComponent.EnableAutomaticInstancing
-// (Final, Native, Public, BlueprintCallable)
-
-void UStaticMeshComponent::EnableAutomaticInstancing()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.StaticMeshComponent.EnableAutomaticInstancing"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function Engine.MaterialInterface.GetPhysicalMaterial
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -19778,27 +19762,6 @@ void AAmbientSound::AdjustVolume(float AdjustVolumeDuration, float AdjustVolumeL
 	params.AdjustVolumeLevel = AdjustVolumeLevel;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Engine.AutomaticInstancingActor.GetInstancedStaticMeshes
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<class UInstancedStaticMeshComponent*> ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm)
-
-TArray<class UInstancedStaticMeshComponent*> AAutomaticInstancingActor::GetInstancedStaticMeshes()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.AutomaticInstancingActor.GetInstancedStaticMeshes"));
-
-	struct
-	{
-		TArray<class UInstancedStaticMeshComponent*> ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 

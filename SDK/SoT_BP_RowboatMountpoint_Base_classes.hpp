@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RowboatMountpoint_Base.BP_RowboatMountpoint_Base_C
-// 0x0000 (0x06E8 - 0x06E8)
+// 0x0000 (0x06F8 - 0x06F8)
 class ABP_RowboatMountpoint_Base_C : public AMountpointActor
 {
 public:

@@ -614,13 +614,13 @@ public:
 
 
 // Class Animation.CosmeticItemActor
-// 0x00B0 (0x0510 - 0x0460)
+// 0x00B0 (0x0520 - 0x0470)
 class ACosmeticItemActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0460(0x0008) MISSED OFFSET
-	class USkeletalMeshComponent*                      MeshComponent;                                            // 0x0468(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x0470(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	class USkeletalMeshComponent*                      MeshComponent;                                            // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x0480(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -780,7 +780,7 @@ public:
 
 
 // Class Animation.CustomAnimationMontageDefinitionDataAsset
-// 0x0030 (0x0058 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class UCustomAnimationMontageDefinitionDataAsset : public UDataAsset
 {
 public:
@@ -788,7 +788,7 @@ public:
 	TEnumAsByte<ECustomAnimationMontageType>           MontageType;                                              // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 	class UAnimMontage*                                MontageData;                                              // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FCustomAnimationMontageStagedLoopingData    LoopingData;                                              // 0x0040(0x0018) (Edit, DisableEditOnInstance)
+	struct FCustomAnimationMontageStagedLoopingData    LoopingData;                                              // 0x0040(0x0020) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -949,6 +949,21 @@ public:
 	static bool GetAnimationOverride(struct FLimbIK* LimbIK);
 	static float GetAlphaTarget(struct FLimbIK* LimbIK);
 	static float ConvertBoolToAlpha(bool InBool);
+};
+
+
+// Class Animation.LoadableAnimationsInterface
+// 0x0000 (0x0028 - 0x0028)
+class ULoadableAnimationsInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.LoadableAnimationsInterface"));
+		return ptr;
+	}
+
 };
 
 

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WallClock.BP_WallClock_C
-// 0x0000 (0x04C8 - 0x04C8)
+// 0x0000 (0x04D8 - 0x04D8)
 class ABP_WallClock_C : public AWallClock
 {
 public:

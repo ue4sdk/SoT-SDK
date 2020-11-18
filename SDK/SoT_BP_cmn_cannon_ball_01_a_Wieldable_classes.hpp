@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_cannon_ball_01_a_Wieldable.BP_cmn_cannon_ball_01_a_Wieldable_C
-// 0x0000 (0x0828 - 0x0828)
+// 0x0000 (0x0838 - 0x0838)
 class ABP_cmn_cannon_ball_01_a_Wieldable_C : public ABP_CannonBall_C
 {
 public:

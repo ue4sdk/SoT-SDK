@@ -1523,6 +1523,26 @@ void UAthenaCheatManager::StartVoyage(const class FString& SourceAssetName, bool
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.StartTunnelTaleSequence
+// (Final, Exec, Native, Public)
+// Parameters:
+// class FString                  SourceAssetName                (Parm, ZeroConstructor)
+
+void UAthenaCheatManager::StartTunnelTaleSequence(const class FString& SourceAssetName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.StartTunnelTaleSequence"));
+
+	struct
+	{
+		class FString                  SourceAssetName;
+	} params;
+
+	params.SourceAssetName = SourceAssetName;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.StartSicknessOnPlayer
 // (Final, Exec, Native, Public)
 
@@ -2570,6 +2590,26 @@ void UAthenaCheatManager::SpawnCargoRunCrate(const class FString& SpawnCargoRunC
 	} params;
 
 	params.SpawnCargoRunCrateString = SpawnCargoRunCrateString;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.SpawnCabinDoorInFrontOfPlayer
+// (Final, Exec, Native, Public)
+// Parameters:
+// float                          Distance                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::SpawnCabinDoorInFrontOfPlayer(float Distance)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.SpawnCabinDoorInFrontOfPlayer"));
+
+	struct
+	{
+		float                          Distance;
+	} params;
+
+	params.Distance = Distance;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -6976,6 +7016,29 @@ void UAthenaCheatManager::ForceOpenShop()
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.ForceNPCOnSurfaceLocation
+// (Final, Exec, Native, Public)
+// Parameters:
+// int                            LoctationIndex                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// int                            LoctationPointIndex            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::ForceNPCOnSurfaceLocation(int LoctationIndex, int LoctationPointIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ForceNPCOnSurfaceLocation"));
+
+	struct
+	{
+		int                            LoctationIndex;
+		int                            LoctationPointIndex;
+	} params;
+
+	params.LoctationIndex = LoctationIndex;
+	params.LoctationPointIndex = LoctationPointIndex;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.ForceNPCOnShipToMove
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -6994,29 +7057,6 @@ void UAthenaCheatManager::ForceNPCOnShipToMove(bool FastMove, bool KeepCurrentLo
 
 	params.FastMove = FastMove;
 	params.KeepCurrentLocation = KeepCurrentLocation;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaCheat.AthenaCheatManager.ForceNPCOnShipLocation
-// (Final, Exec, Native, Public)
-// Parameters:
-// int                            LoctationIndex                 (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// int                            LoctationPointIndex            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void UAthenaCheatManager::ForceNPCOnShipLocation(int LoctationIndex, int LoctationPointIndex)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.ForceNPCOnShipLocation"));
-
-	struct
-	{
-		int                            LoctationIndex;
-		int                            LoctationPointIndex;
-	} params;
-
-	params.LoctationIndex = LoctationIndex;
-	params.LoctationPointIndex = LoctationPointIndex;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -7573,6 +7613,22 @@ void UAthenaCheatManager::EnableHeadphoneMixing(bool Enabled)
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.EnableConsoleLogging
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::EnableConsoleLogging()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.EnableConsoleLogging"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.EnableCinematicCamera
 // (Final, Exec, Native, Protected)
 
@@ -8085,6 +8141,22 @@ void UAthenaCheatManager::DisplayDrunkenness(bool Flag)
 	} params;
 
 	params.Flag = Flag;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.DisableConsoleLogging
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::DisableConsoleLogging()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.DisableConsoleLogging"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -9333,6 +9405,22 @@ void UAthenaCheatManager::AdjustGhostShader(bool Enabled, float InStartingAmount
 	params.InVengeanceTargetAmount = InVengeanceTargetAmount;
 	params.InDelayBeforeStart = InDelayBeforeStart;
 	params.InBlendDuration = InBlendDuration;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.AddTradeRouteClueMarkToMapAtCurrentLocation
+// (Final, Exec, Native, Public)
+
+void UAthenaCheatManager::AddTradeRouteClueMarkToMapAtCurrentLocation()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.AddTradeRouteClueMarkToMapAtCurrentLocation"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

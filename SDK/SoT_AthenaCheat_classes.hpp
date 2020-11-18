@@ -116,6 +116,7 @@ public:
 	void StopAllShips();
 	void StopAllPetsHangout();
 	void StartVoyage(const class FString& SourceAssetName, bool Development);
+	void StartTunnelTaleSequence(const class FString& SourceAssetName);
 	void StartSicknessOnPlayer();
 	void StartSelectedRomeVoyage(const class FString& RomeVoyageString);
 	void StartNearestVolcano();
@@ -168,6 +169,7 @@ public:
 	void SpawnCursedCannonball(const class FString& CannonballTypeString);
 	void SpawnCollectorsChestOfType(class FString* ChestTypeString);
 	void SpawnCargoRunCrate(const class FString& SpawnCargoRunCrateString);
+	void SpawnCabinDoorInFrontOfPlayer(float Distance);
 	void SpawnBountyReward(const class FString& BountyTypeString);
 	void SpawnBarrelGroup(bool ForcedCloseSpawn);
 	void SpawnAThousandTreasureChests();
@@ -413,8 +415,8 @@ public:
 	void ForceRequestCampaignsFromServices();
 	void ForcePetHangout(const struct FName& HangoutName, int PositionIndex);
 	void ForceOpenShop();
+	void ForceNPCOnSurfaceLocation(int LoctationIndex, int LoctationPointIndex);
 	void ForceNPCOnShipToMove(bool FastMove, bool KeepCurrentLocation);
-	void ForceNPCOnShipLocation(int LoctationIndex, int LoctationPointIndex);
 	void ForceNPCOnShipIsCurrentlyInDanger(bool IsCurrentlyInDanger);
 	void ForceMigrationServiceHeartBeat();
 	void ForceEmoteWithDescription(const struct FName& EmoteIdentifier, const class FString& DisplayName, const class FString& AudioDescription);
@@ -444,6 +446,7 @@ public:
 	void EnableMermaidSpawning(int Enable);
 	void EnableMermaidDeletion(int Enable);
 	void EnableHeadphoneMixing(bool Enabled);
+	void EnableConsoleLogging();
 	void EnableCinematicCamera();
 	void EnableBeaconOnAllMermaids(int Enable);
 	void EnableAIBehaviour();
@@ -473,6 +476,7 @@ public:
 	void DisplayLandmarkNames();
 	void DisplayFallDamageDebug(int Enable);
 	void DisplayDrunkenness(bool Flag);
+	void DisableConsoleLogging();
 	void DisableCinematicCamera();
 	void DisableAIBehaviour();
 	void DisableAIAbilities();
@@ -540,6 +544,7 @@ public:
 	void AllJoinAlliance();
 	void AIPlayerShip();
 	void AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InVengeanceStartingAmount, float InVengeanceTargetAmount, float InDelayBeforeStart, float InBlendDuration);
+	void AddTradeRouteClueMarkToMapAtCurrentLocation();
 	void AddTornMapPiece();
 	void AddShipToCrew(const class FString& ActorIdString, const class FString& CrewId);
 	void AddRandomPetForAllPlayers();

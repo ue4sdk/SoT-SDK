@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_Plentifin_03_Colour_02_Amber.BP_FishingFish_Plentifin_03_Colour_02_Amber_C
-// 0x0000 (0x0950 - 0x0950)
+// 0x0000 (0x0960 - 0x0960)
 class ABP_FishingFish_Plentifin_03_Colour_02_Amber_C : public ABP_FishingFish_Plentifin_03_C
 {
 public:

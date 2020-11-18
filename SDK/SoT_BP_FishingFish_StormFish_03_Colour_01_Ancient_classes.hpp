@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_StormFish_03_Colour_01_Ancient.BP_FishingFish_StormFish_03_Colour_01_Ancient_C
-// 0x0000 (0x0950 - 0x0950)
+// 0x0000 (0x0960 - 0x0960)
 class ABP_FishingFish_StormFish_03_Colour_01_Ancient_C : public ABP_FishingFish_StormFish_03_C
 {
 public:

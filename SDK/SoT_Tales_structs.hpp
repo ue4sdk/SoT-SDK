@@ -8,13 +8,13 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Tales_enums.hpp"
+#include "SoT_TaleMaps_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_MerchantContracts_classes.hpp"
-#include "SoT_TaleMaps_classes.hpp"
 #include "SoT_EmissaryFramework_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_MerchantContracts_classes.hpp"
 #include "SoT_PrioritisedPrompts_classes.hpp"
 
 namespace SDK
@@ -202,6 +202,13 @@ struct FStepMerchantItemDesc
 // ScriptStruct Tales.QuestVariableItemInfo
 // 0x0000 (0x0010 - 0x0010)
 struct FQuestVariableItemInfo : public FQuestVariable
+{
+
+};
+
+// ScriptStruct Tales.QuestVariableTexture
+// 0x0000 (0x0010 - 0x0010)
+struct FQuestVariableTexture : public FQuestVariable
 {
 
 };

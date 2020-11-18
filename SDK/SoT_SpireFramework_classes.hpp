@@ -30,13 +30,13 @@ public:
 
 
 // Class SpireFramework.SpireService
-// 0x0060 (0x04C0 - 0x0460)
+// 0x0060 (0x04D0 - 0x0470)
 class ASpireService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0460(0x0008) MISSED OFFSET
-	TArray<struct FSpireInfo>                          SpireLevels;                                              // 0x0468(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0478(0x0048) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
+	TArray<struct FSpireInfo>                          SpireLevels;                                              // 0x0478(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x0488(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -128,12 +128,14 @@ public:
 
 
 // Class SpireFramework.TaleRegisterSpireStepDesc
-// 0x0020 (0x0050 - 0x0030)
+// 0x0040 (0x0070 - 0x0030)
 class UTaleRegisterSpireStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableSpireHandle                   AllocatedSpireHandle;                                     // 0x0030(0x0010) (Edit)
-	struct FQuestVariableVector                        AllocatedSpireLocation;                                   // 0x0040(0x0010) (Edit)
+	struct FQuestVariableVector                        SelectionOriginPoint;                                     // 0x0030(0x0010) (Edit)
+	struct FQuestVariableFloat                         PlayerExclusionSelectionRadius;                           // 0x0040(0x0010) (Edit)
+	struct FQuestVariableSpireHandle                   AllocatedSpireHandle;                                     // 0x0050(0x0010) (Edit)
+	struct FQuestVariableVector                        AllocatedSpireLocation;                                   // 0x0060(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{

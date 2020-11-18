@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VomitProjectile.BP_VomitProjectile_C
-// 0x0000 (0x0798 - 0x0798)
+// 0x0000 (0x07A8 - 0x07A8)
 class ABP_VomitProjectile_C : public AVomitProjectile
 {
 public:

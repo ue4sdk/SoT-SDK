@@ -23,6 +23,27 @@ enum class EWaterQueryResult : uint8_t
 };
 
 
+// Enum Water.EWaterHeightType
+enum class EWaterHeightType : uint8_t
+{
+	EWaterHeightType__Dynamic      = 0,
+	EWaterHeightType__Static       = 1,
+	EWaterHeightType__EWaterHeightType_MAX = 2
+};
+
+
+// Enum Water.EWaterSplashProbeType
+enum class EWaterSplashProbeType : uint8_t
+{
+	EWaterSplashProbeType__ThresholdedRateOfChange = 0,
+	EWaterSplashProbeType__StateChangeWaterToAir = 1,
+	EWaterSplashProbeType__StateChangeAirToWater = 2,
+	EWaterSplashProbeType__StateChangeAny = 3,
+	EWaterSplashProbeType__Continuous = 4,
+	EWaterSplashProbeType__EWaterSplashProbeType_MAX = 5
+};
+
+
 // Enum Water.EBuoyancyDragSampleType
 enum class EBuoyancyDragSampleType : uint8_t
 {
@@ -39,18 +60,6 @@ enum class EBuoyancySampleType : uint8_t
 	EBuoyancySampleType__Cuboidal  = 1,
 	EBuoyancySampleType__ProbeCurve = 2,
 	EBuoyancySampleType__EBuoyancySampleType_MAX = 3
-};
-
-
-// Enum Water.EWaterSplashProbeType
-enum class EWaterSplashProbeType : uint8_t
-{
-	EWaterSplashProbeType__ThresholdedRateOfChange = 0,
-	EWaterSplashProbeType__StateChangeWaterToAir = 1,
-	EWaterSplashProbeType__StateChangeAirToWater = 2,
-	EWaterSplashProbeType__StateChangeAny = 3,
-	EWaterSplashProbeType__Continuous = 4,
-	EWaterSplashProbeType__EWaterSplashProbeType_MAX = 5
 };
 
 

@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class EnchantedCompass.MultiTargetEnchantedCompass
-// 0x0030 (0x0900 - 0x08D0)
+// 0x0030 (0x0910 - 0x08E0)
 class AMultiTargetEnchantedCompass : public ACompass
 {
 public:
-	TArray<struct FVector>                             Locations;                                                // 0x08D0(0x0010) (Edit, Net, ZeroConstructor, Transient, EditConst)
-	TArray<struct FGuid>                               LocationIds;                                              // 0x08E0(0x0010) (ZeroConstructor, Transient)
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x08F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x08F8(0x0008) MISSED OFFSET
+	TArray<struct FVector>                             Locations;                                                // 0x08E0(0x0010) (Edit, Net, ZeroConstructor, Transient, EditConst)
+	TArray<struct FGuid>                               LocationIds;                                              // 0x08F0(0x0010) (ZeroConstructor, Transient)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0900(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0908(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -34,7 +34,7 @@ public:
 
 
 // Class EnchantedCompass.PrototypeMultiTargetEnchantedCompass
-// 0x0000 (0x0900 - 0x0900)
+// 0x0000 (0x0910 - 0x0910)
 class APrototypeMultiTargetEnchantedCompass : public AMultiTargetEnchantedCompass
 {
 public:
@@ -149,16 +149,33 @@ public:
 };
 
 
-// Class EnchantedCompass.TaleQuestSetCompassTargetToActorStep
-// 0x0018 (0x0080 - 0x0068)
-class UTaleQuestSetCompassTargetToActorStep : public UTaleQuestStep
+// Class EnchantedCompass.TaleQuestSetCompassTargetToTargetStep
+// 0x0028 (0x0090 - 0x0068)
+class UTaleQuestSetCompassTargetToTargetStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0068(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class EnchantedCompass.TaleQuestSetCompassTargetToActorStep"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class EnchantedCompass.TaleQuestSetCompassTargetToTargetStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class EnchantedCompass.TaleQuestSetCompassTargetBaseStepDesc
+// 0x0008 (0x0038 - 0x0030)
+class UTaleQuestSetCompassTargetBaseStepDesc : public UTaleQuestStepDesc
+{
+public:
+	TEnumAsByte<ETargetUpdateReason>                   TargetUpdateReason;                                       // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class EnchantedCompass.TaleQuestSetCompassTargetBaseStepDesc"));
 		return ptr;
 	}
 
@@ -166,17 +183,31 @@ public:
 
 
 // Class EnchantedCompass.TaleQuestSetCompassTargetToActorStepDesc
-// 0x0018 (0x0048 - 0x0030)
-class UTaleQuestSetCompassTargetToActorStepDesc : public UTaleQuestStepDesc
+// 0x0010 (0x0048 - 0x0038)
+class UTaleQuestSetCompassTargetToActorStepDesc : public UTaleQuestSetCompassTargetBaseStepDesc
 {
 public:
-	TEnumAsByte<ETargetUpdateReason>                   TargetUpdateReason;                                       // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 	struct FQuestVariableActor                         TargetActor;                                              // 0x0038(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class EnchantedCompass.TaleQuestSetCompassTargetToActorStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class EnchantedCompass.TaleQuestSetCompassTargetToPointStepDesc
+// 0x0010 (0x0048 - 0x0038)
+class UTaleQuestSetCompassTargetToPointStepDesc : public UTaleQuestSetCompassTargetBaseStepDesc
+{
+public:
+	struct FQuestVariableOrientedPoint                 TargetPoint;                                              // 0x0038(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class EnchantedCompass.TaleQuestSetCompassTargetToPointStepDesc"));
 		return ptr;
 	}
 

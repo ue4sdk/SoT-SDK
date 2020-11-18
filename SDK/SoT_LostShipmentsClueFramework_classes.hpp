@@ -204,6 +204,38 @@ public:
 };
 
 
+// Class LostShipmentsClueFramework.ClueDescriptorContainerInterface
+// 0x0000 (0x0028 - 0x0028)
+class UClueDescriptorContainerInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.ClueDescriptorContainerInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.ClueDescriptorContainerComponent
+// 0x0010 (0x00D8 - 0x00C8)
+class UClueDescriptorContainerComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	class UClueDescriptor*                             CurrentClue;                                              // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.ClueDescriptorContainerComponent"));
+		return ptr;
+	}
+
+};
+
+
 // Class LostShipmentsClueFramework.ClueFactoryConfig
 // 0x0028 (0x0050 - 0x0028)
 class UClueFactoryConfig : public UDataAsset
@@ -252,6 +284,66 @@ public:
 
 
 	static void GiveClueToParticipant(class AActor* Participant, class UClueDescriptor* Clue);
+};
+
+
+// Class LostShipmentsClueFramework.SeaClueSiteTypesDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class USeaClueSiteTypesDataAsset : public UDataAsset
+{
+public:
+	TArray<class UClass*>                              ClueSiteTypes;                                            // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.SeaClueSiteTypesDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStep
+// 0x0078 (0x00E0 - 0x0068)
+class UTaleQuestChooseLandOrSeaStep : public UTaleQuestStep
+{
+public:
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
+	class USeaClueSiteTypesDataAsset*                  SeaClueSiteTypes;                                         // 0x0080(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x58];                                      // 0x0088(0x0058) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStepDesc
+// 0x0060 (0x0090 - 0x0030)
+class UTaleQuestChooseLandOrSeaStepDesc : public UTaleQuestStepDesc
+{
+public:
+	class USeaClueSiteTypesDataAsset*                  SeaClueSiteTypes;                                         // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FirstClueApproxProportion;                                // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ProjectionAngleInDegrees;                                 // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ProjectionProportion;                                     // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LandClueChanceWhenPreviousClueWasSea;                     // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LandClueChanceWhenPreviousClueWasLand;                    // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	struct FQuestVariableClueSiteArray                 ClueSites;                                                // 0x0050(0x0010) (Edit)
+	struct FQuestVariableTradeRouteData                TradeRouteData;                                           // 0x0060(0x0010) (Edit)
+	struct FQuestVariableBool                          IsSeaLocation;                                            // 0x0070(0x0010) (Edit)
+	struct FQuestVariableNameArray                     ValidIslandNames;                                         // 0x0080(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStepDesc"));
+		return ptr;
+	}
+
 };
 
 
@@ -391,6 +483,39 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestIsClueOfTypeStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStep
+// 0x0000 (0x0068 - 0x0068)
+class UTaleQuestSpawnLootItemInClueSiteStep : public UTaleQuestStep
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStepDesc
+// 0x0030 (0x0060 - 0x0030)
+class UTaleQuestSpawnLootItemInClueSiteStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableClass                         LootItem;                                                 // 0x0030(0x0010) (Edit)
+	struct FQuestVariableClueSite                      ClueSite;                                                 // 0x0040(0x0010) (Edit)
+	struct FQuestVariableItemInfo                      SpawnedLootItem;                                          // 0x0050(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStepDesc"));
 		return ptr;
 	}
 

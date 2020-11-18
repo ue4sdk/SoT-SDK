@@ -14,6 +14,52 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class Siren.DistantIdleAIAbility
+// 0x0000 (0x0070 - 0x0070)
+class UDistantIdleAIAbility : public UAthenaAIAbility
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.DistantIdleAIAbility"));
+		return ptr;
+	}
+
+};
+
+
+// Class Siren.DistantIdleAIAbilityParams
+// 0x0010 (0x00A8 - 0x0098)
+class UDistantIdleAIAbilityParams : public UAthenaAIAbilityParams
+{
+public:
+	TArray<struct FAthenaAIControllerParamValue>       NamedControllerParams;                                    // 0x0098(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.DistantIdleAIAbilityParams"));
+		return ptr;
+	}
+
+};
+
+
+// Class Siren.DistantIdleAIAbilityType
+// 0x0000 (0x0028 - 0x0028)
+class UDistantIdleAIAbilityType : public UAthenaAIAbilityType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.DistantIdleAIAbilityType"));
+		return ptr;
+	}
+
+};
+
+
 // Class Siren.ScratchAIAbility
 // 0x0008 (0x0078 - 0x0070)
 class UScratchAIAbility : public UAthenaAIAbility

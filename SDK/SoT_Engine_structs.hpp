@@ -1615,6 +1615,13 @@ struct FEdGraphPinType
 	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Engine.AutomaticInstancingMeshComponentArray
+// 0x0010
+struct FAutomaticInstancingMeshComponentArray
+{
+	TArray<class UInstancedStaticMeshComponent*>       Array;                                                    // 0x0000(0x0010) (ExportObject, ZeroConstructor)
+};
+
 // ScriptStruct Engine.CullDistanceSizePair
 // 0x0008
 struct FCullDistanceSizePair

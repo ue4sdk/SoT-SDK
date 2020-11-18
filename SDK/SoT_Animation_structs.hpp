@@ -100,12 +100,12 @@ struct FCosmeticItemAnimationSetLoopData
 };
 
 // ScriptStruct Animation.CustomAnimationMontageStagedLoopingData
-// 0x0018
+// 0x0020
 struct FCustomAnimationMontageStagedLoopingData
 {
 	class UAnimMontage*                                Into;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UAnimMontage*                                Loop;                                                     // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAnimMontage*                                Outof;                                                    // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UAnimMontage*>                        OutOfAnims;                                               // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct Animation.CustomAnimationMontageDefinitionEntry
@@ -285,21 +285,28 @@ struct FAnimNode_WeightedLoadOnDemandSquencePlayer : public FAnimNode_AssetPlaye
 	unsigned char                                      UnknownData02[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
 };
 
+// ScriptStruct Animation.EventCustomAnimationMontageExitRequested
+// 0x000C
+struct FEventCustomAnimationMontageExitRequested
+{
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
+};
+
 // ScriptStruct Animation.EventCustomAnimationMontageRequested
 // 0x0008
 struct FEventCustomAnimationMontageRequested
 {
-	struct FCustomAnimationMontageId                   MontageId;                                                // 0x0000(0x0008)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
 };
 
 // ScriptStruct Animation.CustomAnimationMontageStateMachine
-// 0x0118
+// 0x00C0
 struct FCustomAnimationMontageStateMachine
 {
 	class UCustomAnimationMontageDefinitionDataAsset*  ActiveState;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UCustomAnimationMontageDefinitionDataAsset*  PendingState;                                             // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UAnimMontage*                                ActiveMontage;                                            // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x100];                                     // 0x0018(0x0100) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0018(0x00A8) MISSED OFFSET
 };
 
 // ScriptStruct Animation.EventPreviewCharacterAnimationRequest

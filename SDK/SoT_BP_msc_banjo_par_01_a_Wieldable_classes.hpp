@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_msc_banjo_par_01_a_Wieldable.BP_msc_banjo_par_01_a_Wieldable_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x08E0 - 0x08E0)
 class ABP_msc_banjo_par_01_a_Wieldable_C : public ABP_Banjo_C
 {
 public:

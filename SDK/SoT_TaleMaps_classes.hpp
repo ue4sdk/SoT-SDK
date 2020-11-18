@@ -14,6 +14,72 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class TaleMaps.AddMarkToTornMapStep
+// 0x0028 (0x0090 - 0x0068)
+class UAddMarkToTornMapStep : public UTaleQuestStep
+{
+public:
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0068(0x0020) MISSED OFFSET
+	class UClass*                                      MapMark;                                                  // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TaleMaps.AddMarkToTornMapStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class TaleMaps.AddMarkToTornMapStepDescBase
+// 0x0020 (0x0050 - 0x0030)
+class UAddMarkToTornMapStepDescBase : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableGuid                          MapId;                                                    // 0x0030(0x0010) (Edit)
+	struct FTaleQuestVariableMapMarkType               MapMark;                                                  // 0x0040(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TaleMaps.AddMarkToTornMapStepDescBase"));
+		return ptr;
+	}
+
+};
+
+
+// Class TaleMaps.AddMarkToTornMapAtLocationStepDesc
+// 0x0010 (0x0060 - 0x0050)
+class UAddMarkToTornMapAtLocationStepDesc : public UAddMarkToTornMapStepDescBase
+{
+public:
+	struct FQuestVariableVector                        MarkLocation;                                             // 0x0050(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TaleMaps.AddMarkToTornMapAtLocationStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class TaleMaps.AddMarkToTornMapAtActorLocationStepDesc
+// 0x0010 (0x0060 - 0x0050)
+class UAddMarkToTornMapAtActorLocationStepDesc : public UAddMarkToTornMapStepDescBase
+{
+public:
+	struct FQuestVariableActor                         MarkLocation;                                             // 0x0050(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TaleMaps.AddMarkToTornMapAtActorLocationStepDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class TaleMaps.GetNumberOfCollectedTornMapPiecesStep
 // 0x0020 (0x0088 - 0x0068)
 class UGetNumberOfCollectedTornMapPiecesStep : public UTaleQuestStep
@@ -153,11 +219,11 @@ public:
 
 
 // Class TaleMaps.TaleQuestAddTornMapStep
-// 0x0050 (0x00B8 - 0x0068)
+// 0x0040 (0x00A8 - 0x0068)
 class UTaleQuestAddTornMapStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0068(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0068(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -169,11 +235,11 @@ public:
 
 
 // Class TaleMaps.TaleQuestAddTradeRouteMapStep
-// 0x0020 (0x0088 - 0x0068)
+// 0x0030 (0x0098 - 0x0068)
 class UTaleQuestAddTradeRouteMapStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0068(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x0068(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -236,15 +302,14 @@ public:
 
 
 // Class TaleMaps.TaleQuestAddTornMapStepDesc
-// 0x0050 (0x0080 - 0x0030)
+// 0x0040 (0x0070 - 0x0030)
 class UTaleQuestAddTornMapStepDesc : public UTaleQuestMapStepDescBase
 {
 public:
 	struct FQuestVariableName                          IslandName;                                               // 0x0030(0x0010) (Edit)
 	struct FQuestVariableInt                           NumberOfPieces;                                           // 0x0040(0x0010) (Edit)
-	struct FQuestVariableVector                        MarkLocation;                                             // 0x0050(0x0010)
-	struct FQuestVariableDataAsset                     MapParams;                                                // 0x0060(0x0010) (Edit)
-	struct FQuestVariableGuid                          MapId;                                                    // 0x0070(0x0010) (Edit)
+	struct FQuestVariableDataAsset                     MapParams;                                                // 0x0050(0x0010) (Edit)
+	struct FQuestVariableGuid                          MapId;                                                    // 0x0060(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -256,12 +321,13 @@ public:
 
 
 // Class TaleMaps.TaleQuestAddTradeRouteMapStepDesc
-// 0x0020 (0x0050 - 0x0030)
+// 0x0030 (0x0060 - 0x0030)
 class UTaleQuestAddTradeRouteMapStepDesc : public UTaleQuestMapStepDescBase
 {
 public:
 	struct FQuestVariableDataAsset                     TradeRouteData;                                           // 0x0030(0x0010) (Edit)
-	struct FQuestVariableGuid                          MapId;                                                    // 0x0040(0x0010) (Edit)
+	struct FQuestVariableText                          VesselName;                                               // 0x0040(0x0010) (Edit)
+	struct FQuestVariableGuid                          MapId;                                                    // 0x0050(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{

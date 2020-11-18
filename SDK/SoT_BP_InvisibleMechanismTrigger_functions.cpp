@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_InvisibleMechanismTrigger.BP_InvisibleMechanismTrigger_C.RefreshDeactivationTimer
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+
+void ABP_InvisibleMechanismTrigger_C::RefreshDeactivationTimer()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InvisibleMechanismTrigger.BP_InvisibleMechanismTrigger_C.RefreshDeactivationTimer"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_InvisibleMechanismTrigger.BP_InvisibleMechanismTrigger_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

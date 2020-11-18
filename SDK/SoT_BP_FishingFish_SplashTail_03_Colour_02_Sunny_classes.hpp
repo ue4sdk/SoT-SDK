@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_SplashTail_03_Colour_02_Sunny.BP_FishingFish_SplashTail_03_Colour_02_Sunny_C
-// 0x0000 (0x0950 - 0x0950)
+// 0x0000 (0x0960 - 0x0960)
 class ABP_FishingFish_SplashTail_03_Colour_02_Sunny_C : public ABP_FishingFish_SplashTail_03_C
 {
 public:

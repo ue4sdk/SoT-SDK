@@ -171,7 +171,7 @@ public:
 
 
 // Class Reviving.ReviveComponent
-// 0x0128 (0x0240 - 0x0118)
+// 0x0140 (0x0258 - 0x0118)
 class UReviveComponent : public UInteractableComponent
 {
 public:
@@ -184,9 +184,9 @@ public:
 	class UClass*                                      ReviveableRepresentationClass;                            // 0x0140(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0xC];                                       // 0x0148(0x000C) MISSED OFFSET
 	bool                                               ReviveWindowIsOpen;                                       // 0x0154(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0xBB];                                      // 0x0155(0x00BB) MISSED OFFSET
-	struct FStatus                                     RevivableStatus;                                          // 0x0210(0x0018) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData04[0x18];                                      // 0x0228(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData03[0xD3];                                      // 0x0155(0x00D3) MISSED OFFSET
+	struct FStatus                                     RevivableStatus;                                          // 0x0228(0x0018) (Edit, DisableEditOnInstance)
+	unsigned char                                      UnknownData04[0x18];                                      // 0x0240(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -197,6 +197,21 @@ public:
 
 	void OnRep_ReviveState(TEnumAsByte<EReviveState> PreviousReviveState);
 	void HandleOwningCharacterEndPlay();
+};
+
+
+// Class Reviving.ReviveConditionalStatTrigger
+// 0x0000 (0x0030 - 0x0030)
+class UReviveConditionalStatTrigger : public UConditionalStatsTriggerType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Reviving.ReviveConditionalStatTrigger"));
+		return ptr;
+	}
+
 };
 
 
@@ -272,33 +287,33 @@ public:
 
 
 // Class Reviving.ReviveGhost
-// 0x0258 (0x06B8 - 0x0460)
+// 0x0258 (0x06C8 - 0x0470)
 class AReviveGhost : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0460(0x0010) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            CorpseMaterials;                                          // 0x0470(0x0010) (ZeroConstructor)
-	class USceneComponent*                             Root;                                                     // 0x0480(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class USkeletalMeshComponent*                      MeshComponent;                                            // 0x0488(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             AstralCordContainer;                                      // 0x0490(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UAnimationDataStoreComponent*                AnimationDataStoreComponent;                              // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UPostProcessComponent*                       PostProcessComponent;                                     // 0x04A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UDitherComponent*                            DitherComponent;                                          // 0x04A8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	class UReviveAudioComponent*                       AudioComponent;                                           // 0x04B0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x04B8(0x0010) MISSED OFFSET
-	TEnumAsByte<ENetRole>                              RevivableOwnerNetRole;                                    // 0x04C8(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x7];                                       // 0x04C9(0x0007) MISSED OFFSET
-	class UGhostDataAsset*                             ReviveGhostDataAsset;                                     // 0x04D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UReviveEffectsDataAsset*                     ReviveEffectsDataAsset;                                   // 0x04D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FReviveEffectsValues                        ReviveEffectsValues;                                      // 0x04E0(0x0020)
-	struct FModeSpecificReviveSettings                 ReviveSettings;                                           // 0x0500(0x0030)
-	unsigned char                                      UnknownData03[0x13C];                                     // 0x0530(0x013C) MISSED OFFSET
-	TWeakObjectPtr<class UParticleSystemComponent>     ContinuousOnTheBodyLoopingVFX;                            // 0x066C(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	TWeakObjectPtr<class UParticleSystemComponent>     ReviveInProgressLoopingVFX;                               // 0x0674(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x1C];                                      // 0x067C(0x001C) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            AstralCordDynamicMaterials;                               // 0x0698(0x0010) (ZeroConstructor, Transient)
-	struct FGhostPlayModeParameters                    GhostPlayModeSpecificParameters;                          // 0x06A8(0x000C) (Transient)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x06B4(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0470(0x0010) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*>            CorpseMaterials;                                          // 0x0480(0x0010) (ZeroConstructor)
+	class USceneComponent*                             Root;                                                     // 0x0490(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class USkeletalMeshComponent*                      MeshComponent;                                            // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             AstralCordContainer;                                      // 0x04A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UAnimationDataStoreComponent*                AnimationDataStoreComponent;                              // 0x04A8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UPostProcessComponent*                       PostProcessComponent;                                     // 0x04B0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UDitherComponent*                            DitherComponent;                                          // 0x04B8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	class UReviveAudioComponent*                       AudioComponent;                                           // 0x04C0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x04C8(0x0010) MISSED OFFSET
+	TEnumAsByte<ENetRole>                              RevivableOwnerNetRole;                                    // 0x04D8(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x7];                                       // 0x04D9(0x0007) MISSED OFFSET
+	class UGhostDataAsset*                             ReviveGhostDataAsset;                                     // 0x04E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UReviveEffectsDataAsset*                     ReviveEffectsDataAsset;                                   // 0x04E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FReviveEffectsValues                        ReviveEffectsValues;                                      // 0x04F0(0x0020)
+	struct FModeSpecificReviveSettings                 ReviveSettings;                                           // 0x0510(0x0030)
+	unsigned char                                      UnknownData03[0x13C];                                     // 0x0540(0x013C) MISSED OFFSET
+	TWeakObjectPtr<class UParticleSystemComponent>     ContinuousOnTheBodyLoopingVFX;                            // 0x067C(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	TWeakObjectPtr<class UParticleSystemComponent>     ReviveInProgressLoopingVFX;                               // 0x0684(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x1C];                                      // 0x068C(0x001C) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*>            AstralCordDynamicMaterials;                               // 0x06A8(0x0010) (ZeroConstructor, Transient)
+	struct FGhostPlayModeParameters                    GhostPlayModeSpecificParameters;                          // 0x06B8(0x000C) (Transient)
+	unsigned char                                      UnknownData05[0x4];                                       // 0x06C4(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

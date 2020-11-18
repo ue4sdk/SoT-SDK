@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Shovel.BP_Shovel_C
-// 0x0008 (0x0898 - 0x0890)
+// 0x0008 (0x08A8 - 0x08A0)
 class ABP_Shovel_C : public AShovel
 {
 public:
-	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x08A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

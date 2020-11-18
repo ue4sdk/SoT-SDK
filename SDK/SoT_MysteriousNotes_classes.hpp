@@ -135,15 +135,15 @@ public:
 
 
 // Class MysteriousNotes.MysteriousNotesService
-// 0x00C8 (0x0528 - 0x0460)
+// 0x00C8 (0x0538 - 0x0470)
 class AMysteriousNotesService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0460(0x0028) MISSED OFFSET
-	class UMysteriousNoteSettings*                     CachedNoteSettings;                                       // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UWieldableMysteriousNoteDataAsset*           WieldableNoteDataAsset;                                   // 0x0490(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMysteriousNotesCompletionEventsModelDataAsset* CompletionEventsModelData;                                // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x88];                                      // 0x04A0(0x0088) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0470(0x0028) MISSED OFFSET
+	class UMysteriousNoteSettings*                     CachedNoteSettings;                                       // 0x0498(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UWieldableMysteriousNoteDataAsset*           WieldableNoteDataAsset;                                   // 0x04A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMysteriousNotesCompletionEventsModelDataAsset* CompletionEventsModelData;                                // 0x04A8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x88];                                      // 0x04B0(0x0088) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -198,21 +198,21 @@ public:
 
 
 // Class MysteriousNotes.WieldableMysteriousNote
-// 0x0110 (0x0910 - 0x0800)
+// 0x0150 (0x0960 - 0x0810)
 class AWieldableMysteriousNote : public ASkeletalMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0800(0x0008) MISSED OFFSET
-	class UMaybeCompressedCanvasRenderTarget2D*        RenderTarget;                                             // 0x0808(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UWieldableMysteriousNoteLayout*              NoteLayout;                                               // 0x0810(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	int                                                CanvasWidth;                                              // 0x0818(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	int                                                CanvasHeight;                                             // 0x081C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              FontScale;                                                // 0x0820(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x54];                                      // 0x0824(0x0054) MISSED OFFSET
-	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0878(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0880(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UInventoryItemComponent*                     InventoryItemComponent;                                   // 0x0888(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x80];                                      // 0x0890(0x0080) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0810(0x0008) MISSED OFFSET
+	class UMaybeCompressedCanvasRenderTarget2D*        RenderTarget;                                             // 0x0818(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UWieldableMysteriousNoteLayout*              NoteLayout;                                               // 0x0820(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	int                                                CanvasWidth;                                              // 0x0828(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                CanvasHeight;                                             // 0x082C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              FontScale;                                                // 0x0830(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x54];                                      // 0x0834(0x0054) MISSED OFFSET
+	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0888(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0890(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItemComponent;                                   // 0x0898(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xC0];                                      // 0x08A0(0x00C0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

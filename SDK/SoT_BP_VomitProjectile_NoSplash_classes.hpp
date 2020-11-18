@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VomitProjectile_NoSplash.BP_VomitProjectile_NoSplash_C
-// 0x0000 (0x0798 - 0x0798)
+// 0x0000 (0x07A8 - 0x07A8)
 class ABP_VomitProjectile_NoSplash_C : public ABP_VomitProjectile_C
 {
 public:

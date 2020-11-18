@@ -6,6 +6,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
+#include <locale>
 #include <unordered_set>
 #include <string>
 

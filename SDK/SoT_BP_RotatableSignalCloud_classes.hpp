@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RotatableSignalCloud.BP_RotatableSignalCloud_C
-// 0x0010 (0x0530 - 0x0520)
+// 0x0010 (0x0540 - 0x0530)
 class ABP_RotatableSignalCloud_C : public AGameplayEventSignal_StaticMesh
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0520(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class URotateMeshToLocalPlayerComponent*           RotateMeshToLocalPlayer;                                  // 0x0528(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0530(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class URotateMeshToLocalPlayerComponent*           RotateMeshToLocalPlayer;                                  // 0x0538(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

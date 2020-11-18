@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_gmp_fishing_rod_ash_01_a_Wieldable.BP_gmp_fishing_rod_ash_01_a_Wieldable_C
-// 0x0000 (0x0B60 - 0x0B60)
+// 0x0000 (0x0BD0 - 0x0BD0)
 class ABP_gmp_fishing_rod_ash_01_a_Wieldable_C : public ABP_FishingRod_C
 {
 public:
