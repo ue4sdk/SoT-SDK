@@ -238,6 +238,21 @@ public:
 };
 
 
+// Class AthenaInput.OpenQuickMenuNotificationInputId
+// 0x0000 (0x0038 - 0x0038)
+class UOpenQuickMenuNotificationInputId : public UNotificationInputId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaInput.OpenQuickMenuNotificationInputId"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaInput.PressedNotificationInputId
 // 0x0000 (0x0038 - 0x0038)
 class UPressedNotificationInputId : public UNotificationInputId

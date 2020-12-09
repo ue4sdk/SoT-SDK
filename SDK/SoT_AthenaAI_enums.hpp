@@ -264,6 +264,17 @@ enum class ESwimRotationMode : uint8_t
 };
 
 
+// Enum AthenaAI.EArcToTargetDirection
+enum class EArcToTargetDirection : uint8_t
+{
+	EArcToTargetDirection__VelocityOrRotation = 0,
+	EArcToTargetDirection__Up      = 1,
+	EArcToTargetDirection__Down    = 2,
+	EArcToTargetDirection__HorizontalGoalDirection = 3,
+	EArcToTargetDirection__EArcToTargetDirection_MAX = 4
+};
+
+
 // Enum AthenaAI.EArcFollowingMode
 enum class EArcFollowingMode : uint8_t
 {

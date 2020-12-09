@@ -12,6 +12,26 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function SpireFramework.HeightTriggerableEffectsComponent.SetMovementDirection
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EDirectionOfMovement> InMovement                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void UHeightTriggerableEffectsComponent::SetMovementDirection(TEnumAsByte<EDirectionOfMovement> InMovement)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SpireFramework.HeightTriggerableEffectsComponent.SetMovementDirection"));
+
+	struct
+	{
+		TEnumAsByte<EDirectionOfMovement> InMovement;
+	} params;
+
+	params.InMovement = InMovement;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function SpireFramework.SpireService.OnRep_SpireLevels
 // (Final, Native, Private, HasOutParms)
 // Parameters:

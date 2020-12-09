@@ -49,7 +49,7 @@ public:
 class ULandClueCreator : public UObject
 {
 public:
-	class UObject*                                     WorldContextObject;                                       // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -65,7 +65,7 @@ public:
 class USeaClueCreator : public UObject
 {
 public:
-	class UObject*                                     WorldContextObject;                                       // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -136,16 +136,17 @@ public:
 	}
 
 
-	static class UClueDescriptor* CreateCluePointingToSite(class UClueConnectionConfig* ConnectionConfiguration, TArray<class UClass*> AllowedClueTypes, const struct FClueSite& TargetSite);
+	static class UClueDescriptor* CreateCluePointingToSite(class UClueConnectionConfig* ConnectionConfiguration, int Difficulty, TArray<class UClass*> AllowedClueTypes, class UTaleQuestSelectorService* SelectorService, const struct FVector& SourceLocation, const struct FClueSite& TargetSite);
 };
 
 
 // Class LostShipmentsClueFramework.ClueDescriptorGenerator
-// 0x0008 (0x0030 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class UClueDescriptorGenerator : public UObject
 {
 public:
 	class UClass*                                      DescriptorType;                                           // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<class UClass*>                              SupportedDestinationTypes;                                // 0x0030(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -283,7 +284,23 @@ public:
 	}
 
 
-	static void GiveClueToParticipant(class AActor* Participant, class UClueDescriptor* Clue);
+	static void GiveClueToParticipant(class AActor* Participant, class UClueDescriptor* Clue, class UClass* ClueSite);
+};
+
+
+// Class LostShipmentsClueFramework.LootForVoyageRankDescAsset
+// 0x0010 (0x0038 - 0x0028)
+class ULootForVoyageRankDescAsset : public UDataAsset
+{
+public:
+	TArray<struct FLootToRangeDist>                    RankBasedLootDistribution;                                // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.LootForVoyageRankDescAsset"));
+		return ptr;
+	}
+
 };
 
 
@@ -304,13 +321,13 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStep
-// 0x0078 (0x00E0 - 0x0068)
+// 0x0060 (0x00C8 - 0x0068)
 class UTaleQuestChooseLandOrSeaStep : public UTaleQuestStep
 {
 public:
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
 	class USeaClueSiteTypesDataAsset*                  SeaClueSiteTypes;                                         // 0x0080(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x58];                                      // 0x0088(0x0058) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x40];                                      // 0x0088(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -347,14 +364,46 @@ public:
 };
 
 
+// Class LostShipmentsClueFramework.TaleQuestClueSiteService
+// 0x0018 (0x0058 - 0x0040)
+class UTaleQuestClueSiteService : public UTaleQuestService
+{
+public:
+	class UTaleQuestClueSiteServiceDesc*               Desc;                                                     // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FClueSite>                           ClueSites;                                                // 0x0048(0x0010) (ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestClueSiteService"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.TaleQuestClueSiteServiceDesc
+// 0x0000 (0x0028 - 0x0028)
+class UTaleQuestClueSiteServiceDesc : public UTaleQuestServiceDesc
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestClueSiteServiceDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class LostShipmentsClueFramework.TaleQuestGenerateCluePointingToSiteStep
-// 0x0038 (0x00A0 - 0x0068)
+// 0x0058 (0x00C0 - 0x0068)
 class UTaleQuestGenerateCluePointingToSiteStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0068(0x0020) MISSED OFFSET
-	TArray<class UClass*>                              AllowedClueTypes;                                         // 0x0088(0x0010) (ZeroConstructor)
-	class UClueConnectionConfig*                       ConnectionConfiguration;                                  // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0068(0x0040) MISSED OFFSET
+	TArray<class UClass*>                              AllowedClueTypes;                                         // 0x00A8(0x0010) (ZeroConstructor)
+	class UClueConnectionConfig*                       ConnectionConfiguration;                                  // 0x00B8(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -366,14 +415,16 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateCluePointingToSiteStepDesc
-// 0x0038 (0x0068 - 0x0030)
+// 0x0058 (0x0088 - 0x0030)
 class UTaleQuestGenerateCluePointingToSiteStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableClueSite                      TargetClueSite;                                           // 0x0030(0x0010) (Edit)
-	struct FQuestVariableClueDescriptor                GeneratedClue;                                            // 0x0040(0x0010) (Edit)
-	TArray<class UClass*>                              AllowedClueTypes;                                         // 0x0050(0x0010) (Edit, ZeroConstructor)
-	class UClueConnectionConfig*                       ConnectionConfiguration;                                  // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FQuestVariableInt                           Difficulty;                                               // 0x0030(0x0010) (Edit)
+	struct FQuestVariableVector                        SourceLocation;                                           // 0x0040(0x0010) (Edit)
+	struct FQuestVariableClueSite                      TargetClueSite;                                           // 0x0050(0x0010) (Edit)
+	struct FQuestVariableClueDescriptor                GeneratedClue;                                            // 0x0060(0x0010) (Edit)
+	TArray<class UClass*>                              AllowedClueTypes;                                         // 0x0070(0x0010) (Edit, ZeroConstructor)
+	class UClueConnectionConfig*                       ConnectionConfiguration;                                  // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -454,6 +505,41 @@ public:
 };
 
 
+// Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStep
+// 0x0028 (0x0090 - 0x0068)
+class UTaleQuestGenerateLootDescForVoyageRankStep : public UTaleQuestStep
+{
+public:
+	class ULootForVoyageRankDescAsset*                 LootForRankDescAsset;                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStepDesc
+// 0x0028 (0x0058 - 0x0030)
+class UTaleQuestGenerateLootDescForVoyageRankStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableInt                           VoyageRank;                                               // 0x0030(0x0010) (Edit)
+	struct FQuestVariableItemDescTypeArray             LootDescArray;                                            // 0x0040(0x0010) (Edit)
+	class ULootForVoyageRankDescAsset*                 LootForRankDescAsset;                                     // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStepDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class LostShipmentsClueFramework.TaleQuestIsClueOfTypeStep
 // 0x0028 (0x0090 - 0x0068)
 class UTaleQuestIsClueOfTypeStep : public UTaleQuestStep
@@ -516,6 +602,38 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStep
+// 0x0000 (0x0068 - 0x0068)
+class UTaleQuestStoreClueOnActorStep : public UTaleQuestStep
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStepDesc
+// 0x0020 (0x0050 - 0x0030)
+class UTaleQuestStoreClueOnActorStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableClueDescriptor                ClueDescriptor;                                           // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActor                         Actor;                                                    // 0x0040(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStepDesc"));
 		return ptr;
 	}
 

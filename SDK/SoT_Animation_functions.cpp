@@ -246,6 +246,42 @@ void UCosmeticItemAnimationComponent::DestroyAllCosmeticItems()
 }
 
 
+// Function Animation.CustomAnimationMontageComponent.Multicast_StopCustomMontage
+// (Final, Net, Native, Event, NetMulticast, Private)
+
+void UCustomAnimationMontageComponent::Multicast_StopCustomMontage()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.CustomAnimationMontageComponent.Multicast_StopCustomMontage"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Animation.CustomAnimationMontageComponent.Multicast_PlayCustomMontage
+// (Final, Net, Native, Event, NetMulticast, Private)
+// Parameters:
+// struct FCustomAnimationMontageId InId                           (ConstParm, Parm, ReferenceParm)
+
+void UCustomAnimationMontageComponent::Multicast_PlayCustomMontage(const struct FCustomAnimationMontageId& InId)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.CustomAnimationMontageComponent.Multicast_PlayCustomMontage"));
+
+	struct
+	{
+		struct FCustomAnimationMontageId InId;
+	} params;
+
+	params.InId = InId;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Animation.DockableInterface.HandleDestroy
 // (Native, Public)
 

@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_CannonBall_Cur_Fire.BP_Projectile_CannonBall_Cur_Fire_C
-// 0x0008 (0x06D0 - 0x06C8)
+// 0x0008 (0x06E0 - 0x06D8)
 class ABP_Projectile_CannonBall_Cur_Fire_C : public ABP_Projectile_CannonBall_Cursed_C
 {
 public:
-	class UMeshRotatorComponent*                       MeshRotator;                                              // 0x06C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMeshRotatorComponent*                       MeshRotator;                                              // 0x06D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

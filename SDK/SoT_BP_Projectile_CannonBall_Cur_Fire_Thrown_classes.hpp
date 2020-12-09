@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_CannonBall_Cur_Fire_Thrown.BP_Projectile_CannonBall_Cur_Fire_Thrown_C
-// 0x0000 (0x06F0 - 0x06F0)
+// 0x0000 (0x0700 - 0x0700)
 class ABP_Projectile_CannonBall_Cur_Fire_Thrown_C : public ABP_Projectile_CannonBall_Cursed_ComplexWaterHits_C
 {
 public:

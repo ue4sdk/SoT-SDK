@@ -12174,6 +12174,26 @@ bool APlayerCameraManager::BlueprintUpdateCamera(class AActor* CameraTarget, str
 }
 
 
+// Function Engine.PlayerCameraManager.BlendOutAllInstancesOfCameraShake
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  Shake                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerCameraManager::BlendOutAllInstancesOfCameraShake(class UClass* Shake)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerCameraManager.BlendOutAllInstancesOfCameraShake"));
+
+	struct
+	{
+		class UClass*                  Shake;
+	} params;
+
+	params.Shake = Shake;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.PlayerCameraManager.AddNewCameraModifier
 // (Native, Public, BlueprintCallable)
 // Parameters:
@@ -15383,6 +15403,26 @@ void APlayerController::ClientCancelPendingMapChange()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.PlayerController.ClientBlendOutCameraShake
+// (Net, NetReliable, Native, Event, Public, NetClient, BlueprintCallable)
+// Parameters:
+// class UClass*                  Shake                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void APlayerController::ClientBlendOutCameraShake(class UClass* Shake)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.PlayerController.ClientBlendOutCameraShake"));
+
+	struct
+	{
+		class UClass*                  Shake;
+	} params;
+
+	params.Shake = Shake;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -27270,6 +27310,26 @@ void UArrowComponent::SetArrowColor_DEPRECATED(const struct FColor& NewColor)
 }
 
 
+// Function Engine.FFTWaterComponent.SetWaterPositionOffset
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector2D               PositionOffset                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void UFFTWaterComponent::SetWaterPositionOffset(const struct FVector2D& PositionOffset)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.FFTWaterComponent.SetWaterPositionOffset"));
+
+	struct
+	{
+		struct FVector2D               PositionOffset;
+	} params;
+
+	params.PositionOffset = PositionOffset;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Engine.FFTWaterComponent.SetWaterColour
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -27513,6 +27573,28 @@ void UFFTWaterComponent::SetAmbientColour(const struct FLinearColor& AmbientColo
 	params.AmbientColour = AmbientColour;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Engine.FFTWaterComponent.GetWaterPositionOffset
+// (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FVector2D               PositionOffset                 (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+
+void UFFTWaterComponent::GetWaterPositionOffset(struct FVector2D* PositionOffset)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Engine.FFTWaterComponent.GetWaterPositionOffset"));
+
+	struct
+	{
+		struct FVector2D               PositionOffset;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (PositionOffset != nullptr)
+		*PositionOffset = params.PositionOffset;
 }
 
 

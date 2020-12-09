@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MediumShip_Sail.BP_MediumShip_Sail_C
-// 0x0000 (0x0610 - 0x0610)
+// 0x0000 (0x0620 - 0x0620)
 class ABP_MediumShip_Sail_C : public ABP_Sail_C
 {
 public:

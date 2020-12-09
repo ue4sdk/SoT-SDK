@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_cannonball_chain_shot_01_a_Proxy.BP_cmn_cannonball_chain_shot_01_a_Proxy_C
-// 0x0000 (0x06A8 - 0x06A8)
+// 0x0000 (0x06D0 - 0x06D0)
 class ABP_cmn_cannonball_chain_shot_01_a_Proxy_C : public ABP_CannonBallProxy_C
 {
 public:

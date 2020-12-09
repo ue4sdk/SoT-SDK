@@ -8,16 +8,16 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AthenaAI_enums.hpp"
-#include "SoT_AIModule_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 #include "SoT_StatusEffects_classes.hpp"
-#include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
-#include "SoT_Pets_classes.hpp"
+#include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_Animation_classes.hpp"
+#include "SoT_Pets_classes.hpp"
 
 namespace SDK
 {
@@ -107,6 +107,14 @@ struct FAIFormDamageResponse
 	bool                                               IsKnockbackDisabled;                                      // 0x000D(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               IsStunDisabled;                                           // 0x000E(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x1];                                       // 0x000F(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct AthenaAI.AthenaAIControllerParamValue
+// 0x000C
+struct FAthenaAIControllerParamValue
+{
+	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              Value;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.AthenaAIAbilityPlayerBasedRange
@@ -205,14 +213,6 @@ struct FAthenaAIControllerHealthCustomisation
 	unsigned char                                      UnknownData00[0x2];                                       // 0x0002(0x0002) MISSED OFFSET
 	float                                              MinHealth;                                                // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              MaxHealth;                                                // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct AthenaAI.AthenaAIControllerParamValue
-// 0x000C
-struct FAthenaAIControllerParamValue
-{
-	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              Value;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.AthenaAIControllerWeightedRangesParamValue
@@ -1016,6 +1016,24 @@ struct FAIProgressiveWavesSpawnerArchive : public FAISpawnerArchive
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct AthenaAI.AITargetBounds
+// 0x0018
+struct FAITargetBounds
+{
+	struct FVector                                     Offset;                                                   // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     Extents;                                                  // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.AITargetInfo
+// 0x0034
+struct FAITargetInfo
+{
+	struct FAITargetBounds                             Bounds;                                                   // 0x0000(0x0018)
+	struct FVector                                     TargetPos;                                                // 0x0018(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     TargetVelocity;                                           // 0x0024(0x000C) (ZeroConstructor, IsPlainOldData)
+	float                                              TargetYaw;                                                // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct AthenaAI.AthenaAIControllerTargetPickingData
 // 0x0038
 struct FAthenaAIControllerTargetPickingData
@@ -1355,24 +1373,6 @@ struct FEventAIPawnAddedToAIRegion
 {
 	class APawn*                                       AIPawn;                                                   // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
-};
-
-// ScriptStruct AthenaAI.AITargetBounds
-// 0x0018
-struct FAITargetBounds
-{
-	struct FVector                                     Offset;                                                   // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Extents;                                                  // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct AthenaAI.AITargetInfo
-// 0x0034
-struct FAITargetInfo
-{
-	struct FAITargetBounds                             Bounds;                                                   // 0x0000(0x0018)
-	struct FVector                                     TargetPos;                                                // 0x0018(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     TargetVelocity;                                           // 0x0024(0x000C) (ZeroConstructor, IsPlainOldData)
-	float                                              TargetYaw;                                                // 0x0030(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaAI.AITelemetryFragmentInput

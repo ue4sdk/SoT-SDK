@@ -7,7 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_BP_MerchantCrate_classes.hpp"
+#include "SoT_BP_MerchantCrate_Static_Wieldable_classes.hpp"
 
 namespace SDK
 {

@@ -235,11 +235,12 @@ public:
 
 
 // Class TaleMaps.TaleQuestAddTradeRouteMapStep
-// 0x0030 (0x0098 - 0x0068)
+// 0x0038 (0x00A0 - 0x0068)
 class UTaleQuestAddTradeRouteMapStep : public UTaleQuestStep
 {
 public:
 	unsigned char                                      UnknownData00[0x30];                                      // 0x0068(0x0030) MISSED OFFSET
+	class UClueSiteTypeToMapMarkIdDataAsset*           ClueSiteToMarkMap;                                        // 0x0098(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -321,13 +322,14 @@ public:
 
 
 // Class TaleMaps.TaleQuestAddTradeRouteMapStepDesc
-// 0x0030 (0x0060 - 0x0030)
+// 0x0038 (0x0068 - 0x0030)
 class UTaleQuestAddTradeRouteMapStepDesc : public UTaleQuestMapStepDescBase
 {
 public:
 	struct FQuestVariableDataAsset                     TradeRouteData;                                           // 0x0030(0x0010) (Edit)
 	struct FQuestVariableText                          VesselName;                                               // 0x0040(0x0010) (Edit)
 	struct FQuestVariableGuid                          MapId;                                                    // 0x0050(0x0010) (Edit)
+	class UClueSiteTypeToMapMarkIdDataAsset*           ClueSiteToMapMarkIdMap;                                   // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

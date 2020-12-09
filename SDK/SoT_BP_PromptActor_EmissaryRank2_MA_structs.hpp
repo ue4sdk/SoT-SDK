@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_PrioritisedPrompts_classes.hpp"
 #include "SoT_BP_PromptActorBase_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_PrioritisedPrompts_classes.hpp"
 
 namespace SDK
 {

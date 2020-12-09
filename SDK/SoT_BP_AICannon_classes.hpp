@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AICannon.BP_AICannon_C
-// 0x0008 (0x0BD8 - 0x0BD0)
+// 0x0008 (0x0BA0 - 0x0B98)
 class ABP_AICannon_C : public ABP_Cannon_C
 {
 public:
-	class UAthenaAIInteractableComponent*              AthenaAIInteractable;                                     // 0x0BD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAthenaAIInteractableComponent*              AthenaAIInteractable;                                     // 0x0B98(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

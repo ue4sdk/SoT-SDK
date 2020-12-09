@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_small_rocks.BP_cmn_small_rocks_C
-// 0x0000 (0x0505 - 0x0505)
+// 0x0000 (0x0515 - 0x0515)
 class ABP_cmn_small_rocks_C : public ABP_Placement_Garden_C
 {
 public:

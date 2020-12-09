@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_GunpowderBarrel_ItemInfo.BP_MerchantCrate_GunpowderBarrel_ItemInfo_C
-// 0x0008 (0x07B8 - 0x07B0)
+// 0x0008 (0x07D0 - 0x07C8)
 class ABP_MerchantCrate_GunpowderBarrel_ItemInfo_C : public ABootyItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x07B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_reef_pebbles_shells.BP_cmn_reef_pebbles_shells_C
-// 0x0000 (0x0505 - 0x0505)
+// 0x0000 (0x0515 - 0x0515)
 class ABP_cmn_reef_pebbles_shells_C : public ABP_Placement_Garden_C
 {
 public:

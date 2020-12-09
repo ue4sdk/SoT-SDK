@@ -21,6 +21,16 @@ enum class ETrackedObjectiveType : uint8_t
 };
 
 
+// Enum SeasonProgressionFramework.ESeasonGoalType
+enum class ESeasonGoalType : uint8_t
+{
+	ESeasonGoalType__Goal          = 0,
+	ESeasonGoalType__Challenge     = 1,
+	ESeasonGoalType__Individual    = 2,
+	ESeasonGoalType__ESeasonGoalType_MAX = 3
+};
+
+
 }
 
 #ifdef _MSC_VER

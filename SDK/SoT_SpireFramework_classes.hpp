@@ -14,6 +14,51 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class SpireFramework.HeightTriggerableAudioComponentParams
+// 0x0030 (0x0058 - 0x0028)
+class UHeightTriggerableAudioComponentParams : public UDataAsset
+{
+public:
+	class UWwiseObjectPoolWrapper*                     Pool;                                                     // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 RisingOneShot;                                            // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 RisingStart;                                              // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 RisingStop;                                               // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 LoweringStart;                                            // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 LoweringStop;                                             // 0x0050(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.HeightTriggerableAudioComponentParams"));
+		return ptr;
+	}
+
+};
+
+
+// Class SpireFramework.HeightTriggerableEffectsComponent
+// 0x0078 (0x0140 - 0x00C8)
+class UHeightTriggerableEffectsComponent : public UActorComponent
+{
+public:
+	class UHeightTriggerableAudioComponentParams*      AudioParams;                                              // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector                                     EmitterOffset;                                            // 0x00D0(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RisingAudioTriggerValue;                                  // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      CameraShake;                                              // 0x00E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ShakeInnerRadius;                                         // 0x00E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ShakeOuterRadius;                                         // 0x00EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x00F0(0x0050) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.HeightTriggerableEffectsComponent"));
+		return ptr;
+	}
+
+
+	void SetMovementDirection(TEnumAsByte<EDirectionOfMovement> InMovement);
+};
+
+
 // Class SpireFramework.SpireServiceInterface
 // 0x0000 (0x0028 - 0x0028)
 class USpireServiceInterface : public UInterface

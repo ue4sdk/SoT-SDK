@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WaterExclusionVolume.BP_WaterExclusionVolume_C
-// 0x0008 (0x0478 - 0x0470)
+// 0x0008 (0x0488 - 0x0480)
 class ABP_WaterExclusionVolume_C : public AStaticMeshActor
 {
 public:
-	class UWaterPlaneExclusionComponent*               WaterPlaneExclusion;                                      // 0x0470(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWaterPlaneExclusionComponent*               WaterPlaneExclusion;                                      // 0x0480(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

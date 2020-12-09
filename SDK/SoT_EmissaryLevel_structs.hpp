@@ -11,9 +11,9 @@
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
-#include "SoT_EmissaryFramework_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_ItemQuality_classes.hpp"
+#include "SoT_EmissaryFramework_classes.hpp"
 
 namespace SDK
 {

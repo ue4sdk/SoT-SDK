@@ -31,7 +31,7 @@ public:
 
 
 // Class LostShipmentsClueVariants.AbandonedNoteClueDescriptorGenerator
-// 0x0000 (0x0030 - 0x0030)
+// 0x0000 (0x0040 - 0x0040)
 class UAbandonedNoteClueDescriptorGenerator : public UClueDescriptorGenerator
 {
 public:
@@ -50,8 +50,8 @@ public:
 class UAbandonedNoteClueTextAsset : public UDataAsset
 {
 public:
-	class UClass*                                      DestinationType;                                          // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FText>                               Descriptions;                                             // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FText>                               Descriptions;                                             // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      DestinationType;                                          // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -62,16 +62,31 @@ public:
 };
 
 
-// Class LostShipmentsClueVariants.AbandonedNoteClueTextIndexAsset
-// 0x0010 (0x0038 - 0x0028)
-class UAbandonedNoteClueTextIndexAsset : public UDataAsset
+// Class LostShipmentsClueVariants.AbandonedNoteClueTextIndexAssetBase
+// 0x0000 (0x0028 - 0x0028)
+class UAbandonedNoteClueTextIndexAssetBase : public UDataAsset
 {
 public:
-	TArray<class UAbandonedNoteClueTextAsset*>         ClueDestinationDescriptions;                              // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.AbandonedNoteClueTextIndexAsset"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.AbandonedNoteClueTextIndexAssetBase"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.AbandonedNoteClueTextIndexAssetMap
+// 0x0010 (0x0038 - 0x0028)
+class UAbandonedNoteClueTextIndexAssetMap : public UDataAsset
+{
+public:
+	TArray<struct FClueDestinationToTextIndex>         TextIndexMappings;                                        // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.AbandonedNoteClueTextIndexAssetMap"));
 		return ptr;
 	}
 
@@ -109,14 +124,14 @@ public:
 
 
 // Class LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent
-// 0x00E8 (0x01B0 - 0x00C8)
+// 0x00D0 (0x0198 - 0x00C8)
 class UAbandonedNoteClueDestinationContainerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x00C8(0x0010) MISSED OFFSET
 	class UClueDestinationDescriptor*                  CurrentDestination;                                       // 0x00D8(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	TAssetPtr<class UAbandonedNoteClueTextIndexAsset>  ClueTextIndexAsset;                                       // 0x00E0(0x0020) (Edit, DisableEditOnInstance)
-	unsigned char                                      UnknownData01[0xB0];                                      // 0x0100(0x00B0) MISSED OFFSET
+	class UAbandonedNoteClueTextIndexAssetMap*         ClueTextIndexAssetMap;                                    // 0x00E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB0];                                      // 0x00E8(0x00B0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -126,6 +141,71 @@ public:
 
 
 	void OnRep_CurrentDestination();
+};
+
+
+// Class LostShipmentsClueVariants.NPCByNameClueDestinationDescriptor
+// 0x0010 (0x0038 - 0x0028)
+class UNPCByNameClueDestinationDescriptor : public UClueDestinationDescriptor
+{
+public:
+	struct FGuid                                       NPCIdentifier;                                            // 0x0028(0x0010) (Net, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.NPCByNameClueDestinationDescriptor"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.AbandonedNoteClueGenderSpecificTextAsset
+// 0x0018 (0x0040 - 0x0028)
+class UAbandonedNoteClueGenderSpecificTextAsset : public UDataAsset
+{
+public:
+	TArray<struct FGenderSpecificTextPairings>         Descriptions;                                             // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	class UClass*                                      DestinationType;                                          // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.AbandonedNoteClueGenderSpecificTextAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.AbandonedNoteClueGenderSpecificTextIndexAsset
+// 0x0010 (0x0038 - 0x0028)
+class UAbandonedNoteClueGenderSpecificTextIndexAsset : public UAbandonedNoteClueTextIndexAssetBase
+{
+public:
+	TArray<class UAbandonedNoteClueGenderSpecificTextAsset*> ClueDestinationDescriptions;                              // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.AbandonedNoteClueGenderSpecificTextIndexAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.AbandonedNoteClueTextIndexAsset
+// 0x0010 (0x0038 - 0x0028)
+class UAbandonedNoteClueTextIndexAsset : public UAbandonedNoteClueTextIndexAssetBase
+{
+public:
+	TArray<class UAbandonedNoteClueTextAsset*>         ClueDestinationDescriptions;                              // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.AbandonedNoteClueTextIndexAsset"));
+		return ptr;
+	}
+
 };
 
 
@@ -171,6 +251,51 @@ public:
 };
 
 
+// Class LostShipmentsClueVariants.BarrelsOfPlentyClueDestinationGenerator
+// 0x0000 (0x0028 - 0x0028)
+class UBarrelsOfPlentyClueDestinationGenerator : public UClueDestinationGenerator
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.BarrelsOfPlentyClueDestinationGenerator"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.BarrelsOfPlentyClueSiteType
+// 0x0000 (0x0028 - 0x0028)
+class UBarrelsOfPlentyClueSiteType : public UClueSiteType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.BarrelsOfPlentyClueSiteType"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.BarrelsOfPlentySeaClueCreator
+// 0x0000 (0x0030 - 0x0030)
+class UBarrelsOfPlentySeaClueCreator : public USeaClueCreator
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.BarrelsOfPlentySeaClueCreator"));
+		return ptr;
+	}
+
+};
+
+
 // Class LostShipmentsClueVariants.ClueVariantsBlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UClueVariantsBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
@@ -203,6 +328,67 @@ public:
 };
 
 
+// Class LostShipmentsClueVariants.ExistingToPhasedNPCIndexAssetMap
+// 0x0010 (0x0038 - 0x0028)
+class UExistingToPhasedNPCIndexAssetMap : public UDataAsset
+{
+public:
+	TArray<struct FExistingNPCToPhasedNPC>             NPCIndexMappings;                                         // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.ExistingToPhasedNPCIndexAssetMap"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.FloatingMessageInABottleClueDestinationGenerator
+// 0x0000 (0x0028 - 0x0028)
+class UFloatingMessageInABottleClueDestinationGenerator : public UClueDestinationGenerator
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.FloatingMessageInABottleClueDestinationGenerator"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.FloatingMessageInABottleClueSiteType
+// 0x0000 (0x0028 - 0x0028)
+class UFloatingMessageInABottleClueSiteType : public UClueSiteType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.FloatingMessageInABottleClueSiteType"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.FloatingMessageInABottleSeaClueCreator
+// 0x0000 (0x0030 - 0x0030)
+class UFloatingMessageInABottleSeaClueCreator : public USeaClueCreator
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.FloatingMessageInABottleSeaClueCreator"));
+		return ptr;
+	}
+
+};
+
+
 // Class LostShipmentsClueVariants.GooseChaseClueBlueprintFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UGooseChaseClueBlueprintFunctionLibrary : public UBlueprintFunctionLibrary
@@ -217,6 +403,39 @@ public:
 
 
 	static class UClueDescriptor* CreateEndOfGooseChaseClue();
+};
+
+
+// Class LostShipmentsClueVariants.InteractableGrammaticalGenderInterface
+// 0x0000 (0x0028 - 0x0028)
+class UInteractableGrammaticalGenderInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.InteractableGrammaticalGenderInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.InteractableGrammaticalGenderComponent
+// 0x0010 (0x00D8 - 0x00C8)
+class UInteractableGrammaticalGenderComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	TEnumAsByte<EInteractableGrammaticalGender>        GrammaticalGender;                                        // 0x00D0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.InteractableGrammaticalGenderComponent"));
+		return ptr;
+	}
+
 };
 
 
@@ -269,10 +488,11 @@ public:
 
 
 // Class LostShipmentsClueVariants.MerchantCaptainSpawnComponent
-// 0x0000 (0x0430 - 0x0430)
+// 0x0010 (0x0440 - 0x0430)
 class UMerchantCaptainSpawnComponent : public UItemSpawnComponent
 {
 public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0430(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -345,15 +565,33 @@ public:
 
 
 // Class LostShipmentsClueVariants.ObtainClueOnWieldComponent
-// 0x0008 (0x0140 - 0x0138)
+// 0x0018 (0x0150 - 0x0138)
 class UObtainClueOnWieldComponent : public UOnItemWieldedComponent
 {
 public:
-	class UClueDescriptor*                             ClueToObtain;                                             // 0x0138(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0138(0x0008) MISSED OFFSET
+	class UClueDescriptor*                             ClueToObtain;                                             // 0x0140(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class UClass*                                      ClueSiteType;                                             // 0x0148(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.ObtainClueOnWieldComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.ObtainClueFromContainerOnWieldComponent
+// 0x0070 (0x01C0 - 0x0150)
+class UObtainClueFromContainerOnWieldComponent : public UObtainClueOnWieldComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x70];                                      // 0x0150(0x0070) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.ObtainClueFromContainerOnWieldComponent"));
 		return ptr;
 	}
 
@@ -390,7 +628,22 @@ public:
 	}
 
 
-	static class UClueDescriptor* CreateCluePointingToShipwreck(class UClueConnectionConfig* ConnectionConfiguration, TArray<class UClass*> AllowedClueTypes, class AShipwreck* Shipwreck);
+	static class UClueDescriptor* CreateCluePointingToShipwreck(class UClueConnectionConfig* ConnectionConfiguration, int Difficulty, TArray<class UClass*> AllowedClueTypes, class UTaleQuestSelectorService* SelectorService, const struct FVector& SourceLocation, class AShipwreck* Shipwreck);
+};
+
+
+// Class LostShipmentsClueVariants.ShipwreckClueDestinationDescriptor
+// 0x0000 (0x0028 - 0x0028)
+class UShipwreckClueDestinationDescriptor : public UClueDestinationDescriptor
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.ShipwreckClueDestinationDescriptor"));
+		return ptr;
+	}
+
 };
 
 
@@ -425,13 +678,14 @@ public:
 
 
 // Class LostShipmentsClueVariants.TaleQuestClueInventoryService
-// 0x00E8 (0x0128 - 0x0040)
+// 0x0130 (0x0170 - 0x0040)
 class UTaleQuestClueInventoryService : public UTaleQuestService
 {
 public:
-	TArray<class UClueDescriptor*>                     ObtainedClues;                                            // 0x0040(0x0010) (ZeroConstructor, Transient)
-	TAssetPtr<class UClass>                            AbandonedNoteDesc;                                        // 0x0050(0x0020) (Transient)
-	unsigned char                                      UnknownData00[0xB8];                                      // 0x0070(0x00B8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0040(0x0048) MISSED OFFSET
+	TArray<class UClueDescriptor*>                     ObtainedClues;                                            // 0x0088(0x0010) (ZeroConstructor, Transient)
+	TAssetPtr<class UClass>                            AbandonedNoteDesc;                                        // 0x0098(0x0020) (Transient)
+	unsigned char                                      UnknownData01[0xB8];                                      // 0x00B8(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -458,32 +712,66 @@ public:
 };
 
 
-// Class LostShipmentsClueVariants.TaleQuestGiveClueToNPCClueStep
+// Class LostShipmentsClueVariants.TaleQuestGetNPCActorFromClueSiteStep
 // 0x0000 (0x0068 - 0x0068)
-class UTaleQuestGiveClueToNPCClueStep : public UTaleQuestStep
+class UTaleQuestGetNPCActorFromClueSiteStep : public UTaleQuestStep
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestGiveClueToNPCClueStep"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestGetNPCActorFromClueSiteStep"));
 		return ptr;
 	}
 
 };
 
 
-// Class LostShipmentsClueVariants.TaleQuestGiveClueToNPCClueStepDesc
+// Class LostShipmentsClueVariants.TaleQuestGetNPCActorFromClueSiteStepDesc
 // 0x0020 (0x0050 - 0x0030)
-class UTaleQuestGiveClueToNPCClueStepDesc : public UTaleQuestStepDesc
+class UTaleQuestGetNPCActorFromClueSiteStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableClueDescriptor                ClueDescriptor;                                           // 0x0030(0x0010) (Edit)
-	struct FQuestVariableActor                         NPCWithClueComponent;                                     // 0x0040(0x0010) (Edit)
+	struct FQuestVariableClueSite                      ClueSite;                                                 // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActor                         NPCFromClueSite;                                          // 0x0040(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestGiveClueToNPCClueStepDesc"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestGetNPCActorFromClueSiteStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.TaleQuestGetPhasedVersionOfActorFromAssetMapStep
+// 0x0008 (0x0070 - 0x0068)
+class UTaleQuestGetPhasedVersionOfActorFromAssetMapStep : public UTaleQuestStep
+{
+public:
+	class UExistingToPhasedNPCIndexAssetMap*           NPCIndexAssetMap;                                         // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestGetPhasedVersionOfActorFromAssetMapStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.TaleQuestGetPhasedVersionOfActorFromAssetMapStepDesc
+// 0x0028 (0x0058 - 0x0030)
+class UTaleQuestGetPhasedVersionOfActorFromAssetMapStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableActor                         ExistingNPCActor;                                         // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActorAssetType                ObtainedPhasedNPCActorType;                               // 0x0040(0x0010) (Edit)
+	class UExistingToPhasedNPCIndexAssetMap*           IndexAssetMap;                                            // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.TaleQuestGetPhasedVersionOfActorFromAssetMapStepDesc"));
 		return ptr;
 	}
 
@@ -555,12 +843,49 @@ public:
 };
 
 
+// Class LostShipmentsClueVariants.WaitForClueCollectedStep
+// 0x0010 (0x0078 - 0x0068)
+class UWaitForClueCollectedStep : public UTaleQuestStep
+{
+public:
+	class UClueDescriptor*                             ClueDesc;                                                 // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0070(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.WaitForClueCollectedStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueVariants.WaitForClueCollectedStepDesc
+// 0x0010 (0x0040 - 0x0030)
+class UWaitForClueCollectedStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableClueDescriptor                Clue;                                                     // 0x0030(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueVariants.WaitForClueCollectedStepDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class LostShipmentsClueVariants.WashedUpMessageInABottleClueCreator
-// 0x0020 (0x0050 - 0x0030)
+// 0x0030 (0x0060 - 0x0030)
 class UWashedUpMessageInABottleClueCreator : public ULandClueCreator
 {
 public:
 	TAssetPtr<class UClass>                            MessageInABottleItem;                                     // 0x0030(0x0020) (Edit, DisableEditOnInstance)
+	int                                                LootItemSpawnXYDistanceFromClueIncrementMin;              // 0x0050(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                LootItemSpawnXYDistanceFromClueIncrementMax;              // 0x0054(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                LootItemSpawnZOffset;                                     // 0x0058(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -587,7 +912,7 @@ public:
 
 
 // Class LostShipmentsClueVariants.WashedUpMessageInABottleClueSiteData
-// 0x0058 (0x0080 - 0x0028)
+// 0x0088 (0x00B0 - 0x0028)
 class UWashedUpMessageInABottleClueSiteData : public UClueSiteData
 {
 public:
@@ -596,6 +921,7 @@ public:
 	struct FGuid                                       IslandSpawnLocationReservationId;                         // 0x0038(0x0010) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0048(0x0008) MISSED OFFSET
 	struct FTransform                                  SpawnTransform;                                           // 0x0050(0x0030) (IsPlainOldData)
+	unsigned char                                      UnknownData01[0x30];                                      // 0x0080(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

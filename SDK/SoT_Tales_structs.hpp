@@ -8,20 +8,31 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Tales_enums.hpp"
-#include "SoT_TaleMaps_classes.hpp"
-#include "SoT_AIModule_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_EmissaryFramework_classes.hpp"
+#include "SoT_TaleMaps_classes.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_MerchantContracts_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
 #include "SoT_PrioritisedPrompts_classes.hpp"
+#include "SoT_MerchantContracts_classes.hpp"
+#include "SoT_EmissaryFramework_classes.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct Tales.IslandTypeWeights
+// 0x0014
+struct FIslandTypeWeights
+{
+	float                                              FeatureIslandWeight;                                      // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ResourceIslandWeight;                                     // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              OutpostIslandWeight;                                      // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              SeapostIslandWeight;                                      // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              FortIslandWeight;                                         // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
 
 // ScriptStruct Tales.SplineFootprintPathTool
 // 0x0001
@@ -94,6 +105,20 @@ struct FQuestVariableSetEQSTaleContextValue : public FQuestVariable
 // ScriptStruct Tales.QuestVariableLinkEQSContext
 // 0x0000 (0x0010 - 0x0010)
 struct FQuestVariableLinkEQSContext : public FQuestVariable
+{
+
+};
+
+// ScriptStruct Tales.QuestVariableItemDescType
+// 0x0000 (0x0010 - 0x0010)
+struct FQuestVariableItemDescType : public FQuestVariable
+{
+
+};
+
+// ScriptStruct Tales.QuestVariableItemInfo
+// 0x0000 (0x0010 - 0x0010)
+struct FQuestVariableItemInfo : public FQuestVariable
 {
 
 };
@@ -177,6 +202,13 @@ struct FParticpantToolGroup
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
 };
 
+// ScriptStruct Tales.QuestVariableActorAssetType
+// 0x0000 (0x0010 - 0x0010)
+struct FQuestVariableActorAssetType : public FQuestVariable
+{
+
+};
+
 // ScriptStruct Tales.ActorSpawnedAutomationEvent
 // 0x0008
 struct FActorSpawnedAutomationEvent
@@ -191,6 +223,13 @@ struct FEventSpawnedTallTaleQuestItem
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
+// ScriptStruct Tales.TaleQuestSelectorServiceSeedSetTelemetryEvent
+// 0x0004
+struct FTaleQuestSelectorServiceSeedSetTelemetryEvent
+{
+	int                                                Seed;                                                     // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Tales.StepMerchantItemDesc
 // 0x0040
 struct FStepMerchantItemDesc
@@ -199,9 +238,9 @@ struct FStepMerchantItemDesc
 	class UTexture*                                    Icon;                                                     // 0x0038(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct Tales.QuestVariableItemInfo
+// ScriptStruct Tales.QuestVariableItemDescTypeArray
 // 0x0000 (0x0010 - 0x0010)
-struct FQuestVariableItemInfo : public FQuestVariable
+struct FQuestVariableItemDescTypeArray : public FQuestVariable
 {
 
 };

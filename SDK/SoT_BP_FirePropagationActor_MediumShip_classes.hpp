@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FirePropagationActor_MediumShip.BP_FirePropagationActor_MediumShip_C
-// 0x0010 (0x0470 - 0x0460)
+// 0x0010 (0x0480 - 0x0470)
 class ABP_FirePropagationActor_MediumShip_C : public AActor
 {
 public:
-	class UShipFirePropagationComponent*               ShipFirePropagation;                                      // 0x0460(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0468(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UShipFirePropagationComponent*               ShipFirePropagation;                                      // 0x0470(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0478(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

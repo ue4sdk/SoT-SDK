@@ -779,8 +779,42 @@ public:
 };
 
 
+// Class Animation.CustomAnimationMontageInterface
+// 0x0000 (0x0028 - 0x0028)
+class UCustomAnimationMontageInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CustomAnimationMontageInterface"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.CustomAnimationMontageComponent
+// 0x0010 (0x00D8 - 0x00C8)
+class UCustomAnimationMontageComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00C8(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.CustomAnimationMontageComponent"));
+		return ptr;
+	}
+
+
+	void Multicast_StopCustomMontage();
+	void Multicast_PlayCustomMontage(const struct FCustomAnimationMontageId& InId);
+};
+
+
 // Class Animation.CustomAnimationMontageDefinitionDataAsset
-// 0x0038 (0x0060 - 0x0028)
+// 0x0040 (0x0068 - 0x0028)
 class UCustomAnimationMontageDefinitionDataAsset : public UDataAsset
 {
 public:
@@ -788,7 +822,7 @@ public:
 	TEnumAsByte<ECustomAnimationMontageType>           MontageType;                                              // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 	class UAnimMontage*                                MontageData;                                              // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FCustomAnimationMontageStagedLoopingData    LoopingData;                                              // 0x0040(0x0020) (Edit, DisableEditOnInstance)
+	struct FCustomAnimationMontageStagedLoopingData    LoopingData;                                              // 0x0040(0x0028) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

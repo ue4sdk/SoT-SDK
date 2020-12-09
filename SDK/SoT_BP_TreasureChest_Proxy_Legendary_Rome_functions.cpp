@@ -12,6 +12,22 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_TreasureChest_Proxy_Legendary_Rome.BP_TreasureChest_Proxy_Legendary_Rome_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_TreasureChest_Proxy_Legendary_Rome_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TreasureChest_Proxy_Legendary_Rome.BP_TreasureChest_Proxy_Legendary_Rome_C.UserConstructionScript"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

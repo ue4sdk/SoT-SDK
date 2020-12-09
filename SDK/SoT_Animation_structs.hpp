@@ -99,13 +99,20 @@ struct FCosmeticItemAnimationSetLoopData
 	struct FName                                       LoopSyncGroup;                                            // 0x0018(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
+// ScriptStruct Animation.CustomAnimationMontageId
+// 0x0008
+struct FCustomAnimationMontageId
+{
+	struct FName                                       CustomAnimationMontageId;                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Animation.CustomAnimationMontageStagedLoopingData
-// 0x0020
+// 0x0028
 struct FCustomAnimationMontageStagedLoopingData
 {
 	class UAnimMontage*                                Into;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAnimMontage*                                Loop;                                                     // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UAnimMontage*>                        OutOfAnims;                                               // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UAnimMontage*>                        LoopAnims;                                                // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<class UAnimMontage*>                        OutOfAnims;                                               // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct Animation.CustomAnimationMontageDefinitionEntry
@@ -170,13 +177,6 @@ struct FWeightedAnimationData
 	struct FStringAssetReference                       Animation;                                                // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	float                                              Weighting;                                                // 0x0010(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-};
-
-// ScriptStruct Animation.CustomAnimationMontageId
-// 0x0008
-struct FCustomAnimationMontageId
-{
-	struct FName                                       CustomAnimationMontageId;                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Animation.EventCosmeticItemAttachmentSwitched
@@ -300,13 +300,13 @@ struct FEventCustomAnimationMontageRequested
 };
 
 // ScriptStruct Animation.CustomAnimationMontageStateMachine
-// 0x00C0
+// 0x00D8
 struct FCustomAnimationMontageStateMachine
 {
 	class UCustomAnimationMontageDefinitionDataAsset*  ActiveState;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UCustomAnimationMontageDefinitionDataAsset*  PendingState;                                             // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UAnimMontage*                                ActiveMontage;                                            // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0018(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC0];                                      // 0x0018(0x00C0) MISSED OFFSET
 };
 
 // ScriptStruct Animation.EventPreviewCharacterAnimationRequest

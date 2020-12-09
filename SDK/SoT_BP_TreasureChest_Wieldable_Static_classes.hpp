@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Wieldable_Static.BP_TreasureChest_Wieldable_Static_C
-// 0x0010 (0x07C0 - 0x07B0)
+// 0x0010 (0x0820 - 0x0810)
 class ABP_TreasureChest_Wieldable_Static_C : public ATreasureChestStatic
 {
 public:
-	class UMaterialManipulationComponent*              MaterialManipulation;                                     // 0x07B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBoxComponent*                               HitVolume;                                                // 0x07B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialManipulationComponent*              MaterialManipulation;                                     // 0x0810(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               HitVolume;                                                // 0x0818(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

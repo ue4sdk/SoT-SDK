@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_reef_kelp_average.BP_cmn_reef_kelp_average_C
-// 0x0000 (0x0505 - 0x0505)
+// 0x0000 (0x0515 - 0x0515)
 class ABP_cmn_reef_kelp_average_C : public ABP_Placement_Garden_C
 {
 public:

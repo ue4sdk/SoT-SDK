@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ClamberSpot_Rowboat.BP_ClamberSpot_Rowboat_C
-// 0x0000 (0x0690 - 0x0690)
+// 0x0000 (0x06A0 - 0x06A0)
 class ABP_ClamberSpot_Rowboat_C : public ABP_BaseClamberSpot_C
 {
 public:

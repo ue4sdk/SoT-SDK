@@ -15,15 +15,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantCrate_SnakeBasketProxy.BP_MerchantCrate_SnakeBasketProxy_C
-// 0x0028 (0x07F0 - 0x07C8)
-class ABP_MerchantCrate_SnakeBasketProxy_C : public AMerchantCrateItemProxy
+// 0x0000 (0x0878 - 0x0878)
+class ABP_MerchantCrate_SnakeBasketProxy_C : public ABP_MerchantCrate_Static_Proxy_Base_C
 {
 public:
-	class UItemProxyShipTrackerComponent*              ItemProxyShipTracker;                                     // 0x07C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UFlammableWieldableComponent*                FlammableWieldable;                                       // 0x07D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class ULightWeightStatusEffectManagerComponent*    LightweightStatusEffectManager;                           // 0x07D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMountpointComponent*                        Mountpoint;                                               // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

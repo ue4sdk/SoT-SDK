@@ -56,6 +56,18 @@ struct FInAppPurchaseRestoreInfo
 	class FString                                      ReceiptData;                                              // 0x0010(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
+// ScriptStruct OnlineSubsystem.AchievementUpdatedEvent
+// 0x0038
+struct FAchievementUpdatedEvent
+{
+	class FString                                      AchievementId;                                            // 0x0000(0x0010) (ZeroConstructor)
+	uint32_t                                           Progress;                                                 // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	bool                                               Successful;                                               // 0x0014(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET
+	class FString                                      Reason;                                                   // 0x0018(0x0010) (ZeroConstructor)
+	class FString                                      Platform;                                                 // 0x0028(0x0010) (ZeroConstructor)
+};
+
 // ScriptStruct OnlineSubsystem.OnlineStoreCatalogItem
 // 0x0090
 struct FOnlineStoreCatalogItem

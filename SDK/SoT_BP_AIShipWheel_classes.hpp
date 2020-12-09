@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AIShipWheel.BP_AIShipWheel_C
-// 0x0018 (0x0610 - 0x05F8)
+// 0x0018 (0x05D8 - 0x05C0)
 class ABP_AIShipWheel_C : public AAIDockableWheel
 {
 public:
-	class UPlayerNameplateLocationOverrideComponent*   PlayerNameplateLocationOverride;                          // 0x05F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DockLocation;                                             // 0x0600(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0608(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPlayerNameplateLocationOverrideComponent*   PlayerNameplateLocationOverride;                          // 0x05C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DockLocation;                                             // 0x05C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh;                                               // 0x05D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -99,14 +99,14 @@ public:
 
 
 // Class MysteriousNotes.WieldableMysteriousNoteLayout
-// 0x0118 (0x0140 - 0x0028)
+// 0x0120 (0x0148 - 0x0028)
 class UWieldableMysteriousNoteLayout : public UDataAsset
 {
 public:
 	struct FText                                       DefaultTitle;                                             // 0x0028(0x0038) (Edit, DisableEditOnInstance)
 	struct FText                                       DefaultBody;                                              // 0x0060(0x0038) (Edit, DisableEditOnInstance)
-	struct FWieldableMysteriousNoteLayoutItem          DefaultNoteLayoutItem;                                    // 0x0098(0x0098) (Edit, DisableEditOnInstance)
-	TArray<struct FWieldableMysteriousNoteLayoutItem>  NoteLayoutItems;                                          // 0x0130(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FWieldableMysteriousNoteLayoutItem          DefaultNoteLayoutItem;                                    // 0x0098(0x00A0) (Edit, DisableEditOnInstance)
+	TArray<struct FWieldableMysteriousNoteLayoutItem>  NoteLayoutItems;                                          // 0x0138(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -198,7 +198,7 @@ public:
 
 
 // Class MysteriousNotes.WieldableMysteriousNote
-// 0x0150 (0x0960 - 0x0810)
+// 0x01A0 (0x09B0 - 0x0810)
 class AWieldableMysteriousNote : public ASkeletalMeshWieldableItem
 {
 public:
@@ -212,7 +212,7 @@ public:
 	class UNamedNotificationInputComponent*            NamedNotificationInputComponent;                          // 0x0888(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0890(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	class UInventoryItemComponent*                     InventoryItemComponent;                                   // 0x0898(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC0];                                      // 0x08A0(0x00C0) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x110];                                     // 0x08A0(0x0110) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

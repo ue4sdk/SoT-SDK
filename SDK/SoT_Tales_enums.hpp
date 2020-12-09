@@ -32,6 +32,18 @@ enum class ETaleQuestStepState : uint8_t
 };
 
 
+// Enum Tales.ELostShipmentsIslandTypes
+enum class ELostShipmentsIslandTypes : uint8_t
+{
+	ELostShipmentsIslandTypes__Feature = 0,
+	ELostShipmentsIslandTypes__Resource = 1,
+	ELostShipmentsIslandTypes__Seapost = 2,
+	ELostShipmentsIslandTypes__Outpost = 3,
+	ELostShipmentsIslandTypes__Fort = 4,
+	ELostShipmentsIslandTypes__ELostShipmentsIslandTypes_MAX = 5
+};
+
+
 }
 
 #ifdef _MSC_VER

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmn_fan_coral.BP_cmn_fan_coral_C
-// 0x0000 (0x0505 - 0x0505)
+// 0x0000 (0x0515 - 0x0515)
 class ABP_cmn_fan_coral_C : public ABP_Placement_Garden_C
 {
 public:

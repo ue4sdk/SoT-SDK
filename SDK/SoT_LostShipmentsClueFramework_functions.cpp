@@ -13,27 +13,36 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Function LostShipmentsClueFramework.ClueConnectionBlueprintFunctionLibrary.CreateCluePointingToSite
-// (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UClueConnectionConfig*   ConnectionConfiguration        (Parm, ZeroConstructor, IsPlainOldData)
+// int                            Difficulty                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TArray<class UClass*>          AllowedClueTypes               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// class UTaleQuestSelectorService* SelectorService                (Parm, ZeroConstructor, IsPlainOldData)
+// struct FVector                 SourceLocation                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FClueSite               TargetSite                     (ConstParm, Parm, OutParm, ReferenceParm)
 // class UClueDescriptor*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UClueDescriptor* UClueConnectionBlueprintFunctionLibrary::CreateCluePointingToSite(class UClueConnectionConfig* ConnectionConfiguration, TArray<class UClass*> AllowedClueTypes, const struct FClueSite& TargetSite)
+class UClueDescriptor* UClueConnectionBlueprintFunctionLibrary::CreateCluePointingToSite(class UClueConnectionConfig* ConnectionConfiguration, int Difficulty, TArray<class UClass*> AllowedClueTypes, class UTaleQuestSelectorService* SelectorService, const struct FVector& SourceLocation, const struct FClueSite& TargetSite)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueFramework.ClueConnectionBlueprintFunctionLibrary.CreateCluePointingToSite"));
 
 	struct
 	{
 		class UClueConnectionConfig*   ConnectionConfiguration;
+		int                            Difficulty;
 		TArray<class UClass*>          AllowedClueTypes;
+		class UTaleQuestSelectorService* SelectorService;
+		struct FVector                 SourceLocation;
 		struct FClueSite               TargetSite;
 		class UClueDescriptor*         ReturnValue;
 	} params;
 
 	params.ConnectionConfiguration = ConnectionConfiguration;
+	params.Difficulty = Difficulty;
 	params.AllowedClueTypes = AllowedClueTypes;
+	params.SelectorService = SelectorService;
+	params.SourceLocation = SourceLocation;
 	params.TargetSite = TargetSite;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -48,8 +57,9 @@ class UClueDescriptor* UClueConnectionBlueprintFunctionLibrary::CreateCluePointi
 // Parameters:
 // class AActor*                  Participant                    (Parm, ZeroConstructor, IsPlainOldData)
 // class UClueDescriptor*         Clue                           (Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  ClueSite                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UClueLifetimeBlueprintFunctionLibrary::GiveClueToParticipant(class AActor* Participant, class UClueDescriptor* Clue)
+void UClueLifetimeBlueprintFunctionLibrary::GiveClueToParticipant(class AActor* Participant, class UClueDescriptor* Clue, class UClass* ClueSite)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueFramework.ClueLifetimeBlueprintFunctionLibrary.GiveClueToParticipant"));
 
@@ -57,10 +67,12 @@ void UClueLifetimeBlueprintFunctionLibrary::GiveClueToParticipant(class AActor* 
 	{
 		class AActor*                  Participant;
 		class UClueDescriptor*         Clue;
+		class UClass*                  ClueSite;
 	} params;
 
 	params.Participant = Participant;
 	params.Clue = Clue;
+	params.ClueSite = ClueSite;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);

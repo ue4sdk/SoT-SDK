@@ -47,6 +47,8 @@ public:
 	void Walk();
 	void VomitWithType(const struct FName& VomitType, float Duration);
 	void Vomit();
+	void UnlockTradeRouteSelectionForMyCrew();
+	void UnlockTradeRouteSelectionForCrew(const struct FGuid& CrewId);
 	void UnlockAllEntitlements(int TrueFalse);
 	void UnlockAllEmblemsAndAchievements();
 	void UnBreakLeg();
@@ -79,7 +81,7 @@ public:
 	void ToggleAttributeOverride();
 	void TestCrashDumpCreationOnRunnableThread();
 	void TestCrashDumpCreationOnMainThread();
-	void TeleportToTunnelOfTheDamned();
+	void TeleportToTunnelOfTheDamned(const class FString& TunnelDescAssetPath);
 	void TeleportToSpecificTunnelOfTheDamned(int TunnelIndex);
 	void TeleportToShip();
 	void TeleportToPlayerStart();
@@ -116,7 +118,7 @@ public:
 	void StopAllShips();
 	void StopAllPetsHangout();
 	void StartVoyage(const class FString& SourceAssetName, bool Development);
-	void StartTunnelTaleSequence(const class FString& SourceAssetName);
+	void StartTunnelSequence();
 	void StartSicknessOnPlayer();
 	void StartSelectedRomeVoyage(const class FString& RomeVoyageString);
 	void StartNearestVolcano();
@@ -171,6 +173,7 @@ public:
 	void SpawnCargoRunCrate(const class FString& SpawnCargoRunCrateString);
 	void SpawnCabinDoorInFrontOfPlayer(float Distance);
 	void SpawnBountyReward(const class FString& BountyTypeString);
+	void SpawnBootyPickupPoint();
 	void SpawnBarrelGroup(bool ForcedCloseSpawn);
 	void SpawnAThousandTreasureChests();
 	void SpawnAndEquipDebugWieldable(const class FString& DebugWieldableTypeString);
@@ -224,6 +227,7 @@ public:
 	void SetTimeScalar(float TimeScalar);
 	void SetTimeHoursAndMinutes(int Hours, int Minutes);
 	void SetTime(int Hours);
+	void SetTaleSelectorSeed(int Seed);
 	void SetShroudbreakerActive(bool bActive);
 	void SetShipYaw(float Yaw);
 	void SetShipWheelFullyRepaired();
@@ -263,7 +267,6 @@ public:
 	void SetCurrentCulture(const class FString& Culture);
 	void SetCapstanPosition(float Position);
 	void SetAxisBinding(const class FString& InBindingName, const class FString& InKeyName);
-	void SetAllAIOverrideShotHitChance(float HitChance);
 	void SetAllAIOverrideCannonShotHitChance(float HitChance);
 	void SetAITeamAttitude(const class FString& TeamAString, const class FString& TeamBString, const class FString& AttitudeString);
 	void SetAIExclusiveAbility(const class FString& AIAbilityString);
@@ -301,6 +304,7 @@ public:
 	void RespawnAllIslandItemSpawners();
 	void ResetTinySharkSpawnTimerWithTime(float Timer);
 	void ResetTinySharkSpawnTimer();
+	void ResetTaleSelectorSeed();
 	void ResetStats();
 	void ResetNearestVault();
 	void ResetMouseDelta();
@@ -309,7 +313,6 @@ public:
 	void ResetDemoSession(bool StartNewSession);
 	void ResetAllOverrideCannonShotHitChance();
 	void ResetAllMechanisms();
-	void ResetAllAIOverrideShotHitChance();
 	void ResetAITeamAttitudes();
 	void ResetAIExclusiveAbilities();
 	void ResetAbilityAlwaysOn();
@@ -351,6 +354,8 @@ public:
 	void LogShipHierarchy();
 	void LogServerShipHierarchy();
 	void LogAITeamAttitudes();
+	void LockTradeRouteSelectionToSpecificRouteForMyCrew(const class FString& RouteReferencePath);
+	void LockTradeRouteSelectionToSpecificRouteForCrew(const struct FGuid& CrewId, const class FString& RouteReferencePath);
 	void LocallyUnBreakLeg();
 	void LocallyDisableTutorial();
 	void LightLocalBraziers();
@@ -415,8 +420,8 @@ public:
 	void ForceRequestCampaignsFromServices();
 	void ForcePetHangout(const struct FName& HangoutName, int PositionIndex);
 	void ForceOpenShop();
+	void ForceNPCOnSurfaceToMove(bool FastMove, bool KeepCurrentLocation);
 	void ForceNPCOnSurfaceLocation(int LoctationIndex, int LoctationPointIndex);
-	void ForceNPCOnShipToMove(bool FastMove, bool KeepCurrentLocation);
 	void ForceNPCOnShipIsCurrentlyInDanger(bool IsCurrentlyInDanger);
 	void ForceMigrationServiceHeartBeat();
 	void ForceEmoteWithDescription(const struct FName& EmoteIdentifier, const class FString& DisplayName, const class FString& AudioDescription);
@@ -424,6 +429,7 @@ public:
 	void ForceCloseShop();
 	void ForceAllPetsDangerWithNoiseEventWithChangingThreatLocation(const class FString& ResponseType, float UpdateThreatLocationTime);
 	void ForceAllPetsDangerWithNoiseEvent(const class FString& ResponseType);
+	void ForceAggressiveGhostShipStartSinkingAnimation();
 	void ForceAggressiveGhostShipStartDisppearAnimation();
 	void ForceAggressiveGhostShipStartAppearAnimation();
 	void ForceAggressiveGhostShipPortalJump();
@@ -476,6 +482,7 @@ public:
 	void DisplayLandmarkNames();
 	void DisplayFallDamageDebug(int Enable);
 	void DisplayDrunkenness(bool Flag);
+	void DismissAllPickupPoints();
 	void DisableConsoleLogging();
 	void DisableCinematicCamera();
 	void DisableAIBehaviour();
@@ -540,10 +547,11 @@ public:
 	void ApplyCursedCannonballStatusToShip(const class FString& CannonballTypeString);
 	void ApplyCursedCannonballStatusToPlayer(const class FString& CannonballTypeString);
 	void AllowTeleportWithItems(bool CanTeleport);
-	void AllocateTunnelOfTheDamnedPortalToCurrentPlayer();
 	void AllJoinAlliance();
 	void AIPlayerShip();
 	void AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InVengeanceStartingAmount, float InVengeanceTargetAmount, float InDelayBeforeStart, float InBlendDuration);
+	void AddTradeRouteNPCHintDialogClueMarkToMapAtCurrentLocation();
+	void AddTradeRouteMessageInABottleClueMarkToMapAtCurrentLocation();
 	void AddTradeRouteClueMarkToMapAtCurrentLocation();
 	void AddTornMapPiece();
 	void AddShipToCrew(const class FString& ActorIdString, const class FString& CrewId);

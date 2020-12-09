@@ -7,7 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_BP_WaterVolume_classes.hpp"
+#include "SoT_BP_WaterVolume_Optimized_classes.hpp"
 
 namespace SDK
 {

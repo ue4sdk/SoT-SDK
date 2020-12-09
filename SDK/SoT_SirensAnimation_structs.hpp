@@ -16,11 +16,21 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct SirensAnimation.SirenAnimationLocomotion
+// 0x0020
+struct FSirenAnimationLocomotion
+{
+	class UAnimSequence*                               TreadwaterSequence;                                       // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBlendSpace1D*                               UnderwaterLocomotionBlendSpace;                           // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAnimSequence*                               DivingFromSurfaceSequence;                                // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAnimSequence*                               EmergingToSurfaceSequence;                                // 0x0018(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
 // ScriptStruct SirensAnimation.SirenAnimationDataStructure
-// 0x0001
+// 0x0020
 struct FSirenAnimationDataStructure
 {
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	struct FSirenAnimationLocomotion                   LocomotionAnims;                                          // 0x0000(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 };
 
 }

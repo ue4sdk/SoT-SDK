@@ -49,8 +49,9 @@ void ABP_Snake_C::ReceiveBeginPlay()
 // Parameters:
 // struct FVector                 SourceLocation                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // struct FVector                 Direction                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// class AActor*                  Crate                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Snake_C::OnAgitatedDirected(const struct FVector& SourceLocation, const struct FVector& Direction)
+void ABP_Snake_C::OnAgitatedDirected(const struct FVector& SourceLocation, const struct FVector& Direction, class AActor* Crate)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Snake.BP_Snake_C.OnAgitatedDirected"));
 
@@ -58,10 +59,12 @@ void ABP_Snake_C::OnAgitatedDirected(const struct FVector& SourceLocation, const
 	{
 		struct FVector                 SourceLocation;
 		struct FVector                 Direction;
+		class AActor*                  Crate;
 	} params;
 
 	params.SourceLocation = SourceLocation;
 	params.Direction = Direction;
+	params.Crate = Crate;
 
 	UObject::ProcessEvent(fn, &params);
 }

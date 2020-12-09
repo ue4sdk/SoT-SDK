@@ -15,16 +15,36 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class TradeRouteFramework.TaleQuestSelectTradeRouteStep
-// 0x0038 (0x00A0 - 0x0068)
+// 0x0020 (0x0088 - 0x0068)
 class UTaleQuestSelectTradeRouteStep : public UTaleQuestStep
 {
 public:
 	class UTaleQuestSelectTradeRouteStepDesc*          Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0070(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0070(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TradeRouteFramework.TaleQuestSelectTradeRouteStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class TradeRouteFramework.TaleQuestSelectTradeRouteStepDesc
+// 0x0038 (0x0068 - 0x0030)
+class UTaleQuestSelectTradeRouteStepDesc : public UTaleQuestStepDesc
+{
+public:
+	int                                                NumSelectFromClosestIslands;                              // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	struct FQuestVariableVector                        SelectionOriginPointVar;                                  // 0x0038(0x0010) (Edit)
+	struct FQuestVariableInt                           TradeRouteDifficulty;                                     // 0x0048(0x0010) (Edit)
+	struct FQuestVariableTradeRouteData                TradeRoute;                                               // 0x0058(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TradeRouteFramework.TaleQuestSelectTradeRouteStepDesc"));
 		return ptr;
 	}
 
@@ -68,20 +88,36 @@ public:
 };
 
 
-// Class TradeRouteFramework.TaleQuestSelectTradeRouteStepDesc
-// 0x0038 (0x0068 - 0x0030)
-class UTaleQuestSelectTradeRouteStepDesc : public UTaleQuestStepDesc
+// Class TradeRouteFramework.TaleQuestGetProjectionPointOnTradeRouteStep
+// 0x0038 (0x00A0 - 0x0068)
+class UTaleQuestGetProjectionPointOnTradeRouteStep : public UTaleQuestStep
 {
 public:
-	int                                                NumSelectFromClosestIslands;                              // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	struct FQuestVariableVector                        SelectionOriginPointVar;                                  // 0x0038(0x0010) (Edit)
-	struct FQuestVariableInt                           TradeRouteDifficulty;                                     // 0x0048(0x0010) (Edit)
-	struct FQuestVariableTradeRouteData                TradeRoute;                                               // 0x0058(0x0010) (Edit)
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0068(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TradeRouteFramework.TaleQuestSelectTradeRouteStepDesc"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TradeRouteFramework.TaleQuestGetProjectionPointOnTradeRouteStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class TradeRouteFramework.TaleQuestGetProjectionPointOnTradeRouteStepDesc
+// 0x0038 (0x0068 - 0x0030)
+class UTaleQuestGetProjectionPointOnTradeRouteStepDesc : public UTaleQuestStepDesc
+{
+public:
+	float                                              ProjectionProportion;                                     // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	struct FQuestVariableVector                        SourcePoint;                                              // 0x0038(0x0010) (Edit, DisableEditOnInstance)
+	struct FQuestVariableTradeRouteData                TradeRouteData;                                           // 0x0048(0x0010) (Edit, DisableEditOnInstance)
+	struct FQuestVariableVector                        ProjectedPoint;                                           // 0x0058(0x0010) (Edit, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TradeRouteFramework.TaleQuestGetProjectionPointOnTradeRouteStepDesc"));
 		return ptr;
 	}
 
