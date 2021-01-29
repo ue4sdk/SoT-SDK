@@ -339,7 +339,7 @@ void UBP_Prompt_MaidenVoyage_FishingRodTutorial_C::OnCastRod(const struct FEvent
 // Function BP_Prompt_MaidenVoyage_FishingROdTutorial.BP_Prompt_MaidenVoyage_FishingRodTutorial_C.OnFishCaught
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEventFishingFishCaught Event                          (Parm, ZeroConstructor, IsPlainOldData)
+// struct FEventFishingFishCaught Event                          (Parm)
 
 void UBP_Prompt_MaidenVoyage_FishingRodTutorial_C::OnFishCaught(const struct FEventFishingFishCaught& Event)
 {

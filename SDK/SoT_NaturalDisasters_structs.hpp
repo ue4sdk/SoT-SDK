@@ -128,6 +128,15 @@ struct FVolcanoStateData
 	float                                              PercentageOfMaxTargetingRange;                            // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct NaturalDisasters.VolcanoProjectileData
+// 0x001C
+struct FVolcanoProjectileData
+{
+	int                                                WeightedVolcanoProjectileIndex;                           // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     LaunchVelocity;                                           // 0x0004(0x000C) (ZeroConstructor, IsPlainOldData)
+	struct FVector                                     RotationRate;                                             // 0x0010(0x000C) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct NaturalDisasters.VolcanoTarget
 // 0x0018
 struct FVolcanoTarget

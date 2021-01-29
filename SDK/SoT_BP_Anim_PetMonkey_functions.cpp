@@ -780,22 +780,6 @@ void UBP_Anim_PetMonkey_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_P
 }
 
 
-// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.BlueprintInitializeAnimation
-// (Event, Public, BlueprintEvent)
-
-void UBP_Anim_PetMonkey_C::BlueprintInitializeAnimation()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.BlueprintInitializeAnimation"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 // Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_UnEquipCompleted
 // (BlueprintCallable, BlueprintEvent)
 
@@ -946,6 +930,22 @@ void UBP_Anim_PetMonkey_C::AnimNotify_PetStaticBase_On()
 void UBP_Anim_PetMonkey_C::AnimNotify_PetStaticBase_Off()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.AnimNotify_PetStaticBase_Off"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.InitialiseAnimationData
+// (Event, Protected, BlueprintEvent)
+
+void UBP_Anim_PetMonkey_C::InitialiseAnimationData()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_PetMonkey.BP_Anim_PetMonkey_C.InitialiseAnimationData"));
 
 	struct
 	{

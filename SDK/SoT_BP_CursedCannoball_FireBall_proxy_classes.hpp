@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CursedCannoball_FireBall_proxy.BP_CursedCannoball_FireBall_proxy_C
-// 0x0000 (0x06D0 - 0x06D0)
+// 0x0000 (0x0688 - 0x0688)
 class ABP_CursedCannoball_FireBall_proxy_C : public ABP_CannonBallProxy_C
 {
 public:

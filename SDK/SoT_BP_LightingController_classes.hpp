@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LightingController.BP_LightingController_C
-// 0x0000 (0x0EA0 - 0x0EA0)
+// 0x0000 (0x0E50 - 0x0E50)
 class ABP_LightingController_C : public ALightingController
 {
 public:

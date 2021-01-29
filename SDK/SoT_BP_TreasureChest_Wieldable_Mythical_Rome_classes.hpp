@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Wieldable_Mythical_Rome.BP_TreasureChest_Wieldable_Mythical_Rome_C
-// 0x0020 (0x0840 - 0x0820)
+// 0x0020 (0x0800 - 0x07E0)
 class ABP_TreasureChest_Wieldable_Mythical_Rome_C : public ABP_TreasureChest_Wieldable_Static_C
 {
 public:
-	class UGenericWorldMapMarker*                      GenericWorldMapMarker;                                    // 0x0820(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPickupableComponent*                        Pickupable;                                               // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGenericWorldMapMarker*                      GenericWorldMapMarker;                                    // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPickupableComponent*                        Pickupable;                                               // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

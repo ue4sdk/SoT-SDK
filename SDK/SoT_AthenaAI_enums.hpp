@@ -234,6 +234,19 @@ enum class EAIThreatLevel : uint8_t
 };
 
 
+// Enum AthenaAI.EOceanCrawlerAbilityAudioKey
+enum class EOceanCrawlerAbilityAudioKey : uint8_t
+{
+	EOceanCrawlerAbilityAudioKey__NONE = 0,
+	EOceanCrawlerAbilityAudioKey__Hermit_Start_BurrowingLoop = 1,
+	EOceanCrawlerAbilityAudioKey__Hermit_Stop_BurrowingLoop = 2,
+	EOceanCrawlerAbilityAudioKey__Hermit_Play_BurrowDown_OneShot = 3,
+	EOceanCrawlerAbilityAudioKey__Hermit_Play_BurrowEmerge_OneShot = 4,
+	EOceanCrawlerAbilityAudioKey__Hermit_Play_BurrowHealTarget_OneShot = 5,
+	EOceanCrawlerAbilityAudioKey__EOceanCrawlerAbilityAudioKey_MAX = 6
+};
+
+
 // Enum AthenaAI.EFaunaInWaterState
 enum class EFaunaInWaterState : uint8_t
 {
@@ -268,10 +281,13 @@ enum class ESwimRotationMode : uint8_t
 enum class EArcToTargetDirection : uint8_t
 {
 	EArcToTargetDirection__VelocityOrRotation = 0,
-	EArcToTargetDirection__Up      = 1,
-	EArcToTargetDirection__Down    = 2,
-	EArcToTargetDirection__HorizontalGoalDirection = 3,
-	EArcToTargetDirection__EArcToTargetDirection_MAX = 4
+	EArcToTargetDirection__VelocityOrRotation2D = 1,
+	EArcToTargetDirection__InversedVelocityOrRotation = 2,
+	EArcToTargetDirection__InversedVelocityOrRotation2D = 3,
+	EArcToTargetDirection__Up      = 4,
+	EArcToTargetDirection__Down    = 5,
+	EArcToTargetDirection__GoalDirection2D = 6,
+	EArcToTargetDirection__EArcToTargetDirection_MAX = 7
 };
 
 

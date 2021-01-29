@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PuzzleVaultRewardDoor.BP_PuzzleVaultRewardDoor_C
-// 0x0010 (0x04D0 - 0x04C0)
+// 0x0010 (0x05A0 - 0x0590)
 class ABP_PuzzleVaultRewardDoor_C : public ASlidingDoor
 {
 public:
-	class UParticleSystemComponent*                    ParticleEmitter_Bottom;                                   // 0x04C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    ParticleEmitter_Top;                                      // 0x04C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleEmitter_Bottom;                                   // 0x0590(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleEmitter_Top;                                      // 0x0598(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

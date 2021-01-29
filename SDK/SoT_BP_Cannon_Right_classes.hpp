@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Cannon_Right.BP_Cannon_Right_C
-// 0x0000 (0x0B98 - 0x0B98)
+// 0x0000 (0x0B50 - 0x0B50)
 class ABP_Cannon_Right_C : public ABP_Cannon_C
 {
 public:

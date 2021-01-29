@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_BigGhostBall.BP_Projectile_BigGhostBall_C
-// 0x0000 (0x06D8 - 0x06D8)
+// 0x0000 (0x06A0 - 0x06A0)
 class ABP_Projectile_BigGhostBall_C : public ABP_Projectile_GhostBall_C
 {
 public:

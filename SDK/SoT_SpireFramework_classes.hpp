@@ -36,17 +36,18 @@ public:
 
 
 // Class SpireFramework.HeightTriggerableEffectsComponent
-// 0x0078 (0x0140 - 0x00C8)
+// 0x0088 (0x0150 - 0x00C8)
 class UHeightTriggerableEffectsComponent : public UActorComponent
 {
 public:
 	class UHeightTriggerableAudioComponentParams*      AudioParams;                                              // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector                                     EmitterOffset;                                            // 0x00D0(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RisingAudioTriggerValue;                                  // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      CameraShake;                                              // 0x00E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ShakeInnerRadius;                                         // 0x00E8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ShakeOuterRadius;                                         // 0x00EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x00F0(0x0050) MISSED OFFSET
+	struct FActorComponentSelector                     EmitterOwner;                                             // 0x00D0(0x0010) (Edit, DisableEditOnInstance)
+	struct FVector                                     EmitterOffset;                                            // 0x00E0(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RisingAudioTriggerValue;                                  // 0x00EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      CameraShake;                                              // 0x00F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ShakeInnerRadius;                                         // 0x00F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ShakeOuterRadius;                                         // 0x00FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0100(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -75,13 +76,13 @@ public:
 
 
 // Class SpireFramework.SpireService
-// 0x0060 (0x04D0 - 0x0470)
+// 0x0060 (0x0488 - 0x0428)
 class ASpireService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
-	TArray<struct FSpireInfo>                          SpireLevels;                                              // 0x0478(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0488(0x0048) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0428(0x0008) MISSED OFFSET
+	TArray<struct FSpireInfo>                          SpireLevels;                                              // 0x0430(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x0440(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

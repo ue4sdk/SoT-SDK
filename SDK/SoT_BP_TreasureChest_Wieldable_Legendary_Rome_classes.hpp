@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Wieldable_Legendary_Rome.BP_TreasureChest_Wieldable_Legendary_Rome_C
-// 0x0028 (0x0848 - 0x0820)
+// 0x0028 (0x0808 - 0x07E0)
 class ABP_TreasureChest_Wieldable_Legendary_Rome_C : public ABP_TreasureChest_Wieldable_Static_C
 {
 public:
-	class UArenaWorldMarkerOnWieldComponent*           ArenaWorldMarkerOnWield;                                  // 0x0820(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UParticleSystemComponent*                    vfx_seadogs_chest_smoke;                                  // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPickupableComponent*                        Pickupable;                                               // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UArenaWorldMarkerOnWieldComponent*           ArenaWorldMarkerOnWield;                                  // 0x07E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_seadogs_chest_smoke;                                  // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPickupableComponent*                        Pickupable;                                               // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

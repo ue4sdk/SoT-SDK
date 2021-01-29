@@ -15,14 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class EnchantedCompass.MultiTargetEnchantedCompass
-// 0x0030 (0x0910 - 0x08E0)
+// 0x0020 (0x08D0 - 0x08B0)
 class AMultiTargetEnchantedCompass : public ACompass
 {
 public:
-	TArray<struct FVector>                             Locations;                                                // 0x08E0(0x0010) (Edit, Net, ZeroConstructor, Transient, EditConst)
-	TArray<struct FGuid>                               LocationIds;                                              // 0x08F0(0x0010) (ZeroConstructor, Transient)
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0900(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0908(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x08B0(0x0008) MISSED OFFSET
+	TArray<struct FGuid>                               LocationIds;                                              // 0x08B8(0x0010) (ZeroConstructor, Transient)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x08C8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -34,7 +33,7 @@ public:
 
 
 // Class EnchantedCompass.PrototypeMultiTargetEnchantedCompass
-// 0x0000 (0x0910 - 0x0910)
+// 0x0000 (0x08D0 - 0x08D0)
 class APrototypeMultiTargetEnchantedCompass : public AMultiTargetEnchantedCompass
 {
 public:

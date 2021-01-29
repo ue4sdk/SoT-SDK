@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_bucket_arn_01_a_Wieldable.BP_tls_bucket_arn_01_a_Wieldable_C
-// 0x0000 (0x08E0 - 0x08E0)
+// 0x0000 (0x0910 - 0x0910)
 class ABP_tls_bucket_arn_01_a_Wieldable_C : public ABP_Bucket_C
 {
 public:

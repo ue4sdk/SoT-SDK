@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_purple_ladder_4_steps.BP_purple_ladder_4_steps_C
-// 0x0000 (0x06E8 - 0x06E8)
+// 0x0000 (0x0698 - 0x0698)
 class ABP_purple_ladder_4_steps_C : public ABP_CustomisableLadder_C
 {
 public:

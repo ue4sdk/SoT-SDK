@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_PorkMeatRaw_00_a_ItemProxy.BP_fod_PorkMeatRaw_00_a_ItemProxy_C
-// 0x0000 (0x0820 - 0x0820)
+// 0x0000 (0x0800 - 0x0800)
 class ABP_fod_PorkMeatRaw_00_a_ItemProxy_C : public ABP_ProxyIngestible_Retractable_C
 {
 public:

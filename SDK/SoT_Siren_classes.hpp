@@ -60,11 +60,10 @@ public:
 
 
 // Class Siren.ScratchAIAbility
-// 0x0008 (0x0078 - 0x0070)
-class UScratchAIAbility : public UAthenaAIAbility
+// 0x0000 (0x0078 - 0x0078)
+class UScratchAIAbility : public UMeleeAIAbility
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0070(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -75,27 +74,11 @@ public:
 };
 
 
-// Class Siren.ScratchAttackId
-// 0x0000 (0x0028 - 0x0028)
-class UScratchAttackId : public UObject
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.ScratchAttackId"));
-		return ptr;
-	}
-
-};
-
-
 // Class Siren.ScratchAIAbilityParams
-// 0x0010 (0x00B8 - 0x00A8)
-class UScratchAIAbilityParams : public UAthenaAIAbilityParams
+// 0x0000 (0x00B8 - 0x00B8)
+class UScratchAIAbilityParams : public UMeleeAIAbilityParams
 {
 public:
-	TArray<struct FSirenScratchTypeWeights>            SirenScratchTypeWeights;                                  // 0x00A8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -115,51 +98,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.ScratchAIAbilityType"));
-		return ptr;
-	}
-
-};
-
-
-// Class Siren.ScratchComboAttackId
-// 0x0000 (0x0028 - 0x0028)
-class UScratchComboAttackId : public UScratchAttackId
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.ScratchComboAttackId"));
-		return ptr;
-	}
-
-};
-
-
-// Class Siren.ScratchHeavySwipeAttackId
-// 0x0000 (0x0028 - 0x0028)
-class UScratchHeavySwipeAttackId : public UScratchAttackId
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.ScratchHeavySwipeAttackId"));
-		return ptr;
-	}
-
-};
-
-
-// Class Siren.ScratchLightSwipeAttackId
-// 0x0000 (0x0028 - 0x0028)
-class UScratchLightSwipeAttackId : public UScratchAttackId
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.ScratchLightSwipeAttackId"));
 		return ptr;
 	}
 

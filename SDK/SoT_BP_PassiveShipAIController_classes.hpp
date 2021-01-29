@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PassiveShipAIController.BP_PassiveShipAIController_C
-// 0x0000 (0x0798 - 0x0798)
+// 0x0000 (0x0750 - 0x0750)
 class ABP_PassiveShipAIController_C : public AAthenaAIShipController
 {
 public:

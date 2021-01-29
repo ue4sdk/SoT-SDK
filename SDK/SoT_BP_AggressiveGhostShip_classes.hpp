@@ -15,28 +15,28 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AggressiveGhostShip.BP_AggressiveGhostShip_C
-// 0x00A0 (0x0990 - 0x08F0)
+// 0x00A0 (0x0980 - 0x08E0)
 class ABP_AggressiveGhostShip_C : public AAggressiveGhostShip
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x08F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UWwiseEmitterComponent*                      WwiseEmitter;                                             // 0x08F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UTetherCustomisationComponent*               TetherCustomisation;                                      // 0x0900(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UActorDamageableComponent*                   ActorDamageable;                                          // 0x0908(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        IntersectionEffectMesh;                                   // 0x0910(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Shroud;                                                   // 0x0918(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0920(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBoxComponent*                               Collision;                                                // 0x0928(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       IgnoreForFadingTag;                                       // 0x0930(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              DeathFadeDuration;                                        // 0x0938(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ImpactFadeDuration;                                       // 0x093C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FBPStruct_GhostImpact>               Impacts;                                                  // 0x0940(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FName>                               ImpactDataMaterialParameterNames;                         // 0x0950(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FBPStruct_GhostPersistentDamage>     PersistentDamageLocations;                                // 0x0960(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FName>                               PersistentDamageLocationsParameterNames;                  // 0x0970(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	float                                              PersistentDamageScale;                                    // 0x0980(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              EntryPortalDistanceOffset;                                // 0x0984(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UMaterialInstanceDynamic*                    IntersectionDynamicMaterial;                              // 0x0988(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x08E0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UWwiseEmitterComponent*                      WwiseEmitter;                                             // 0x08E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTetherCustomisationComponent*               TetherCustomisation;                                      // 0x08F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UActorDamageableComponent*                   ActorDamageable;                                          // 0x08F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        IntersectionEffectMesh;                                   // 0x0900(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        shroud;                                                   // 0x0908(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0910(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               Collision;                                                // 0x0918(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       IgnoreForFadingTag;                                       // 0x0920(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              DeathFadeDuration;                                        // 0x0928(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ImpactFadeDuration;                                       // 0x092C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FBPStruct_GhostImpact>               Impacts;                                                  // 0x0930(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FName>                               ImpactDataMaterialParameterNames;                         // 0x0940(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FBPStruct_GhostPersistentDamage>     PersistentDamageLocations;                                // 0x0950(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FName>                               PersistentDamageLocationsParameterNames;                  // 0x0960(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	float                                              PersistentDamageScale;                                    // 0x0970(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              EntryPortalDistanceOffset;                                // 0x0974(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UMaterialInstanceDynamic*                    IntersectionDynamicMaterial;                              // 0x0978(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

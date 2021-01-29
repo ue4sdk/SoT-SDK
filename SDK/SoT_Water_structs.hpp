@@ -10,6 +10,7 @@
 #include "SoT_Water_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 
 namespace SDK

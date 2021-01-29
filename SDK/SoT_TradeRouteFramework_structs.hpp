@@ -26,6 +26,13 @@ struct FQuestVariableTradeRouteData : public FQuestVariable
 
 };
 
+// ScriptStruct TradeRouteFramework.QuestVariableTradeRouteHandle
+// 0x0000 (0x0010 - 0x0010)
+struct FQuestVariableTradeRouteHandle : public FQuestVariable
+{
+
+};
+
 // ScriptStruct TradeRouteFramework.TradeRouteMapping
 // 0x0020
 struct FTradeRouteMapping

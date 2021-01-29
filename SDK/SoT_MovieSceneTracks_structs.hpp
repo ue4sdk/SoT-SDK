@@ -51,11 +51,13 @@ struct FMovieSceneEventParameters
 };
 
 // ScriptStruct MovieSceneTracks.EventPayload
-// 0x0020
+// 0x0028
 struct FEventPayload
 {
 	struct FName                                       EventName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FMovieSceneEventParameters                  Parameters;                                               // 0x0008(0x0018) (Edit)
+	bool                                               IsSubtitleEvent;                                          // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
+	struct FMovieSceneEventParameters                  Parameters;                                               // 0x0010(0x0018) (Edit)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneEventSectionData

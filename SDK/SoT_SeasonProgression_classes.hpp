@@ -1,0 +1,37 @@
+#pragma once
+
+// Sea of Thieves (2.0) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "SoT_SeasonProgression_structs.hpp"
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// Class SeasonProgression.PlayerSeasonProgressionComponent
+// 0x00B0 (0x0178 - 0x00C8)
+class UPlayerSeasonProgressionComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0xB0];                                      // 0x00C8(0x00B0) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SeasonProgression.PlayerSeasonProgressionComponent"));
+		return ptr;
+	}
+
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

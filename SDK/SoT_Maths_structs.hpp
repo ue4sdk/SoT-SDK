@@ -25,6 +25,16 @@ struct FOrientedPoint
 	struct FRotator                                    Rotation;                                                 // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Maths.RotationUpdateResult
+// 0x0018
+struct FRotationUpdateResult
+{
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
+	float                                              SpinAngle;                                                // 0x000C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TiltAngle;                                                // 0x0010(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              TiltDirection;                                            // 0x0014(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Maths.TimedBuffer
 // 0x0018
 struct FTimedBuffer

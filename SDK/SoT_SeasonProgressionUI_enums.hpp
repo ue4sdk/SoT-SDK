@@ -12,6 +12,15 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum SeasonProgressionUI.EMoreButtonSource
+enum class EMoreButtonSource : uint8_t
+{
+	EMoreButtonSource__Popup       = 0,
+	EMoreButtonSource__TextNotification = 1,
+	EMoreButtonSource__EMoreButtonSource_MAX = 2
+};
+
+
 // Enum SeasonProgressionUI.ENavigationAction
 enum class ENavigationAction : uint8_t
 {

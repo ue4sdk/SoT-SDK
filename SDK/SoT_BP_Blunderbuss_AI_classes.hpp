@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Blunderbuss_AI.BP_Blunderbuss_AI_C
-// 0x0009 (0x0AC9 - 0x0AC0)
+// 0x0009 (0x0AA9 - 0x0AA0)
 class ABP_Blunderbuss_AI_C : public ABP_Blunderbuss_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0AC0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	TEnumAsByte<EEmitterRelationship>                  sfx_relationship_1;                                       // 0x0AC8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0AA0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	TEnumAsByte<EEmitterRelationship>                  sfx_relationship_1;                                       // 0x0AA8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

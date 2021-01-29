@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SkeletalProxyIngestible.BP_SkeletalProxyIngestible_C
-// 0x0018 (0x06B0 - 0x0698)
+// 0x0018 (0x0690 - 0x0678)
 class ABP_SkeletalProxyIngestible_C : public ASkeletalMeshItemProxy
 {
 public:
-	class UTrackedOwnerComponent*                      TrackedOwner;                                             // 0x0698(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialManipulationComponent*              MaterialManipulation;                                     // 0x06A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UTrackedOwnerComponent*                      TrackedOwner;                                             // 0x0678(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0680(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialManipulationComponent*              MaterialManipulation;                                     // 0x0688(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

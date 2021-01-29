@@ -20,8 +20,9 @@ class UServiceHttpSettings : public UObject
 {
 public:
 	class FString                                      DiscoveryServiceUrl;                                      // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
-	TEnumAsByte<EServiceHttpMetricsLevel>              MetricsLevel;                                             // 0x0038(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
+	TEnumAsByte<EServiceHttpMetricsLevel>              ServerMetricsLevel;                                       // 0x0038(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	TEnumAsByte<EServiceHttpMetricsLevel>              ClientMetricsLevel;                                       // 0x0039(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

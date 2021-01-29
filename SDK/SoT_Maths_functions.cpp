@@ -1343,6 +1343,40 @@ bool URotationMaths::AreRotatorsTheSameRotation(const struct FRotator& Rotator1,
 }
 
 
+// Function Maths.RotationMaths.AdvanceRotationBySpinAndTiltSynced
+// (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FRotator                StartRotation                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FRotator                TargetRotation                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          RotationRateDegrees            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          DeltaTime                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// struct FRotationUpdateResult   ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FRotationUpdateResult URotationMaths::AdvanceRotationBySpinAndTiltSynced(const struct FRotator& StartRotation, const struct FRotator& TargetRotation, float RotationRateDegrees, float DeltaTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.RotationMaths.AdvanceRotationBySpinAndTiltSynced"));
+
+	struct
+	{
+		struct FRotator                StartRotation;
+		struct FRotator                TargetRotation;
+		float                          RotationRateDegrees;
+		float                          DeltaTime;
+		struct FRotationUpdateResult   ReturnValue;
+	} params;
+
+	params.StartRotation = StartRotation;
+	params.TargetRotation = TargetRotation;
+	params.RotationRateDegrees = RotationRateDegrees;
+	params.DeltaTime = DeltaTime;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function Maths.ShapeMathsBlueprintLibrary.IsPointOnOrWithinABox
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:

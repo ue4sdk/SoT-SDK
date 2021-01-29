@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RomeBeacon_Digsite.BP_RomeBeacon_Digsite_C
-// 0x0008 (0x0580 - 0x0578)
+// 0x0008 (0x0538 - 0x0530)
 class ABP_RomeBeacon_Digsite_C : public ARomeBeacon
 {
 public:
-	class UParticleSystemComponent*                    vfx_seadogs_chest_smoke;                                  // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    vfx_seadogs_chest_smoke;                                  // 0x0530(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

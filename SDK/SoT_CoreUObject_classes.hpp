@@ -268,6 +268,22 @@ public:
 };
 
 
+// Class CoreUObject.SparseDelegateFunction
+// 0x0010 (0x00C8 - 0x00B8)
+class USparseDelegateFunction : public UDelegateFunction
+{
+public:
+	unsigned char                                      UnknownData00[0x10];                                      // 0x00B8(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoreUObject.SparseDelegateFunction"));
+		return ptr;
+	}
+
+};
+
+
 // Class CoreUObject.PackageMap
 // 0x0028 (0x0050 - 0x0028)
 class UPackageMap : public UObject
@@ -700,6 +716,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoreUObject.MulticastDelegateProperty"));
+		return ptr;
+	}
+
+};
+
+
+// Class CoreUObject.MulticastInlineDelegateProperty
+// 0x0000 (0x0078 - 0x0078)
+class UMulticastInlineDelegateProperty : public UMulticastDelegateProperty
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CoreUObject.MulticastInlineDelegateProperty"));
 		return ptr;
 	}
 

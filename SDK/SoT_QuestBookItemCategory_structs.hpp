@@ -7,7 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Athena_classes.hpp"
+#include "SoT_QuestItemCategory_classes.hpp"
 
 namespace SDK
 {

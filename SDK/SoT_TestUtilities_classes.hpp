@@ -62,12 +62,45 @@ public:
 };
 
 
+// Class TestUtilities.DelegateTesterWithOneParam
+// 0x0008 (0x0030 - 0x0028)
+class UDelegateTesterWithOneParam : public UObject
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.DelegateTesterWithOneParam"));
+		return ptr;
+	}
+
+};
+
+
+// Class TestUtilities.DelegateTesterWithFNameParam
+// 0x0000 (0x0030 - 0x0030)
+class UDelegateTesterWithFNameParam : public UDelegateTesterWithOneParam
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.DelegateTesterWithFNameParam"));
+		return ptr;
+	}
+
+
+	void Callback(const struct FName& InParam);
+};
+
+
 // Class TestUtilities.MockControllerWithMessagingDispatcher
-// 0x00A8 (0x0578 - 0x04D0)
+// 0x00A8 (0x0530 - 0x0488)
 class AMockControllerWithMessagingDispatcher : public AController
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x04D0(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0488(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -111,11 +144,11 @@ public:
 
 
 // Class TestUtilities.MockPlayerControllerWithMessagingDispatcher
-// 0x00A8 (0x0870 - 0x07C8)
+// 0x00A8 (0x0828 - 0x0780)
 class AMockPlayerControllerWithMessagingDispatcher : public APlayerController
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x07C8(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0780(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -127,11 +160,11 @@ public:
 
 
 // Class TestUtilities.ObjectCollectorGameState
-// 0x0060 (0x0528 - 0x04C8)
+// 0x0060 (0x04E0 - 0x0480)
 class AObjectCollectorGameState : public AGameState
 {
 public:
-	unsigned char                                      UnknownData00[0x60];                                      // 0x04C8(0x0060) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x60];                                      // 0x0480(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -143,7 +176,7 @@ public:
 
 
 // Class TestUtilities.TestActor
-// 0x0000 (0x0470 - 0x0470)
+// 0x0000 (0x0428 - 0x0428)
 class ATestActor : public AActor
 {
 public:
@@ -158,11 +191,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithBoxedRpcDispatcherComponent
-// 0x0008 (0x04E0 - 0x04D8)
+// 0x0008 (0x0498 - 0x0490)
 class ATestActorWithBoxedRpcDispatcherComponent : public APawn
 {
 public:
-	class UBoxedRpcDispatcherComponent*                BoxedRpcDispatcherComponent;                              // 0x04D8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UBoxedRpcDispatcherComponent*                BoxedRpcDispatcherComponent;                              // 0x0490(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -174,11 +207,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithCapsule
-// 0x0008 (0x0478 - 0x0470)
+// 0x0008 (0x0430 - 0x0428)
 class ATestActorWithCapsule : public AActor
 {
 public:
-	class UCapsuleComponent*                           BaseComponent;                                            // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           BaseComponent;                                            // 0x0428(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -190,11 +223,11 @@ public:
 
 
 // Class TestUtilities.TestActorWithObjectMessagingDispatcher
-// 0x00A8 (0x0518 - 0x0470)
+// 0x00A8 (0x04D0 - 0x0428)
 class ATestActorWithObjectMessagingDispatcher : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0470(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0428(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -206,11 +239,11 @@ public:
 
 
 // Class TestUtilities.MockActorWithMessagingDispatcherAndSceneComponent
-// 0x0008 (0x0520 - 0x0518)
+// 0x0008 (0x04D8 - 0x04D0)
 class AMockActorWithMessagingDispatcherAndSceneComponent : public ATestActorWithObjectMessagingDispatcher
 {
 public:
-	class USceneComponent*                             SceneComponent;                                           // 0x0518(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             SceneComponent;                                           // 0x04D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -222,7 +255,7 @@ public:
 
 
 // Class TestUtilities.TestController
-// 0x0000 (0x04D0 - 0x04D0)
+// 0x0000 (0x0488 - 0x0488)
 class ATestController : public AController
 {
 public:
@@ -230,6 +263,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestController"));
+		return ptr;
+	}
+
+};
+
+
+// Class TestUtilities.TestControllerWithObjectMessagingDispatcher
+// 0x00A8 (0x0530 - 0x0488)
+class ATestControllerWithObjectMessagingDispatcher : public AController
+{
+public:
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0488(0x00A8) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TestUtilities.TestControllerWithObjectMessagingDispatcher"));
 		return ptr;
 	}
 
@@ -300,11 +349,11 @@ public:
 
 
 // Class TestUtilities.TestPawnWithCapsule
-// 0x0008 (0x04E0 - 0x04D8)
+// 0x0008 (0x0498 - 0x0490)
 class ATestPawnWithCapsule : public APawn
 {
 public:
-	class UCapsuleComponent*                           BaseComponent;                                            // 0x04D8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UCapsuleComponent*                           BaseComponent;                                            // 0x0490(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -316,11 +365,10 @@ public:
 
 
 // Class TestUtilities.TestPrimitiveComponent
-// 0x0010 (0x0580 - 0x0570)
+// 0x0000 (0x0530 - 0x0530)
 class UTestPrimitiveComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0570(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -334,11 +382,11 @@ public:
 
 
 // Class TestUtilities.TestSkeletalMeshComponent
-// 0x0040 (0x09B0 - 0x0970)
+// 0x0040 (0x0970 - 0x0930)
 class UTestSkeletalMeshComponent : public USkeletalMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0970(0x0040) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0930(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -350,11 +398,11 @@ public:
 
 
 // Class TestUtilities.TestStaticMeshComponent
-// 0x0010 (0x05E0 - 0x05D0)
+// 0x0010 (0x05A0 - 0x0590)
 class UTestStaticMeshComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x05D0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0590(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

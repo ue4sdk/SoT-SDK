@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VaultBrazier.BP_VaultBrazier_C
-// 0x0000 (0x07C0 - 0x07C0)
+// 0x0000 (0x0828 - 0x0828)
 class ABP_VaultBrazier_C : public ABeacon
 {
 public:

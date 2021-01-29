@@ -10,12 +10,12 @@
 #include "SoT_Tales_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_TaleMaps_classes.hpp"
+#include "SoT_EmissaryFramework_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_PrioritisedPrompts_classes.hpp"
 #include "SoT_MerchantContracts_classes.hpp"
-#include "SoT_EmissaryFramework_classes.hpp"
+#include "SoT_TaleMaps_classes.hpp"
 
 namespace SDK
 {
@@ -202,6 +202,13 @@ struct FParticpantToolGroup
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0000(0x0020) MISSED OFFSET
 };
 
+// ScriptStruct Tales.QuestVariableRotator
+// 0x0000 (0x0010 - 0x0010)
+struct FQuestVariableRotator : public FQuestVariable
+{
+
+};
+
 // ScriptStruct Tales.QuestVariableActorAssetType
 // 0x0000 (0x0010 - 0x0010)
 struct FQuestVariableActorAssetType : public FQuestVariable
@@ -260,8 +267,9 @@ struct FTaleQuestDesc : public FQuestDesc
 	class UObject*                                     Definition;                                               // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
 	struct FText                                       TaleFailMessage;                                          // 0x0038(0x0038)
 	struct FName                                       TaleFailBannerTag;                                        // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               Development;                                              // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0079(0x0007) MISSED OFFSET
+	bool                                               ShouldFireStartTallTaleTrackedObjective;                  // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               Development;                                              // 0x0079(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct Tales.StepBountyTargetDesc

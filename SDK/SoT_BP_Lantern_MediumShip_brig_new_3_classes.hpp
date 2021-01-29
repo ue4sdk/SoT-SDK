@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Lantern_MediumShip_brig_new_3.BP_Lantern_MediumShip_brig_new_2_C
-// 0x0000 (0x07ED - 0x07ED)
+// 0x0000 (0x07A5 - 0x07A5)
 class ABP_Lantern_MediumShip_brig_new_2_C : public ABP_InteractableShipLantern_C
 {
 public:

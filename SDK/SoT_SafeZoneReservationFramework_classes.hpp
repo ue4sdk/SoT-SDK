@@ -15,11 +15,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class SafeZoneReservationFramework.SafeZoneComponent
-// 0x0030 (0x05D0 - 0x05A0)
+// 0x0060 (0x05B0 - 0x0550)
 class USafeZoneComponent : public UCapsuleComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x05A0(0x0030) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnSafeZoneIsEmptyDelegate;                                // 0x0550(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	float                                              ExclusionRadius;                                          // 0x0560(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ImpulseForceToApplyToShipsInsideSafeZone;                 // 0x0564(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       SafeZoneEmptyCollisionProfile;                            // 0x0568(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsSafeZoneEmpty;                                          // 0x0570(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0571(0x0003) MISSED OFFSET
+	struct FName                                       CurrentCollisionProfile;                                  // 0x0574(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x34];                                      // 0x057C(0x0034) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -27,6 +34,11 @@ public:
 		return ptr;
 	}
 
+
+	void SafeZoneIsEmpty__DelegateSignature();
+	void OnRep_UpdateCollisionProfile();
+	void OnRep_EmptyStateChanged();
+	void DeactivateCollider();
 };
 
 

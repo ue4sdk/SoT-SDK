@@ -39,6 +39,14 @@ struct FReplicatedAuthoritativeTime
 	struct FReplicatedDateTime                         SyncTime;                                                 // 0x0008(0x0008)
 };
 
+// ScriptStruct Time.GameTimeRange
+// 0x0010
+struct FGameTimeRange
+{
+	struct FGameTime                                   Start;                                                    // 0x0000(0x0008) (Edit)
+	struct FGameTime                                   End;                                                      // 0x0008(0x0008) (Edit)
+};
+
 // ScriptStruct Time.EventSetDateTime
 // 0x0014
 struct FEventSetDateTime

@@ -12,6 +12,16 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum Kraken.ECoordinatedKrakenActionType
+enum class ECoordinatedKrakenActionType : uint8_t
+{
+	ECoordinatedKrakenActionType__Normal = 0,
+	ECoordinatedKrakenActionType__Appear = 1,
+	ECoordinatedKrakenActionType__Disappear = 2,
+	ECoordinatedKrakenActionType__ECoordinatedKrakenActionType_MAX = 3
+};
+
+
 // Enum Kraken.EKrakenBehaviourType
 enum class EKrakenBehaviourType : uint8_t
 {

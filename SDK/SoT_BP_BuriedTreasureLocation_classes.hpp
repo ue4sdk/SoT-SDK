@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BuriedTreasureLocation.BP_BuriedTreasureLocation_C
-// 0x0008 (0x04A0 - 0x0498)
+// 0x0008 (0x0458 - 0x0450)
 class ABP_BuriedTreasureLocation_C : public ABuriedTreasureLocation
 {
 public:
-	class UArrowComponent*                             Arrow;                                                    // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UArrowComponent*                             Arrow;                                                    // 0x0450(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

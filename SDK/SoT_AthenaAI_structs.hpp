@@ -615,6 +615,14 @@ struct FAICustomClassIdNameOverrides
 	TArray<struct FText>                               Names;                                                    // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
+// ScriptStruct AthenaAI.MinMaxBurrowAbility
+// 0x0008
+struct FMinMaxBurrowAbility
+{
+	float                                              MinValue;                                                 // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxValue;                                                 // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct AthenaAI.WeightedAmmoType
 // 0x0010
 struct FWeightedAmmoType
@@ -1375,6 +1383,13 @@ struct FEventAIPawnAddedToAIRegion
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
 };
 
+// ScriptStruct AthenaAI.EventOceanCrawlerAIAbilityAudioRequest
+// 0x0001
+struct FEventOceanCrawlerAIAbilityAudioRequest
+{
+	TEnumAsByte<EOceanCrawlerAbilityAudioKey>          OceanCrawlerAudioKey;                                     // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct AthenaAI.AITelemetryFragmentInput
 // 0x00CF (0x00D0 - 0x0001)
 struct FAITelemetryFragmentInput : public FTelemetryFragmentInput
@@ -1438,6 +1453,13 @@ struct FEventFaunaAgitationEnded
 struct FEventFaunaAgitationBegun
 {
 	class AActor*                                      SourceActor;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaAI.EventSwimRotationModeChanged
+// 0x0001
+struct FEventSwimRotationModeChanged
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct AthenaAI.TinySharkWorldSettingsParams

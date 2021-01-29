@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Shark_S.BP_Constellation_Shark_S_C
-// 0x0000 (0x0510 - 0x0510)
+// 0x0000 (0x04C8 - 0x04C8)
 class ABP_Constellation_Shark_S_C : public ABP_Constellation_C
 {
 public:

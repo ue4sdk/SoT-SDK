@@ -286,7 +286,6 @@ public:
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_71180B5848E0B5D260418595D40B4448();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_DB336C0F4270EC2DB0A07DAFFFC077A1();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetParrot_AnimGraphNode_TransitionResult_E84311F8441979BC7A63E4BDA0A0321F();
-	void BlueprintInitializeAnimation();
 	void AnimNotify_UnEquipCompleted();
 	void AnimNotify_ExitTakeOff();
 	void AnimNotify_NewBaseIdleA();
@@ -295,6 +294,7 @@ public:
 	void AnimNotify_PetLookAt_Off();
 	void AnimNotify_StaticBaseOn();
 	void AnimNotify_StaticBaseOff();
+	void InitialiseAnimationData();
 	void ExecuteUbergraph_BP_Anim_PetParrot(int EntryPoint);
 };
 

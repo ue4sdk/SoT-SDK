@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CapstanRelease.BP_CapstanRelease_C
-// 0x0008 (0x0560 - 0x0558)
+// 0x0008 (0x0518 - 0x0510)
 class ABP_CapstanRelease_C : public ACapstanRelease
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

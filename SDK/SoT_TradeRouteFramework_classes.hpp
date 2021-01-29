@@ -32,7 +32,7 @@ public:
 
 
 // Class TradeRouteFramework.TaleQuestSelectTradeRouteStepDesc
-// 0x0038 (0x0068 - 0x0030)
+// 0x0048 (0x0078 - 0x0030)
 class UTaleQuestSelectTradeRouteStepDesc : public UTaleQuestStepDesc
 {
 public:
@@ -41,6 +41,7 @@ public:
 	struct FQuestVariableVector                        SelectionOriginPointVar;                                  // 0x0038(0x0010) (Edit)
 	struct FQuestVariableInt                           TradeRouteDifficulty;                                     // 0x0048(0x0010) (Edit)
 	struct FQuestVariableTradeRouteData                TradeRoute;                                               // 0x0058(0x0010) (Edit)
+	struct FQuestVariableTradeRouteHandle              AllocatedTradeRouteHandleVar;                             // 0x0068(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -69,15 +70,16 @@ public:
 
 
 // Class TradeRouteFramework.TradeRouteData
-// 0x0088 (0x00B0 - 0x0028)
+// 0x00A0 (0x00C8 - 0x0028)
 class UTradeRouteData : public UDataAsset
 {
 public:
 	struct FIslandSelectionType                        StartIsland;                                              // 0x0028(0x0008) (Edit, DisableEditOnInstance)
 	struct FIslandSelectionType                        EndIsland;                                                // 0x0030(0x0008) (Edit, DisableEditOnInstance)
-	TEnumAsByte<ETradeRouteMapOrientation>             MapOrientation;                                           // 0x0038(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
-	struct FTradeRouteMapData                          TradeRouteMapData;                                        // 0x0040(0x0070) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FPlayerStat                                 RouteCompletionStat;                                      // 0x0038(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	TEnumAsByte<ETradeRouteMapOrientation>             MapOrientation;                                           // 0x0044(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
+	struct FTradeRouteMapData                          TradeRouteMapData;                                        // 0x0048(0x0080) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -109,11 +111,11 @@ public:
 class UTaleQuestGetProjectionPointOnTradeRouteStepDesc : public UTaleQuestStepDesc
 {
 public:
-	float                                              ProjectionProportion;                                     // 0x0030(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ProjectionProportion;                                     // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	struct FQuestVariableVector                        SourcePoint;                                              // 0x0038(0x0010) (Edit, DisableEditOnInstance)
-	struct FQuestVariableTradeRouteData                TradeRouteData;                                           // 0x0048(0x0010) (Edit, DisableEditOnInstance)
-	struct FQuestVariableVector                        ProjectedPoint;                                           // 0x0058(0x0010) (Edit, DisableEditOnInstance)
+	struct FQuestVariableVector                        SourcePoint;                                              // 0x0038(0x0010) (Edit)
+	struct FQuestVariableTradeRouteData                TradeRouteData;                                           // 0x0048(0x0010) (Edit)
+	struct FQuestVariableVector                        ProjectedPoint;                                           // 0x0058(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{

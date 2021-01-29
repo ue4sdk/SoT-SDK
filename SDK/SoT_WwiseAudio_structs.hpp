@@ -100,7 +100,7 @@ struct FWwiseNetworkRelationship
 };
 
 // ScriptStruct WwiseAudio.WwiseAudioGameStateSettings
-// 0x0080
+// 0x00A0
 struct FWwiseAudioGameStateSettings
 {
 	struct FName                                       AudioGameStateGroupName;                                  // 0x0000(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
@@ -109,10 +109,20 @@ struct FWwiseAudioGameStateSettings
 	struct FName                                       AudioGameStateIngame;                                     // 0x0018(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	TArray<struct FStringAssetReference>               EventsToPlayOnLobbyStart;                                 // 0x0020(0x0010) (Edit, ZeroConstructor, Config)
 	TArray<struct FStringAssetReference>               EventsToPlayOnLobbyEnd;                                   // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnLoadingStart;                               // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnLoadingEnd;                                 // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnFrontEndOrLoadingStart;                     // 0x0060(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnFrontEndOrLoadingEnd;                       // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FStringAssetReference>               EventsToPlayOnEngageStart;                                // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FStringAssetReference>               EventsToPlayOnEngageEnd;                                  // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FStringAssetReference>               EventsToPlayOnLoadingStart;                               // 0x0060(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FStringAssetReference>               EventsToPlayOnLoadingEnd;                                 // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FStringAssetReference>               EventsToPlayOnFrontEndOrLoadingStart;                     // 0x0080(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<struct FStringAssetReference>               EventsToPlayOnFrontEndOrLoadingEnd;                       // 0x0090(0x0010) (Edit, ZeroConstructor, Config)
+};
+
+// ScriptStruct WwiseAudio.WwiseAudioAcousticSurfaceParams
+// 0x0008
+struct FWwiseAudioAcousticSurfaceParams
+{
+	float                                              Thickness;                                                // 0x0000(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              Reflectivity;                                             // 0x0004(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct WwiseAudio.AnimNotify_SoundSwitch
@@ -162,14 +172,6 @@ struct FWwiseNativeEmitterPoolDensityParams
 	struct FName                                       DensityRtpcName;                                          // 0x0018(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                FullDensityAmount;                                        // 0x0020(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              DensityDistance;                                          // 0x0024(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct WwiseAudio.WwiseAudioAcousticSurfaceParams
-// 0x0008
-struct FWwiseAudioAcousticSurfaceParams
-{
-	float                                              Thickness;                                                // 0x0000(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              Reflectivity;                                             // 0x0004(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct WwiseAudio.WwiseExternalSource

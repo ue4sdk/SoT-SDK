@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_LavaZone_Feature.BP_LavaZone_Feature_C
-// 0x0000 (0x0518 - 0x0518)
+// 0x0000 (0x04D0 - 0x04D0)
 class ABP_LavaZone_Feature_C : public ABP_LavaZone_C
 {
 public:

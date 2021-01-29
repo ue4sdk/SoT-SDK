@@ -7,10 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_ObjectMessaging_classes.hpp"
-#include "SoT_Animation_classes.hpp"
 #include "SoT_RevivingAnimation_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_ObjectMessaging_classes.hpp"
+#include "SoT_Animation_classes.hpp"
 
 namespace SDK
 {

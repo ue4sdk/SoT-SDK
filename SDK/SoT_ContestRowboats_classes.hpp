@@ -30,13 +30,13 @@ public:
 
 
 // Class ContestRowboats.ContestRowboatsService
-// 0x0060 (0x04D0 - 0x0470)
+// 0x0060 (0x0488 - 0x0428)
 class AContestRowboatsService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
-	class UClass*                                      RowboatClass;                                             // 0x0478(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x0480(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0428(0x0008) MISSED OFFSET
+	class UClass*                                      RowboatClass;                                             // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x0438(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

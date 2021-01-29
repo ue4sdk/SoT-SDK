@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WaterVolume_WLD_Ext1.BP_WaterVolume_WLD_Ext1_C
-// 0x0000 (0x056C - 0x056C)
+// 0x0000 (0x04E4 - 0x04E4)
 class ABP_WaterVolume_WLD_Ext1_C : public ABP_WaterVolume_C
 {
 public:

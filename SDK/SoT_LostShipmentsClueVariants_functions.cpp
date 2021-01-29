@@ -12,12 +12,60 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentTitleText
+// (Final, Native, Private)
+
+void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentTitleText()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentTitleText"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentDestination
 // (Final, Native, Private)
 
 void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentDestination()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentDestination"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_ClueChoice
+// (Final, Native, Private)
+
+void UAbandonedNoteClueDestinationContainerComponent::OnRep_ClueChoice()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_ClueChoice"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function LostShipmentsClueVariants.ClueSiteCircleMapWieldable.OnRep_MapRadialIconData
+// (Final, Native, Private)
+
+void AClueSiteCircleMapWieldable::OnRep_MapRadialIconData()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.ClueSiteCircleMapWieldable.OnRep_MapRadialIconData"));
 
 	struct
 	{
@@ -109,6 +157,47 @@ class UClueDescriptor* UShipwreckClueBlueprintFunctionLibrary::CreateCluePointin
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function LostShipmentsClueVariants.TaleQuestClueInventoryService.SetClueTitleText
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FText                   InTitleText                    (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UTaleQuestClueInventoryService::SetClueTitleText(const struct FText& InTitleText)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.TaleQuestClueInventoryService.SetClueTitleText"));
+
+	struct
+	{
+		struct FText                   InTitleText;
+	} params;
+
+	params.InTitleText = InTitleText;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function LostShipmentsClueVariants.TaleQuestClueInventoryService.GetCollectedClueCount
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UTaleQuestClueInventoryService::GetCollectedClueCount()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.TaleQuestClueInventoryService.GetCollectedClueCount"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

@@ -263,7 +263,6 @@ public:
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_71180B5848E0B5D260418595D40B4448();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_FF4CDBF945EF6C9753B06885C50662B6();
 	void EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_PetMonkey_AnimGraphNode_TransitionResult_C824F6764E232131F12605BB10C86926();
-	void BlueprintInitializeAnimation();
 	void AnimNotify_UnEquipCompleted();
 	void AnimNotify_ExitTakeOff();
 	void AnimNotify_NewBaseIdleA();
@@ -274,6 +273,7 @@ public:
 	void AnimNotify_StaticBaseOff();
 	void AnimNotify_PetStaticBase_On();
 	void AnimNotify_PetStaticBase_Off();
+	void InitialiseAnimationData();
 	void ExecuteUbergraph_BP_Anim_PetMonkey(int EntryPoint);
 };
 

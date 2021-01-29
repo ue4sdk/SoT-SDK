@@ -194,18 +194,16 @@ public:
 
 
 // Class Tales.SplineFootprintPathComponent
-// 0x0030 (0x0620 - 0x05F0)
+// 0x0020 (0x05D0 - 0x05B0)
 class USplineFootprintPathComponent : public USplineComponent
 {
 public:
-	float                                              DistanceBetweenDecals;                                    // 0x05F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x05F4(0x0004) MISSED OFFSET
-	class UMaterialInterface*                          DecalMaterial;                                            // 0x05F8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FSplineFootprintPathTool                    PathTool;                                                 // 0x0600(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x0601(0x0003) MISSED OFFSET
-	float                                              DecalYaw;                                                 // 0x0604(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     DecalUniformScale;                                        // 0x0608(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC];                                       // 0x0614(0x000C) MISSED OFFSET
+	class UMaterialInterface*                          DecalMaterial;                                            // 0x05B0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FSplineFootprintPathTool                    PathTool;                                                 // 0x05B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x05B9(0x0003) MISSED OFFSET
+	float                                              DecalYaw;                                                 // 0x05BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DecalUniformScale;                                        // 0x05C0(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x05CC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -362,19 +360,25 @@ public:
 };
 
 
-// Class Tales.SuppressCutsceneResponsesTaleService
-// 0x0010 (0x0050 - 0x0040)
-class USuppressCutsceneResponsesTaleService : public UTaleQuestService
+// Class Tales.CutsceneResponsesTaleService
+// 0x0030 (0x0070 - 0x0040)
+class UCutsceneResponsesTaleService : public UTaleQuestService
 {
 public:
-	TArray<TScriptInterface<class UCutsceneResponsePlayerInterface>> TrackedResponsePlayers;                                   // 0x0040(0x0010) (ZeroConstructor)
+	TArray<class UCutsceneResponseCoordinator*>        TrackedResponseCoordinators;                              // 0x0040(0x0010) (ZeroConstructor)
+	TArray<class UCutsceneResponseComponent*>          TrackedResponseComponents;                                // 0x0050(0x0010) (ExportObject, ZeroConstructor)
+	TArray<class AActor*>                              ResponseRelevantActors;                                   // 0x0060(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.SuppressCutsceneResponsesTaleService"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.CutsceneResponsesTaleService"));
 		return ptr;
 	}
 
+
+	class UCutsceneResponseSheet* StartCutsceneResponseSheet(class AActor* TargetActor, const TScriptInterface<class UCutsceneResponsePlayerInterface>& CutsceneResponsePlayer, class UClass* ResponseSheetClass);
+	void ClearAllActiveResponseSheets();
+	void AddResponseSheetRelevantActor(class AActor* Actor);
 };
 
 
@@ -448,18 +452,20 @@ public:
 		return ptr;
 	}
 
+
+	int GetRandomIntegerInRange(int Minimum, int Maximum);
 };
 
 
-// Class Tales.SuppressCutsceneResponsesTaleServiceDesc
+// Class Tales.CutsceneResponsesTaleServiceDesc
 // 0x0000 (0x0028 - 0x0028)
-class USuppressCutsceneResponsesTaleServiceDesc : public UTaleQuestServiceDesc
+class UCutsceneResponsesTaleServiceDesc : public UTaleQuestServiceDesc
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.SuppressCutsceneResponsesTaleServiceDesc"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.CutsceneResponsesTaleServiceDesc"));
 		return ptr;
 	}
 
@@ -555,22 +561,6 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.TaleQuestSelectorServiceDesc"));
-		return ptr;
-	}
-
-};
-
-
-// Class Tales.AddResponsePlayerToSuppressionListStep
-// 0x0008 (0x0070 - 0x0068)
-class UAddResponsePlayerToSuppressionListStep : public UTaleQuestStep
-{
-public:
-	class UAddResponsePlayerToSuppressionListStepDesc* StepDesc;                                                 // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.AddResponsePlayerToSuppressionListStep"));
 		return ptr;
 	}
 
@@ -950,32 +940,32 @@ public:
 };
 
 
-// Class Tales.WaitForItemPickupStep
-// 0x0080 (0x00E8 - 0x0068)
-class UWaitForItemPickupStep : public UTaleQuestStep
+// Class Tales.TrackResponseCoordinatorStep
+// 0x0008 (0x0070 - 0x0068)
+class UTrackResponseCoordinatorStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x80];                                      // 0x0068(0x0080) MISSED OFFSET
+	class UTrackResponseCoordinatorStepDesc*           StepDesc;                                                 // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.WaitForItemPickupStep"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.TrackResponseCoordinatorStep"));
 		return ptr;
 	}
 
 };
 
 
-// Class Tales.AddResponsePlayerToSuppressionListStepDesc
-// 0x0010 (0x0040 - 0x0030)
-class UAddResponsePlayerToSuppressionListStepDesc : public UTaleQuestStepDesc
+// Class Tales.WaitForItemPickupStep
+// 0x0090 (0x00F8 - 0x0068)
+class UWaitForItemPickupStep : public UTaleQuestStep
 {
 public:
-	struct FQuestVariableUObject                       CutsceneResponsePlayer;                                   // 0x0030(0x0010) (Edit)
+	unsigned char                                      UnknownData00[0x90];                                      // 0x0068(0x0090) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.AddResponsePlayerToSuppressionListStepDesc"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.WaitForItemPickupStep"));
 		return ptr;
 	}
 
@@ -1069,11 +1059,11 @@ public:
 
 
 // Class Tales.FindNamedPointAsTransformStepDesc
-// 0x0010 (0x0080 - 0x0070)
+// 0x0018 (0x0088 - 0x0070)
 class UFindNamedPointAsTransformStepDesc : public UFindNamedPointStepDescBase
 {
 public:
-	struct FQuestVariableTransform                     OutputTransform;                                          // 0x0070(0x0010) (Edit)
+	struct FQuestVariableTransform                     OutputTransform;                                          // 0x0070(0x0018) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -1242,11 +1232,11 @@ public:
 
 
 // Class Tales.SpawnPhasedActorAtLocationStepDesc
-// 0x0010 (0x00B0 - 0x00A0)
+// 0x0018 (0x00B8 - 0x00A0)
 class USpawnPhasedActorAtLocationStepDesc : public USpawnPhasedActorWithTransformStepBaseDesc
 {
 public:
-	struct FQuestVariableTransform                     Location;                                                 // 0x00A0(0x0010) (Edit)
+	struct FQuestVariableTransform                     Location;                                                 // 0x00A0(0x0018) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -1455,12 +1445,29 @@ public:
 };
 
 
-// Class Tales.WaitForItemPickupStepDesc
+// Class Tales.TrackResponseCoordinatorStepDesc
 // 0x0010 (0x0040 - 0x0030)
+class UTrackResponseCoordinatorStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableUObject                       CutsceneResponseCoordinator;                              // 0x0030(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tales.TrackResponseCoordinatorStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class Tales.WaitForItemPickupStepDesc
+// 0x0020 (0x0050 - 0x0030)
 class UWaitForItemPickupStepDesc : public UTaleQuestStepDesc
 {
 public:
 	struct FQuestVariableActor                         Item;                                                     // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActor                         PickerUpper;                                              // 0x0040(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{

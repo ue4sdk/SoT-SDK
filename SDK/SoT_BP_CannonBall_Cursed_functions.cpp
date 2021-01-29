@@ -12,6 +12,42 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.SetLightVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                           Visibility                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void ABP_CannonBall_Cursed_C::SetLightVisibility(bool Visibility)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.SetLightVisibility"));
+
+	struct
+	{
+		bool                           Visibility;
+	} params;
+
+	params.Visibility = Visibility;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.OnRep_IsWielded
+// (BlueprintCallable, BlueprintEvent)
+
+void ABP_CannonBall_Cursed_C::OnRep_IsWielded()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.OnRep_IsWielded"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function BP_CannonBall_Cursed.BP_CannonBall_Cursed_C.UserConstructionScript
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 

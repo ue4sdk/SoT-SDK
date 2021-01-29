@@ -79,6 +79,27 @@ void UClueLifetimeBlueprintFunctionLibrary::GiveClueToParticipant(class AActor* 
 }
 
 
+// Function LostShipmentsClueFramework.TaleQuestClueSiteService.GetClueSites
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<struct FClueSite>       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+
+TArray<struct FClueSite> UTaleQuestClueSiteService::GetClueSites()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueFramework.TaleQuestClueSiteService.GetClueSites"));
+
+	struct
+	{
+		TArray<struct FClueSite>       ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 }
 
 #ifdef _MSC_VER

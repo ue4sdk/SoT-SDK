@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CursedCannoball_Grenade_Scatter_Proxy.BP_CursedCannoball_Grenade_Scatter_Proxy_C
-// 0x0000 (0x06D0 - 0x06D0)
+// 0x0000 (0x0688 - 0x0688)
 class ABP_CursedCannoball_Grenade_Scatter_Proxy_C : public ABP_CannonBallProxy_C
 {
 public:

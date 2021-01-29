@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Snake_Rare.BP_Snake_Rare_C
-// 0x0000 (0x0BF0 - 0x0BF0)
+// 0x0000 (0x0BB0 - 0x0BB0)
 class ABP_Snake_Rare_C : public ABP_Snake_C
 {
 public:

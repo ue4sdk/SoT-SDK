@@ -7,7 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_BP_TreasureChest_Wieldable_Static_classes.hpp"
+#include "SoT_BP_TreasureChest_GoldHoarderLocked_Base_Wieldable_classes.hpp"
 
 namespace SDK
 {

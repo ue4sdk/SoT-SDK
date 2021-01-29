@@ -15,23 +15,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectorsChest_Wieldable.BP_CollectorsChest_Wieldable_C
-// 0x0068 (0x0898 - 0x0830)
+// 0x0068 (0x0878 - 0x0810)
 class ABP_CollectorsChest_Wieldable_C : public ACollectorsChestStaticWieldableItem
 {
 public:
-	class UMaterialManipulationComponent*              MaterialManipulation;                                     // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UOpenableItemMaterialAnimationReactionComponent* OpenableItemMaterialAnimationReaction;                    // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialAnimatorComponent*                  MaterialAnimator;                                         // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBoxComponent*                               HitVolume;                                                // 0x0848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UGoldInContainerComponent*                   GoldInContainer;                                          // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UQuestBookPagesInContainerComponent*         QuestBookPagesInContainer;                                // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_1;                                   // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_3;                                   // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_2;                                   // 0x0878(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPickupableComponent*                        Pickupable;                                               // 0x0880(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0888(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0890(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialManipulationComponent*              MaterialManipulation;                                     // 0x0810(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UOpenableItemMaterialAnimationReactionComponent* OpenableItemMaterialAnimationReaction;                    // 0x0818(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialAnimatorComponent*                  MaterialAnimator;                                         // 0x0820(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBoxComponent*                               HitVolume;                                                // 0x0828(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x0830(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UGoldInContainerComponent*                   GoldInContainer;                                          // 0x0838(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UQuestBookPagesInContainerComponent*         QuestBookPagesInContainer;                                // 0x0840(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_1;                                   // 0x0848(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_3;                                   // 0x0850(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCollectorsChestItemSlotInteractable*        ItemSlotInteractable_2;                                   // 0x0858(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPickupableComponent*                        Pickupable;                                               // 0x0860(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0868(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0870(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

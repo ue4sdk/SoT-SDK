@@ -48,7 +48,7 @@ public:
 
 
 // Class WwiseAudioUnitTests.WwiseEmitterComponentBlueprintLibraryTestActor
-// 0x0000 (0x0470 - 0x0470)
+// 0x0000 (0x0428 - 0x0428)
 class AWwiseEmitterComponentBlueprintLibraryTestActor : public AActor
 {
 public:

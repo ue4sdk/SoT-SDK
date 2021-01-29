@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_audio.wsp_audio_C
-// 0x0030 (0x04A8 - 0x0478)
+// 0x0030 (0x0460 - 0x0430)
 class Awsp_audio_C : public ALevelScriptActor
 {
 public:
-	float                                              PreviousFrameTime;                                        // 0x0478(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x047C(0x0004) MISSED OFFSET
-	struct FWwiseEmitter                               WSP_Audio_2D_Emitter;                                     // 0x0480(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UObject*                                     TimeInterface;                                            // 0x04A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              PreviousFrameTime;                                        // 0x0430(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0434(0x0004) MISSED OFFSET
+	struct FWwiseEmitter                               WSP_Audio_2D_Emitter;                                     // 0x0438(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UObject*                                     TimeInterface;                                            // 0x0458(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

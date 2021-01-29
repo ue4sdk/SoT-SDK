@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureMap_ItemInfo_XMarksTheSpot_DVR.BP_TreasureMap_ItemInfo_XMarksTheSpot_DVR_C
-// 0x0008 (0x05E0 - 0x05D8)
+// 0x0008 (0x0558 - 0x0550)
 class ABP_TreasureMap_ItemInfo_XMarksTheSpot_DVR_C : public ATreasureMapItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x05D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

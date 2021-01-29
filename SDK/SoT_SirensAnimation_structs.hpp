@@ -17,20 +17,23 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct SirensAnimation.SirenAnimationLocomotion
-// 0x0020
+// 0x0030
 struct FSirenAnimationLocomotion
 {
 	class UAnimSequence*                               TreadwaterSequence;                                       // 0x0000(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UBlendSpace1D*                               UnderwaterLocomotionBlendSpace;                           // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAnimSequence*                               DivingFromSurfaceSequence;                                // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAnimSequence*                               EmergingToSurfaceSequence;                                // 0x0018(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBlendSpace1D*                               LongwaysLocomotionBlendSpace;                             // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBlendSpace1D*                               LocomotionTurningAdditiveBlendSpace;                      // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UBlendSpace1D*                               LocomotionSpinningAdditiveBlendSpace;                     // 0x0018(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAnimSequence*                               DivingFromSurfaceSequence;                                // 0x0020(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAnimSequence*                               EmergingToSurfaceSequence;                                // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct SirensAnimation.SirenAnimationDataStructure
-// 0x0020
+// 0x0038
 struct FSirenAnimationDataStructure
 {
-	struct FSirenAnimationLocomotion                   LocomotionAnims;                                          // 0x0000(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	struct FSirenAnimationLocomotion                   LocomotionAnims;                                          // 0x0000(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	class UCustomAnimationMontageDefinitionListingDataAsset* FullBodyMontageListings;                                  // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 }

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rome_Vendor_Ship_CalmWaterZone.BP_Rome_Vendor_Ship_CalmWaterZone_C
-// 0x0000 (0x0498 - 0x0498)
+// 0x0000 (0x0450 - 0x0450)
 class ABP_Rome_Vendor_Ship_CalmWaterZone_C : public AAthenaCalmWaterZone
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_EmissaryFlag.BP_EmissaryFlag_C
-// 0x0000 (0x0518 - 0x0518)
+// 0x0000 (0x04D0 - 0x04D0)
 class ABP_EmissaryFlag_C : public AEmissaryFlag
 {
 public:

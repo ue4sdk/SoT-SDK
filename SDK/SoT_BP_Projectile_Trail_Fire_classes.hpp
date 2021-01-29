@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_Trail_Fire.BP_Projectile_Trail_Fire_C
-// 0x0000 (0x0480 - 0x0480)
+// 0x0000 (0x0448 - 0x0448)
 class ABP_Projectile_Trail_Fire_C : public ABP_Projectile_Trail_C
 {
 public:

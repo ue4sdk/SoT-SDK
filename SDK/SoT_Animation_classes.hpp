@@ -599,7 +599,7 @@ public:
 
 
 // Class Animation.ClientSkeletalMeshComponent
-// 0x0000 (0x0970 - 0x0970)
+// 0x0000 (0x0930 - 0x0930)
 class UClientSkeletalMeshComponent : public USkeletalMeshComponent
 {
 public:
@@ -614,13 +614,13 @@ public:
 
 
 // Class Animation.CosmeticItemActor
-// 0x00B0 (0x0520 - 0x0470)
+// 0x00B0 (0x04D8 - 0x0428)
 class ACosmeticItemActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0470(0x0008) MISSED OFFSET
-	class USkeletalMeshComponent*                      MeshComponent;                                            // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x0480(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0428(0x0008) MISSED OFFSET
+	class USkeletalMeshComponent*                      MeshComponent;                                            // 0x0430(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x0438(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -799,7 +799,8 @@ public:
 class UCustomAnimationMontageComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00C8(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	struct FCustomAnimationMontageId                   CustomMontageId;                                          // 0x00D0(0x0008) (Net)
 
 	static UClass* StaticClass()
 	{
@@ -808,8 +809,7 @@ public:
 	}
 
 
-	void Multicast_StopCustomMontage();
-	void Multicast_PlayCustomMontage(const struct FCustomAnimationMontageId& InId);
+	void OnRep_CustomMontageId(const struct FCustomAnimationMontageId& PriorId);
 };
 
 
@@ -1128,12 +1128,12 @@ public:
 
 
 // Class Animation.WaitForAnimationStateEntryProxy
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UWaitForAnimationStateEntryProxy : public UObject
 {
 public:
 	struct FScriptMulticastDelegate                    OnReachedState;                                           // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0038(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

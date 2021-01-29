@@ -17,8 +17,10 @@ enum class EServiceHttpMetricsLevel : uint8_t
 {
 	EServiceHttpMetricsLevel__None = 0,
 	EServiceHttpMetricsLevel__Failed = 1,
-	EServiceHttpMetricsLevel__All  = 2,
-	EServiceHttpMetricsLevel__EServiceHttpMetricsLevel_MAX = 3
+	EServiceHttpMetricsLevel__FailedOrAborted = 2,
+	EServiceHttpMetricsLevel__FailedOrAbortedOrNonSuccess = 3,
+	EServiceHttpMetricsLevel__All  = 4,
+	EServiceHttpMetricsLevel__EServiceHttpMetricsLevel_MAX = 5
 };
 
 

@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SkeletonAIController.BP_SkeletonAIController_C
-// 0x0018 (0x0BC8 - 0x0BB0)
+// 0x0018 (0x0B80 - 0x0B68)
 class ABP_SkeletonAIController_C : public AAthenaAICharacterController
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0BB0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UAthenaAIAbilityHandlerComponent*            AthenaAIAbilityHandler;                                   // 0x0BB8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AWieldableItem*                              Item;                                                     // 0x0BC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0B68(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UAthenaAIAbilityHandlerComponent*            AthenaAIAbilityHandler;                                   // 0x0B70(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class AWieldableItem*                              Item;                                                     // 0x0B78(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

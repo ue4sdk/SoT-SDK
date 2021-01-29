@@ -257,6 +257,7 @@ public:
 	void SetHealthInfoReplicateOverride(bool bActive);
 	void SetGrogSecondary(bool InValue);
 	void SetGodMode(bool GodModeOn);
+	void SetGlitterbeardRequiredPlayersOverride(int RequiredPlayerCount);
 	void SetFOV(float InNewFOV);
 	void SetFlameOfFateColour(int InFlameOfFateType);
 	void SetDebugItemSource(const class FString& Source);
@@ -265,6 +266,9 @@ public:
 	void SetDeathPenaltyRespawnTimer(float InSpawnTimer);
 	void SetDamageAllowedToPlayerShip(bool InAllowDamage);
 	void SetCurrentCulture(const class FString& Culture);
+	void SetCoordinatedKrakenPhaseAsset(int AssetIndex);
+	void SetCoordinatedKrakenCurrentPhaseAssetInactive();
+	void SetCoordinatedKrakenCurrentPhaseAssetActive();
 	void SetCapstanPosition(float Position);
 	void SetAxisBinding(const class FString& InBindingName, const class FString& InKeyName);
 	void SetAllAIOverrideCannonShotHitChance(float HitChance);
@@ -430,12 +434,16 @@ public:
 	void ForceAllPetsDangerWithNoiseEventWithChangingThreatLocation(const class FString& ResponseType, float UpdateThreatLocationTime);
 	void ForceAllPetsDangerWithNoiseEvent(const class FString& ResponseType);
 	void ForceAggressiveGhostShipStartSinkingAnimation();
-	void ForceAggressiveGhostShipStartDisppearAnimation();
+	void ForceAggressiveGhostShipStartDisappearAnimation();
 	void ForceAggressiveGhostShipStartAppearAnimation();
 	void ForceAggressiveGhostShipPortalJump();
 	void Fly();
 	void FloodShipWithKeelOverIndex(float NormalisedWaterAmount, int KeelOverConfigIndex);
 	void FloodShip(float NormalisedWaterAmount);
+	void FireSeasonRewardEarnedMessage(int InNumSeason, int InRewardsLevel, bool InMultipleRewards);
+	void FireSeasonGoalProgressionMessage(int InNumSeason, int InPreviousProgress, int InCurrentProgress, int InCompletionTreshold, int InGoalType, const class FString& InGoalCategory);
+	void FireSeasonGoalCompletionMessage(int InNumSeason, int InGoalType, const class FString& InGoalCategory);
+	void FireLevelCompletionMessage(int InNumSeason, int InLevel, int InTimeSpentInLevel, int InTier, int InTimeSpentInTier, bool InTierCompleted, bool InSeasonCompleted);
 	void FireCreatorCrewSignedUpStat();
 	void FireCreatorCrewMinutesViewedStat(int InNumMinutes);
 	void FireCreatorCrewMinutesStreamedStat(int InNumMinutes);
@@ -447,7 +455,7 @@ public:
 	void EndDemoSession();
 	void EnableVoiceChatMeteringForOutgoingSignals(bool Enabled);
 	void EnableVoiceChatMeteringForIncomingSignals(bool Enabled);
-	void EnableVengeance();
+	void EnableSafeWreckSpawnQueryDebugDisplay(int TrueFalse);
 	void EnableNTP(bool Enable);
 	void EnableMermaidSpawning(int Enable);
 	void EnableMermaidDeletion(int Enable);
@@ -517,6 +525,8 @@ public:
 	void CreateDebugReapersChestMarkerAtPlayerLocation();
 	void CreateDebugAISpawnerAt(const class FString& SpawnerAssetName, const class FString& LocationActorName);
 	void CreateDebugAISpawner(const class FString& SpawnerAssetName);
+	void CoordinatedKrakenRequestAction(const class FString& ActionName);
+	void CoordinatedKrakenEnableDebugging(int Enable);
 	void ContextualPromptCountersToggleDebugDraw();
 	void CompleteVoyage();
 	void CompleteAllActivePuzzleVaults();
@@ -526,6 +536,7 @@ public:
 	void ClearVoiceChatMeters();
 	void ClearSlowMotionOverride();
 	void ClearGrogSecondary();
+	void ClearGlitterbeardRequiredPlayersOverride();
 	void ClearDebugStormLocation();
 	void ClearAxisBinding(const class FString& InBindingName);
 	void ClearAIAbilityTimeMultipliers();
@@ -547,8 +558,10 @@ public:
 	void ApplyCursedCannonballStatusToShip(const class FString& CannonballTypeString);
 	void ApplyCursedCannonballStatusToPlayer(const class FString& CannonballTypeString);
 	void AllowTeleportWithItems(bool CanTeleport);
+	void AllocatePortalToTunnelOfTheDamned(const class FString& TunnelDescAssetPath);
 	void AllJoinAlliance();
 	void AIPlayerShip();
+	void AggressiveGhostShipRebuildSpline();
 	void AdjustGhostShader(bool Enabled, float InStartingAmount, float InTargetAmount, float InVengeanceStartingAmount, float InVengeanceTargetAmount, float InDelayBeforeStart, float InBlendDuration);
 	void AddTradeRouteNPCHintDialogClueMarkToMapAtCurrentLocation();
 	void AddTradeRouteMessageInABottleClueMarkToMapAtCurrentLocation();

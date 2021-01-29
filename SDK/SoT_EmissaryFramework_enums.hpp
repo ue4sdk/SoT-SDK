@@ -27,7 +27,9 @@ enum class EEmisaryCompanyActionType : uint8_t
 	EEmisaryCompanyActionType__CompleteGhostShipQuest = 9,
 	EEmisaryCompanyActionType__MapPieceFound = 10,
 	EEmisaryCompanyActionType__CompleteWayfinderVoyage = 11,
-	EEmisaryCompanyActionType__EEmisaryCompanyActionType_MAX = 12
+	EEmisaryCompanyActionType__DiscoveredLostShipmentsClue = 12,
+	EEmisaryCompanyActionType__CompleteLostShipmentsVoyage = 13,
+	EEmisaryCompanyActionType__EEmisaryCompanyActionType_MAX = 14
 };
 
 

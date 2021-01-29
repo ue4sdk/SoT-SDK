@@ -16,7 +16,7 @@ namespace SDK
 
 // BlueprintGeneratedClass QuestBookItemCategory.QuestBookItemCategory_C
 // 0x0000 (0x0080 - 0x0080)
-class UQuestBookItemCategory_C : public UQuestItemCategory
+class UQuestBookItemCategory_C : public UQuestItemCategory_C
 {
 public:
 

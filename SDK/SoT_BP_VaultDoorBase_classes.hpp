@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_VaultDoorBase.BP_VaultDoorBase_C
-// 0x0000 (0x04C0 - 0x04C0)
+// 0x0000 (0x0590 - 0x0590)
 class ABP_VaultDoorBase_C : public ASlidingDoor
 {
 public:

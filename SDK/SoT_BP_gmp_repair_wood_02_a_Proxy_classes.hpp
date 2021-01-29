@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_gmp_repair_wood_02_a_Proxy.BP_gmp_repair_wood_02_a_Proxy_C
-// 0x0000 (0x06D0 - 0x06D0)
+// 0x0000 (0x0688 - 0x0688)
 class ABP_gmp_repair_wood_02_a_Proxy_C : public ABP_WoodPlankProxy_C
 {
 public:

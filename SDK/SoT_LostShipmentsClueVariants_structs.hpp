@@ -36,6 +36,23 @@ struct FGenderSpecificTextPairings
 	struct FText                                       FeminineClueDestinationDescription;                       // 0x0038(0x0038) (Edit, DisableEditOnInstance)
 };
 
+// ScriptStruct LostShipmentsClueVariants.TextEntryWithLayout
+// 0x0058
+struct FTextEntryWithLayout
+{
+	struct FText                                       TextEntry;                                                // 0x0000(0x0038) (Edit, DisableEditOnInstance)
+	struct FTreasureMapWidgetText                      TextLayout;                                               // 0x0038(0x0020) (Edit, DisableEditOnInstance)
+};
+
+// ScriptStruct LostShipmentsClueVariants.MapRadialIconData
+// 0x0018
+struct FMapRadialIconData
+{
+	struct FStringAssetReference                       AssetReference;                                           // 0x0000(0x0010) (ZeroConstructor)
+	float                                              Rotation;                                                 // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct LostShipmentsClueVariants.ExistingNPCToPhasedNPC
 // 0x0040
 struct FExistingNPCToPhasedNPC

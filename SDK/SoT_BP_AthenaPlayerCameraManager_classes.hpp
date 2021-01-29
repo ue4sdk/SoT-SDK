@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AthenaPlayerCameraManager.BP_AthenaPlayerCameraManager_C
-// 0x0000 (0x1D40 - 0x1D40)
+// 0x0000 (0x1D00 - 0x1D00)
 class ABP_AthenaPlayerCameraManager_C : public AAthenaPlayerCameraManager
 {
 public:

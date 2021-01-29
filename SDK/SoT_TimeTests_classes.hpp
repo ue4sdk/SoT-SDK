@@ -32,7 +32,7 @@ public:
 
 
 // Class TimeTests.TimeServiceMock
-// 0x0000 (0x0580 - 0x0580)
+// 0x0000 (0x0538 - 0x0538)
 class ATimeServiceMock : public ATimeService
 {
 public:

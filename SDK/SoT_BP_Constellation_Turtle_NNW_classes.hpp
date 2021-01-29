@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Turtle_NNW.BP_Constellation_Turtle_NNW_C
-// 0x0000 (0x0510 - 0x0510)
+// 0x0000 (0x04C8 - 0x04C8)
 class ABP_Constellation_Turtle_NNW_C : public ABP_Constellation_C
 {
 public:

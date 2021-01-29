@@ -179,11 +179,11 @@ struct FActiveNoteData
 };
 
 // ScriptStruct MysteriousNotes.MysteriousNoteRequest
-// 0x0030
+// 0x0080
 struct FMysteriousNoteRequest
 {
 	class APlayerController*                           PlayerController;                                         // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FPirateIdentity                             PirateIdentity;                                           // 0x0008(0x0028)
+	struct FPirateIdentity                             PirateIdentity;                                           // 0x0008(0x0078)
 };
 
 // ScriptStruct MysteriousNotes.PlayerMysteriousNoteItem

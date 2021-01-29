@@ -112,26 +112,18 @@ public:
 };
 
 
-// Class AthenaAIAbilities.BurrowCrack
-// 0x0040 (0x04B0 - 0x0470)
-class ABurrowCrack : public AActor
+// Class AthenaAIAbilities.BullRushAIAbilityType
+// 0x0000 (0x0028 - 0x0028)
+class UBullRushAIAbilityType : public UAthenaAIAbilityType
 {
 public:
-	class USceneComponent*                             DefaultSceneComponent;                                    // 0x0470(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UDecalComponent*                             DecalComponent;                                           // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	float                                              FadeOutTimeSeconds;                                       // 0x0480(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               HasFadeStarted;                                           // 0x0484(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2B];                                      // 0x0485(0x002B) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.BurrowCrack"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.BullRushAIAbilityType"));
 		return ptr;
 	}
 
-
-	void OnRep_StartFadeAndLifeSpan();
-	void OnLifeSpanPercentLeft(float PercentLeft);
 };
 
 
@@ -144,6 +136,98 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.BurrowEruptDamagerType"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.CoralShieldStatus
+// 0x0000 (0x0030 - 0x0030)
+class UCoralShieldStatus : public UStatusBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.CoralShieldStatus"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.EelSlapAIAbilityType
+// 0x0000 (0x0028 - 0x0028)
+class UEelSlapAIAbilityType : public UAthenaAIAbilityType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.EelSlapAIAbilityType"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.EelSlapStatus
+// 0x0000 (0x0030 - 0x0030)
+class UEelSlapStatus : public UStatusBase
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.EelSlapStatus"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.EelThrowAIAbility
+// 0x0008 (0x0078 - 0x0070)
+class UEelThrowAIAbility : public UAthenaAIAbility
+{
+public:
+	class UBlackboardComponent*                        CachedBlackboardComponent;                                // 0x0070(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.EelThrowAIAbility"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.EelThrowAIAbilityParams
+// 0x0020 (0x00C8 - 0x00A8)
+class UEelThrowAIAbilityParams : public UAthenaAIAbilityParams
+{
+public:
+	struct FWeightedProbabilityRange                   MinMaxNumberOfAttacksBeforeEnd;                           // 0x00A8(0x0020) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.EelThrowAIAbilityParams"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.EelThrowAIAbilityType
+// 0x0000 (0x0028 - 0x0028)
+class UEelThrowAIAbilityType : public UAthenaAIAbilityType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.EelThrowAIAbilityType"));
 		return ptr;
 	}
 
@@ -248,6 +332,36 @@ public:
 };
 
 
+// Class AthenaAIAbilities.EelSlapAIAbilityParams
+// 0x0000 (0x00B8 - 0x00B8)
+class UEelSlapAIAbilityParams : public UMeleeAIAbilityParams
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.EelSlapAIAbilityParams"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.EelSlapAIAbility
+// 0x0000 (0x0078 - 0x0078)
+class UEelSlapAIAbility : public UMeleeAIAbility
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.EelSlapAIAbility"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAIAbilities.ComboMeleeAttackId
 // 0x0000 (0x0028 - 0x0028)
 class UComboMeleeAttackId : public UMeleeAttackId
@@ -287,6 +401,51 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.LightMeleeAttackId"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.BullRushAIAbilityParams
+// 0x0000 (0x00C0 - 0x00C0)
+class UBullRushAIAbilityParams : public UMeleeChargeAIAbilityParams
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.BullRushAIAbilityParams"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.BullRushAIAbility
+// 0x0000 (0x0090 - 0x0090)
+class UBullRushAIAbility : public UMeleeChargeAIAbility
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.BullRushAIAbility"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.MeleeStaticCollisionInterface
+// 0x0000 (0x0028 - 0x0028)
+class UMeleeStaticCollisionInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.MeleeStaticCollisionInterface"));
 		return ptr;
 	}
 

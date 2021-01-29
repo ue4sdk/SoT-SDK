@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wld_Garden_pebbles.BP_wld_Garden_pebbles_C
-// 0x0000 (0x0515 - 0x0515)
+// 0x0000 (0x04CD - 0x04CD)
 class ABP_wld_Garden_pebbles_C : public ABP_Placement_Garden_C
 {
 public:

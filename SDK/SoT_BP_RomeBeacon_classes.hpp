@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RomeBeacon.BP_RomeBeacon_C
-// 0x0000 (0x0580 - 0x0580)
+// 0x0000 (0x0538 - 0x0538)
 class ABP_RomeBeacon_C : public ABP_RomeBeacon_Digsite_C
 {
 public:

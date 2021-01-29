@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CargoRunMap.BP_CargoRunMap_C
-// 0x0000 (0x0AF0 - 0x0AF0)
+// 0x0000 (0x0A30 - 0x0A30)
 class ABP_CargoRunMap_C : public ACargoRunMap
 {
 public:

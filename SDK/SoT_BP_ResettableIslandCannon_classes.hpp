@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ResettableIslandCannon.BP_ResettableIslandCannon_C
-// 0x0018 (0x0BF0 - 0x0BD8)
+// 0x0018 (0x0B70 - 0x0B58)
 class ABP_ResettableIslandCannon_C : public ABP_IslandCannon_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0BD8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UMechanismProximityResetComponent*           MechanismProximityReset;                                  // 0x0BE0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UBlueprintMechanismResetComponent*           BlueprintMechanismReset;                                  // 0x0BE8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0B58(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UMechanismProximityResetComponent*           MechanismProximityReset;                                  // 0x0B60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UBlueprintMechanismResetComponent*           BlueprintMechanismReset;                                  // 0x0B68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

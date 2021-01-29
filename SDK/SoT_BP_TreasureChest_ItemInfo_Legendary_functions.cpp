@@ -12,22 +12,6 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
-// Function BP_TreasureChest_ItemInfo_Legendary.BP_TreasureChest_ItemInfo_Legendary_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_TreasureChest_ItemInfo_Legendary_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TreasureChest_ItemInfo_Legendary.BP_TreasureChest_ItemInfo_Legendary_C.UserConstructionScript"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
 }
 
 #ifdef _MSC_VER

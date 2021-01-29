@@ -9,7 +9,6 @@
 #include "SoT_Basic.hpp"
 #include "SoT_SeasonProgressionFramework_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 
 namespace SDK
@@ -23,13 +22,6 @@ namespace SDK
 struct FPlayerTrackedObjective
 {
 	struct FGuid                                       ObjectiveId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct SeasonProgressionFramework.TrackedObjectiveEvent
-// 0x0018
-struct FTrackedObjectiveEvent
-{
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 };
 
 // ScriptStruct SeasonProgressionFramework.SeasonReward
@@ -103,23 +95,32 @@ struct FSeasonGoalProgressionEvent
 };
 
 // ScriptStruct SeasonProgressionFramework.TrackedObjectiveCompletionMessage
-// 0x0088
+// 0x00D8
 struct FTrackedObjectiveCompletionMessage
 {
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-	struct FPirateIdentity                             PirateIdentity;                                           // 0x0010(0x0028)
-	struct FPlayerBaseTelemetryFragment                PlayerInfo;                                               // 0x0038(0x0048)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0080(0x0008) MISSED OFFSET
+	struct FGuid                                       ObjectiveId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FPirateIdentity                             PirateIdentity;                                           // 0x0010(0x0078)
+	struct FPlayerBaseTelemetryFragment                PlayerInfo;                                               // 0x0088(0x0048)
+	double                                             CreatedAt;                                                // 0x00D0(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct SeasonProgressionFramework.TrackedObjectiveProgressUpdateMessage
-// 0x0090
+// 0x00E0
 struct FTrackedObjectiveProgressUpdateMessage
 {
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-	struct FPirateIdentity                             PirateIdentity;                                           // 0x0010(0x0028)
-	struct FPlayerBaseTelemetryFragment                PlayerInfo;                                               // 0x0038(0x0048)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0080(0x0010) MISSED OFFSET
+	struct FGuid                                       ObjectiveId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FPirateIdentity                             PirateIdentity;                                           // 0x0010(0x0078)
+	struct FPlayerBaseTelemetryFragment                PlayerInfo;                                               // 0x0088(0x0048)
+	int                                                Value;                                                    // 0x00D0(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00D4(0x0004) MISSED OFFSET
+	double                                             CreatedAt;                                                // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct SeasonProgressionFramework.TrackedObjectiveEvent
+// 0x0018
+struct FTrackedObjectiveEvent
+{
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0000(0x0018) MISSED OFFSET
 };
 
 }

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_Wrecker_05_Colour_01_Rose.BP_FishingFish_Wrecker_05_Colour_01_Rose_C
-// 0x0000 (0x0960 - 0x0960)
+// 0x0000 (0x0920 - 0x0920)
 class ABP_FishingFish_Wrecker_05_Colour_01_Rose_C : public ABP_FishingFish_Wrecker_05_C
 {
 public:

@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class BarrelsOfPlenty.BarrelsOfPlentyDebugSpawnLocation
-// 0x0020 (0x0490 - 0x0470)
+// 0x0020 (0x0448 - 0x0428)
 class ABarrelsOfPlentyDebugSpawnLocation : public AActor
 {
 public:
-	TArray<struct FBarrelsOfPlentyDebugLocationEntry>  Objects;                                                  // 0x0470(0x0010) (Net, ZeroConstructor)
-	struct FVector                                     SpawnCentre;                                              // 0x0480(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              Radius;                                                   // 0x048C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	TArray<struct FBarrelsOfPlentyDebugLocationEntry>  Objects;                                                  // 0x0428(0x0010) (Net, ZeroConstructor)
+	struct FVector                                     SpawnCentre;                                              // 0x0438(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              Radius;                                                   // 0x0444(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -33,11 +33,13 @@ public:
 
 
 // Class BarrelsOfPlenty.BarrelsOfPlentySpawnProxy
-// 0x0018 (0x0488 - 0x0470)
+// 0x0028 (0x0450 - 0x0428)
 class ABarrelsOfPlentySpawnProxy : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0470(0x0018) MISSED OFFSET
+	class AShip*                                       Ship;                                                     // 0x0428(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0430(0x0018) MISSED OFFSET
+	class USceneComponent*                             SceneComponent;                                           // 0x0448(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

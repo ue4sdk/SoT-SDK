@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_Trail_Big.BP_Projectile_Trail_Big_C
-// 0x0000 (0x0480 - 0x0480)
+// 0x0000 (0x0448 - 0x0448)
 class ABP_Projectile_Trail_Big_C : public ABP_Projectile_Trail_C
 {
 public:

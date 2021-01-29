@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ArmoryChestInteraction.BP_ArmoryChestInteraction_C
-// 0x0008 (0x0540 - 0x0538)
+// 0x0008 (0x04F8 - 0x04F0)
 class ABP_ArmoryChestInteraction_C : public AArmoryChestInteraction
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0538(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

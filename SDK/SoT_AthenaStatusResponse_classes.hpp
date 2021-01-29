@@ -14,6 +14,22 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class AthenaStatusResponse.StatusResponseApplyOneShotStatus
+// 0x0018 (0x0048 - 0x0030)
+class UStatusResponseApplyOneShotStatus : public UStatusResponse
+{
+public:
+	struct FStatus                                     StatusToApply;                                            // 0x0030(0x0018) (Edit, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaStatusResponse.StatusResponseApplyOneShotStatus"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaStatusResponse.StatusResponseApplyPersistentStatus
 // 0x0020 (0x0050 - 0x0030)
 class UStatusResponseApplyPersistentStatus : public UStatusResponse

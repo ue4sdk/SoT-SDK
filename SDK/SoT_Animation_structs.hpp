@@ -247,9 +247,9 @@ struct FHitReactionAnimationState
 // 0x000C
 struct FAnimationLookAtParams
 {
-	float                                              ActivationSpeed;                                          // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              HorizontalLimit;                                          // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              VerticalLimit;                                            // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ActivationSpeed;                                          // 0x0000(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              HorizontalLimit;                                          // 0x0004(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              VerticalLimit;                                            // 0x0008(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Animation.AnimationLookAt
@@ -257,7 +257,7 @@ struct FAnimationLookAtParams
 struct FAnimationLookAt
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	struct FAnimationLookAtParams                      Params;                                                   // 0x0008(0x000C) (BlueprintVisible, BlueprintReadOnly)
+	struct FAnimationLookAtParams                      Params;                                                   // 0x0008(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly)
 	struct FVector                                     LookAtTarget;                                             // 0x0014(0x000C) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	bool                                               IKLookAtActive;                                           // 0x0020(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x77];                                      // 0x0021(0x0077) MISSED OFFSET

@@ -12,6 +12,70 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// DelegateFunction SafeZoneReservationFramework.SafeZoneComponent.SafeZoneIsEmpty__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+
+void USafeZoneComponent::SafeZoneIsEmpty__DelegateSignature()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("DelegateFunction SafeZoneReservationFramework.SafeZoneComponent.SafeZoneIsEmpty__DelegateSignature"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function SafeZoneReservationFramework.SafeZoneComponent.OnRep_UpdateCollisionProfile
+// (Final, Native, Private)
+
+void USafeZoneComponent::OnRep_UpdateCollisionProfile()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.OnRep_UpdateCollisionProfile"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function SafeZoneReservationFramework.SafeZoneComponent.OnRep_EmptyStateChanged
+// (Final, Native, Private)
+
+void USafeZoneComponent::OnRep_EmptyStateChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.OnRep_EmptyStateChanged"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function SafeZoneReservationFramework.SafeZoneComponent.DeactivateCollider
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+
+void USafeZoneComponent::DeactivateCollider()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.DeactivateCollider"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 }
 
 #ifdef _MSC_VER

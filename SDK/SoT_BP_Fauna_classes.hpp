@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Fauna.BP_Fauna_C
-// 0x0000 (0x0BD0 - 0x0BD0)
+// 0x0000 (0x0B90 - 0x0B90)
 class ABP_Fauna_C : public AFauna
 {
 public:

@@ -246,37 +246,21 @@ void UCosmeticItemAnimationComponent::DestroyAllCosmeticItems()
 }
 
 
-// Function Animation.CustomAnimationMontageComponent.Multicast_StopCustomMontage
-// (Final, Net, Native, Event, NetMulticast, Private)
-
-void UCustomAnimationMontageComponent::Multicast_StopCustomMontage()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.CustomAnimationMontageComponent.Multicast_StopCustomMontage"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Animation.CustomAnimationMontageComponent.Multicast_PlayCustomMontage
-// (Final, Net, Native, Event, NetMulticast, Private)
+// Function Animation.CustomAnimationMontageComponent.OnRep_CustomMontageId
+// (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FCustomAnimationMontageId InId                           (ConstParm, Parm, ReferenceParm)
+// struct FCustomAnimationMontageId PriorId                        (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UCustomAnimationMontageComponent::Multicast_PlayCustomMontage(const struct FCustomAnimationMontageId& InId)
+void UCustomAnimationMontageComponent::OnRep_CustomMontageId(const struct FCustomAnimationMontageId& PriorId)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.CustomAnimationMontageComponent.Multicast_PlayCustomMontage"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.CustomAnimationMontageComponent.OnRep_CustomMontageId"));
 
 	struct
 	{
-		struct FCustomAnimationMontageId InId;
+		struct FCustomAnimationMontageId PriorId;
 	} params;
 
-	params.InId = InId;
+	params.PriorId = PriorId;
 
 	UObject::ProcessEvent(fn, &params);
 }

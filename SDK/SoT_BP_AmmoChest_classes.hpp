@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AmmoChest.BP_AmmoChest_C
-// 0x0040 (0x0548 - 0x0508)
+// 0x0040 (0x0500 - 0x04C0)
 class ABP_AmmoChest_C : public AAmmoChest
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0508(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UBoxComponent*                               Hits;                                                     // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0518(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FWwiseEmitter                               Emitter;                                                  // 0x0520(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
-	class UMaterialInstanceDynamic*                    DynamicMaterial;                                          // 0x0540(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UBoxComponent*                               Hits;                                                     // 0x04C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UInteractableComponent*                      Interactable;                                             // 0x04D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FWwiseEmitter                               Emitter;                                                  // 0x04D8(0x0020) (Edit, BlueprintVisible, DisableEditOnInstance)
+	class UMaterialInstanceDynamic*                    DynamicMaterial;                                          // 0x04F8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

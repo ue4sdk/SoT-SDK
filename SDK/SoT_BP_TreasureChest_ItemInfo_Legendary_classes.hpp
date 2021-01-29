@@ -15,11 +15,10 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_ItemInfo_Legendary.BP_TreasureChest_ItemInfo_Legendary_C
-// 0x0008 (0x06F8 - 0x06F0)
-class ABP_TreasureChest_ItemInfo_Legendary_C : public ATreasureChestItemInfo
+// 0x0000 (0x0810 - 0x0810)
+class ABP_TreasureChest_ItemInfo_Legendary_C : public ABP_TreasureChest_GoldHoarderLockable_Base_ItemInfo_C
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x06F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -27,8 +26,6 @@ public:
 		return ptr;
 	}
 
-
-	void UserConstructionScript();
 };
 
 

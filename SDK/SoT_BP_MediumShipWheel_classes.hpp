@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MediumShipWheel.BP_MediumShipWheel_C
-// 0x0000 (0x0A89 - 0x0A89)
+// 0x0000 (0x0A41 - 0x0A41)
 class ABP_MediumShipWheel_C : public ABP_Wheel_C
 {
 public:

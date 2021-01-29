@@ -12,6 +12,17 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum Engine.EAttachLocation
+enum class EAttachLocation : uint8_t
+{
+	EAttachLocation__KeepRelativeOffset = 0,
+	EAttachLocation__KeepWorldPosition = 1,
+	EAttachLocation__SnapToTarget  = 2,
+	EAttachLocation__SnapToTargetIncludingScale = 3,
+	EAttachLocation__EAttachLocation_MAX = 4
+};
+
+
 // Enum Engine.EEndPlayReason
 enum class EEndPlayReason : uint8_t
 {
@@ -21,17 +32,6 @@ enum class EEndPlayReason : uint8_t
 	EEndPlayReason__RemovedFromWorld = 3,
 	EEndPlayReason__Quit           = 4,
 	EEndPlayReason__EEndPlayReason_MAX = 5
-};
-
-
-// Enum Engine.EAttachLocation
-enum class EAttachLocation : uint8_t
-{
-	EAttachLocation__KeepRelativeOffset = 0,
-	EAttachLocation__KeepWorldPosition = 1,
-	EAttachLocation__SnapToTarget  = 2,
-	EAttachLocation__SnapToTargetIncludingScale = 3,
-	EAttachLocation__EAttachLocation_MAX = 4
 };
 
 
@@ -1077,7 +1077,8 @@ enum class EBlendMode : uint8_t
 	BLEND_LowResTranslucent        = 6,
 	BLEND_AlphaBlend               = 7,
 	BLEND_TranslucentUI            = 8,
-	BLEND_MAX                      = 9
+	BLEND_PremultipliedAlpha       = 9,
+	BLEND_MAX                      = 10
 };
 
 
