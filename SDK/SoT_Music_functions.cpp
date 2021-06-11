@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -90,7 +90,7 @@ void UMusicZoneComponent::Client_StopMusicAndDisableZone()
 
 
 // Function Music.MusicZoneComponent.Client_PlayOneShot
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// (Net, NetReliable, Native, Event, NetMulticast, Public, BlueprintCallable)
 // Parameters:
 // int                            Index                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -91,7 +91,7 @@ struct FCrewSessionTelemetry
 	TArray<struct FCrewSessionMemberTelemetry>         SessionMembers;                                           // 0x0000(0x0010) (ZeroConstructor)
 	class FString                                      SessionTemplate;                                          // 0x0010(0x0010) (ZeroConstructor)
 	class FString                                      SessionVisibility;                                        // 0x0020(0x0010) (ZeroConstructor)
-	class FString                                      PlayMode;                                                 // 0x0030(0x0010) (ZeroConstructor)
+	class FString                                      Playmode;                                                 // 0x0030(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Sessions.CrewSessionBaseSessionTelemetryEvent

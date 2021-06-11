@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,6 +28,16 @@ enum class EPlaneLineIntersectionType : uint8_t
 	EPlaneLineIntersectionType__IntersectionOutsideOfLineSegment = 1,
 	EPlaneLineIntersectionType__PlaneAndLineParallel = 2,
 	EPlaneLineIntersectionType__EPlaneLineIntersectionType_MAX = 3
+};
+
+
+// Enum Maths.ESpatialOffsetMethod
+enum class ESpatialOffsetMethod : uint8_t
+{
+	ESpatialOffsetMethod__ThreeDimensional = 0,
+	ESpatialOffsetMethod__Horizontal = 1,
+	ESpatialOffsetMethod__Vertical = 2,
+	ESpatialOffsetMethod__ESpatialOffsetMethod_MAX = 3
 };
 
 

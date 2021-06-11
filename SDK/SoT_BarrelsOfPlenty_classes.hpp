@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class BarrelsOfPlenty.BarrelsOfPlentyDebugSpawnLocation
-// 0x0020 (0x0448 - 0x0428)
+// 0x0020 (0x0450 - 0x0430)
 class ABarrelsOfPlentyDebugSpawnLocation : public AActor
 {
 public:
-	TArray<struct FBarrelsOfPlentyDebugLocationEntry>  Objects;                                                  // 0x0428(0x0010) (Net, ZeroConstructor)
-	struct FVector                                     SpawnCentre;                                              // 0x0438(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              Radius;                                                   // 0x0444(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	TArray<struct FBarrelsOfPlentyDebugLocationEntry>  Objects;                                                  // 0x0430(0x0010) (Net, ZeroConstructor)
+	struct FVector                                     SpawnCentre;                                              // 0x0440(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              Radius;                                                   // 0x044C(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -33,13 +33,13 @@ public:
 
 
 // Class BarrelsOfPlenty.BarrelsOfPlentySpawnProxy
-// 0x0028 (0x0450 - 0x0428)
+// 0x0028 (0x0458 - 0x0430)
 class ABarrelsOfPlentySpawnProxy : public AActor
 {
 public:
-	class AShip*                                       Ship;                                                     // 0x0428(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0430(0x0018) MISSED OFFSET
-	class USceneComponent*                             SceneComponent;                                           // 0x0448(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AShip*                                       Ship;                                                     // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0438(0x0018) MISSED OFFSET
+	class USceneComponent*                             SceneComponent;                                           // 0x0450(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -35,18 +35,18 @@ void UHeightTriggerableEffectsComponent::SetMovementDirection(TEnumAsByte<EDirec
 // Function SpireFramework.SpireService.OnRep_SpireLevels
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// TArray<struct FSpireInfo>      PreviousSpireLevels            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<struct FSpireInfo>      InPreviousSpireLevels          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ASpireService::OnRep_SpireLevels(TArray<struct FSpireInfo> PreviousSpireLevels)
+void ASpireService::OnRep_SpireLevels(TArray<struct FSpireInfo> InPreviousSpireLevels)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SpireFramework.SpireService.OnRep_SpireLevels"));
 
 	struct
 	{
-		TArray<struct FSpireInfo>      PreviousSpireLevels;
+		TArray<struct FSpireInfo>      InPreviousSpireLevels;
 	} params;
 
-	params.PreviousSpireLevels = PreviousSpireLevels;
+	params.InPreviousSpireLevels = InPreviousSpireLevels;
 
 	UObject::ProcessEvent(fn, &params);
 }

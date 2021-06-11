@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -203,13 +203,6 @@ struct FFFTWaterQueryResult
 	struct FVector                                     Normal;                                                   // 0x000C(0x000C) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EWaterQueryResult>                     WaterQueryResult;                                         // 0x0018(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
-};
-
-// ScriptStruct Water.FFTWaterTickFunction
-// 0x0020 (0x0068 - 0x0048)
-struct FFFTWaterTickFunction : public FTickFunction
-{
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0048(0x0020) MISSED OFFSET
 };
 
 }

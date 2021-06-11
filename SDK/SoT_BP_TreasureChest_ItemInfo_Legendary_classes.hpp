@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_ItemInfo_Legendary.BP_TreasureChest_ItemInfo_Legendary_C
-// 0x0000 (0x0810 - 0x0810)
+// 0x0000 (0x0858 - 0x0858)
 class ABP_TreasureChest_ItemInfo_Legendary_C : public ABP_TreasureChest_GoldHoarderLockable_Base_ItemInfo_C
 {
 public:

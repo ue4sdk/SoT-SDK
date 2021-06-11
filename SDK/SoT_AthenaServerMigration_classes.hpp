@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,21 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
+
+// Class AthenaServerMigration.AthenaServerMigrationGameAuthorityProviderInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAthenaServerMigrationGameAuthorityProviderInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaServerMigration.AthenaServerMigrationGameAuthorityProviderInterface"));
+		return ptr;
+	}
+
+};
+
 
 // Class AthenaServerMigration.MigrationServiceInterface
 // 0x0000 (0x0028 - 0x0028)

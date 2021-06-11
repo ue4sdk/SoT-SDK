@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_shovel_arn_01_a_Wieldable.BP_tls_shovel_arn_01_a_Wieldable_C
-// 0x0000 (0x08A8 - 0x08A8)
+// 0x0000 (0x0878 - 0x0878)
 class ABP_tls_shovel_arn_01_a_Wieldable_C : public ABP_Shovel_C
 {
 public:

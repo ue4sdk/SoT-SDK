@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GiantSkeletonPawnBase.BP_GiantSkeletonPawnBase_C
-// 0x0008 (0x1248 - 0x1240)
+// 0x0008 (0x1290 - 0x1288)
 class ABP_GiantSkeletonPawnBase_C : public ABP_SkeletonPawnBase_C
 {
 public:
-	class UHealthStageHandlerComponent*                HealthStageHandler;                                       // 0x1240(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UHealthStageHandlerComponent*                HealthStageHandler;                                       // 0x1288(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

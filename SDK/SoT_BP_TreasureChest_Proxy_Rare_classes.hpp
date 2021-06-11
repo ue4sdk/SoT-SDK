@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,8 +15,8 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Proxy_Rare.BP_TreasureChest_Proxy_Rare_C
-// 0x0000 (0x0850 - 0x0850)
-class ABP_TreasureChest_Proxy_Rare_C : public ABP_TreasureChestProxy_Static_C
+// 0x0000 (0x0999 - 0x0999)
+class ABP_TreasureChest_Proxy_Rare_C : public ABP_TreasureChest_GoldHoarderLocked_Base_Proxy_C
 {
 public:
 

@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AshenLordSpawnDiarama_Drum.BP_AshenLordSpawnDiarama_Drum_C
-// 0x0010 (0x0438 - 0x0428)
+// 0x0010 (0x0440 - 0x0430)
 class ABP_AshenLordSpawnDiarama_Drum_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        msc_drum_skl_01_a;                                        // 0x0428(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0430(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        msc_drum_skl_01_a;                                        // 0x0430(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0438(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

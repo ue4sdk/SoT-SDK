@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,12 +30,13 @@ public:
 
 
 // Class HarbourFramework.HarbourComponent
-// 0x0020 (0x02B0 - 0x0290)
+// 0x0030 (0x02E0 - 0x02B0)
 class UHarbourComponent : public USceneComponent
 {
 public:
-	float                                              HarbourRadiusInCentimetres;                               // 0x0290(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1C];                                      // 0x0294(0x001C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	float                                              HarbourRadiusInCentimetres;                               // 0x02B8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x24];                                      // 0x02BC(0x0024) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

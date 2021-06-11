@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Enums
 //---------------------------------------------------------------------------
+
+// Enum GlitterBeard.EFinaleState
+enum class EFinaleState : uint8_t
+{
+	EFinaleState__Inactive         = 0,
+	EFinaleState__Active           = 1,
+	EFinaleState__ServerComplete   = 2,
+	EFinaleState__EFinaleState_MAX = 3
+};
+
 
 // Enum GlitterBeard.EGlitterbeardVFXState
 enum class EGlitterbeardVFXState : uint8_t

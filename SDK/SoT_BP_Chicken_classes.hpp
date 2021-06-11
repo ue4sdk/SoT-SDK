@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Chicken.BP_Chicken_C
-// 0x0018 (0x0BE8 - 0x0BD0)
+// 0x0018 (0x0BA8 - 0x0B90)
 class ABP_Chicken_C : public ABP_Fauna_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0BD0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UAIItemSpawnComponent*                       AIItemSpawn;                                              // 0x0BD8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshComponent*                      ChickenSkeletalMesh;                                      // 0x0BE0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0B90(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UAIItemSpawnComponent*                       AIItemSpawn;                                              // 0x0B98(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USkeletalMeshComponent*                      ChickenSkeletalMesh;                                      // 0x0BA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

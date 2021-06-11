@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wld_outpost_1_design_adventure.wld_outpost_1_design_adventure_C
-// 0x0000 (0x0468 - 0x0468)
+// 0x0000 (0x0430 - 0x0430)
 class Awld_outpost_1_design_adventure_C : public ALevelScriptActor
 {
 public:

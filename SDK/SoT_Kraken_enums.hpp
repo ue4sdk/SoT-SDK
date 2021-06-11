@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,20 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Enums
 //---------------------------------------------------------------------------
+
+// Enum Kraken.ECoordinatedKrakenSpecialEventTypes
+enum class ECoordinatedKrakenSpecialEventTypes : uint8_t
+{
+	ECoordinatedKrakenSpecialEventTypes__None = 0,
+	ECoordinatedKrakenSpecialEventTypes__OverrideTargetActor = 1,
+	ECoordinatedKrakenSpecialEventTypes__ReleaseTargetActor = 2,
+	ECoordinatedKrakenSpecialEventTypes__BiteAttackImpact = 3,
+	ECoordinatedKrakenSpecialEventTypes__BreathingIn = 4,
+	ECoordinatedKrakenSpecialEventTypes__RoarVisuals = 5,
+	ECoordinatedKrakenSpecialEventTypes__RoarAttack = 6,
+	ECoordinatedKrakenSpecialEventTypes__ECoordinatedKrakenSpecialEventTypes_MAX = 7
+};
+
 
 // Enum Kraken.ECoordinatedKrakenActionType
 enum class ECoordinatedKrakenActionType : uint8_t

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Lantern_LargeShip_MapDeck_MainStairs.BP_Lantern_LargeShip_MapDeck_MainStairs_C
-// 0x0000 (0x07A5 - 0x07A5)
+// 0x0000 (0x07AD - 0x07AD)
 class ABP_Lantern_LargeShip_MapDeck_MainStairs_C : public ABP_InteractableShipLantern_C
 {
 public:

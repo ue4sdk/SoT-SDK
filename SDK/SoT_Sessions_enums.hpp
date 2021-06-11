@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Enums
 //---------------------------------------------------------------------------
+
+// Enum Sessions.ESessionStyle
+enum class ESessionStyle : uint8_t
+{
+	ESessionStyle__Invalid         = 0,
+	ESessionStyle__Standard        = 1,
+	ESessionStyle__BeachNPCSpawn   = 2,
+	ESessionStyle__Max             = 3,
+	ESessionStyle__ESessionStyle_MAX = 4
+};
+
 
 // Enum Sessions.ESessionGrouping
 enum class ESessionGrouping : uint8_t

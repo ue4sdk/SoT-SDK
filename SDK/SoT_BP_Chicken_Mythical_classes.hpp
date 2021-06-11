@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Chicken_Mythical.BP_Chicken_Mythical_C
-// 0x0000 (0x0BE8 - 0x0BE8)
+// 0x0000 (0x0BA8 - 0x0BA8)
 class ABP_Chicken_Mythical_C : public ABP_Chicken_C
 {
 public:

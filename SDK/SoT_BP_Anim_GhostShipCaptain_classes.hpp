@@ -15,20 +15,20 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_GhostShipCaptain.BP_Anim_GhostShipCaptain_C
-// 0x035C (0x095C - 0x0600)
+// 0x035C (0x096C - 0x0610)
 class UBP_Anim_GhostShipCaptain_C : public UNPCAnimInstance
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0600(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                              AnimGraphNode_Root_F8A273C14F91208C2687698D3542FF2C;      // 0x0608(0x0048)
-	struct FAnimNode_HIKSolve                          AnimGraphNode_HIKSolve_C67C9C33471ABFAF9A6B63896EB7DB82;  // 0x0650(0x0080)
-	struct FAnimNode_ConvertComponentToLocalSpace      AnimGraphNode_ComponentToLocalSpace_5E8BC6EE4E39DC558323A7835E29C2E7;// 0x06D0(0x0048)
-	struct FAnimNode_ConvertLocalToComponentSpace      AnimGraphNode_LocalToComponentSpace_0867DDAB420C0A193B6EEC8FA185B283;// 0x0718(0x0048)
-	struct FAnimNode_HIKLookAt                         AnimGraphNode_HIKLookAt_559E08FE4278B4C88466CCBBB6544058; // 0x0760(0x0088)
-	struct FAnimNode_BlendListByBool                   AnimGraphNode_BlendListByBool_CA8E748947CB37638D1D77AF82F419EB;// 0x07E8(0x00B0)
-	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_0D35E79745C1164A5D8E88A879104C61;// 0x0898(0x0060)
-	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_94631CD94516DC2280196F8C145D8147;// 0x08F8(0x0060)
-	float                                              IKAlpha;                                                  // 0x0958(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0610(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	struct FAnimNode_Root                              AnimGraphNode_Root_F8A273C14F91208C2687698D3542FF2C;      // 0x0618(0x0048)
+	struct FAnimNode_HIKSolve                          AnimGraphNode_HIKSolve_C67C9C33471ABFAF9A6B63896EB7DB82;  // 0x0660(0x0080)
+	struct FAnimNode_ConvertComponentToLocalSpace      AnimGraphNode_ComponentToLocalSpace_5E8BC6EE4E39DC558323A7835E29C2E7;// 0x06E0(0x0048)
+	struct FAnimNode_ConvertLocalToComponentSpace      AnimGraphNode_LocalToComponentSpace_0867DDAB420C0A193B6EEC8FA185B283;// 0x0728(0x0048)
+	struct FAnimNode_HIKLookAt                         AnimGraphNode_HIKLookAt_559E08FE4278B4C88466CCBBB6544058; // 0x0770(0x0088)
+	struct FAnimNode_BlendListByBool                   AnimGraphNode_BlendListByBool_CA8E748947CB37638D1D77AF82F419EB;// 0x07F8(0x00B0)
+	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_0D35E79745C1164A5D8E88A879104C61;// 0x08A8(0x0060)
+	struct FAnimNode_SequencePlayer                    AnimGraphNode_SequencePlayer_94631CD94516DC2280196F8C145D8147;// 0x0908(0x0060)
+	float                                              IKAlpha;                                                  // 0x0968(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

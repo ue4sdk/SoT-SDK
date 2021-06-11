@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,6 +82,14 @@ struct FAnimationDataStoreAssetWeakReferenceEntry
 	TAssetPtr<class UClass>                            AnimData;                                                 // 0x0008(0x0020) (Edit)
 };
 
+// ScriptStruct Animation.CurveUpdateValues
+// 0x000C
+struct FCurveUpdateValues
+{
+	struct FName                                       CurveName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              FinalValue;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
 // ScriptStruct Animation.CosmeticItems
 // 0x0010
 struct FCosmeticItems
@@ -104,6 +112,14 @@ struct FCosmeticItemAnimationSetLoopData
 struct FCustomAnimationMontageId
 {
 	struct FName                                       CustomAnimationMontageId;                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Animation.CustomAnimationMontageComponentReplicatedData
+// 0x000C
+struct FCustomAnimationMontageComponentReplicatedData
+{
+	struct FCustomAnimationMontageId                   CustomMontageId;                                          // 0x0000(0x0008)
+	int                                                AnimationCallId;                                          // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Animation.CustomAnimationMontageStagedLoopingData
@@ -179,11 +195,25 @@ struct FWeightedAnimationData
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct Animation.HitReactionAnimationData
+// 0x0008
+struct FHitReactionAnimationData
+{
+	class UBlendSpace1D*                               HitReactBlendSpace;                                       // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Animation.EventCosmeticItemAttachmentSwitched
 // 0x0008
 struct FEventCosmeticItemAttachmentSwitched
 {
 	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Animation.EventCosmeticItemSpawnedOwnerNotification
+// 0x0008
+struct FEventCosmeticItemSpawnedOwnerNotification
+{
+	class AActor*                                      CosmeticItemActor;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Animation.EventCosmeticItemSpawned
@@ -225,13 +255,6 @@ struct FEventHitReactAnimationRequested
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0019(0x0003) MISSED OFFSET
 };
 
-// ScriptStruct Animation.HitReactionAnimationData
-// 0x0008
-struct FHitReactionAnimationData
-{
-	class UBlendSpace1D*                               HitReactBlendSpace;                                       // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-};
-
 // ScriptStruct Animation.HitReactionAnimationState
 // 0x0028
 struct FHitReactionAnimationState
@@ -268,6 +291,15 @@ struct FAnimationLookAt
 struct FEventAnimationLookAtUpdated
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+};
+
+// ScriptStruct Animation.IKLookAtParams
+// 0x000C
+struct FIKLookAtParams
+{
+	float                                              ActivationSpeed;                                          // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              HorizontalLimit;                                          // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              VerticalLimit;                                            // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Animation.AnimNode_WeightedLoadOnDemandSquencePlayer

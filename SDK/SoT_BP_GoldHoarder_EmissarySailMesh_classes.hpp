@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GoldHoarder_EmissarySailMesh.BP_GoldHoarder_EmissarySailMesh_C
-// 0x0000 (0x05D0 - 0x05D0)
+// 0x0000 (0x05C0 - 0x05C0)
 class UBP_GoldHoarder_EmissarySailMesh_C : public UEmissaryRepresentationMeshComponent
 {
 public:

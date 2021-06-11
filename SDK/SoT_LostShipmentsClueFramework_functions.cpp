@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function LostShipmentsClueFramework.ClueDestinationDescriptor.OnRep_DestinationInfo
+// (Native, Public)
+
+void UClueDestinationDescriptor::OnRep_DestinationInfo()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueFramework.ClueDestinationDescriptor.OnRep_DestinationInfo"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
 
 // Function LostShipmentsClueFramework.ClueConnectionBlueprintFunctionLibrary.CreateCluePointingToSite
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)

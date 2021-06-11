@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GildedCrown_TallTales.BP_GildedCrown_TallTales_C
-// 0x0008 (0x0468 - 0x0460)
+// 0x0008 (0x0430 - 0x0428)
 class ABP_GildedCrown_TallTales_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        gmp_tal_guilded_crown_01_a;                               // 0x0460(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        gmp_tal_guilded_crown_01_a;                               // 0x0428(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

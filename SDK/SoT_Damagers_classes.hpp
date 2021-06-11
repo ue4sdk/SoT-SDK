@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Damagers.RadialDamagerComponent
-// 0x0038 (0x0100 - 0x00C8)
+// 0x0058 (0x0120 - 0x00C8)
 class URadialDamagerComponent : public UActorComponent
 {
 public:
@@ -23,12 +23,12 @@ public:
 	float                                              DamagePerSecondAtCentre;                                  // 0x00CC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              DamagePerSecondAtMaxRadius;                               // 0x00D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              DamageRadius;                                             // 0x00D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      DamagerType;                                              // 0x00D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ECollisionChannel>                     CollisionChannel;                                         // 0x00E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EHealthChangedReason>                  HealthChangedReason;                                      // 0x00E1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x2];                                       // 0x00E2(0x0002) MISSED OFFSET
-	struct FVector                                     LocalOffset;                                              // 0x00E4(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x00F0(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00D8(0x0008) MISSED OFFSET
+	class UClass*                                      DamagerType;                                              // 0x00E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EHealthChangedReason>                  HealthChangedReason;                                      // 0x00E8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x00E9(0x0003) MISSED OFFSET
+	struct FVector                                     LocalOffset;                                              // 0x00EC(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x28];                                      // 0x00F8(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

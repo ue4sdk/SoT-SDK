@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_CargoRun03_Drunk.BP_Anim_CargoRun03_Drunk_C
-// 0x0000 (0x1925 - 0x1925)
+// 0x0000 (0x1BD5 - 0x1BD5)
 class UBP_Anim_CargoRun03_Drunk_C : public UBP_Anim_NPC_C
 {
 public:

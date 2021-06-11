@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,6 +58,13 @@ struct FPlayModeDefiniton
 	TArray<class FString>                              States;                                                   // 0x0010(0x0010) (ZeroConstructor)
 	int                                                CrewMin;                                                  // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                CrewMax;                                                  // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaEngine.ServicesStampId
+// 0x0010
+struct FServicesStampId
+{
+	class FString                                      StampId;                                                  // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct AthenaEngine.ActorComponentSelector

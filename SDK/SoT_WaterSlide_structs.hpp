@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -82,13 +82,6 @@ struct FOnStartWaterSlideActionStateEvent
 struct FOnExitedWaterSlideEvent
 {
 	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
-};
-
-// ScriptStruct WaterSlide.OnEnteredWaterSlideEvent
-// 0x0008
-struct FOnEnteredWaterSlideEvent
-{
-	class AWaterSlide*                                 WaterSlide;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

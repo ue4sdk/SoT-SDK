@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass rfs_feature_01_c_lighting.rfs_feature_01_c_lighting_C
-// 0x0000 (0x0468 - 0x0468)
+// 0x0000 (0x0438 - 0x0438)
 class Arfs_feature_01_c_lighting_C : public ALevelScriptActor
 {
 public:

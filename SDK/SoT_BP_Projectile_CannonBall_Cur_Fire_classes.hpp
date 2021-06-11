@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_CannonBall_Cur_Fire.BP_Projectile_CannonBall_Cur_Fire_C
-// 0x0008 (0x0698 - 0x0690)
+// 0x0008 (0x06B0 - 0x06A8)
 class ABP_Projectile_CannonBall_Cur_Fire_C : public ABP_Projectile_CannonBall_Cursed_C
 {
 public:
-	class UMeshRotatorComponent*                       MeshRotator;                                              // 0x0690(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMeshRotatorComponent*                       MeshRotator;                                              // 0x06A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

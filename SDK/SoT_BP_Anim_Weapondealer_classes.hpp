@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_Weapondealer.BP_Anim_Weapondealer_C
-// 0x0000 (0x1995 - 0x1995)
+// 0x0000 (0x1BD5 - 0x1BD5)
 class UBP_Anim_Weapondealer_C : public UBP_Anim_NPC_C
 {
 public:

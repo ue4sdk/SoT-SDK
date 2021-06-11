@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1347,7 +1347,8 @@ enum class ECameraAnimPlaySpace : uint8_t
 	ECameraAnimPlaySpace__World    = 1,
 	ECameraAnimPlaySpace__UserDefined = 2,
 	ECameraAnimPlaySpace__RARE_CutsceneWorld = 3,
-	ECameraAnimPlaySpace__ECameraAnimPlaySpace_MAX = 4
+	ECameraAnimPlaySpace__RARE_RelativeToWorldLocation = 4,
+	ECameraAnimPlaySpace__ECameraAnimPlaySpace_MAX = 5
 };
 
 
@@ -3492,6 +3493,32 @@ enum class EModuleType : uint8_t
 };
 
 
+// Enum Engine.EDragOnLocalVelocityGroupName
+enum class EDragOnLocalVelocityGroupName : uint8_t
+{
+	DragOnLocalVelocityGroupB      = 0,
+	DragOnLocalVelocityGroupC      = 1,
+	DragOnLocalVelocityGroupD      = 2,
+	DragOnLocalVelocityGroupE      = 3,
+	DragOnLocalVelocityGroupReplacement = 4,
+	DragOnLocalVelocityGroup_MAX   = 5,
+	EDragOnLocalVelocityGroupName_MAX = 6
+};
+
+
+// Enum Engine.EDragCoefficientGroupName
+enum class EDragCoefficientGroupName : uint8_t
+{
+	DragCoefficientGroupB          = 0,
+	DragCoefficientGroupC          = 1,
+	DragCoefficientGroupD          = 2,
+	DragCoefficientGroupE          = 3,
+	DragCoefficientGroupReplacement = 4,
+	DragCoefficientGroup_MAX       = 5,
+	EDragCoefficientGroupName_MAX  = 6
+};
+
+
 // Enum Engine.EAttractorParticleSelectionMethod
 enum class EAttractorParticleSelectionMethod : uint8_t
 {
@@ -3589,6 +3616,29 @@ enum class EStartColorGroupsName : uint8_t
 	StartColorReplacement          = 4,
 	StartColor_MAX                 = 5,
 	EStartColorGroupsName_MAX      = 6
+};
+
+
+// Enum Engine.EGPUParticleCollisionEventLimit
+enum class EGPUParticleCollisionEventLimit : uint8_t
+{
+	EGPUParticleCollisionEventLimit__OnlyOnFirstCollision = 0,
+	EGPUParticleCollisionEventLimit__OnlyOnFirstTwoCollisions = 1,
+	EGPUParticleCollisionEventLimit__Unlimited = 2,
+	EGPUParticleCollisionEventLimit__EGPUParticleCollisionEventLimit_MAX = 3
+};
+
+
+// Enum Engine.ESpawnEventGroupNames
+enum class ESpawnEventGroupNames : uint8_t
+{
+	SpawnEventGroupB               = 0,
+	SpawnEventGroupC               = 1,
+	SpawnEventGroupD               = 2,
+	SpawnEventGroupE               = 3,
+	SpawnEventGroupReplacemnent    = 4,
+	SpawnEventGroup_MAX            = 5,
+	ESpawnEventGroupNames_MAX      = 6
 };
 
 
@@ -3787,6 +3837,19 @@ enum class EPriorityGroups : uint8_t
 };
 
 
+// Enum Engine.EScreenAlignmentGroupNames
+enum class EScreenAlignmentGroupNames : uint8_t
+{
+	ScreenAlignmentGroupB          = 0,
+	ScreenAlignmentGroupC          = 1,
+	ScreenAlignmentGroupD          = 2,
+	ScreenAlignmentGroupE          = 3,
+	ScreenAlignmentGroupReplacement = 4,
+	ScreenAlignmentGroup_MAX       = 5,
+	EScreenAlignmentGroupNames_MAX = 6
+};
+
+
 // Enum Engine.EEmitterOriginGroupNames
 enum class EEmitterOriginGroupNames : uint8_t
 {
@@ -3834,6 +3897,45 @@ enum class EParticleUVFlipMode : uint8_t
 	EParticleUVFlipMode__RandomFlipVOnly = 6,
 	EParticleUVFlipMode__RandomFlipUVIndependent = 7,
 	EParticleUVFlipMode__EParticleUVFlipMode_MAX = 8
+};
+
+
+// Enum Engine.ERotationAboutArbitraryAxisGroupName
+enum class ERotationAboutArbitraryAxisGroupName : uint8_t
+{
+	RotationAboutArbitraryAxisGroupB = 0,
+	RotationAboutArbitraryAxisGroupC = 1,
+	RotationAboutArbitraryAxisGroupD = 2,
+	RotationAboutArbitraryAxisGroupE = 3,
+	RotationAboutArbitraryAxisGroupReplacement = 4,
+	RotationAboutArbitraryAxisGroup_MAX = 5,
+	ERotationAboutArbitraryAxisGroupName_MAX = 6
+};
+
+
+// Enum Engine.EStartRotationGroupNames
+enum class EStartRotationGroupNames : uint8_t
+{
+	StartRotationGroupB            = 0,
+	StartRotationGroupC            = 1,
+	StartRotationGroupD            = 2,
+	StartRotationGroupE            = 3,
+	StartRotationGroupReplacement  = 4,
+	StartRotationGroup_MAX         = 5,
+	EStartRotationGroupNames_MAX   = 6
+};
+
+
+// Enum Engine.EStartRotationRateGroupNames
+enum class EStartRotationRateGroupNames : uint8_t
+{
+	StartRotationRateGroupB        = 0,
+	StartRotationRateGroupC        = 1,
+	StartRotationRateGroupD        = 2,
+	StartRotationRateGroupE        = 3,
+	StartRotationRateGroupReplacement = 4,
+	StartRotationRateGroup_MAX     = 5,
+	EStartRotationRateGroupNames_MAX = 6
 };
 
 

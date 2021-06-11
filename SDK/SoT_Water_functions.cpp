@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -312,38 +312,6 @@ TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeightWithScaledChoppyne
 
 	if (Height != nullptr)
 		*Height = params.Height;
-
-	return params.ReturnValue;
-}
-
-
-// Function Water.WaterInterface.GetWaterHeightsBatched
-// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FVector2D>       SamplePositions                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class AActor*                  Actor                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<float>                  Heights                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TEnumAsByte<EWaterQueryResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EWaterQueryResult> UWaterInterface::GetWaterHeightsBatched(TArray<struct FVector2D> SamplePositions, class AActor* Actor, TArray<float>* Heights)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInterface.GetWaterHeightsBatched"));
-
-	struct
-	{
-		TArray<struct FVector2D>       SamplePositions;
-		class AActor*                  Actor;
-		TArray<float>                  Heights;
-		TEnumAsByte<EWaterQueryResult> ReturnValue;
-	} params;
-
-	params.SamplePositions = SamplePositions;
-	params.Actor = Actor;
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (Heights != nullptr)
-		*Heights = params.Heights;
 
 	return params.ReturnValue;
 }
@@ -842,6 +810,27 @@ void UWaterInteractionComponent::LeaveWaterExclusionZone()
 
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Water.WaterInteractionComponent.IsUsingWaterExcludedZone
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool UWaterInteractionComponent::IsUsingWaterExcludedZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.WaterInteractionComponent.IsUsingWaterExcludedZone"));
+
+	struct
+	{
+		bool                           ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 

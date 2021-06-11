@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -10,11 +10,11 @@
 #include "SoT_UMG_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_InputCore_classes.hpp"
+#include "SoT_Slate_classes.hpp"
 #include "SoT_SlateCore_classes.hpp"
 #include "SoT_MovieScene_classes.hpp"
 #include "SoT_MovieSceneTracks_classes.hpp"
-#include "SoT_Slate_classes.hpp"
+#include "SoT_InputCore_classes.hpp"
 
 namespace SDK
 {

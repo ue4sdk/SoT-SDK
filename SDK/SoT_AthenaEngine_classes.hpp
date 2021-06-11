@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -65,13 +65,13 @@ public:
 
 
 // Class AthenaEngine.DynamicColourPointLightComponent
-// 0x0130 (0x0580 - 0x0450)
+// 0x0130 (0x05B0 - 0x0480)
 class UDynamicColourPointLightComponent : public UPointLightComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x78];                                      // 0x0450(0x0078) MISSED OFFSET
-	struct FRuntimeFloatCurve                          DeactivationCurve;                                        // 0x04C8(0x0080) (Edit)
-	unsigned char                                      UnknownData01[0x38];                                      // 0x0548(0x0038) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x78];                                      // 0x0480(0x0078) MISSED OFFSET
+	struct FRuntimeFloatCurve                          DeactivationCurve;                                        // 0x04F8(0x0080) (Edit)
+	unsigned char                                      UnknownData01[0x38];                                      // 0x0578(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -133,12 +133,11 @@ public:
 
 
 // Class AthenaEngine.NestedWorldRootDataAsset
-// 0x0020 (0x0048 - 0x0028)
+// 0x0010 (0x0038 - 0x0028)
 class UNestedWorldRootDataAsset : public UDataAsset
 {
 public:
-	TArray<TAssetPtr<class UWorld>>                    WorldRoots;                                               // 0x0028(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -316,6 +315,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.RotateMeshToLocalPlayerComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaEngine.ServicesStampIdInterface
+// 0x0000 (0x0028 - 0x0028)
+class UServicesStampIdInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaEngine.ServicesStampIdInterface"));
 		return ptr;
 	}
 

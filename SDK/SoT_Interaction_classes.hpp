@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -68,12 +68,13 @@ public:
 
 
 // Class Interaction.CharacterInteractionComponent
-// 0x00C0 (0x0620 - 0x0560)
+// 0x00C0 (0x0640 - 0x0580)
 class UCharacterInteractionComponent : public UBoxComponent
 {
 public:
-	class UInteractableArea*                           CurrentOptimalInteractable;                               // 0x0560(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xB8];                                      // 0x0568(0x00B8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0580(0x0008) MISSED OFFSET
+	class UInteractableArea*                           CurrentOptimalInteractable;                               // 0x0588(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xB0];                                      // 0x0590(0x00B0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -276,15 +277,15 @@ public:
 
 
 // Class Interaction.MockInteractorActor
-// 0x0028 (0x0450 - 0x0428)
+// 0x0028 (0x0458 - 0x0430)
 class AMockInteractorActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0428(0x0008) MISSED OFFSET
-	class UObject*                                     FocusedInteractable;                                      // 0x0430(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UObject*                                     InteractedObject;                                         // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UClass*                                      InteractNotificationType;                                 // 0x0440(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0448(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
+	class UObject*                                     FocusedInteractable;                                      // 0x0438(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UObject*                                     InteractedObject;                                         // 0x0440(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UClass*                                      InteractNotificationType;                                 // 0x0448(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0450(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

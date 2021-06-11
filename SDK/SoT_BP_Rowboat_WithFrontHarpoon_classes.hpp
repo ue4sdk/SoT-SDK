@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rowboat_WithFrontHarpoon.BP_Rowboat_WithFrontHarpoon_C
-// 0x0008 (0x0A58 - 0x0A50)
+// 0x0008 (0x0A60 - 0x0A58)
 class ABP_Rowboat_WithFrontHarpoon_C : public ABP_Rowboat_C
 {
 public:
-	class UChildActorComponent*                        Harpoon;                                                  // 0x0A50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        Harpoon;                                                  // 0x0A58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

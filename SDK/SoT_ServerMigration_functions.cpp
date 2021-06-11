@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -209,7 +209,7 @@ bool UNetworkTestingBlueprintFunctionLibrary::IsActorInNetworkClusterGlobal(clas
 
 
 // Function ServerMigration.NetworkTestingBlueprintFunctionLibrary.IsActorInNetworkCluster
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
 // class AActor*                  NetworkClusterOwner            (Parm, ZeroConstructor, IsPlainOldData)

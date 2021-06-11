@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -111,6 +111,16 @@ struct FDrawDebugItemString
 	class FString                                      String;                                                   // 0x0010(0x0010) (ZeroConstructor)
 	struct FColor                                      Colour;                                                   // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	struct FVector                                     StringPos;                                                // 0x0024(0x000C) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct AthenaDebug.SphereData
+// 0x0018
+struct FSphereData
+{
+	struct FVector                                     Location;                                                 // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
+	float                                              Radius;                                                   // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                Segments;                                                 // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	struct FColor                                      Colour;                                                   // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
 }

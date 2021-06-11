@@ -1,19 +1,20 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_LostShipmentsClueFramework_enums.hpp"
+#include "SoT_TradeRouteFramework_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_Athena_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 #include "SoT_Tales_classes.hpp"
-#include "SoT_TradeRouteFramework_classes.hpp"
 
 namespace SDK
 {
@@ -64,12 +65,37 @@ struct FRestrictedClueType
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct LostShipmentsClueFramework.ClueSiteLootRestriction
+// 0x0010
+struct FClueSiteLootRestriction
+{
+	class UClass*                                      SiteType;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                LootMax;                                                  // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct LostShipmentsClueFramework.LootToRangeDist
 // 0x0028
 struct FLootToRangeDist
 {
 	struct FWeightedProbabilityRange                   NumberOfLootItemsToSpawn;                                 // 0x0000(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
 	class UWeightedTreasureChestDescAsset*             WeightedLootDescAsset;                                    // 0x0020(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct LostShipmentsClueFramework.LootSpawnedAtClueSite
+// 0x0018
+struct FLootSpawnedAtClueSite
+{
+	class UClass*                                      SiteType;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     SiteLocation;                                             // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                NumLoot;                                                  // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct LostShipmentsClueFramework.ClueSiteLootHistory
+// 0x0010
+struct FClueSiteLootHistory
+{
+	TArray<struct FLootSpawnedAtClueSite>              History;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct LostShipmentsClueFramework.QuestVariableClueSite

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,21 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
+
+// Class SeasonProgression.IsExcludedFromSeasonProgressionStatCondition
+// 0x0000 (0x0030 - 0x0030)
+class UIsExcludedFromSeasonProgressionStatCondition : public UTargetedStatCondition
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SeasonProgression.IsExcludedFromSeasonProgressionStatCondition"));
+		return ptr;
+	}
+
+};
+
 
 // Class SeasonProgression.PlayerSeasonProgressionComponent
 // 0x00B0 (0x0178 - 0x00C8)

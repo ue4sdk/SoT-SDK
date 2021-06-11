@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -44,29 +44,14 @@ public:
 };
 
 
-// Class AthenaAIAbilities.AIAbilityVulnerableStatus
-// 0x0000 (0x0030 - 0x0030)
-class UAIAbilityVulnerableStatus : public UStatusBase
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.AIAbilityVulnerableStatus"));
-		return ptr;
-	}
-
-};
-
-
 // Class AthenaAIAbilities.AreaOfEffectHealAIAbility
-// 0x0028 (0x0098 - 0x0070)
+// 0x0028 (0x00A0 - 0x0078)
 class UAreaOfEffectHealAIAbility : public UAthenaAIAbility
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0070(0x0010) MISSED OFFSET
-	class AActor*                                      HealAreaOfEffectActor;                                    // 0x0080(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x0088(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0078(0x0010) MISSED OFFSET
+	class AActor*                                      HealAreaOfEffectActor;                                    // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x0090(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -78,15 +63,15 @@ public:
 
 
 // Class AthenaAIAbilities.AreaOfEffectHealAIAbilityParams
-// 0x0018 (0x00C0 - 0x00A8)
+// 0x0018 (0x00E0 - 0x00C8)
 class UAreaOfEffectHealAIAbilityParams : public UAthenaAIAbilityParams
 {
 public:
-	float                                              HealthPercentageThresholdToHeal;                          // 0x00A8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00AC(0x0004) MISSED OFFSET
-	class UClass*                                      StatusEffectZone;                                         // 0x00B0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MinimumTimeSpentHealing;                                  // 0x00B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaximumTimeSpentHealing;                                  // 0x00BC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ChanceToGoOnCooldownInsteadOfExecuting;                   // 0x00C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              HealthPercentageThresholdToHeal;                          // 0x00CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      StatusEffectZone;                                         // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MinimumTimeSpentHealing;                                  // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              MaximumTimeSpentHealing;                                  // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -188,11 +173,11 @@ public:
 
 
 // Class AthenaAIAbilities.EelThrowAIAbility
-// 0x0008 (0x0078 - 0x0070)
+// 0x0008 (0x0080 - 0x0078)
 class UEelThrowAIAbility : public UAthenaAIAbility
 {
 public:
-	class UBlackboardComponent*                        CachedBlackboardComponent;                                // 0x0070(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UBlackboardComponent*                        CachedBlackboardComponent;                                // 0x0078(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -204,11 +189,11 @@ public:
 
 
 // Class AthenaAIAbilities.EelThrowAIAbilityParams
-// 0x0020 (0x00C8 - 0x00A8)
+// 0x0020 (0x00E8 - 0x00C8)
 class UEelThrowAIAbilityParams : public UAthenaAIAbilityParams
 {
 public:
-	struct FWeightedProbabilityRange                   MinMaxNumberOfAttacksBeforeEnd;                           // 0x00A8(0x0020) (Edit)
+	struct FWeightedProbabilityRange                   MinMaxNumberOfAttacksBeforeEnd;                           // 0x00C8(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -250,13 +235,17 @@ public:
 
 
 // Class AthenaAIAbilities.ElectricShieldBuffComponent
-// 0x0060 (0x0128 - 0x00C8)
+// 0x0098 (0x0160 - 0x00C8)
 class UElectricShieldBuffComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	bool                                               IsShieldActive;                                           // 0x00D0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x57];                                      // 0x00D1(0x0057) MISSED OFFSET
+	class UParticleSystem*                             ShieldVFXAsset;                                           // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       VfxSocketName;                                            // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsShieldActive;                                           // 0x00E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
+	class UParticleSystemComponent*                    ShieldEffectComponent;                                    // 0x00E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x70];                                      // 0x00F0(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -285,12 +274,27 @@ public:
 };
 
 
+// Class AthenaAIAbilities.ImpactMeleeAttackEelSlapId
+// 0x0000 (0x0028 - 0x0028)
+class UImpactMeleeAttackEelSlapId : public UImpactProjectileId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.ImpactMeleeAttackEelSlapId"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaAIAbilities.MeleeAIAbility
-// 0x0008 (0x0078 - 0x0070)
+// 0x0008 (0x0080 - 0x0078)
 class UMeleeAIAbility : public UAthenaAIAbility
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0070(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0078(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -317,11 +321,11 @@ public:
 
 
 // Class AthenaAIAbilities.MeleeAIAbilityParams
-// 0x0010 (0x00B8 - 0x00A8)
+// 0x0010 (0x00D8 - 0x00C8)
 class UMeleeAIAbilityParams : public UAthenaAIAbilityParams
 {
 public:
-	TArray<struct FMeleeAttackIdWeights>               MeleeAttacks;                                             // 0x00A8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FMeleeAttackIdWeights>               MeleeAttacks;                                             // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -333,7 +337,7 @@ public:
 
 
 // Class AthenaAIAbilities.EelSlapAIAbilityParams
-// 0x0000 (0x00B8 - 0x00B8)
+// 0x0000 (0x00D8 - 0x00D8)
 class UEelSlapAIAbilityParams : public UMeleeAIAbilityParams
 {
 public:
@@ -348,7 +352,7 @@ public:
 
 
 // Class AthenaAIAbilities.EelSlapAIAbility
-// 0x0000 (0x0078 - 0x0078)
+// 0x0000 (0x0080 - 0x0080)
 class UEelSlapAIAbility : public UMeleeAIAbility
 {
 public:
@@ -408,10 +412,12 @@ public:
 
 
 // Class AthenaAIAbilities.BullRushAIAbilityParams
-// 0x0000 (0x00C0 - 0x00C0)
+// 0x0008 (0x00E8 - 0x00E0)
 class UBullRushAIAbilityParams : public UMeleeChargeAIAbilityParams
 {
 public:
+	float                                              StaticCollisionWarmup;                                    // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00E4(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -423,7 +429,7 @@ public:
 
 
 // Class AthenaAIAbilities.BullRushAIAbility
-// 0x0000 (0x0090 - 0x0090)
+// 0x0000 (0x0098 - 0x0098)
 class UBullRushAIAbility : public UMeleeChargeAIAbility
 {
 public:

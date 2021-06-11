@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -46,6 +46,737 @@ int UAISpawner::GetNumOfSpawnRequests()
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AICreatureCharacter.SetAIStrategy
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UClass*                  InStrategy                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAICreatureCharacter::SetAIStrategy(class UClass* InStrategy)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.SetAIStrategy"));
+
+	struct
+	{
+		class UClass*                  InStrategy;
+	} params;
+
+	params.InStrategy = InStrategy;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AICreatureCharacter.OnRep_CurrentAIStrategy
+// (Final, Native, Protected)
+// Parameters:
+// class UClass*                  OldAIStrategy                  (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAICreatureCharacter::OnRep_CurrentAIStrategy(class UClass* OldAIStrategy)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.OnRep_CurrentAIStrategy"));
+
+	struct
+	{
+		class UClass*                  OldAIStrategy;
+	} params;
+
+	params.OldAIStrategy = OldAIStrategy;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AICreatureCharacter.Multicast_DespawnRPC
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+
+void AAICreatureCharacter::Multicast_DespawnRPC()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.Multicast_DespawnRPC"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AICreatureCharacter.GetAIStrategy
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UClass* AAICreatureCharacter::GetAIStrategy()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.GetAIStrategy"));
+
+	struct
+	{
+		class UClass*                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup
+// (Final, Native, Public, BlueprintCallable)
+
+void UAIFaunaSpawner::SpawnFaunaGroup()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIControllerBase.SetNamedControllerParam
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAIControllerBase::SetNamedControllerParam(const struct FName& ParamName, float Value)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.SetNamedControllerParam"));
+
+	struct
+	{
+		struct FName                   ParamName;
+		float                          Value;
+	} params;
+
+	params.ParamName = ParamName;
+	params.Value = Value;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIControllerBase.FindNamedWeightedRangesControllerParam
+// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// struct FWeightedProbabilityRangeOfRanges ReturnValue                    (Parm, OutParm, ReturnParm)
+
+struct FWeightedProbabilityRangeOfRanges AAthenaAIControllerBase::FindNamedWeightedRangesControllerParam(const struct FName& ParamName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.FindNamedWeightedRangesControllerParam"));
+
+	struct
+	{
+		struct FName                   ParamName;
+		struct FWeightedProbabilityRangeOfRanges ReturnValue;
+	} params;
+
+	params.ParamName = ParamName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaAIControllerBase.FindNamedControllerParam
+// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AAthenaAIControllerBase::FindNamedControllerParam(const struct FName& ParamName)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.FindNamedControllerParam"));
+
+	struct
+	{
+		struct FName                   ParamName;
+		float                          ReturnValue;
+	} params;
+
+	params.ParamName = ParamName;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaAIControllerBase.ApplyControllerParams
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UAthenaAIControllerParamsDataAsset* ParamsAsset                    (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn*                   InPawn                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAIControllerBase::ApplyControllerParams(class UAthenaAIControllerParamsDataAsset* ParamsAsset, class APawn* InPawn)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.ApplyControllerParams"));
+
+	struct
+	{
+		class UAthenaAIControllerParamsDataAsset* ParamsAsset;
+		class APawn*                   InPawn;
+	} params;
+
+	params.ParamsAsset = ParamsAsset;
+	params.InPawn = InPawn;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIController.StopBehaviourLogic
+// (Native, Public, BlueprintCallable)
+
+void AAthenaAIController::StopBehaviourLogic()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.StopBehaviourLogic"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIController.SetPerceptionExpirationAgeForActor
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  Actor                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ExpirationAge                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// class UClass*                  Sense                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAIController::SetPerceptionExpirationAgeForActor(class AActor* Actor, float ExpirationAge, class UClass* Sense)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.SetPerceptionExpirationAgeForActor"));
+
+	struct
+	{
+		class AActor*                  Actor;
+		float                          ExpirationAge;
+		class UClass*                  Sense;
+	} params;
+
+	params.Actor = Actor;
+	params.ExpirationAge = ExpirationAge;
+	params.Sense = Sense;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIController.RegisterSpawnTriggerActorAsStimulus
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  TriggerActor                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAIController::RegisterSpawnTriggerActorAsStimulus(class AActor* TriggerActor)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.RegisterSpawnTriggerActorAsStimulus"));
+
+	struct
+	{
+		class AActor*                  TriggerActor;
+	} params;
+
+	params.TriggerActor = TriggerActor;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIController.OnPerceptionUpdated
+// (Native, Public)
+// Parameters:
+// TArray<class AActor*>          ChangedPerceivedActors         (Parm, ZeroConstructor)
+
+void AAthenaAIController::OnPerceptionUpdated(TArray<class AActor*> ChangedPerceivedActors)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.OnPerceptionUpdated"));
+
+	struct
+	{
+		TArray<class AActor*>          ChangedPerceivedActors;
+	} params;
+
+	params.ChangedPerceivedActors = ChangedPerceivedActors;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIController.OnNewlySpawned
+// (Event, Public, BlueprintEvent)
+
+void AAthenaAIController::OnNewlySpawned()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.OnNewlySpawned"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIController.OnFinishDespawn
+// (Event, Public, BlueprintEvent)
+
+void AAthenaAIController::OnFinishDespawn()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.OnFinishDespawn"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaAIController.IsActorPerceived
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AActor*                  TargetActor                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+bool AAthenaAIController::IsActorPerceived(class AActor* TargetActor)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.IsActorPerceived"));
+
+	struct
+	{
+		class AActor*                  TargetActor;
+		bool                           ReturnValue;
+	} params;
+
+	params.TargetActor = TargetActor;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaAIController.GetTargetActor
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* AAthenaAIController::GetTargetActor()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.GetTargetActor"));
+
+	struct
+	{
+		class AActor*                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaAIController.GetAthenaAIPerceptionComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UAthenaAIPerceptionComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UAthenaAIPerceptionComponent* AAthenaAIController::GetAthenaAIPerceptionComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.GetAthenaAIPerceptionComponent"));
+
+	struct
+	{
+		class UAthenaAIPerceptionComponent* ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaAIController.GetAllSeenActors
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// TArray<class AActor*>          SeenActors                     (Parm, OutParm, ZeroConstructor)
+
+void AAthenaAIController::GetAllSeenActors(TArray<class AActor*>* SeenActors)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.GetAllSeenActors"));
+
+	struct
+	{
+		TArray<class AActor*>          SeenActors;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	if (SeenActors != nullptr)
+		*SeenActors = params.SeenActors;
+}
+
+
+// Function AthenaAI.AthenaAIController.ApplyControllerParams
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// class UAthenaAIControllerParamsDataAsset* ParamsAsset                    (Parm, ZeroConstructor, IsPlainOldData)
+// class APawn*                   InPawn                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaAIController::ApplyControllerParams(class UAthenaAIControllerParamsDataAsset* ParamsAsset, class APawn* InPawn)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.ApplyControllerParams"));
+
+	struct
+	{
+		class UAthenaAIControllerParamsDataAsset* ParamsAsset;
+		class APawn*                   InPawn;
+	} params;
+
+	params.ParamsAsset = ParamsAsset;
+	params.InPawn = InPawn;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaFaunaAIController.SetDormancyCheckingEnabled
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           InDormancyCheckingEnabledInAutomation (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaFaunaAIController::SetDormancyCheckingEnabled(bool InDormancyCheckingEnabledInAutomation)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.SetDormancyCheckingEnabled"));
+
+	struct
+	{
+		bool                           InDormancyCheckingEnabledInAutomation;
+	} params;
+
+	params.InDormancyCheckingEnabledInAutomation = InDormancyCheckingEnabledInAutomation;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaFaunaAIController.LeaderDestroyed
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAthenaFaunaAIController::LeaderDestroyed(class AActor* Actor)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.LeaderDestroyed"));
+
+	struct
+	{
+		class AActor*                  Actor;
+	} params;
+
+	params.Actor = Actor;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.AthenaFaunaAIController.GetLeader
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class AActor* AAthenaFaunaAIController::GetLeader()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.GetLeader"));
+
+	struct
+	{
+		class AActor*                  ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaFaunaAIController.GetCourage
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float AAthenaFaunaAIController::GetCourage()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.GetCourage"));
+
+	struct
+	{
+		float                          ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.AthenaFaunaAIController.GetAthenaAICharPathFollowingComp
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UAthenaAICharacterPathFollowingComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+
+class UAthenaAICharacterPathFollowingComponent* AAthenaFaunaAIController::GetAthenaAICharPathFollowingComp()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.GetAthenaAICharPathFollowingComp"));
+
+	struct
+	{
+		class UAthenaAICharacterPathFollowingComponent* ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function AthenaAI.Fauna.TestingSetWaterState
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TEnumAsByte<EFaunaInWaterState> NewInState                     (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFauna::TestingSetWaterState(TEnumAsByte<EFaunaInWaterState> NewInState)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.TestingSetWaterState"));
+
+	struct
+	{
+		TEnumAsByte<EFaunaInWaterState> NewInState;
+	} params;
+
+	params.NewInState = NewInState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_TargetTurnAngle
+// (Final, Native, Private)
+
+void AFauna::OnRep_TargetTurnAngle()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_TargetTurnAngle"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim
+// (Final, Native, Private)
+
+void AFauna::OnRep_IsPlayingStarvingAnim()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_IsCalm
+// (Final, Native, Private)
+
+void AFauna::OnRep_IsCalm()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_IsCalm"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_IsAgitated
+// (Final, Native, Private)
+
+void AFauna::OnRep_IsAgitated()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_IsAgitated"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_InWaterState
+// (Final, Native, Private)
+
+void AFauna::OnRep_InWaterState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_InWaterState"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.OnRep_CratedState
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// TEnumAsByte<EFaunaCratedState> PreviousCratedState            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void AFauna::OnRep_CratedState(TEnumAsByte<EFaunaCratedState> PreviousCratedState)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_CratedState"));
+
+	struct
+	{
+		TEnumAsByte<EFaunaCratedState> PreviousCratedState;
+	} params;
+
+	params.PreviousCratedState = PreviousCratedState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// class AActor*                  Crate                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFauna::Multicast_PlayPutInCrateEffectsRPC(class AActor* Crate)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC"));
+
+	struct
+	{
+		class AActor*                  Crate;
+	} params;
+
+	params.Crate = Crate;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.Multicast_JustBeenFedRPC
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// class AActor*                  FedBy                          (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFauna::Multicast_JustBeenFedRPC(class AActor* FedBy)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.Multicast_JustBeenFedRPC"));
+
+	struct
+	{
+		class AActor*                  FedBy;
+	} params;
+
+	params.FedBy = FedBy;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.Multicast_HightlightLeader
+// (Net, NetReliable, Native, Event, NetMulticast, Public)
+// Parameters:
+// bool                           bIsLeader                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFauna::Multicast_HightlightLeader(bool bIsLeader)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.Multicast_HightlightLeader"));
+
+	struct
+	{
+		bool                           bIsLeader;
+	} params;
+
+	params.bIsLeader = bIsLeader;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed
+// (Final, Native, Public, BlueprintCallable)
+
+void AFauna::GenerateNewRandomAnimationSeed()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.Fauna.ActivateResponseRPC
+// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+// Parameters:
+// float                          InTargetTurnAngle              (Parm, ZeroConstructor, IsPlainOldData)
+
+void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.ActivateResponseRPC"));
+
+	struct
+	{
+		float                          InTargetTurnAngle;
+	} params;
+
+	params.InTargetTurnAngle = InTargetTurnAngle;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -840,12 +1571,12 @@ void UAINameplateComponent::OnRep_Title()
 }
 
 
-// Function AthenaAI.AINameplateComponent.OnRep_DisplayNameAsText
+// Function AthenaAI.AINameplateComponent.OnRep_DisplayNameAsString
 // (Final, Native, Private)
 
-void UAINameplateComponent::OnRep_DisplayNameAsText()
+void UAINameplateComponent::OnRep_DisplayNameAsString()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AINameplateComponent.OnRep_DisplayNameAsText"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AINameplateComponent.OnRep_DisplayNameAsString"));
 
 	struct
 	{
@@ -856,12 +1587,12 @@ void UAINameplateComponent::OnRep_DisplayNameAsText()
 }
 
 
-// Function AthenaAI.AINameplateComponent.OnRep_DisplayNameAsString
+// Function AthenaAI.AINameplateComponent.OnRep_DisplayName
 // (Final, Native, Private)
 
-void UAINameplateComponent::OnRep_DisplayNameAsString()
+void UAINameplateComponent::OnRep_DisplayName()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AINameplateComponent.OnRep_DisplayNameAsString"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AINameplateComponent.OnRep_DisplayName"));
 
 	struct
 	{
@@ -982,6 +1713,26 @@ bool UAITargetWeaponInterface::FindAimConfigToHitTarget(const struct FVector& Ta
 }
 
 
+// Function AthenaAI.AmbientWaterSpawnerManager.OnPlayerDeath
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                  InActorDying                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void AAmbientWaterSpawnerManager::OnPlayerDeath(class AActor* InActorDying)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AmbientWaterSpawnerManager.OnPlayerDeath"));
+
+	struct
+	{
+		class AActor*                  InActorDying;
+	} params;
+
+	params.InActorDying = InActorDying;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaAI.BurrowCrack.OnRep_StartFadeAndLifeSpan
 // (Final, Native, Public)
 
@@ -1013,325 +1764,6 @@ void ABurrowCrack::OnLifeSpanPercentLeft(float PercentLeft)
 	} params;
 
 	params.PercentLeft = PercentLeft;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIControllerBase.SetNamedControllerParam
-// (Final, Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void AAthenaAIControllerBase::SetNamedControllerParam(const struct FName& ParamName, float Value)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.SetNamedControllerParam"));
-
-	struct
-	{
-		struct FName                   ParamName;
-		float                          Value;
-	} params;
-
-	params.ParamName = ParamName;
-	params.Value = Value;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIControllerBase.FindNamedWeightedRangesControllerParam
-// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FWeightedProbabilityRangeOfRanges ReturnValue                    (Parm, OutParm, ReturnParm)
-
-struct FWeightedProbabilityRangeOfRanges AAthenaAIControllerBase::FindNamedWeightedRangesControllerParam(const struct FName& ParamName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.FindNamedWeightedRangesControllerParam"));
-
-	struct
-	{
-		struct FName                   ParamName;
-		struct FWeightedProbabilityRangeOfRanges ReturnValue;
-	} params;
-
-	params.ParamName = ParamName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaAIControllerBase.FindNamedControllerParam
-// (Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FName                   ParamName                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float AAthenaAIControllerBase::FindNamedControllerParam(const struct FName& ParamName)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.FindNamedControllerParam"));
-
-	struct
-	{
-		struct FName                   ParamName;
-		float                          ReturnValue;
-	} params;
-
-	params.ParamName = ParamName;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaAIControllerBase.ApplyControllerParams
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UAthenaAIControllerParamsDataAsset* ParamsAsset                    (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   InPawn                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void AAthenaAIControllerBase::ApplyControllerParams(class UAthenaAIControllerParamsDataAsset* ParamsAsset, class APawn* InPawn)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIControllerBase.ApplyControllerParams"));
-
-	struct
-	{
-		class UAthenaAIControllerParamsDataAsset* ParamsAsset;
-		class APawn*                   InPawn;
-	} params;
-
-	params.ParamsAsset = ParamsAsset;
-	params.InPawn = InPawn;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIController.StopBehaviourLogic
-// (Native, Public, BlueprintCallable)
-
-void AAthenaAIController::StopBehaviourLogic()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.StopBehaviourLogic"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIController.SetPerceptionExpirationAgeForActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  Actor                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// float                          ExpirationAge                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  Sense                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void AAthenaAIController::SetPerceptionExpirationAgeForActor(class AActor* Actor, float ExpirationAge, class UClass* Sense)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.SetPerceptionExpirationAgeForActor"));
-
-	struct
-	{
-		class AActor*                  Actor;
-		float                          ExpirationAge;
-		class UClass*                  Sense;
-	} params;
-
-	params.Actor = Actor;
-	params.ExpirationAge = ExpirationAge;
-	params.Sense = Sense;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIController.RegisterSpawnTriggerActorAsStimulus
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class AActor*                  TriggerActor                   (Parm, ZeroConstructor, IsPlainOldData)
-
-void AAthenaAIController::RegisterSpawnTriggerActorAsStimulus(class AActor* TriggerActor)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.RegisterSpawnTriggerActorAsStimulus"));
-
-	struct
-	{
-		class AActor*                  TriggerActor;
-	} params;
-
-	params.TriggerActor = TriggerActor;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIController.OnPerceptionUpdated
-// (Native, Public)
-// Parameters:
-// TArray<class AActor*>          ChangedPerceivedActors         (Parm, ZeroConstructor)
-
-void AAthenaAIController::OnPerceptionUpdated(TArray<class AActor*> ChangedPerceivedActors)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.OnPerceptionUpdated"));
-
-	struct
-	{
-		TArray<class AActor*>          ChangedPerceivedActors;
-	} params;
-
-	params.ChangedPerceivedActors = ChangedPerceivedActors;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIController.OnNewlySpawned
-// (Event, Public, BlueprintEvent)
-
-void AAthenaAIController::OnNewlySpawned()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.OnNewlySpawned"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIController.OnFinishDespawn
-// (Event, Public, BlueprintEvent)
-
-void AAthenaAIController::OnFinishDespawn()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.OnFinishDespawn"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaAIController.IsActorPerceived
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AActor*                  TargetActor                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-bool AAthenaAIController::IsActorPerceived(class AActor* TargetActor)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.IsActorPerceived"));
-
-	struct
-	{
-		class AActor*                  TargetActor;
-		bool                           ReturnValue;
-	} params;
-
-	params.TargetActor = TargetActor;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaAIController.GetTargetActor
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AActor* AAthenaAIController::GetTargetActor()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.GetTargetActor"));
-
-	struct
-	{
-		class AActor*                  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaAIController.GetAthenaAIPerceptionComponent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UAthenaAIPerceptionComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UAthenaAIPerceptionComponent* AAthenaAIController::GetAthenaAIPerceptionComponent()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.GetAthenaAIPerceptionComponent"));
-
-	struct
-	{
-		class UAthenaAIPerceptionComponent* ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaAIController.GetAllSeenActors
-// (Native, Public, HasOutParms, BlueprintCallable)
-// Parameters:
-// TArray<class AActor*>          SeenActors                     (Parm, OutParm, ZeroConstructor)
-
-void AAthenaAIController::GetAllSeenActors(TArray<class AActor*>* SeenActors)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.GetAllSeenActors"));
-
-	struct
-	{
-		TArray<class AActor*>          SeenActors;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	if (SeenActors != nullptr)
-		*SeenActors = params.SeenActors;
-}
-
-
-// Function AthenaAI.AthenaAIController.ApplyControllerParams
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UAthenaAIControllerParamsDataAsset* ParamsAsset                    (Parm, ZeroConstructor, IsPlainOldData)
-// class APawn*                   InPawn                         (Parm, ZeroConstructor, IsPlainOldData)
-
-void AAthenaAIController::ApplyControllerParams(class UAthenaAIControllerParamsDataAsset* ParamsAsset, class APawn* InPawn)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaAIController.ApplyControllerParams"));
-
-	struct
-	{
-		class UAthenaAIControllerParamsDataAsset* ParamsAsset;
-		class APawn*                   InPawn;
-	} params;
-
-	params.ParamsAsset = ParamsAsset;
-	params.InPawn = InPawn;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -1504,83 +1936,6 @@ void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
 	params.Enable = Enable;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AICreatureCharacter.SetAIStrategy
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UClass*                  InStrategy                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void AAICreatureCharacter::SetAIStrategy(class UClass* InStrategy)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.SetAIStrategy"));
-
-	struct
-	{
-		class UClass*                  InStrategy;
-	} params;
-
-	params.InStrategy = InStrategy;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AICreatureCharacter.OnRep_CurrentAIStrategy
-// (Final, Native, Protected)
-// Parameters:
-// class UClass*                  OldAIStrategy                  (Parm, ZeroConstructor, IsPlainOldData)
-
-void AAICreatureCharacter::OnRep_CurrentAIStrategy(class UClass* OldAIStrategy)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.OnRep_CurrentAIStrategy"));
-
-	struct
-	{
-		class UClass*                  OldAIStrategy;
-	} params;
-
-	params.OldAIStrategy = OldAIStrategy;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AICreatureCharacter.Multicast_DespawnRPC
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-
-void AAICreatureCharacter::Multicast_DespawnRPC()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.Multicast_DespawnRPC"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AICreatureCharacter.GetAIStrategy
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class UClass* AAICreatureCharacter::GetAIStrategy()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AICreatureCharacter.GetAIStrategy"));
-
-	struct
-	{
-		class UClass*                  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 
@@ -1898,341 +2253,6 @@ struct FVector UAthenaAIDebugFunctionLibrary::CanProjectPointToNavigation(class 
 	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup
-// (Final, Native, Public, BlueprintCallable)
-
-void UAIFaunaSpawner::SpawnFaunaGroup()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AIFaunaSpawner.SpawnFaunaGroup"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaFaunaAIController.SetDormancyCheckingEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                           InDormancyCheckingEnabledInAutomation (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-
-void AAthenaFaunaAIController::SetDormancyCheckingEnabled(bool InDormancyCheckingEnabledInAutomation)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.SetDormancyCheckingEnabled"));
-
-	struct
-	{
-		bool                           InDormancyCheckingEnabledInAutomation;
-	} params;
-
-	params.InDormancyCheckingEnabledInAutomation = InDormancyCheckingEnabledInAutomation;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaFaunaAIController.LeaderDestroyed
-// (Final, Native, Private)
-// Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void AAthenaFaunaAIController::LeaderDestroyed(class AActor* Actor)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.LeaderDestroyed"));
-
-	struct
-	{
-		class AActor*                  Actor;
-	} params;
-
-	params.Actor = Actor;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.AthenaFaunaAIController.GetLeader
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-class AActor* AAthenaFaunaAIController::GetLeader()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.GetLeader"));
-
-	struct
-	{
-		class AActor*                  ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaFaunaAIController.GetCourage
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-float AAthenaFaunaAIController::GetCourage()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.GetCourage"));
-
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.AthenaFaunaAIController.GetAthenaAICharPathFollowingComp
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UAthenaAICharacterPathFollowingComponent* ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
-
-class UAthenaAICharacterPathFollowingComponent* AAthenaFaunaAIController::GetAthenaAICharPathFollowingComp()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.AthenaFaunaAIController.GetAthenaAICharPathFollowingComp"));
-
-	struct
-	{
-		class UAthenaAICharacterPathFollowingComponent* ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function AthenaAI.Fauna.TestingSetWaterState
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TEnumAsByte<EFaunaInWaterState> NewInState                     (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::TestingSetWaterState(TEnumAsByte<EFaunaInWaterState> NewInState)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.TestingSetWaterState"));
-
-	struct
-	{
-		TEnumAsByte<EFaunaInWaterState> NewInState;
-	} params;
-
-	params.NewInState = NewInState;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_TargetTurnAngle
-// (Final, Native, Private)
-
-void AFauna::OnRep_TargetTurnAngle()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_TargetTurnAngle"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim
-// (Final, Native, Private)
-
-void AFauna::OnRep_IsPlayingStarvingAnim()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_IsPlayingStarvingAnim"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_IsCalm
-// (Final, Native, Private)
-
-void AFauna::OnRep_IsCalm()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_IsCalm"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_IsAgitated
-// (Final, Native, Private)
-
-void AFauna::OnRep_IsAgitated()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_IsAgitated"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_InWaterState
-// (Final, Native, Private)
-
-void AFauna::OnRep_InWaterState()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_InWaterState"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.OnRep_CratedState
-// (Final, Native, Private, HasOutParms)
-// Parameters:
-// TEnumAsByte<EFaunaCratedState> PreviousCratedState            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-
-void AFauna::OnRep_CratedState(TEnumAsByte<EFaunaCratedState> PreviousCratedState)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.OnRep_CratedState"));
-
-	struct
-	{
-		TEnumAsByte<EFaunaCratedState> PreviousCratedState;
-	} params;
-
-	params.PreviousCratedState = PreviousCratedState;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// class AActor*                  Crate                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::Multicast_PlayPutInCrateEffectsRPC(class AActor* Crate)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.Multicast_PlayPutInCrateEffectsRPC"));
-
-	struct
-	{
-		class AActor*                  Crate;
-	} params;
-
-	params.Crate = Crate;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.Multicast_JustBeenFedRPC
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// class AActor*                  FedBy                          (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::Multicast_JustBeenFedRPC(class AActor* FedBy)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.Multicast_JustBeenFedRPC"));
-
-	struct
-	{
-		class AActor*                  FedBy;
-	} params;
-
-	params.FedBy = FedBy;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.Multicast_HightlightLeader
-// (Net, NetReliable, Native, Event, NetMulticast, Public)
-// Parameters:
-// bool                           bIsLeader                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::Multicast_HightlightLeader(bool bIsLeader)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.Multicast_HightlightLeader"));
-
-	struct
-	{
-		bool                           bIsLeader;
-	} params;
-
-	params.bIsLeader = bIsLeader;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed
-// (Final, Native, Public, BlueprintCallable)
-
-void AFauna::GenerateNewRandomAnimationSeed()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.GenerateNewRandomAnimationSeed"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function AthenaAI.Fauna.ActivateResponseRPC
-// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
-// Parameters:
-// float                          InTargetTurnAngle              (Parm, ZeroConstructor, IsPlainOldData)
-
-void AFauna::ActivateResponseRPC(float InTargetTurnAngle)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.Fauna.ActivateResponseRPC"));
-
-	struct
-	{
-		float                          InTargetTurnAngle;
-	} params;
-
-	params.InTargetTurnAngle = InTargetTurnAngle;
-
-	UObject::ProcessEvent(fn, &params);
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -83,6 +83,13 @@ struct FEventAppliedStatusToTargets
 struct FStatusEffectPersistenceKey
 {
 	struct FStatus                                     AppliedStatuses;                                          // 0x0000(0x0018)
+};
+
+// ScriptStruct StatusEffects.ApplyStatusEvent
+// 0x0018
+struct FApplyStatusEvent
+{
+	struct FStatus                                     StatusToApply;                                            // 0x0000(0x0018)
 };
 
 // ScriptStruct StatusEffects.StatusDeactivatedEvent

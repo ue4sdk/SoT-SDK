@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AthenaCheat.AthenaCheatManager
-// 0x00D0 (0x0148 - 0x0078)
+// 0x0098 (0x0110 - 0x0078)
 class UAthenaCheatManager : public UCheatManager
 {
 public:
@@ -26,7 +26,7 @@ public:
 	class UGameEventSchedulerSettingsAsset*            DebugSchedulerSettings;                                   // 0x00C0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class AServerPerformanceReplicator*                ServerPerformanceReplicator;                              // 0x00C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	float                                              TeleportToDigsiteHeightOffset;                            // 0x00D0(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x74];                                      // 0x00D4(0x0074) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x3C];                                      // 0x00D4(0x003C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -49,10 +49,12 @@ public:
 	void Vomit();
 	void UnlockTradeRouteSelectionForMyCrew();
 	void UnlockTradeRouteSelectionForCrew(const struct FGuid& CrewId);
+	void UnlockEntitlement(const class FString& EntitlementId);
 	void UnlockAllEntitlements(int TrueFalse);
 	void UnlockAllEmblemsAndAchievements();
 	void UnBreakLeg();
 	void TutorialAction(const class FString& ActionTypeString);
+	void TriggerTunnelMigration();
 	void TriggerRewardNotification(struct FName* Identifier);
 	void TriggerLandmarkReaction(int ActionType);
 	void TriggerFogManagerAtNearestIsland();
@@ -66,12 +68,16 @@ public:
 	void TriggerAIShipAggressive();
 	void ToggleVideprinter(const class FString& Id);
 	void ToggleThirdPerson();
+	void ToggleSeaClueLocationQueryDebugDisplay();
+	void ToggleRetailDrawDebug();
 	void ToggleNearestSuperheatedWater();
 	void ToggleNearestLava();
 	void ToggleMigrationPointOfInterestChecks(bool Enabled);
+	void ToggleIslandSelectionDebugDisplay();
 	void ToggleFastShipControls();
 	void ToggleDrowning();
 	void ToggleDrawShipSpeed();
+	void ToggleDrawAboveIslandBounds();
 	void ToggleDisplayCannonAISpawnerZones();
 	void ToggleDebugFlying();
 	void ToggleDeathCamera();
@@ -81,8 +87,6 @@ public:
 	void ToggleAttributeOverride();
 	void TestCrashDumpCreationOnRunnableThread();
 	void TestCrashDumpCreationOnMainThread();
-	void TeleportToTunnelOfTheDamned(const class FString& TunnelDescAssetPath);
-	void TeleportToSpecificTunnelOfTheDamned(int TunnelIndex);
 	void TeleportToShip();
 	void TeleportToPlayerStart();
 	void TeleportToNearestTreasureLocation();
@@ -95,8 +99,6 @@ public:
 	void TeleportPlayerToKraken();
 	void TeleportPlayersCrewShipToPlayerLocation();
 	void TeleportOutOfHideout();
-	void TeleportFromTunnelOfTheDamned();
-	void TeleportFromSpecificTunnelOfTheDamned(int TunnelIndex, float X, float Y, float Z);
 	void TeleportCrewToShip(const class FString& CrewId);
 	void TeleportCrewToSafeSpawnLocationFromRemoteActor(const class FString& ActorIdString, const class FString& CrewId);
 	void TeleportCrewToSafeSpawnLocation(const class FString& CrewId);
@@ -112,13 +114,15 @@ public:
 	void TeleportActorToDigSite(const class FString& ActorIdString);
 	void TeleportActorToActorWithOffset(const class FString& ActorIdString, const class FString& DestinationActorIdString, float OffsetX, float OffsetY, float OffsetZ);
 	void SuperSailor();
+	void StoreWieldedItemInBootyStorageInCurrentIsland();
+	void StoreWieldedItemInBootyStorage(const class FString& IslandName);
 	void StoreShipLocation(float LocationX, float LocationY, float LocationZ, float Yaw);
 	void StopShip();
 	void StopPetHangout();
+	void StopLocalSequences();
 	void StopAllShips();
 	void StopAllPetsHangout();
 	void StartVoyage(const class FString& SourceAssetName, bool Development);
-	void StartTunnelSequence();
 	void StartSicknessOnPlayer();
 	void StartSelectedRomeVoyage(const class FString& RomeVoyageString);
 	void StartNearestVolcano();
@@ -137,8 +141,8 @@ public:
 	void SpawnTreasureArtifact(const class FString& TypeString);
 	void SpawnTinySharkAtLocation(float X, float Y, float Z, int PartIndex);
 	void SpawnTinySharkAtCurrentLocation(int ControllerParamIndex, int PartIndex);
+	void SpawnStrongholdKeyFromGameEventType(const class FString& FortEventName);
 	void SpawnStrongholdKey();
-	void SpawnStandardStrongholdKey();
 	void SpawnSmallShipAtIsland(const class FString& IslandName);
 	void SpawnSmallShip(float SpawnLocationX, float SpawnLocationY, float SpawnLocationZ, float SpawnYaw);
 	void SpawnSkeletonAtNearestAISpawnPoint();
@@ -165,7 +169,6 @@ public:
 	void SpawnGeyserAtPlayerLocationWithDormancy(float Dormancy);
 	void SpawnGeyserAtPlayerLocation();
 	void SpawnGeyserAtLocation(float LocationX, float LocationY, float LocationZ, float Dormancy);
-	void SpawnFortOfTheDammedStrongholdKey();
 	void SpawnFogAtPlayerPosition();
 	void SpawnFishAtPlayerLocation(const class FString& InBaitType);
 	void SpawnCursedCannonball(const class FString& CannonballTypeString);
@@ -201,6 +204,7 @@ public:
 	void SingleStickRight();
 	void SingleStickOff();
 	void SingleStickLeft();
+	void SimulateTunnelFailure();
 	void SimulatePetReactRequest(const class FString& Id);
 	void SimulatePetReactCancellation(const class FString& Id);
 	void ShowTavernBanners();
@@ -265,6 +269,7 @@ public:
 	void SetDebugCameraUseProjectileCollisionChannel(bool bUseProjectileChannel);
 	void SetDeathPenaltyRespawnTimer(float InSpawnTimer);
 	void SetDamageAllowedToPlayerShip(bool InAllowDamage);
+	void SetCutsceneResponseCoordinatorDebug(bool Value);
 	void SetCurrentCulture(const class FString& Culture);
 	void SetCoordinatedKrakenPhaseAsset(int AssetIndex);
 	void SetCoordinatedKrakenCurrentPhaseAssetInactive();
@@ -301,6 +306,8 @@ public:
 	void ReviveLocalPlayerInstantly();
 	void ReviveLocalPlayerAccordingToReviveTime();
 	void ReviveAllPlayerCharactersAccordingToReviveTime();
+	void RetrieveItemsFromBootyStorageInCurrentIsland();
+	void RetrieveItemsFromBootyStorage(const class FString& IslandName);
 	void ResurfaceShipByActorId(const class FString& ShipActorIdString);
 	void RestoreAndRestockShipAndPlayer();
 	void RestockIslandBarrels();
@@ -311,9 +318,11 @@ public:
 	void ResetTaleSelectorSeed();
 	void ResetStats();
 	void ResetNearestVault();
+	void ResetNearestEventRoom();
 	void ResetMouseDelta();
 	void ResetMaxNumOfSpawnedAI();
 	void ResetMaxMovingPetsOnServerToDefault();
+	void ResetGlitterbeardTree();
 	void ResetDemoSession(bool StartNewSession);
 	void ResetAllOverrideCannonShotHitChance();
 	void ResetAllMechanisms();
@@ -333,6 +342,7 @@ public:
 	void RenameTreasure(const class FString& InVendorName);
 	void RemovePetsFromAllPlayers();
 	void RemovePetFromPlayer();
+	void RemoveLostShipmentsDebugging();
 	void RemoveItemInSlot(int SlotIndex);
 	void RemoveDebugPetSpawners();
 	void RemoveDebugHealthStage();
@@ -348,6 +358,8 @@ public:
 	void PrintAllNetworkActors();
 	void PrintAISpawners();
 	void PrintAISpawnContexts();
+	void PlayWorldSequence(const class FString& InReference);
+	void PlayLocalSequences();
 	void PlayerAnimationOverride(const struct FName& Name);
 	void OverrideShipPartFromCatalogue(const class FString& InShipActorIdConsoleString, int InCataloguePartIndex, int InCataloguePartCustomisationIndex);
 	void OpenSkeletonFortDoor();
@@ -388,6 +400,7 @@ public:
 	void KillAllOtherPlayerCharacters();
 	void KillAllDebugAISpawners();
 	void KillAllCrews();
+	void KillAllAI();
 	void KillAllAggressiveGhostShips();
 	void KillAllAggressiveGhostShipEncounters();
 	void JoinAlliance(const class FString& OfferingCrew, const class FString& AcceptingCrew);
@@ -455,14 +468,17 @@ public:
 	void EndDemoSession();
 	void EnableVoiceChatMeteringForOutgoingSignals(bool Enabled);
 	void EnableVoiceChatMeteringForIncomingSignals(bool Enabled);
-	void EnableSafeWreckSpawnQueryDebugDisplay(int TrueFalse);
+	void EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay(int TrueFalse);
 	void EnableNTP(bool Enable);
 	void EnableMermaidSpawning(int Enable);
 	void EnableMermaidDeletion(int Enable);
 	void EnableHeadphoneMixing(bool Enabled);
+	void EnableEmergentSirenSpawning();
+	void EnableEmergentSharkSpawning();
 	void EnableConsoleLogging();
 	void EnableCinematicCamera();
 	void EnableBeaconOnAllMermaids(int Enable);
+	void EnableAllEmergentWaterSpawning();
 	void EnableAIBehaviour();
 	void DrawVideprinter(const class FString& Id, bool Active);
 	void DrawTreasureDebug(int Enabled);
@@ -476,6 +492,7 @@ public:
 	void DouseClosestShip();
 	void DouseAllShipFires();
 	void DiveShipByActorId(const class FString& ShipActorIdString);
+	void DisplaySpireLocationsDebug(int Enabled);
 	void DisplaySingleEmblemProgress(const class FString& StatName);
 	void DisplayServersideHitsAtPlayerPosWithDefaults();
 	void DisplayServersideHitsAtPlayerPos(uint32_t NumSamplesPerDimension, float DistanceBetweenSamples, float TestHeight);
@@ -491,8 +508,11 @@ public:
 	void DisplayFallDamageDebug(int Enable);
 	void DisplayDrunkenness(bool Flag);
 	void DismissAllPickupPoints();
+	void DisableEmergentSirenSpawning();
+	void DisableEmergentSharkSpawning();
 	void DisableConsoleLogging();
 	void DisableCinematicCamera();
+	void DisableAllEmergentWaterSpawning();
 	void DisableAIBehaviour();
 	void DisableAIAbilities();
 	void DioramaStartNearest(const class FString& Spawner, const class FString& DioramaDesc);
@@ -513,7 +533,6 @@ public:
 	void DeleteAllMermaids();
 	void DecrementDebugHealthStage();
 	void DebugIslandDelta();
-	void DeactivateSkellyFortOfTheDamned(const class FString& FortName);
 	void DeactivateSkellyFort(const class FString& FortName);
 	void DeactivateEmissaryFlagCompany();
 	void DeactivateDeathEffect();
@@ -525,6 +544,7 @@ public:
 	void CreateDebugReapersChestMarkerAtPlayerLocation();
 	void CreateDebugAISpawnerAt(const class FString& SpawnerAssetName, const class FString& LocationActorName);
 	void CreateDebugAISpawner(const class FString& SpawnerAssetName);
+	void CoordinatedKrakenToggleAI();
 	void CoordinatedKrakenRequestAction(const class FString& ActionName);
 	void CoordinatedKrakenEnableDebugging(int Enable);
 	void ContextualPromptCountersToggleDebugDraw();
@@ -533,6 +553,7 @@ public:
 	void CompleteActiveQuests();
 	void CloseSkeletonFortDoor();
 	void CloseLoadingScreen();
+	void ClearWorldSequences();
 	void ClearVoiceChatMeters();
 	void ClearSlowMotionOverride();
 	void ClearGrogSecondary();
@@ -575,8 +596,7 @@ public:
 	void AddMysteriousNote(const class FString& NoteType, const class FString& NoteTitle, const class FString& NoteBody, const class FString& CompletionStrings);
 	void AddDrunkenness(int DrunkennessType, float DrunkennessChange);
 	void AddAISpawnContext(const class FString& ContextName);
-	void ActivateSkellyFortOfTheDamned(const class FString& FortName);
-	void ActivateSkellyFort(const class FString& FortName);
+	void ActivateSkellyFort(const class FString& FortEventName, const class FString& FortName);
 	void ActivateEmissaryFlagCompany(const class FString& CompanyId);
 };
 

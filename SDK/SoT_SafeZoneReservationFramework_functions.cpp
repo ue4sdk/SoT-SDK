@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,12 +60,44 @@ void USafeZoneComponent::OnRep_EmptyStateChanged()
 }
 
 
+// Function SafeZoneReservationFramework.SafeZoneComponent.DeactivateSafeZone
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+
+void USafeZoneComponent::DeactivateSafeZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.DeactivateSafeZone"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function SafeZoneReservationFramework.SafeZoneComponent.DeactivateCollider
 // (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 
 void USafeZoneComponent::DeactivateCollider()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.DeactivateCollider"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function SafeZoneReservationFramework.SafeZoneComponent.ActivateSafeZone
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+
+void USafeZoneComponent::ActivateSafeZone()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.ActivateSafeZone"));
 
 	struct
 	{

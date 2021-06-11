@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,44 +13,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
-
-// Class TradeRouteFramework.TaleQuestSelectTradeRouteStep
-// 0x0020 (0x0088 - 0x0068)
-class UTaleQuestSelectTradeRouteStep : public UTaleQuestStep
-{
-public:
-	class UTaleQuestSelectTradeRouteStepDesc*          Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0070(0x0018) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TradeRouteFramework.TaleQuestSelectTradeRouteStep"));
-		return ptr;
-	}
-
-};
-
-
-// Class TradeRouteFramework.TaleQuestSelectTradeRouteStepDesc
-// 0x0048 (0x0078 - 0x0030)
-class UTaleQuestSelectTradeRouteStepDesc : public UTaleQuestStepDesc
-{
-public:
-	int                                                NumSelectFromClosestIslands;                              // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	struct FQuestVariableVector                        SelectionOriginPointVar;                                  // 0x0038(0x0010) (Edit)
-	struct FQuestVariableInt                           TradeRouteDifficulty;                                     // 0x0048(0x0010) (Edit)
-	struct FQuestVariableTradeRouteData                TradeRoute;                                               // 0x0058(0x0010) (Edit)
-	struct FQuestVariableTradeRouteHandle              AllocatedTradeRouteHandleVar;                             // 0x0068(0x0010) (Edit)
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TradeRouteFramework.TaleQuestSelectTradeRouteStepDesc"));
-		return ptr;
-	}
-
-};
-
 
 // Class TradeRouteFramework.TradeRouteDifficultyBand
 // 0x0008 (0x0030 - 0x0028)
@@ -120,6 +82,44 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TradeRouteFramework.TaleQuestGetProjectionPointOnTradeRouteStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class TradeRouteFramework.TaleQuestSelectTradeRouteStep
+// 0x0020 (0x0088 - 0x0068)
+class UTaleQuestSelectTradeRouteStep : public UTaleQuestStep
+{
+public:
+	class UTaleQuestSelectTradeRouteStepDesc*          Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0070(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TradeRouteFramework.TaleQuestSelectTradeRouteStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class TradeRouteFramework.TaleQuestSelectTradeRouteStepDesc
+// 0x0048 (0x0078 - 0x0030)
+class UTaleQuestSelectTradeRouteStepDesc : public UTaleQuestStepDesc
+{
+public:
+	int                                                NumSelectFromClosestIslands;                              // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
+	struct FQuestVariableVector                        SelectionOriginPointVar;                                  // 0x0038(0x0010) (Edit)
+	struct FQuestVariableInt                           TradeRouteDifficulty;                                     // 0x0048(0x0010) (Edit)
+	struct FQuestVariableTradeRouteData                TradeRoute;                                               // 0x0058(0x0010) (Edit)
+	struct FQuestVariableTaleResourceHandle            AllocatedTradeRouteHandleVar;                             // 0x0068(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class TradeRouteFramework.TaleQuestSelectTradeRouteStepDesc"));
 		return ptr;
 	}
 

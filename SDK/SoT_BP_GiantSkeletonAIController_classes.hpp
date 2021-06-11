@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_GiantSkeletonAIController.BP_GiantSkeletonAIController_C
-// 0x0000 (0x0B80 - 0x0B80)
+// 0x0000 (0x0B88 - 0x0B88)
 class ABP_GiantSkeletonAIController_C : public ABP_SkeletonAIController_C
 {
 public:

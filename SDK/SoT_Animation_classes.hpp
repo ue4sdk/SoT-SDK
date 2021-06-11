@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -512,6 +512,23 @@ public:
 };
 
 
+// Class Animation.AnimNotifyState_PropagateCurveValuesToMaterials
+// 0x0020 (0x0048 - 0x0028)
+class UAnimNotifyState_PropagateCurveValuesToMaterials : public UAnimNotifyState
+{
+public:
+	TArray<struct FCurveUpdateValues>                  CurveValues;                                              // 0x0028(0x0010) (Edit, BlueprintReadOnly, ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimNotifyState_PropagateCurveValuesToMaterials"));
+		return ptr;
+	}
+
+};
+
+
 // Class Animation.AnimNotifyState_SetLookAtDisabledForDuration
 // 0x0000 (0x0028 - 0x0028)
 class UAnimNotifyState_SetLookAtDisabledForDuration : public UAnimNotifyState
@@ -536,6 +553,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimNotifyState_SetLookAtEnabledForDuration"));
+		return ptr;
+	}
+
+};
+
+
+// Class Animation.AnimNotifyState_SetMeshInvisibleForDuration
+// 0x0000 (0x0028 - 0x0028)
+class UAnimNotifyState_SetMeshInvisibleForDuration : public UAnimNotifyState
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Animation.AnimNotifyState_SetMeshInvisibleForDuration"));
 		return ptr;
 	}
 
@@ -599,7 +631,7 @@ public:
 
 
 // Class Animation.ClientSkeletalMeshComponent
-// 0x0000 (0x0930 - 0x0930)
+// 0x0000 (0x0950 - 0x0950)
 class UClientSkeletalMeshComponent : public USkeletalMeshComponent
 {
 public:
@@ -614,13 +646,13 @@ public:
 
 
 // Class Animation.CosmeticItemActor
-// 0x00B0 (0x04D8 - 0x0428)
+// 0x00B0 (0x04E0 - 0x0430)
 class ACosmeticItemActor : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0428(0x0008) MISSED OFFSET
-	class USkeletalMeshComponent*                      MeshComponent;                                            // 0x0430(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x0438(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
+	class USkeletalMeshComponent*                      MeshComponent;                                            // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x0440(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -795,12 +827,13 @@ public:
 
 
 // Class Animation.CustomAnimationMontageComponent
-// 0x0010 (0x00D8 - 0x00C8)
+// 0x0018 (0x00E0 - 0x00C8)
 class UCustomAnimationMontageComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	struct FCustomAnimationMontageId                   CustomMontageId;                                          // 0x00D0(0x0008) (Net)
+	struct FCustomAnimationMontageComponentReplicatedData ReplicatedData;                                           // 0x00D0(0x000C) (Net)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -809,12 +842,12 @@ public:
 	}
 
 
-	void OnRep_CustomMontageId(const struct FCustomAnimationMontageId& PriorId);
+	void OnRep_ReplicatedData(const struct FCustomAnimationMontageComponentReplicatedData& PriorData);
 };
 
 
 // Class Animation.CustomAnimationMontageDefinitionDataAsset
-// 0x0040 (0x0068 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UCustomAnimationMontageDefinitionDataAsset : public UDataAsset
 {
 public:
@@ -823,6 +856,8 @@ public:
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
 	class UAnimMontage*                                MontageData;                                              // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FCustomAnimationMontageStagedLoopingData    LoopingData;                                              // 0x0040(0x0028) (Edit, DisableEditOnInstance)
+	bool                                               Interrupts;                                               // 0x0068(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x0069(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

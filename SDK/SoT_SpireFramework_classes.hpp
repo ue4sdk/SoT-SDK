@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -60,6 +60,22 @@ public:
 };
 
 
+// Class SpireFramework.SpireResource
+// 0x0008 (0x0438 - 0x0430)
+class ASpireResource : public AActor
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.SpireResource"));
+		return ptr;
+	}
+
+};
+
+
 // Class SpireFramework.SpireServiceInterface
 // 0x0000 (0x0028 - 0x0028)
 class USpireServiceInterface : public UInterface
@@ -76,13 +92,15 @@ public:
 
 
 // Class SpireFramework.SpireService
-// 0x0060 (0x0488 - 0x0428)
+// 0x0080 (0x04B0 - 0x0430)
 class ASpireService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0428(0x0008) MISSED OFFSET
-	TArray<struct FSpireInfo>                          SpireLevels;                                              // 0x0430(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0440(0x0048) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
+	TArray<struct FServerSpireInfo>                    ServerOnlySpireInfo;                                      // 0x0438(0x0010) (ZeroConstructor)
+	TArray<struct FSpireInfo>                          SpireLevels;                                              // 0x0448(0x0010) (Net, ZeroConstructor)
+	TArray<struct FSpireInfo>                          PreviousSpireLevels;                                      // 0x0458(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x0468(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -91,7 +109,23 @@ public:
 	}
 
 
-	void OnRep_SpireLevels(TArray<struct FSpireInfo> PreviousSpireLevels);
+	void OnRep_SpireLevels(TArray<struct FSpireInfo> InPreviousSpireLevels);
+};
+
+
+// Class SpireFramework.SpireShippingDrawDebugActorSphereCollection
+// 0x0010 (0x0450 - 0x0440)
+class ASpireShippingDrawDebugActorSphereCollection : public AShippingDebugActorSphereCollection
+{
+public:
+	TArray<TWeakObjectPtr<class ASpireResource>>       SpireList;                                                // 0x0440(0x0010) (ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.SpireShippingDrawDebugActorSphereCollection"));
+		return ptr;
+	}
+
 };
 
 
@@ -111,11 +145,11 @@ public:
 
 
 // Class SpireFramework.TaleSpireService
-// 0x0020 (0x0060 - 0x0040)
+// 0x0028 (0x0068 - 0x0040)
 class UTaleSpireService : public UTaleQuestService
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0040(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0040(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -180,7 +214,7 @@ class UTaleRegisterSpireStepDesc : public UTaleQuestStepDesc
 public:
 	struct FQuestVariableVector                        SelectionOriginPoint;                                     // 0x0030(0x0010) (Edit)
 	struct FQuestVariableFloat                         PlayerExclusionSelectionRadius;                           // 0x0040(0x0010) (Edit)
-	struct FQuestVariableSpireHandle                   AllocatedSpireHandle;                                     // 0x0050(0x0010) (Edit)
+	struct FQuestVariableTaleResourceHandle            AllocatedSpireHandle;                                     // 0x0050(0x0010) (Edit)
 	struct FQuestVariableVector                        AllocatedSpireLocation;                                   // 0x0060(0x0010) (Edit)
 
 	static UClass* StaticClass()
@@ -214,7 +248,7 @@ public:
 class UTaleReleaseSpireStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableSpireHandle                   SpireHandle;                                              // 0x0030(0x0010) (Edit)
+	struct FQuestVariableTaleResourceHandle            SpireHandle;                                              // 0x0030(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MerchantAlliance_EmissarySailMesh.BP_MerchantAlliance_EmissarySailMesh_C
-// 0x0000 (0x05D0 - 0x05D0)
+// 0x0000 (0x05C0 - 0x05C0)
 class UBP_MerchantAlliance_EmissarySailMesh_C : public UEmissaryRepresentationMeshComponent
 {
 public:

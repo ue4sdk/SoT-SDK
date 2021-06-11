@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -67,6 +67,24 @@ struct FEnableMoreButtonEvent
 	struct FNavigationDesc                             Navigation;                                               // 0x0004(0x0014)
 };
 
+// ScriptStruct SeasonProgressionUI.SeasonProgressionUIEventTypeTelemetryFragment
+// 0x0018
+struct FSeasonProgressionUIEventTypeTelemetryFragment
+{
+	class FString                                      EventName;                                                // 0x0000(0x0010) (ZeroConstructor)
+	int                                                NumReceivedEvents;                                        // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct SeasonProgressionUI.SeasonProgressionUITelemetryFragment
+// 0x0018
+struct FSeasonProgressionUITelemetryFragment
+{
+	TArray<struct FSeasonProgressionUIEventTypeTelemetryFragment> ReceivedEventsData;                                       // 0x0000(0x0010) (ZeroConstructor)
+	int                                                TotalNumReceivedEvents;                                   // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct SeasonProgressionUI.SeasonNotificationContent
 // 0x0068
 struct FSeasonNotificationContent
@@ -131,6 +149,13 @@ struct FShowDeedProgressEvent
 struct FSeasonsChatNotificationEvent
 {
 	struct FSeasonsChatNotification                    SeasonsChatNotification;                                  // 0x0000(0x0060)
+};
+
+// ScriptStruct SeasonProgressionUI.SeasonProgressionUITelemetryFragmentInput
+// 0x0007 (0x0008 - 0x0001)
+struct FSeasonProgressionUITelemetryFragmentInput : public FTelemetryFragmentInput
+{
+	TWeakObjectPtr<class APlayerController>            PlayerController;                                         // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct SeasonProgressionUI.SeasonsPopupEvent

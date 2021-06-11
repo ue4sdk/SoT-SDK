@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -43,12 +43,11 @@ struct FCrewTrackedItemOwnershipChanged
 };
 
 // ScriptStruct CrewOwnershipTracking.TrackItemOwnershipEvent
-// 0x0020
+// 0x0010
 struct FTrackItemOwnershipEvent
 {
 	class AActor*                                      TrackedItem;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      ItemRepresentation;                                       // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CrewId;                                                   // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	class AActor*                                      ActorWithCrewIdInformation;                               // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

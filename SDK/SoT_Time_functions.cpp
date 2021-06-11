@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -120,6 +120,127 @@ struct FDateTime UTimeInterface::ConvertGameWorldTimeToRealWorldTime(const struc
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Time.CustomizableTimeInterface.SetTimeScalar
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// int                            RequestedTimeScalar            (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UCustomizableTimeInterface::SetTimeScalar(int RequestedTimeScalar)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.CustomizableTimeInterface.SetTimeScalar"));
+
+	struct
+	{
+		int                            RequestedTimeScalar;
+	} params;
+
+	params.RequestedTimeScalar = RequestedTimeScalar;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Time.CustomizableTimeInterface.SetSunset
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          SunsetHours                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UCustomizableTimeInterface::SetSunset(float SunsetHours)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.CustomizableTimeInterface.SetSunset"));
+
+	struct
+	{
+		float                          SunsetHours;
+	} params;
+
+	params.SunsetHours = SunsetHours;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Time.CustomizableTimeInterface.SetSunrise
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// float                          SunriseHours                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UCustomizableTimeInterface::SetSunrise(float SunriseHours)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.CustomizableTimeInterface.SetSunrise"));
+
+	struct
+	{
+		float                          SunriseHours;
+	} params;
+
+	params.SunriseHours = SunriseHours;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Time.CustomizableTimeInterface.SetGameWorldTime
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// struct FGameTime               RequestedTime                  (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UCustomizableTimeInterface::SetGameWorldTime(const struct FGameTime& RequestedTime)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.CustomizableTimeInterface.SetGameWorldTime"));
+
+	struct
+	{
+		struct FGameTime               RequestedTime;
+	} params;
+
+	params.RequestedTime = RequestedTime;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Time.CustomizableTimeInterface.GetTimeScalar
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+int UCustomizableTimeInterface::GetTimeScalar()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.CustomizableTimeInterface.GetTimeScalar"));
+
+	struct
+	{
+		int                            ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
+// Function Time.CustomizableTimeInterface.EnableQueryServiceTime
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// bool                           Enable                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UCustomizableTimeInterface::EnableQueryServiceTime(bool Enable)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.CustomizableTimeInterface.EnableQueryServiceTime"));
+
+	struct
+	{
+		bool                           Enable;
+	} params;
+
+	params.Enable = Enable;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
@@ -413,6 +534,29 @@ void ATimeService::MulticastOnServiceTimeChangedRPC(int64_t ServiceTimeInTicks)
 void ADebugTimeService::MulticastOnTimeScalarOffsetRPC(int Scalar, int64_t Offset)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.DebugTimeService.MulticastOnTimeScalarOffsetRPC"));
+
+	struct
+	{
+		int                            Scalar;
+		int64_t                        Offset;
+	} params;
+
+	params.Scalar = Scalar;
+	params.Offset = Offset;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Time.CustomizableTimeService.MulticastOnTimeScalarOffsetRPC
+// (Net, NetReliable, Native, Event, NetMulticast, Protected)
+// Parameters:
+// int                            Scalar                         (Parm, ZeroConstructor, IsPlainOldData)
+// int64_t                        Offset                         (Parm, ZeroConstructor, IsPlainOldData)
+
+void ACustomizableTimeService::MulticastOnTimeScalarOffsetRPC(int Scalar, int64_t Offset)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Time.CustomizableTimeService.MulticastOnTimeScalarOffsetRPC"));
 
 	struct
 	{

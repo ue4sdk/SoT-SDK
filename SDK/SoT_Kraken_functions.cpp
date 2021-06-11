@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -111,6 +111,46 @@ void AKraken::AddActorToKnownTargets(class AActor* Target)
 	} params;
 
 	params.Target = Target;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Kraken.KrakenHead.RequestState
+// (Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// class UClass*                  NewState                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+
+void AKrakenHead::RequestState(class UClass* NewState)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.KrakenHead.RequestState"));
+
+	struct
+	{
+		class UClass*                  NewState;
+	} params;
+
+	params.NewState = NewState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Kraken.KrakenHead.OnCoordinatedKrakenSpecialEvent
+// (Final, Native, Private)
+// Parameters:
+// TEnumAsByte<ECoordinatedKrakenSpecialEventTypes> InEventType                    (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void AKrakenHead::OnCoordinatedKrakenSpecialEvent(TEnumAsByte<ECoordinatedKrakenSpecialEventTypes> InEventType)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.KrakenHead.OnCoordinatedKrakenSpecialEvent"));
+
+	struct
+	{
+		TEnumAsByte<ECoordinatedKrakenSpecialEventTypes> InEventType;
+	} params;
+
+	params.InEventType = InEventType;
 
 	UObject::ProcessEvent(fn, &params);
 }

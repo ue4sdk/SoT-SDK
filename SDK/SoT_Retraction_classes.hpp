@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,10 +22,11 @@ public:
 	unsigned char                                      UnknownData00[0x58];                                      // 0x00C8(0x0058) MISSED OFFSET
 	struct FName                                       FeatureToggle;                                            // 0x0120(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FRetractorOrientationAdjustmentFlags        OrientationAdjustmentOnRetractFlags;                      // 0x0128(0x0003) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ShouldAutoReleaseOnSuccessfulRetract;                     // 0x012B(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               MigrateAttachedWithRetractor;                             // 0x012C(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               WasSimulatingPhysicsBeforeRetract;                        // 0x012D(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x012E(0x0002) MISSED OFFSET
+	TEnumAsByte<EAxis>                                 RetractorBoxAxis;                                         // 0x012B(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ShouldAutoReleaseOnSuccessfulRetract;                     // 0x012C(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               MigrateAttachedWithRetractor;                             // 0x012D(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               WasSimulatingPhysicsBeforeRetract;                        // 0x012E(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x012F(0x0001) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

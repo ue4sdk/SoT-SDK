@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,22 +11,6 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
-
-// Function BP_MerchantCrate_PigCrate.BP_MerchantCrate_PigCrate_C.UserConstructionScript
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void ABP_MerchantCrate_PigCrate_C::UserConstructionScript()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MerchantCrate_PigCrate.BP_MerchantCrate_PigCrate_C.UserConstructionScript"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
 
 }
 

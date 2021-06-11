@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9,6 +9,7 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Animation_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
@@ -29,11 +30,13 @@ struct FSirenAnimationLocomotion
 };
 
 // ScriptStruct SirensAnimation.SirenAnimationDataStructure
-// 0x0038
+// 0x0048
 struct FSirenAnimationDataStructure
 {
 	struct FSirenAnimationLocomotion                   LocomotionAnims;                                          // 0x0000(0x0030) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 	class UCustomAnimationMontageDefinitionListingDataAsset* FullBodyMontageListings;                                  // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAthenaAnimationWeaponDataAsset*             AttackAnimationAsset;                                     // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FHitReactionAnimationData                   HitReactAnimationData;                                    // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 };
 
 }

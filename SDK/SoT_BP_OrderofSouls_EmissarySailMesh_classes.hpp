@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_OrderofSouls_EmissarySailMesh.BP_OrderofSouls_EmissarySailMesh_C
-// 0x0000 (0x05D0 - 0x05D0)
+// 0x0000 (0x05C0 - 0x05C0)
 class UBP_OrderofSouls_EmissarySailMesh_C : public UEmissaryRepresentationMeshComponent
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -119,9 +119,9 @@ struct FEventMarkNoteRead
 	struct FGuid                                       NoteId;                                                   // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
-// ScriptStruct MysteriousNotes.EventPlayerControllerUnpossessed
+// ScriptStruct MysteriousNotes.EventOnlineAthenaPlayerControllerUnpossessed
 // 0x0008
-struct FEventPlayerControllerUnpossessed
+struct FEventOnlineAthenaPlayerControllerUnpossessed
 {
 	class APlayerController*                           PlayerController;                                         // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FlintlockPistol.BP_FlintlockPistol_C
-// 0x0020 (0x0AA0 - 0x0A80)
+// 0x0038 (0x0AB8 - 0x0A80)
 class ABP_FlintlockPistol_C : public AProjectileWeapon
 {
 public:
@@ -24,6 +24,9 @@ public:
 	TEnumAsByte<EEmitterRelationship>                  sfx_relationship;                                         // 0x0A90(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0A91(0x0007) MISSED OFFSET
 	class UMaterialInstanceDynamic*                    DynamicMaterial;                                          // 0x0A98(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UObject*                                     ThirdPerson_VFX_AI;                                       // 0x0AA0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 Flintlock3rdPersonSFX;                                    // 0x0AA8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 FlintLockFirstPersonSFX;                                  // 0x0AB0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

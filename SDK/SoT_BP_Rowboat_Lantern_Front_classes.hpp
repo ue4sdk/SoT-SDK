@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rowboat_Lantern_Front.BP_Rowboat_Lantern_Front_C
-// 0x0000 (0x06A1 - 0x06A1)
+// 0x0000 (0x06A9 - 0x06A9)
 class ABP_Rowboat_Lantern_Front_C : public ABP_InteractableRowboatLantern_C
 {
 public:

@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Lord_Ashen_AnimNotifyEmitterComponent.BP_Lord_Ashen_AnimNotifyEmitterComponent_C
-// 0x0000 (0x02D0 - 0x02D0)
+// 0x0000 (0x02F0 - 0x02F0)
 class UBP_Lord_Ashen_AnimNotifyEmitterComponent_C : public UAnimNotifyAdditionalEventsWwiseEmitterComponent
 {
 public:

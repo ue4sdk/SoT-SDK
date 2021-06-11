@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_NaturalDisasters_enums.hpp"
-#include "SoT_ResourceContentionFramework_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_Maths_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_ResourceContentionFramework_classes.hpp"
 #include "SoT_StatusEffects_classes.hpp"
 #include "SoT_Kraken_classes.hpp"
 

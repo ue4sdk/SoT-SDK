@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,19 +14,36 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class ShantyPuzzle.ShantyPuzzleInterface
+// 0x0000 (0x0028 - 0x0028)
+class UShantyPuzzleInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ShantyPuzzle.ShantyPuzzleInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class ShantyPuzzle.ShantyPuzzleComponent
-// 0x00E0 (0x0370 - 0x0290)
+// 0x0110 (0x03C0 - 0x02B0)
 class UShantyPuzzleComponent : public USceneComponent
 {
 public:
-	TArray<struct FShantyPuzzleInteractionZoneDefinition> ShantyPuzzleInteractionZoneDefinitions;                   // 0x0290(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate)
-	bool                                               TimeLimited;                                              // 0x02A0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               ShouldMoveEnsembleToActorPosition;                        // 0x02A1(0x0001) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x02A2(0x0006) MISSED OFFSET
-	struct FGameTimeRange                              ActiveTimeRange;                                          // 0x02A8(0x0010) (Edit)
-	TArray<class UShantyPuzzleInteractionZoneComponent*> ShantyPuzzleInteractionZones;                             // 0x02B8(0x0010) (ExportObject, ZeroConstructor)
-	class AEnsemble*                                   CurrentlyPlayingShantyPuzzleEnsemble;                     // 0x02C8(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x02D0(0x00A0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	class UClass*                                      RequiredShantyItemDesc;                                   // 0x02B8(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	TArray<struct FShantyPuzzleInteractionZoneDefinition> ShantyPuzzleInteractionZoneDefinitions;                   // 0x02C0(0x0010) (Edit, ZeroConstructor, DisableEditOnTemplate)
+	bool                                               TimeLimited;                                              // 0x02D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldMoveEnsembleToActorPosition;                        // 0x02D1(0x0001) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x02D2(0x0006) MISSED OFFSET
+	struct FGameTimeRange                              ActiveTimeRange;                                          // 0x02D8(0x0010) (Edit)
+	TArray<class UShantyPuzzleInteractionZoneComponent*> ShantyPuzzleInteractionZones;                             // 0x02E8(0x0010) (ExportObject, ZeroConstructor)
+	class AEnsemble*                                   CurrentlyPlayingShantyPuzzleEnsemble;                     // 0x02F8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xC0];                                      // 0x0300(0x00C0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -41,11 +58,11 @@ public:
 
 
 // Class ShantyPuzzle.ShantyPuzzleInteractionZoneComponent
-// 0x0020 (0x0570 - 0x0550)
+// 0x0020 (0x05A0 - 0x0580)
 class UShantyPuzzleInteractionZoneComponent : public USphereComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0550(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0580(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

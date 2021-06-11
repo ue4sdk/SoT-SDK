@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,21 +32,21 @@ public:
 
 
 // Class WaterSlide.WaterSlide
-// 0x0068 (0x0490 - 0x0428)
+// 0x0070 (0x04A0 - 0x0430)
 class AWaterSlide : public AActor
 {
 public:
-	class USplineComponent*                            SlideSpline;                                              // 0x0428(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             Root;                                                     // 0x0430(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UWaterSlideParamsDataAsset*                  WaterSlideParamsDataAsset;                                // 0x0438(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPrimitiveComponent*                         EntranceCollisionComponent;                               // 0x0440(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AWaterSlide*                                 ContinuedWaterSlideRoute;                                 // 0x0448(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class AWaterSlide*                                 LeftWaterSlideRoute;                                      // 0x0450(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class AWaterSlide*                                 RightWaterSlideRoute;                                     // 0x0458(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IsEndOfSlide;                                             // 0x0460(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0461(0x0003) MISSED OFFSET
-	struct FVector                                     EndOfSlideLaunchForce;                                    // 0x0464(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x20];                                      // 0x0470(0x0020) MISSED OFFSET
+	class USplineComponent*                            SlideSpline;                                              // 0x0430(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             Root;                                                     // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UWaterSlideParamsDataAsset*                  WaterSlideParamsDataAsset;                                // 0x0440(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPrimitiveComponent*                         EntranceCollisionComponent;                               // 0x0448(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AWaterSlide*                                 ContinuedWaterSlideRoute;                                 // 0x0450(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class AWaterSlide*                                 LeftWaterSlideRoute;                                      // 0x0458(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class AWaterSlide*                                 RightWaterSlideRoute;                                     // 0x0460(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IsEndOfSlide;                                             // 0x0468(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0469(0x0003) MISSED OFFSET
+	struct FVector                                     EndOfSlideLaunchForce;                                    // 0x046C(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x28];                                      // 0x0478(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

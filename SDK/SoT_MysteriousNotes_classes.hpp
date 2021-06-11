@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,18 +61,16 @@ public:
 
 
 // Class MysteriousNotes.MysteriousNoteSettings
-// 0x0090 (0x00B8 - 0x0028)
+// 0x0048 (0x0070 - 0x0028)
 class UMysteriousNoteSettings : public UObject
 {
 public:
 	int                                                LookAheadInMinutes;                                       // 0x0028(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	float                                              RequestTimeout;                                           // 0x002C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	struct FStringAssetReference                       MysteriousNotesCompletionStringsAsset;                    // 0x0030(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
-	struct FStringAssetReference                       DefaultRadialIcon;                                        // 0x0040(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
-	struct FStringAssetReference                       WieldableNoteDataAsset;                                   // 0x0050(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
-	struct FStringAssetReference                       Image;                                                    // 0x0060(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
-	struct FStringAssetReference                       NotificationBackground;                                   // 0x0070(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
-	struct FText                                       NotificationText;                                         // 0x0080(0x0038) (Edit, Config, DisableEditOnInstance)
+	struct FStringAssetReference                       WieldableNoteDataAsset;                                   // 0x0040(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+	struct FStringAssetReference                       Image;                                                    // 0x0050(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+	struct FStringAssetReference                       NotificationBackground;                                   // 0x0060(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -135,15 +133,15 @@ public:
 
 
 // Class MysteriousNotes.MysteriousNotesService
-// 0x00C8 (0x04F0 - 0x0428)
+// 0x00C8 (0x04F8 - 0x0430)
 class AMysteriousNotesService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0428(0x0028) MISSED OFFSET
-	class UMysteriousNoteSettings*                     CachedNoteSettings;                                       // 0x0450(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UWieldableMysteriousNoteDataAsset*           WieldableNoteDataAsset;                                   // 0x0458(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UMysteriousNotesCompletionEventsModelDataAsset* CompletionEventsModelData;                                // 0x0460(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x88];                                      // 0x0468(0x0088) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0430(0x0028) MISSED OFFSET
+	class UMysteriousNoteSettings*                     CachedNoteSettings;                                       // 0x0458(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UWieldableMysteriousNoteDataAsset*           WieldableNoteDataAsset;                                   // 0x0460(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UMysteriousNotesCompletionEventsModelDataAsset* CompletionEventsModelData;                                // 0x0468(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x88];                                      // 0x0470(0x0088) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

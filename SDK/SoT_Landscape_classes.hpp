@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Landscape.ControlPointMeshComponent
-// 0x0000 (0x0590 - 0x0590)
+// 0x0000 (0x05C0 - 0x05C0)
 class UControlPointMeshComponent : public UStaticMeshComponent
 {
 public:
@@ -52,41 +52,44 @@ public:
 
 
 // Class Landscape.LandscapeComponent
-// 0x0160 (0x0690 - 0x0530)
+// 0x0170 (0x06C0 - 0x0550)
 class ULandscapeComponent : public UPrimitiveComponent
 {
 public:
-	int                                                ComponentSizeQuads;                                       // 0x0530(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SubsectionSizeQuads;                                      // 0x0534(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                NumSubsections;                                           // 0x0538(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x053C(0x0004) MISSED OFFSET
-	class UMaterialInterface*                          OverrideMaterial;                                         // 0x0540(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          OverrideHoleMaterial;                                     // 0x0548(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UMaterialInstanceConstant*                   MaterialInstance;                                         // 0x0550(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FWeightmapLayerAllocationInfo>       WeightmapLayerAllocations;                                // 0x0558(0x0010) (ZeroConstructor)
-	TArray<class UTexture2D*>                          WeightmapTextures;                                        // 0x0568(0x0010) (ZeroConstructor)
-	class UTexture2D*                                  XYOffsetmapTexture;                                       // 0x0578(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVector4                                    WeightmapScaleBias;                                       // 0x0580(0x0010) (ZeroConstructor, IsPlainOldData)
-	float                                              WeightmapSubsectionOffset;                                // 0x0590(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x0594(0x000C) MISSED OFFSET
-	struct FVector4                                    HeightmapScaleBias;                                       // 0x05A0(0x0010) (ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  HeightmapTexture;                                         // 0x05B0(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FBox                                        CachedLocalBox;                                           // 0x05B8(0x001C) (ZeroConstructor, IsPlainOldData)
-	TLazyObjectPtr<class ULandscapeHeightfieldCollisionComponent> CollisionComponent;                                       // 0x05D4(0x001C) (ExportObject, InstancedReference, IsPlainOldData)
-	TArray<struct FGuid>                               IrrelevantLights;                                         // 0x05F0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x0600(0x0010) MISSED OFFSET
-	int                                                CollisionMipLevel;                                        // 0x0610(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              StaticLightingResolution;                                 // 0x0614(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                ForcedLOD;                                                // 0x0618(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                LODBias;                                                  // 0x061C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       StateId;                                                  // 0x0620(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       BakedTextureMaterialGuid;                                 // 0x0630(0x0010) (ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  GIBakedBaseColorTexture;                                  // 0x0640(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      MobileBlendableLayerMask;                                 // 0x0648(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0649(0x0007) MISSED OFFSET
-	class UMaterialInterface*                          MobileMaterialInterface;                                  // 0x0650(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  MobileWeightNormalmapTexture;                             // 0x0658(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x30];                                      // 0x0660(0x0030) MISSED OFFSET
+	int                                                SectionBaseX;                                             // 0x0550(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                SectionBaseY;                                             // 0x0554(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
+	int                                                ComponentSizeQuads;                                       // 0x0558(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SubsectionSizeQuads;                                      // 0x055C(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                NumSubsections;                                           // 0x0560(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0564(0x0004) MISSED OFFSET
+	class UMaterialInterface*                          OverrideMaterial;                                         // 0x0568(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          OverrideHoleMaterial;                                     // 0x0570(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialInstanceConstant*                   MaterialInstance;                                         // 0x0578(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<struct FWeightmapLayerAllocationInfo>       WeightmapLayerAllocations;                                // 0x0580(0x0010) (ZeroConstructor)
+	TArray<class UTexture2D*>                          WeightmapTextures;                                        // 0x0590(0x0010) (ZeroConstructor)
+	class UTexture2D*                                  XYOffsetmapTexture;                                       // 0x05A0(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x05A8(0x0008) MISSED OFFSET
+	struct FVector4                                    WeightmapScaleBias;                                       // 0x05B0(0x0010) (ZeroConstructor, IsPlainOldData)
+	float                                              WeightmapSubsectionOffset;                                // 0x05C0(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xC];                                       // 0x05C4(0x000C) MISSED OFFSET
+	struct FVector4                                    HeightmapScaleBias;                                       // 0x05D0(0x0010) (ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  HeightmapTexture;                                         // 0x05E0(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FBox                                        CachedLocalBox;                                           // 0x05E8(0x001C) (ZeroConstructor, IsPlainOldData)
+	TLazyObjectPtr<class ULandscapeHeightfieldCollisionComponent> CollisionComponent;                                       // 0x0604(0x001C) (ExportObject, InstancedReference, IsPlainOldData)
+	TArray<struct FGuid>                               IrrelevantLights;                                         // 0x0620(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData03[0x10];                                      // 0x0630(0x0010) MISSED OFFSET
+	int                                                CollisionMipLevel;                                        // 0x0640(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              StaticLightingResolution;                                 // 0x0644(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                ForcedLOD;                                                // 0x0648(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                LODBias;                                                  // 0x064C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       StateId;                                                  // 0x0650(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       BakedTextureMaterialGuid;                                 // 0x0660(0x0010) (ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  GIBakedBaseColorTexture;                                  // 0x0670(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      MobileBlendableLayerMask;                                 // 0x0678(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x7];                                       // 0x0679(0x0007) MISSED OFFSET
+	class UMaterialInterface*                          MobileMaterialInterface;                                  // 0x0680(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UTexture2D*                                  MobileWeightNormalmapTexture;                             // 0x0688(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x30];                                      // 0x0690(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -98,7 +101,7 @@ public:
 
 
 // Class Landscape.LandscapeGizmoActor
-// 0x0000 (0x0428 - 0x0428)
+// 0x0000 (0x0430 - 0x0430)
 class ALandscapeGizmoActor : public AActor
 {
 public:
@@ -113,11 +116,11 @@ public:
 
 
 // Class Landscape.LandscapeGizmoActiveActor
-// 0x0050 (0x0478 - 0x0428)
+// 0x0050 (0x0480 - 0x0430)
 class ALandscapeGizmoActiveActor : public ALandscapeGizmoActor
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0428(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0430(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -129,7 +132,7 @@ public:
 
 
 // Class Landscape.LandscapeGizmoRenderComponent
-// 0x0000 (0x0530 - 0x0530)
+// 0x0000 (0x0550 - 0x0550)
 class ULandscapeGizmoRenderComponent : public UPrimitiveComponent
 {
 public:
@@ -168,22 +171,22 @@ public:
 
 
 // Class Landscape.LandscapeHeightfieldCollisionComponent
-// 0x00D0 (0x0600 - 0x0530)
+// 0x00E0 (0x0630 - 0x0550)
 class ULandscapeHeightfieldCollisionComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0530(0x0008) MISSED OFFSET
-	int                                                SectionBaseX;                                             // 0x0538(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SectionBaseY;                                             // 0x053C(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                CollisionSizeQuads;                                       // 0x0540(0x0004) (ZeroConstructor, IsPlainOldData)
-	float                                              CollisionScale;                                           // 0x0544(0x0004) (ZeroConstructor, IsPlainOldData)
-	TArray<unsigned char>                              CollisionQuadFlags;                                       // 0x0548(0x0010) (ZeroConstructor)
-	struct FGuid                                       HeightfieldGuid;                                          // 0x0558(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FBox                                        CachedLocalBox;                                           // 0x0568(0x001C) (ZeroConstructor, IsPlainOldData)
-	TLazyObjectPtr<class ULandscapeComponent>          RenderComponent;                                          // 0x0584(0x001C) (ExportObject, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x05A0(0x0010) MISSED OFFSET
-	TArray<class UPhysicalMaterial*>                   CookedPhysicalMaterials;                                  // 0x05B0(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData02[0x40];                                      // 0x05C0(0x0040) MISSED OFFSET
+	TArray<class ULandscapeLayerInfoObject*>           ComponentLayerInfos;                                      // 0x0550(0x0010) (ZeroConstructor)
+	int                                                SectionBaseX;                                             // 0x0560(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SectionBaseY;                                             // 0x0564(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                CollisionSizeQuads;                                       // 0x0568(0x0004) (ZeroConstructor, IsPlainOldData)
+	float                                              CollisionScale;                                           // 0x056C(0x0004) (ZeroConstructor, IsPlainOldData)
+	TArray<unsigned char>                              CollisionQuadFlags;                                       // 0x0570(0x0010) (ZeroConstructor)
+	struct FGuid                                       HeightfieldGuid;                                          // 0x0580(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FBox                                        CachedLocalBox;                                           // 0x0590(0x001C) (ZeroConstructor, IsPlainOldData)
+	TLazyObjectPtr<class ULandscapeComponent>          RenderComponent;                                          // 0x05AC(0x001C) (ExportObject, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05C8(0x0010) MISSED OFFSET
+	TArray<class UPhysicalMaterial*>                   CookedPhysicalMaterials;                                  // 0x05D8(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x05E8(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -195,12 +198,11 @@ public:
 
 
 // Class Landscape.LandscapeMeshCollisionComponent
-// 0x0020 (0x0620 - 0x0600)
+// 0x0010 (0x0640 - 0x0630)
 class ULandscapeMeshCollisionComponent : public ULandscapeHeightfieldCollisionComponent
 {
 public:
-	struct FGuid                                       MeshGuid;                                                 // 0x0600(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0610(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0630(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -267,11 +269,11 @@ public:
 
 
 // Class Landscape.LandscapeMeshProxyActor
-// 0x0008 (0x0430 - 0x0428)
+// 0x0008 (0x0438 - 0x0430)
 class ALandscapeMeshProxyActor : public AActor
 {
 public:
-	class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                              // 0x0428(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class ULandscapeMeshProxyComponent*                LandscapeMeshProxyComponent;                              // 0x0430(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -283,52 +285,52 @@ public:
 
 
 // Class Landscape.LandscapeProxy
-// 0x0388 (0x07B0 - 0x0428)
+// 0x0390 (0x07C0 - 0x0430)
 class ALandscapeProxy : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0428(0x0008) MISSED OFFSET
-	class ULandscapeSplinesComponent*                  SplineComponent;                                          // 0x0430(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FGuid                                       LandscapeGuid;                                            // 0x0438(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FIntPoint                                   LandscapeSectionOffset;                                   // 0x0448(0x0008) (ZeroConstructor, IsPlainOldData)
-	int                                                MaxLODLevel;                                              // 0x0450(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	int                                                StaticLightingLOD;                                        // 0x0454(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UPhysicalMaterial*                           DefaultPhysMaterial;                                      // 0x0458(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              StreamingDistanceMultiplier;                              // 0x0460(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0464(0x0004) MISSED OFFSET
-	class UMaterialInterface*                          LandscapeMaterial;                                        // 0x0468(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UMaterialInterface*                          LandscapeHoleMaterial;                                    // 0x0470(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LODDistanceFactor;                                        // 0x0478(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x047C(0x0004) MISSED OFFSET
-	TArray<class ULandscapeComponent*>                 LandscapeComponents;                                      // 0x0480(0x0010) (ExportObject, ZeroConstructor)
-	TArray<class ULandscapeHeightfieldCollisionComponent*> CollisionComponents;                                      // 0x0490(0x0010) (ExportObject, ZeroConstructor)
-	TArray<class UHierarchicalInstancedStaticMeshComponent*> FoliageComponents;                                        // 0x04A0(0x0010) (ExportObject, ZeroConstructor, Transient, DuplicateTransient)
-	unsigned char                                      UnknownData03[0x70];                                      // 0x04B0(0x0070) MISSED OFFSET
-	float                                              StaticLightingResolution;                                 // 0x0520(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0524(0x001C) (Edit, IsPlainOldData)
-	unsigned char                                      bCastStaticShadow : 1;                                    // 0x0540(0x0001) (Edit)
-	unsigned char                                      bCastShadowAsTwoSided : 1;                                // 0x0540(0x0001) (Edit)
-	unsigned char                                      bAffectDynamicIndirectLighting : 1;                       // 0x0540(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      bCastFarShadow : 1;                                       // 0x0540(0x0001) (Edit)
-	unsigned char                                      bIsProxy : 1;                                             // 0x0540(0x0001)
-	unsigned char                                      bUseFarCascadeLPVBiasMultiplier : 1;                      // 0x0540(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x0541(0x0003) MISSED OFFSET
-	float                                              LpvIntensityMultiplier;                                   // 0x0544(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              LpvBiasMultiplier;                                        // 0x0548(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	float                                              FarCascadeLPVBiasMultiplier;                              // 0x054C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FLightmassPrimitiveSettings                 LightmassSettings;                                        // 0x0550(0x0018) (Edit)
-	int                                                CollisionMipLevel;                                        // 0x0568(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              CollisionThickness;                                       // 0x056C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FBodyInstance                               BodyInstance;                                             // 0x0570(0x0180) (Edit, BlueprintVisible, BlueprintReadOnly)
-	int                                                ComponentSizeQuads;                                       // 0x06F0(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                SubsectionSizeQuads;                                      // 0x06F4(0x0004) (ZeroConstructor, IsPlainOldData)
-	int                                                NumSubsections;                                           // 0x06F8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bUsedForNavigation : 1;                                   // 0x06FC(0x0001) (Edit)
-	unsigned char                                      bReflected : 1;                                           // 0x06FC(0x0001) (Edit, BlueprintVisible)
-	unsigned char                                      UnknownData05[0x3];                                       // 0x06FD(0x0003) MISSED OFFSET
-	TEnumAsByte<ENavDataGatheringMode>                 NavigationGeometryGatheringMode;                          // 0x0700(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ELandscapeLODFalloff>                  LODFalloff;                                               // 0x0701(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData06[0xAE];                                      // 0x0702(0x00AE) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
+	class ULandscapeSplinesComponent*                  SplineComponent;                                          // 0x0438(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	struct FGuid                                       LandscapeGuid;                                            // 0x0440(0x0010) (ZeroConstructor, IsPlainOldData)
+	struct FIntPoint                                   LandscapeSectionOffset;                                   // 0x0450(0x0008) (ZeroConstructor, IsPlainOldData)
+	int                                                MaxLODLevel;                                              // 0x0458(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                StaticLightingLOD;                                        // 0x045C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class UPhysicalMaterial*                           DefaultPhysMaterial;                                      // 0x0460(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              StreamingDistanceMultiplier;                              // 0x0468(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x046C(0x0004) MISSED OFFSET
+	class UMaterialInterface*                          LandscapeMaterial;                                        // 0x0470(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UMaterialInterface*                          LandscapeHoleMaterial;                                    // 0x0478(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LODDistanceFactor;                                        // 0x0480(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0484(0x0004) MISSED OFFSET
+	TArray<class ULandscapeComponent*>                 LandscapeComponents;                                      // 0x0488(0x0010) (ExportObject, ZeroConstructor)
+	TArray<class ULandscapeHeightfieldCollisionComponent*> CollisionComponents;                                      // 0x0498(0x0010) (ExportObject, ZeroConstructor)
+	TArray<class UHierarchicalInstancedStaticMeshComponent*> FoliageComponents;                                        // 0x04A8(0x0010) (ExportObject, ZeroConstructor, Transient, DuplicateTransient)
+	unsigned char                                      UnknownData03[0x78];                                      // 0x04B8(0x0078) MISSED OFFSET
+	float                                              StaticLightingResolution;                                 // 0x0530(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	TLazyObjectPtr<class ALandscape>                   LandscapeActor;                                           // 0x0534(0x001C) (Edit, IsPlainOldData)
+	unsigned char                                      bCastStaticShadow : 1;                                    // 0x0550(0x0001) (Edit)
+	unsigned char                                      bCastShadowAsTwoSided : 1;                                // 0x0550(0x0001) (Edit)
+	unsigned char                                      bAffectDynamicIndirectLighting : 1;                       // 0x0550(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      bCastFarShadow : 1;                                       // 0x0550(0x0001) (Edit)
+	unsigned char                                      bIsProxy : 1;                                             // 0x0550(0x0001)
+	unsigned char                                      bUseFarCascadeLPVBiasMultiplier : 1;                      // 0x0550(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData04[0x3];                                       // 0x0551(0x0003) MISSED OFFSET
+	float                                              LpvIntensityMultiplier;                                   // 0x0554(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              LpvBiasMultiplier;                                        // 0x0558(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	float                                              FarCascadeLPVBiasMultiplier;                              // 0x055C(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FLightmassPrimitiveSettings                 LightmassSettings;                                        // 0x0560(0x0018) (Edit)
+	int                                                CollisionMipLevel;                                        // 0x0578(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              CollisionThickness;                                       // 0x057C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FBodyInstance                               BodyInstance;                                             // 0x0580(0x0180) (Edit, BlueprintVisible, BlueprintReadOnly)
+	int                                                ComponentSizeQuads;                                       // 0x0700(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                SubsectionSizeQuads;                                      // 0x0704(0x0004) (ZeroConstructor, IsPlainOldData)
+	int                                                NumSubsections;                                           // 0x0708(0x0004) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bUsedForNavigation : 1;                                   // 0x070C(0x0001) (Edit)
+	unsigned char                                      bReflected : 1;                                           // 0x070C(0x0001) (Edit, BlueprintVisible)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x070D(0x0003) MISSED OFFSET
+	TEnumAsByte<ENavDataGatheringMode>                 NavigationGeometryGatheringMode;                          // 0x0710(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ELandscapeLODFalloff>                  LODFalloff;                                               // 0x0711(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData06[0xAE];                                      // 0x0712(0x00AE) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -343,14 +345,14 @@ public:
 
 
 // Class Landscape.LandscapeMeshProxyComponent
-// 0x0020 (0x05B0 - 0x0590)
+// 0x0020 (0x05E0 - 0x05C0)
 class ULandscapeMeshProxyComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0590(0x0008) MISSED OFFSET
-	TArray<struct FIntPoint>                           ProxyComponentBases;                                      // 0x0598(0x0010) (ZeroConstructor)
-	int8_t                                             ProxyLOD;                                                 // 0x05A8(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x05A9(0x0007) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05C0(0x0008) MISSED OFFSET
+	TArray<struct FIntPoint>                           ProxyComponentBases;                                      // 0x05C8(0x0010) (ZeroConstructor)
+	int8_t                                             ProxyLOD;                                                 // 0x05D8(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x05D9(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -362,7 +364,7 @@ public:
 
 
 // Class Landscape.Landscape
-// 0x0000 (0x07B0 - 0x07B0)
+// 0x0000 (0x07C0 - 0x07C0)
 class ALandscape : public ALandscapeProxy
 {
 public:
@@ -377,14 +379,13 @@ public:
 
 
 // Class Landscape.LandscapeSplinesComponent
-// 0x0030 (0x0560 - 0x0530)
+// 0x0030 (0x0580 - 0x0550)
 class ULandscapeSplinesComponent : public UPrimitiveComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0530(0x0008) MISSED OFFSET
-	TArray<class ULandscapeSplineSegment*>             Segments;                                                 // 0x0538(0x0010) (ZeroConstructor)
-	TArray<class UMeshComponent*>                      CookedForeignMeshComponents;                              // 0x0548(0x0010) (ExportObject, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0558(0x0008) MISSED OFFSET
+	TArray<class ULandscapeSplineControlPoint*>        ControlPoints;                                            // 0x0550(0x0010) (ZeroConstructor)
+	TArray<class ULandscapeSplineSegment*>             Segments;                                                 // 0x0560(0x0010) (ZeroConstructor)
+	TArray<class UMeshComponent*>                      CookedForeignMeshComponents;                              // 0x0570(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

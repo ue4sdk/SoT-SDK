@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -25,6 +25,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ExplosionFramework.CreateActorInstanceOnExplodeComponent"));
+		return ptr;
+	}
+
+};
+
+
+// Class ExplosionFramework.ExplosionInterface
+// 0x0000 (0x0028 - 0x0028)
+class UExplosionInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ExplosionFramework.ExplosionInterface"));
 		return ptr;
 	}
 

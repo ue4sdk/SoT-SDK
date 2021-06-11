@@ -15,16 +15,16 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TaleBook_Shroudbreaker_DaggerToothOutpost_AdditionalPuzzles.BP_TaleBook_Shroudbreaker_DaggerToothOutpost_AdditionalPuzzles_C
-// 0x0030 (0x07A0 - 0x0770)
+// 0x0030 (0x0768 - 0x0738)
 class ABP_TaleBook_Shroudbreaker_DaggerToothOutpost_AdditionalPuzzles_C : public AVoyageProposalContainer
 {
 public:
-	class UChildActorComponent*                        TaleSelectionSlot_6;                                      // 0x0770(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        TaleSelectionSlot_5;                                      // 0x0778(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        TaleSelectionSlot_4;                                      // 0x0780(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        TaleSelectionSlot_3;                                      // 0x0788(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        TaleSelectionSlot_2;                                      // 0x0790(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        TaleSelectionSlot_1;                                      // 0x0798(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TaleSelectionSlot_6;                                      // 0x0738(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TaleSelectionSlot_5;                                      // 0x0740(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TaleSelectionSlot_4;                                      // 0x0748(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TaleSelectionSlot_3;                                      // 0x0750(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TaleSelectionSlot_2;                                      // 0x0758(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        TaleSelectionSlot_1;                                      // 0x0760(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

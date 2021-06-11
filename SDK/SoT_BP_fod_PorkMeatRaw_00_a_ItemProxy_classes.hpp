@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_PorkMeatRaw_00_a_ItemProxy.BP_fod_PorkMeatRaw_00_a_ItemProxy_C
-// 0x0000 (0x0800 - 0x0800)
+// 0x0000 (0x0808 - 0x0808)
 class ABP_fod_PorkMeatRaw_00_a_ItemProxy_C : public ABP_ProxyIngestible_Retractable_C
 {
 public:

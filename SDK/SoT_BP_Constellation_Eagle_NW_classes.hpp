@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Constellation_Eagle_NW.BP_Constellation_Eagle_NW_C
-// 0x0000 (0x04C8 - 0x04C8)
+// 0x0000 (0x04D0 - 0x04D0)
 class ABP_Constellation_Eagle_NW_C : public ABP_Constellation_C
 {
 public:

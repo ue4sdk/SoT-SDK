@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_LostShipmentsClueVariants_enums.hpp"
 #include "SoT_LostShipmentsClueFramework_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Tales_classes.hpp"
 
@@ -26,6 +26,15 @@ struct FClueDestinationToTextIndex
 {
 	class UClass*                                      DestinationType;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TAssetPtr<class UAbandonedNoteClueTextIndexAssetBase> RequiredIndexAsset;                                       // 0x0008(0x0020) (Edit, DisableEditOnInstance)
+};
+
+// ScriptStruct LostShipmentsClueVariants.ClueDestinationChoice
+// 0x0010
+struct FClueDestinationChoice
+{
+	class UClueDestinationDescriptor*                  Destination;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	int16_t                                            ClueChoice;                                               // 0x0008(0x0002) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x000A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct LostShipmentsClueVariants.GenderSpecificTextPairings

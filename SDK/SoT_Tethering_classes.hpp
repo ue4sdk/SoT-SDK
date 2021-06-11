@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,13 +30,13 @@ public:
 
 
 // Class Tethering.CordRenderComponent
-// 0x0030 (0x05C0 - 0x0590)
+// 0x0030 (0x05F0 - 0x05C0)
 class UCordRenderComponent : public UStaticMeshComponent
 {
 public:
-	TArray<class UMaterialInstanceDynamic*>            CordMaterials;                                            // 0x0590(0x0010) (ZeroConstructor, Transient)
-	float                                              ThicknessCm;                                              // 0x05A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x1C];                                      // 0x05A4(0x001C) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*>            CordMaterials;                                            // 0x05C0(0x0010) (ZeroConstructor, Transient)
+	float                                              ThicknessCm;                                              // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x1C];                                      // 0x05D4(0x001C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -47,16 +47,39 @@ public:
 };
 
 
+// Class Tethering.DynamicCordRenderComponent
+// 0x0060 (0x0650 - 0x05F0)
+class UDynamicCordRenderComponent : public UCordRenderComponent
+{
+public:
+	float                                              BoundsPadding;                                            // 0x05F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x05F4(0x0004) MISSED OFFSET
+	class USceneComponent*                             EndPointA;                                                // 0x05F8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class USceneComponent*                             EndPointB;                                                // 0x0600(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x0608(0x0048) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Tethering.DynamicCordRenderComponent"));
+		return ptr;
+	}
+
+
+	void SetCordEndPointB(class USceneComponent* EndPointB);
+	void SetCordEndPointA(class USceneComponent* EndPointA);
+};
+
+
 // Class Tethering.HarpoonRenderComponent
-// 0x0020 (0x05E0 - 0x05C0)
+// 0x0020 (0x0610 - 0x05F0)
 class UHarpoonRenderComponent : public UCordRenderComponent
 {
 public:
-	TArray<class UMaterialInstanceDynamic*>            HarpoonMaterials;                                         // 0x05C0(0x0010) (ZeroConstructor, Transient)
-	float                                              LaunchAnimationDurationSecs;                              // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              HitAnimationDurationSecs;                                 // 0x05D4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              QuickRetractAnimationSpeed;                               // 0x05D8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x05DC(0x0004) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*>            HarpoonMaterials;                                         // 0x05F0(0x0010) (ZeroConstructor, Transient)
+	float                                              LaunchAnimationDurationSecs;                              // 0x0600(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              HitAnimationDurationSecs;                                 // 0x0604(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              QuickRetractAnimationSpeed;                               // 0x0608(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x060C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -167,26 +190,26 @@ public:
 
 
 // Class Tethering.Tether
-// 0x0140 (0x0568 - 0x0428)
+// 0x0140 (0x0570 - 0x0430)
 class ATether : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xF8];                                      // 0x0428(0x00F8) MISSED OFFSET
-	class USceneComponent*                             TetherPositionAnchorComponent;                            // 0x0520(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class USphereComponent*                            SourcePhysicsHandle;                                      // 0x0528(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class USphereComponent*                            TargetPhysicsHandle;                                      // 0x0530(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UDistanceJointComponent*                     JointComponent;                                           // 0x0538(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AActor*                                      SourceActor;                                              // 0x0540(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      TargetActor;                                              // 0x0548(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	float                                              SlackCm;                                                  // 0x0550(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxLengthWhenGrowing;                                     // 0x0554(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0558(0x0008) MISSED OFFSET
-	bool                                               HasAttached;                                              // 0x0560(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               HasSourceActor;                                           // 0x0561(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               HasTargetActor;                                           // 0x0562(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	bool                                               IsSlackEnabled;                                           // 0x0563(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	TEnumAsByte<ETetherConstrainMode>                  CurrentTetherMode;                                        // 0x0564(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x3];                                       // 0x0565(0x0003) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xF8];                                      // 0x0430(0x00F8) MISSED OFFSET
+	class USceneComponent*                             TetherPositionAnchorComponent;                            // 0x0528(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class USphereComponent*                            SourcePhysicsHandle;                                      // 0x0530(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class USphereComponent*                            TargetPhysicsHandle;                                      // 0x0538(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	class UDistanceJointComponent*                     JointComponent;                                           // 0x0540(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class AActor*                                      SourceActor;                                              // 0x0548(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	class AActor*                                      TargetActor;                                              // 0x0550(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	float                                              SlackCm;                                                  // 0x0558(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxLengthWhenGrowing;                                     // 0x055C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0560(0x0008) MISSED OFFSET
+	bool                                               HasAttached;                                              // 0x0568(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               HasSourceActor;                                           // 0x0569(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               HasTargetActor;                                           // 0x056A(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	bool                                               IsSlackEnabled;                                           // 0x056B(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	TEnumAsByte<ETetherConstrainMode>                  CurrentTetherMode;                                        // 0x056C(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x3];                                       // 0x056D(0x0003) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -382,26 +382,6 @@ void ABP_Wheel_C::RequestStateChange(class AActor* Controller)
 	} params;
 
 	params.Controller = Controller;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Wheel.BP_Wheel_C.OnWheelDescLoaded
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UWheelDescAsset*         WheelDesc                      (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_Wheel_C::OnWheelDescLoaded(class UWheelDescAsset* WheelDesc)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Wheel.BP_Wheel_C.OnWheelDescLoaded"));
-
-	struct
-	{
-		class UWheelDescAsset*         WheelDesc;
-	} params;
-
-	params.WheelDesc = WheelDesc;
 
 	UObject::ProcessEvent(fn, &params);
 }

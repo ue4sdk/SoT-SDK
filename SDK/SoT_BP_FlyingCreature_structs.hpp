@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -10,8 +10,8 @@
 #include "SoT_Athena_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_EFlyingCreatures_classes.hpp"
-#include "SoT_ECreatureRadialDirection_classes.hpp"
 #include "SoT_ECreatureNumbers_classes.hpp"
+#include "SoT_ECreatureRadialDirection_classes.hpp"
 
 namespace SDK
 {

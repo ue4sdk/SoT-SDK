@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wsp_Garden_small_rocks.BP_wsp_Garden_small_rocks_C
-// 0x0000 (0x04CD - 0x04CD)
+// 0x0000 (0x04D5 - 0x04D5)
 class ABP_wsp_Garden_small_rocks_C : public ABP_Placement_Garden_C
 {
 public:

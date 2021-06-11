@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -24,7 +24,7 @@ struct FMovieSceneSpawnable
 	class FString                                      Name;                                                     // 0x0010(0x0010) (ZeroConstructor)
 	class UObject*                                     ObjectTemplate;                                           // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
 	TArray<struct FGuid>                               ChildPossessables;                                        // 0x0028(0x0010) (ZeroConstructor)
-	TEnumAsByte<ESpawnOwnership>                       OWNERSHIP;                                                // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESpawnOwnership>                       Ownership;                                                // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
 };
 

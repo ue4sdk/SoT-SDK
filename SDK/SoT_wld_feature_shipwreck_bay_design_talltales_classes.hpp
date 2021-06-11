@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wld_feature_shipwreck_bay_design_talltales.wld_feature_shipwreck_bay_design_talltales_C
-// 0x0000 (0x0418 - 0x0418)
+// 0x0000 (0x0438 - 0x0438)
 class Awld_feature_shipwreck_bay_design_talltales_C : public ALevelScriptActor
 {
 public:

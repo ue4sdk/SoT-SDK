@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,12 +13,23 @@
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_Maths_classes.hpp"
+#include "SoT_StatusEffects_classes.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
 //Script Structs
 //---------------------------------------------------------------------------
+
+// ScriptStruct Kraken.CoordinatedKrakenSpecialEvent
+// 0x000C
+struct FCoordinatedKrakenSpecialEvent
+{
+	TEnumAsByte<ECoordinatedKrakenSpecialEventTypes>   Type;                                                     // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
+	float                                              TimeOffset;                                               // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0008(0x0004) MISSED OFFSET
+};
 
 // ScriptStruct Kraken.CoordinatedKrakenTentacleAction
 // 0x0018
@@ -30,17 +41,38 @@ struct FCoordinatedKrakenTentacleAction
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
 };
 
+// ScriptStruct Kraken.CoordinatedKrakenHeadAction
+// 0x0010
+struct FCoordinatedKrakenHeadAction
+{
+	class UClass*                                      State;                                                    // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TimeOffset;                                               // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct Kraken.CoordinatedKrakenExplosionEvent
+// 0x000C
+struct FCoordinatedKrakenExplosionEvent
+{
+	int                                                ExplosionPointIndex;                                      // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              TimeOffset;                                               // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0008(0x0004) MISSED OFFSET
+};
+
 // ScriptStruct Kraken.CoordinatedKrakenAction
-// 0x0300
+// 0x0330
 struct FCoordinatedKrakenAction
 {
 	struct FName                                       ActionName;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              ActionLength;                                             // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ECoordinatedKrakenActionType>          ActionType;                                               // 0x000C(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x000D(0x0003) MISSED OFFSET
-	TArray<struct FCoordinatedKrakenTentacleAction>    TentacleActions;                                          // 0x0010(0x0010) (Edit, ZeroConstructor)
-	struct FRuntimeVectorCurve                         TargetActorLocationAnimation;                             // 0x0020(0x0170) (Edit)
-	struct FRuntimeVectorCurve                         TargetActorRotationAnimation;                             // 0x0190(0x0170) (Edit)
+	TArray<struct FCoordinatedKrakenSpecialEvent>      SpecialEvents;                                            // 0x0010(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FCoordinatedKrakenTentacleAction>    TentacleActions;                                          // 0x0020(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FCoordinatedKrakenHeadAction>        HeadActions;                                              // 0x0030(0x0010) (Edit, ZeroConstructor)
+	TArray<struct FCoordinatedKrakenExplosionEvent>    ExplosionEvents;                                          // 0x0040(0x0010) (Edit, ZeroConstructor)
+	struct FRuntimeVectorCurve                         TargetActorLocationAnimation;                             // 0x0050(0x0170) (Edit)
+	struct FRuntimeVectorCurve                         TargetActorRotationAnimation;                             // 0x01C0(0x0170) (Edit)
 };
 
 // ScriptStruct Kraken.KrakenShipWrappingTentacleAnimationStateParams
@@ -555,6 +587,15 @@ struct FKrakenWorldSettingsParams
 	bool                                               KrakenEnabled;                                            // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
+// ScriptStruct Kraken.CoordinatedKrakenPhaseAssetEntry
+// 0x0040
+struct FCoordinatedKrakenPhaseAssetEntry
+{
+	struct FTransform                                  RelativeAnimationOrigin;                                  // 0x0000(0x0030) (Edit, IsPlainOldData)
+	class UCoordinatedKrakenPhaseActionsDataAsset*     Asset;                                                    // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0038(0x0008) MISSED OFFSET
+};
+
 // ScriptStruct Kraken.EventKrakenAnimatedTentacleTriggerHitReaction
 // 0x0004
 struct FEventKrakenAnimatedTentacleTriggerHitReaction
@@ -695,6 +736,13 @@ struct FEventKrakenAnimatedTentacleStateEntered
 {
 	class UClass*                                      State;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	class UClass*                                      PreviousState;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Kraken.EventCoordinatedKrakenPhaseEnded
+// 0x0001
+struct FEventCoordinatedKrakenPhaseEnded
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct Kraken.EventKrakenTentacleDestroyed

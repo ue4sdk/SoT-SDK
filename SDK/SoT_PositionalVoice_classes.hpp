@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -138,13 +138,13 @@ public:
 
 
 // Class PositionalVoice.TestVoiceChatEmitter
-// 0x0068 (0x0490 - 0x0428)
+// 0x0068 (0x0498 - 0x0430)
 class ATestVoiceChatEmitter : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x0428(0x0058) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     PoolWrapper;                                              // 0x0480(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x8];                                       // 0x0488(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x58];                                      // 0x0430(0x0058) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     PoolWrapper;                                              // 0x0488(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x8];                                       // 0x0490(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

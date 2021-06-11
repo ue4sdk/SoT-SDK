@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -51,13 +51,16 @@ struct FMovieSceneEventParameters
 };
 
 // ScriptStruct MovieSceneTracks.EventPayload
-// 0x0028
+// 0x0030
 struct FEventPayload
 {
 	struct FName                                       EventName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               IsSubtitleEvent;                                          // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-	struct FMovieSceneEventParameters                  Parameters;                                               // 0x0010(0x0018) (Edit)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
+	int                                                ActorNumber;                                              // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	int                                                SubtitleIndex;                                            // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
+	struct FMovieSceneEventParameters                  Parameters;                                               // 0x0018(0x0018) (Edit)
 };
 
 // ScriptStruct MovieSceneTracks.MovieSceneEventSectionData

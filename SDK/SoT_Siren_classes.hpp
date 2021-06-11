@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -14,8 +14,23 @@ namespace SDK
 //Classes
 //---------------------------------------------------------------------------
 
+// Class Siren.SirenTeleportAIAbilityType
+// 0x0000 (0x0028 - 0x0028)
+class USirenTeleportAIAbilityType : public UAthenaAIAbilityType
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.SirenTeleportAIAbilityType"));
+		return ptr;
+	}
+
+};
+
+
 // Class Siren.DistantIdleAIAbility
-// 0x0000 (0x0070 - 0x0070)
+// 0x0000 (0x0078 - 0x0078)
 class UDistantIdleAIAbility : public UAthenaAIAbility
 {
 public:
@@ -30,7 +45,7 @@ public:
 
 
 // Class Siren.DistantIdleAIAbilityParams
-// 0x0000 (0x00A8 - 0x00A8)
+// 0x0000 (0x00C8 - 0x00C8)
 class UDistantIdleAIAbilityParams : public UAthenaAIAbilityParams
 {
 public:
@@ -60,7 +75,7 @@ public:
 
 
 // Class Siren.ScratchAIAbility
-// 0x0000 (0x0078 - 0x0078)
+// 0x0000 (0x0080 - 0x0080)
 class UScratchAIAbility : public UMeleeAIAbility
 {
 public:
@@ -75,7 +90,7 @@ public:
 
 
 // Class Siren.ScratchAIAbilityParams
-// 0x0000 (0x00B8 - 0x00B8)
+// 0x0000 (0x00D8 - 0x00D8)
 class UScratchAIAbilityParams : public UMeleeAIAbilityParams
 {
 public:
@@ -119,6 +134,22 @@ public:
 };
 
 
+// Class Siren.SirenController
+// 0x0008 (0x0A38 - 0x0A30)
+class ASirenController : public AAthenaSwimmingAIController
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0A30(0x0008) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.SirenController"));
+		return ptr;
+	}
+
+};
+
+
 // Class Siren.SirenEmeraldHealStatus
 // 0x0000 (0x0030 - 0x0030)
 class USirenEmeraldHealStatus : public UStatusBase
@@ -135,12 +166,18 @@ public:
 
 
 // Class Siren.SirenPartsDesc
-// 0x0018 (0x0048 - 0x0030)
+// 0x0058 (0x0088 - 0x0030)
 class USirenPartsDesc : public UAIPartsDesc
 {
 public:
-	struct FStringAssetReference                       Mesh;                                                     // 0x0030(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class UClass*                                      AnimationID;                                              // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0030(0x0008) MISSED OFFSET
+	struct FStringAssetReference                       Mesh;                                                     // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	class UClass*                                      AnimationID;                                              // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int64_t                                            CachedMeshResourceSize;                                   // 0x0050(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	class UClass*                                      MeshFallbackCategory;                                     // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UClass*                                      BudgetToCountMemoryAgainstIfNoFallback;                   // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<class UMaterialInterface*>                  OverrideMaterials;                                        // 0x0068(0x0010) (ZeroConstructor)
+	TArray<struct FStringAssetReference>               FallbackOverrideMaterials;                                // 0x0078(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -212,7 +249,7 @@ public:
 
 
 // Class Siren.SirenSongAIAbility
-// 0x0000 (0x0070 - 0x0070)
+// 0x0000 (0x0078 - 0x0078)
 class USirenSongAIAbility : public UAthenaAIAbility
 {
 public:
@@ -227,7 +264,7 @@ public:
 
 
 // Class Siren.SirenSongAIAbilityParams
-// 0x0000 (0x00A8 - 0x00A8)
+// 0x0000 (0x00C8 - 0x00C8)
 class USirenSongAIAbilityParams : public UAthenaAIAbilityParams
 {
 public:
@@ -250,6 +287,36 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.SirenSongAIAbilityType"));
+		return ptr;
+	}
+
+};
+
+
+// Class Siren.SirenTeleportAIAbility
+// 0x0000 (0x0080 - 0x0080)
+class USirenTeleportAIAbility : public UTeleportAIAbility
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.SirenTeleportAIAbility"));
+		return ptr;
+	}
+
+};
+
+
+// Class Siren.SirenTeleportAIAbilityParams
+// 0x0000 (0x00F0 - 0x00F0)
+class USirenTeleportAIAbilityParams : public UTeleportAIAbilityParams
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class Siren.SirenTeleportAIAbilityParams"));
 		return ptr;
 	}
 

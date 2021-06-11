@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -246,21 +246,21 @@ void UCosmeticItemAnimationComponent::DestroyAllCosmeticItems()
 }
 
 
-// Function Animation.CustomAnimationMontageComponent.OnRep_CustomMontageId
+// Function Animation.CustomAnimationMontageComponent.OnRep_ReplicatedData
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FCustomAnimationMontageId PriorId                        (ConstParm, Parm, OutParm, ReferenceParm)
+// struct FCustomAnimationMontageComponentReplicatedData PriorData                      (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UCustomAnimationMontageComponent::OnRep_CustomMontageId(const struct FCustomAnimationMontageId& PriorId)
+void UCustomAnimationMontageComponent::OnRep_ReplicatedData(const struct FCustomAnimationMontageComponentReplicatedData& PriorData)
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.CustomAnimationMontageComponent.OnRep_CustomMontageId"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.CustomAnimationMontageComponent.OnRep_ReplicatedData"));
 
 	struct
 	{
-		struct FCustomAnimationMontageId PriorId;
+		struct FCustomAnimationMontageComponentReplicatedData PriorData;
 	} params;
 
-	params.PriorId = PriorId;
+	params.PriorData = PriorData;
 
 	UObject::ProcessEvent(fn, &params);
 }

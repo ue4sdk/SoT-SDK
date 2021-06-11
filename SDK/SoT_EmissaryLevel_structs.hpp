@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -106,6 +106,39 @@ struct FEmissaryPointBoostMultipliers
 {
 	float                                              PlayerWearningCompanyCostume;                             // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              CrewShipFullyEquippedWithCompanyCosmetics;                // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct EmissaryLevel.EmissaryCompanyCampaignScale
+// 0x000C
+struct FEmissaryCompanyCampaignScale
+{
+	struct FName                                       Campaign;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              Scale;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct EmissaryLevel.EmissaryCompanyCampaignKillPlayer
+// 0x0018
+struct FEmissaryCompanyCampaignKillPlayer
+{
+	class UClass*                                      Company;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FEmissaryCompanyCampaignScale>       Scales;                                                   // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+};
+
+// ScriptStruct EmissaryLevel.EmissaryCompanyCampaignGameEvent
+// 0x0018
+struct FEmissaryCompanyCampaignGameEvent
+{
+	class UClass*                                      EventType;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FEmissaryCompanyCampaignScale>       Scales;                                                   // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+};
+
+// ScriptStruct EmissaryLevel.EmissaryCompanyCampaignSettings
+// 0x0028
+struct FEmissaryCompanyCampaignSettings
+{
+	class UClass*                                      Company;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FEmissaryCompanyCampaignKillPlayer>  KillPlayers;                                              // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FEmissaryCompanyCampaignGameEvent>   GameEvents;                                               // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct EmissaryLevel.EmissaryEventAward

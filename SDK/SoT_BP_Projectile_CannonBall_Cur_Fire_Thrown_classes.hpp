@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_CannonBall_Cur_Fire_Thrown.BP_Projectile_CannonBall_Cur_Fire_Thrown_C
-// 0x0000 (0x06B8 - 0x06B8)
+// 0x0000 (0x06D0 - 0x06D0)
 class ABP_Projectile_CannonBall_Cur_Fire_Thrown_C : public ABP_Projectile_CannonBall_Cursed_ComplexWaterHits_C
 {
 public:

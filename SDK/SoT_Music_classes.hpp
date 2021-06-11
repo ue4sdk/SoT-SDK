@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,22 +32,23 @@ public:
 
 
 // Class Music.MusicZoneComponent
-// 0x00B0 (0x0340 - 0x0290)
+// 0x00B0 (0x0360 - 0x02B0)
 class UMusicZoneComponent : public USceneComponent
 {
 public:
-	float                                              InnerRadius;                                              // 0x0290(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	float                                              OuterRadius;                                              // 0x0294(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       LocationRTPC;                                             // 0x0298(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               LocalRTPC;                                                // 0x02A0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x02A1(0x0007) MISSED OFFSET
-	class UWwiseEvent*                                 PlayEvent;                                                // 0x02A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 StopEvent;                                                // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UWwiseEvent*>                         OneShotEvents;                                            // 0x02B8(0x0010) (Edit, ZeroConstructor)
-	class UWwiseObjectPoolWrapper*                     EmitterPool;                                              // 0x02C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableAfterPlayThrough;                                  // 0x02D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               ActivateOnBeginPlay;                                      // 0x02D1(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6E];                                      // 0x02D2(0x006E) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
+	float                                              InnerRadius;                                              // 0x02B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              OuterRadius;                                              // 0x02BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FName                                       LocationRTPC;                                             // 0x02C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               LocalRTPC;                                                // 0x02C8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x02C9(0x0007) MISSED OFFSET
+	class UWwiseEvent*                                 PlayEvent;                                                // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 StopEvent;                                                // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<class UWwiseEvent*>                         OneShotEvents;                                            // 0x02E0(0x0010) (Edit, ZeroConstructor)
+	class UWwiseObjectPoolWrapper*                     EmitterPool;                                              // 0x02F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableAfterPlayThrough;                                  // 0x02F8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               ActivateOnBeginPlay;                                      // 0x02F9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x66];                                      // 0x02FA(0x0066) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -65,14 +66,15 @@ public:
 
 
 // Class Music.AISpawnerMusicZoneComponent
-// 0x0020 (0x0360 - 0x0340)
+// 0x0030 (0x0390 - 0x0360)
 class UAISpawnerMusicZoneComponent : public UMusicZoneComponent
 {
 public:
-	class UAISpawner*                                  AISpawner;                                                // 0x0340(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class APawn*>                               SpawnerPawns;                                             // 0x0348(0x0010) (Net, ZeroConstructor)
-	TEnumAsByte<EAISpawnerMusicZoneState>              SpawnerState;                                             // 0x0358(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0359(0x0007) MISSED OFFSET
+	class UWwiseEvent*                                 BattleWonEvent;                                           // 0x0360(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UAISpawner*                                  AISpawner;                                                // 0x0368(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<class APawn*>                               SpawnerPawns;                                             // 0x0370(0x0010) (Net, ZeroConstructor)
+	TEnumAsByte<EAISpawnerMusicZoneState>              SpawnerState;                                             // 0x0380(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xF];                                       // 0x0381(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -86,11 +88,13 @@ public:
 
 
 // Class Music.SynchedMusicZoneComponent
-// 0x0030 (0x0370 - 0x0340)
+// 0x0030 (0x0390 - 0x0360)
 class USynchedMusicZoneComponent : public UMusicZoneComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0340(0x0030) MISSED OFFSET
+	float                                              StartDelayTime;                                           // 0x0360(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	int                                                PlayFromStartTimeMS;                                      // 0x0364(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0368(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -117,11 +121,11 @@ public:
 
 
 // Class Music.MusicZoneService
-// 0x00A8 (0x04D0 - 0x0428)
+// 0x00A8 (0x04D8 - 0x0430)
 class AMusicZoneService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0428(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xA8];                                      // 0x0430(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

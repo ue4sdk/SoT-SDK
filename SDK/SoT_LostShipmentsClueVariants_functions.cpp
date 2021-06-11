@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -28,28 +28,12 @@ void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentTitleText()
 }
 
 
-// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentDestination
+// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentClueDestination
 // (Final, Native, Private)
 
-void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentDestination()
+void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentClueDestination()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentDestination"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_ClueChoice
-// (Final, Native, Private)
-
-void UAbandonedNoteClueDestinationContainerComponent::OnRep_ClueChoice()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_ClueChoice"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentClueDestination"));
 
 	struct
 	{
@@ -97,6 +81,22 @@ void UClueVariantsBlueprintFunctionLibrary::GiveClueDescriptorToItem(class AItem
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function LostShipmentsClueVariants.CompositeClueDestinationDescriptor.OnRep_DestinationInfo
+// (Native, Public)
+
+void UCompositeClueDestinationDescriptor::OnRep_DestinationInfo()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.CompositeClueDestinationDescriptor.OnRep_DestinationInfo"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 

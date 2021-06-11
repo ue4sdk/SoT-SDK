@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MultiCrewSkeletonThrone_Shipwreck_bay.BP_MultiCrewSkeletonThrone_Shipwreck_bay_C
-// 0x0000 (0x0490 - 0x0490)
+// 0x0000 (0x04B0 - 0x04B0)
 class ABP_MultiCrewSkeletonThrone_Shipwreck_bay_C : public ABP_MultiCrewSkeletonThrone_C
 {
 public:

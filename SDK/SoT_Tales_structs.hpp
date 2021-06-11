@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -10,12 +10,12 @@
 #include "SoT_Tales_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_TaleMaps_classes.hpp"
 #include "SoT_EmissaryFramework_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_AIModule_classes.hpp"
 #include "SoT_PrioritisedPrompts_classes.hpp"
 #include "SoT_MerchantContracts_classes.hpp"
-#include "SoT_TaleMaps_classes.hpp"
 
 namespace SDK
 {
@@ -60,6 +60,14 @@ struct FTaleQuestDeliveryRequest
 	int                                                NumToAllocate;                                            // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
+// ScriptStruct Tales.TrackedActorData
+// 0x0010
+struct FTrackedActorData
+{
+	class AActor*                                      Actor;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
+};
+
 // ScriptStruct Tales.CriticalActorDelegateData
 // 0x0048
 struct FCriticalActorDelegateData
@@ -70,12 +78,12 @@ struct FCriticalActorDelegateData
 };
 
 // ScriptStruct Tales.PhasedActor
-// 0x0018
+// 0x0020
 struct FPhasedActor
 {
 	class AActor*                                      MapActor;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	class AActor*                                      Actor;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0010(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct Tales.PhasedItem
@@ -86,6 +94,14 @@ struct FPhasedItem
 	class AItemInfo*                                   ItemInfo;                                                 // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               Tracked;                                                  // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x17];                                      // 0x0011(0x0017) MISSED OFFSET
+};
+
+// ScriptStruct Tales.MigrationActionPair
+// 0x0010
+struct FMigrationActionPair
+{
+	struct FTaleResourceHandle                         AllocatedResourceHandle;                                  // 0x0000(0x0008)
+	class UTaleMigrationAction*                        MigrationAction;                                          // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Tales.QuestVariableArray
@@ -166,6 +182,36 @@ struct FQuestVariableMerchantItem : public FQuestVariable
 
 };
 
+// ScriptStruct Tales.TaleActorSpawnParameters
+// 0x0003
+struct FTaleActorSpawnParameters
+{
+	bool                                               Tracked;                                                  // 0x0000(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               GatherForMigration;                                       // 0x0001(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               DeferredSpawning;                                         // 0x0002(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Tales.TaleQuestDesc
+// 0x0058 (0x0080 - 0x0028)
+struct FTaleQuestDesc : public FQuestDesc
+{
+	class UTaleQuestStepDesc*                          Root;                                                     // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UObject*                                     Definition;                                               // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FText                                       TaleFailMessage;                                          // 0x0038(0x0038)
+	struct FName                                       TaleFailBannerTag;                                        // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData)
+	bool                                               ShouldFireStartTallTaleTrackedObjective;                  // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
+	bool                                               Development;                                              // 0x0079(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
+};
+
+// ScriptStruct Tales.TaleQuestToggledDefinition
+// 0x0010
+struct FTaleQuestToggledDefinition
+{
+	struct FName                                       FeatureToggle;                                            // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UClass*                                      Definition;                                               // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct Tales.CriticalActorWrapper
 // 0x0040
 struct FCriticalActorWrapper
@@ -216,6 +262,13 @@ struct FQuestVariableActorAssetType : public FQuestVariable
 
 };
 
+// ScriptStruct Tales.QuestVariableTaleResourceHandle
+// 0x0000 (0x0010 - 0x0010)
+struct FQuestVariableTaleResourceHandle : public FQuestVariable
+{
+
+};
+
 // ScriptStruct Tales.ActorSpawnedAutomationEvent
 // 0x0008
 struct FActorSpawnedAutomationEvent
@@ -257,19 +310,6 @@ struct FQuestVariableItemDescTypeArray : public FQuestVariable
 struct FQuestVariableTexture : public FQuestVariable
 {
 
-};
-
-// ScriptStruct Tales.TaleQuestDesc
-// 0x0058 (0x0080 - 0x0028)
-struct FTaleQuestDesc : public FQuestDesc
-{
-	class UTaleQuestStepDesc*                          Root;                                                     // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UObject*                                     Definition;                                               // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       TaleFailMessage;                                          // 0x0038(0x0038)
-	struct FName                                       TaleFailBannerTag;                                        // 0x0070(0x0008) (ZeroConstructor, IsPlainOldData)
-	bool                                               ShouldFireStartTallTaleTrackedObjective;                  // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
-	bool                                               Development;                                              // 0x0079(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
 };
 
 // ScriptStruct Tales.StepBountyTargetDesc

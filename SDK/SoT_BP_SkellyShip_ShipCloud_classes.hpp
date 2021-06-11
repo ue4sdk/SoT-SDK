@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_SkellyShip_ShipCloud.BP_SkellyShip_ShipCloud_C
-// 0x0000 (0x0500 - 0x0500)
+// 0x0000 (0x0528 - 0x0528)
 class ABP_SkellyShip_ShipCloud_C : public ABP_SkellyFort_SkullCloud_C
 {
 public:

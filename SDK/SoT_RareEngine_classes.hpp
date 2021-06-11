@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,12 +30,28 @@ public:
 };
 
 
+// Class RareEngine.AssetReferencer
+// 0x0010 (0x0038 - 0x0028)
+class UAssetReferencer : public UDataAsset
+{
+public:
+	TArray<TAssetPtr<class UClass>>                    AssetsToReference;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareEngine.AssetReferencer"));
+		return ptr;
+	}
+
+};
+
+
 // Class RareEngine.AudioHardwareDeviceService
-// 0x01F0 (0x0218 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class UAudioHardwareDeviceService : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x1F0];                                     // 0x0028(0x01F0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -84,7 +100,7 @@ public:
 
 
 // Class RareEngine.RareHUD
-// 0x0000 (0x0520 - 0x0520)
+// 0x0000 (0x0528 - 0x0528)
 class ARareHUD : public AHUD
 {
 public:

@@ -1,4 +1,4 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -260,26 +260,6 @@ void ABP_Base_Capstan_C::IK_Limb_Stretch(float ArmStretch, float SpineStretch, f
 	params.ArmStretch = ArmStretch;
 	params.SpineStretch = SpineStretch;
 	params.LegStretch = LegStretch;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function BP_Base_Capstan.BP_Base_Capstan_C.OnCapstanDescLoaded
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class UCapstanDescAsset*       CapstanDesc                    (Parm, ZeroConstructor, IsPlainOldData)
-
-void ABP_Base_Capstan_C::OnCapstanDescLoaded(class UCapstanDescAsset* CapstanDesc)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Base_Capstan.BP_Base_Capstan_C.OnCapstanDescLoaded"));
-
-	struct
-	{
-		class UCapstanDescAsset*       CapstanDesc;
-	} params;
-
-	params.CapstanDesc = CapstanDesc;
 
 	UObject::ProcessEvent(fn, &params);
 }
