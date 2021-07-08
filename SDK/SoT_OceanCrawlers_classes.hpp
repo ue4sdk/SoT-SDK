@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,12 +32,16 @@ public:
 
 
 // Class OceanCrawlers.OceanCrawlerAudioParamsDataAsset
-// 0x0018 (0x0040 - 0x0028)
+// 0x0078 (0x00A0 - 0x0028)
 class UOceanCrawlerAudioParamsDataAsset : public UDataAsset
 {
 public:
 	class UWwiseObjectPoolWrapper*                     WwiseObjectPoolWrapper;                                   // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TArray<struct FOceanCrawlerAudioKeyPair>           AudioKeyPairs;                                            // 0x0030(0x0010) (Edit, ZeroConstructor)
+	struct FWeightedProbabilityRangeOfRanges           BuffThankDelay;                                           // 0x0040(0x0030) (Edit)
+	struct FOceanCrawlerBuffAudioSettings              CrabBuffAudioSettings;                                    // 0x0070(0x0010) (Edit)
+	struct FOceanCrawlerBuffAudioSettings              EelBuffAudioSettings;                                     // 0x0080(0x0010) (Edit)
+	struct FOceanCrawlerBuffAudioSettings              HermitBuffAudioSettings;                                  // 0x0090(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -49,13 +53,13 @@ public:
 
 
 // Class OceanCrawlers.OceanCrawlerAudioBroadcaster
-// 0x0078 (0x0140 - 0x00C8)
+// 0x00D8 (0x01A0 - 0x00C8)
 class UOceanCrawlerAudioBroadcaster : public UActorComponent
 {
 public:
 	class UOceanCrawlerAudioParamsDataAsset*           AudioDataAsset;                                           // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	class AActor*                                      CachedOwner;                                              // 0x00D0(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x68];                                      // 0x00D8(0x0068) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC8];                                      // 0x00D8(0x00C8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -64,7 +68,8 @@ public:
 	}
 
 
-	void Multicast_PlayAudio(TEnumAsByte<EOceanCrawlerAbilityAudioKey> InAudioKey);
+	void Multicast_PlayBuffAudio(const struct FEventOceanCrawlerAIBuffAudioRequest& InRequest);
+	void Multicast_PlayAudio(TEnumAsByte<EOceanCrawlerAbilityAudioKey> InAudioKey, float InAudioDelay);
 };
 
 

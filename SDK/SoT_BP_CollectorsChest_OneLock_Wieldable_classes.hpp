@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectorsChest_OneLock_Wieldable.BP_CollectorsChest_OneLock_Wieldable_C
-// 0x0000 (0x0890 - 0x0890)
+// 0x0000 (0x0830 - 0x0830)
 class ABP_CollectorsChest_OneLock_Wieldable_C : public ABP_BaseLockableCollectorsChest_Wieldable_C
 {
 public:

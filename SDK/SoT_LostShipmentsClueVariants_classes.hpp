@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -172,7 +172,7 @@ public:
 
 
 // Class LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent
-// 0x0138 (0x0200 - 0x00C8)
+// 0x0108 (0x01D0 - 0x00C8)
 class UAbandonedNoteClueDestinationContainerComponent : public UActorComponent
 {
 public:
@@ -182,7 +182,7 @@ public:
 	class FString                                      CompositeFormatString;                                    // 0x0100(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FText                                       CurrentTitleText;                                         // 0x0110(0x0038) (Net)
 	class UAbandonedNoteClueTextChoiceSource*          ClueTextChoiceSource;                                     // 0x0148(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xB0];                                      // 0x0150(0x00B0) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x80];                                      // 0x0150(0x0080) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -197,11 +197,11 @@ public:
 
 
 // Class LostShipmentsClueVariants.NPCByNameClueDestinationDescriptor
-// 0x0010 (0x0080 - 0x0070)
+// 0x0010 (0x0050 - 0x0040)
 class UNPCByNameClueDestinationDescriptor : public UClueDestinationDescriptor
 {
 public:
-	struct FGuid                                       NPCIdentifier;                                            // 0x0070(0x0010) (Net, ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       NPCIdentifier;                                            // 0x0040(0x0010) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -288,17 +288,17 @@ public:
 
 
 // Class LostShipmentsClueVariants.AbandonedNoteWieldable
-// 0x0040 (0x0810 - 0x07D0)
+// 0x0040 (0x07B0 - 0x0770)
 class AAbandonedNoteWieldable : public ASkeletalMeshWieldableItem
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x07D0(0x0010) MISSED OFFSET
-	class UWieldableItemCanvasRenderingComponent*      WieldableItemCanvasRenderingComponent;                    // 0x07E0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UAbandonedNoteWieldableRenderingComponent*   AbandonedNoteRenderingComponent;                          // 0x07E8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UInventoryItemComponent*                     InventoryItemComponent;                                   // 0x07F0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x07F8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	TEnumAsByte<EQuestMapIcon>                         QuestMapIcon;                                             // 0x0800(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xF];                                       // 0x0801(0x000F) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0770(0x0010) MISSED OFFSET
+	class UWieldableItemCanvasRenderingComponent*      WieldableItemCanvasRenderingComponent;                    // 0x0780(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UAbandonedNoteWieldableRenderingComponent*   AbandonedNoteRenderingComponent;                          // 0x0788(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UInventoryItemComponent*                     InventoryItemComponent;                                   // 0x0790(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	class UUsableWieldableComponent*                   UsableWieldableComponent;                                 // 0x0798(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	TEnumAsByte<EQuestMapIcon>                         QuestMapIcon;                                             // 0x07A0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xF];                                       // 0x07A1(0x000F) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -448,13 +448,13 @@ public:
 
 
 // Class LostShipmentsClueVariants.ClueSiteCircleMapWieldable
-// 0x0040 (0x08C0 - 0x0880)
+// 0x0040 (0x0860 - 0x0820)
 class AClueSiteCircleMapWieldable : public ARenderToTextureMapBase
 {
 public:
-	TAssetPtr<class UTexture2D>                        InventoryRadialBackgroundTexture;                         // 0x0880(0x0020) (Edit, DisableEditOnInstance)
-	struct FMapRadialIconData                          MapRadialIconData;                                        // 0x08A0(0x0018) (Net)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x08B8(0x0008) MISSED OFFSET
+	TAssetPtr<class UTexture2D>                        InventoryRadialBackgroundTexture;                         // 0x0820(0x0020) (Edit, DisableEditOnInstance)
+	struct FMapRadialIconData                          MapRadialIconData;                                        // 0x0840(0x0018) (Net)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0858(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -485,12 +485,12 @@ public:
 
 
 // Class LostShipmentsClueVariants.CompositeClueDestinationDescriptor
-// 0x0010 (0x0080 - 0x0070)
+// 0x0010 (0x0050 - 0x0040)
 class UCompositeClueDestinationDescriptor : public UClueDestinationDescriptor
 {
 public:
-	class UClueDestinationDescriptor*                  PrimaryClueDestDescriptor;                                // 0x0070(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UClueDestinationDescriptor*                  SecondaryClueDestDescriptor;                              // 0x0078(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UClueDestinationDescriptor*                  PrimaryClueDestDescriptor;                                // 0x0040(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	class UClueDestinationDescriptor*                  SecondaryClueDestDescriptor;                              // 0x0048(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -504,7 +504,7 @@ public:
 
 
 // Class LostShipmentsClueVariants.EndOfGooseChaseClueDestinationDescriptor
-// 0x0000 (0x0070 - 0x0070)
+// 0x0000 (0x0040 - 0x0040)
 class UEndOfGooseChaseClueDestinationDescriptor : public UClueDestinationDescriptor
 {
 public:
@@ -649,12 +649,12 @@ public:
 
 
 // Class LostShipmentsClueVariants.IslandByCompassBearingClueDestinationDescriptor
-// 0x0008 (0x0078 - 0x0070)
+// 0x0008 (0x0048 - 0x0040)
 class UIslandByCompassBearingClueDestinationDescriptor : public UClueDestinationDescriptor
 {
 public:
-	TEnumAsByte<ECompassDirections>                    CompassDirection;                                         // 0x0070(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
+	TEnumAsByte<ECompassDirections>                    CompassDirection;                                         // 0x0040(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -666,11 +666,11 @@ public:
 
 
 // Class LostShipmentsClueVariants.IslandByNameClueDestinationDescriptor
-// 0x0008 (0x0078 - 0x0070)
+// 0x0008 (0x0048 - 0x0040)
 class UIslandByNameClueDestinationDescriptor : public UClueDestinationDescriptor
 {
 public:
-	struct FName                                       IslandIdentifier;                                         // 0x0070(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	struct FName                                       IslandIdentifier;                                         // 0x0040(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -682,11 +682,11 @@ public:
 
 
 // Class LostShipmentsClueVariants.IslandNameForNPCContextDestinationDescriptor
-// 0x0008 (0x0078 - 0x0070)
+// 0x0008 (0x0048 - 0x0040)
 class UIslandNameForNPCContextDestinationDescriptor : public UClueDestinationDescriptor
 {
 public:
-	struct FName                                       IslandIdentifier;                                         // 0x0070(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	struct FName                                       IslandIdentifier;                                         // 0x0040(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -698,13 +698,13 @@ public:
 
 
 // Class LostShipmentsClueVariants.LocationOnIslandClueDestinationDescriptor
-// 0x0018 (0x0088 - 0x0070)
+// 0x0018 (0x0058 - 0x0040)
 class ULocationOnIslandClueDestinationDescriptor : public UClueDestinationDescriptor
 {
 public:
-	struct FName                                       IslandIdentifier;                                         // 0x0070(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     WorldPosition;                                            // 0x0078(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+	struct FName                                       IslandIdentifier;                                         // 0x0040(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     WorldPosition;                                            // 0x0048(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -716,7 +716,7 @@ public:
 
 
 // Class LostShipmentsClueVariants.LostShipwreckClueDestinationDescriptor
-// 0x0000 (0x0070 - 0x0070)
+// 0x0000 (0x0040 - 0x0040)
 class ULostShipwreckClueDestinationDescriptor : public UClueDestinationDescriptor
 {
 public:
@@ -746,11 +746,11 @@ public:
 
 
 // Class LostShipmentsClueVariants.MerchantCaptainSpawnComponent
-// 0x0010 (0x0470 - 0x0460)
+// 0x0010 (0x0480 - 0x0470)
 class UMerchantCaptainSpawnComponent : public UItemSpawnComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0460(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0470(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -863,12 +863,12 @@ public:
 
 
 // Class LostShipmentsClueVariants.SeaLocationByGridSquareClueDestinationDescriptor
-// 0x0010 (0x0080 - 0x0070)
+// 0x0010 (0x0050 - 0x0040)
 class USeaLocationByGridSquareClueDestinationDescriptor : public UClueDestinationDescriptor
 {
 public:
-	struct FVector                                     SeaLocationIdentifier;                                    // 0x0070(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
+	struct FVector                                     SeaLocationIdentifier;                                    // 0x0040(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -897,7 +897,7 @@ public:
 
 
 // Class LostShipmentsClueVariants.ShipwreckClueDestinationDescriptor
-// 0x0000 (0x0070 - 0x0070)
+// 0x0000 (0x0040 - 0x0040)
 class UShipwreckClueDestinationDescriptor : public UClueDestinationDescriptor
 {
 public:
@@ -942,17 +942,17 @@ public:
 
 
 // Class LostShipmentsClueVariants.TaleQuestClueInventoryService
-// 0x0258 (0x0298 - 0x0040)
+// 0x0228 (0x0268 - 0x0040)
 class UTaleQuestClueInventoryService : public UTaleQuestService
 {
 public:
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0040(0x0048) MISSED OFFSET
-	TArray<class UClueDescriptor*>                     ObtainedClues;                                            // 0x0088(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x0098(0x0050) MISSED OFFSET
-	TMap<class UClueDescriptor*, class AActor*>        DiscovererMap;                                            // 0x00E8(0x0050) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData02[0x120];                                     // 0x0138(0x0120) MISSED OFFSET
-	struct FText                                       TitleText;                                                // 0x0258(0x0038) (Transient)
-	class UAbandonedNoteClueTextChoiceSource*          ClueTextChoiceSource;                                     // 0x0290(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0040(0x0018) MISSED OFFSET
+	TArray<class UClueDescriptor*>                     ObtainedClues;                                            // 0x0058(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x0068(0x0050) MISSED OFFSET
+	TMap<class UClueDescriptor*, class AActor*>        DiscovererMap;                                            // 0x00B8(0x0050) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData02[0x120];                                     // 0x0108(0x0120) MISSED OFFSET
+	struct FText                                       TitleText;                                                // 0x0228(0x0038) (Transient)
+	class UAbandonedNoteClueTextChoiceSource*          ClueTextChoiceSource;                                     // 0x0260(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

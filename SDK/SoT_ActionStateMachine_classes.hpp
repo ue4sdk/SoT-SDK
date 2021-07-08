@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -30,7 +30,7 @@ public:
 
 
 // Class ActionStateMachine.ActionStateCreatorDefinition
-// 0x0000 (0x0430 - 0x0430)
+// 0x0000 (0x03D0 - 0x03D0)
 class AActionStateCreatorDefinition : public AActor
 {
 public:
@@ -45,11 +45,11 @@ public:
 
 
 // Class ActionStateMachine.TestActionStateCreatorDefinition
-// 0x0018 (0x0448 - 0x0430)
+// 0x0018 (0x03E8 - 0x03D0)
 class ATestActionStateCreatorDefinition : public AActionStateCreatorDefinition
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0430(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x03D0(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -136,13 +136,13 @@ public:
 
 
 // Class ActionStateMachine.ActionStateMachineComponent
-// 0x07C0 (0x0888 - 0x00C8)
+// 0x0790 (0x0858 - 0x00C8)
 class UActionStateMachineComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x48];                                      // 0x00C8(0x0048) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                   // 0x0110(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	unsigned char                                      UnknownData01[0x768];                                     // 0x0120(0x0768) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x00C8(0x0018) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnActionChangedOnTrack;                                   // 0x00E0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	unsigned char                                      UnknownData01[0x768];                                     // 0x00F0(0x0768) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -165,11 +165,11 @@ public:
 
 
 // Class ActionStateMachine.TestActionStateMachineComponent
-// 0x0018 (0x08A0 - 0x0888)
+// 0x0018 (0x0870 - 0x0858)
 class UTestActionStateMachineComponent : public UActionStateMachineComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0888(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0858(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -278,11 +278,11 @@ public:
 
 
 // Class ActionStateMachine.RemoteValidationFailActionStateActor
-// 0x0008 (0x0438 - 0x0430)
+// 0x0008 (0x03D8 - 0x03D0)
 class ARemoteValidationFailActionStateActor : public AActor
 {
 public:
-	class UActionStateMachineComponent*                ActionStateMachineComponent;                              // 0x0430(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UActionStateMachineComponent*                ActionStateMachineComponent;                              // 0x03D0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -318,12 +318,12 @@ public:
 
 
 // Class ActionStateMachine.TestObjectWithActionStateMachine
-// 0x0018 (0x0448 - 0x0430)
+// 0x0018 (0x03E8 - 0x03D0)
 class ATestObjectWithActionStateMachine : public AActor
 {
 public:
-	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                              // 0x0430(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0438(0x0010) MISSED OFFSET
+	class UTestActionStateMachineComponent*            ActionStateMachineComponent;                              // 0x03D0(0x0008) (BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x03D8(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

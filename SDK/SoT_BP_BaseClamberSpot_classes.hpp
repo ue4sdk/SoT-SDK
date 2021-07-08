@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BaseClamberSpot.BP_BaseClamberSpot_C
-// 0x0010 (0x0660 - 0x0650)
+// 0x0010 (0x0600 - 0x05F0)
 class ABP_BaseClamberSpot_C : public AClamberSpot
 {
 public:
-	TArray<struct FVector>                             ClamberSplinePoints;                                      // 0x0650(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<struct FVector>                             ClamberSplinePoints;                                      // 0x05F0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

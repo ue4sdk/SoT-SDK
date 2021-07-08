@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -165,13 +165,13 @@ public:
 
 
 // Class SeasonProgressionUI.SeasonProgressionUIService
-// 0x0150 (0x0580 - 0x0430)
+// 0x0150 (0x0520 - 0x03D0)
 class ASeasonProgressionUIService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x30];                                      // 0x0430(0x0030) MISSED OFFSET
-	class USeasonPopupListAsset*                       SeasonPopupListAsset;                                     // 0x0460(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x118];                                     // 0x0468(0x0118) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x30];                                      // 0x03D0(0x0030) MISSED OFFSET
+	class USeasonPopupListAsset*                       SeasonPopupListAsset;                                     // 0x0400(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x118];                                     // 0x0408(0x0118) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

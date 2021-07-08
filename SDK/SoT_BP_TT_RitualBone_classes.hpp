@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TT_RitualBone.BP_TT_RitualBone_C
-// 0x0008 (0x0430 - 0x0428)
+// 0x0008 (0x03D8 - 0x03D0)
 class ABP_TT_RitualBone_C : public AActor
 {
 public:
-	class UStaticMeshComponent*                        BoneMesh;                                                 // 0x0428(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        BoneMesh;                                                 // 0x03D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

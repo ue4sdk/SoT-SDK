@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass gmp_wrld_res_wood1_fruit3special_01_b.gmp_wrld_res_wood1_fruit3special_01_b_C
-// 0x0028 (0x04B0 - 0x0488)
+// 0x0028 (0x0420 - 0x03F8)
 class Agmp_wrld_res_wood1_fruit3special_01_b_C : public ACluster
 {
 public:
-	class UStaticMeshComponent*                        Decorator;                                                // 0x0488(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClusterStaticMeshComponent*                 PlankOfWood;                                              // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClusterStaticMeshComponent*                 Banana2;                                                  // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClusterStaticMeshComponent*                 Mango;                                                    // 0x04A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClusterStaticMeshComponent*                 Banana;                                                   // 0x04A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Decorator;                                                // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClusterStaticMeshComponent*                 PlankOfWood;                                              // 0x0400(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClusterStaticMeshComponent*                 Banana2;                                                  // 0x0408(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClusterStaticMeshComponent*                 MANGO;                                                    // 0x0410(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClusterStaticMeshComponent*                 BANANA;                                                   // 0x0418(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

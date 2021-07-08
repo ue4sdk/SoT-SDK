@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,12 +8,13 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_EmissaryLevel_enums.hpp"
+#include "SoT_EmissaryFramework_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
-#include "SoT_EmissaryFramework_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 #include "SoT_ItemQuality_classes.hpp"
+#include "SoT_MysteriousNotes_classes.hpp"
 
 namespace SDK
 {
@@ -66,7 +67,7 @@ struct FEmissaryFlagMeshReferences
 };
 
 // ScriptStruct EmissaryLevel.EmissaryLevelData
-// 0x0070
+// 0x0080
 struct FEmissaryLevelData
 {
 	int                                                LevelTarget;                                              // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -76,6 +77,7 @@ struct FEmissaryLevelData
 	struct FRewardId                                   EmissaryDeactivationReward;                               // 0x0048(0x0008) (Edit, DisableEditOnInstance)
 	TArray<struct FPlayerStat>                         StatsToFireOnEmissaryLevelReached;                        // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	struct FStringAssetReference                       TreasureSoldNotificationFlag;                             // 0x0060(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	struct FStringAssetReference                       EmissaryFlagTextureReference;                             // 0x0070(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct EmissaryLevel.EmissaryCompanyCosmetics

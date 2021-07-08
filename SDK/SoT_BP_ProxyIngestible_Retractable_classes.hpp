@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ProxyIngestible_Retractable.BP_ProxyIngestible_Retractable_C
-// 0x0008 (0x0808 - 0x0800)
+// 0x0008 (0x07A8 - 0x07A0)
 class ABP_ProxyIngestible_Retractable_C : public ABP_ProxyIngestible_C
 {
 public:
-	class URetractableItemProxyComponent*              RetractableItemProxy;                                     // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class URetractableItemProxyComponent*              RetractableItemProxy;                                     // 0x07A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

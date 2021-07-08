@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -129,7 +129,7 @@ public:
 
 
 // Class MovieScene.MovieSceneSequencePlayer
-// 0x0638 (0x0660 - 0x0028)
+// 0x05D8 (0x0600 - 0x0028)
 class UMovieSceneSequencePlayer : public UObject
 {
 public:
@@ -148,7 +148,7 @@ public:
 	int                                                CurrentNumLoops;                                          // 0x03DC(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x10];                                      // 0x03E0(0x0010) MISSED OFFSET
 	struct FMovieSceneSequencePlaybackSettings         PlaybackSettings;                                         // 0x03F0(0x0028)
-	unsigned char                                      UnknownData03[0x248];                                     // 0x0418(0x0248) MISSED OFFSET
+	unsigned char                                      UnknownData03[0x1E8];                                     // 0x0418(0x01E8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

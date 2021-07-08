@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -244,6 +244,27 @@ enum class EFloatValueComparisonType : uint8_t
 };
 
 
+// Enum AthenaAI.ECoralShieldVFXRole
+enum class ECoralShieldVFXRole : uint8_t
+{
+	ECoralShieldVFXRole__None      = 0,
+	ECoralShieldVFXRole__Caster    = 1,
+	ECoralShieldVFXRole__Receiver  = 2,
+	ECoralShieldVFXRole__ECoralShieldVFXRole_MAX = 3
+};
+
+
+// Enum AthenaAI.ECoralShieldVFXState
+enum class ECoralShieldVFXState : uint8_t
+{
+	ECoralShieldVFXState__Off      = 0,
+	ECoralShieldVFXState__Starting = 1,
+	ECoralShieldVFXState__On       = 2,
+	ECoralShieldVFXState__Ending   = 3,
+	ECoralShieldVFXState__ECoralShieldVFXState_MAX = 4
+};
+
+
 // Enum AthenaAI.ETraceDirection
 enum class ETraceDirection : uint8_t
 {
@@ -277,21 +298,22 @@ enum class EOceanCrawlerAbilityAudioKey : uint8_t
 	EOceanCrawlerAbilityAudioKey__Hermit_Play_BullRushChargeUp_OneShot = 7,
 	EOceanCrawlerAbilityAudioKey__Hermit_Play_BullRushChargeGo_OneShot = 8,
 	EOceanCrawlerAbilityAudioKey__Hermit_Play_BullRushStaticImpact_OneShot = 9,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_PummelWindBack_OneShot = 10,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_PummelImpact_OneShot = 11,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldStart_OneShot = 12,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldEnd_OneShot = 13,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldInterrupted_OneShot = 14,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldApplied_OneShot = 15,
-	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldStopApplying_OneShot = 16,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldStartCharge_OneShot = 17,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldCast_OneShot = 18,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldInterrupted_OneShot = 19,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldAppliedToTarget_OneShot = 20,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldHitToChain_OneShot = 21,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldFinishedOnTarget_OneShot = 22,
-	EOceanCrawlerAbilityAudioKey__Eel_Play_EelElectricEelThrowCharge_OneShot = 23,
-	EOceanCrawlerAbilityAudioKey__EOceanCrawlerAbilityAudioKey_MAX = 24
+	EOceanCrawlerAbilityAudioKey__Hermit_Play_BullRushCharacterImpact_OneShot = 10,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_PummelWindBack_OneShot = 11,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_PummelImpact_OneShot = 12,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldStart_OneShot = 13,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldEnd_OneShot = 14,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldInterrupted_OneShot = 15,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldApplied_OneShot = 16,
+	EOceanCrawlerAbilityAudioKey__Crab_Play_CoralShieldStopApplying_OneShot = 17,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldStartCharge_OneShot = 18,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldCast_OneShot = 19,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldInterrupted_OneShot = 20,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldAppliedToTarget_OneShot = 21,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldHitToChain_OneShot = 22,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldFinishedOnTarget_OneShot = 23,
+	EOceanCrawlerAbilityAudioKey__Eel_Play_EelElectricEelThrowCharge_OneShot = 24,
+	EOceanCrawlerAbilityAudioKey__EOceanCrawlerAbilityAudioKey_MAX = 25
 };
 
 

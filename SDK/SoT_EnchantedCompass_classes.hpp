@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class EnchantedCompass.MultiTargetEnchantedCompass
-// 0x0020 (0x08D0 - 0x08B0)
+// 0x0020 (0x0870 - 0x0850)
 class AMultiTargetEnchantedCompass : public ACompass
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x08B0(0x0008) MISSED OFFSET
-	TArray<struct FGuid>                               LocationIds;                                              // 0x08B8(0x0010) (ZeroConstructor, Transient)
-	class UInventoryItemComponent*                     InventoryItem;                                            // 0x08C8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0850(0x0008) MISSED OFFSET
+	TArray<struct FGuid>                               LocationIds;                                              // 0x0858(0x0010) (ZeroConstructor, Transient)
+	class UInventoryItemComponent*                     InventoryItem;                                            // 0x0868(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -33,7 +33,7 @@ public:
 
 
 // Class EnchantedCompass.PrototypeMultiTargetEnchantedCompass
-// 0x0000 (0x08D0 - 0x08D0)
+// 0x0000 (0x0870 - 0x0870)
 class APrototypeMultiTargetEnchantedCompass : public AMultiTargetEnchantedCompass
 {
 public:

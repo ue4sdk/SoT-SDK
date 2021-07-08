@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9,6 +9,7 @@
 #include <locale>
 #include <unordered_set>
 #include <string>
+#include "XorStrEx/XorStrEx.hpp"
 
 namespace SDK
 {

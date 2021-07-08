@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -58,11 +58,11 @@ public:
 
 
 // Class ShantyPuzzle.ShantyPuzzleInteractionZoneComponent
-// 0x0020 (0x05A0 - 0x0580)
+// 0x0020 (0x05C0 - 0x05A0)
 class UShantyPuzzleInteractionZoneComponent : public USphereComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0580(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05A0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

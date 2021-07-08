@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class MediaAssets.MediaPlayer
-// 0x00F0 (0x0118 - 0x0028)
+// 0x0090 (0x00B8 - 0x0028)
 class UMediaPlayer : public UObject
 {
 public:
@@ -24,7 +24,7 @@ public:
 	unsigned char                                      Looping : 1;                                              // 0x0048(0x0001) (Edit)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0049(0x0007) MISSED OFFSET
 	class FString                                      URL;                                                      // 0x0050(0x0010) (Edit, ZeroConstructor)
-	unsigned char                                      UnknownData01[0xB8];                                      // 0x0060(0x00B8) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x58];                                      // 0x0060(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

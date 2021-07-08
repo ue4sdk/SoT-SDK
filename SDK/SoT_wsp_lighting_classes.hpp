@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wsp_lighting.wsp_lighting_C
-// 0x0000 (0x0438 - 0x0438)
+// 0x0000 (0x03D8 - 0x03D8)
 class Awsp_lighting_C : public ALevelScriptActor
 {
 public:

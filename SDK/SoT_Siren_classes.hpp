@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -135,11 +135,11 @@ public:
 
 
 // Class Siren.SirenController
-// 0x0008 (0x0A38 - 0x0A30)
+// 0x0008 (0x09D8 - 0x09D0)
 class ASirenController : public AAthenaSwimmingAIController
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0A30(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x09D0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -166,18 +166,11 @@ public:
 
 
 // Class Siren.SirenPartsDesc
-// 0x0058 (0x0088 - 0x0030)
-class USirenPartsDesc : public UAIPartsDesc
+// 0x0008 (0x0088 - 0x0080)
+class USirenPartsDesc : public UMeshMemoryConstraintsAIPartsDesc
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0030(0x0008) MISSED OFFSET
-	struct FStringAssetReference                       Mesh;                                                     // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class UClass*                                      AnimationID;                                              // 0x0048(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int64_t                                            CachedMeshResourceSize;                                   // 0x0050(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
-	class UClass*                                      MeshFallbackCategory;                                     // 0x0058(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      BudgetToCountMemoryAgainstIfNoFallback;                   // 0x0060(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UMaterialInterface*>                  OverrideMaterials;                                        // 0x0068(0x0010) (ZeroConstructor)
-	TArray<struct FStringAssetReference>               FallbackOverrideMaterials;                                // 0x0078(0x0010) (ZeroConstructor)
+	class UClass*                                      AnimationID;                                              // 0x0080(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wsp_Garden_shells.BP_wsp_Garden_shells_C
-// 0x0000 (0x04D5 - 0x04D5)
+// 0x0000 (0x0475 - 0x0475)
 class ABP_wsp_Garden_shells_C : public ABP_Placement_Garden_C
 {
 public:

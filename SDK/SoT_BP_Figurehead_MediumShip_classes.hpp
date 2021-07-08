@@ -15,11 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Figurehead_MediumShip.BP_Figurehead_MediumShip_C
-// 0x0008 (0x0440 - 0x0438)
-class ABP_Figurehead_MediumShip_C : public AGenericPart
+// 0x0010 (0x03E8 - 0x03D8)
+class ABP_Figurehead_MediumShip_C : public AGenericPartWithVFX
 {
 public:
-	class UStaticMeshComponent*                        Figurehead;                                               // 0x0438(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    ParticleSystem;                                           // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UStaticMeshComponent*                        Figurehead;                                               // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,6 +29,7 @@ public:
 	}
 
 
+	class UParticleSystemComponent* GetVFXComponent();
 	class UStaticMeshComponent* GetMeshComponent();
 	void UserConstructionScript();
 };

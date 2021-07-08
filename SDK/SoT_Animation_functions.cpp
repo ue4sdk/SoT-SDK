@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1040,9 +1040,10 @@ float ULocomotionFunctionLib::UpdateControllerSpineRotation(const struct FRotato
 // float                          BaseMaxWalkSpeed               (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // float                          SpeedBlendValue                (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           IsSwimming                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          DeadZone                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // struct FActorVelocityData      ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FActorVelocityData ULocomotionFunctionLib::UpdateCharacterSpeed(const struct FVector& Velocity, float CurrentMaxWalkSpeed, float WantedMovementSpeed, float BaseMaxWalkSpeed, float SpeedBlendValue, bool IsSwimming)
+struct FActorVelocityData ULocomotionFunctionLib::UpdateCharacterSpeed(const struct FVector& Velocity, float CurrentMaxWalkSpeed, float WantedMovementSpeed, float BaseMaxWalkSpeed, float SpeedBlendValue, bool IsSwimming, float DeadZone)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Animation.LocomotionFunctionLib.UpdateCharacterSpeed"));
 
@@ -1054,6 +1055,7 @@ struct FActorVelocityData ULocomotionFunctionLib::UpdateCharacterSpeed(const str
 		float                          BaseMaxWalkSpeed;
 		float                          SpeedBlendValue;
 		bool                           IsSwimming;
+		float                          DeadZone;
 		struct FActorVelocityData      ReturnValue;
 	} params;
 
@@ -1063,6 +1065,7 @@ struct FActorVelocityData ULocomotionFunctionLib::UpdateCharacterSpeed(const str
 	params.BaseMaxWalkSpeed = BaseMaxWalkSpeed;
 	params.SpeedBlendValue = SpeedBlendValue;
 	params.IsSwimming = IsSwimming;
+	params.DeadZone = DeadZone;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class EditorStyle.EditorStyleSettings
-// 0x0098 (0x00C0 - 0x0028)
+// 0x0068 (0x0090 - 0x0028)
 class UEditorStyleSettings : public UObject
 {
 public:
@@ -34,7 +34,7 @@ public:
 	unsigned char                                      UnknownData01[0x3];                                       // 0x006D(0x0003) MISSED OFFSET
 	TEnumAsByte<ELogTimes>                             LogTimestampMode;                                         // 0x0070(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bOpenAssetEditorTabsInNewWindow;                          // 0x0071(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4E];                                      // 0x0072(0x004E) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x1E];                                      // 0x0072(0x001E) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

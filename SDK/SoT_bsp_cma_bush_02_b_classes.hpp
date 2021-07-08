@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass bsp_cma_bush_02_b.bsp_cma_bush_02_b_C
-// 0x0000 (0x0478 - 0x0478)
+// 0x0000 (0x03E8 - 0x03E8)
 class Absp_cma_bush_02_b_C : public ACoveredMeshActor
 {
 public:

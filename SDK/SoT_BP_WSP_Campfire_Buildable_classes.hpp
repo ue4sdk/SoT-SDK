@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WSP_Campfire_Buildable.BP_WSP_Campfire_Buildable_C
-// 0x0000 (0x07D8 - 0x07D8)
+// 0x0000 (0x0780 - 0x0780)
 class ABP_WSP_Campfire_Buildable_C : public ABP_Base_Campfire_Buildable_C
 {
 public:

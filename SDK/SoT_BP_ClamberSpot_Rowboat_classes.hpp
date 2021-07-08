@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ClamberSpot_Rowboat.BP_ClamberSpot_Rowboat_C
-// 0x0000 (0x0660 - 0x0660)
+// 0x0000 (0x0600 - 0x0600)
 class ABP_ClamberSpot_Rowboat_C : public ABP_BaseClamberSpot_C
 {
 public:

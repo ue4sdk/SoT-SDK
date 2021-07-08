@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipClothingChest.BP_ShipClothingChest_C
-// 0x0000 (0x0578 - 0x0578)
+// 0x0000 (0x0518 - 0x0518)
 class ABP_ShipClothingChest_C : public APossessionsChest
 {
 public:

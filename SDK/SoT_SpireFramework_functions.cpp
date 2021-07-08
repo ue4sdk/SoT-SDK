@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,6 +47,26 @@ void ASpireService::OnRep_SpireLevels(TArray<struct FSpireInfo> InPreviousSpireL
 	} params;
 
 	params.InPreviousSpireLevels = InPreviousSpireLevels;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function SpireFramework.TaleSpireService.RegisterResetMechanismInterface
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  InMechanismResetInterface      (Parm, ZeroConstructor, IsPlainOldData)
+
+void UTaleSpireService::RegisterResetMechanismInterface(class AActor* InMechanismResetInterface)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SpireFramework.TaleSpireService.RegisterResetMechanismInterface"));
+
+	struct
+	{
+		class AActor*                  InMechanismResetInterface;
+	} params;
+
+	params.InMechanismResetInterface = InMechanismResetInterface;
 
 	UObject::ProcessEvent(fn, &params);
 }

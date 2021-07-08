@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,10 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_PetPreview_Base.BP_PetPreview_Base_C
-// 0x0000 (0x0518 - 0x0518)
+// 0x0008 (0x04C0 - 0x04B8)
 class ABP_PetPreview_Base_C : public APreviewPet
 {
 public:
+	class UCosmeticItemAnimationComponent*             CosmeticItemAnimation;                                    // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

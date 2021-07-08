@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Snake_Legendary.BP_Snake_Legendary_C
-// 0x0000 (0x0BB0 - 0x0BB0)
+// 0x0000 (0x0B50 - 0x0B50)
 class ABP_Snake_Legendary_C : public ABP_Snake_C
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -36,18 +36,21 @@ public:
 
 
 // Class SpireFramework.HeightTriggerableEffectsComponent
-// 0x0088 (0x0150 - 0x00C8)
+// 0x0090 (0x0158 - 0x00C8)
 class UHeightTriggerableEffectsComponent : public UActorComponent
 {
 public:
 	class UHeightTriggerableAudioComponentParams*      AudioParams;                                              // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FActorComponentSelector                     EmitterOwner;                                             // 0x00D0(0x0010) (Edit, DisableEditOnInstance)
 	struct FVector                                     EmitterOffset;                                            // 0x00E0(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RisingAudioTriggerValue;                                  // 0x00EC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      CameraShake;                                              // 0x00F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ShakeInnerRadius;                                         // 0x00F8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              ShakeOuterRadius;                                         // 0x00FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0100(0x0050) MISSED OFFSET
+	bool                                               UseParentEmitter;                                         // 0x00EC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x00ED(0x0003) MISSED OFFSET
+	float                                              RisingAudioTriggerValue;                                  // 0x00F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00F4(0x0004) MISSED OFFSET
+	class UClass*                                      CameraShake;                                              // 0x00F8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ShakeInnerRadius;                                         // 0x0100(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              ShakeOuterRadius;                                         // 0x0104(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x50];                                      // 0x0108(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -61,11 +64,11 @@ public:
 
 
 // Class SpireFramework.SpireResource
-// 0x0008 (0x0438 - 0x0430)
+// 0x0008 (0x03D8 - 0x03D0)
 class ASpireResource : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x03D0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -92,15 +95,14 @@ public:
 
 
 // Class SpireFramework.SpireService
-// 0x0080 (0x04B0 - 0x0430)
+// 0x0078 (0x0448 - 0x03D0)
 class ASpireService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0430(0x0008) MISSED OFFSET
-	TArray<struct FServerSpireInfo>                    ServerOnlySpireInfo;                                      // 0x0438(0x0010) (ZeroConstructor)
-	TArray<struct FSpireInfo>                          SpireLevels;                                              // 0x0448(0x0010) (Net, ZeroConstructor)
-	TArray<struct FSpireInfo>                          PreviousSpireLevels;                                      // 0x0458(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0468(0x0048) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x03D0(0x0008) MISSED OFFSET
+	TArray<struct FServerSpireInfo>                    ServerOnlySpireInfo;                                      // 0x03D8(0x0010) (ZeroConstructor)
+	TArray<struct FSpireInfo>                          SpireLevels;                                              // 0x03E8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x50];                                      // 0x03F8(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -113,12 +115,45 @@ public:
 };
 
 
+// Class SpireFramework.SpireStreamedLevelDataAsset
+// 0x0020 (0x0048 - 0x0028)
+class USpireStreamedLevelDataAsset : public UDataAsset
+{
+public:
+	class UAthenaStreamedLevelDataAsset*               StreamedLevel;                                            // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<struct FSpireEntry>                         Entries;                                                  // 0x0030(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance)
+	struct FName                                       FeatureToggle;                                            // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.SpireStreamedLevelDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class SpireFramework.SpireSettingsInterface
+// 0x0000 (0x0028 - 0x0028)
+class USpireSettingsInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.SpireSettingsInterface"));
+		return ptr;
+	}
+
+};
+
+
 // Class SpireFramework.SpireShippingDrawDebugActorSphereCollection
-// 0x0010 (0x0450 - 0x0440)
+// 0x0010 (0x03F0 - 0x03E0)
 class ASpireShippingDrawDebugActorSphereCollection : public AShippingDebugActorSphereCollection
 {
 public:
-	TArray<TWeakObjectPtr<class ASpireResource>>       SpireList;                                                // 0x0440(0x0010) (ZeroConstructor)
+	TArray<TWeakObjectPtr<class ASpireResource>>       SpireList;                                                // 0x03E0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -145,11 +180,11 @@ public:
 
 
 // Class SpireFramework.TaleSpireService
-// 0x0028 (0x0068 - 0x0040)
+// 0x0038 (0x0078 - 0x0040)
 class UTaleSpireService : public UTaleQuestService
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0040(0x0028) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0040(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -157,6 +192,8 @@ public:
 		return ptr;
 	}
 
+
+	void RegisterResetMechanismInterface(class AActor* InMechanismResetInterface);
 };
 
 
@@ -184,6 +221,36 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.TaleLoadSpireStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class SpireFramework.TaleMakeSpireVisibleStep
+// 0x0000 (0x0068 - 0x0068)
+class UTaleMakeSpireVisibleStep : public UTaleQuestStep
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.TaleMakeSpireVisibleStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class SpireFramework.TaleMakeSpireVisibleStepDesc
+// 0x0000 (0x0030 - 0x0030)
+class UTaleMakeSpireVisibleStepDesc : public UTaleQuestStepDesc
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.TaleMakeSpireVisibleStepDesc"));
 		return ptr;
 	}
 
@@ -283,6 +350,37 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.TaleUnloadSpireStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class SpireFramework.TaleWaitForSpireToLoadStep
+// 0x0050 (0x00B8 - 0x0068)
+class UTaleWaitForSpireToLoadStep : public UTaleQuestStep
+{
+public:
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0068(0x0050) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.TaleWaitForSpireToLoadStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class SpireFramework.TaleWaitForSpireToLoadStepDesc
+// 0x0000 (0x0030 - 0x0030)
+class UTaleWaitForSpireToLoadStepDesc : public UTaleQuestStepDesc
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SpireFramework.TaleWaitForSpireToLoadStepDesc"));
 		return ptr;
 	}
 

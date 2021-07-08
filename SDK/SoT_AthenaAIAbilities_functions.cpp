@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -11,6 +11,22 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function AthenaAIAbilities.BurrowHealVFXComponent.OnRep_IsVFXActive
+// (Final, Native, Private)
+
+void UBurrowHealVFXComponent::OnRep_IsVFXActive()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAIAbilities.BurrowHealVFXComponent.OnRep_IsVFXActive"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
 
 // Function AthenaAIAbilities.ElectricShieldBuffComponent.OnRep_IsShieldActive
 // (Final, Native, Public)

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -270,6 +270,50 @@ struct FKrakenAnimatedTentacleStateAnimationMapping
 	bool                                               Loop;                                                     // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 	TArray<struct FKrakenAnimatedTentacleTransitionAnimation> Transitions;                                              // 0x0018(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct Kraken.KrakenHeadTransitionAnimation
+// 0x0010
+struct FKrakenHeadTransitionAnimation
+{
+	class UClass*                                      FromState;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequence*                               TransitionAnimation;                                      // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Kraken.KrakenHeadStateAnimationMapping
+// 0x0028
+struct FKrakenHeadStateAnimationMapping
+{
+	class UClass*                                      State;                                                    // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	class UAnimSequence*                               Animation;                                                // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               Loop;                                                     // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
+	TArray<struct FKrakenHeadTransitionAnimation>      Transitions;                                              // 0x0018(0x0010) (Edit, ZeroConstructor)
+};
+
+// ScriptStruct Kraken.HeadStateChangeRequest
+// 0x0018
+struct FHeadStateChangeRequest
+{
+	class UClass*                                      RequestedState;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	struct FGuid                                       StateChangeID;                                            // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Kraken.KrakenHeadHealthPair
+// 0x0008
+struct FKrakenHeadHealthPair
+{
+	int                                                PlayerCount;                                              // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              KrakenHeadHealth;                                         // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+};
+
+// ScriptStruct Kraken.KrakenHeadHitReactAnimations
+// 0x0010
+struct FKrakenHeadHitReactAnimations
+{
+	float                                              Weight;                                                   // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
+	class UAnimSequence*                               HitReactAnimation;                                        // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Kraken.KrakenTentacleBehaviourActionChances

@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -79,6 +79,38 @@ void UShipDamagerComponent::SetShape(class UPrimitiveComponent* InShape)
 	} params;
 
 	params.InShape = InShape;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Damagers.ShipDamagerComponent.EndDamage
+// (Final, Native, Public, BlueprintCallable)
+
+void UShipDamagerComponent::EndDamage()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShipDamagerComponent.EndDamage"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Damagers.ShipDamagerComponent.BeginDamage
+// (Final, Native, Public, BlueprintCallable)
+
+void UShipDamagerComponent::BeginDamage()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShipDamagerComponent.BeginDamage"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

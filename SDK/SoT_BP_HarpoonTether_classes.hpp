@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HarpoonTether.BP_HarpoonTether_C
-// 0x0000 (0x0570 - 0x0570)
+// 0x0000 (0x0510 - 0x0510)
 class ABP_HarpoonTether_C : public ATether
 {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -70,12 +70,12 @@ public:
 
 
 // Class CommodityDemandFramework.CommodityDemandService
-// 0x0070 (0x04A0 - 0x0430)
+// 0x0040 (0x0410 - 0x03D0)
 class ACommodityDemandService : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0430(0x0050) MISSED OFFSET
-	struct FActiveNPCDemands                           ActiveCommodityDemands;                                   // 0x0480(0x0020) (Net)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x03D0(0x0020) MISSED OFFSET
+	struct FActiveNPCDemands                           ActiveCommodityDemands;                                   // 0x03F0(0x0020) (Net)
 
 	static UClass* StaticClass()
 	{

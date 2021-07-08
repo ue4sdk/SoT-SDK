@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wsp_Garden_small_rocks.BP_wsp_Garden_small_rocks_C
-// 0x0000 (0x04D5 - 0x04D5)
+// 0x0000 (0x0475 - 0x0475)
 class ABP_wsp_Garden_small_rocks_C : public ABP_Placement_Garden_C
 {
 public:

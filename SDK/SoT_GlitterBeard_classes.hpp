@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -86,11 +86,11 @@ public:
 
 
 // Class GlitterBeard.GlitterbeardSlidingDoor
-// 0x0008 (0x05A0 - 0x0598)
+// 0x0008 (0x0540 - 0x0538)
 class AGlitterbeardSlidingDoor : public ASlidingDoor
 {
 public:
-	class UEffectBlendControllerComponent*             DecalBlendComponent;                                      // 0x0598(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
+	class UEffectBlendControllerComponent*             DecalBlendComponent;                                      // 0x0538(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -133,28 +133,28 @@ public:
 
 
 // Class GlitterBeard.GlitterBeardTree
-// 0x0300 (0x0730 - 0x0430)
+// 0x0300 (0x06D0 - 0x03D0)
 class AGlitterBeardTree : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x28];                                      // 0x0430(0x0028) MISSED OFFSET
-	class UActionRulesComponent*                       ActionRulesComponent;                                     // 0x0458(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UActionRulesInteractableComponent*           InteractableComponent;                                    // 0x0460(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	float                                              LanternLightDelay;                                        // 0x0468(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x046C(0x0004) MISSED OFFSET
-	class UGlitterBeardUnlockVFXCoordinatorComponent*  UnlockVFXCoordinatorComponent;                            // 0x0470(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UGlitterBeardTelemetryComponent*             TelemetryComponent;                                       // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UClass*                                      VocalShanty;                                              // 0x0480(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 VocalsFadeEvent;                                          // 0x0488(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              VocalsFadeDelay;                                          // 0x0490(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              UnlockDelay;                                              // 0x0494(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UGlitterBeardFinaleCoordinatorComponent*     FinaleCoordinator;                                        // 0x0498(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
-	class ULandmarkReactionTriggerComponent*           LandmarkReactionTrigger;                                  // 0x04A0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
-	float                                              DistanceFromTreeToPauseAISpawn;                           // 0x04A8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x22C];                                     // 0x04AC(0x022C) MISSED OFFSET
-	class ASlidingDoor*                                HideoutDoor;                                              // 0x06D8(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	struct FWwiseEmitter                               SoundEmitter;                                             // 0x06E0(0x0020)
-	unsigned char                                      UnknownData03[0x30];                                      // 0x0700(0x0030) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x03D0(0x0028) MISSED OFFSET
+	class UActionRulesComponent*                       ActionRulesComponent;                                     // 0x03F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UActionRulesInteractableComponent*           InteractableComponent;                                    // 0x0400(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	float                                              LanternLightDelay;                                        // 0x0408(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x040C(0x0004) MISSED OFFSET
+	class UGlitterBeardUnlockVFXCoordinatorComponent*  UnlockVFXCoordinatorComponent;                            // 0x0410(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UGlitterBeardTelemetryComponent*             TelemetryComponent;                                       // 0x0418(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	class UClass*                                      VocalShanty;                                              // 0x0420(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 VocalsFadeEvent;                                          // 0x0428(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              VocalsFadeDelay;                                          // 0x0430(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              UnlockDelay;                                              // 0x0434(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UGlitterBeardFinaleCoordinatorComponent*     FinaleCoordinator;                                        // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
+	class ULandmarkReactionTriggerComponent*           LandmarkReactionTrigger;                                  // 0x0440(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
+	float                                              DistanceFromTreeToPauseAISpawn;                           // 0x0448(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x22C];                                     // 0x044C(0x022C) MISSED OFFSET
+	class ASlidingDoor*                                HideoutDoor;                                              // 0x0678(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	struct FWwiseEmitter                               SoundEmitter;                                             // 0x0680(0x0020)
+	unsigned char                                      UnknownData03[0x30];                                      // 0x06A0(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

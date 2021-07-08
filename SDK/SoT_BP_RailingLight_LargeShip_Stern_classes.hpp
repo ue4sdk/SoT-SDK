@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RailingLight_LargeShip_Stern.BP_RailingLight_LargeShip_Stern_C
-// 0x0000 (0x07A9 - 0x07A9)
+// 0x0000 (0x0749 - 0x0749)
 class ABP_RailingLight_LargeShip_Stern_C : public ABP_InteractableShipRailingLight_C
 {
 public:

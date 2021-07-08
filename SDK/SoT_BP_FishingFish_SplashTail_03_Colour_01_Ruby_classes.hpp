@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_SplashTail_03_Colour_01_Ruby.BP_FishingFish_SplashTail_03_Colour_01_Ruby_C
-// 0x0000 (0x0920 - 0x0920)
+// 0x0000 (0x0910 - 0x0910)
 class ABP_FishingFish_SplashTail_03_Colour_01_Ruby_C : public ABP_FishingFish_SplashTail_03_C
 {
 public:

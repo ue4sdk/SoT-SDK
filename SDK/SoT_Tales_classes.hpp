@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -209,18 +209,16 @@ public:
 
 
 // Class Tales.SplineFootprintPathComponent
-// 0x0030 (0x0600 - 0x05D0)
+// 0x0020 (0x0620 - 0x0600)
 class USplineFootprintPathComponent : public USplineComponent
 {
 public:
-	float                                              DistanceBetweenDecals;                                    // 0x05D0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x05D4(0x0004) MISSED OFFSET
-	class UMaterialInterface*                          DecalMaterial;                                            // 0x05D8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FSplineFootprintPathTool                    PathTool;                                                 // 0x05E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x05E1(0x0003) MISSED OFFSET
-	float                                              DecalYaw;                                                 // 0x05E4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     DecalUniformScale;                                        // 0x05E8(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0xC];                                       // 0x05F4(0x000C) MISSED OFFSET
+	class UMaterialInterface*                          DecalMaterial;                                            // 0x0600(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	struct FSplineFootprintPathTool                    PathTool;                                                 // 0x0608(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x0609(0x0003) MISSED OFFSET
+	float                                              DecalYaw;                                                 // 0x060C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FVector                                     DecalUniformScale;                                        // 0x0610(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x061C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -427,6 +425,7 @@ public:
 	}
 
 
+	void TrackResponseCoordinator(class UCutsceneResponseCoordinator* Coordinator);
 	class UCutsceneResponseSheet* StartCutsceneResponseSheet(class AActor* TargetActor, const TScriptInterface<class UCutsceneResponsePlayerInterface>& CutsceneResponsePlayer, class UClass* ResponseSheetClass);
 	void ClearAllActiveResponseSheets();
 	void AddResponseSheetRelevantActor(class AActor* Actor);
@@ -473,11 +472,11 @@ public:
 
 
 // Class Tales.TaleQuestEQSService
-// 0x00F8 (0x0138 - 0x0040)
+// 0x00C8 (0x0108 - 0x0040)
 class UTaleQuestEQSService : public UTaleQuestService
 {
 public:
-	unsigned char                                      UnknownData00[0xF8];                                      // 0x0040(0x00F8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC8];                                      // 0x0040(0x00C8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -886,14 +885,14 @@ public:
 
 
 // Class Tales.PlaySequencerAnimationOnCutsceneActorStep
-// 0x0028 (0x0090 - 0x0068)
+// 0x0030 (0x0098 - 0x0068)
 class UPlaySequencerAnimationOnCutsceneActorStep : public UTaleQuestStep
 {
 public:
 	class UPlaySequencerAnimationOnCutsceneActorStepDesc* StepDesc;                                                 // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
 	class ASequencerCutSceneActor*                     SequencerCutSceneActor;                                   // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	TArray<struct FPossessableSequence>                PossessableSequences;                                     // 0x0078(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0088(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0088(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -905,13 +904,13 @@ public:
 
 
 // Class Tales.PlaySequencerAnimationStep
-// 0x0030 (0x0098 - 0x0068)
+// 0x0038 (0x00A0 - 0x0068)
 class UPlaySequencerAnimationStep : public UTaleQuestStep
 {
 public:
 	class UPlaySequencerAnimationStepDesc*             StepDesc;                                                 // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
 	class ASequencerCutSceneActor*                     SequencerCutSceneActor;                                   // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0078(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x0078(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1231,16 +1230,17 @@ public:
 
 
 // Class Tales.FindNamedPointStepDescBase
-// 0x0040 (0x0070 - 0x0030)
+// 0x0050 (0x0080 - 0x0030)
 class UFindNamedPointStepDescBase : public UTaleQuestStepDesc
 {
 public:
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0030(0x0020) MISSED OFFSET
 	struct FQuestVariableActor                         ActorToSearch;                                            // 0x0050(0x0010) (Edit)
-	struct FName                                       PointGroupName;                                           // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EPointSelectionMethod>                 SearchMethod;                                             // 0x0068(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<ESpaceType>                            ReturnInSpace;                                            // 0x0069(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x6];                                       // 0x006A(0x0006) MISSED OFFSET
+	struct FQuestVariableName                          GroupNamePin;                                             // 0x0060(0x0010) (Edit)
+	struct FName                                       PointGroupName;                                           // 0x0070(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPointSelectionMethod>                 SearchMethod;                                             // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESpaceType>                            ReturnInSpace;                                            // 0x0079(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -1252,11 +1252,11 @@ public:
 
 
 // Class Tales.FindNamedPointStepDesc
-// 0x0010 (0x0080 - 0x0070)
+// 0x0010 (0x0090 - 0x0080)
 class UFindNamedPointStepDesc : public UFindNamedPointStepDescBase
 {
 public:
-	struct FQuestVariableOrientedPoint                 OutputOrientedPoint;                                      // 0x0070(0x0010) (Edit)
+	struct FQuestVariableOrientedPoint                 OutputOrientedPoint;                                      // 0x0080(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -1268,11 +1268,11 @@ public:
 
 
 // Class Tales.FindNamedPointAsVectorStepDesc
-// 0x0010 (0x0080 - 0x0070)
+// 0x0010 (0x0090 - 0x0080)
 class UFindNamedPointAsVectorStepDesc : public UFindNamedPointStepDescBase
 {
 public:
-	struct FQuestVariableVector                        OutputVectorLocation;                                     // 0x0070(0x0010) (Edit)
+	struct FQuestVariableVector                        OutputVectorLocation;                                     // 0x0080(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -1284,11 +1284,11 @@ public:
 
 
 // Class Tales.FindNamedPointAsTransformStepDesc
-// 0x0018 (0x0088 - 0x0070)
+// 0x0018 (0x0098 - 0x0080)
 class UFindNamedPointAsTransformStepDesc : public UFindNamedPointStepDescBase
 {
 public:
-	struct FQuestVariableTransform                     OutputTransform;                                          // 0x0070(0x0018) (Edit)
+	struct FQuestVariableTransform                     OutputTransform;                                          // 0x0080(0x0018) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -1425,19 +1425,26 @@ public:
 
 
 // Class Tales.PlaySequencerAnimationOnCutsceneActorStepDesc
-// 0x0068 (0x0098 - 0x0030)
+// 0x0098 (0x00C8 - 0x0030)
 class UPlaySequencerAnimationOnCutsceneActorStepDesc : public UTaleQuestStepDesc
 {
 public:
 	class ULevelSequence*                              LevelSequence;                                            // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Delay;                                                    // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	struct FQuestVariableActor                         SequencerCutSceneActor;                                   // 0x0040(0x0010) (Edit)
-	struct FQuestVariableActor                         ActorToPossess;                                           // 0x0050(0x0010) (Edit)
-	struct FQuestVariableArray                         AdditionalPossessables;                                   // 0x0060(0x0010) (Edit)
-	class FString                                      PossessableName;                                          // 0x0070(0x0010) (Edit, ZeroConstructor)
-	class USceneDialogueData*                          DialogueData;                                             // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FText>                               LocalisableNames;                                         // 0x0088(0x0010) (Edit, ZeroConstructor)
+	struct FQuestVariableActor                         DockableBaseActor;                                        // 0x0040(0x0010) (Edit)
+	struct FQuestVariableActor                         SequencerCutSceneActor;                                   // 0x0050(0x0010) (Edit)
+	struct FQuestVariableActor                         ActorToPossess;                                           // 0x0060(0x0010) (Edit)
+	struct FQuestVariableArray                         AdditionalPossessables;                                   // 0x0070(0x0010) (Edit)
+	struct FQuestVariableActor                         InteractingActor;                                         // 0x0080(0x0010) (Edit)
+	class FString                                      PossessableName;                                          // 0x0090(0x0010) (Edit, ZeroConstructor)
+	class USceneDialogueData*                          DialogueData;                                             // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FText>                               LocalisableNames;                                         // 0x00A8(0x0010) (Edit, ZeroConstructor)
+	bool                                               IsLevelSequenceActorAlwaysRelevant;                       // 0x00B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IsLooping;                                                // 0x00B9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x00BA(0x0002) MISSED OFFSET
+	float                                              SubtitleSphereRadiusInCm;                                 // 0x00BC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class ULevelSequence*                              FemaleLevelSequence;                                      // 0x00C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -1449,18 +1456,24 @@ public:
 
 
 // Class Tales.PlaySequencerAnimationStepDesc
-// 0x0048 (0x0078 - 0x0030)
+// 0x0078 (0x00A8 - 0x0030)
 class UPlaySequencerAnimationStepDesc : public UTaleQuestStepDesc
 {
 public:
 	class ULevelSequence*                              LevelSequenceToPlay;                                      // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	struct FQuestVariableActor                         TargetActorToSpawn;                                       // 0x0038(0x0010) (Edit)
 	struct FQuestVariableActor                         LevelSequenceActorSpawnLocation;                          // 0x0048(0x0010) (Edit)
-	bool                                               PlayGlobally;                                             // 0x0058(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	bool                                               IsLevelSequenceActorAlawaysRelevant;                      // 0x0059(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x005A(0x0006) MISSED OFFSET
-	class USceneDialogueData*                          DialogueData;                                             // 0x0060(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FText>                               LocalisableNames;                                         // 0x0068(0x0010) (Edit, ZeroConstructor)
+	struct FQuestVariableActor                         DockableBaseActor;                                        // 0x0058(0x0010) (Edit)
+	struct FQuestVariableActor                         InteractingActor;                                         // 0x0068(0x0010) (Edit)
+	bool                                               PlayGlobally;                                             // 0x0078(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	bool                                               IsLevelSequenceActorAlawaysRelevant;                      // 0x0079(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x007A(0x0006) MISSED OFFSET
+	class USceneDialogueData*                          DialogueData;                                             // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<struct FText>                               LocalisableNames;                                         // 0x0088(0x0010) (Edit, ZeroConstructor)
+	bool                                               IsLooping;                                                // 0x0098(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x0099(0x0003) MISSED OFFSET
+	float                                              SubtitleSphereRadiusInCm;                                 // 0x009C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	class ULevelSequence*                              FemaleLevelSequenceToPlay;                                // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

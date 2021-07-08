@@ -12,6 +12,27 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function BP_Figurehead_MediumShip.BP_Figurehead_MediumShip_C.GetVFXComponent
+// (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// class UParticleSystemComponent* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+class UParticleSystemComponent* ABP_Figurehead_MediumShip_C::GetVFXComponent()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Figurehead_MediumShip.BP_Figurehead_MediumShip_C.GetVFXComponent"));
+
+	struct
+	{
+		class UParticleSystemComponent* ReturnValue;
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
+}
+
+
 // Function BP_Figurehead_MediumShip.BP_Figurehead_MediumShip_C.GetMeshComponent
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:

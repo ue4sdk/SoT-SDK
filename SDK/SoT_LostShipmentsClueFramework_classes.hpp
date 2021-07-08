@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -126,11 +126,11 @@ public:
 
 
 // Class LostShipmentsClueFramework.ClueDestinationDescriptor
-// 0x0048 (0x0070 - 0x0028)
+// 0x0018 (0x0040 - 0x0028)
 class UClueDestinationDescriptor : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0028(0x0048) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0028(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -324,6 +324,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.ClueSiteLootRestrictionsDataAsset"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.DebrisForVoyageRankDescAsset
+// 0x0010 (0x0038 - 0x0028)
+class UDebrisForVoyageRankDescAsset : public UDataAsset
+{
+public:
+	TArray<struct FDebrisToRangeDist>                  RankBasedDebrisDistribution;                              // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.DebrisForVoyageRankDescAsset"));
 		return ptr;
 	}
 
@@ -604,6 +620,41 @@ public:
 };
 
 
+// Class LostShipmentsClueFramework.TaleQuestGenerateDebrisTypeForVoyageRankStep
+// 0x0028 (0x0090 - 0x0068)
+class UTaleQuestGenerateDebrisTypeForVoyageRankStep : public UTaleQuestStep
+{
+public:
+	class UDebrisForVoyageRankDescAsset*               DebrisForRankDescAsset;                                   // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestGenerateDebrisTypeForVoyageRankStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.TaleQuestGenerateDebrisTypeForVoyageRankStepDesc
+// 0x0028 (0x0058 - 0x0030)
+class UTaleQuestGenerateDebrisTypeForVoyageRankStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableInt                           VoyageRank;                                               // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActorAssetTypeArray           DebrisTypeArray;                                          // 0x0040(0x0010) (Edit)
+	class UDebrisForVoyageRankDescAsset*               DebrisForRankDescAsset;                                   // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestGenerateDebrisTypeForVoyageRankStepDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStep
 // 0x0028 (0x0090 - 0x0068)
 class UTaleQuestGenerateLootDescForVoyageRankStep : public UTaleQuestStep
@@ -714,6 +765,40 @@ public:
 };
 
 
+// Class LostShipmentsClueFramework.TaleQuestSpawnDebrisAtClueSiteStep
+// 0x0048 (0x00B0 - 0x0068)
+class UTaleQuestSpawnDebrisAtClueSiteStep : public UTaleQuestStep
+{
+public:
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0068(0x0048) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestSpawnDebrisAtClueSiteStep"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.TaleQuestSpawnDebrisAtClueSiteStepDesc
+// 0x0030 (0x0060 - 0x0030)
+class UTaleQuestSpawnDebrisAtClueSiteStepDesc : public UTaleQuestStepDesc
+{
+public:
+	struct FQuestVariableClueSite                      ClueSiteVar;                                              // 0x0030(0x0010) (Edit)
+	struct FQuestVariableActorAssetType                DebrisTypeVar;                                            // 0x0040(0x0010) (Edit)
+	struct FQuestVariableActor                         OutDebrisActorVar;                                        // 0x0050(0x0010) (Edit)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestSpawnDebrisAtClueSiteStepDesc"));
+		return ptr;
+	}
+
+};
+
+
 // Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStep
 // 0x0000 (0x0068 - 0x0068)
 class UTaleQuestSpawnLootItemInClueSiteStep : public UTaleQuestStep
@@ -810,6 +895,22 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.TaleQuestUpdateBuoyancyAutoSinkSettingForItemStepDesc"));
+		return ptr;
+	}
+
+};
+
+
+// Class LostShipmentsClueFramework.WeightedDebrisDataAsset
+// 0x0010 (0x0038 - 0x0028)
+class UWeightedDebrisDataAsset : public UDataAsset
+{
+public:
+	TArray<struct FWeightedDebris>                     Debris;                                                   // 0x0028(0x0010) (Edit, ZeroConstructor)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class LostShipmentsClueFramework.WeightedDebrisDataAsset"));
 		return ptr;
 	}
 

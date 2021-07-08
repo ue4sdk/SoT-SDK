@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass gmp_wrld_res_wood1_fruit2_01_a.gmp_wrld_res_wood1_fruit2_01_a_C
-// 0x0018 (0x04A0 - 0x0488)
+// 0x0018 (0x0410 - 0x03F8)
 class Agmp_wrld_res_wood1_fruit2_01_a_C : public ACluster
 {
 public:
-	class UClusterStaticMeshComponent*                 ClusterStaticMeshBanana2;                                 // 0x0488(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClusterStaticMeshComponent*                 ClusterStaticMeshBanana1;                                 // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UClusterStaticMeshComponent*                 ClusterStaticMeshWood;                                    // 0x0498(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClusterStaticMeshComponent*                 ClusterStaticMeshBanana2;                                 // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClusterStaticMeshComponent*                 ClusterStaticMeshBanana1;                                 // 0x0400(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UClusterStaticMeshComponent*                 ClusterStaticMeshWood;                                    // 0x0408(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

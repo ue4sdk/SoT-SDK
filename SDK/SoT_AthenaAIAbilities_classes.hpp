@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -127,6 +127,30 @@ public:
 };
 
 
+// Class AthenaAIAbilities.BurrowHealVFXComponent
+// 0x0050 (0x0118 - 0x00C8)
+class UBurrowHealVFXComponent : public UActorComponent
+{
+public:
+	class UParticleSystem*                             VFXAsset;                                                 // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FName                                       VfxSocketName;                                            // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              VFXDuration;                                              // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
+	class UParticleSystemComponent*                    SpawnedVFXSystem;                                         // 0x00E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	bool                                               IsVFXActive;                                              // 0x00E8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2F];                                      // 0x00E9(0x002F) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.BurrowHealVFXComponent"));
+		return ptr;
+	}
+
+
+	void OnRep_IsVFXActive();
+};
+
+
 // Class AthenaAIAbilities.CoralShieldStatus
 // 0x0000 (0x0030 - 0x0030)
 class UCoralShieldStatus : public UStatusBase
@@ -235,17 +259,19 @@ public:
 
 
 // Class AthenaAIAbilities.ElectricShieldBuffComponent
-// 0x0098 (0x0160 - 0x00C8)
+// 0x00F0 (0x01B8 - 0x00C8)
 class UElectricShieldBuffComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
 	class UParticleSystem*                             ShieldVFXAsset;                                           // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	struct FName                                       VfxSocketName;                                            // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsShieldActive;                                           // 0x00E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
-	class UParticleSystemComponent*                    ShieldEffectComponent;                                    // 0x00E8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x70];                                      // 0x00F0(0x0070) MISSED OFFSET
+	class UWwiseEvent*                                 StartAudioLoopEvent;                                      // 0x00E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	class UWwiseEvent*                                 StopAudioLoopEvent;                                       // 0x00E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsShieldActive;                                           // 0x00F0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x7];                                       // 0x00F1(0x0007) MISSED OFFSET
+	class UParticleSystemComponent*                    ShieldEffectComponent;                                    // 0x00F8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData02[0xB8];                                      // 0x0100(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -443,15 +469,15 @@ public:
 };
 
 
-// Class AthenaAIAbilities.MeleeStaticCollisionInterface
+// Class AthenaAIAbilities.MeleeCollisionAwarenessInterface
 // 0x0000 (0x0028 - 0x0028)
-class UMeleeStaticCollisionInterface : public UInterface
+class UMeleeCollisionAwarenessInterface : public UInterface
 {
 public:
 
 	static UClass* StaticClass()
 	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.MeleeStaticCollisionInterface"));
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.MeleeCollisionAwarenessInterface"));
 		return ptr;
 	}
 
@@ -530,6 +556,36 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.StatusResponseActivateElectricShield"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.StatusResponseShowBurrowHealVFX
+// 0x0000 (0x0030 - 0x0030)
+class UStatusResponseShowBurrowHealVFX : public UStatusResponse
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.StatusResponseShowBurrowHealVFX"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaAIAbilities.StatusResponseShowCoralShieldVFX
+// 0x0000 (0x0030 - 0x0030)
+class UStatusResponseShowCoralShieldVFX : public UStatusResponse
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaAIAbilities.StatusResponseShowCoralShieldVFX"));
 		return ptr;
 	}
 

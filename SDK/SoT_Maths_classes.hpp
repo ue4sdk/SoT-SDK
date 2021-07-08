@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -173,6 +173,7 @@ public:
 	static float MoveTowards(float From, float To, float Speed, float Time);
 	static float Map(float ValueToMapFrom, float FromRangeStart, float FromRangeEnd, float ToRangeStart, float ToRangeEnd, bool Clamp);
 	static bool IncrementCounter(float Delta, float CounterMax, float* Counter);
+	static float GetShortestSignedDistanceBetweenPointsInWrappedRange(float FromValue, float ToValue, float LowerLimit, float UpperLimit);
 	static float FindMidpointInWrappedRange(float Value1, float Value2, float LowerLimit, float UpperLimit);
 	static float Bound(float ValueToBound, float Bound1, float Bound2);
 };

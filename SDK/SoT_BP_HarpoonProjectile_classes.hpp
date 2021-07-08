@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_HarpoonProjectile.BP_HarpoonProjectile_C
-// 0x0000 (0x0760 - 0x0760)
+// 0x0000 (0x0700 - 0x0700)
 class ABP_HarpoonProjectile_C : public AHarpoonProjectile
 {
 public:

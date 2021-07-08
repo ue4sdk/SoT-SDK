@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -94,6 +94,7 @@ public:
 	void TeleportToHideout();
 	void TeleportToAggressiveGhostShipEncounter();
 	void TeleportShip(float X, float Y, float Z);
+	void TeleportPlayerToSpireLocation(int SpireIndex);
 	void TeleportPlayerToSafety();
 	void TeleportPlayerToOffsetAndReturn(float OffsetX, float OffsetY, float OffsetZ, float ReturnTime);
 	void TeleportPlayerToKraken();
@@ -468,6 +469,7 @@ public:
 	void EndDemoSession();
 	void EnableVoiceChatMeteringForOutgoingSignals(bool Enabled);
 	void EnableVoiceChatMeteringForIncomingSignals(bool Enabled);
+	void EnableStormEffects(unsigned char LockReason);
 	void EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay(int TrueFalse);
 	void EnableNTP(bool Enable);
 	void EnableMermaidSpawning(int Enable);
@@ -508,6 +510,7 @@ public:
 	void DisplayFallDamageDebug(int Enable);
 	void DisplayDrunkenness(bool Flag);
 	void DismissAllPickupPoints();
+	void DisableStormEffects(unsigned char LockReason);
 	void DisableEmergentSirenSpawning();
 	void DisableEmergentSharkSpawning();
 	void DisableConsoleLogging();

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -50,11 +50,11 @@ public:
 
 
 // Class AthenaInput.AnalogInputId
-// 0x0008 (0x0030 - 0x0028)
+// 0x0010 (0x0038 - 0x0028)
 class UAnalogInputId : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -106,7 +106,7 @@ public:
 
 
 // Class AthenaInput.TestAnalogInputId
-// 0x0000 (0x0030 - 0x0030)
+// 0x0000 (0x0038 - 0x0038)
 class UTestAnalogInputId : public UAnalogInputId
 {
 public:
@@ -121,7 +121,7 @@ public:
 
 
 // Class AthenaInput.TestAnalogInput2Id
-// 0x0000 (0x0030 - 0x0030)
+// 0x0000 (0x0038 - 0x0038)
 class UTestAnalogInput2Id : public UAnalogInputId
 {
 public:
@@ -190,7 +190,7 @@ public:
 
 
 // Class AthenaInput.MockInputHandlerCharacter
-// 0x0000 (0x0630 - 0x0630)
+// 0x0000 (0x05D0 - 0x05D0)
 class AMockInputHandlerCharacter : public ACharacter
 {
 public:
@@ -238,6 +238,21 @@ public:
 };
 
 
+// Class AthenaInput.CrewNameplatesToggleInputId
+// 0x0000 (0x0038 - 0x0038)
+class UCrewNameplatesToggleInputId : public UNotificationInputId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaInput.CrewNameplatesToggleInputId"));
+		return ptr;
+	}
+
+};
+
+
 // Class AthenaInput.OpenQuickMenuNotificationInputId
 // 0x0000 (0x0038 - 0x0038)
 class UOpenQuickMenuNotificationInputId : public UNotificationInputId
@@ -277,6 +292,21 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaInput.ReleasedNotificationInputId"));
+		return ptr;
+	}
+
+};
+
+
+// Class AthenaInput.ScrambleGamertagsToggleInputId
+// 0x0000 (0x0038 - 0x0038)
+class UScrambleGamertagsToggleInputId : public UNotificationInputId
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class AthenaInput.ScrambleGamertagsToggleInputId"));
 		return ptr;
 	}
 

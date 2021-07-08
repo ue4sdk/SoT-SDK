@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -62,6 +62,13 @@ struct FEmissaryQuestCompanyActionRewardBoostEvent
 struct FEmissaryCompanyChangedEvent
 {
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
+};
+
+// ScriptStruct EmissaryFramework.EmissaryLedgerVisited
+// 0x0010
+struct FEmissaryLedgerVisited
+{
+	class FString                                      CompanyId;                                                // 0x0000(0x0010) (ZeroConstructor)
 };
 
 }

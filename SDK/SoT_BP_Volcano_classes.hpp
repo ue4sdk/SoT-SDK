@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Volcano.BP_Volcano_C
-// 0x0000 (0x05F8 - 0x05F8)
+// 0x0000 (0x0598 - 0x0598)
 class ABP_Volcano_C : public AVolcano
 {
 public:

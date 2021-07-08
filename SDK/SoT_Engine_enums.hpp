@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -3639,6 +3639,29 @@ enum class ESpawnEventGroupNames : uint8_t
 	SpawnEventGroupReplacemnent    = 4,
 	SpawnEventGroup_MAX            = 5,
 	ESpawnEventGroupNames_MAX      = 6
+};
+
+
+// Enum Engine.EFFTWaterKillPointLocation
+enum class EFFTWaterKillPointLocation : uint8_t
+{
+	FFTWaterKillPointLocation_LowerBound = 0,
+	FFTWaterKillPointLocation_Center = 1,
+	FFTWaterKillPointLocation_UpperBound = 2,
+	FFTWaterKillPointLocation_MAX  = 3
+};
+
+
+// Enum Engine.EFFTWaterKillPointGroupName
+enum class EFFTWaterKillPointGroupName : uint8_t
+{
+	FFTWaterKillPointGroupB        = 0,
+	FFTWaterKillPointGroupC        = 1,
+	FFTWaterKillPointGroupD        = 2,
+	FFTWaterKillPointGroupE        = 3,
+	FFTWaterKillPointGroupReplacement = 4,
+	FFTWaterKillPointGroup_MAX     = 5,
+	EFFTWaterKillPointGroupName_MAX = 6
 };
 
 

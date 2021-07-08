@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Drum.BP_Drum_C
-// 0x0000 (0x08B0 - 0x08B0)
+// 0x0000 (0x0850 - 0x0850)
 class ABP_Drum_C : public AMusicalInstrumentStaticMesh
 {
 public:

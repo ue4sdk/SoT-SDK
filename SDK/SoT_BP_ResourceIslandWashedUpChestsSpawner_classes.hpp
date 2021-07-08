@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ResourceIslandWashedUpChestsSpawner.BP_ResourceIslandWashedUpChestsSpawner_C
-// 0x0000 (0x0550 - 0x0550)
+// 0x0000 (0x0590 - 0x0590)
 class UBP_ResourceIslandWashedUpChestsSpawner_C : public USalvageItemSpawnComponent
 {
 public:

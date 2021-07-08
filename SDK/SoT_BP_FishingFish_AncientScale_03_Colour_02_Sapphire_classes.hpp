@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_AncientScale_03_Colour_02_Sapphire.BP_FishingFish_AncientScale_03_Colour_02_Sapphire_C
-// 0x0000 (0x0920 - 0x0920)
+// 0x0000 (0x0910 - 0x0910)
 class ABP_FishingFish_AncientScale_03_Colour_02_Sapphire_C : public ABP_FishingFish_AncientScale_03_C
 {
 public:

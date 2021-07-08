@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,18 +15,18 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class Retraction.RetractableComponent
-// 0x0068 (0x0130 - 0x00C8)
+// 0x0038 (0x0100 - 0x00C8)
 class URetractableComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x58];                                      // 0x00C8(0x0058) MISSED OFFSET
-	struct FName                                       FeatureToggle;                                            // 0x0120(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRetractorOrientationAdjustmentFlags        OrientationAdjustmentOnRetractFlags;                      // 0x0128(0x0003) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EAxis>                                 RetractorBoxAxis;                                         // 0x012B(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ShouldAutoReleaseOnSuccessfulRetract;                     // 0x012C(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               MigrateAttachedWithRetractor;                             // 0x012D(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               WasSimulatingPhysicsBeforeRetract;                        // 0x012E(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x1];                                       // 0x012F(0x0001) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x28];                                      // 0x00C8(0x0028) MISSED OFFSET
+	struct FName                                       FeatureToggle;                                            // 0x00F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FRetractorOrientationAdjustmentFlags        OrientationAdjustmentOnRetractFlags;                      // 0x00F8(0x0003) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EAxis>                                 RetractorBoxAxis;                                         // 0x00FB(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ShouldAutoReleaseOnSuccessfulRetract;                     // 0x00FC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               MigrateAttachedWithRetractor;                             // 0x00FD(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               WasSimulatingPhysicsBeforeRetract;                        // 0x00FE(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x00FF(0x0001) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -83,11 +83,11 @@ public:
 
 
 // Class Retraction.RetractableFloatingBarrelComponent
-// 0x0010 (0x0140 - 0x0130)
+// 0x0010 (0x0110 - 0x0100)
 class URetractableFloatingBarrelComponent : public URetractableComponent
 {
 public:
-	TScriptInterface<class UBuoyancyInterface>         OwnerBuoyancyInterface;                                   // 0x0130(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
+	TScriptInterface<class UBuoyancyInterface>         OwnerBuoyancyInterface;                                   // 0x0100(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

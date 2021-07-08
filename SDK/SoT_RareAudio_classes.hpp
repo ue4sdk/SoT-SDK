@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,54 +47,16 @@ public:
 };
 
 
-// Class RareAudio.WwiseObjectPoolWrapper
-// 0x0058 (0x0080 - 0x0028)
-class UWwiseObjectPoolWrapper : public UObject
-{
-public:
-	struct FName                                       PoolName;                                                 // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                MaxResources;                                             // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                MaxProxies;                                               // 0x0034(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableOcclusion;                                         // 0x0038(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableReverb;                                            // 0x0039(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
-	struct FWwiseNativeEmitterPoolDensityParams        PoolDensityParams;                                        // 0x0040(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseObjectPoolWrapper"));
-		return ptr;
-	}
-
-};
-
-
-// Class RareAudio.WwiseObjectPoolWrapperMock
-// 0x0018 (0x0098 - 0x0080)
-class UWwiseObjectPoolWrapperMock : public UWwiseObjectPoolWrapper
-{
-public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0080(0x0018) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseObjectPoolWrapperMock"));
-		return ptr;
-	}
-
-};
-
-
 // Class RareAudio.AnimNotify_WwiseSound
-// 0x0018 (0x0048 - 0x0030)
+// 0x0038 (0x0070 - 0x0038)
 class UAnimNotify_WwiseSound : public UAnimNotify
 {
 public:
-	class UWwiseEvent*                                 WwiseEvent;                                               // 0x0030(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               OwnedByWorld;                                             // 0x0038(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0039(0x0007) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     OwnedByWorldWisePoolToUse;                                // 0x0040(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WwiseEvent;                                               // 0x0038(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               OwnedByWorld;                                             // 0x0040(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+	class UWwiseObjectPoolWrapper*                     OwnedByWorldWisePoolToUse;                                // 0x0048(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0050(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -106,12 +68,12 @@ public:
 
 
 // Class RareAudio.AnimNotify_WwiseSoundMeshSwitch
-// 0x0018 (0x0060 - 0x0048)
+// 0x0018 (0x0088 - 0x0070)
 class UAnimNotify_WwiseSoundMeshSwitch : public UAnimNotify_WwiseSound
 {
 public:
-	struct FName                                       SkeletalMeshSwitchGroup;                                  // 0x0048(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FAnimNotify_SoundSwitch>             MeshOverrides;                                            // 0x0050(0x0010) (Edit, BlueprintReadOnly, ZeroConstructor)
+	struct FName                                       SkeletalMeshSwitchGroup;                                  // 0x0070(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<struct FAnimNotify_SoundSwitch>             MeshOverrides;                                            // 0x0078(0x0010) (Edit, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -141,11 +103,11 @@ public:
 
 
 // Class RareAudio.AudioEventToComponentMap
-// 0x0008 (0x0438 - 0x0430)
+// 0x0008 (0x03D8 - 0x03D0)
 class AAudioEventToComponentMap : public AActor
 {
 public:
-	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x0430(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x03D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -246,8 +208,31 @@ public:
 };
 
 
+// Class RareAudio.WwiseObjectPoolWrapper
+// 0x0058 (0x0080 - 0x0028)
+class UWwiseObjectPoolWrapper : public UObject
+{
+public:
+	struct FName                                       PoolName;                                                 // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                MaxResources;                                             // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	int                                                MaxProxies;                                               // 0x0034(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableOcclusion;                                         // 0x0038(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableReverb;                                            // 0x0039(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
+	struct FWwiseNativeEmitterPoolDensityParams        PoolDensityParams;                                        // 0x0040(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class RareAudio.WwiseObjectPoolWrapper"));
+		return ptr;
+	}
+
+};
+
+
 // Class RareAudio.AudioIslandStaticMeshAssociatorBase
-// 0x0000 (0x0430 - 0x0430)
+// 0x0000 (0x03D0 - 0x03D0)
 class AAudioIslandStaticMeshAssociatorBase : public AActor
 {
 public:
@@ -322,10 +307,12 @@ public:
 
 
 // Class RareAudio.AudioSpaceComponent
-// 0x0000 (0x05C0 - 0x05C0)
+// 0x0010 (0x05F0 - 0x05E0)
 class UAudioSpaceComponent : public UStaticMeshComponent
 {
 public:
+	class UAudioSpaceDataAsset*                        AudioSpace;                                               // 0x05E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05E8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -47,13 +47,13 @@ public:
 
 
 // Class NetworkRegions.RegionAssetCacheActor
-// 0x0040 (0x0470 - 0x0430)
+// 0x0040 (0x0410 - 0x03D0)
 class ARegionAssetCacheActor : public AActor
 {
 public:
-	TArray<struct FRegionAssetsList>                   RegionData;                                               // 0x0430(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<class UObject*>                             LoadedAssets;                                             // 0x0440(0x0010) (ZeroConstructor, Transient)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0450(0x0020) MISSED OFFSET
+	TArray<struct FRegionAssetsList>                   RegionData;                                               // 0x03D0(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<class UObject*>                             LoadedAssets;                                             // 0x03E0(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x03F0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

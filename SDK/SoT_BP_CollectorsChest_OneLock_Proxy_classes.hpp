@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_CollectorsChest_OneLock_Proxy.BP_CollectorsChest_OneLock_Proxy_C
-// 0x0000 (0x0999 - 0x0999)
+// 0x0000 (0x0939 - 0x0939)
 class ABP_CollectorsChest_OneLock_Proxy_C : public ABP_BaseLockableCollectorsChest_Proxy_C
 {
 public:

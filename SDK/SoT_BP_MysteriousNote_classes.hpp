@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MysteriousNote.BP_MysteriousNote_C
-// 0x0000 (0x0980 - 0x0980)
+// 0x0000 (0x0920 - 0x0920)
 class ABP_MysteriousNote_C : public AWieldableMysteriousNote
 {
 public:

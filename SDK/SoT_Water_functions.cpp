@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -406,22 +406,6 @@ struct FWaterInformation UWaterInterface::GetActorWaterInformation(class AActor*
 void AFFTWaterService::OnRep_FFTWaterComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterService.OnRep_FFTWaterComponent"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Water.FFTWaterService.OnRep_FFTWaterActor
-// (Final, Native, Public)
-
-void AFFTWaterService::OnRep_FFTWaterActor()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Water.FFTWaterService.OnRep_FFTWaterActor"));
 
 	struct
 	{

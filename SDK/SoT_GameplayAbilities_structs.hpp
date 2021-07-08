@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -10,8 +10,8 @@
 #include "SoT_GameplayAbilities_enums.hpp"
 #include "SoT_GameplayTasks_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_CoreUObject_classes.hpp"
 #include "SoT_GameplayTags_classes.hpp"
+#include "SoT_CoreUObject_classes.hpp"
 
 namespace SDK
 {
@@ -447,7 +447,7 @@ struct FGameplayEffectSpec
 };
 
 // ScriptStruct GameplayAbilities.ActiveGameplayEffect
-// 0x0328 (0x0330 - 0x0008)
+// 0x02F8 (0x0300 - 0x0008)
 struct FActiveGameplayEffect : public FFastArraySerializerItem
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
@@ -457,16 +457,16 @@ struct FActiveGameplayEffect : public FFastArraySerializerItem
 	float                                              CachedStartServerWorldTime;                               // 0x02CC(0x0004) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	float                                              StartWorldTime;                                           // 0x02D0(0x0004) (ZeroConstructor, IsPlainOldData, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	bool                                               bIsInhibited;                                             // 0x02D4(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x5B];                                      // 0x02D5(0x005B) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x2B];                                      // 0x02D5(0x002B) MISSED OFFSET
 };
 
 // ScriptStruct GameplayAbilities.ActiveGameplayEffectsContainer
-// 0x0320 (0x03C8 - 0x00A8)
+// 0x02C0 (0x0368 - 0x00A8)
 struct FActiveGameplayEffectsContainer : public FFastArraySerializer
 {
-	unsigned char                                      UnknownData00[0x50];                                      // 0x00A8(0x0050) MISSED OFFSET
-	TArray<struct FActiveGameplayEffect>               GameplayEffects_Internal;                                 // 0x00F8(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x2C0];                                     // 0x0108(0x02C0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x00A8(0x0020) MISSED OFFSET
+	TArray<struct FActiveGameplayEffect>               GameplayEffects_Internal;                                 // 0x00C8(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData01[0x290];                                     // 0x00D8(0x0290) MISSED OFFSET
 };
 
 // ScriptStruct GameplayAbilities.ActiveGameplayCue

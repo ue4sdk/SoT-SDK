@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -18,6 +18,22 @@ namespace SDK
 void ADrawDebugService::OnRep_PersistentShapeChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaDebug.DrawDebugService.OnRep_PersistentShapeChanged"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaDebug.DrawDebugService.OnRep_IsDrawDebugActiveChanged
+// (Final, Native, Private)
+
+void ADrawDebugService::OnRep_IsDrawDebugActiveChanged()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaDebug.DrawDebugService.OnRep_IsDrawDebugActiveChanged"));
 
 	struct
 	{

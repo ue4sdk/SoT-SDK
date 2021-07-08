@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -13,6 +13,21 @@ namespace SDK
 //---------------------------------------------------------------------------
 //Classes
 //---------------------------------------------------------------------------
+
+// Class WwiseAudio.AnimNotifyWwiseEmitterComponentRetrievalInterface
+// 0x0000 (0x0028 - 0x0028)
+class UAnimNotifyWwiseEmitterComponentRetrievalInterface : public UInterface
+{
+public:
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.AnimNotifyWwiseEmitterComponentRetrievalInterface"));
+		return ptr;
+	}
+
+};
+
 
 // Class WwiseAudio.WwiseEvent
 // 0x0028 (0x0050 - 0x0028)
@@ -42,21 +57,6 @@ public:
 	TEnumAsByte<EWwiseEventDurationType> GetDurationType();
 	float GetDurationMin();
 	float GetDurationMax();
-};
-
-
-// Class WwiseAudio.AnimNotifyWwiseEmitterComponentRetrievalInterface
-// 0x0000 (0x0028 - 0x0028)
-class UAnimNotifyWwiseEmitterComponentRetrievalInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class WwiseAudio.AnimNotifyWwiseEmitterComponentRetrievalInterface"));
-		return ptr;
-	}
-
 };
 
 
@@ -143,7 +143,7 @@ public:
 
 
 // Class WwiseAudio.WwiseAudioSettings
-// 0x03D8 (0x0400 - 0x0028)
+// 0x03E0 (0x0408 - 0x0028)
 class UWwiseAudioSettings : public UObject
 {
 public:
@@ -171,15 +171,16 @@ public:
 	class UWwiseEvent*                                 PauseEventStartInstance;                                  // 0x0318(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class UWwiseEvent*                                 PauseEventReleaseInstance;                                // 0x0320(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	class UWwiseEvent*                                 StopAllEventInstance;                                     // 0x0328(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x50];                                      // 0x0330(0x0050) MISSED OFFSET
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendStartInstance;                      // 0x0380(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendEndInstance;                        // 0x0390(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnStartEngagementInstance;                    // 0x03A0(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnEndEngagementInstance;                      // 0x03B0(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingStartInstance;                       // 0x03C0(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingEndInstance;                         // 0x03D0(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingStartInstance;             // 0x03E0(0x0010) (ZeroConstructor, Transient)
-	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingEndInstance;               // 0x03F0(0x0010) (ZeroConstructor, Transient)
+	class UWwiseObjectPoolWrapper*                     AnimNotifyPoolInstance;                                   // 0x0330(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x50];                                      // 0x0338(0x0050) MISSED OFFSET
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendStartInstance;                      // 0x0388(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontendEndInstance;                        // 0x0398(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnStartEngagementInstance;                    // 0x03A8(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnEndEngagementInstance;                      // 0x03B8(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingStartInstance;                       // 0x03C8(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnLoadingEndInstance;                         // 0x03D8(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingStartInstance;             // 0x03E8(0x0010) (ZeroConstructor, Transient)
+	TArray<class UWwiseEvent*>                         EventsToPlayOnFrontEndOrLoadingEndInstance;               // 0x03F8(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{
@@ -373,11 +374,11 @@ public:
 
 
 // Class WwiseAudio.WwisePoolManager
-// 0x00A8 (0x00D0 - 0x0028)
+// 0x00D0 (0x00F8 - 0x0028)
 class UWwisePoolManager : public UObject
 {
 public:
-	unsigned char                                      UnknownData00[0xA8];                                      // 0x0028(0x00A8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xD0];                                      // 0x0028(0x00D0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

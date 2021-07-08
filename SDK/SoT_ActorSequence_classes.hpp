@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -52,7 +52,7 @@ public:
 
 
 // Class ActorSequence.ActorSequencePlayer
-// 0x0000 (0x0660 - 0x0660)
+// 0x0000 (0x0600 - 0x0600)
 class UActorSequencePlayer : public UMovieSceneSequencePlayer
 {
 public:

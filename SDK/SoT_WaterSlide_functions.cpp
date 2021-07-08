@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -61,54 +61,6 @@ void AWaterSlide::ComponentBeginOverlapCallBack(class AActor* InOtherActor, clas
 	params.InSweepResult = InSweepResult;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function WaterSlide.WaterSlideCompositeInputHandler.OnMoveRight
-// (Final, Native, Private)
-// Parameters:
-// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EInputHandlerResult> UWaterSlideCompositeInputHandler::OnMoveRight(float Value)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WaterSlide.WaterSlideCompositeInputHandler.OnMoveRight"));
-
-	struct
-	{
-		float                          Value;
-		TEnumAsByte<EInputHandlerResult> ReturnValue;
-	} params;
-
-	params.Value = Value;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
-}
-
-
-// Function WaterSlide.WaterSlideCompositeInputHandler.OnMoveForward
-// (Final, Native, Private)
-// Parameters:
-// float                          Value                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EInputHandlerResult> UWaterSlideCompositeInputHandler::OnMoveForward(float Value)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WaterSlide.WaterSlideCompositeInputHandler.OnMoveForward"));
-
-	struct
-	{
-		float                          Value;
-		TEnumAsByte<EInputHandlerResult> ReturnValue;
-	} params;
-
-	params.Value = Value;
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 

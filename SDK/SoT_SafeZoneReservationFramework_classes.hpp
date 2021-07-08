@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,40 +15,41 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class SafeZoneReservationFramework.SafeZoneComponent
-// 0x0110 (0x0690 - 0x0580)
+// 0x0130 (0x06D0 - 0x05A0)
 class USafeZoneComponent : public UCapsuleComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0580(0x0008) MISSED OFFSET
-	float                                              ExclusionRadius;                                          // 0x0588(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x058C(0x0004) MISSED OFFSET
-	struct FName                                       SafeZoneEmptyCollisionProfile;                            // 0x0590(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               AutoActivateSafeZone;                                     // 0x0598(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               DeactivateSafeZoneAfterExclusionRadiusIsEmpty;            // 0x0599(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               UsePlayerTeleport;                                        // 0x059A(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x1];                                       // 0x059B(0x0001) MISSED OFFSET
-	float                                              PlayerTeleportRadius;                                     // 0x059C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x4];                                       // 0x05A0(0x0004) MISSED OFFSET
-	bool                                               UseRepelForce;                                            // 0x05A4(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x3];                                       // 0x05A5(0x0003) MISSED OFFSET
-	float                                              RepelForceRadius;                                         // 0x05A8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData05[0x4];                                       // 0x05AC(0x0004) MISSED OFFSET
-	float                                              RepelForceExtents;                                        // 0x05B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RepelForceMin;                                            // 0x05B4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RepelForceMax;                                            // 0x05B8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               ApplyRepelForceAtCentreOfMass;                            // 0x05BC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData06[0x3];                                       // 0x05BD(0x0003) MISSED OFFSET
-	struct FRuntimeFloatCurve                          RepelForceGradientCurve;                                  // 0x05C0(0x0080) (Edit, DisableEditOnInstance)
-	bool                                               UseAngularImpulse;                                        // 0x0640(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData07[0x3];                                       // 0x0641(0x0003) MISSED OFFSET
-	float                                              AngularImpulseRadius;                                     // 0x0644(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData08[0x4];                                       // 0x0648(0x0004) MISSED OFFSET
-	float                                              AngularImpulseForce;                                      // 0x064C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              TargetDeflectionAngle;                                    // 0x0650(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsSafeZoneEmpty;                                          // 0x0654(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData09[0x3];                                       // 0x0655(0x0003) MISSED OFFSET
-	struct FName                                       CurrentCollisionProfile;                                  // 0x0658(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData10[0x30];                                      // 0x0660(0x0030) MISSED OFFSET
+	struct FScriptMulticastDelegate                    OnSafeZoneIsEmptyDelegate;                                // 0x05A0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	float                                              ExclusionRadius;                                          // 0x05B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x05B4(0x0004) MISSED OFFSET
+	struct FName                                       SafeZoneEmptyCollisionProfile;                            // 0x05B8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               AutoActivateSafeZone;                                     // 0x05C0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               DeactivateSafeZoneAfterExclusionRadiusIsEmpty;            // 0x05C1(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               UsePlayerTeleport;                                        // 0x05C2(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x1];                                       // 0x05C3(0x0001) MISSED OFFSET
+	float                                              PlayerTeleportRadius;                                     // 0x05C4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x05C8(0x0004) MISSED OFFSET
+	bool                                               UseRepelForce;                                            // 0x05CC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x3];                                       // 0x05CD(0x0003) MISSED OFFSET
+	float                                              RepelForceRadius;                                         // 0x05D0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x4];                                       // 0x05D4(0x0004) MISSED OFFSET
+	float                                              RepelForceExtents;                                        // 0x05D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RepelForceMin;                                            // 0x05DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              RepelForceMax;                                            // 0x05E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               ApplyRepelForceAtCentreOfMass;                            // 0x05E4(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData05[0x3];                                       // 0x05E5(0x0003) MISSED OFFSET
+	struct FRuntimeFloatCurve                          RepelForceGradientCurve;                                  // 0x05E8(0x0080) (Edit, DisableEditOnInstance)
+	bool                                               UseAngularImpulse;                                        // 0x0668(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData06[0x3];                                       // 0x0669(0x0003) MISSED OFFSET
+	float                                              AngularImpulseRadius;                                     // 0x066C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData07[0x4];                                       // 0x0670(0x0004) MISSED OFFSET
+	float                                              AngularImpulseForce;                                      // 0x0674(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              TargetDeflectionAngle;                                    // 0x0678(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsSafeZoneEmpty;                                          // 0x067C(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData08[0x3];                                       // 0x067D(0x0003) MISSED OFFSET
+	struct FName                                       CurrentCollisionProfile;                                  // 0x0680(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ESafeZoneState>                        SafeZoneState;                                            // 0x0688(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData09[0x47];                                      // 0x0689(0x0047) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Innkeeper_Tasha.BP_Innkeeper_Tasha_C
-// 0x0000 (0x0668 - 0x0668)
+// 0x0000 (0x0610 - 0x0610)
 class ABP_Innkeeper_Tasha_C : public ABP_Innkeeper_C
 {
 public:

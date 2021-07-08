@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_speaking_trumpet_ash_01_a_Wieldable.BP_tls_speaking_trumpet_ash_01_a_Wieldable_C
-// 0x0000 (0x0840 - 0x0840)
+// 0x0000 (0x07A0 - 0x07A0)
 class ABP_tls_speaking_trumpet_ash_01_a_Wieldable_C : public ABP_Speaking_Trumpet_C
 {
 public:

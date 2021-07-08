@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_TreasureChest_Wieldable_Common.BP_TreasureChest_Wieldable_Common_C
-// 0x0000 (0x0890 - 0x0890)
+// 0x0000 (0x0830 - 0x0830)
 class ABP_TreasureChest_Wieldable_Common_C : public ABP_TreasureChest_GoldHoarderLocked_Base_Wieldable_C
 {
 public:

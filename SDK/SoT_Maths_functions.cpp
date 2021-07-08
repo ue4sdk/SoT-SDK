@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -934,6 +934,40 @@ bool UFloatMaths::IncrementCounter(float Delta, float CounterMax, float* Counter
 
 	if (Counter != nullptr)
 		*Counter = params.Counter;
+
+	return params.ReturnValue;
+}
+
+
+// Function Maths.FloatMaths.GetShortestSignedDistanceBetweenPointsInWrappedRange
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// float                          FromValue                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          ToValue                        (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// float                          LowerLimit                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          UpperLimit                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float UFloatMaths::GetShortestSignedDistanceBetweenPointsInWrappedRange(float FromValue, float ToValue, float LowerLimit, float UpperLimit)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Maths.FloatMaths.GetShortestSignedDistanceBetweenPointsInWrappedRange"));
+
+	struct
+	{
+		float                          FromValue;
+		float                          ToValue;
+		float                          LowerLimit;
+		float                          UpperLimit;
+		float                          ReturnValue;
+	} params;
+
+	params.FromValue = FromValue;
+	params.ToValue = ToValue;
+	params.LowerLimit = LowerLimit;
+	params.UpperLimit = UpperLimit;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
 }

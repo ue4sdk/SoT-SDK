@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -131,6 +131,38 @@ void AKrakenHead::RequestState(class UClass* NewState)
 	} params;
 
 	params.NewState = NewState;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Kraken.KrakenHead.OnRep_IsDamageEnabled
+// (Final, Native, Protected)
+
+void AKrakenHead::OnRep_IsDamageEnabled()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.KrakenHead.OnRep_IsDamageEnabled"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Kraken.KrakenHead.OnRep_HeadStateRequest
+// (Final, Native, Protected)
+
+void AKrakenHead::OnRep_HeadStateRequest()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Kraken.KrakenHead.OnRep_HeadStateRequest"));
+
+	struct
+	{
+	} params;
+
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9,8 +9,8 @@
 #include "SoT_Basic.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_AthenaInput_classes.hpp"
 
 namespace SDK
@@ -20,7 +20,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // ScriptStruct WaterSlide.WaterSlideParams
-// 0x001C
+// 0x0024
 struct FWaterSlideParams
 {
 	float                                              ForwardSpeed;                                             // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -29,7 +29,7 @@ struct FWaterSlideParams
 	float                                              VeeringSpeed;                                             // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              LeftVeeringDistance;                                      // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              RightVeeringDistance;                                     // 0x0014(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              DistanceAboveSlideOffset;                                 // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	struct FPlayerStat                                 StatToFireForRouteChange;                                 // 0x0018(0x000C) (Edit)
 };
 
 // ScriptStruct WaterSlide.WaterSlideActionStateConstructionInfo
@@ -50,31 +50,34 @@ struct FWaterSlideActionStateParams
 };
 
 // ScriptStruct WaterSlide.OnPlayerSpeedOnWaterSlideChangedActionStateEvent
-// 0x0004
+// 0x000C
 struct FOnPlayerSpeedOnWaterSlideChangedActionStateEvent
 {
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0000(0x0004) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC];                                       // 0x0000(0x000C) MISSED OFFSET
 };
 
 // ScriptStruct WaterSlide.OnPlayerChangedWaterSlideRouteActionStateEvent
-// 0x0001
+// 0x0010
 struct FOnPlayerChangedWaterSlideRouteActionStateEvent
 {
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	class UWwiseEvent*                                 WaterSlideChangeForkOneShot;                              // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct WaterSlide.OnEndWaterSlideActionStateEvent
-// 0x0001
+// 0x0018
 struct FOnEndWaterSlideActionStateEvent
 {
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
+	class UWwiseEvent*                                 WaterSlideEnd;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	class UWwiseEvent*                                 WaterSlideIsEndOneShot;                                   // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct WaterSlide.OnStartWaterSlideActionStateEvent
-// 0x0001
+// 0x0008
 struct FOnStartWaterSlideActionStateEvent
 {
-	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
+	class UWwiseEvent*                                 WaterSlideStart;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct WaterSlide.OnExitedWaterSlideEvent

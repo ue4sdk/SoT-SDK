@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class ShortRangeMarkerFramework.ShortRangeMarker
-// 0x0058 (0x0488 - 0x0430)
+// 0x0058 (0x0428 - 0x03D0)
 class AShortRangeMarker : public AActor
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0430(0x0010) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            DynamicMaterials;                                         // 0x0440(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient)
-	float                                              LifetimerTimer;                                           // 0x0450(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              FadeTimer;                                                // 0x0454(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FScriptMulticastDelegate                    TriggerFadeIn;                                            // 0x0458(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    TriggerFadeOut;                                           // 0x0468(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	TArray<TWeakObjectPtr<class AActor>>               CachedActors;                                             // 0x0478(0x0010) (ZeroConstructor, Transient)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x03D0(0x0010) MISSED OFFSET
+	TArray<class UMaterialInstanceDynamic*>            DynamicMaterials;                                         // 0x03E0(0x0010) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient)
+	float                                              LifetimerTimer;                                           // 0x03F0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              FadeTimer;                                                // 0x03F4(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FScriptMulticastDelegate                    TriggerFadeIn;                                            // 0x03F8(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	struct FScriptMulticastDelegate                    TriggerFadeOut;                                           // 0x0408(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	TArray<TWeakObjectPtr<class AActor>>               CachedActors;                                             // 0x0418(0x0010) (ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{

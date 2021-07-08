@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2.1) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_MermaidGem_Wieldable_Sapphire.BP_MermaidGem_Wieldable_Sapphire_C
-// 0x0000 (0x07D0 - 0x07D0)
+// 0x0000 (0x0790 - 0x0790)
 class ABP_MermaidGem_Wieldable_Sapphire_C : public ABP_TreasureArtifact_Wieldable_Base_C
 {
 public:

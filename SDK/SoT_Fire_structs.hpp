@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -269,7 +269,7 @@ struct FShipFireLight
 };
 
 // ScriptStruct Fire.ShipFireLightManager
-// 0x0140
+// 0x0150
 struct FShipFireLightManager
 {
 	TArray<struct FShipFireLightRelativeSpawnDesc>     LightSpawnDescs;                                          // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
@@ -285,7 +285,7 @@ struct FShipFireLightManager
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0114(0x0004) MISSED OFFSET
 	class UShipFireLightParamsDataAsset*               LightParams;                                              // 0x0118(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	class UPostProcessComponent*                       ShipPostProcessComponent;                                 // 0x0120(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0128(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x28];                                      // 0x0128(0x0028) MISSED OFFSET
 };
 
 // ScriptStruct Fire.FireGridCharringManager

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -192,13 +192,13 @@ public:
 
 
 // Class GameplayTags.GameplayTagsManager
-// 0x0178 (0x01A0 - 0x0028)
+// 0x0148 (0x0170 - 0x0028)
 class UGameplayTagsManager : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x118];                                     // 0x0028(0x0118) MISSED OFFSET
 	TArray<class UDataTable*>                          GameplayTagTables;                                        // 0x0140(0x0010) (ZeroConstructor)
-	unsigned char                                      UnknownData01[0x50];                                      // 0x0150(0x0050) MISSED OFFSET
+	unsigned char                                      UnknownData01[0x20];                                      // 0x0150(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1048,6 +1048,26 @@ void UAthenaCheatManager::TeleportShip(float X, float Y, float Z)
 	params.X = X;
 	params.Y = Y;
 	params.Z = Z;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.TeleportPlayerToSpireLocation
+// (Final, Exec, Native, Public)
+// Parameters:
+// int                            SpireIndex                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::TeleportPlayerToSpireLocation(int SpireIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.TeleportPlayerToSpireLocation"));
+
+	struct
+	{
+		int                            SpireIndex;
+	} params;
+
+	params.SpireIndex = SpireIndex;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -8036,6 +8056,26 @@ void UAthenaCheatManager::EnableVoiceChatMeteringForIncomingSignals(bool Enabled
 }
 
 
+// Function AthenaCheat.AthenaCheatManager.EnableStormEffects
+// (Final, Exec, Native, Public)
+// Parameters:
+// unsigned char                  LockReason                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::EnableStormEffects(unsigned char LockReason)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.EnableStormEffects"));
+
+	struct
+	{
+		unsigned char                  LockReason;
+	} params;
+
+	params.LockReason = LockReason;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function AthenaCheat.AthenaCheatManager.EnableSelectShipwreckLocationFromValidCandidatesDebugDisplay
 // (Final, Exec, Native, Public)
 // Parameters:
@@ -8748,6 +8788,26 @@ void UAthenaCheatManager::DismissAllPickupPoints()
 	{
 	} params;
 
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaCheat.AthenaCheatManager.DisableStormEffects
+// (Final, Exec, Native, Public)
+// Parameters:
+// unsigned char                  LockReason                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UAthenaCheatManager::DisableStormEffects(unsigned char LockReason)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaCheat.AthenaCheatManager.DisableStormEffects"));
+
+	struct
+	{
+		unsigned char                  LockReason;
+	} params;
+
+	params.LockReason = LockReason;
 
 	UObject::ProcessEvent(fn, &params);
 }

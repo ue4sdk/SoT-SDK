@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -1934,6 +1934,80 @@ void UAthenaAIPerceptionComponent::EnableAllPerception(bool Enable)
 	} params;
 
 	params.Enable = Enable;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.CoralShieldVFXComponent.OnRep_CurrentCoralShieldRole
+// (Final, Native, Private)
+
+void UCoralShieldVFXComponent::OnRep_CurrentCoralShieldRole()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.CoralShieldVFXComponent.OnRep_CurrentCoralShieldRole"));
+
+	struct
+	{
+	} params;
+
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.SpawnContextProviderZone.RemoveContextsFromTarget
+// (Final, Native, Private)
+// Parameters:
+// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     InComponent                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int                            InOtherBodyIndex               (Parm, ZeroConstructor, IsPlainOldData)
+
+void ASpawnContextProviderZone::RemoveContextsFromTarget(class AActor* InActor, class UPrimitiveComponent* InComponent, int InOtherBodyIndex)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.SpawnContextProviderZone.RemoveContextsFromTarget"));
+
+	struct
+	{
+		class AActor*                  InActor;
+		class UPrimitiveComponent*     InComponent;
+		int                            InOtherBodyIndex;
+	} params;
+
+	params.InActor = InActor;
+	params.InComponent = InComponent;
+	params.InOtherBodyIndex = InOtherBodyIndex;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function AthenaAI.SpawnContextProviderZone.AddContextsToTarget
+// (Final, Native, Private, HasOutParms)
+// Parameters:
+// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// class UPrimitiveComponent*     InComponent                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// int                            InOtherBodyIndex               (Parm, ZeroConstructor, IsPlainOldData)
+// bool                           InFromSweep                    (Parm, ZeroConstructor, IsPlainOldData)
+// struct FHitResult              InSweepResult                  (ConstParm, Parm, OutParm, ReferenceParm)
+
+void ASpawnContextProviderZone::AddContextsToTarget(class AActor* InActor, class UPrimitiveComponent* InComponent, int InOtherBodyIndex, bool InFromSweep, const struct FHitResult& InSweepResult)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAI.SpawnContextProviderZone.AddContextsToTarget"));
+
+	struct
+	{
+		class AActor*                  InActor;
+		class UPrimitiveComponent*     InComponent;
+		int                            InOtherBodyIndex;
+		bool                           InFromSweep;
+		struct FHitResult              InSweepResult;
+	} params;
+
+	params.InActor = InActor;
+	params.InComponent = InComponent;
+	params.InOtherBodyIndex = InOtherBodyIndex;
+	params.InFromSweep = InFromSweep;
+	params.InSweepResult = InSweepResult;
 
 	UObject::ProcessEvent(fn, &params);
 }

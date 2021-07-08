@@ -15,15 +15,15 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_WoodPlank.BP_WoodPlank_C
-// 0x0028 (0x0818 - 0x07F0)
+// 0x0028 (0x07B8 - 0x0790)
 class ABP_WoodPlank_C : public AWoodPlank
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x07F0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x07F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x0800(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPickupableComponent*                        Pickupable;                                               // 0x0808(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UUsableComponent*                            Usable;                                                   // 0x0810(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0790(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	class UUsableWieldableComponent*                   UsableWieldable;                                          // 0x0798(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UWieldableInteractableComponent*             WieldableInteractable;                                    // 0x07A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UPickupableComponent*                        Pickupable;                                               // 0x07A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UUsableComponent*                            Usable;                                                   // 0x07B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

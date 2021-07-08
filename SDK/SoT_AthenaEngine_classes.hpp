@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -283,16 +283,22 @@ public:
 
 
 // Class AthenaEngine.RotateMeshToActorComponent
-// 0x0020 (0x00E8 - 0x00C8)
+// 0x0030 (0x00F8 - 0x00C8)
 class URotateMeshToActorComponent : public UActorComponent
 {
 public:
 	class UMeshComponent*                              MeshToRotate;                                             // 0x00C8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 	class AActor*                                      ActorToRotateTo;                                          // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	float                                              CloseProximityRadius;                                     // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              RotationSpeed;                                            // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              MaxPitch;                                                 // 0x00E0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	float                                              CloseProximityYawRotation;                                // 0x00E4(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	bool                                               Use2DDistanceForCloseProximityRadius;                     // 0x00DC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               WhenInCloseProximityKeepLastYaw;                          // 0x00DD(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x00DE(0x0002) MISSED OFFSET
+	float                                              RotationSpeed;                                            // 0x00E0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               PreventPitchModification;                                 // 0x00E4(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x00E5(0x0003) MISSED OFFSET
+	float                                              MaxPitch;                                                 // 0x00E8(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	float                                              CloseProximityYawRotation;                                // 0x00EC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x8];                                       // 0x00F0(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -307,7 +313,7 @@ public:
 
 
 // Class AthenaEngine.RotateMeshToLocalPlayerComponent
-// 0x0000 (0x00E8 - 0x00E8)
+// 0x0000 (0x00F8 - 0x00F8)
 class URotateMeshToLocalPlayerComponent : public URotateMeshToActorComponent
 {
 public:

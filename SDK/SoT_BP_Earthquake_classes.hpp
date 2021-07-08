@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Earthquake.BP_Earthquake_C
-// 0x0000 (0x05F8 - 0x05F8)
+// 0x0000 (0x05A0 - 0x05A0)
 class ABP_Earthquake_C : public AEarthquake
 {
 public:

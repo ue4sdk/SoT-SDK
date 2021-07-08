@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -45,7 +45,7 @@ public:
 
 
 // Class MovieSceneCapture.MovieSceneCapture
-// 0x01E8 (0x0210 - 0x0028)
+// 0x01B8 (0x01E0 - 0x0028)
 class UMovieSceneCapture : public UObject
 {
 public:
@@ -58,7 +58,7 @@ public:
 	unsigned char                                      UnknownData01[0x6];                                       // 0x009A(0x0006) MISSED OFFSET
 	class FString                                      AdditionalCommandLineArguments;                           // 0x00A0(0x0010) (Edit, ZeroConstructor, Config)
 	class FString                                      InheritedCommandLineArguments;                            // 0x00B0(0x0010) (Edit, ZeroConstructor, Transient)
-	unsigned char                                      UnknownData02[0x150];                                     // 0x00C0(0x0150) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x120];                                     // 0x00C0(0x0120) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -70,7 +70,7 @@ public:
 
 
 // Class MovieSceneCapture.AutomatedLevelSequenceCapture
-// 0x0000 (0x0210 - 0x0210)
+// 0x0000 (0x01E0 - 0x01E0)
 class UAutomatedLevelSequenceCapture : public UMovieSceneCapture
 {
 public:
@@ -85,14 +85,14 @@ public:
 
 
 // Class MovieSceneCapture.LevelCapture
-// 0x0020 (0x0230 - 0x0210)
+// 0x0020 (0x0200 - 0x01E0)
 class ULevelCapture : public UMovieSceneCapture
 {
 public:
-	bool                                               bAutoStartCapture;                                        // 0x0210(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0xB];                                       // 0x0211(0x000B) MISSED OFFSET
-	struct FGuid                                       PrerequisiteActorId;                                      // 0x021C(0x0010) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x022C(0x0004) MISSED OFFSET
+	bool                                               bAutoStartCapture;                                        // 0x01E0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0xB];                                       // 0x01E1(0x000B) MISSED OFFSET
+	struct FGuid                                       PrerequisiteActorId;                                      // 0x01EC(0x0010) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x01FC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

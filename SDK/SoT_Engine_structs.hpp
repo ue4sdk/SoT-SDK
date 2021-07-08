@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -9,9 +9,9 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Engine_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_SlateCore_classes.hpp"
 #include "SoT_InputCore_classes.hpp"
 #include "SoT_Slate_classes.hpp"
-#include "SoT_SlateCore_classes.hpp"
 
 namespace SDK
 {
@@ -2033,12 +2033,13 @@ struct FSkeletalMeshLODInfo
 };
 
 // ScriptStruct Engine.DeformablesSettings
-// 0x000C
+// 0x0010
 struct FDeformablesSettings
 {
 	float                                              DistanceStiffness;                                        // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              VolumeStiffness;                                          // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Damping;                                                  // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxDistance;                                              // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.ClothPhysicsProperties
@@ -4032,7 +4033,7 @@ struct FGPUSpriteEmitterInfo
 };
 
 // ScriptStruct Engine.GPUSpriteResourceData
-// 0x0760
+// 0x0770
 struct FGPUSpriteResourceData
 {
 	TArray<struct FColor>                              QuantizedColorSamples;                                    // 0x0000(0x0010) (ZeroConstructor)
@@ -4082,7 +4083,7 @@ struct FGPUSpriteResourceData
 	struct FVector2D                                   PivotOffset;                                              // 0x020C(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3C4];                                     // 0x0214(0x03C4) MISSED OFFSET
 	float                                              AlignmentInheritedVelocityScale;                          // 0x05D8(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x184];                                     // 0x05DC(0x0184) MISSED OFFSET
+	unsigned char                                      UnknownData02[0x194];                                     // 0x05DC(0x0194) MISSED OFFSET
 };
 
 // ScriptStruct Engine.VelocityConeGroupParams
@@ -4512,6 +4513,13 @@ struct FRuntimeVectorCurve
 {
 	struct FRichCurve                                  FloatCurves[0x3];                                         // 0x0000(0x0078)
 	class UCurveVector*                                ExternalCurve;                                            // 0x0168(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct Engine.FeatureFlag
+// 0x0008
+struct FFeatureFlag
+{
+	struct FName                                       FeatureName;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.NetSubObjectPtr
@@ -6587,13 +6595,6 @@ struct FServerMigrationTelemetrySucceededData
 	int                                                NumClients;                                               // 0x0014(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                NumActorsMigrated;                                        // 0x0018(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                ActorSerialisationBytes;                                  // 0x001C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-};
-
-// ScriptStruct Engine.FeatureFlag
-// 0x0008
-struct FFeatureFlag
-{
-	struct FName                                       FeatureName;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Engine.ReplicatedPhysicsState

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -55,7 +55,8 @@ public:
 	struct FStrainDamage                               ShipStrainDamage;                                         // 0x00F8(0x0028) (Edit)
 	struct FWeightedProbabilityRangeOfRanges           TimeBetweenWatercraftDamage;                              // 0x0120(0x0030) (Edit)
 	float                                              WatercraftDamage;                                         // 0x0150(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xCC];                                      // 0x0154(0x00CC) MISSED OFFSET
+	bool                                               StartDamagingOnBeginPlay;                                 // 0x0154(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xCB];                                      // 0x0155(0x00CB) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -65,6 +66,8 @@ public:
 
 
 	void SetShape(class UPrimitiveComponent* InShape);
+	void EndDamage();
+	void BeginDamage();
 };
 
 

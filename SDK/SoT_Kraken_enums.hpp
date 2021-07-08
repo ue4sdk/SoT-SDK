@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -22,7 +22,8 @@ enum class ECoordinatedKrakenSpecialEventTypes : uint8_t
 	ECoordinatedKrakenSpecialEventTypes__BreathingIn = 4,
 	ECoordinatedKrakenSpecialEventTypes__RoarVisuals = 5,
 	ECoordinatedKrakenSpecialEventTypes__RoarAttack = 6,
-	ECoordinatedKrakenSpecialEventTypes__ECoordinatedKrakenSpecialEventTypes_MAX = 7
+	ECoordinatedKrakenSpecialEventTypes__EnableHeadDamage = 7,
+	ECoordinatedKrakenSpecialEventTypes__ECoordinatedKrakenSpecialEventTypes_MAX = 8
 };
 
 

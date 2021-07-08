@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -74,6 +74,14 @@ struct FClueSiteLootRestriction
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
 
+// ScriptStruct LostShipmentsClueFramework.DebrisToRangeDist
+// 0x0028
+struct FDebrisToRangeDist
+{
+	struct FWeightedProbabilityRange                   NumberOfDebrisItemsToSpawn;                               // 0x0000(0x0020) (Edit, BlueprintVisible, BlueprintReadOnly)
+	class UWeightedDebrisDataAsset*                    WeightedDebrisTypeAsset;                                  // 0x0020(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct LostShipmentsClueFramework.LootToRangeDist
 // 0x0028
 struct FLootToRangeDist
@@ -110,6 +118,15 @@ struct FQuestVariableClueSite : public FQuestVariable
 struct FQuestVariableClueDescriptor : public FQuestVariable
 {
 
+};
+
+// ScriptStruct LostShipmentsClueFramework.WeightedDebris
+// 0x0028
+struct FWeightedDebris
+{
+	TAssetPtr<class UClass>                            DebrisClass;                                              // 0x0000(0x0020) (Edit)
+	float                                              Weight;                                                   // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 };
 
 // ScriptStruct LostShipmentsClueFramework.LandClueCreationChoice

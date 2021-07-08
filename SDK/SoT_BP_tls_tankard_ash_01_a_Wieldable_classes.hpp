@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_tankard_ash_01_a_Wieldable.BP_tls_tankard_ash_01_a_Wieldable_C
-// 0x0000 (0x0880 - 0x0880)
+// 0x0000 (0x0820 - 0x0820)
 class ABP_tls_tankard_ash_01_a_Wieldable_C : public ABP_Tankard_C
 {
 public:

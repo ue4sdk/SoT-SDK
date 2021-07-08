@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -717,6 +717,30 @@ bool UInteractableInterface::CanInteract(class AActor* InInteractor)
 	UObject::ProcessEvent(fn, &params);
 
 	return params.ReturnValue;
+}
+
+
+// Function Interaction.InteractableBlueprintFunctionLibrary.SetInteractionState
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class AActor*                  InteractableActor              (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EInteractableState> NewInteractableState           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+
+void UInteractableBlueprintFunctionLibrary::SetInteractionState(class AActor* InteractableActor, TEnumAsByte<EInteractableState> NewInteractableState)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableBlueprintFunctionLibrary.SetInteractionState"));
+
+	struct
+	{
+		class AActor*                  InteractableActor;
+		TEnumAsByte<EInteractableState> NewInteractableState;
+	} params;
+
+	params.InteractableActor = InteractableActor;
+	params.NewInteractableState = NewInteractableState;
+
+	static auto defaultObj = StaticClass()->CreateDefaultObject();
+	defaultObj->ProcessEvent(fn, &params);
 }
 
 

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -53,6 +53,20 @@ struct FShantyPuzzleSingleInteractionZoneUnlockEvent
 	class AActor*                                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	int                                                InteractionZoneIdx;                                       // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
+};
+
+// ScriptStruct ShantyPuzzle.ShantyPuzzlePlayerExitInteractionZoneEvent
+// 0x0008
+struct FShantyPuzzlePlayerExitInteractionZoneEvent
+{
+	class AActor*                                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct ShantyPuzzle.ShantyPuzzlePlayerEnterInteractionZoneEvent
+// 0x0008
+struct FShantyPuzzlePlayerEnterInteractionZoneEvent
+{
+	class AActor*                                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ShantyPuzzle.ShantyPuzzleUnlockedCompleteEvent

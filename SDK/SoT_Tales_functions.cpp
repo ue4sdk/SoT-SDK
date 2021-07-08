@@ -1,4 +1,4 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -158,6 +158,26 @@ void UTaleQuestSelectorServiceBlueprintFunctionLibrary::ResetVoyageDebugSeed()
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
+}
+
+
+// Function Tales.CutsceneResponsesTaleService.TrackResponseCoordinator
+// (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
+// Parameters:
+// class UCutsceneResponseCoordinator* Coordinator                    (Parm, ZeroConstructor, IsPlainOldData)
+
+void UCutsceneResponsesTaleService::TrackResponseCoordinator(class UCutsceneResponseCoordinator* Coordinator)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.CutsceneResponsesTaleService.TrackResponseCoordinator"));
+
+	struct
+	{
+		class UCutsceneResponseCoordinator* Coordinator;
+	} params;
+
+	params.Coordinator = Coordinator;
+
+	UObject::ProcessEvent(fn, &params);
 }
 
 
