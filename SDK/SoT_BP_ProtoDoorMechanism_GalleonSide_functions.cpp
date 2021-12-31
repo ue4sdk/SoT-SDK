@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ProtoDoorMechanism_GalleonSide_classes.hpp"
+#include "SoT_BP_ProtoDoorMechanism_GalleonSide_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_ProtoDoorMechanism_GalleonSide_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ProtoDoorMechanism_GalleonSide.BP_ProtoDoorMechanism_GalleonSide_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_ProtoDoorMechanism_GalleonSide_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_ProtoDoorMechanism_GalleonSide_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ProtoDoorMechanism_GalleonSide.BP_ProtoDoorMechanism_GalleonSide_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_ProtoDoorMechanism_GalleonSide_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void ABP_ProtoDoorMechanism_GalleonSide_C::Blueprint_OnStarted()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ProtoDoorMechanism_GalleonSide.BP_ProtoDoorMechanism_GalleonSide_C.Blueprint_OnStarted"));
 
-	struct
-	{
-	} params;
-
+	ABP_ProtoDoorMechanism_GalleonSide_C_Blueprint_OnStarted_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -67,10 +58,7 @@ void ABP_ProtoDoorMechanism_GalleonSide_C::Blueprint_OnStopped()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ProtoDoorMechanism_GalleonSide.BP_ProtoDoorMechanism_GalleonSide_C.Blueprint_OnStopped"));
 
-	struct
-	{
-	} params;
-
+	ABP_ProtoDoorMechanism_GalleonSide_C_Blueprint_OnStopped_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -79,25 +67,17 @@ void ABP_ProtoDoorMechanism_GalleonSide_C::Blueprint_OnStopped()
 // Function BP_ProtoDoorMechanism_GalleonSide.BP_ProtoDoorMechanism_GalleonSide_C.BndEvt__ClosedVolume_K2Node_ComponentBoundEvent_39_ComponentBeginOverlapSignature__DelegateSignature
 // (HasOutParms, BlueprintEvent)
 // Parameters:
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// UPrimitiveComponent*           OtherComp                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
+// FHitResult                     SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
 
-void ABP_ProtoDoorMechanism_GalleonSide_C::BndEvt__ClosedVolume_K2Node_ComponentBoundEvent_39_ComponentBeginOverlapSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_ProtoDoorMechanism_GalleonSide_C::BndEvt__ClosedVolume_K2Node_ComponentBoundEvent_39_ComponentBeginOverlapSignature__DelegateSignature(AActor* OtherActor, UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ProtoDoorMechanism_GalleonSide.BP_ProtoDoorMechanism_GalleonSide_C.BndEvt__ClosedVolume_K2Node_ComponentBoundEvent_39_ComponentBeginOverlapSignature__DelegateSignature"));
 
-	struct
-	{
-		class AActor*                  OtherActor;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
-		bool                           bFromSweep;
-		struct FHitResult              SweepResult;
-	} params;
-
+	ABP_ProtoDoorMechanism_GalleonSide_C_BndEvt__ClosedVolume_K2Node_ComponentBoundEvent_39_ComponentBeginOverlapSignature__DelegateSignature_Params params;
 	params.OtherActor = OtherActor;
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
@@ -111,25 +91,17 @@ void ABP_ProtoDoorMechanism_GalleonSide_C::BndEvt__ClosedVolume_K2Node_Component
 // Function BP_ProtoDoorMechanism_GalleonSide.BP_ProtoDoorMechanism_GalleonSide_C.BndEvt__OpenVolume_K2Node_ComponentBoundEvent_50_ComponentBeginOverlapSignature__DelegateSignature
 // (HasOutParms, BlueprintEvent)
 // Parameters:
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// UPrimitiveComponent*           OtherComp                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
+// FHitResult                     SweepResult                    (ConstParm, Parm, OutParm, ReferenceParm)
 
-void ABP_ProtoDoorMechanism_GalleonSide_C::BndEvt__OpenVolume_K2Node_ComponentBoundEvent_50_ComponentBeginOverlapSignature__DelegateSignature(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult)
+void ABP_ProtoDoorMechanism_GalleonSide_C::BndEvt__OpenVolume_K2Node_ComponentBoundEvent_50_ComponentBeginOverlapSignature__DelegateSignature(AActor* OtherActor, UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ProtoDoorMechanism_GalleonSide.BP_ProtoDoorMechanism_GalleonSide_C.BndEvt__OpenVolume_K2Node_ComponentBoundEvent_50_ComponentBeginOverlapSignature__DelegateSignature"));
 
-	struct
-	{
-		class AActor*                  OtherActor;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
-		bool                           bFromSweep;
-		struct FHitResult              SweepResult;
-	} params;
-
+	ABP_ProtoDoorMechanism_GalleonSide_C_BndEvt__OpenVolume_K2Node_ComponentBoundEvent_50_ComponentBeginOverlapSignature__DelegateSignature_Params params;
 	params.OtherActor = OtherActor;
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
@@ -149,11 +121,7 @@ void ABP_ProtoDoorMechanism_GalleonSide_C::ExecuteUbergraph_BP_ProtoDoorMechanis
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ProtoDoorMechanism_GalleonSide.BP_ProtoDoorMechanism_GalleonSide_C.ExecuteUbergraph_BP_ProtoDoorMechanism_GalleonSide"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_ProtoDoorMechanism_GalleonSide_C_ExecuteUbergraph_BP_ProtoDoorMechanism_GalleonSide_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

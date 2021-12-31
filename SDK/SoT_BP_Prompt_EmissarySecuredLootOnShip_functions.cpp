@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_EmissarySecuredLootOnShip_classes.hpp"
+#include "SoT_BP_Prompt_EmissarySecuredLootOnShip_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Prompt_EmissarySecuredLootOnShip.BP_Prompt_EmissarySecuredLootOnShip_C.OnEmissarySecuredLootOnShip
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissarySecuredLootOnShipNetworkEvent NewParam                       (Parm)
+// FEmissarySecuredLootOnShipNetworkEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissarySecuredLootOnShip_C::OnEmissarySecuredLootOnShip(const struct FEmissarySecuredLootOnShipNetworkEvent& NewParam)
+void UBP_Prompt_EmissarySecuredLootOnShip_C::OnEmissarySecuredLootOnShip(const FEmissarySecuredLootOnShipNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySecuredLootOnShip.BP_Prompt_EmissarySecuredLootOnShip_C.OnEmissarySecuredLootOnShip"));
 
-	struct
-	{
-		struct FEmissarySecuredLootOnShipNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissarySecuredLootOnShip_C_OnEmissarySecuredLootOnShip_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UBP_Prompt_EmissarySecuredLootOnShip_C::OnEmissarySecuredLootOnShip(const s
 // Function BP_Prompt_EmissarySecuredLootOnShip.BP_Prompt_EmissarySecuredLootOnShip_C.EmissarySecuredLootOnShip
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissarySecuredLootOnShipNetworkEvent NewParam                       (Parm)
+// FEmissarySecuredLootOnShipNetworkEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissarySecuredLootOnShip_C::EmissarySecuredLootOnShip(const struct FEmissarySecuredLootOnShipNetworkEvent& NewParam)
+void UBP_Prompt_EmissarySecuredLootOnShip_C::EmissarySecuredLootOnShip(const FEmissarySecuredLootOnShipNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySecuredLootOnShip.BP_Prompt_EmissarySecuredLootOnShip_C.EmissarySecuredLootOnShip"));
 
-	struct
-	{
-		struct FEmissarySecuredLootOnShipNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissarySecuredLootOnShip_C_EmissarySecuredLootOnShip_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -59,10 +51,7 @@ void UBP_Prompt_EmissarySecuredLootOnShip_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySecuredLootOnShip.BP_Prompt_EmissarySecuredLootOnShip_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissarySecuredLootOnShip_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -75,10 +64,7 @@ void UBP_Prompt_EmissarySecuredLootOnShip_C::RegisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySecuredLootOnShip.BP_Prompt_EmissarySecuredLootOnShip_C.RegisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissarySecuredLootOnShip_C_RegisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -91,10 +77,7 @@ void UBP_Prompt_EmissarySecuredLootOnShip_C::UnregisterOtherEvents_Implementable
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySecuredLootOnShip.BP_Prompt_EmissarySecuredLootOnShip_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissarySecuredLootOnShip_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,11 +92,7 @@ void UBP_Prompt_EmissarySecuredLootOnShip_C::ExecuteUbergraph_BP_Prompt_Emissary
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySecuredLootOnShip.BP_Prompt_EmissarySecuredLootOnShip_C.ExecuteUbergraph_BP_Prompt_EmissarySecuredLootOnShip"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_EmissarySecuredLootOnShip_C_ExecuteUbergraph_BP_Prompt_EmissarySecuredLootOnShip_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

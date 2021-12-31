@@ -29,9 +29,9 @@ struct FMaterialQualityOverrides
 // 0x0020
 struct FShaderQualityOverridesListItem
 {
-	class FString                                      RangeName;                                                // 0x0000(0x0010) (ZeroConstructor)
-	class UBoolProperty*                               QualityProperty;                                          // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UShaderPlatformQualitySettings*              SettingContainer;                                         // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+	FString                                            RangeName;                                                // 0x0000(0x0010) (ZeroConstructor)
+	UBoolProperty*                                     QualityProperty;                                          // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	UShaderPlatformQualitySettings*                    SettingContainer;                                         // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

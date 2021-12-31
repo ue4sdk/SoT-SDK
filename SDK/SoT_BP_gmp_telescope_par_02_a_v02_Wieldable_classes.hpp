@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_gmp_telescope_par_02_a_v02_Wieldable.BP_gmp_telescope_par_02_a_v02_Wieldable_C
-// 0x0000 (0x0900 - 0x0900)
+// 0x0000 (0x0890 - 0x0890)
 class ABP_gmp_telescope_par_02_a_v02_Wieldable_C : public ABP_Spyglass_C
 {
 public:

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Struct_DynamicFogVolumeParams_classes.hpp"
+#include "SoT_BP_Struct_DynamicFogVolumeParams_parameters.hpp"
 
 namespace SDK
 {

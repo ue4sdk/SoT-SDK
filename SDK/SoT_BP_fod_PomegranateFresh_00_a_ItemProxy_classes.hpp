@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_PomegranateFresh_00_a_ItemProxy.BP_fod_PomegranateFresh_00_a_ItemProxy_C
-// 0x0000 (0x07A0 - 0x07A0)
+// 0x0000 (0x07B0 - 0x07B0)
 class ABP_fod_PomegranateFresh_00_a_ItemProxy_C : public ABP_ProxyIngestible_C
 {
 public:

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Ritual2_R_Pendant_classes.hpp"
+#include "SoT_BP_Ritual2_R_Pendant_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Ritual2_R_Pendant_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Ritual2_R_Pendant.BP_Ritual2_R_Pendant_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Ritual2_R_Pendant_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

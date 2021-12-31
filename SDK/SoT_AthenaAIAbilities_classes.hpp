@@ -50,7 +50,7 @@ class UAreaOfEffectHealAIAbility : public UAthenaAIAbility
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0078(0x0010) MISSED OFFSET
-	class AActor*                                      HealAreaOfEffectActor;                                    // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            HealAreaOfEffectActor;                                    // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x10];                                      // 0x0090(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -69,7 +69,7 @@ class UAreaOfEffectHealAIAbilityParams : public UAthenaAIAbilityParams
 public:
 	float                                              ChanceToGoOnCooldownInsteadOfExecuting;                   // 0x00C8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              HealthPercentageThresholdToHeal;                          // 0x00CC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      StatusEffectZone;                                         // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            StatusEffectZone;                                         // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MinimumTimeSpentHealing;                                  // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MaximumTimeSpentHealing;                                  // 0x00DC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
@@ -132,11 +132,11 @@ public:
 class UBurrowHealVFXComponent : public UActorComponent
 {
 public:
-	class UParticleSystem*                             VFXAsset;                                                 // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       VfxSocketName;                                            // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UParticleSystem*                                   VFXAsset;                                                 // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              VfxSocketName;                                            // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              VFXDuration;                                              // 0x00D8(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
-	class UParticleSystemComponent*                    SpawnedVFXSystem;                                         // 0x00E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	UParticleSystemComponent*                          SpawnedVFXSystem;                                         // 0x00E0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	bool                                               IsVFXActive;                                              // 0x00E8(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x2F];                                      // 0x00E9(0x002F) MISSED OFFSET
 
@@ -201,7 +201,7 @@ public:
 class UEelThrowAIAbility : public UAthenaAIAbility
 {
 public:
-	class UBlackboardComponent*                        CachedBlackboardComponent;                                // 0x0078(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	UBlackboardComponent*                              CachedBlackboardComponent;                                // 0x0078(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -217,7 +217,7 @@ public:
 class UEelThrowAIAbilityParams : public UAthenaAIAbilityParams
 {
 public:
-	struct FWeightedProbabilityRange                   MinMaxNumberOfAttacksBeforeEnd;                           // 0x00C8(0x0020) (Edit)
+	FWeightedProbabilityRange                          MinMaxNumberOfAttacksBeforeEnd;                           // 0x00C8(0x0020) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -264,13 +264,13 @@ class UElectricShieldBuffComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	class UParticleSystem*                             ShieldVFXAsset;                                           // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       VfxSocketName;                                            // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StartAudioLoopEvent;                                      // 0x00E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StopAudioLoopEvent;                                       // 0x00E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UParticleSystem*                                   ShieldVFXAsset;                                           // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              VfxSocketName;                                            // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UWwiseEvent*                                       StartAudioLoopEvent;                                      // 0x00E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UWwiseEvent*                                       StopAudioLoopEvent;                                       // 0x00E8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               IsShieldActive;                                           // 0x00F0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x00F1(0x0007) MISSED OFFSET
-	class UParticleSystemComponent*                    ShieldEffectComponent;                                    // 0x00F8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	UParticleSystemComponent*                          ShieldEffectComponent;                                    // 0x00F8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	unsigned char                                      UnknownData02[0xB8];                                      // 0x0100(0x00B8) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -351,7 +351,7 @@ public:
 class UMeleeAIAbilityParams : public UAthenaAIAbilityParams
 {
 public:
-	TArray<struct FMeleeAttackIdWeights>               MeleeAttacks;                                             // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<FMeleeAttackIdWeights>                      MeleeAttacks;                                             // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -438,12 +438,15 @@ public:
 
 
 // Class AthenaAIAbilities.BullRushAIAbilityParams
-// 0x0008 (0x00E8 - 0x00E0)
+// 0x0020 (0x0100 - 0x00E0)
 class UBullRushAIAbilityParams : public UMeleeChargeAIAbilityParams
 {
 public:
 	float                                              StaticCollisionWarmup;                                    // 0x00E0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x00E4(0x0004) MISSED OFFSET
+	TArray<UEnvQuery*>                                 ValidatorEQSystems;                                       // 0x00E8(0x0010) (Edit, ZeroConstructor)
+	float                                              TimeBetweenCanExecuteChecks;                              // 0x00F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x00FC(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -455,10 +458,12 @@ public:
 
 
 // Class AthenaAIAbilities.BullRushAIAbility
-// 0x0000 (0x0098 - 0x0098)
+// 0x0020 (0x00B8 - 0x0098)
 class UBullRushAIAbility : public UMeleeChargeAIAbility
 {
 public:
+	UWorld*                                            CachedWorld;                                              // 0x0098(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x00A0(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

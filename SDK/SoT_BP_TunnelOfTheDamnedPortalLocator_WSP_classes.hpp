@@ -19,9 +19,9 @@ namespace SDK
 class ABP_TunnelOfTheDamnedPortalLocator_WSP_C : public APortalLocatorActor
 {
 public:
-	class UChildActorComponent*                        SignalAnchor;                                             // 0x0408(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        CalmWater;                                                // 0x0410(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UChildActorComponent*                        Visuals;                                                  // 0x0418(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UChildActorComponent*                              SignalAnchor;                                             // 0x0408(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UChildActorComponent*                              CalmWater;                                                // 0x0410(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UChildActorComponent*                              Visuals;                                                  // 0x0418(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -28,7 +28,7 @@ struct FPoolableCollectionMapConfigurationEntry
 // 0x0018
 struct FPoolableCollectionMapConfiguration
 {
-	TArray<struct FPoolableCollectionMapConfigurationEntry> Pools;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
+	TArray<FPoolableCollectionMapConfigurationEntry>   Pools;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
 	bool                                               PopulateJustInTime;                                       // 0x0010(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 };

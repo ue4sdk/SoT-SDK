@@ -19,11 +19,11 @@ namespace SDK
 class ABP_AudioCoast_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USplineComponent*                            SplineInner;                                              // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USplineComponent*                            SplineCoast;                                              // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             Scene;                                                    // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FBlueprintableIntegerHandle                 Handle;                                                   // 0x03F0(0x0004) (Edit, BlueprintVisible, DisableEditOnInstance)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x03D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	USplineComponent*                                  SplineInner;                                              // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USplineComponent*                                  SplineCoast;                                              // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   Scene;                                                    // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FBlueprintableIntegerHandle                        Handle;                                                   // 0x03F0(0x0004) (Edit, BlueprintVisible, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

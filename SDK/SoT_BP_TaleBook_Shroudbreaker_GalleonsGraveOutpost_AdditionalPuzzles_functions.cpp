@@ -1,10 +1,10 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TaleBook_Shroudbreaker_GalleonsGraveOutpost_AdditionalPuzzles_classes.hpp"
+#include "SoT_BP_TaleBook_Shroudbreaker_GalleonsGraveOutpost_AdditionalPuzzles_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_TaleBook_Shroudbreaker_GalleonsGraveOutpost_AdditionalPuzzles_C::UserCo
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TaleBook_Shroudbreaker_GalleonsGraveOutpost_AdditionalPuzzles.BP_TaleBook_Shroudbreaker_GalleonsGraveOutpost_AdditionalPuzzles_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_TaleBook_Shroudbreaker_GalleonsGraveOutpost_AdditionalPuzzles_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

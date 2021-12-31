@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_GeyserHole_classes.hpp"
+#include "SoT_BP_GeyserHole_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void ABP_GeyserHole_C::SetFadeOutParameters(float FadeTime)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.SetFadeOutParameters"));
 
-	struct
-	{
-		float                          FadeTime;
-	} params;
-
+	ABP_GeyserHole_C_SetFadeOutParameters_Params params;
 	params.FadeTime = FadeTime;
 
 	UObject::ProcessEvent(fn, &params);
@@ -41,11 +37,7 @@ void ABP_GeyserHole_C::SetFadeInParameters(float FadeTime)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.SetFadeInParameters"));
 
-	struct
-	{
-		float                          FadeTime;
-	} params;
-
+	ABP_GeyserHole_C_SetFadeInParameters_Params params;
 	params.FadeTime = FadeTime;
 
 	UObject::ProcessEvent(fn, &params);
@@ -59,10 +51,7 @@ void ABP_GeyserHole_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_GeyserHole_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -75,10 +64,7 @@ void ABP_GeyserHole_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_GeyserHole_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -93,11 +79,7 @@ void ABP_GeyserHole_C::OnStateChanged(TEnumAsByte<EHoleState> InState)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.OnStateChanged"));
 
-	struct
-	{
-		TEnumAsByte<EHoleState>        InState;
-	} params;
-
+	ABP_GeyserHole_C_OnStateChanged_Params params;
 	params.InState = InState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -113,11 +95,7 @@ void ABP_GeyserHole_C::ExecuteUbergraph_BP_GeyserHole(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_GeyserHole.BP_GeyserHole_C.ExecuteUbergraph_BP_GeyserHole"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_GeyserHole_C_ExecuteUbergraph_BP_GeyserHole_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

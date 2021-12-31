@@ -34,7 +34,7 @@ public:
 class UGameplayTask : public UObject
 {
 public:
-	struct FName                                       InstanceName;                                             // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              InstanceName;                                             // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0030(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -55,10 +55,10 @@ public:
 class UGameplayTask_SpawnActor : public UGameplayTask
 {
 public:
-	struct FScriptMulticastDelegate                    Success;                                                  // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    DidNotSpawn;                                              // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	FScriptMulticastDelegate                           Success;                                                  // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	FScriptMulticastDelegate                           DidNotSpawn;                                              // 0x0068(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0078(0x0018) MISSED OFFSET
-	class UClass*                                      ClassToSpawn;                                             // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData)
+	UClass*                                            ClassToSpawn;                                             // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -67,9 +67,9 @@ public:
 	}
 
 
-	static class UGameplayTask_SpawnActor* SpawnActor(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, const struct FVector& SpawnLocation, const struct FRotator& SpawnRotation, class UClass* Class, bool bSpawnOnlyOnAuthority);
-	void FinishSpawningActor(class UObject* WorldContextObject, class AActor* SpawnedActor);
-	bool BeginSpawningActor(class UObject* WorldContextObject, class AActor** SpawnedActor);
+	static UGameplayTask_SpawnActor* SpawnActor(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, const FVector& SpawnLocation, const FRotator& SpawnRotation, UClass* Class, bool bSpawnOnlyOnAuthority);
+	void FinishSpawningActor(UObject* WorldContextObject, AActor* SpawnedActor);
+	bool BeginSpawningActor(UObject* WorldContextObject, AActor** SpawnedActor);
 };
 
 
@@ -78,7 +78,7 @@ public:
 class UGameplayTask_WaitDelay : public UGameplayTask
 {
 public:
-	struct FScriptMulticastDelegate                    OnFinish;                                                 // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	FScriptMulticastDelegate                           OnFinish;                                                 // 0x0058(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0068(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -88,7 +88,7 @@ public:
 	}
 
 
-	static class UGameplayTask_WaitDelay* TaskWaitDelay(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, float Time);
+	static UGameplayTask_WaitDelay* TaskWaitDelay(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, float Time);
 	void TaskDelayDelegate__DelegateSignature();
 };
 
@@ -118,10 +118,10 @@ class UGameplayTasksComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	TArray<class UGameplayTask*>                       SimulatedTasks;                                           // 0x00D0(0x0010) (Net, ZeroConstructor)
-	TArray<class UGameplayTask*>                       TaskPriorityQueue;                                        // 0x00E0(0x0010) (ZeroConstructor)
+	TArray<UGameplayTask*>                             SimulatedTasks;                                           // 0x00D0(0x0010) (Net, ZeroConstructor)
+	TArray<UGameplayTask*>                             TaskPriorityQueue;                                        // 0x00E0(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData01[0x28];                                      // 0x00F0(0x0028) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnClaimedResourcesChange;                                 // 0x0118(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference)
+	FScriptMulticastDelegate                           OnClaimedResourcesChange;                                 // 0x0118(0x0010) (BlueprintVisible, ZeroConstructor, InstancedReference)
 
 	static UClass* StaticClass()
 	{
@@ -131,7 +131,7 @@ public:
 
 
 	void OnRep_SimulatedTasks();
-	static TEnumAsByte<EGameplayTaskRunResult> K2_RunGameplayTask(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, class UGameplayTask* Task, unsigned char Priority, TArray<class UClass*> AdditionalRequiredResources, TArray<class UClass*> AdditionalClaimedResources);
+	static TEnumAsByte<EGameplayTaskRunResult> K2_RunGameplayTask(const TScriptInterface<class UGameplayTaskOwnerInterface>& TaskOwner, UGameplayTask* Task, unsigned char Priority, TArray<UClass*> AdditionalRequiredResources, TArray<UClass*> AdditionalClaimedResources);
 };
 
 

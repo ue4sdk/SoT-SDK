@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishingFish_StormFish_03_Colour_03_Wild_classes.hpp"
+#include "SoT_BP_FishingFish_StormFish_03_Colour_03_Wild_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishingFish_StormFish_03_Colour_03_Wild_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishingFish_StormFish_03_Colour_03_Wild.BP_FishingFish_StormFish_03_Colour_03_Wild_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_FishingFish_StormFish_03_Colour_03_Wild_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

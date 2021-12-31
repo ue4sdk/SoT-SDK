@@ -1477,6 +1477,16 @@ enum class EVisibilityAggressiveness : uint8_t
 };
 
 
+// Enum Engine.ESimpleLightFunctionType
+enum class ESimpleLightFunctionType : uint8_t
+{
+	NoFunction                     = 0,
+	Pulse                          = 1,
+	Flicker                        = 2,
+	ESimpleLightFunctionType_MAX   = 3
+};
+
+
 // Enum Engine.ERuntimeGenerationType
 enum class ERuntimeGenerationType : uint8_t
 {
@@ -1515,6 +1525,17 @@ enum class ENavLinkDirection : uint8_t
 	ENavLinkDirection__LeftToRight = 1,
 	ENavLinkDirection__RightToLeft = 2,
 	ENavLinkDirection__ENavLinkDirection_MAX = 3
+};
+
+
+// Enum Engine.ETranslucencyPass
+enum class ETranslucencyPass : uint8_t
+{
+	ETranslucencyPass__Default     = 0,
+	ETranslucencyPass__BeforeTranslucency = 1,
+	ETranslucencyPass__BeforeVolumeFog = 2,
+	ETranslucencyPass__WriteDepth  = 3,
+	ETranslucencyPass__ETranslucencyPass_MAX = 4
 };
 
 
@@ -2039,16 +2060,6 @@ enum class EAmbientLightConeShape : uint8_t
 };
 
 
-// Enum Engine.ESimpleLightFunctionType
-enum class ESimpleLightFunctionType : uint8_t
-{
-	NoFunction                     = 0,
-	Pulse                          = 1,
-	Flicker                        = 2,
-	ESimpleLightFunctionType_MAX   = 3
-};
-
-
 // Enum Engine.ESkyLightSourceType
 enum class ESkyLightSourceType : uint8_t
 {
@@ -2224,7 +2235,8 @@ enum class ETextureMipCount : uint8_t
 	TMC_ResidentMips               = 0,
 	TMC_AllMips                    = 1,
 	TMC_AllMipsBiased              = 2,
-	TMC_MAX                        = 3
+	TMC_ResidentMipsUnpadded       = 3,
+	TMC_MAX                        = 4
 };
 
 
@@ -3171,6 +3183,28 @@ enum class EFunctionInputType : uint8_t
 };
 
 
+// Enum Engine.EIfExpressionAttribute
+enum class EIfExpressionAttribute : uint8_t
+{
+	EIfExpressionAttribute__Default = 0,
+	EIfExpressionAttribute__Branch = 1,
+	EIfExpressionAttribute__Flatten = 2,
+	EIfExpressionAttribute__EIfExpressionAttribute_MAX = 3
+};
+
+
+// Enum Engine.EIfExpressionCondition
+enum class EIfExpressionCondition : uint8_t
+{
+	EIfExpressionCondition__Equal  = 0,
+	EIfExpressionCondition__Greater = 1,
+	EIfExpressionCondition__GreaterOrEqual = 2,
+	EIfExpressionCondition__Less   = 3,
+	EIfExpressionCondition__LessOrEqual = 4,
+	EIfExpressionCondition__EIfExpressionCondition_MAX = 5
+};
+
+
 // Enum Engine.ENoiseFunction
 enum class ENoiseFunction : uint8_t
 {
@@ -3465,7 +3499,8 @@ enum class EParticleScreenAlignment : uint8_t
 	PSA_VelocityScreen             = 6,
 	PSA_InitialVelocityScreen      = 7,
 	PSA_InitialVelocity            = 8,
-	PSA_MAX                        = 9
+	PSA_VelocityOnly               = 9,
+	PSA_MAX                        = 10
 };
 
 
@@ -3490,6 +3525,19 @@ enum class EModuleType : uint8_t
 	EPMT_Event                     = 6,
 	EPMT_Light                     = 7,
 	EPMT_MAX                       = 8
+};
+
+
+// Enum Engine.EAccelerationGroupNames
+enum class EAccelerationGroupNames : uint8_t
+{
+	AccelerationGroupB             = 0,
+	AccelerationGroupC             = 1,
+	AccelerationGroupD             = 2,
+	AccelerationGroupE             = 3,
+	AccelerationGroupReplacement   = 4,
+	AccelerationGroup_MAX          = 5,
+	EAccelerationGroupNames_MAX    = 6
 };
 
 
@@ -3717,6 +3765,19 @@ enum class ELocationEmitterSelectionMethod : uint8_t
 };
 
 
+// Enum Engine.EStartLocationGPUGroupNames
+enum class EStartLocationGPUGroupNames : uint8_t
+{
+	StartLocationGPUGroupB         = 0,
+	StartLocationGPUGroupC         = 1,
+	StartLocationGPUGroupD         = 2,
+	StartLocationGPUGroupE         = 3,
+	StartLocationGPUGroupReplacement = 4,
+	StartLocationGPUGroup_MAX      = 5,
+	EStartLocationGPUGroupNames_MAX = 6
+};
+
+
 // Enum Engine.EStartHeightGroupNames
 enum class EStartHeightGroupNames : uint8_t
 {
@@ -3760,6 +3821,18 @@ enum class ECylinderHeightAxis : uint8_t
 	PMLPC_HEIGHTAXIS_Y             = 1,
 	PMLPC_HEIGHTAXIS_Z             = 2,
 	PMLPC_HEIGHTAXIS_MAX           = 3
+};
+
+
+// Enum Engine.EVelocityScaleGroupNames
+enum class EVelocityScaleGroupNames : uint8_t
+{
+	VelocityScaleGroupB            = 0,
+	VelocityScaleGroupC            = 1,
+	VelocityScaleGroupD            = 2,
+	VelocityScaleGroupE            = 3,
+	VelocityScaleGroup_MAX         = 4,
+	EVelocityScaleGroupNames_MAX   = 5
 };
 
 
@@ -4018,6 +4091,16 @@ enum class EBeam2Method : uint8_t
 };
 
 
+// Enum Engine.EKillPlaneKillPointLocation
+enum class EKillPlaneKillPointLocation : uint8_t
+{
+	KillPlaneKillPointLocation_LowerBound = 0,
+	KillPlaneKillPointLocation_Center = 1,
+	KillPlaneKillPointLocation_UpperBound = 2,
+	KillPlaneKillPointLocation_MAX = 3
+};
+
+
 // Enum Engine.EInteractionWithKillPlane
 enum class EInteractionWithKillPlane : uint8_t
 {
@@ -4025,7 +4108,8 @@ enum class EInteractionWithKillPlane : uint8_t
 	KillOnFrontOfPlanes            = 1,
 	KillOnBackOfPlanes             = 2,
 	CollideWithFront               = 3,
-	EInteractionWithKillPlane_MAX  = 4
+	KillOnIntersectionPlanes       = 4,
+	EInteractionWithKillPlane_MAX  = 5
 };
 
 

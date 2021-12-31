@@ -61,6 +61,24 @@ public:
 };
 
 
+// Class StatusEffects.AppliedStatusToSelfStatCondition
+// 0x0018 (0x0048 - 0x0030)
+class UAppliedStatusToSelfStatCondition : public UTargetedStatCondition
+{
+public:
+	TArray<UClass*>                                    Status;                                                   // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TEnumAsByte<EStatusComparisonMode>                 ComparisonMode;                                           // 0x0040(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class StatusEffects.AppliedStatusToSelfStatCondition"));
+		return ptr;
+	}
+
+};
+
+
 // Class StatusEffects.BuffReceiverInterface
 // 0x0000 (0x0028 - 0x0028)
 class UBuffReceiverInterface : public UInterface
@@ -99,7 +117,7 @@ public:
 class UDebugMenuStatusDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FDebugMenuStatusDefinition>          StatusDefinitions;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<FDebugMenuStatusDefinition>                 StatusDefinitions;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
 	TArray<float>                                      Durations;                                                // 0x0038(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
@@ -117,8 +135,8 @@ class AStatusEffectOverlapZone : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0xA8];                                      // 0x03D0(0x00A8) MISSED OFFSET
-	class UBoxComponent*                               CollisionMesh;                                            // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	TArray<struct FDelayedStatusEffect>                StatusesToApplyOnOverlap;                                 // 0x0480(0x0010) (Edit, ZeroConstructor)
+	UBoxComponent*                                     CollisionMesh;                                            // 0x0478(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	TArray<FDelayedStatusEffect>                       StatusesToApplyOnOverlap;                                 // 0x0480(0x0010) (Edit, ZeroConstructor)
 	bool                                               StartActive;                                              // 0x0490(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0491(0x0007) MISSED OFFSET
 
@@ -129,7 +147,7 @@ public:
 	}
 
 
-	void OnStatusDelayEnd(int InStatusIndex, class AActor* ActorRef);
+	void OnStatusDelayEnd(int InStatusIndex, AActor* ActorRef);
 };
 
 
@@ -139,8 +157,8 @@ class UDebugStatusEffectOverlapZoneVisualizerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	struct FVector                                     BoxCollisionDimensions;                                   // 0x00D0(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	struct FColor                                      DebugColour;                                              // 0x00DC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	FVector                                            BoxCollisionDimensions;                                   // 0x00D0(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	FColor                                             DebugColour;                                              // 0x00DC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 	bool                                               VisibleState;                                             // 0x00E0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x00E1(0x0007) MISSED OFFSET
 
@@ -161,7 +179,7 @@ public:
 class ADebugStatusTicketHolder : public AActor
 {
 public:
-	class AActor*                                      StatusRecipient;                                          // 0x03D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            StatusRecipient;                                          // 0x03D0(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -237,9 +255,9 @@ public:
 class UStatusResponseAsset : public UDataAsset
 {
 public:
-	struct FText                                       HighFrequencyTriggerStatusHelper;                         // 0x0028(0x0038) (Edit, EditConst)
-	TArray<class UClass*>                              TriggerStatus;                                            // 0x0060(0x0010) (Edit, ZeroConstructor)
-	TArray<class UStatusResponse*>                     Responses;                                                // 0x0070(0x0010) (Edit, ExportObject, ZeroConstructor)
+	FText                                              HighFrequencyTriggerStatusHelper;                         // 0x0028(0x0038) (Edit, EditConst)
+	TArray<UClass*>                                    TriggerStatus;                                            // 0x0060(0x0010) (Edit, ZeroConstructor)
+	TArray<UStatusResponse*>                           Responses;                                                // 0x0070(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -255,9 +273,9 @@ public:
 class UStatusRecipientResponseList : public UDataAsset
 {
 public:
-	TArray<class UStatusResponseAsset*>                ResponseAssets;                                           // 0x0028(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FFeatureToggledStatusResponseList>   FeatureToggledResponseLists;                              // 0x0038(0x0010) (Edit, ZeroConstructor)
-	TArray<class UStatusResponseAsset*>                FinalResponseAssets;                                      // 0x0048(0x0010) (ZeroConstructor)
+	TArray<UStatusResponseAsset*>                      ResponseAssets;                                           // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<FFeatureToggledStatusResponseList>          FeatureToggledResponseLists;                              // 0x0038(0x0010) (Edit, ZeroConstructor)
+	TArray<UStatusResponseAsset*>                      FinalResponseAssets;                                      // 0x0048(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -274,8 +292,8 @@ class ULightWeightStatusEffectManagerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x20];                                      // 0x00C8(0x0020) MISSED OFFSET
-	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00F0(0x0010) (Net, ZeroConstructor)
+	UStatusRecipientResponseList*                      RecipientResponseList;                                    // 0x00E8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<FActiveStatusEffect>                        ActiveEffects;                                            // 0x00F0(0x0010) (Net, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -284,8 +302,8 @@ public:
 	}
 
 
-	void OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects);
-	void MultiCast_ApplyOneShotStatus(TArray<struct FActiveStatusEffect> AddedEffects, TArray<struct FActiveStatusEffect> RemovedEffects);
+	void OnRep_ActiveEffects(TArray<FActiveStatusEffect> OldEffects);
+	void MultiCast_ApplyOneShotStatus(TArray<FActiveStatusEffect> AddedEffects, TArray<FActiveStatusEffect> RemovedEffects);
 };
 
 
@@ -325,7 +343,7 @@ class UMaterialStatusSusceptibilityComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	class UPhysicalMaterial*                           CurrentSurfaceMaterial;                                   // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UPhysicalMaterial*                                 CurrentSurfaceMaterial;                                   // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	TScriptInterface<class USurfaceMaterialStatusZoneInterface> CurrentMaterialStatusZone;                                // 0x00D8(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x10];                                      // 0x00E8(0x0010) MISSED OFFSET
 
@@ -339,14 +357,15 @@ public:
 
 
 // Class StatusEffects.SphericalStatusEffectZone
-// 0x00B8 (0x0488 - 0x03D0)
+// 0x00C0 (0x0490 - 0x03D0)
 class ASphericalStatusEffectZone : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x03D0(0x0008) MISSED OFFSET
-	class USphereComponent*                            SphereComponent;                                          // 0x03D8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStatusEffectVolumeComponent*                StatusEffectVolumeComponent;                              // 0x03E0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xA0];                                      // 0x03E8(0x00A0) MISSED OFFSET
+	UActorActivationComponent*                         ActorActivationComponent;                                 // 0x03D8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	USphereComponent*                                  SphereComponent;                                          // 0x03E0(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	UStatusEffectVolumeComponent*                      StatusEffectVolumeComponent;                              // 0x03E8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x03F0(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -358,11 +377,11 @@ public:
 
 
 // Class StatusEffects.StatusApplicationDesc
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UStatusApplicationDesc : public UObject
 {
 public:
-	struct FEventAppliedStatusToTargets                ApplicationEvent;                                         // 0x0028(0x0020)
+	FEventAppliedStatusToTargets                       ApplicationEvent;                                         // 0x0028(0x0028)
 
 	static UClass* StaticClass()
 	{
@@ -378,7 +397,7 @@ public:
 class UStatusApplicationMonitorComponent : public UActorComponent
 {
 public:
-	class UClass*                                      StatusApplicationTrigger;                                 // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            StatusApplicationTrigger;                                 // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -402,7 +421,7 @@ public:
 	}
 
 
-	static void ApplyOneShotStatus(class AActor* Recipient, const struct FStatus& Status);
+	static void ApplyOneShotStatus(AActor* Recipient, const FStatus& Status);
 };
 
 
@@ -427,8 +446,8 @@ class UStatusEffectManagerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x28];                                      // 0x00C8(0x0028) MISSED OFFSET
-	class UStatusRecipientResponseList*                RecipientResponseList;                                    // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FActiveStatusEffect>                 ActiveEffects;                                            // 0x00F8(0x0010) (Net, ZeroConstructor)
+	UStatusRecipientResponseList*                      RecipientResponseList;                                    // 0x00F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<FActiveStatusEffect>                        ActiveEffects;                                            // 0x00F8(0x0010) (Net, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -437,8 +456,8 @@ public:
 	}
 
 
-	void OnRep_ActiveEffects(TArray<struct FActiveStatusEffect> OldEffects);
-	void MultiCast_ApplyOneShotStatus(TArray<struct FActiveStatusEffect> AddedEffects, TArray<struct FActiveStatusEffect> RemovedEffects);
+	void OnRep_ActiveEffects(TArray<FActiveStatusEffect> OldEffects);
+	void MultiCast_ApplyOneShotStatus(TArray<FActiveStatusEffect> AddedEffects, TArray<FActiveStatusEffect> RemovedEffects);
 };
 
 
@@ -478,7 +497,7 @@ public:
 class UStatusEffectsSettings : public UDeveloperSettings
 {
 public:
-	struct FStringAssetReference                       DebugMenuStatusDefinitionsDataAsset;                      // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	FStringAssetReference                              DebugMenuStatusDefinitionsDataAsset;                      // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -496,7 +515,7 @@ class UStatusEffectVolumeComponent : public USceneComponent
 public:
 	bool                                               UseOverlapEventsFromParentComponent;                      // 0x02B0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x02B1(0x0007) MISSED OFFSET
-	TArray<struct FStatus>                             StatusEffectsToMaintain;                                  // 0x02B8(0x0010) (Edit, ZeroConstructor)
+	TArray<FStatus>                                    StatusEffectsToMaintain;                                  // 0x02B8(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      UnknownData01[0x8];                                       // 0x02C8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -506,10 +525,10 @@ public:
 	}
 
 
-	void UnaffectActor(class AActor* Actor);
-	void OnParentComponentEndOverlap(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void OnParentComponentBeginOverlap(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& SweepResult);
-	void AffectActor(class AActor* Actor);
+	void UnaffectActor(AActor* Actor);
+	void OnParentComponentEndOverlap(AActor* OtherActor, UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void OnParentComponentBeginOverlap(AActor* OtherActor, UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	void AffectActor(AActor* Actor);
 };
 
 

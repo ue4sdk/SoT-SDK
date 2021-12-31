@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishAnimGraph_classes.hpp"
+#include "SoT_BP_FishAnimGraph_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_FishAnimGraph_C::AnimNotify_StartJump()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishAnimGraph.BP_FishAnimGraph_C.AnimNotify_StartJump"));
 
-	struct
-	{
-	} params;
-
+	UBP_FishAnimGraph_C_AnimNotify_StartJump_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UBP_FishAnimGraph_C::AnimNotify_EndJump()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishAnimGraph.BP_FishAnimGraph_C.AnimNotify_EndJump"));
 
-	struct
-	{
-	} params;
-
+	UBP_FishAnimGraph_C_AnimNotify_EndJump_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void UBP_FishAnimGraph_C::ExecuteUbergraph_BP_FishAnimGraph(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishAnimGraph.BP_FishAnimGraph_C.ExecuteUbergraph_BP_FishAnimGraph"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_FishAnimGraph_C_ExecuteUbergraph_BP_FishAnimGraph_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

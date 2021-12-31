@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_EmissaryDiscoveredLoot_classes.hpp"
+#include "SoT_BP_Prompt_EmissaryDiscoveredLoot_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Prompt_EmissaryDiscoveredLoot.BP_Prompt_EmissaryDiscoveredLoot_C.OnEmissaryDiscoveredLoot
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryDiscoveredLootNetworkEvent NewParam                       (Parm)
+// FEmissaryDiscoveredLootNetworkEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryDiscoveredLoot_C::OnEmissaryDiscoveredLoot(const struct FEmissaryDiscoveredLootNetworkEvent& NewParam)
+void UBP_Prompt_EmissaryDiscoveredLoot_C::OnEmissaryDiscoveredLoot(const FEmissaryDiscoveredLootNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredLoot.BP_Prompt_EmissaryDiscoveredLoot_C.OnEmissaryDiscoveredLoot"));
 
-	struct
-	{
-		struct FEmissaryDiscoveredLootNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredLoot_C_OnEmissaryDiscoveredLoot_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UBP_Prompt_EmissaryDiscoveredLoot_C::OnEmissaryDiscoveredLoot(const struct 
 // Function BP_Prompt_EmissaryDiscoveredLoot.BP_Prompt_EmissaryDiscoveredLoot_C.EmissaryDiscoveredLoot
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryDiscoveredLootNetworkEvent NewParam                       (Parm)
+// FEmissaryDiscoveredLootNetworkEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryDiscoveredLoot_C::EmissaryDiscoveredLoot(const struct FEmissaryDiscoveredLootNetworkEvent& NewParam)
+void UBP_Prompt_EmissaryDiscoveredLoot_C::EmissaryDiscoveredLoot(const FEmissaryDiscoveredLootNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredLoot.BP_Prompt_EmissaryDiscoveredLoot_C.EmissaryDiscoveredLoot"));
 
-	struct
-	{
-		struct FEmissaryDiscoveredLootNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredLoot_C_EmissaryDiscoveredLoot_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -59,10 +51,7 @@ void UBP_Prompt_EmissaryDiscoveredLoot_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredLoot.BP_Prompt_EmissaryDiscoveredLoot_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredLoot_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -75,10 +64,7 @@ void UBP_Prompt_EmissaryDiscoveredLoot_C::RegisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredLoot.BP_Prompt_EmissaryDiscoveredLoot_C.RegisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredLoot_C_RegisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -91,10 +77,7 @@ void UBP_Prompt_EmissaryDiscoveredLoot_C::UnregisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredLoot.BP_Prompt_EmissaryDiscoveredLoot_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredLoot_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,11 +92,7 @@ void UBP_Prompt_EmissaryDiscoveredLoot_C::ExecuteUbergraph_BP_Prompt_EmissaryDis
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredLoot.BP_Prompt_EmissaryDiscoveredLoot_C.ExecuteUbergraph_BP_Prompt_EmissaryDiscoveredLoot"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredLoot_C_ExecuteUbergraph_BP_Prompt_EmissaryDiscoveredLoot_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

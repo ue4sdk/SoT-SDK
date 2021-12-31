@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_medium_mast_main_classes.hpp"
+#include "SoT_BP_medium_mast_main_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_medium_mast_main_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_medium_mast_main.BP_medium_mast_main_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_medium_mast_main_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void ABP_medium_mast_main_C::OnMastDescLoaded(class UMastDescAsset* MastDesc)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_medium_mast_main.BP_medium_mast_main_C.OnMastDescLoaded"));
 
-	struct
-	{
-		class UMastDescAsset*          MastDesc;
-	} params;
-
+	ABP_medium_mast_main_C_OnMastDescLoaded_Params params;
 	params.MastDesc = MastDesc;
 
 	UObject::ProcessEvent(fn, &params);
@@ -57,11 +50,7 @@ void ABP_medium_mast_main_C::ExecuteUbergraph_BP_medium_mast_main(int EntryPoint
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_medium_mast_main.BP_medium_mast_main_C.ExecuteUbergraph_BP_medium_mast_main"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_medium_mast_main_C_ExecuteUbergraph_BP_medium_mast_main_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

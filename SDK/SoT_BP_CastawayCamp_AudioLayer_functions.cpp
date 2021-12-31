@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CastawayCamp_AudioLayer_classes.hpp"
+#include "SoT_BP_CastawayCamp_AudioLayer_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_CastawayCamp_AudioLayer_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CastawayCamp_AudioLayer.BP_CastawayCamp_AudioLayer_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_CastawayCamp_AudioLayer_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_CastawayCamp_AudioLayer_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CastawayCamp_AudioLayer.BP_CastawayCamp_AudioLayer_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_CastawayCamp_AudioLayer_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void ABP_CastawayCamp_AudioLayer_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> E
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CastawayCamp_AudioLayer.BP_CastawayCamp_AudioLayer_C.ReceiveEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	ABP_CastawayCamp_AudioLayer_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -73,11 +63,7 @@ void ABP_CastawayCamp_AudioLayer_C::ExecuteUbergraph_BP_CastawayCamp_AudioLayer(
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CastawayCamp_AudioLayer.BP_CastawayCamp_AudioLayer_C.ExecuteUbergraph_BP_CastawayCamp_AudioLayer"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_CastawayCamp_AudioLayer_C_ExecuteUbergraph_BP_CastawayCamp_AudioLayer_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

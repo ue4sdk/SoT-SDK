@@ -10,8 +10,8 @@
 #include "SoT_AthenaRigging_enums.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_AthenaSocketLookup_classes.hpp"
 #include "SoT_Tethering_classes.hpp"
+#include "SoT_AthenaSocketLookup_classes.hpp"
 
 namespace SDK
 {
@@ -41,8 +41,8 @@ struct FRopeCatenarySlopeBlendParams
 // 0x0018
 struct FRopeCatenaryShapeParams
 {
-	struct FRopeCatenaryLengthParams                   Length;                                                   // 0x0000(0x0010) (Edit, BlueprintVisible)
-	struct FRopeCatenarySlopeBlendParams               Slope;                                                    // 0x0010(0x0008) (Edit, BlueprintVisible)
+	FRopeCatenaryLengthParams                          Length;                                                   // 0x0000(0x0010) (Edit, BlueprintVisible)
+	FRopeCatenarySlopeBlendParams                      Slope;                                                    // 0x0010(0x0008) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct AthenaRigging.RopeCatenarySwingParams
@@ -66,16 +66,16 @@ struct FRopeCatenaryDynamicsParams
 // 0x0054
 struct FInstancedRopeParams
 {
-	struct FVector                                     Start;                                                    // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     End;                                                      // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            Start;                                                    // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            End;                                                      // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Thickness;                                                // 0x0018(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              UVScale;                                                  // 0x001C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              UVBase;                                                   // 0x0020(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              UVOffset;                                                 // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Roughness;                                                // 0x0028(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FRopeCatenaryShapeParams                    Shape;                                                    // 0x002C(0x0018) (Edit, BlueprintVisible)
-	struct FRopeCatenarySwingParams                    Swing;                                                    // 0x0044(0x0008) (Edit, BlueprintVisible)
-	struct FRopeCatenaryDynamicsParams                 Dynamics;                                                 // 0x004C(0x0008) (Edit, BlueprintVisible)
+	FRopeCatenaryShapeParams                           Shape;                                                    // 0x002C(0x0018) (Edit, BlueprintVisible)
+	FRopeCatenarySwingParams                           Swing;                                                    // 0x0044(0x0008) (Edit, BlueprintVisible)
+	FRopeCatenaryDynamicsParams                        Dynamics;                                                 // 0x004C(0x0008) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct AthenaRigging.RiggingSystemLine
@@ -104,9 +104,9 @@ struct FRiggingSystemPulleyData
 // 0x0020
 struct FRopeStyleParams
 {
-	class UStaticMesh*                                 Mesh;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  DiffuseTexture;                                           // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UTexture2D*                                  NormalTexture;                                            // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UStaticMesh*                                       Mesh;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UTexture2D*                                        DiffuseTexture;                                           // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UTexture2D*                                        NormalTexture;                                            // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                ShadowLOD;                                                // 0x0018(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
@@ -115,7 +115,7 @@ struct FRopeStyleParams
 // 0x0010
 struct FPulleyVisualParams
 {
-	class UStaticMesh*                                 Mesh;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UStaticMesh*                                       Mesh;                                                     // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Scale;                                                    // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Radius;                                                   // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
@@ -133,7 +133,7 @@ struct FRopeVisualParams
 // 0x0014
 struct FRiggingSystemPulleyAttachmentParams
 {
-	struct FRopeVisualParams                           Visuals;                                                  // 0x0000(0x000C) (Edit)
+	FRopeVisualParams                                  Visuals;                                                  // 0x0000(0x000C) (Edit)
 	float                                              Length;                                                   // 0x000C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Sag;                                                      // 0x0010(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 };
@@ -142,11 +142,11 @@ struct FRiggingSystemPulleyAttachmentParams
 // 0x0050
 struct FRiggingSystemPulleyParams
 {
-	struct FSocketId                                   Anchor;                                                   // 0x0000(0x0020) (Edit)
+	FSocketId                                          Anchor;                                                   // 0x0000(0x0020) (Edit)
 	float                                              OffsetFromAnchor;                                         // 0x0020(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-	struct FPulleyVisualParams                         Visuals;                                                  // 0x0028(0x0010) (Edit)
-	struct FRiggingSystemPulleyAttachmentParams        AttachmentRope;                                           // 0x0038(0x0014) (Edit)
+	FPulleyVisualParams                                Visuals;                                                  // 0x0028(0x0010) (Edit)
+	FRiggingSystemPulleyAttachmentParams               AttachmentRope;                                           // 0x0038(0x0014) (Edit)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 };
 
@@ -154,11 +154,11 @@ struct FRiggingSystemPulleyParams
 // 0x0078
 struct FRiggingSystemLineParams
 {
-	struct FSocketId                                   Start;                                                    // 0x0000(0x0020) (Edit)
-	TArray<struct FRiggingSystemPulleyParams>          Pulleys;                                                  // 0x0020(0x0010) (Edit, ZeroConstructor)
-	struct FSocketId                                   End;                                                      // 0x0030(0x0020) (Edit)
-	struct FRopeVisualParams                           Visuals;                                                  // 0x0050(0x000C) (Edit)
-	struct FRopeCatenaryShapeParams                    Shape;                                                    // 0x005C(0x0018) (Edit)
+	FSocketId                                          Start;                                                    // 0x0000(0x0020) (Edit)
+	TArray<FRiggingSystemPulleyParams>                 Pulleys;                                                  // 0x0020(0x0010) (Edit, ZeroConstructor)
+	FSocketId                                          End;                                                      // 0x0030(0x0020) (Edit)
+	FRopeVisualParams                                  Visuals;                                                  // 0x0050(0x000C) (Edit)
+	FRopeCatenaryShapeParams                           Shape;                                                    // 0x005C(0x0018) (Edit)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0074(0x0004) MISSED OFFSET
 };
 
@@ -166,8 +166,8 @@ struct FRiggingSystemLineParams
 // 0x0018
 struct FRiggingSystemLineGroup
 {
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FRiggingSystemLineParams>            Lines;                                                    // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	FName                                              Name;                                                     // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<FRiggingSystemLineParams>                   Lines;                                                    // 0x0008(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct AthenaRigging.RopeCatenaryLengthPair

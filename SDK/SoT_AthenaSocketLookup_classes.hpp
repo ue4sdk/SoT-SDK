@@ -27,9 +27,9 @@ public:
 	}
 
 
-	static struct FSocketId MakeSocketIdWithInvalidName(const class FString& InPath);
-	static struct FSocketId MakeSocketIdWithEmptyPath(const struct FName& InSocketName);
-	static struct FSocketId MakeSocketId(const class FString& InPath, const struct FName& InSocketName);
+	static FSocketId MakeSocketIdWithInvalidName(const FString& InPath);
+	static FSocketId MakeSocketIdWithEmptyPath(const FName& InSocketName);
+	static FSocketId MakeSocketId(const FString& InPath, const FName& InSocketName);
 };
 
 
@@ -46,8 +46,8 @@ public:
 	}
 
 
-	static bool IsInCache(const struct FSocketId& InSocketId, struct FSocketLookupCache* InCache);
-	static bool AddToCache(const struct FSocketId& InSocketId, class USceneComponent* InSceneComponent, struct FSocketLookupCache* InCache);
+	static bool IsInCache(const FSocketId& InSocketId, FSocketLookupCache* InCache);
+	static bool AddToCache(const FSocketId& InSocketId, USceneComponent* InSceneComponent, FSocketLookupCache* InCache);
 };
 
 
@@ -64,10 +64,10 @@ public:
 	}
 
 
-	static bool TryGetSocketTransformWithCache(class AActor* InActor, const struct FSocketId& InSocketId, struct FSocketLookupCache* Cache, struct FTransform* OutTransform);
-	static bool TryGetSocketTransform(class AActor* InActor, const struct FSocketId& InSocketId, TEnumAsByte<ERelativeTransformSpace> Space, struct FTransform* OutTransform);
-	static bool TryGetRelativeSocketTransform(class AActor* InActor, const struct FSocketId& InSocketId, class USceneComponent* RelativeTo, struct FTransform* OutTransform);
-	static class USceneComponent* TryFindSocketOwner(class AActor* InActor, const struct FSocketId& InSocketId);
+	static bool TryGetSocketTransformWithCache(AActor* InActor, const FSocketId& InSocketId, FSocketLookupCache* Cache, FTransform* OutTransform);
+	static bool TryGetSocketTransform(AActor* InActor, const FSocketId& InSocketId, TEnumAsByte<ERelativeTransformSpace> Space, FTransform* OutTransform);
+	static bool TryGetRelativeSocketTransform(AActor* InActor, const FSocketId& InSocketId, USceneComponent* RelativeTo, FTransform* OutTransform);
+	static USceneComponent* TryFindSocketOwner(AActor* InActor, const FSocketId& InSocketId);
 };
 
 
@@ -84,7 +84,7 @@ public:
 	}
 
 
-	bool FindSocket(const struct FSocketId& InSocketId, struct FTransform* OutTransform);
+	bool FindSocket(const FSocketId& InSocketId, FTransform* OutTransform);
 };
 
 

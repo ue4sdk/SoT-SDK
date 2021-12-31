@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Campaign005_CursedSails_ClothingColin_PreCursedSails_classes.hpp"
+#include "SoT_BP_Campaign005_CursedSails_ClothingColin_PreCursedSails_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Campaign005_CursedSails_ClothingColin_PreCursedSails_C::UserConstructio
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Campaign005_CursedSails_ClothingColin_PreCursedSails.BP_Campaign005_CursedSails_ClothingColin_PreCursedSails_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Campaign005_CursedSails_ClothingColin_PreCursedSails_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

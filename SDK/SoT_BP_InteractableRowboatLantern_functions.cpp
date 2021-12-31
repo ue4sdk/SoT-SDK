@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_InteractableRowboatLantern_classes.hpp"
+#include "SoT_BP_InteractableRowboatLantern_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_InteractableRowboatLantern_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableRowboatLantern.BP_InteractableRowboatLantern_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_InteractableRowboatLantern_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_InteractableRowboatLantern_C::LightStateChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableRowboatLantern.BP_InteractableRowboatLantern_C.LightStateChanged"));
 
-	struct
-	{
-	} params;
-
+	ABP_InteractableRowboatLantern_C_LightStateChanged_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void ABP_InteractableRowboatLantern_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableRowboatLantern.BP_InteractableRowboatLantern_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_InteractableRowboatLantern_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -69,11 +60,7 @@ void ABP_InteractableRowboatLantern_C::ExecuteUbergraph_BP_InteractableRowboatLa
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_InteractableRowboatLantern.BP_InteractableRowboatLantern_C.ExecuteUbergraph_BP_InteractableRowboatLantern"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_InteractableRowboatLantern_C_ExecuteUbergraph_BP_InteractableRowboatLantern_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

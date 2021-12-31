@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_AxisControlInterface_classes.hpp"
+#include "SoT_BP_AxisControlInterface_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void UBP_AxisControlInterface_C::StickInput(float StickInputX)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AxisControlInterface.BP_AxisControlInterface_C.StickInput"));
 
-	struct
-	{
-		float                          StickInputX;
-	} params;
-
+	UBP_AxisControlInterface_C_StickInput_Params params;
 	params.StickInputX = StickInputX;
 
 	UObject::ProcessEvent(fn, &params);

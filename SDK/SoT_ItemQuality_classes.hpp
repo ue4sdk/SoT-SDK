@@ -37,9 +37,9 @@ public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
 	TEnumAsByte<EEmissaryQualityLevel>                 ItemQualityLevel;                                         // 0x00D0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x00D1(0x0007) MISSED OFFSET
-	TArray<struct FPerComanyItemQualityEntry>          CompanySpecificItemQualityLevels;                         // 0x00D8(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FPerComanyComplexItemQualityEntry>   CompanySpecificComplexItemQualityLevels;                  // 0x00E8(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FPerComanyComplexItemQualityEntry>   CompanySpecificComplexItemQualityLevelsHandin;            // 0x00F8(0x0010) (Edit, ZeroConstructor)
+	TArray<FPerComanyItemQualityEntry>                 CompanySpecificItemQualityLevels;                         // 0x00D8(0x0010) (Edit, ZeroConstructor)
+	TArray<FPerComanyComplexItemQualityEntry>          CompanySpecificComplexItemQualityLevels;                  // 0x00E8(0x0010) (Edit, ZeroConstructor)
+	TArray<FPerComanyComplexItemQualityEntry>          CompanySpecificComplexItemQualityLevelsHandin;            // 0x00F8(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

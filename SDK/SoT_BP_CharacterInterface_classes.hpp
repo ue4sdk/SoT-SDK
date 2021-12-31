@@ -31,11 +31,11 @@ public:
 	void IK_Limb_Active(TEnumAsByte<EIKLimbName> LimbId, bool Active, TEnumAsByte<ELimbIKSpace> CoordinateSpace);
 	void IK_Limb_Update_Strength(TEnumAsByte<EIKLimbName> LimbId, float LocationStrength, float RotationStrength);
 	void IK_Limb_Blend_Timing(TEnumAsByte<EIKLimbName> LimbId, float BlendIn, float BlendOut);
-	void IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName> LimbId, const struct FTransform& TransformUpdate);
-	void CapstanForce(float IndividualForce, const struct FTransform& LH_IK, const struct FTransform& RH_IK, class AActor* Actor);
-	void DockingInterface(const struct FBP_Docking& Docking);
+	void IK_Limb_Update_Transform(TEnumAsByte<EIKLimbName> LimbId, const FTransform& TransformUpdate);
+	void CapstanForce(float IndividualForce, const FTransform& LH_IK, const FTransform& RH_IK, AActor* Actor);
+	void DockingInterface(const FBP_Docking& Docking);
 	void CapstanRotationSpeed(float RotationSpeed);
-	void Update_Athena_Character(class AAthenaCharacter* AthenaCharacter);
+	void Update_Athena_Character(AAthenaCharacter* AthenaCharacter);
 };
 
 

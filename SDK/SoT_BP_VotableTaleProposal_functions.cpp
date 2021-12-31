@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_VotableTaleProposal_classes.hpp"
+#include "SoT_BP_VotableTaleProposal_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void ABP_VotableTaleProposal_C::PlayShowTokenAnimation(class UPrimitiveComponent
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableTaleProposal.BP_VotableTaleProposal_C.PlayShowTokenAnimation"));
 
-	struct
-	{
-		class UPrimitiveComponent*     Token;
-	} params;
-
+	ABP_VotableTaleProposal_C_PlayShowTokenAnimation_Params params;
 	params.Token = Token;
 
 	UObject::ProcessEvent(fn, &params);
@@ -41,11 +37,7 @@ void ABP_VotableTaleProposal_C::Is_Session_Locked(bool* IsLocked)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableTaleProposal.BP_VotableTaleProposal_C.Is Session Locked"));
 
-	struct
-	{
-		bool                           IsLocked;
-	} params;
-
+	ABP_VotableTaleProposal_C_Is_Session_Locked_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,10 +53,7 @@ void ABP_VotableTaleProposal_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableTaleProposal.BP_VotableTaleProposal_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_VotableTaleProposal_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -77,10 +66,7 @@ void ABP_VotableTaleProposal_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableTaleProposal.BP_VotableTaleProposal_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_VotableTaleProposal_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -95,11 +81,7 @@ void ABP_VotableTaleProposal_C::OnVoteAdded(const TScriptInterface<class UVoterI
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableTaleProposal.BP_VotableTaleProposal_C.OnVoteAdded"));
 
-	struct
-	{
-		TScriptInterface<class UVoterInterface> Voter;
-	} params;
-
+	ABP_VotableTaleProposal_C_OnVoteAdded_Params params;
 	params.Voter = Voter;
 
 	UObject::ProcessEvent(fn, &params);
@@ -115,11 +97,7 @@ void ABP_VotableTaleProposal_C::OnVoteRemoved(const TScriptInterface<class UVote
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableTaleProposal.BP_VotableTaleProposal_C.OnVoteRemoved"));
 
-	struct
-	{
-		TScriptInterface<class UVoterInterface> Voter;
-	} params;
-
+	ABP_VotableTaleProposal_C_OnVoteRemoved_Params params;
 	params.Voter = Voter;
 
 	UObject::ProcessEvent(fn, &params);
@@ -135,11 +113,7 @@ void ABP_VotableTaleProposal_C::ExecuteUbergraph_BP_VotableTaleProposal(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_VotableTaleProposal.BP_VotableTaleProposal_C.ExecuteUbergraph_BP_VotableTaleProposal"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_VotableTaleProposal_C_ExecuteUbergraph_BP_VotableTaleProposal_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

@@ -19,8 +19,8 @@ namespace SDK
 class ABP_Figurehead_C : public AGenericPartWithVFX
 {
 public:
-	class UParticleSystemComponent*                    ParticleSystem;                                           // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Figurehead;                                               // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UParticleSystemComponent*                          ParticleSystem;                                           // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStaticMeshComponent*                              Figurehead;                                               // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,8 +29,8 @@ public:
 	}
 
 
-	class UParticleSystemComponent* GetVFXComponent();
-	class UStaticMeshComponent* GetMeshComponent();
+	UParticleSystemComponent* GetVFXComponent();
+	UStaticMeshComponent* GetMeshComponent();
 	void UserConstructionScript();
 };
 

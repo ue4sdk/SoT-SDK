@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_RevivingAnimation_classes.hpp"
+#include "SoT_RevivingAnimation_parameters.hpp"
 
 namespace SDK
 {

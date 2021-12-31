@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishingFish_Battlegill_03_Colour_05_Bittersweet_classes.hpp"
+#include "SoT_BP_FishingFish_Battlegill_03_Colour_05_Bittersweet_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishingFish_Battlegill_03_Colour_05_Bittersweet_C::UserConstructionScri
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishingFish_Battlegill_03_Colour_05_Bittersweet.BP_FishingFish_Battlegill_03_Colour_05_Bittersweet_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_FishingFish_Battlegill_03_Colour_05_Bittersweet_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

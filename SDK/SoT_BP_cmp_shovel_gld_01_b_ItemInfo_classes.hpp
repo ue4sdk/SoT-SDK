@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_cmp_shovel_gld_01_b_ItemInfo.BP_cmp_shovel_gld_01_b_ItemInfo_C
-// 0x0008 (0x0558 - 0x0550)
+// 0x0008 (0x0508 - 0x0500)
 class ABP_cmp_shovel_gld_01_b_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

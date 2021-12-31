@@ -21,22 +21,42 @@ namespace SDK
 // 0x0020
 struct FTestLevelMetadataEntry
 {
-	class FString                                      Property;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
-	class FString                                      Value;                                                    // 0x0010(0x0010) (Edit, ZeroConstructor)
+	FString                                            Property;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+	FString                                            Value;                                                    // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct StudiosAutomation.ClientPawnDetails
 // 0x0010
 struct FClientPawnDetails
 {
-	TArray<class APawn*>                               Pawns;                                                    // 0x0000(0x0010) (ZeroConstructor)
+	TArray<APawn*>                                     Pawns;                                                    // 0x0000(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct StudiosAutomation.TextureAuditorProperties
+// 0x0020
+struct FTextureAuditorProperties
+{
+	TEnumAsByte<ETextureAuditorMipSetting>             RequiredMipsSetting;                                      // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	TArray<TEnumAsByte<EPixelFormat>>                  AllowedTextureFormats;                                    // 0x0008(0x0010) (Edit, ZeroConstructor)
+	uint32_t                                           MinSizeToValidateFormatX;                                 // 0x0018(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	uint32_t                                           MinSizeToValidateFormatY;                                 // 0x001C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+};
+
+// ScriptStruct StudiosAutomation.TextureAuditorGroupProperties
+// 0x0028
+struct FTextureAuditorGroupProperties
+{
+	TEnumAsByte<ETextureGroup>                         TextureGroup;                                             // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
+	FTextureAuditorProperties                          Properties;                                               // 0x0008(0x0020) (Edit)
 };
 
 // ScriptStruct StudiosAutomation.SubstringAuditQueryData
 // 0x0018
 struct FSubstringAuditQueryData
 {
-	TArray<class FString>                              QueryStringArray;                                         // 0x0000(0x0010) (ZeroConstructor)
+	TArray<FString>                                    QueryStringArray;                                         // 0x0000(0x0010) (ZeroConstructor)
 	int                                                SearchSetSize;                                            // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                MemoryLimitForSet;                                        // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
 };
@@ -47,23 +67,23 @@ struct FFolderTotals
 {
 	bool                                               EnforceCollectionMembership;                              // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	TArray<struct FName>                               CollectionsAllowedForFolder;                              // 0x0008(0x0010) (ZeroConstructor)
-	TArray<struct FName>                               AssetTypesToTest;                                         // 0x0018(0x0010) (ZeroConstructor)
+	TArray<FName>                                      CollectionsAllowedForFolder;                              // 0x0008(0x0010) (ZeroConstructor)
+	TArray<FName>                                      AssetTypesToTest;                                         // 0x0018(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct StudiosAutomation.MeshAuditLimits
 // 0x0038
 struct FMeshAuditLimits
 {
-	TArray<struct FSubstringAuditQueryData>            SubstringQueries;                                         // 0x0000(0x0010) (ZeroConstructor)
-	struct FFolderTotals                               FolderMeshLimits;                                         // 0x0010(0x0028)
+	TArray<FSubstringAuditQueryData>                   SubstringQueries;                                         // 0x0000(0x0010) (ZeroConstructor)
+	FFolderTotals                                      FolderMeshLimits;                                         // 0x0010(0x0028)
 };
 
 // ScriptStruct StudiosAutomation.AssetAuditConstantEntry
 // 0x0018
 struct FAssetAuditConstantEntry
 {
-	class FString                                      Name;                                                     // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            Name;                                                     // 0x0000(0x0010) (ZeroConstructor)
 	int                                                Value;                                                    // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
@@ -72,7 +92,7 @@ struct FAssetAuditConstantEntry
 // 0x0010
 struct FAssetAuditConstants
 {
-	TArray<struct FAssetAuditConstantEntry>            AssetAuditConstants;                                      // 0x0000(0x0010) (ZeroConstructor)
+	TArray<FAssetAuditConstantEntry>                   AssetAuditConstants;                                      // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct StudiosAutomation.CollectionTotalsLimits
@@ -118,14 +138,14 @@ struct FCollectionAnimSequenceLimits
 // 0x0034
 struct FCollectionLimits
 {
-	struct FName                                       CollectionName;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	FName                                              CollectionName;                                           // 0x0000(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
 	TEnumAsByte<ECollectionAuditType>                  AuditType;                                                // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               IsOnlyParentCollection;                                   // 0x0009(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x000A(0x0002) MISSED OFFSET
-	struct FCollectionTotalsLimits                     CollectionTotals;                                         // 0x000C(0x0010) (Edit)
-	struct FCollectionStaticMeshLimits                 StaticMeshLimits;                                         // 0x001C(0x0008) (Edit)
-	struct FCollectionSkeleMeshLimits                  SkeleMeshLimits;                                          // 0x0024(0x0008) (Edit)
-	struct FCollectionAnimSequenceLimits               AnimLimits;                                               // 0x002C(0x0004) (Edit)
+	FCollectionTotalsLimits                            CollectionTotals;                                         // 0x000C(0x0010) (Edit)
+	FCollectionStaticMeshLimits                        StaticMeshLimits;                                         // 0x001C(0x0008) (Edit)
+	FCollectionSkeleMeshLimits                         SkeleMeshLimits;                                          // 0x0024(0x0008) (Edit)
+	FCollectionAnimSequenceLimits                      AnimLimits;                                               // 0x002C(0x0004) (Edit)
 	bool                                               CanUseComplexCollisionAsSimple;                           // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               CanUseLOD0Collision;                                      // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x2];                                       // 0x0032(0x0002) MISSED OFFSET
@@ -135,7 +155,7 @@ struct FCollectionLimits
 // 0x0010
 struct FCollectionLimitsArray
 {
-	TArray<struct FCollectionLimits>                   CollectionLimits;                                         // 0x0000(0x0010) (ZeroConstructor)
+	TArray<FCollectionLimits>                          CollectionLimits;                                         // 0x0000(0x0010) (ZeroConstructor)
 };
 
 }

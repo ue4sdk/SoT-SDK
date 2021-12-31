@@ -1,0 +1,43 @@
+#pragma once
+
+// Sea of Thieves (2) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+#include "SoT_BP_PromptActor_EmissaryKilledAnotherEmissary_AF_classes.hpp"
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Parameters
+//---------------------------------------------------------------------------
+
+// Function BP_PromptActor_EmissaryKilledAnotherEmissary_AF.BP_PromptActor_EmissaryKilledAnotherEmissary_AF_C.UserConstructionScript
+struct ABP_PromptActor_EmissaryKilledAnotherEmissary_AF_C_UserConstructionScript_Params
+{
+};
+
+// Function BP_PromptActor_EmissaryKilledAnotherEmissary_AF.BP_PromptActor_EmissaryKilledAnotherEmissary_AF_C.ReceiveBeginPlay
+struct ABP_PromptActor_EmissaryKilledAnotherEmissary_AF_C_ReceiveBeginPlay_Params
+{
+};
+
+// Function BP_PromptActor_EmissaryKilledAnotherEmissary_AF.BP_PromptActor_EmissaryKilledAnotherEmissary_AF_C.ReceiveEndPlay
+struct ABP_PromptActor_EmissaryKilledAnotherEmissary_AF_C_ReceiveEndPlay_Params
+{
+	TEnumAsByte<EEndPlayReason>                        EndPlayReason;                                            // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+// Function BP_PromptActor_EmissaryKilledAnotherEmissary_AF.BP_PromptActor_EmissaryKilledAnotherEmissary_AF_C.ExecuteUbergraph_BP_PromptActor_EmissaryKilledAnotherEmissary_AF
+struct ABP_PromptActor_EmissaryKilledAnotherEmissary_AF_C_ExecuteUbergraph_BP_PromptActor_EmissaryKilledAnotherEmissary_AF_Params
+{
+	int                                                EntryPoint;                                               // (Parm, ZeroConstructor, IsPlainOldData)
+};
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif

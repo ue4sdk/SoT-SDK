@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_LiquidContainer_classes.hpp"
+#include "SoT_LiquidContainer_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void ULiquidContainerInterface::SetLiquidLevel(float Level)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LiquidContainer.LiquidContainerInterface.SetLiquidLevel"));
 
-	struct
-	{
-		float                          Level;
-	} params;
-
+	ULiquidContainerInterface_SetLiquidLevel_Params params;
 	params.Level = Level;
 
 	UObject::ProcessEvent(fn, &params);
@@ -41,11 +37,7 @@ float ULiquidContainerInterface::GetWantedLiquidLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LiquidContainer.LiquidContainerInterface.GetWantedLiquidLevel"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	ULiquidContainerInterface_GetWantedLiquidLevel_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -62,11 +54,7 @@ float ULiquidContainerInterface::GetMaxLiquidCollectionAmount()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LiquidContainer.LiquidContainerInterface.GetMaxLiquidCollectionAmount"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	ULiquidContainerInterface_GetMaxLiquidCollectionAmount_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -83,11 +71,7 @@ float ULiquidContainerInterface::GetLiquidLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LiquidContainer.LiquidContainerInterface.GetLiquidLevel"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	ULiquidContainerInterface_GetLiquidLevel_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,12 +89,7 @@ float ULiquidContainerInterface::CollectLiquidAmount(float DesiredAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LiquidContainer.LiquidContainerInterface.CollectLiquidAmount"));
 
-	struct
-	{
-		float                          DesiredAmount;
-		float                          ReturnValue;
-	} params;
-
+	ULiquidContainerInterface_CollectLiquidAmount_Params params;
 	params.DesiredAmount = DesiredAmount;
 
 	UObject::ProcessEvent(fn, &params);
@@ -128,11 +107,7 @@ void ULiquidContainerComponent::SetLiquidType(TEnumAsByte<ELiquidType> LiquidTyp
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LiquidContainer.LiquidContainerComponent.SetLiquidType"));
 
-	struct
-	{
-		TEnumAsByte<ELiquidType>       LiquidType;
-	} params;
-
+	ULiquidContainerComponent_SetLiquidType_Params params;
 	params.LiquidType = LiquidType;
 
 	UObject::ProcessEvent(fn, &params);
@@ -148,11 +123,7 @@ void ULiquidContainerComponent::SetLiquidLevel(float Level)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LiquidContainer.LiquidContainerComponent.SetLiquidLevel"));
 
-	struct
-	{
-		float                          Level;
-	} params;
-
+	ULiquidContainerComponent_SetLiquidLevel_Params params;
 	params.Level = Level;
 
 	UObject::ProcessEvent(fn, &params);
@@ -168,11 +139,7 @@ float ULiquidContainerComponent::GetLiquidLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LiquidContainer.LiquidContainerComponent.GetLiquidLevel"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	ULiquidContainerComponent_GetLiquidLevel_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -183,17 +150,13 @@ float ULiquidContainerComponent::GetLiquidLevel()
 // Function LiquidContainer.LiquidContainerComponent.CollectLiquidMaterials
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UMeshComponent*          MeshComponent                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// UMeshComponent*                MeshComponent                  (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void ULiquidContainerComponent::CollectLiquidMaterials(class UMeshComponent* MeshComponent)
+void ULiquidContainerComponent::CollectLiquidMaterials(UMeshComponent* MeshComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LiquidContainer.LiquidContainerComponent.CollectLiquidMaterials"));
 
-	struct
-	{
-		class UMeshComponent*          MeshComponent;
-	} params;
-
+	ULiquidContainerComponent_CollectLiquidMaterials_Params params;
 	params.MeshComponent = MeshComponent;
 
 	UObject::ProcessEvent(fn, &params);

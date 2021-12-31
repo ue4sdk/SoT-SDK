@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Cooking_classes.hpp"
+#include "SoT_Cooking_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function Cooking.CookerComponent.OnRep_CookingState
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FCookingClientRepresentation OldRepresentation              (ConstParm, Parm, OutParm, ReferenceParm)
+// FCookingClientRepresentation   OldRepresentation              (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UCookerComponent::OnRep_CookingState(const struct FCookingClientRepresentation& OldRepresentation)
+void UCookerComponent::OnRep_CookingState(const FCookingClientRepresentation& OldRepresentation)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Cooking.CookerComponent.OnRep_CookingState"));
 
-	struct
-	{
-		struct FCookingClientRepresentation OldRepresentation;
-	} params;
-
+	UCookerComponent_OnRep_CookingState_Params params;
 	params.OldRepresentation = OldRepresentation;
 
 	UObject::ProcessEvent(fn, &params);

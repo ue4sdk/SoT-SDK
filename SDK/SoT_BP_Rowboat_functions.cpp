@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Rowboat_classes.hpp"
+#include "SoT_BP_Rowboat_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ unsigned char ABP_Rowboat_C::GetPxActorCapacityForPhysXAggregate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Rowboat.BP_Rowboat_C.GetPxActorCapacityForPhysXAggregate"));
 
-	struct
-	{
-		unsigned char                  ReturnValue;
-	} params;
-
+	ABP_Rowboat_C_GetPxActorCapacityForPhysXAggregate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,10 +36,7 @@ void ABP_Rowboat_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Rowboat.BP_Rowboat_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Rowboat_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

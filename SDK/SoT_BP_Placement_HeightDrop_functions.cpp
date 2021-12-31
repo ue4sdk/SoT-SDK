@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Placement_HeightDrop_classes.hpp"
+#include "SoT_BP_Placement_HeightDrop_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Placement_HeightDrop_C::CreateComponentList()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.CreateComponentList"));
 
-	struct
-	{
-	} params;
-
+	ABP_Placement_HeightDrop_C_CreateComponentList_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_Placement_HeightDrop_C::CreateParentBounds()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.CreateParentBounds"));
 
-	struct
-	{
-	} params;
-
+	ABP_Placement_HeightDrop_C_CreateParentBounds_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void ABP_Placement_HeightDrop_C::CheckMobilityState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.CheckMobilityState"));
 
-	struct
-	{
-	} params;
-
+	ABP_Placement_HeightDrop_C_CheckMobilityState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -63,27 +54,18 @@ void ABP_Placement_HeightDrop_C::CheckMobilityState()
 // Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.Get Valid Collision
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FHitResult>      Hit_Results                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<FHitResult>             Hit_Results                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           Hit_Success                    (Parm, ZeroConstructor, IsPlainOldData)
-// class USceneComponent*         Current_Component              (Parm, ZeroConstructor, IsPlainOldData)
+// USceneComponent*               Current_Component              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Return_Value                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Impact_Position                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Impact_Normal                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// FVector                        Impact_Position                (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// FVector                        Impact_Normal                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Placement_HeightDrop_C::Get_Valid_Collision(bool Hit_Success, class USceneComponent* Current_Component, TArray<struct FHitResult>* Hit_Results, bool* Return_Value, struct FVector* Impact_Position, struct FVector* Impact_Normal)
+void ABP_Placement_HeightDrop_C::Get_Valid_Collision(bool Hit_Success, USceneComponent* Current_Component, TArray<FHitResult>* Hit_Results, bool* Return_Value, FVector* Impact_Position, FVector* Impact_Normal)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.Get Valid Collision"));
 
-	struct
-	{
-		TArray<struct FHitResult>      Hit_Results;
-		bool                           Hit_Success;
-		class USceneComponent*         Current_Component;
-		bool                           Return_Value;
-		struct FVector                 Impact_Position;
-		struct FVector                 Impact_Normal;
-	} params;
-
+	ABP_Placement_HeightDrop_C_Get_Valid_Collision_Params params;
 	params.Hit_Success = Hit_Success;
 	params.Current_Component = Current_Component;
 
@@ -107,10 +89,7 @@ void ABP_Placement_HeightDrop_C::Drop_Components()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.Drop Components"));
 
-	struct
-	{
-	} params;
-
+	ABP_Placement_HeightDrop_C_Drop_Components_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -123,10 +102,7 @@ void ABP_Placement_HeightDrop_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_HeightDrop.BP_Placement_HeightDrop_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Placement_HeightDrop_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

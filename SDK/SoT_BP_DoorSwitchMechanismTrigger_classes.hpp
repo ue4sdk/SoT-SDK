@@ -19,8 +19,8 @@ namespace SDK
 class ABP_DoorSwitchMechanismTrigger_C : public ASwitchMechanismTrigger
 {
 public:
-	class UArrowComponent*                             Arrow;                                                    // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UArrowComponent*                                   Arrow;                                                    // 0x0550(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UInteractableComponent*                            Interactable;                                             // 0x0558(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

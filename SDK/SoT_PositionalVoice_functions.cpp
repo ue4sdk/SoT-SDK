@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_PositionalVoice_classes.hpp"
+#include "SoT_PositionalVoice_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceLocation
 // (Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FVector                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UVoiceChatEmitterInterface::GetVoiceLocation()
+FVector UVoiceChatEmitterInterface::GetVoiceLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceLocation"));
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UVoiceChatEmitterInterface_GetVoiceLocation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,17 +32,13 @@ struct FVector UVoiceChatEmitterInterface::GetVoiceLocation()
 // Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceAudioEmitterProxy
 // (Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FWwiseEmitter           EmitterProxy                   (Parm, OutParm)
+// FWwiseEmitter                  EmitterProxy                   (Parm, OutParm)
 
-void UVoiceChatEmitterInterface::GetVoiceAudioEmitterProxy(struct FWwiseEmitter* EmitterProxy)
+void UVoiceChatEmitterInterface::GetVoiceAudioEmitterProxy(FWwiseEmitter* EmitterProxy)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceAudioEmitterProxy"));
 
-	struct
-	{
-		struct FWwiseEmitter           EmitterProxy;
-	} params;
-
+	UVoiceChatEmitterInterface_GetVoiceAudioEmitterProxy_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -65,12 +57,7 @@ float UVoiceChatEmitterInterface::GetVoiceAttenuationScaler(const TScriptInterfa
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PositionalVoice.VoiceChatEmitterInterface.GetVoiceAttenuationScaler"));
 
-	struct
-	{
-		TScriptInterface<class UVoiceChatEmitterInterface> RelativeToThisEmitter;
-		float                          ReturnValue;
-	} params;
-
+	UVoiceChatEmitterInterface_GetVoiceAttenuationScaler_Params params;
 	params.RelativeToThisEmitter = RelativeToThisEmitter;
 
 	UObject::ProcessEvent(fn, &params);

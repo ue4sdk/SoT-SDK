@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ContestMatchmaking_classes.hpp"
+#include "SoT_ContestMatchmaking_parameters.hpp"
 
 namespace SDK
 {

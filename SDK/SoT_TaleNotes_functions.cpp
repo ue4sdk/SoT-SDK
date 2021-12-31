@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_TaleNotes_classes.hpp"
+#include "SoT_TaleNotes_parameters.hpp"
 
 namespace SDK
 {
@@ -15,21 +15,15 @@ namespace SDK
 // Function TaleNotes.TaleNote.OnTextCanvasUpdate
 // (Final, Native, Protected)
 // Parameters:
-// class UCanvas*                 InCanvas                       (Parm, ZeroConstructor, IsPlainOldData)
+// UCanvas*                       InCanvas                       (Parm, ZeroConstructor, IsPlainOldData)
 // int                            InWidth                        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            InHeight                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ATaleNote::OnTextCanvasUpdate(class UCanvas* InCanvas, int InWidth, int InHeight)
+void ATaleNote::OnTextCanvasUpdate(UCanvas* InCanvas, int InWidth, int InHeight)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function TaleNotes.TaleNote.OnTextCanvasUpdate"));
 
-	struct
-	{
-		class UCanvas*                 InCanvas;
-		int                            InWidth;
-		int                            InHeight;
-	} params;
-
+	ATaleNote_OnTextCanvasUpdate_Params params;
 	params.InCanvas = InCanvas;
 	params.InWidth = InWidth;
 	params.InHeight = InHeight;

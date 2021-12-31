@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SwimTurningAnimations_classes.hpp"
+#include "SoT_BP_SwimTurningAnimations_parameters.hpp"
 
 namespace SDK
 {

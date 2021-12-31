@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_SplashTail_03_Colour_01_Ruby.BP_FishingFish_SplashTail_03_Colour_01_Ruby_C
-// 0x0000 (0x0910 - 0x0910)
+// 0x0000 (0x0920 - 0x0920)
 class ABP_FishingFish_SplashTail_03_Colour_01_Ruby_C : public ABP_FishingFish_SplashTail_03_C
 {
 public:

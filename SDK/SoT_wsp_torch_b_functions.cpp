@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_torch_b_classes.hpp"
+#include "SoT_wsp_torch_b_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awsp_torch_b_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_torch_b.wsp_torch_b_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Awsp_torch_b_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void Awsp_torch_b_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_torch_b.wsp_torch_b_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	Awsp_torch_b_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void Awsp_torch_b_C::ExecuteUbergraph_wsp_torch_b(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_torch_b.wsp_torch_b_C.ExecuteUbergraph_wsp_torch_b"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	Awsp_torch_b_C_ExecuteUbergraph_wsp_torch_b_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

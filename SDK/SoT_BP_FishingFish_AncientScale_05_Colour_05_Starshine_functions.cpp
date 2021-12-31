@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishingFish_AncientScale_05_Colour_05_Starshine_classes.hpp"
+#include "SoT_BP_FishingFish_AncientScale_05_Colour_05_Starshine_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishingFish_AncientScale_05_Colour_05_Starshine_C::UserConstructionScri
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishingFish_AncientScale_05_Colour_05_Starshine.BP_FishingFish_AncientScale_05_Colour_05_Starshine_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_FishingFish_AncientScale_05_Colour_05_Starshine_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

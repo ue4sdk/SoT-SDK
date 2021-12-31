@@ -19,7 +19,7 @@ namespace SDK
 class UReviveGhostAnimationData : public UAnimationData
 {
 public:
-	class UReviveGhostAnimationDataAsset*              ReviveAnimationsDataAsset;                                // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UReviveGhostAnimationDataAsset*                    ReviveAnimationsDataAsset;                                // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -35,7 +35,7 @@ public:
 class UReviveGhostAnimationDataAsset : public UDataAsset
 {
 public:
-	struct FReviveGhostAnimations                      Animations;                                               // 0x0028(0x0028) (Edit, DisableEditOnInstance)
+	FReviveGhostAnimations                             Animations;                                               // 0x0028(0x0028) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -52,7 +52,7 @@ class UReviveGhostAnimationInstance : public UAnimInstance
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0440(0x0008) MISSED OFFSET
-	struct FReviveGhostAnimations                      ReviveAnimations;                                         // 0x0448(0x0028) (BlueprintVisible, BlueprintReadOnly)
+	FReviveGhostAnimations                             ReviveAnimations;                                         // 0x0448(0x0028) (BlueprintVisible, BlueprintReadOnly)
 	bool                                               FullyInitialised;                                         // 0x0470(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	bool                                               FullyRevived;                                             // 0x0471(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	bool                                               FromSwimming;                                             // 0x0472(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)

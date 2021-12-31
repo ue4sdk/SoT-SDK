@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CustomMeshComponent_classes.hpp"
+#include "SoT_CustomMeshComponent_parameters.hpp"
 
 namespace SDK
 {
@@ -15,19 +15,14 @@ namespace SDK
 // Function CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FCustomMeshTriangle> Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<FCustomMeshTriangle>    Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UCustomMeshComponent::SetCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles)
+bool UCustomMeshComponent::SetCustomMeshTriangles(TArray<FCustomMeshTriangle> Triangles)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CustomMeshComponent.CustomMeshComponent.SetCustomMeshTriangles"));
 
-	struct
-	{
-		TArray<struct FCustomMeshTriangle> Triangles;
-		bool                           ReturnValue;
-	} params;
-
+	UCustomMeshComponent_SetCustomMeshTriangles_Params params;
 	params.Triangles = Triangles;
 
 	UObject::ProcessEvent(fn, &params);
@@ -43,10 +38,7 @@ void UCustomMeshComponent::ClearCustomMeshTriangles()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CustomMeshComponent.CustomMeshComponent.ClearCustomMeshTriangles"));
 
-	struct
-	{
-	} params;
-
+	UCustomMeshComponent_ClearCustomMeshTriangles_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -55,17 +47,13 @@ void UCustomMeshComponent::ClearCustomMeshTriangles()
 // Function CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// TArray<struct FCustomMeshTriangle> Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<FCustomMeshTriangle>    Triangles                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UCustomMeshComponent::AddCustomMeshTriangles(TArray<struct FCustomMeshTriangle> Triangles)
+void UCustomMeshComponent::AddCustomMeshTriangles(TArray<FCustomMeshTriangle> Triangles)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CustomMeshComponent.CustomMeshComponent.AddCustomMeshTriangles"));
 
-	struct
-	{
-		TArray<struct FCustomMeshTriangle> Triangles;
-	} params;
-
+	UCustomMeshComponent_AddCustomMeshTriangles_Params params;
 	params.Triangles = Triangles;
 
 	UObject::ProcessEvent(fn, &params);

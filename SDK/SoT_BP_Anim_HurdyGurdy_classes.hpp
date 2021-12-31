@@ -19,9 +19,9 @@ namespace SDK
 class UBP_Anim_HurdyGurdy_C : public UWieldableItemAnimationInstance
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0630(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                              AnimGraphNode_Root_B3965DEB4C5D27BA9A2E829C0890A4BD;      // 0x0638(0x0048)
-	struct FAnimNode_Slot                              AnimGraphNode_Slot_575EE4B64923C096D19E05B899C05754;      // 0x0680(0x0060)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x0630(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	FAnimNode_Root                                     AnimGraphNode_Root_B3965DEB4C5D27BA9A2E829C0890A4BD;      // 0x0638(0x0048)
+	FAnimNode_Slot                                     AnimGraphNode_Slot_575EE4B64923C096D19E05B899C05754;      // 0x0680(0x0060)
 
 	static UClass* StaticClass()
 	{

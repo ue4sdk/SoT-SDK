@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_RotatableSignalCloud_classes.hpp"
+#include "SoT_BP_RotatableSignalCloud_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_RotatableSignalCloud_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_RotatableSignalCloud.BP_RotatableSignalCloud_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_RotatableSignalCloud_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_RotatableSignalCloud_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_RotatableSignalCloud.BP_RotatableSignalCloud_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_RotatableSignalCloud_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void ABP_RotatableSignalCloud_C::ExecuteUbergraph_BP_RotatableSignalCloud(int En
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_RotatableSignalCloud.BP_RotatableSignalCloud_C.ExecuteUbergraph_BP_RotatableSignalCloud"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_RotatableSignalCloud_C_ExecuteUbergraph_BP_RotatableSignalCloud_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

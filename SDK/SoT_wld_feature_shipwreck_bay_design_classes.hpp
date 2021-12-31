@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass wld_feature_shipwreck_bay_design.wld_feature_shipwreck_bay_design_C
-// 0x0000 (0x0438 - 0x0438)
+// 0x0000 (0x03D8 - 0x03D8)
 class Awld_feature_shipwreck_bay_design_C : public ALevelScriptActor
 {
 public:

@@ -19,7 +19,7 @@ namespace SDK
 // 0x0050
 struct FADS_CameraAdditiveNative
 {
-	struct FAthenaAnimationCameraAdditiveAnimData      CameraAdditive_69_60CCDF684BEB65884A00FF9DD00DAE77;       // 0x0000(0x0050) (Edit, BlueprintVisible)
+	FAthenaAnimationCameraAdditiveAnimData             CameraAdditive_69_60CCDF684BEB65884A00FF9DD00DAE77;       // 0x0000(0x0050) (Edit, BlueprintVisible)
 };
 
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_EmissaryStoleLoot_classes.hpp"
+#include "SoT_BP_Prompt_EmissaryStoleLoot_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.OnEmissaryStoleLoot
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryStoleLootNetworkEvent NewParam                       (Parm)
+// FEmissaryStoleLootNetworkEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryStoleLoot_C::OnEmissaryStoleLoot(const struct FEmissaryStoleLootNetworkEvent& NewParam)
+void UBP_Prompt_EmissaryStoleLoot_C::OnEmissaryStoleLoot(const FEmissaryStoleLootNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.OnEmissaryStoleLoot"));
 
-	struct
-	{
-		struct FEmissaryStoleLootNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryStoleLoot_C_OnEmissaryStoleLoot_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UBP_Prompt_EmissaryStoleLoot_C::OnEmissaryStoleLoot(const struct FEmissaryS
 // Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.EmissaryStoleLoot
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryStoleLootNetworkEvent NewParam                       (Parm)
+// FEmissaryStoleLootNetworkEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryStoleLoot_C::EmissaryStoleLoot(const struct FEmissaryStoleLootNetworkEvent& NewParam)
+void UBP_Prompt_EmissaryStoleLoot_C::EmissaryStoleLoot(const FEmissaryStoleLootNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.EmissaryStoleLoot"));
 
-	struct
-	{
-		struct FEmissaryStoleLootNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryStoleLoot_C_EmissaryStoleLoot_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -59,10 +51,7 @@ void UBP_Prompt_EmissaryStoleLoot_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryStoleLoot_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -75,10 +64,7 @@ void UBP_Prompt_EmissaryStoleLoot_C::RegisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.RegisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryStoleLoot_C_RegisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -91,10 +77,7 @@ void UBP_Prompt_EmissaryStoleLoot_C::UnregisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryStoleLoot_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,11 +92,7 @@ void UBP_Prompt_EmissaryStoleLoot_C::ExecuteUbergraph_BP_Prompt_EmissaryStoleLoo
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryStoleLoot.BP_Prompt_EmissaryStoleLoot_C.ExecuteUbergraph_BP_Prompt_EmissaryStoleLoot"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_EmissaryStoleLoot_C_ExecuteUbergraph_BP_Prompt_EmissaryStoleLoot_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

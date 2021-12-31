@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_Castaway_Base_classes.hpp"
+#include "SoT_BP_Anim_Castaway_Base_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_B7D7BFE443C78A4DB09BF2954F9FB2A7"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_B7D7BFE443C78A4DB09BF2954F9FB2A7_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_1590FC9B424009158EB4CD81148B9C41"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_1590FC9B424009158EB4CD81148B9C41_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_3F28B3CF423C1190623B60A13F607335"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_3F28B3CF423C1190623B60A13F607335_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -67,10 +58,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_43F9A72248609D19E5705EA6BAB1F30C"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_43F9A72248609D19E5705EA6BAB1F30C_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -83,10 +71,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_87E5518C4493614D709ADCBB10100CF5"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_87E5518C4493614D709ADCBB10100CF5_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -99,10 +84,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_7C8989714AD1ACE3E3E052B27235B0BB_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -115,10 +97,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_30C5D665441234F12947C383078A8A68"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_30C5D665441234F12947C383078A8A68_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -131,10 +110,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_F745863A43BD24C6D469ADB62F2DCCEA"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_F745863A43BD24C6D469ADB62F2DCCEA_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -147,10 +123,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_09CEE3C24178A5605CCF648191962615"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_09CEE3C24178A5605CCF648191962615_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -163,10 +136,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_A291661E44C69BA0E4EF43964E4A6942"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_A291661E44C69BA0E4EF43964E4A6942_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -179,10 +149,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_BC0AAFE64F928C6D83C3CD845DE4392F"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_BC0AAFE64F928C6D83C3CD845DE4392F_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -195,10 +162,7 @@ void UBP_Anim_Castaway_Base_C::EvaluateGraphExposedInputs_ExecuteUbergraph_BP_An
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_AEFCE8034CC275366AE4CDA1DE42244B"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_Castaway_Base_AnimGraphNode_TransitionResult_AEFCE8034CC275366AE4CDA1DE42244B_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -211,10 +175,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_StartLookat()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_StartLookat"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_StartLookat_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -227,10 +188,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_StopLookAt()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_StopLookAt"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_StopLookAt_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -243,10 +201,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_IdleVariantChange()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_IdleVariantChange"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_IdleVariantChange_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -259,10 +214,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_InactiveVariantChange()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_InactiveVariantChange"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_InactiveVariantChange_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -275,10 +227,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_InteractVariantChange()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_InteractVariantChange"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_InteractVariantChange_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -291,10 +240,7 @@ void UBP_Anim_Castaway_Base_C::BlueprintInitializeAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.BlueprintInitializeAnimation"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_BlueprintInitializeAnimation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -307,10 +253,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_NPCLookAtOn()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_NPCLookAtOn"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_NPCLookAtOn_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -323,10 +266,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_NPCLookAtOff()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_NPCLookAtOff"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_NPCLookAtOff_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -339,10 +279,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_EnteredNull()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_EnteredNull"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_EnteredNull_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -355,10 +292,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_EnteredOneShot()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_EnteredOneShot"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_EnteredOneShot_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -371,10 +305,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_EnteredContinuousOut()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_EnteredContinuousOut"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_EnteredContinuousOut_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -387,10 +318,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_EnteredContinuousLoopB()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_EnteredContinuousLoopB"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_EnteredContinuousLoopB_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -403,10 +331,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_EnteredContinuousLoopA()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_EnteredContinuousLoopA"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_EnteredContinuousLoopA_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -419,10 +344,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_EnteredContinuousIn()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_EnteredContinuousIn"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_EnteredContinuousIn_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -435,10 +357,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_NPCSelectNewCustomAnim_B()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_NPCSelectNewCustomAnim_B"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_NPCSelectNewCustomAnim_B_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -451,10 +370,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_NPCSelectNewCustomAnim_A()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_NPCSelectNewCustomAnim_A"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_NPCSelectNewCustomAnim_A_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -467,10 +383,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_NPCDeactivateCustomAnimSequence()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_NPCDeactivateCustomAnimSequence"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_NPCDeactivateCustomAnimSequence_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -483,10 +396,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_DetachSocketB()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_DetachSocketB"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_DetachSocketB_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -499,10 +409,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_DetachSocketB()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_DetachSocketB"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_DetachSocketB_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -515,10 +422,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_DetachSocketA()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_DetachSocketA"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_DetachSocketA_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -531,10 +435,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_DetachSocketA()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_DetachSocketA"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_DetachSocketA_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -547,10 +448,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_UseItem_11()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_UseItem_11"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_UseItem_11_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -563,10 +461,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_UseItem_10()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_UseItem_10"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_UseItem_10_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -579,10 +474,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_UseItem_9()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_UseItem_9"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_UseItem_9_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -595,10 +487,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_UseItem_8()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_UseItem_8"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_UseItem_8_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -611,10 +500,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_UseItem_7()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_UseItem_7"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_UseItem_7_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -627,10 +513,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_UseItem_6()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_UseItem_6"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_UseItem_6_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -643,10 +526,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_UseItem_11()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_UseItem_11"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_UseItem_11_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -659,10 +539,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_UseItem_10()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_UseItem_10"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_UseItem_10_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -675,10 +552,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_UseItem_9()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_UseItem_9"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_UseItem_9_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -691,10 +565,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_UseItem_8()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_UseItem_8"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_UseItem_8_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -707,10 +578,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_UseItem_7()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_UseItem_7"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_UseItem_7_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -723,10 +591,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_UseItem_6()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_UseItem_6"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_UseItem_6_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -739,10 +604,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_AttachItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_AttachItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_AttachItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -755,10 +617,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_AttachItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_AttachItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_AttachItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -771,10 +630,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_DetachItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_DetachItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_DetachItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -787,10 +643,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_DetachItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_DetachItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_DetachItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -803,10 +656,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_DestroyItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_DestroyItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_DestroyItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -819,10 +669,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_UseItem_5()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_UseItem_5"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_UseItem_5_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -835,10 +682,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_UseItem_4()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_UseItem_4"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_UseItem_4_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -851,10 +695,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_UseItem_3()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_UseItem_3"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_UseItem_3_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -867,10 +708,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_RH_UseItem_2()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_RH_UseItem_2"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_RH_UseItem_2_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -883,10 +721,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_DestroyItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_DestroyItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_DestroyItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -899,10 +734,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_UseItem_5()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_UseItem_5"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_UseItem_5_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -915,10 +747,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_UseItem_4()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_UseItem_4"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_UseItem_4_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -931,10 +760,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_UseItem_3()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_UseItem_3"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_UseItem_3_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -947,10 +773,7 @@ void UBP_Anim_Castaway_Base_C::AnimNotify_LH_UseItem_2()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.AnimNotify_LH_UseItem_2"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Castaway_Base_C_AnimNotify_LH_UseItem_2_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -965,11 +788,7 @@ void UBP_Anim_Castaway_Base_C::ExecuteUbergraph_BP_Anim_Castaway_Base(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C.ExecuteUbergraph_BP_Anim_Castaway_Base"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Anim_Castaway_Base_C_ExecuteUbergraph_BP_Anim_Castaway_Base_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

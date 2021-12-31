@@ -12,6 +12,19 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum EmotingFramework.EDiceType
+enum class EDiceType : uint8_t
+{
+	EDiceType__Dice4               = 0,
+	EDiceType__Dice6               = 1,
+	EDiceType__Dice8               = 2,
+	EDiceType__Dice10              = 3,
+	EDiceType__Dice12              = 4,
+	EDiceType__Dice20              = 5,
+	EDiceType__EDiceType_MAX       = 6
+};
+
+
 // Enum EmotingFramework.EEmoteFlourishType
 enum class EEmoteFlourishType : uint8_t
 {

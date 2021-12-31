@@ -19,7 +19,7 @@ namespace SDK
 class ABP_ClothingChestInteraction_C : public AClothingChestInteraction
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0688(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   DefaultSceneRoot;                                         // 0x0688(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

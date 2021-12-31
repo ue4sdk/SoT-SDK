@@ -19,7 +19,7 @@ namespace SDK
 // 0x0010
 struct FADS_SkeletonEmoteActions
 {
-	TArray<struct FAthenaAnimationSkeletonEmoteActionAnimations> SkeletonEmoteActions_11_C3B3D3934CED931AA0DDF4BFE901E9B0; // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<FAthenaAnimationSkeletonEmoteActionAnimations> SkeletonEmoteActions_11_C3B3D3934CED931AA0DDF4BFE901E9B0; // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

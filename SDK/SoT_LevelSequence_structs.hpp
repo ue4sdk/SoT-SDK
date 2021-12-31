@@ -31,7 +31,7 @@ struct FLevelSequenceObject
 {
 	TLazyObjectPtr<class UObject>                      ObjectOrOwner;                                            // 0x0000(0x001C) (IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
-	class FString                                      ComponentName;                                            // 0x0020(0x0010) (ZeroConstructor)
+	FString                                            ComponentName;                                            // 0x0020(0x0010) (ZeroConstructor)
 	TWeakObjectPtr<class UObject>                      CachedComponent;                                          // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 };
 
@@ -48,14 +48,14 @@ struct FLevelSequenceSnapshotSettings
 // 0x0090
 struct FLevelSequencePlayerSnapshot
 {
-	struct FText                                       MasterName;                                               // 0x0000(0x0038) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
+	FText                                              MasterName;                                               // 0x0000(0x0038) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
 	float                                              MasterTime;                                               // 0x0038(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	struct FText                                       CurrentShotName;                                          // 0x0040(0x0038) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
+	FText                                              CurrentShotName;                                          // 0x0040(0x0038) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
 	float                                              CurrentShotLocalTime;                                     // 0x0078(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x007C(0x0004) MISSED OFFSET
-	class UCameraComponent*                            CameraComponent;                                          // 0x0080(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	struct FLevelSequenceSnapshotSettings              Settings;                                                 // 0x0088(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
+	UCameraComponent*                                  CameraComponent;                                          // 0x0080(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	FLevelSequenceSnapshotSettings                     Settings;                                                 // 0x0088(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, EditConst)
 };
 
 // ScriptStruct LevelSequence.LevelSequenceObjectReference

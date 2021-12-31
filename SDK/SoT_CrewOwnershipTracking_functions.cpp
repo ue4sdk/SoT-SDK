@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CrewOwnershipTracking_classes.hpp"
+#include "SoT_CrewOwnershipTracking_parameters.hpp"
 
 namespace SDK
 {

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AggressiveGhostShipPoolResource.BP_AggressiveGhostShipPoolResource_C
-// 0x0008 (0x0498 - 0x0490)
+// 0x0008 (0x0458 - 0x0450)
 class ABP_AggressiveGhostShipPoolResource_C : public AAggressiveGhostShipPoolResource
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0490(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   DefaultSceneRoot;                                         // 0x0450(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

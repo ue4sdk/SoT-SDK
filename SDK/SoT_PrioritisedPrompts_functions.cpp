@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_PrioritisedPrompts_classes.hpp"
+#include "SoT_PrioritisedPrompts_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBasePromptCoordinator::UpdateVisiblePrompt()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.UpdateVisiblePrompt"));
 
-	struct
-	{
-	} params;
-
+	UBasePromptCoordinator_UpdateVisiblePrompt_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UBasePromptCoordinator::UnregisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBasePromptCoordinator_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -47,17 +41,13 @@ void UBasePromptCoordinator::UnregisterOtherEvents_Implementable()
 // Function PrioritisedPrompts.BasePromptCoordinator.UnregisterCharacterEvents_Implementable
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FObjectMessagingDispatcherHandle CharacterDispatcher            (ConstParm, Parm, OutParm, ReferenceParm)
+// FObjectMessagingDispatcherHandle CharacterDispatcher            (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UBasePromptCoordinator::UnregisterCharacterEvents_Implementable(const struct FObjectMessagingDispatcherHandle& CharacterDispatcher)
+void UBasePromptCoordinator::UnregisterCharacterEvents_Implementable(const FObjectMessagingDispatcherHandle& CharacterDispatcher)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.UnregisterCharacterEvents_Implementable"));
 
-	struct
-	{
-		struct FObjectMessagingDispatcherHandle CharacterDispatcher;
-	} params;
-
+	UBasePromptCoordinator_UnregisterCharacterEvents_Implementable_Params params;
 	params.CharacterDispatcher = CharacterDispatcher;
 
 	UObject::ProcessEvent(fn, &params);
@@ -71,10 +61,7 @@ void UBasePromptCoordinator::Uninitialize_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.Uninitialize_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBasePromptCoordinator_Uninitialize_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -87,10 +74,7 @@ void UBasePromptCoordinator::Uninitialize()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.Uninitialize"));
 
-	struct
-	{
-	} params;
-
+	UBasePromptCoordinator_Uninitialize_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -103,10 +87,7 @@ void UBasePromptCoordinator::Start()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.Start"));
 
-	struct
-	{
-	} params;
-
+	UBasePromptCoordinator_Start_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -115,17 +96,13 @@ void UBasePromptCoordinator::Start()
 // Function PrioritisedPrompts.BasePromptCoordinator.SetPromptAs
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FPrioritisedPromptWithHandle Prompt                         (ConstParm, Parm, OutParm, ReferenceParm)
+// FPrioritisedPromptWithHandle   Prompt                         (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UBasePromptCoordinator::SetPromptAs(const struct FPrioritisedPromptWithHandle& Prompt)
+void UBasePromptCoordinator::SetPromptAs(const FPrioritisedPromptWithHandle& Prompt)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.SetPromptAs"));
 
-	struct
-	{
-		struct FPrioritisedPromptWithHandle Prompt;
-	} params;
-
+	UBasePromptCoordinator_SetPromptAs_Params params;
 	params.Prompt = Prompt;
 
 	UObject::ProcessEvent(fn, &params);
@@ -139,10 +116,7 @@ void UBasePromptCoordinator::RegisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.RegisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBasePromptCoordinator_RegisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -151,17 +125,13 @@ void UBasePromptCoordinator::RegisterOtherEvents_Implementable()
 // Function PrioritisedPrompts.BasePromptCoordinator.RegisterCharacterEvents_Implementable
 // (Event, Public, HasOutParms, BlueprintEvent)
 // Parameters:
-// struct FObjectMessagingDispatcherHandle CharacterDispatcher            (ConstParm, Parm, OutParm, ReferenceParm)
+// FObjectMessagingDispatcherHandle CharacterDispatcher            (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UBasePromptCoordinator::RegisterCharacterEvents_Implementable(const struct FObjectMessagingDispatcherHandle& CharacterDispatcher)
+void UBasePromptCoordinator::RegisterCharacterEvents_Implementable(const FObjectMessagingDispatcherHandle& CharacterDispatcher)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.RegisterCharacterEvents_Implementable"));
 
-	struct
-	{
-		struct FObjectMessagingDispatcherHandle CharacterDispatcher;
-	} params;
-
+	UBasePromptCoordinator_RegisterCharacterEvents_Implementable_Params params;
 	params.CharacterDispatcher = CharacterDispatcher;
 
 	UObject::ProcessEvent(fn, &params);
@@ -177,11 +147,7 @@ void UBasePromptCoordinator::OnControllerEndPlay(TEnumAsByte<EEndPlayReason> End
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.OnControllerEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	UBasePromptCoordinator_OnControllerEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -195,10 +161,7 @@ void UBasePromptCoordinator::MarkAsComplete_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.MarkAsComplete_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBasePromptCoordinator_MarkAsComplete_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -207,19 +170,14 @@ void UBasePromptCoordinator::MarkAsComplete_Implementable()
 // Function PrioritisedPrompts.BasePromptCoordinator.MakeShowPrompt
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FPrioritisedPromptWithHandle Prompt                         (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FPromptEvaluation       ReturnValue                    (Parm, OutParm, ReturnParm)
+// FPrioritisedPromptWithHandle   Prompt                         (ConstParm, Parm, OutParm, ReferenceParm)
+// FPromptEvaluation              ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPromptEvaluation UBasePromptCoordinator::MakeShowPrompt(const struct FPrioritisedPromptWithHandle& Prompt)
+FPromptEvaluation UBasePromptCoordinator::MakeShowPrompt(const FPrioritisedPromptWithHandle& Prompt)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.MakeShowPrompt"));
 
-	struct
-	{
-		struct FPrioritisedPromptWithHandle Prompt;
-		struct FPromptEvaluation       ReturnValue;
-	} params;
-
+	UBasePromptCoordinator_MakeShowPrompt_Params params;
 	params.Prompt = Prompt;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -232,17 +190,13 @@ struct FPromptEvaluation UBasePromptCoordinator::MakeShowPrompt(const struct FPr
 // Function PrioritisedPrompts.BasePromptCoordinator.MakeHideCurrentPrompts
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FPromptEvaluation       ReturnValue                    (Parm, OutParm, ReturnParm)
+// FPromptEvaluation              ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPromptEvaluation UBasePromptCoordinator::MakeHideCurrentPrompts()
+FPromptEvaluation UBasePromptCoordinator::MakeHideCurrentPrompts()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.MakeHideCurrentPrompts"));
 
-	struct
-	{
-		struct FPromptEvaluation       ReturnValue;
-	} params;
-
+	UBasePromptCoordinator_MakeHideCurrentPrompts_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -254,17 +208,13 @@ struct FPromptEvaluation UBasePromptCoordinator::MakeHideCurrentPrompts()
 // Function PrioritisedPrompts.BasePromptCoordinator.MakeCompleteCoordinator
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FPromptEvaluation       ReturnValue                    (Parm, OutParm, ReturnParm)
+// FPromptEvaluation              ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPromptEvaluation UBasePromptCoordinator::MakeCompleteCoordinator()
+FPromptEvaluation UBasePromptCoordinator::MakeCompleteCoordinator()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.MakeCompleteCoordinator"));
 
-	struct
-	{
-		struct FPromptEvaluation       ReturnValue;
-	} params;
-
+	UBasePromptCoordinator_MakeCompleteCoordinator_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -276,19 +226,14 @@ struct FPromptEvaluation UBasePromptCoordinator::MakeCompleteCoordinator()
 // Function PrioritisedPrompts.BasePromptCoordinator.Initialize
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AAthenaPlayerController* PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrioritisedPromptsManager* PrioritisedPromptsManager      (Parm, ZeroConstructor, IsPlainOldData)
+// AAthenaPlayerController*       PlayerController               (Parm, ZeroConstructor, IsPlainOldData)
+// UPrioritisedPromptsManager*    PrioritisedPromptsManager      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBasePromptCoordinator::Initialize(class AAthenaPlayerController* PlayerController, class UPrioritisedPromptsManager* PrioritisedPromptsManager)
+void UBasePromptCoordinator::Initialize(AAthenaPlayerController* PlayerController, UPrioritisedPromptsManager* PrioritisedPromptsManager)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.Initialize"));
 
-	struct
-	{
-		class AAthenaPlayerController* PlayerController;
-		class UPrioritisedPromptsManager* PrioritisedPromptsManager;
-	} params;
-
+	UBasePromptCoordinator_Initialize_Params params;
 	params.PlayerController = PlayerController;
 	params.PrioritisedPromptsManager = PrioritisedPromptsManager;
 
@@ -305,11 +250,7 @@ bool UBasePromptCoordinator::GetCompleted()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.GetCompleted"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UBasePromptCoordinator_GetCompleted_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -320,17 +261,13 @@ bool UBasePromptCoordinator::GetCompleted()
 // Function PrioritisedPrompts.BasePromptCoordinator.EvaluatePromptDisplayState
 // (Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPromptEvaluation       ReturnValue                    (Parm, OutParm, ReturnParm)
+// FPromptEvaluation              ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FPromptEvaluation UBasePromptCoordinator::EvaluatePromptDisplayState()
+FPromptEvaluation UBasePromptCoordinator::EvaluatePromptDisplayState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.EvaluatePromptDisplayState"));
 
-	struct
-	{
-		struct FPromptEvaluation       ReturnValue;
-	} params;
-
+	UBasePromptCoordinator_EvaluatePromptDisplayState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -345,10 +282,7 @@ void UBasePromptCoordinator::DismissAllPrompts()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.BasePromptCoordinator.DismissAllPrompts"));
 
-	struct
-	{
-	} params;
-
+	UBasePromptCoordinator_DismissAllPrompts_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -357,19 +291,14 @@ void UBasePromptCoordinator::DismissAllPrompts()
 // Function PrioritisedPrompts.GetPromptsLocalService.GetPromptsLocalService
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class UGetPromptsLocalService* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UObject*                       WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// UGetPromptsLocalService*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UGetPromptsLocalService* UGetPromptsLocalService::GetPromptsLocalService(class UObject* WorldContextObject)
+UGetPromptsLocalService* UGetPromptsLocalService::GetPromptsLocalService(UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.GetPromptsLocalService.GetPromptsLocalService"));
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class UGetPromptsLocalService* ReturnValue;
-	} params;
-
+	UGetPromptsLocalService_GetPromptsLocalService_Params params;
 	params.WorldContextObject = WorldContextObject;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -382,17 +311,13 @@ class UGetPromptsLocalService* UGetPromptsLocalService::GetPromptsLocalService(c
 // Function PrioritisedPrompts.PromptsLocalServiceInterface.IncrementCountForKey
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class UClass*                  AccessKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// UClass*                        AccessKey                      (Parm, ZeroConstructor, IsPlainOldData)
 
-void UPromptsLocalServiceInterface::IncrementCountForKey(class UClass* AccessKey)
+void UPromptsLocalServiceInterface::IncrementCountForKey(UClass* AccessKey)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.PromptsLocalServiceInterface.IncrementCountForKey"));
 
-	struct
-	{
-		class UClass*                  AccessKey;
-	} params;
-
+	UPromptsLocalServiceInterface_IncrementCountForKey_Params params;
 	params.AccessKey = AccessKey;
 
 	UObject::ProcessEvent(fn, &params);
@@ -402,19 +327,14 @@ void UPromptsLocalServiceInterface::IncrementCountForKey(class UClass* AccessKey
 // Function PrioritisedPrompts.PromptsLocalServiceInterface.GetCountForKey
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  AccessKey                      (Parm, ZeroConstructor, IsPlainOldData)
+// UClass*                        AccessKey                      (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UPromptsLocalServiceInterface::GetCountForKey(class UClass* AccessKey)
+int UPromptsLocalServiceInterface::GetCountForKey(UClass* AccessKey)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function PrioritisedPrompts.PromptsLocalServiceInterface.GetCountForKey"));
 
-	struct
-	{
-		class UClass*                  AccessKey;
-		int                            ReturnValue;
-	} params;
-
+	UPromptsLocalServiceInterface_GetCountForKey_Params params;
 	params.AccessKey = AccessKey;
 
 	UObject::ProcessEvent(fn, &params);

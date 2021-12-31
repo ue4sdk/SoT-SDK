@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BlendSpace1DVariants_classes.hpp"
+#include "SoT_BP_BlendSpace1DVariants_parameters.hpp"
 
 namespace SDK
 {

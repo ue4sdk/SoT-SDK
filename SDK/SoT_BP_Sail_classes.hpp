@@ -19,8 +19,8 @@ namespace SDK
 class ABP_Sail_C : public ASail
 {
 public:
-	TArray<struct FVector>                             Sail_Positions_Top;                                       // 0x0570(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                             Sail_Positions_Bottom;                                    // 0x0580(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<FVector>                                    Sail_Positions_Top;                                       // 0x0570(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<FVector>                                    Sail_Positions_Bottom;                                    // 0x0580(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

@@ -57,8 +57,8 @@ public:
 	}
 
 
-	static struct FObjectMessagingDispatcherHandle GetServiceMessagingDispatcherFromActor(class UObject* Object);
-	static struct FObjectMessagingDispatcherHandle GetServiceMessagingDispatcher(const TScriptInterface<class UServiceMessagingDispatcherInterface>& ServiceMessagingDispatcher);
+	static FObjectMessagingDispatcherHandle GetServiceMessagingDispatcherFromActor(UObject* Object);
+	static FObjectMessagingDispatcherHandle GetServiceMessagingDispatcher(const TScriptInterface<class UServiceMessagingDispatcherInterface>& ServiceMessagingDispatcher);
 };
 
 
@@ -76,7 +76,7 @@ public:
 	}
 
 
-	void TestFunctionWithMessage(struct FServiceMessagingTestMessage* InMessage);
+	void TestFunctionWithMessage(FServiceMessagingTestMessage* InMessage);
 };
 
 

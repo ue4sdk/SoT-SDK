@@ -19,14 +19,14 @@ namespace SDK
 class UBP_Prompt_EmissaryEntitlementPurchased_C : public UBP_PromptCoordinator_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0118(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FObjectMessagingHandle                      Handle_EmissaryEntitlementPurchased;                      // 0x0120(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FGuid                                       OfferId;                                                  // 0x0168(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FGuid                                       ExpectedOfferId;                                          // 0x0178(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<struct FPrioritisedPromptWithHandle>        Prompts;                                                  // 0x0188(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x0118(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	FObjectMessagingHandle                             Handle_EmissaryEntitlementPurchased;                      // 0x0120(0x0048) (Edit, BlueprintVisible, DisableEditOnInstance)
+	FGuid                                              OfferId;                                                  // 0x0168(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FGuid                                              ExpectedOfferId;                                          // 0x0178(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<FPrioritisedPromptWithHandle>               Prompts;                                                  // 0x0188(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 	bool                                               PromptSurfacedThisSession;                                // 0x0198(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0199(0x0007) MISSED OFFSET
-	class UClass*                                      PromptAccessKey;                                          // 0x01A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            PromptAccessKey;                                          // 0x01A0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                PromptIndex;                                              // 0x01A8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	int                                                NumberOfPrompts;                                          // 0x01AC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              InitialDelay;                                             // 0x01B0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -39,8 +39,8 @@ public:
 	}
 
 
-	void OnEmissaryEntitlementPurchasedFunc(const struct FEmissaryEntitlementPurchasedEvent& NewParam);
-	void EmissaryEntitlementPurchased(const struct FEmissaryEntitlementPurchasedEvent& NewParam);
+	void OnEmissaryEntitlementPurchasedFunc(const FEmissaryEntitlementPurchasedEvent& NewParam);
+	void EmissaryEntitlementPurchased(const FEmissaryEntitlementPurchasedEvent& NewParam);
 	void Evaluate();
 	void RegisterOtherEvents_Implementable();
 	void UnregisterOtherEvents_Implementable();

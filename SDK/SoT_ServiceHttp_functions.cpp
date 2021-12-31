@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ServiceHttp_classes.hpp"
+#include "SoT_ServiceHttp_parameters.hpp"
 
 namespace SDK
 {

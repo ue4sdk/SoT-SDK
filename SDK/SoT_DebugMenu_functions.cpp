@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_DebugMenu_classes.hpp"
+#include "SoT_DebugMenu_parameters.hpp"
 
 namespace SDK
 {
@@ -15,19 +15,14 @@ namespace SDK
 // Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuReady
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDebugMenuTestFunctions::IsDebugMenuReady(class UObject* WorldContextObject)
+bool UDebugMenuTestFunctions::IsDebugMenuReady(UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuReady"));
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		bool                           ReturnValue;
-	} params;
-
+	UDebugMenuTestFunctions_IsDebugMenuReady_Params params;
 	params.WorldContextObject = WorldContextObject;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -40,19 +35,14 @@ bool UDebugMenuTestFunctions::IsDebugMenuReady(class UObject* WorldContextObject
 // Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuOpen
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UDebugMenuTestFunctions::IsDebugMenuOpen(class UObject* WorldContextObject)
+bool UDebugMenuTestFunctions::IsDebugMenuOpen(UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuOpen"));
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		bool                           ReturnValue;
-	} params;
-
+	UDebugMenuTestFunctions_IsDebugMenuOpen_Params params;
 	params.WorldContextObject = WorldContextObject;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -71,11 +61,7 @@ bool UDebugMenuTestFunctions::IsDebugMenuAvailable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.IsDebugMenuAvailable"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UDebugMenuTestFunctions_IsDebugMenuAvailable_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -87,17 +73,13 @@ bool UDebugMenuTestFunctions::IsDebugMenuAvailable()
 // Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboBetaKeyboard
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
+// FKey                           ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboBetaKeyboard()
+FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboBetaKeyboard()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboBetaKeyboard"));
 
-	struct
-	{
-		struct FKey                    ReturnValue;
-	} params;
-
+	UDebugMenuTestFunctions_GetDebugMenuToggleKeyComboBetaKeyboard_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -109,17 +91,13 @@ struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboBetaKeyboard()
 // Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboAlphaKeyboard
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
+// FKey                           ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboAlphaKeyboard()
+FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboAlphaKeyboard()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleKeyComboAlphaKeyboard"));
 
-	struct
-	{
-		struct FKey                    ReturnValue;
-	} params;
-
+	UDebugMenuTestFunctions_GetDebugMenuToggleKeyComboAlphaKeyboard_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -131,17 +109,13 @@ struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleKeyComboAlphaKeyboard()
 // Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboBetaGamepad
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
+// FKey                           ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboBetaGamepad()
+FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboBetaGamepad()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboBetaGamepad"));
 
-	struct
-	{
-		struct FKey                    ReturnValue;
-	} params;
-
+	UDebugMenuTestFunctions_GetDebugMenuToggleButtonComboBetaGamepad_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -153,17 +127,13 @@ struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboBetaGamepad()
 // Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboAlphaGamepad
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FKey                    ReturnValue                    (Parm, OutParm, ReturnParm)
+// FKey                           ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboAlphaGamepad()
+FKey UDebugMenuTestFunctions::GetDebugMenuToggleButtonComboAlphaGamepad()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function DebugMenu.DebugMenuTestFunctions.GetDebugMenuToggleButtonComboAlphaGamepad"));
 
-	struct
-	{
-		struct FKey                    ReturnValue;
-	} params;
-
+	UDebugMenuTestFunctions_GetDebugMenuToggleButtonComboAlphaGamepad_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);

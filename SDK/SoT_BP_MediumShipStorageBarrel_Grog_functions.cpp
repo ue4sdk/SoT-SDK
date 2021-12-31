@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MediumShipStorageBarrel_Grog_classes.hpp"
+#include "SoT_BP_MediumShipStorageBarrel_Grog_parameters.hpp"
 
 namespace SDK
 {
@@ -23,13 +23,7 @@ struct FVector ABP_MediumShipStorageBarrel_Grog_C::GetClosestInteractionPoint(co
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShipStorageBarrel_Grog.BP_MediumShipStorageBarrel_Grog_C.GetClosestInteractionPoint"));
 
-	struct
-	{
-		struct FVector                 ReferencePosition;
-		float                          OutInteractionPointRadius;
-		struct FVector                 ReturnValue;
-	} params;
-
+	ABP_MediumShipStorageBarrel_Grog_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -52,13 +46,7 @@ bool ABP_MediumShipStorageBarrel_Grog_C::ShouldDrawTooltipInWorldSpace(class AAc
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShipStorageBarrel_Grog.BP_MediumShipStorageBarrel_Grog_C.ShouldDrawTooltipInWorldSpace"));
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		struct FVector                 DesiredTooltipWorldPosition;
-		bool                           ReturnValue;
-	} params;
-
+	ABP_MediumShipStorageBarrel_Grog_C_ShouldDrawTooltipInWorldSpace_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -77,10 +65,7 @@ void ABP_MediumShipStorageBarrel_Grog_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShipStorageBarrel_Grog.BP_MediumShipStorageBarrel_Grog_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_MediumShipStorageBarrel_Grog_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

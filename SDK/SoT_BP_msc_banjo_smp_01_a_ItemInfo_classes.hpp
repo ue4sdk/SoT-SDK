@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_msc_banjo_smp_01_a_ItemInfo.BP_msc_banjo_smp_01_a_ItemInfo_C
-// 0x0008 (0x0510 - 0x0508)
+// 0x0008 (0x0508 - 0x0500)
 class ABP_msc_banjo_smp_01_a_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0508(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   DefaultSceneRoot;                                         // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

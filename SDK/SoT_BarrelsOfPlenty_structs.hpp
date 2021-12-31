@@ -22,7 +22,7 @@ namespace SDK
 // 0x0010
 struct FBarrelsOfPlentyDebugLocationEntry
 {
-	struct FVector                                     WorldSpacePosition;                                       // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
+	FVector                                            WorldSpacePosition;                                       // 0x0000(0x000C) (ZeroConstructor, IsPlainOldData)
 	float                                              SinkTime;                                                 // 0x000C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Figurehead_classes.hpp"
+#include "SoT_BP_Figurehead_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Figurehead.BP_Figurehead_C.GetVFXComponent
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class UParticleSystemComponent* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UParticleSystemComponent*      ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UParticleSystemComponent* ABP_Figurehead_C::GetVFXComponent()
+UParticleSystemComponent* ABP_Figurehead_C::GetVFXComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Figurehead.BP_Figurehead_C.GetVFXComponent"));
 
-	struct
-	{
-		class UParticleSystemComponent* ReturnValue;
-	} params;
-
+	ABP_Figurehead_C_GetVFXComponent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,17 +32,13 @@ class UParticleSystemComponent* ABP_Figurehead_C::GetVFXComponent()
 // Function BP_Figurehead.BP_Figurehead_C.GetMeshComponent
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class UStaticMeshComponent*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UStaticMeshComponent*          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UStaticMeshComponent* ABP_Figurehead_C::GetMeshComponent()
+UStaticMeshComponent* ABP_Figurehead_C::GetMeshComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Figurehead.BP_Figurehead_C.GetMeshComponent"));
 
-	struct
-	{
-		class UStaticMeshComponent*    ReturnValue;
-	} params;
-
+	ABP_Figurehead_C_GetMeshComponent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -61,10 +53,7 @@ void ABP_Figurehead_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Figurehead.BP_Figurehead_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Figurehead_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

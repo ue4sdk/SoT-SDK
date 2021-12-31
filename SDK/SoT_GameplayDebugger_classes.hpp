@@ -15,46 +15,46 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class GameplayDebugger.GameplayDebuggingComponent
-// 0x0230 (0x07B0 - 0x0580)
+// 0x0230 (0x07C0 - 0x0590)
 class UGameplayDebuggingComponent : public UPrimitiveComponent
 {
 public:
-	class FString                                      DebugComponentClassName;                                  // 0x0580(0x0010) (ZeroConstructor, Config, GlobalConfig)
-	int                                                ShowExtendedInformatiomCounter;                           // 0x0590(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0594(0x0004) MISSED OFFSET
-	TArray<int>                                        ReplicateViewDataCounters;                                // 0x0598(0x0010) (Net, ZeroConstructor)
-	class FString                                      ControllerName;                                           // 0x05A8(0x0010) (Net, ZeroConstructor)
-	class FString                                      PawnName;                                                 // 0x05B8(0x0010) (Net, ZeroConstructor)
-	class FString                                      PawnClass;                                                // 0x05C8(0x0010) (Net, ZeroConstructor)
-	class FString                                      DebugIcon;                                                // 0x05D8(0x0010) (Net, ZeroConstructor)
-	class FString                                      MovementBaseInfo;                                         // 0x05E8(0x0010) (Net, ZeroConstructor)
-	class FString                                      MovementModeInfo;                                         // 0x05F8(0x0010) (Net, ZeroConstructor)
-	class FString                                      PathFollowingInfo;                                        // 0x0608(0x0010) (Net, ZeroConstructor)
-	class FString                                      CurrentAITask;                                            // 0x0618(0x0010) (Net, ZeroConstructor)
-	class FString                                      CurrentAIState;                                           // 0x0628(0x0010) (Net, ZeroConstructor)
-	class FString                                      CurrentAIAssets;                                          // 0x0638(0x0010) (Net, ZeroConstructor)
-	class FString                                      GameplayTasksState;                                       // 0x0648(0x0010) (Net, ZeroConstructor)
-	class FString                                      NavDataInfo;                                              // 0x0658(0x0010) (Net, ZeroConstructor)
-	class FString                                      AbilityInfo;                                              // 0x0668(0x0010) (Net, ZeroConstructor)
-	class FString                                      MontageInfo;                                              // 0x0678(0x0010) (Net, ZeroConstructor)
-	class FString                                      BrainComponentName;                                       // 0x0688(0x0010) (Net, ZeroConstructor)
-	class FString                                      BrainComponentString;                                     // 0x0698(0x0010) (Net, ZeroConstructor)
-	TArray<unsigned char>                              BlackboardRepData;                                        // 0x06A8(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData01[0x10];                                      // 0x06B8(0x0010) MISSED OFFSET
-	TArray<struct FVector>                             PathPoints;                                               // 0x06C8(0x0010) (Net, ZeroConstructor)
-	TArray<unsigned char>                              PathCorridorData;                                         // 0x06D8(0x0010) (Net, ZeroConstructor)
-	unsigned char                                      UnknownData02[0x10];                                      // 0x06E8(0x0010) MISSED OFFSET
-	TArray<unsigned char>                              NavmeshRepData;                                           // 0x06F8(0x0010) (Net, ZeroConstructor)
-	TArray<unsigned char>                              EQSRepData;                                               // 0x0708(0x0010) (Net, ZeroConstructor)
-	struct FVector                                     SensingComponentLocation;                                 // 0x0718(0x000C) (Net, ZeroConstructor, IsPlainOldData)
-	int                                                NextPathPointIndex;                                       // 0x0724(0x0004) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      bIsUsingPathFollowing : 1;                                // 0x0728(0x0001) (Net)
-	unsigned char                                      bIsUsingCharacter : 1;                                    // 0x0728(0x0001) (Net)
-	unsigned char                                      bIsUsingBehaviorTree : 1;                                 // 0x0728(0x0001) (Net)
-	unsigned char                                      bIsUsingAbilities : 1;                                    // 0x0728(0x0001) (Net)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0729(0x0007) MISSED OFFSET
-	class AActor*                                      TargetActor;                                              // 0x0730(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData04[0x78];                                      // 0x0738(0x0078) MISSED OFFSET
+	FString                                            DebugComponentClassName;                                  // 0x0590(0x0010) (ZeroConstructor, Config, GlobalConfig)
+	int                                                ShowExtendedInformatiomCounter;                           // 0x05A0(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x05A4(0x0004) MISSED OFFSET
+	TArray<int>                                        ReplicateViewDataCounters;                                // 0x05A8(0x0010) (Net, ZeroConstructor)
+	FString                                            ControllerName;                                           // 0x05B8(0x0010) (Net, ZeroConstructor)
+	FString                                            PawnName;                                                 // 0x05C8(0x0010) (Net, ZeroConstructor)
+	FString                                            PawnClass;                                                // 0x05D8(0x0010) (Net, ZeroConstructor)
+	FString                                            DebugIcon;                                                // 0x05E8(0x0010) (Net, ZeroConstructor)
+	FString                                            MovementBaseInfo;                                         // 0x05F8(0x0010) (Net, ZeroConstructor)
+	FString                                            MovementModeInfo;                                         // 0x0608(0x0010) (Net, ZeroConstructor)
+	FString                                            PathFollowingInfo;                                        // 0x0618(0x0010) (Net, ZeroConstructor)
+	FString                                            CurrentAITask;                                            // 0x0628(0x0010) (Net, ZeroConstructor)
+	FString                                            CurrentAIState;                                           // 0x0638(0x0010) (Net, ZeroConstructor)
+	FString                                            CurrentAIAssets;                                          // 0x0648(0x0010) (Net, ZeroConstructor)
+	FString                                            GameplayTasksState;                                       // 0x0658(0x0010) (Net, ZeroConstructor)
+	FString                                            NavDataInfo;                                              // 0x0668(0x0010) (Net, ZeroConstructor)
+	FString                                            AbilityInfo;                                              // 0x0678(0x0010) (Net, ZeroConstructor)
+	FString                                            MontageInfo;                                              // 0x0688(0x0010) (Net, ZeroConstructor)
+	FString                                            BrainComponentName;                                       // 0x0698(0x0010) (Net, ZeroConstructor)
+	FString                                            BrainComponentString;                                     // 0x06A8(0x0010) (Net, ZeroConstructor)
+	TArray<unsigned char>                              BlackboardRepData;                                        // 0x06B8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData01[0x10];                                      // 0x06C8(0x0010) MISSED OFFSET
+	TArray<FVector>                                    PathPoints;                                               // 0x06D8(0x0010) (Net, ZeroConstructor)
+	TArray<unsigned char>                              PathCorridorData;                                         // 0x06E8(0x0010) (Net, ZeroConstructor)
+	unsigned char                                      UnknownData02[0x10];                                      // 0x06F8(0x0010) MISSED OFFSET
+	TArray<unsigned char>                              NavmeshRepData;                                           // 0x0708(0x0010) (Net, ZeroConstructor)
+	TArray<unsigned char>                              EQSRepData;                                               // 0x0718(0x0010) (Net, ZeroConstructor)
+	FVector                                            SensingComponentLocation;                                 // 0x0728(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	int                                                NextPathPointIndex;                                       // 0x0734(0x0004) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      bIsUsingPathFollowing : 1;                                // 0x0738(0x0001) (Net)
+	unsigned char                                      bIsUsingCharacter : 1;                                    // 0x0738(0x0001) (Net)
+	unsigned char                                      bIsUsingBehaviorTree : 1;                                 // 0x0738(0x0001) (Net)
+	unsigned char                                      bIsUsingAbilities : 1;                                    // 0x0738(0x0001) (Net)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0739(0x0007) MISSED OFFSET
+	AActor*                                            TargetActor;                                              // 0x0740(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData04[0x78];                                      // 0x0748(0x0078) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -65,7 +65,7 @@ public:
 
 	void ServerReplicateData(uint32_t InMessage, uint32_t DataView);
 	void ServerDiscardNavmeshData();
-	void ServerCollectNavmeshData(const struct FVector_NetQuantize10& TargetLocation);
+	void ServerCollectNavmeshData(const FVector_NetQuantize10& TargetLocation);
 	void OnRep_UpdateNavmesh();
 	void OnRep_UpdateEQS();
 	void OnRep_UpdateBlackboard();
@@ -84,8 +84,8 @@ public:
 	float                                              MenuStartY;                                               // 0x03D4(0x0004) (ZeroConstructor, Config, IsPlainOldData)
 	float                                              DebugInfoStartX;                                          // 0x03D8(0x0004) (ZeroConstructor, Config, IsPlainOldData)
 	float                                              DebugInfoStartY;                                          // 0x03DC(0x0004) (ZeroConstructor, Config, IsPlainOldData)
-	class UCanvas*                                     Canvas;                                                   // 0x03E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class APlayerController*                           PlayerOwner;                                              // 0x03E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UCanvas*                                           Canvas;                                                   // 0x03E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	APlayerController*                                 PlayerOwner;                                              // 0x03E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xD0];                                      // 0x03F0(0x00D0) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -102,7 +102,7 @@ public:
 class UGameplayDebuggerSettings : public UObject
 {
 public:
-	struct FGDTCustomViewNames                         CustomViewNames;                                          // 0x0028(0x0050) (Edit, Config)
+	FGDTCustomViewNames                                CustomViewNames;                                          // 0x0028(0x0050) (Edit, Config)
 	bool                                               OverHead;                                                 // 0x0078(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               Basic;                                                    // 0x0079(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               BehaviorTree;                                             // 0x007A(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
@@ -132,26 +132,26 @@ public:
 class UGameplayDebuggingControllerComponent : public UActorComponent
 {
 public:
-	class AGameplayDebuggingHUDComponent*              OnDebugAIHUD;                                             // 0x00C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      DebugAITargetActor;                                       // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UInputComponent*                             AIDebugViewInputComponent;                                // 0x00D8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UInputComponent*                             DebugCameraInputComponent;                                // 0x00E0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	AGameplayDebuggingHUDComponent*                    OnDebugAIHUD;                                             // 0x00C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	AActor*                                            DebugAITargetActor;                                       // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UInputComponent*                                   AIDebugViewInputComponent;                                // 0x00D8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	UInputComponent*                                   DebugCameraInputComponent;                                // 0x00E0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x28];                                      // 0x00E8(0x0028) MISSED OFFSET
-	struct FInputChord                                 ActivationKey;                                            // 0x0110(0x0028) (Config)
-	struct FInputChord                                 CategoryZeroBind;                                         // 0x0138(0x0028) (Config)
-	struct FInputChord                                 CategoryOneBind;                                          // 0x0160(0x0028) (Config)
-	struct FInputChord                                 CategoryTwoBind;                                          // 0x0188(0x0028) (Config)
-	struct FInputChord                                 CategoryThreeBind;                                        // 0x01B0(0x0028) (Config)
-	struct FInputChord                                 CategoryFourBind;                                         // 0x01D8(0x0028) (Config)
-	struct FInputChord                                 CategoryFiveBind;                                         // 0x0200(0x0028) (Config)
-	struct FInputChord                                 CategorySixBind;                                          // 0x0228(0x0028) (Config)
-	struct FInputChord                                 CategorySevenBind;                                        // 0x0250(0x0028) (Config)
-	struct FInputChord                                 CategoryEightBind;                                        // 0x0278(0x0028) (Config)
-	struct FInputChord                                 CategoryNineBind;                                         // 0x02A0(0x0028) (Config)
-	struct FInputChord                                 CycleDetailsViewBind;                                     // 0x02C8(0x0028) (Config)
-	struct FInputChord                                 DebugCameraBind;                                          // 0x02F0(0x0028) (Config)
-	struct FInputChord                                 OnScreenDebugMessagesBind;                                // 0x0318(0x0028) (Config)
-	struct FInputChord                                 GameHUDBind;                                              // 0x0340(0x0028) (Config)
+	FInputChord                                        ActivationKey;                                            // 0x0110(0x0028) (Config)
+	FInputChord                                        CategoryZeroBind;                                         // 0x0138(0x0028) (Config)
+	FInputChord                                        CategoryOneBind;                                          // 0x0160(0x0028) (Config)
+	FInputChord                                        CategoryTwoBind;                                          // 0x0188(0x0028) (Config)
+	FInputChord                                        CategoryThreeBind;                                        // 0x01B0(0x0028) (Config)
+	FInputChord                                        CategoryFourBind;                                         // 0x01D8(0x0028) (Config)
+	FInputChord                                        CategoryFiveBind;                                         // 0x0200(0x0028) (Config)
+	FInputChord                                        CategorySixBind;                                          // 0x0228(0x0028) (Config)
+	FInputChord                                        CategorySevenBind;                                        // 0x0250(0x0028) (Config)
+	FInputChord                                        CategoryEightBind;                                        // 0x0278(0x0028) (Config)
+	FInputChord                                        CategoryNineBind;                                         // 0x02A0(0x0028) (Config)
+	FInputChord                                        CycleDetailsViewBind;                                     // 0x02C8(0x0028) (Config)
+	FInputChord                                        DebugCameraBind;                                          // 0x02F0(0x0028) (Config)
+	FInputChord                                        OnScreenDebugMessagesBind;                                // 0x0318(0x0028) (Config)
+	FInputChord                                        GameHUDBind;                                              // 0x0340(0x0028) (Config)
 
 	static UClass* StaticClass()
 	{
@@ -183,14 +183,14 @@ public:
 class AGameplayDebuggingReplicator : public AActor
 {
 public:
-	class FString                                      DebugComponentClassName;                                  // 0x03D0(0x0010) (ZeroConstructor, Config)
-	class FString                                      DebugComponentHUDClassName;                               // 0x03E0(0x0010) (ZeroConstructor, Config)
-	class FString                                      DebugComponentControllerClassName;                        // 0x03F0(0x0010) (ZeroConstructor, Config)
+	FString                                            DebugComponentClassName;                                  // 0x03D0(0x0010) (ZeroConstructor, Config)
+	FString                                            DebugComponentHUDClassName;                               // 0x03E0(0x0010) (ZeroConstructor, Config)
+	FString                                            DebugComponentControllerClassName;                        // 0x03F0(0x0010) (ZeroConstructor, Config)
 	int                                                MaxEQSQueries;                                            // 0x0400(0x0004) (ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0404(0x0004) MISSED OFFSET
-	class UGameplayDebuggingComponent*                 DebugComponent;                                           // 0x0408(0x0008) (ExportObject, Net, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class APlayerController*                           LocalPlayerOwner;                                         // 0x0410(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      LastSelectedActorToDebug;                                 // 0x0418(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	UGameplayDebuggingComponent*                       DebugComponent;                                           // 0x0408(0x0008) (ExportObject, Net, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	APlayerController*                                 LocalPlayerOwner;                                         // 0x0410(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
+	AActor*                                            LastSelectedActorToDebug;                                 // 0x0418(0x0008) (Net, ZeroConstructor, Transient, IsPlainOldData)
 	bool                                               bIsGlobalInWorld;                                         // 0x0420(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
 	bool                                               bAutoActivate;                                            // 0x0421(0x0001) (Net, ZeroConstructor, Transient, IsPlainOldData)
 	bool                                               OverHead;                                                 // 0x0422(0x0001) (Edit, ZeroConstructor, Transient, IsPlainOldData)
@@ -215,11 +215,11 @@ public:
 	}
 
 
-	void ServerSetActorToDebug(class AActor* InActor);
-	void ServerReplicateMessage(class AActor* Actor, uint32_t InMessage, uint32_t DataView);
+	void ServerSetActorToDebug(AActor* InActor);
+	void ServerReplicateMessage(AActor* Actor, uint32_t InMessage, uint32_t DataView);
 	void OnRep_AutoActivate();
-	void ClientReplicateMessage(class AActor* Actor, uint32_t InMessage, uint32_t DataView);
-	void ClientEnableTargetSelection(bool bEnable, class APlayerController* Context);
+	void ClientReplicateMessage(AActor* Actor, uint32_t InMessage, uint32_t DataView);
+	void ClientEnableTargetSelection(bool bEnable, APlayerController* Context);
 	void ClientAutoActivate();
 };
 

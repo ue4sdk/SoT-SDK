@@ -35,7 +35,7 @@ class UNetworkRegionService : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x90];                                      // 0x0028(0x0090) MISSED OFFSET
-	TArray<class APlayerController*>                   PlayersThatNeedToBeTicked;                                // 0x00B8(0x0010) (ZeroConstructor)
+	TArray<APlayerController*>                         PlayersThatNeedToBeTicked;                                // 0x00B8(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -51,8 +51,8 @@ public:
 class ARegionAssetCacheActor : public AActor
 {
 public:
-	TArray<struct FRegionAssetsList>                   RegionData;                                               // 0x03D0(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<class UObject*>                             LoadedAssets;                                             // 0x03E0(0x0010) (ZeroConstructor, Transient)
+	TArray<FRegionAssetsList>                          RegionData;                                               // 0x03D0(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<UObject*>                                   LoadedAssets;                                             // 0x03E0(0x0010) (ZeroConstructor, Transient)
 	unsigned char                                      UnknownData00[0x20];                                      // 0x03F0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()

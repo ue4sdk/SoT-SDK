@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -32,7 +32,7 @@ public:
 
 	void Set_Colour_on_All_Materials(const struct FName& ParameterName, const struct FLinearColor& Value);
 	void Set_Value_on_All_Materials(const struct FName& Variable_Name, float Value);
-	void Apply_Bits_to_Lanterns(int Bits);
+	void Apply_Bits_to_Lanterns(int bits);
 	void Create_Dynamic_Materials();
 	void UserConstructionScript();
 	void ReceiveBeginPlay();

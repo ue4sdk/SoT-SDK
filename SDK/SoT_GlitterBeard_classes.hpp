@@ -34,8 +34,8 @@ public:
 class UGlitterBeardFinaleCoordinatorComponent : public UActorComponent
 {
 public:
-	class UWwiseEvent*                                 AudioEventToSynchronise;                                  // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	struct FFinaleReplicationState                     ReplicationState;                                         // 0x00D0(0x0010) (Net)
+	UWwiseEvent*                                       AudioEventToSynchronise;                                  // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	FFinaleReplicationState                            ReplicationState;                                         // 0x00D0(0x0010) (Net)
 	unsigned char                                      UnknownData00[0x80];                                      // 0x00E0(0x0080) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -45,7 +45,7 @@ public:
 	}
 
 
-	void OnRep_ReplicationState(const struct FFinaleReplicationState& OldState);
+	void OnRep_ReplicationState(const FFinaleReplicationState& OldState);
 };
 
 
@@ -71,9 +71,9 @@ class UGlitterBeardLanternSoundEffect : public UEffectBlendObjectBase
 public:
 	float                                              TriggerThreshold;                                         // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     WWisePool;                                                // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 WwiseEvent;                                               // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWwiseEmitter                               Emitter;                                                  // 0x0050(0x0020) (Transient)
+	UWwiseObjectPoolWrapper*                           WWisePool;                                                // 0x0040(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UWwiseEvent*                                       WwiseEvent;                                               // 0x0048(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FWwiseEmitter                                      Emitter;                                                  // 0x0050(0x0020) (Transient)
 	unsigned char                                      UnknownData01[0x10];                                      // 0x0070(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -90,7 +90,7 @@ public:
 class AGlitterbeardSlidingDoor : public ASlidingDoor
 {
 public:
-	class UEffectBlendControllerComponent*             DecalBlendComponent;                                      // 0x0538(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
+	UEffectBlendControllerComponent*                   DecalBlendComponent;                                      // 0x0538(0x0008) (Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -138,22 +138,22 @@ class AGlitterBeardTree : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x28];                                      // 0x03D0(0x0028) MISSED OFFSET
-	class UActionRulesComponent*                       ActionRulesComponent;                                     // 0x03F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UActionRulesInteractableComponent*           InteractableComponent;                                    // 0x0400(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	UActionRulesComponent*                             ActionRulesComponent;                                     // 0x03F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	UActionRulesInteractableComponent*                 InteractableComponent;                                    // 0x0400(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	float                                              LanternLightDelay;                                        // 0x0408(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x040C(0x0004) MISSED OFFSET
-	class UGlitterBeardUnlockVFXCoordinatorComponent*  UnlockVFXCoordinatorComponent;                            // 0x0410(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UGlitterBeardTelemetryComponent*             TelemetryComponent;                                       // 0x0418(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UClass*                                      VocalShanty;                                              // 0x0420(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 VocalsFadeEvent;                                          // 0x0428(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UGlitterBeardUnlockVFXCoordinatorComponent*        UnlockVFXCoordinatorComponent;                            // 0x0410(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	UGlitterBeardTelemetryComponent*                   TelemetryComponent;                                       // 0x0418(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	UClass*                                            VocalShanty;                                              // 0x0420(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UWwiseEvent*                                       VocalsFadeEvent;                                          // 0x0428(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              VocalsFadeDelay;                                          // 0x0430(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              UnlockDelay;                                              // 0x0434(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UGlitterBeardFinaleCoordinatorComponent*     FinaleCoordinator;                                        // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
-	class ULandmarkReactionTriggerComponent*           LandmarkReactionTrigger;                                  // 0x0440(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
+	UGlitterBeardFinaleCoordinatorComponent*           FinaleCoordinator;                                        // 0x0438(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
+	ULandmarkReactionTriggerComponent*                 LandmarkReactionTrigger;                                  // 0x0440(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnTemplate, InstancedReference, IsPlainOldData)
 	float                                              DistanceFromTreeToPauseAISpawn;                           // 0x0448(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x22C];                                     // 0x044C(0x022C) MISSED OFFSET
-	class ASlidingDoor*                                HideoutDoor;                                              // 0x0678(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	struct FWwiseEmitter                               SoundEmitter;                                             // 0x0680(0x0020)
+	ASlidingDoor*                                      HideoutDoor;                                              // 0x0678(0x0008) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	FWwiseEmitter                                      SoundEmitter;                                             // 0x0680(0x0020)
 	unsigned char                                      UnknownData03[0x30];                                      // 0x06A0(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -176,7 +176,7 @@ public:
 class UGlitterBeardTreeVisualFeedbackComponent : public UActorComponent
 {
 public:
-	TArray<struct FVisualFeedbackList>                 FeedbackActions;                                          // 0x00C8(0x0010) (Edit, ZeroConstructor)
+	TArray<FVisualFeedbackList>                        FeedbackActions;                                          // 0x00C8(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x00D8(0x0010) MISSED OFFSET
 	TArray<TEnumAsByte<EGlitterbeardVFXState>>         CurrentStates;                                            // 0x00E8(0x0010) (Net, ZeroConstructor)
 	unsigned char                                      UnknownData01[0x20];                                      // 0x00F8(0x0020) MISSED OFFSET
@@ -197,8 +197,8 @@ public:
 class UGlitterBeardUnlockVFXCoordinatorComponent : public UActorComponent
 {
 public:
-	struct FActorComponentSelector                     TreeActor;                                                // 0x00C8(0x0010) (Edit)
-	class UMaterialInstanceDynamic*                    TreeMaterialInstanceDynamic;                              // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
+	FActorComponentSelector                            TreeActor;                                                // 0x00C8(0x0010) (Edit)
+	UMaterialInstanceDynamic*                          TreeMaterialInstanceDynamic;                              // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
 	float                                              TreeBlendTime;                                            // 0x00E0(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xC];                                       // 0x00E4(0x000C) MISSED OFFSET
 

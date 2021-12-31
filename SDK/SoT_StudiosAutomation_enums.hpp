@@ -73,6 +73,16 @@ enum class ETestCategory : uint8_t
 };
 
 
+// Enum StudiosAutomation.ETextureAuditorMipSetting
+enum class ETextureAuditorMipSetting : uint8_t
+{
+	ETextureAuditorMipSetting__MipGenRequired = 0,
+	ETextureAuditorMipSetting__NoMipGenRequired = 1,
+	ETextureAuditorMipSetting__MipGenOptional = 2,
+	ETextureAuditorMipSetting__ETextureAuditorMipSetting_MAX = 3
+};
+
+
 // Enum StudiosAutomation.ECollectionAuditType
 enum class ECollectionAuditType : uint8_t
 {

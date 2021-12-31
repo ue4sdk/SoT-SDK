@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SlateReflector_classes.hpp"
+#include "SoT_SlateReflector_parameters.hpp"
 
 namespace SDK
 {

@@ -19,7 +19,7 @@ namespace SDK
 class UOceanCrawlerAnimationData : public UAnimationData
 {
 public:
-	struct FOceanCrawlerAnimationDataStructure         OceanCrawlerAnimationDataStructure;                       // 0x0028(0x0090) (Edit, DisableEditOnInstance)
+	FOceanCrawlerAnimationDataStructure                OceanCrawlerAnimationDataStructure;                       // 0x0028(0x0090) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -36,19 +36,19 @@ class UOceanCrawlerAnimationInstance : public UAnimInstance
 {
 public:
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0440(0x0018) MISSED OFFSET
-	struct FOceanCrawlerAnimationDataStructure         LoadedAnimations;                                         // 0x0458(0x0090) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	struct FActorVelocityData                          MovementData;                                             // 0x04E8(0x0018) (BlueprintVisible, BlueprintReadOnly)
+	FOceanCrawlerAnimationDataStructure                LoadedAnimations;                                         // 0x0458(0x0090) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	FActorVelocityData                                 MovementData;                                             // 0x04E8(0x0018) (BlueprintVisible, BlueprintReadOnly)
 	float                                              CurrentDirection;                                         // 0x0500(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0504(0x0004) MISSED OFFSET
-	struct FAthenaAnimationWeapon                      AttackAnims;                                              // 0x0508(0x00B8) (BlueprintVisible, BlueprintReadOnly)
+	FAthenaAnimationWeapon                             AttackAnims;                                              // 0x0508(0x00B8) (BlueprintVisible, BlueprintReadOnly)
 	bool                                               UseDefaultAnimations;                                     // 0x05C0(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               AnimationsLoaded;                                         // 0x05C1(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	bool                                               SporeBreathActive;                                        // 0x05C2(0x0001) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x1];                                       // 0x05C3(0x0001) MISSED OFFSET
-	struct FName                                       PropAttachmentSocket;                                     // 0x05C4(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              PropAttachmentSocket;                                     // 0x05C4(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x4];                                       // 0x05CC(0x0004) MISSED OFFSET
-	struct FCustomAnimationMontageStateMachine         MontagePlayer;                                            // 0x05D0(0x00D8)
-	struct FHitReactionAnimationState                  HitReacts;                                                // 0x06A8(0x0028) (BlueprintVisible)
+	FCustomAnimationMontageStateMachine                MontagePlayer;                                            // 0x05D0(0x00D8)
+	FHitReactionAnimationState                         HitReacts;                                                // 0x06A8(0x0028) (BlueprintVisible)
 	unsigned char                                      UnknownData04[0x50];                                      // 0x06D0(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -69,7 +69,7 @@ class UOceanCrawlerAnimationServerData : public UAnimationServerData
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	class UClass*                                      AnimInstanceType;                                         // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            AnimInstanceType;                                         // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MaxSpawnAnimDuration;                                     // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData)
 	float                                              MaxSpawnOnShipAnimDuration;                               // 0x003C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData)
 	float                                              MaxSpawnBoardingAnimDuration;                             // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, EditConst, IsPlainOldData)

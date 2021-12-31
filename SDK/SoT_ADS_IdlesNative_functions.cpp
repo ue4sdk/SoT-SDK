@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ADS_IdlesNative_classes.hpp"
+#include "SoT_ADS_IdlesNative_parameters.hpp"
 
 namespace SDK
 {

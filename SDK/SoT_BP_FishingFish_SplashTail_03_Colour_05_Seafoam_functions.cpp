@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishingFish_SplashTail_03_Colour_05_Seafoam_classes.hpp"
+#include "SoT_BP_FishingFish_SplashTail_03_Colour_05_Seafoam_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishingFish_SplashTail_03_Colour_05_Seafoam_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishingFish_SplashTail_03_Colour_05_Seafoam.BP_FishingFish_SplashTail_03_Colour_05_Seafoam_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_FishingFish_SplashTail_03_Colour_05_Seafoam_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ContestRowboats_classes.hpp"
+#include "SoT_ContestRowboats_parameters.hpp"
 
 namespace SDK
 {

@@ -11,8 +11,8 @@
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_BP_Docking_classes.hpp"
-#include "SoT_Animation_classes.hpp"
 #include "SoT_EIKLimbName_classes.hpp"
+#include "SoT_Animation_classes.hpp"
 
 namespace SDK
 {

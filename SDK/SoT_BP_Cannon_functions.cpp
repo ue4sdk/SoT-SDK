@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Cannon_classes.hpp"
+#include "SoT_BP_Cannon_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Cannon.BP_Cannon_C.GetDockableInfo
 // (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FDockableInfo           ReturnValue                    (Parm, OutParm, ReturnParm)
+// FDockableInfo                  ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FDockableInfo ABP_Cannon_C::GetDockableInfo()
+FDockableInfo ABP_Cannon_C::GetDockableInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cannon.BP_Cannon_C.GetDockableInfo"));
 
-	struct
-	{
-		struct FDockableInfo           ReturnValue;
-	} params;
-
+	ABP_Cannon_C_GetDockableInfo_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,10 +36,7 @@ void ABP_Cannon_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Cannon.BP_Cannon_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Cannon_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

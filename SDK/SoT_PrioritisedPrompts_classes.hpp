@@ -19,10 +19,10 @@ namespace SDK
 class UBasePromptCoordinator : public UObject
 {
 public:
-	class AAthenaPlayerController*                     PlayerController;                                         // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	AAthenaPlayerController*                           PlayerController;                                         // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0030(0x0010) MISSED OFFSET
-	class UPrioritisedPromptsManager*                  PrioritisedPromptsManager;                                // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	class ACharacter*                                  CharacterWithRegisteredEvents;                            // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+	UPrioritisedPromptsManager*                        PrioritisedPromptsManager;                                // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
+	ACharacter*                                        CharacterWithRegisteredEvents;                            // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0xA8];                                      // 0x0050(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -34,21 +34,21 @@ public:
 
 	void UpdateVisiblePrompt();
 	void UnregisterOtherEvents_Implementable();
-	void UnregisterCharacterEvents_Implementable(const struct FObjectMessagingDispatcherHandle& CharacterDispatcher);
+	void UnregisterCharacterEvents_Implementable(const FObjectMessagingDispatcherHandle& CharacterDispatcher);
 	void Uninitialize_Implementable();
 	void Uninitialize();
 	void Start();
-	void SetPromptAs(const struct FPrioritisedPromptWithHandle& Prompt);
+	void SetPromptAs(const FPrioritisedPromptWithHandle& Prompt);
 	void RegisterOtherEvents_Implementable();
-	void RegisterCharacterEvents_Implementable(const struct FObjectMessagingDispatcherHandle& CharacterDispatcher);
+	void RegisterCharacterEvents_Implementable(const FObjectMessagingDispatcherHandle& CharacterDispatcher);
 	void OnControllerEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason);
 	void MarkAsComplete_Implementable();
-	static struct FPromptEvaluation MakeShowPrompt(const struct FPrioritisedPromptWithHandle& Prompt);
-	static struct FPromptEvaluation MakeHideCurrentPrompts();
-	static struct FPromptEvaluation MakeCompleteCoordinator();
-	void Initialize(class AAthenaPlayerController* PlayerController, class UPrioritisedPromptsManager* PrioritisedPromptsManager);
+	static FPromptEvaluation MakeShowPrompt(const FPrioritisedPromptWithHandle& Prompt);
+	static FPromptEvaluation MakeHideCurrentPrompts();
+	static FPromptEvaluation MakeCompleteCoordinator();
+	void Initialize(AAthenaPlayerController* PlayerController, UPrioritisedPromptsManager* PrioritisedPromptsManager);
 	bool GetCompleted();
-	struct FPromptEvaluation EvaluatePromptDisplayState();
+	FPromptEvaluation EvaluatePromptDisplayState();
 	void DismissAllPrompts();
 };
 
@@ -58,8 +58,8 @@ public:
 class UGetPromptsLocalService : public UBlueprintAsyncActionBase
 {
 public:
-	struct FScriptMulticastDelegate                    Loaded;                                                   // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	class UObject*                                     WorldContextObject;                                       // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	FScriptMulticastDelegate                           Loaded;                                                   // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	UObject*                                           WorldContextObject;                                       // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -68,7 +68,7 @@ public:
 	}
 
 
-	static class UGetPromptsLocalService* GetPromptsLocalService(class UObject* WorldContextObject);
+	static UGetPromptsLocalService* GetPromptsLocalService(UObject* WorldContextObject);
 };
 
 
@@ -77,8 +77,8 @@ public:
 class UPrioritisedPromptsManager : public UObject
 {
 public:
-	TArray<struct FPrioritisedPromptWithHandle>        AllPrompts;                                               // 0x0028(0x0010) (ZeroConstructor)
-	class APlayerController*                           PlayerController;                                         // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<FPrioritisedPromptWithHandle>               AllPrompts;                                               // 0x0028(0x0010) (ZeroConstructor)
+	APlayerController*                                 PlayerController;                                         // 0x0038(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0040(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -95,7 +95,7 @@ public:
 class UPromptCounterAccessKey : public UObject
 {
 public:
-	class FString                                      Key;                                                      // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	FString                                            Key;                                                      // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -119,8 +119,8 @@ public:
 	}
 
 
-	void IncrementCountForKey(class UClass* AccessKey);
-	int GetCountForKey(class UClass* AccessKey);
+	void IncrementCountForKey(UClass* AccessKey);
+	int GetCountForKey(UClass* AccessKey);
 };
 
 

@@ -19,8 +19,8 @@ namespace SDK
 class ABP_WorldMarkerManager_C : public AActor
 {
 public:
-	class UWorldMarkerManagerComponent*                WorldMarkerManager;                                       // 0x03D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UWorldMarkerManagerComponent*                      WorldMarkerManager;                                       // 0x03D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   DefaultSceneRoot;                                         // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

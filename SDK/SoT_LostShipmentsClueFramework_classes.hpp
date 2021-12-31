@@ -171,7 +171,7 @@ public:
 	}
 
 
-	static class UClueDescriptor* CreateCluePointingToSite(class UClueConnectionConfig* ConnectionConfiguration, int Difficulty, TArray<class UClass*> AllowedClueTypes, class UTaleQuestSelectorService* SelectorService, const struct FVector& SourceLocation, const struct FClueSite& TargetSite);
+	static UClueDescriptor* CreateCluePointingToSite(UClueConnectionConfig* ConnectionConfiguration, int Difficulty, TArray<UClass*> AllowedClueTypes, UTaleQuestSelectorService* SelectorService, const FVector& SourceLocation, const FClueSite& TargetSite);
 };
 
 
@@ -180,8 +180,8 @@ public:
 class UClueDescriptorGenerator : public UObject
 {
 public:
-	class UClass*                                      DescriptorType;                                           // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UClass*>                              SupportedDestinationTypes;                                // 0x0030(0x0010) (Edit, ZeroConstructor)
+	UClass*                                            DescriptorType;                                           // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<UClass*>                                    SupportedDestinationTypes;                                // 0x0030(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -197,8 +197,8 @@ public:
 class UClueDestinationGenerator : public UObject
 {
 public:
-	class UClass*                                      RequiredClueSiteDataType;                                 // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<struct FWeightedClueDestinationDescriptor>  WeightedSupportedDescriptorTypes;                         // 0x0030(0x0010) (Edit, ZeroConstructor)
+	UClass*                                            RequiredClueSiteDataType;                                 // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<FWeightedClueDestinationDescriptor>         WeightedSupportedDescriptorTypes;                         // 0x0030(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      UnknownData00[0x50];                                      // 0x0040(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -215,9 +215,9 @@ public:
 class UClueConnectionConfig : public UDataAsset
 {
 public:
-	TArray<struct FClueSiteTypeSupportedDescribedByEntry> CluesThatCanDescribeSites;                                // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClueDescriptorGenerator*>            ClueGenerators;                                           // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
-	TArray<class UClueDestinationGenerator*>           DestinationGenerators;                                    // 0x0048(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
+	TArray<FClueSiteTypeSupportedDescribedByEntry>     CluesThatCanDescribeSites;                                // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<UClueDescriptorGenerator*>                  ClueGenerators;                                           // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
+	TArray<UClueDestinationGenerator*>                 DestinationGenerators;                                    // 0x0048(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -249,7 +249,7 @@ class UClueDescriptorContainerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	class UClueDescriptor*                             CurrentClue;                                              // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UClueDescriptor*                                   CurrentClue;                                              // 0x00D0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	bool                                               HasClueBeenGiven;                                         // 0x00D8(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x00D9(0x0007) MISSED OFFSET
 
@@ -267,10 +267,10 @@ public:
 class UClueFactoryConfig : public UDataAsset
 {
 public:
-	TArray<class ULandClueCreator*>                    LandClueCreators;                                         // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
-	TArray<class USeaClueCreator*>                     SeaClueCreators;                                          // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
-	class UClueChoiceSelectionStrategy*                ChoiceStrategy;                                           // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	TArray<struct FRestrictedClueType>                 RestrictedClueTypes;                                      // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<ULandClueCreator*>                          LandClueCreators;                                         // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
+	TArray<USeaClueCreator*>                           SeaClueCreators;                                          // 0x0038(0x0010) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance)
+	UClueChoiceSelectionStrategy*                      ChoiceStrategy;                                           // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	TArray<FRestrictedClueType>                        RestrictedClueTypes;                                      // 0x0050(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -286,7 +286,7 @@ public:
 class UClueFactory : public UObject
 {
 public:
-	class UClueFactoryConfig*                          Config;                                                   // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UClueFactoryConfig*                                Config;                                                   // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -310,7 +310,7 @@ public:
 	}
 
 
-	static void GiveClueToParticipant(class AActor* Participant, class UClueDescriptor* Clue, class UClass* ClueSite);
+	static void GiveClueToParticipant(AActor* Participant, UClueDescriptor* Clue, UClass* ClueSite);
 };
 
 
@@ -319,7 +319,7 @@ public:
 class UClueSiteLootRestrictionsDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FClueSiteLootRestriction>            ClueSiteLootRestrictions;                                 // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<FClueSiteLootRestriction>                   ClueSiteLootRestrictions;                                 // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -335,7 +335,7 @@ public:
 class UDebrisForVoyageRankDescAsset : public UDataAsset
 {
 public:
-	TArray<struct FDebrisToRangeDist>                  RankBasedDebrisDistribution;                              // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FDebrisToRangeDist>                         RankBasedDebrisDistribution;                              // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -355,8 +355,8 @@ public:
 	float                                              MaxProjectionDistance;                                    // 0x0174(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              ProjectionAngleInDegrees;                                 // 0x0178(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              IslandProximitySafeThreshold;                             // 0x017C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ContextSourcePoint;                                       // 0x0180(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      ContextProjectionPoint;                                   // 0x0188(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UClass*                                            ContextSourcePoint;                                       // 0x0180(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UClass*                                            ContextProjectionPoint;                                   // 0x0188(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0190(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -373,7 +373,7 @@ public:
 class ULootForVoyageRankDescAsset : public UDataAsset
 {
 public:
-	TArray<struct FLootToRangeDist>                    RankBasedLootDistribution;                                // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FLootToRangeDist>                           RankBasedLootDistribution;                                // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -405,7 +405,7 @@ class UNPCLootSpawnComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	TArray<struct FVector>                             LootItemSpawnRelativeLocations;                           // 0x00D0(0x0010) (Edit, ZeroConstructor)
+	TArray<FVector>                                    LootItemSpawnRelativeLocations;                           // 0x00D0(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -421,7 +421,7 @@ public:
 class USeaClueSiteTypesDataAsset : public UDataAsset
 {
 public:
-	TArray<class UClass*>                              ClueSiteTypes;                                            // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<UClass*>                                    ClueSiteTypes;                                            // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -433,13 +433,13 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStep
-// 0x0068 (0x00D0 - 0x0068)
+// 0x0068 (0x00F8 - 0x0090)
 class UTaleQuestChooseLandOrSeaStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
-	class USeaClueSiteTypesDataAsset*                  SeaClueSiteTypes;                                         // 0x0080(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x48];                                      // 0x0088(0x0048) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0090(0x0018) MISSED OFFSET
+	USeaClueSiteTypesDataAsset*                        SeaClueSiteTypes;                                         // 0x00A8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x48];                                      // 0x00B0(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -451,13 +451,14 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestClueSiteService
-// 0x0068 (0x00A8 - 0x0040)
+// 0x0078 (0x00D8 - 0x0060)
 class UTaleQuestClueSiteService : public UTaleQuestService
 {
 public:
-	class UTaleQuestClueSiteServiceDesc*               Desc;                                                     // 0x0040(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<struct FClueSite>                           ClueSites;                                                // 0x0048(0x0010) (ZeroConstructor)
-	TMap<TEnumAsByte<EClueSiteLootType>, struct FClueSiteLootHistory> SpawnedLoot;                                              // 0x0058(0x0050) (ZeroConstructor)
+	UTaleQuestClueSiteServiceDesc*                     Desc;                                                     // 0x0060(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<FClueSite>                                  ClueSites;                                                // 0x0068(0x0010) (ZeroConstructor)
+	TMap<TEnumAsByte<EClueSiteLootType>, FClueSiteLootHistory> SpawnedLoot;                                              // 0x0078(0x0050) (ZeroConstructor)
+	TArray<FGuid>                                      DebugClueSiteIds;                                         // 0x00C8(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -466,7 +467,7 @@ public:
 	}
 
 
-	TArray<struct FClueSite> GetClueSites();
+	TArray<FClueSite> GetClueSites();
 };
 
 
@@ -486,21 +487,21 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestChooseLandOrSeaStepDesc
-// 0x0060 (0x0090 - 0x0030)
+// 0x0060 (0x00E0 - 0x0080)
 class UTaleQuestChooseLandOrSeaStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class USeaClueSiteTypesDataAsset*                  SeaClueSiteTypes;                                         // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              ProjectionAngleInDegrees;                                 // 0x0038(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MinProjectionProportion;                                  // 0x003C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              MaxProjectionProportion;                                  // 0x0040(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LandClueChanceWhenPreviousClueWasSea;                     // 0x0044(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              LandClueChanceWhenPreviousClueWasLand;                    // 0x0048(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
-	struct FQuestVariableVector                        ProjectionPoint;                                          // 0x0050(0x0010) (Edit)
-	struct FQuestVariableTradeRouteData                TradeRouteData;                                           // 0x0060(0x0010) (Edit)
-	struct FQuestVariableBool                          IsSeaLocation;                                            // 0x0070(0x0010) (Edit)
-	struct FQuestVariableNameArray                     ValidIslandNames;                                         // 0x0080(0x0010) (Edit)
+	USeaClueSiteTypesDataAsset*                        SeaClueSiteTypes;                                         // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              ProjectionAngleInDegrees;                                 // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MinProjectionProportion;                                  // 0x008C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              MaxProjectionProportion;                                  // 0x0090(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LandClueChanceWhenPreviousClueWasSea;                     // 0x0094(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              LandClueChanceWhenPreviousClueWasLand;                    // 0x0098(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
+	FQuestVariableVector                               ProjectionPoint;                                          // 0x00A0(0x0010) (Edit)
+	FQuestVariableTradeRouteData                       TradeRouteData;                                           // 0x00B0(0x0010) (Edit)
+	FQuestVariableBool                                 IsSeaLocation;                                            // 0x00C0(0x0010) (Edit)
+	FQuestVariableNameArray                            ValidIslandNames;                                         // 0x00D0(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -512,13 +513,11 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateCluePointingToSiteStep
-// 0x0058 (0x00C0 - 0x0068)
+// 0x0040 (0x00D0 - 0x0090)
 class UTaleQuestGenerateCluePointingToSiteStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x40];                                      // 0x0068(0x0040) MISSED OFFSET
-	TArray<class UClass*>                              AllowedClueTypes;                                         // 0x00A8(0x0010) (ZeroConstructor)
-	class UClueConnectionConfig*                       ConnectionConfiguration;                                  // 0x00B8(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x40];                                      // 0x0090(0x0040) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -530,16 +529,16 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateCluePointingToSiteStepDesc
-// 0x0058 (0x0088 - 0x0030)
+// 0x0058 (0x00D8 - 0x0080)
 class UTaleQuestGenerateCluePointingToSiteStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableInt                           Difficulty;                                               // 0x0030(0x0010) (Edit)
-	struct FQuestVariableVector                        SourceLocation;                                           // 0x0040(0x0010) (Edit)
-	struct FQuestVariableClueSite                      TargetClueSite;                                           // 0x0050(0x0010) (Edit)
-	struct FQuestVariableClueDescriptor                GeneratedClue;                                            // 0x0060(0x0010) (Edit)
-	TArray<class UClass*>                              AllowedClueTypes;                                         // 0x0070(0x0010) (Edit, ZeroConstructor)
-	class UClueConnectionConfig*                       ConnectionConfiguration;                                  // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FQuestVariableInt                                  Difficulty;                                               // 0x0080(0x0010) (Edit)
+	FQuestVariableVector                               SourceLocation;                                           // 0x0090(0x0010) (Edit)
+	FQuestVariableClueSite                             TargetClueSite;                                           // 0x00A0(0x0010) (Edit)
+	FQuestVariableClueDescriptor                       GeneratedClue;                                            // 0x00B0(0x0010) (Edit)
+	TArray<UClass*>                                    AllowedClueTypes;                                         // 0x00C0(0x0010) (Edit, ZeroConstructor)
+	UClueConnectionConfig*                             ConnectionConfiguration;                                  // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -551,12 +550,11 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteAtSeaLocationStep
-// 0x0028 (0x0090 - 0x0068)
+// 0x0020 (0x00B0 - 0x0090)
 class UTaleQuestGenerateClueSiteAtSeaLocationStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0068(0x0020) MISSED OFFSET
-	class UClueFactoryConfig*                          ClueConfig;                                               // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0090(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -568,13 +566,13 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteAtSeaLocationStepDesc
-// 0x0028 (0x0058 - 0x0030)
+// 0x0028 (0x00A8 - 0x0080)
 class UTaleQuestGenerateClueSiteAtSeaLocationStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableVector                        ApproximateLocation;                                      // 0x0030(0x0010) (Edit)
-	struct FQuestVariableClueSite                      ClueSite;                                                 // 0x0040(0x0010) (Edit)
-	class UClueFactoryConfig*                          ClueFactoryConfiguration;                                 // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FQuestVariableVector                               ApproximateLocation;                                      // 0x0080(0x0010) (Edit)
+	FQuestVariableClueSite                             ClueSite;                                                 // 0x0090(0x0010) (Edit)
+	UClueFactoryConfig*                                ClueFactoryConfiguration;                                 // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -586,12 +584,11 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteOnIslandStep
-// 0x0028 (0x0090 - 0x0068)
+// 0x0020 (0x00B0 - 0x0090)
 class UTaleQuestGenerateClueSiteOnIslandStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0068(0x0020) MISSED OFFSET
-	class UClueFactoryConfig*                          ClueConfig;                                               // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0090(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -603,13 +600,13 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateClueSiteOnIslandStepDesc
-// 0x0028 (0x0058 - 0x0030)
+// 0x0028 (0x00A8 - 0x0080)
 class UTaleQuestGenerateClueSiteOnIslandStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableName                          IslandName;                                               // 0x0030(0x0010) (Edit)
-	struct FQuestVariableClueSite                      ClueSite;                                                 // 0x0040(0x0010) (Edit)
-	class UClueFactoryConfig*                          ClueGenerationConfiguration;                              // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FQuestVariableName                                 IslandName;                                               // 0x0080(0x0010) (Edit)
+	FQuestVariableClueSite                             ClueSite;                                                 // 0x0090(0x0010) (Edit)
+	UClueFactoryConfig*                                ClueGenerationConfiguration;                              // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -621,12 +618,11 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateDebrisTypeForVoyageRankStep
-// 0x0028 (0x0090 - 0x0068)
+// 0x0020 (0x00B0 - 0x0090)
 class UTaleQuestGenerateDebrisTypeForVoyageRankStep : public UTaleQuestStep
 {
 public:
-	class UDebrisForVoyageRankDescAsset*               DebrisForRankDescAsset;                                   // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0090(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -638,13 +634,13 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateDebrisTypeForVoyageRankStepDesc
-// 0x0028 (0x0058 - 0x0030)
+// 0x0028 (0x00A8 - 0x0080)
 class UTaleQuestGenerateDebrisTypeForVoyageRankStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableInt                           VoyageRank;                                               // 0x0030(0x0010) (Edit)
-	struct FQuestVariableActorAssetTypeArray           DebrisTypeArray;                                          // 0x0040(0x0010) (Edit)
-	class UDebrisForVoyageRankDescAsset*               DebrisForRankDescAsset;                                   // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FQuestVariableInt                                  VoyageRank;                                               // 0x0080(0x0010) (Edit)
+	FQuestVariableActorAssetTypeArray                  DebrisTypeArray;                                          // 0x0090(0x0010) (Edit)
+	UDebrisForVoyageRankDescAsset*                     DebrisForRankDescAsset;                                   // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -656,12 +652,11 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStep
-// 0x0028 (0x0090 - 0x0068)
+// 0x0020 (0x00B0 - 0x0090)
 class UTaleQuestGenerateLootDescForVoyageRankStep : public UTaleQuestStep
 {
 public:
-	class ULootForVoyageRankDescAsset*                 LootForRankDescAsset;                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0070(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0090(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -673,13 +668,13 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestGenerateLootDescForVoyageRankStepDesc
-// 0x0028 (0x0058 - 0x0030)
+// 0x0028 (0x00A8 - 0x0080)
 class UTaleQuestGenerateLootDescForVoyageRankStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableInt                           VoyageRank;                                               // 0x0030(0x0010) (Edit)
-	struct FQuestVariableItemDescTypeArray             LootDescArray;                                            // 0x0040(0x0010) (Edit)
-	class ULootForVoyageRankDescAsset*                 LootForRankDescAsset;                                     // 0x0050(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FQuestVariableInt                                  VoyageRank;                                               // 0x0080(0x0010) (Edit)
+	FQuestVariableItemDescTypeArray                    LootDescArray;                                            // 0x0090(0x0010) (Edit)
+	ULootForVoyageRankDescAsset*                       LootForRankDescAsset;                                     // 0x00A0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -691,12 +686,10 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestIsClueOfTypeStep
-// 0x0028 (0x0090 - 0x0068)
+// 0x0000 (0x0090 - 0x0090)
 class UTaleQuestIsClueOfTypeStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0068(0x0020) MISSED OFFSET
-	class UClass*                                      ClueSiteTypeToMatchAgainst;                               // 0x0088(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -708,13 +701,13 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestIsClueOfTypeStepDesc
-// 0x0028 (0x0058 - 0x0030)
+// 0x0028 (0x00A8 - 0x0080)
 class UTaleQuestIsClueOfTypeStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class UClass*                                      ClueSiteTypeToMatch;                                      // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FQuestVariableClueSite                      ClueSite;                                                 // 0x0038(0x0010) (Edit)
-	struct FQuestVariableBool                          IsMatchingType;                                           // 0x0048(0x0010) (Edit)
+	UClass*                                            ClueSiteTypeToMatch;                                      // 0x0080(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FQuestVariableClueSite                             ClueSite;                                                 // 0x0088(0x0010) (Edit)
+	FQuestVariableBool                                 IsMatchingType;                                           // 0x0098(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -726,14 +719,12 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestSelectClueSiteForLootStep
-// 0x0038 (0x00A0 - 0x0068)
+// 0x0028 (0x00B8 - 0x0090)
 class UTaleQuestSelectClueSiteForLootStep : public UTaleQuestStep
 {
 public:
-	class UTaleQuestArrayEntrySelectionStrategy*       SelectionStrategy;                                        // 0x0068(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UClueSiteLootRestrictionsDataAsset*          ClueSiteLootRestrictions;                                 // 0x0070(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TEnumAsByte<EClueSiteLootType>                     LootType;                                                 // 0x0078(0x0001) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x27];                                      // 0x0079(0x0027) MISSED OFFSET
+	UTaleQuestSelectClueSiteForLootStepDesc*           StepDesc;                                                 // 0x0090(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x20];                                      // 0x0098(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -745,16 +736,16 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestSelectClueSiteForLootStepDesc
-// 0x0038 (0x0068 - 0x0030)
+// 0x0038 (0x00B8 - 0x0080)
 class UTaleQuestSelectClueSiteForLootStepDesc : public UTaleQuestStepDesc
 {
 public:
-	class UTaleQuestArrayEntrySelectionStrategy*       SelectionStrategy;                                        // 0x0030(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UClueSiteLootRestrictionsDataAsset*          ClueSiteLootRestrictions;                                 // 0x0038(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EClueSiteLootType>                     LootType;                                                 // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
-	struct FQuestVariableClueSite                      OutputClueSite;                                           // 0x0048(0x0010) (Edit)
-	struct FQuestVariableBool                          MaxedAllClueSites;                                        // 0x0058(0x0010) (Edit)
+	UTaleQuestArrayEntrySelectionStrategy*             SelectionStrategy;                                        // 0x0080(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	UClueSiteLootRestrictionsDataAsset*                ClueSiteLootRestrictions;                                 // 0x0088(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EClueSiteLootType>                     LootType;                                                 // 0x0090(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
+	FQuestVariableClueSite                             OutputClueSite;                                           // 0x0098(0x0010) (Edit)
+	FQuestVariableBool                                 MaxedAllClueSites;                                        // 0x00A8(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -766,11 +757,11 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestSpawnDebrisAtClueSiteStep
-// 0x0048 (0x00B0 - 0x0068)
+// 0x0048 (0x00D8 - 0x0090)
 class UTaleQuestSpawnDebrisAtClueSiteStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x48];                                      // 0x0068(0x0048) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x48];                                      // 0x0090(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -782,13 +773,13 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestSpawnDebrisAtClueSiteStepDesc
-// 0x0030 (0x0060 - 0x0030)
+// 0x0030 (0x00B0 - 0x0080)
 class UTaleQuestSpawnDebrisAtClueSiteStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableClueSite                      ClueSiteVar;                                              // 0x0030(0x0010) (Edit)
-	struct FQuestVariableActorAssetType                DebrisTypeVar;                                            // 0x0040(0x0010) (Edit)
-	struct FQuestVariableActor                         OutDebrisActorVar;                                        // 0x0050(0x0010) (Edit)
+	FQuestVariableClueSite                             ClueSiteVar;                                              // 0x0080(0x0010) (Edit)
+	FQuestVariableActorAssetType                       DebrisTypeVar;                                            // 0x0090(0x0010) (Edit)
+	FQuestVariableActor                                OutDebrisActorVar;                                        // 0x00A0(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -800,7 +791,7 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStep
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0090 - 0x0090)
 class UTaleQuestSpawnLootItemInClueSiteStep : public UTaleQuestStep
 {
 public:
@@ -815,15 +806,15 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestSpawnLootItemInClueSiteStepDesc
-// 0x0038 (0x0068 - 0x0030)
+// 0x0038 (0x00B8 - 0x0080)
 class UTaleQuestSpawnLootItemInClueSiteStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableClass                         LootItem;                                                 // 0x0030(0x0010) (Edit)
-	struct FQuestVariableClueSite                      ClueSite;                                                 // 0x0040(0x0010) (Edit)
-	struct FQuestVariableItemInfo                      SpawnedLootItem;                                          // 0x0050(0x0010) (Edit)
-	bool                                               Tracked;                                                  // 0x0060(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0061(0x0007) MISSED OFFSET
+	FQuestVariableClass                                LootItem;                                                 // 0x0080(0x0010) (Edit)
+	FQuestVariableClueSite                             ClueSite;                                                 // 0x0090(0x0010) (Edit)
+	FQuestVariableItemInfo                             SpawnedLootItem;                                          // 0x00A0(0x0010) (Edit)
+	bool                                               Tracked;                                                  // 0x00B0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x00B1(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -835,7 +826,7 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStep
-// 0x0000 (0x0068 - 0x0068)
+// 0x0000 (0x0090 - 0x0090)
 class UTaleQuestStoreClueOnActorStep : public UTaleQuestStep
 {
 public:
@@ -850,13 +841,13 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestStoreClueOnActorStepDesc
-// 0x0030 (0x0060 - 0x0030)
+// 0x0030 (0x00B0 - 0x0080)
 class UTaleQuestStoreClueOnActorStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableClueDescriptor                ClueDescriptor;                                           // 0x0030(0x0010) (Edit)
-	struct FQuestVariableActor                         Actor;                                                    // 0x0040(0x0010) (Edit)
-	struct FQuestVariableActor                         ClueActor;                                                // 0x0050(0x0010) (Edit)
+	FQuestVariableClueDescriptor                       ClueDescriptor;                                           // 0x0080(0x0010) (Edit)
+	FQuestVariableActor                                Actor;                                                    // 0x0090(0x0010) (Edit)
+	FQuestVariableActor                                ClueActor;                                                // 0x00A0(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -868,11 +859,11 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestUpdateBuoyancyAutoSinkSettingForItemStep
-// 0x0018 (0x0080 - 0x0068)
+// 0x0018 (0x00A8 - 0x0090)
 class UTaleQuestUpdateBuoyancyAutoSinkSettingForItemStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0090(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -884,13 +875,13 @@ public:
 
 
 // Class LostShipmentsClueFramework.TaleQuestUpdateBuoyancyAutoSinkSettingForItemStepDesc
-// 0x0018 (0x0048 - 0x0030)
+// 0x0018 (0x0098 - 0x0080)
 class UTaleQuestUpdateBuoyancyAutoSinkSettingForItemStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableItemInfo                      Item;                                                     // 0x0030(0x0010) (Edit)
-	bool                                               EnableAutoSink;                                           // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
+	FQuestVariableItemInfo                             Item;                                                     // 0x0080(0x0010) (Edit)
+	bool                                               EnableAutoSink;                                           // 0x0090(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0091(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -906,7 +897,7 @@ public:
 class UWeightedDebrisDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FWeightedDebris>                     Debris;                                                   // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<FWeightedDebris>                            Debris;                                                   // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

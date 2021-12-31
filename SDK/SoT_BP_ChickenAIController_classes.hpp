@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ChickenAIController.BP_ChickenAIController_C
-// 0x0008 (0x0A90 - 0x0A88)
+// 0x0008 (0x0A98 - 0x0A90)
 class ABP_ChickenAIController_C : public AAthenaFaunaAIController
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A88(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x0A90(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

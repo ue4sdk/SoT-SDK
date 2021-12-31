@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishingFish_Devilfish_03_Colour_04_Forsaken_classes.hpp"
+#include "SoT_BP_FishingFish_Devilfish_03_Colour_04_Forsaken_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishingFish_Devilfish_03_Colour_04_Forsaken_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishingFish_Devilfish_03_Colour_04_Forsaken.BP_FishingFish_Devilfish_03_Colour_04_Forsaken_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_FishingFish_Devilfish_03_Colour_04_Forsaken_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

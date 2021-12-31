@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_WaterVolume_Large_classes.hpp"
+#include "SoT_BP_WaterVolume_Large_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_WaterVolume_Large_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WaterVolume_Large.BP_WaterVolume_Large_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_WaterVolume_Large_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

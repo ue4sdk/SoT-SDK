@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_BoilingWaterProjectile_NoSplash.BP_BoilingWaterProjectile_NoSplash_C
-// 0x0000 (0x0710 - 0x0710)
+// 0x0000 (0x0728 - 0x0728)
 class ABP_BoilingWaterProjectile_NoSplash_C : public ABP_BoilingWaterProjectile_C
 {
 public:

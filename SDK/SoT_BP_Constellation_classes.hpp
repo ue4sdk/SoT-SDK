@@ -19,7 +19,7 @@ namespace SDK
 class ABP_Constellation_C : public AConstellation
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0468(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x0468(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{

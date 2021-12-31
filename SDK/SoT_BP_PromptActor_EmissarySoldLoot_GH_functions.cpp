@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_PromptActor_EmissarySoldLoot_GH_classes.hpp"
+#include "SoT_BP_PromptActor_EmissarySoldLoot_GH_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_PromptActor_EmissarySoldLoot_GH_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PromptActor_EmissarySoldLoot_GH.BP_PromptActor_EmissarySoldLoot_GH_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_PromptActor_EmissarySoldLoot_GH_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void ABP_PromptActor_EmissarySoldLoot_GH_C::ReceiveEndPlay(TEnumAsByte<EEndPlayR
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PromptActor_EmissarySoldLoot_GH.BP_PromptActor_EmissarySoldLoot_GH_C.ReceiveEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	ABP_PromptActor_EmissarySoldLoot_GH_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -55,10 +48,7 @@ void ABP_PromptActor_EmissarySoldLoot_GH_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PromptActor_EmissarySoldLoot_GH.BP_PromptActor_EmissarySoldLoot_GH_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_PromptActor_EmissarySoldLoot_GH_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -73,11 +63,7 @@ void ABP_PromptActor_EmissarySoldLoot_GH_C::ExecuteUbergraph_BP_PromptActor_Emis
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PromptActor_EmissarySoldLoot_GH.BP_PromptActor_EmissarySoldLoot_GH_C.ExecuteUbergraph_BP_PromptActor_EmissarySoldLoot_GH"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_PromptActor_EmissarySoldLoot_GH_C_ExecuteUbergraph_BP_PromptActor_EmissarySoldLoot_GH_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

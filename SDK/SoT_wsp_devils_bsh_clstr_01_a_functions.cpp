@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_devils_bsh_clstr_01_a_classes.hpp"
+#include "SoT_wsp_devils_bsh_clstr_01_a_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awsp_devils_bsh_clstr_01_a_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_devils_bsh_clstr_01_a.wsp_devils_bsh_clstr_01_a_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Awsp_devils_bsh_clstr_01_a_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

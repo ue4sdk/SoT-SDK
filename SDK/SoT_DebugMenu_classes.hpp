@@ -20,7 +20,7 @@ class UDebugMenuComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x28];                                      // 0x00C8(0x0028) MISSED OFFSET
-	class ADebugMenu*                                  DebugMenuInstance;                                        // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
+	ADebugMenu*                                        DebugMenuInstance;                                        // 0x00F0(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x20];                                      // 0x00F8(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -52,10 +52,10 @@ public:
 class UDebugMenuDataAsset : public UDataAsset
 {
 public:
-	TArray<class UDebugMenuDataAsset*>                 DataAssets;                                               // 0x0028(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FDebugMenuDataAssetEntry>            MenuEntires;                                              // 0x0038(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FDebugMenuButtonShortcut>            ButtonShortcuts;                                          // 0x0048(0x0010) (Edit, ZeroConstructor)
-	TArray<class UDebugMenuEntryGenerator*>            MenuEntryGenerators;                                      // 0x0058(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<UDebugMenuDataAsset*>                       DataAssets;                                               // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<FDebugMenuDataAssetEntry>                   MenuEntires;                                              // 0x0038(0x0010) (Edit, ZeroConstructor)
+	TArray<FDebugMenuButtonShortcut>                   ButtonShortcuts;                                          // 0x0048(0x0010) (Edit, ZeroConstructor)
+	TArray<UDebugMenuEntryGenerator*>                  MenuEntryGenerators;                                      // 0x0058(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -111,13 +111,13 @@ public:
 	}
 
 
-	static bool IsDebugMenuReady(class UObject* WorldContextObject);
-	static bool IsDebugMenuOpen(class UObject* WorldContextObject);
+	static bool IsDebugMenuReady(UObject* WorldContextObject);
+	static bool IsDebugMenuOpen(UObject* WorldContextObject);
 	static bool IsDebugMenuAvailable();
-	static struct FKey GetDebugMenuToggleKeyComboBetaKeyboard();
-	static struct FKey GetDebugMenuToggleKeyComboAlphaKeyboard();
-	static struct FKey GetDebugMenuToggleButtonComboBetaGamepad();
-	static struct FKey GetDebugMenuToggleButtonComboAlphaGamepad();
+	static FKey GetDebugMenuToggleKeyComboBetaKeyboard();
+	static FKey GetDebugMenuToggleKeyComboAlphaKeyboard();
+	static FKey GetDebugMenuToggleButtonComboBetaGamepad();
+	static FKey GetDebugMenuToggleButtonComboAlphaGamepad();
 };
 
 

@@ -19,7 +19,7 @@ namespace SDK
 class ABP_PetChestInteraction_C : public APetChestInteraction
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0668(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   DefaultSceneRoot;                                         // 0x0668(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

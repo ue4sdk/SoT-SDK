@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SirensAnimation_classes.hpp"
+#include "SoT_SirensAnimation_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void USirenAnimationInstance::ClearActiveAttack()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SirensAnimation.SirenAnimationInstance.ClearActiveAttack"));
 
-	struct
-	{
-	} params;
-
+	USirenAnimationInstance_ClearActiveAttack_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void USirenAnimationInstance::BeginNewAttack()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SirensAnimation.SirenAnimationInstance.BeginNewAttack"));
 
-	struct
-	{
-	} params;
-
+	USirenAnimationInstance_BeginNewAttack_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

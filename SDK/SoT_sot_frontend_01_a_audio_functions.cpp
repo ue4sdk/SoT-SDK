@@ -1,10 +1,10 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_sot_frontend_01_a_audio_classes.hpp"
+#include "SoT_sot_frontend_01_a_audio_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Asot_frontend_01_a_audio_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_audio.sot_frontend_01_a_audio_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_audio_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void Asot_frontend_01_a_audio_C::SelectionConfirmed()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_audio.sot_frontend_01_a_audio_C.SelectionConfirmed"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_audio_C_SelectionConfirmed_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void Asot_frontend_01_a_audio_C::ExecuteUbergraph_sot_frontend_01_a_audio(int En
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_audio.sot_frontend_01_a_audio_C.ExecuteUbergraph_sot_frontend_01_a_audio"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	Asot_frontend_01_a_audio_C_ExecuteUbergraph_sot_frontend_01_a_audio_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

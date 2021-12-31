@@ -19,7 +19,7 @@ namespace SDK
 // 0x0030
 struct FADS_MapTableNative
 {
-	struct FAthenaAnimationMapTable                    MapTable_2_D2EBB5D940EDD65D1412C299092E09FE;              // 0x0000(0x0030) (Edit, BlueprintVisible)
+	FAthenaAnimationMapTable                           MapTable_2_D2EBB5D940EDD65D1412C299092E09FE;              // 0x0000(0x0030) (Edit, BlueprintVisible)
 };
 
 }

@@ -19,10 +19,10 @@ namespace SDK
 class UEditableGameplayTagQuery : public UObject
 {
 public:
-	class FString                                      UserDescription;                                          // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	FString                                            UserDescription;                                          // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
-	class UEditableGameplayTagQueryExpression*         RootExpression;                                           // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FGameplayTagQuery                           TagQueryExportText_Helper;                                // 0x0050(0x0048)
+	UEditableGameplayTagQueryExpression*               RootExpression;                                           // 0x0048(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	FGameplayTagQuery                                  TagQueryExportText_Helper;                                // 0x0050(0x0048)
 
 	static UClass* StaticClass()
 	{
@@ -53,7 +53,7 @@ public:
 class UEditableGameplayTagQueryExpression_AnyTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0028) (Edit, DisableEditOnInstance)
+	FGameplayTagContainer                              Tags;                                                     // 0x0028(0x0028) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -69,7 +69,7 @@ public:
 class UEditableGameplayTagQueryExpression_AllTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0028) (Edit, DisableEditOnInstance)
+	FGameplayTagContainer                              Tags;                                                     // 0x0028(0x0028) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -85,7 +85,7 @@ public:
 class UEditableGameplayTagQueryExpression_NoTagsMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	struct FGameplayTagContainer                       Tags;                                                     // 0x0028(0x0028) (Edit, DisableEditOnInstance)
+	FGameplayTagContainer                              Tags;                                                     // 0x0028(0x0028) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -101,7 +101,7 @@ public:
 class UEditableGameplayTagQueryExpression_AnyExprMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<UEditableGameplayTagQueryExpression*>       Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -117,7 +117,7 @@ public:
 class UEditableGameplayTagQueryExpression_AllExprMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<UEditableGameplayTagQueryExpression*>       Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -133,7 +133,7 @@ public:
 class UEditableGameplayTagQueryExpression_NoExprMatch : public UEditableGameplayTagQueryExpression
 {
 public:
-	TArray<class UEditableGameplayTagQueryExpression*> Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
+	TArray<UEditableGameplayTagQueryExpression*>       Expressions;                                              // 0x0028(0x0010) (Edit, ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -157,10 +157,10 @@ public:
 	}
 
 
-	bool HasMatchingGameplayTag(const struct FGameplayTag& TagToCheck);
-	bool HasAnyMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer, bool bCountEmptyAsMatch);
-	bool HasAllMatchingGameplayTags(const struct FGameplayTagContainer& TagContainer, bool bCountEmptyAsMatch);
-	void GetOwnedGameplayTags(struct FGameplayTagContainer* TagContainer);
+	bool HasMatchingGameplayTag(const FGameplayTag& TagToCheck);
+	bool HasAnyMatchingGameplayTags(const FGameplayTagContainer& TagContainer, bool bCountEmptyAsMatch);
+	bool HasAllMatchingGameplayTags(const FGameplayTagContainer& TagContainer, bool bCountEmptyAsMatch);
+	void GetOwnedGameplayTags(FGameplayTagContainer* TagContainer);
 };
 
 
@@ -177,17 +177,17 @@ public:
 	}
 
 
-	static struct FGameplayTag MakeLiteralGameplayTag(const struct FGameplayTag& Value);
-	static struct FGameplayTagQuery MakeGameplayTagQuery(const struct FGameplayTagQuery& TagQuery);
-	static bool HasAllMatchingGameplayTags(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, const struct FGameplayTagContainer& OtherContainer, bool bCountEmptyAsMatch);
-	static int GetNumGameplayTagsInContainer(const struct FGameplayTagContainer& TagContainer);
-	static bool DoGameplayTagsMatch(const struct FGameplayTag& TagOne, const struct FGameplayTag& TagTwo, TEnumAsByte<EGameplayTagMatchType> TagOneMatchType, TEnumAsByte<EGameplayTagMatchType> TagTwoMatchType);
-	static bool DoesTagAssetInterfaceHaveTag(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, TEnumAsByte<EGameplayTagMatchType> ContainerTagsMatchType, const struct FGameplayTag& Tag, TEnumAsByte<EGameplayTagMatchType> TagMatchType);
-	static bool DoesContainerMatchTagQuery(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagQuery& TagQuery);
-	static bool DoesContainerMatchAnyTagsInContainer(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bCountEmptyAsMatch);
-	static bool DoesContainerMatchAllTagsInContainer(const struct FGameplayTagContainer& TagContainer, const struct FGameplayTagContainer& OtherContainer, bool bCountEmptyAsMatch);
-	static bool DoesContainerHaveTag(const struct FGameplayTagContainer& TagContainer, TEnumAsByte<EGameplayTagMatchType> ContainerTagsMatchType, const struct FGameplayTag& Tag, TEnumAsByte<EGameplayTagMatchType> TagMatchType);
-	static bool AppendGameplayTagContainers(const struct FGameplayTagContainer& InTagContainer, struct FGameplayTagContainer* InOutTagContainer);
+	static FGameplayTag MakeLiteralGameplayTag(const FGameplayTag& Value);
+	static FGameplayTagQuery MakeGameplayTagQuery(const FGameplayTagQuery& TagQuery);
+	static bool HasAllMatchingGameplayTags(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, const FGameplayTagContainer& OtherContainer, bool bCountEmptyAsMatch);
+	static int GetNumGameplayTagsInContainer(const FGameplayTagContainer& TagContainer);
+	static bool DoGameplayTagsMatch(const FGameplayTag& TagOne, const FGameplayTag& TagTwo, TEnumAsByte<EGameplayTagMatchType> TagOneMatchType, TEnumAsByte<EGameplayTagMatchType> TagTwoMatchType);
+	static bool DoesTagAssetInterfaceHaveTag(const TScriptInterface<class UGameplayTagAssetInterface>& TagContainerInterface, TEnumAsByte<EGameplayTagMatchType> ContainerTagsMatchType, const FGameplayTag& Tag, TEnumAsByte<EGameplayTagMatchType> TagMatchType);
+	static bool DoesContainerMatchTagQuery(const FGameplayTagContainer& TagContainer, const FGameplayTagQuery& TagQuery);
+	static bool DoesContainerMatchAnyTagsInContainer(const FGameplayTagContainer& TagContainer, const FGameplayTagContainer& OtherContainer, bool bCountEmptyAsMatch);
+	static bool DoesContainerMatchAllTagsInContainer(const FGameplayTagContainer& TagContainer, const FGameplayTagContainer& OtherContainer, bool bCountEmptyAsMatch);
+	static bool DoesContainerHaveTag(const FGameplayTagContainer& TagContainer, TEnumAsByte<EGameplayTagMatchType> ContainerTagsMatchType, const FGameplayTag& Tag, TEnumAsByte<EGameplayTagMatchType> TagMatchType);
+	static bool AppendGameplayTagContainers(const FGameplayTagContainer& InTagContainer, FGameplayTagContainer* InOutTagContainer);
 };
 
 
@@ -197,7 +197,7 @@ class UGameplayTagsManager : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x118];                                     // 0x0028(0x0118) MISSED OFFSET
-	TArray<class UDataTable*>                          GameplayTagTables;                                        // 0x0140(0x0010) (ZeroConstructor)
+	TArray<UDataTable*>                                GameplayTagTables;                                        // 0x0140(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData01[0x20];                                      // 0x0150(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -207,7 +207,7 @@ public:
 	}
 
 
-	struct FGameplayTag RequestGameplayTag(const struct FName& TagName, bool ErrorIfNotFound);
+	FGameplayTag RequestGameplayTag(const FName& TagName, bool ErrorIfNotFound);
 };
 
 
@@ -216,7 +216,7 @@ public:
 class UGameplayTagsSettings : public UObject
 {
 public:
-	TArray<class FString>                              GameplayTags;                                             // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FString>                                    GameplayTags;                                             // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{

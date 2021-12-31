@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Component_Tutorial2019_classes.hpp"
+#include "SoT_BP_Component_Tutorial2019_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_Component_Tutorial2019_C::SwapMysteriousStrangerToTutorialModeOnClient(
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.SwapMysteriousStrangerToTutorialModeOnClient"));
 
-	struct
-	{
-	} params;
-
+	UBP_Component_Tutorial2019_C_SwapMysteriousStrangerToTutorialModeOnClient_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UBP_Component_Tutorial2019_C::TeleportPlayerToOnboardingSpawnPoint()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.TeleportPlayerToOnboardingSpawnPoint"));
 
-	struct
-	{
-	} params;
-
+	UBP_Component_Tutorial2019_C_TeleportPlayerToOnboardingSpawnPoint_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -47,17 +41,13 @@ void UBP_Component_Tutorial2019_C::TeleportPlayerToOnboardingSpawnPoint()
 // Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.GetPlayerController
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AAthenaPlayerController* Player_Controller              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// AAthenaPlayerController*       Player_Controller              (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Component_Tutorial2019_C::GetPlayerController(class AAthenaPlayerController** Player_Controller)
+void UBP_Component_Tutorial2019_C::GetPlayerController(AAthenaPlayerController** Player_Controller)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.GetPlayerController"));
 
-	struct
-	{
-		class AAthenaPlayerController* Player_Controller;
-	} params;
-
+	UBP_Component_Tutorial2019_C_GetPlayerController_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -70,18 +60,13 @@ void UBP_Component_Tutorial2019_C::GetPlayerController(class AAthenaPlayerContro
 // (Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TArray<TAssetPtr<class AActor>> ActorRefs                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<class AActor*>          OutActors                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<AActor*>                OutActors                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBP_Component_Tutorial2019_C::ConvertActorIdsToActors(TArray<TAssetPtr<class AActor>>* ActorRefs, TArray<class AActor*>* OutActors)
+void UBP_Component_Tutorial2019_C::ConvertActorIdsToActors(TArray<TAssetPtr<class AActor>>* ActorRefs, TArray<AActor*>* OutActors)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ConvertActorIdsToActors"));
 
-	struct
-	{
-		TArray<TAssetPtr<class AActor>> ActorRefs;
-		TArray<class AActor*>          OutActors;
-	} params;
-
+	UBP_Component_Tutorial2019_C_ConvertActorIdsToActors_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -99,10 +84,7 @@ void UBP_Component_Tutorial2019_C::Debug_SearchForMissingGoldHoarders()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.Debug_SearchForMissingGoldHoarders"));
 
-	struct
-	{
-	} params;
-
+	UBP_Component_Tutorial2019_C_Debug_SearchForMissingGoldHoarders_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -115,10 +97,7 @@ void UBP_Component_Tutorial2019_C::PopulateGoldHoarderLocationsFromGoldHoarders(
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.PopulateGoldHoarderLocationsFromGoldHoarders"));
 
-	struct
-	{
-	} params;
-
+	UBP_Component_Tutorial2019_C_PopulateGoldHoarderLocationsFromGoldHoarders_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -127,17 +106,13 @@ void UBP_Component_Tutorial2019_C::PopulateGoldHoarderLocationsFromGoldHoarders(
 // Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.EnsurePurchaseVoyageSequenceCreatedAndPopulated
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FVector>         InputPin                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<FVector>                InputPin                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UBP_Component_Tutorial2019_C::EnsurePurchaseVoyageSequenceCreatedAndPopulated(TArray<struct FVector>* InputPin)
+void UBP_Component_Tutorial2019_C::EnsurePurchaseVoyageSequenceCreatedAndPopulated(TArray<FVector>* InputPin)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.EnsurePurchaseVoyageSequenceCreatedAndPopulated"));
 
-	struct
-	{
-		TArray<struct FVector>         InputPin;
-	} params;
-
+	UBP_Component_Tutorial2019_C_EnsurePurchaseVoyageSequenceCreatedAndPopulated_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -149,17 +124,13 @@ void UBP_Component_Tutorial2019_C::EnsurePurchaseVoyageSequenceCreatedAndPopulat
 // Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.EnsurePurchaseVoyageSequenceObjectCreated
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UBP_Prompt_CTPurchaseVoyageSequence_C* PromptObject                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// UBP_Prompt_CTPurchaseVoyageSequence_C* PromptObject                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Component_Tutorial2019_C::EnsurePurchaseVoyageSequenceObjectCreated(class UBP_Prompt_CTPurchaseVoyageSequence_C** PromptObject)
+void UBP_Component_Tutorial2019_C::EnsurePurchaseVoyageSequenceObjectCreated(UBP_Prompt_CTPurchaseVoyageSequence_C** PromptObject)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.EnsurePurchaseVoyageSequenceObjectCreated"));
 
-	struct
-	{
-		class UBP_Prompt_CTPurchaseVoyageSequence_C* PromptObject;
-	} params;
-
+	UBP_Component_Tutorial2019_C_EnsurePurchaseVoyageSequenceObjectCreated_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -175,10 +146,7 @@ void UBP_Component_Tutorial2019_C::OnRep_GoldHoarderLocations()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.OnRep_GoldHoarderLocations"));
 
-	struct
-	{
-	} params;
-
+	UBP_Component_Tutorial2019_C_OnRep_GoldHoarderLocations_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -191,10 +159,7 @@ void UBP_Component_Tutorial2019_C::TrySetUpCoordinator()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.TrySetUpCoordinator"));
 
-	struct
-	{
-	} params;
-
+	UBP_Component_Tutorial2019_C_TrySetUpCoordinator_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -207,10 +172,7 @@ void UBP_Component_Tutorial2019_C::ReceiveTutorial2019BeginPlayOnClient()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ReceiveTutorial2019BeginPlayOnClient"));
 
-	struct
-	{
-	} params;
-
+	UBP_Component_Tutorial2019_C_ReceiveTutorial2019BeginPlayOnClient_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -223,10 +185,7 @@ void UBP_Component_Tutorial2019_C::ReceiveTutorial2019BeginPlayOnServer()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ReceiveTutorial2019BeginPlayOnServer"));
 
-	struct
-	{
-	} params;
-
+	UBP_Component_Tutorial2019_C_ReceiveTutorial2019BeginPlayOnServer_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -239,10 +198,7 @@ void UBP_Component_Tutorial2019_C::ForceDisableComponent_Blueprint()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ForceDisableComponent_Blueprint"));
 
-	struct
-	{
-	} params;
-
+	UBP_Component_Tutorial2019_C_ForceDisableComponent_Blueprint_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -259,13 +215,7 @@ void UBP_Component_Tutorial2019_C::Set_Prompts_Visibility(bool IsHidden, bool Re
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.Set Prompts Visibility"));
 
-	struct
-	{
-		bool                           IsHidden;
-		bool                           ReEvaluate;
-		float                          Delay_In_Seconds;
-	} params;
-
+	UBP_Component_Tutorial2019_C_Set_Prompts_Visibility_Params params;
 	params.IsHidden = IsHidden;
 	params.ReEvaluate = ReEvaluate;
 	params.Delay_In_Seconds = Delay_In_Seconds;
@@ -283,11 +233,7 @@ void UBP_Component_Tutorial2019_C::ControllerOnEndPlay(TEnumAsByte<EEndPlayReaso
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ControllerOnEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	UBP_Component_Tutorial2019_C_ControllerOnEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -303,11 +249,7 @@ void UBP_Component_Tutorial2019_C::ExecuteUbergraph_BP_Component_Tutorial2019(in
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Component_Tutorial2019.BP_Component_Tutorial2019_C.ExecuteUbergraph_BP_Component_Tutorial2019"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Component_Tutorial2019_C_ExecuteUbergraph_BP_Component_Tutorial2019_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

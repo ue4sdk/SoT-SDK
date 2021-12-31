@@ -20,12 +20,12 @@ class AAsymmetricClientObject : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x18];                                      // 0x03D0(0x0018) MISSED OFFSET
-	class UBoxComponent*                               BaseComponent;                                            // 0x03E8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
-	class UStaticMeshMemoryConstraintComponent*        ThirdPersonMesh;                                          // 0x03F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UWaterInteractionComponent*                  WaterInteractionComponent;                                // 0x03F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class UBuoyancyComponent*                          BuoyancyComponent;                                        // 0x0400(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class USpawnDependentTrackedOwnerComponent*        SpawnDependentTrackedOwnerComponent;                      // 0x0408(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FRotator                                    RotationWhenPlacingWorldProxy;                            // 0x0410(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UBoxComponent*                                     BaseComponent;                                            // 0x03E8(0x0008) (Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, IsPlainOldData)
+	UStaticMeshMemoryConstraintComponent*              ThirdPersonMesh;                                          // 0x03F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	UWaterInteractionComponent*                        WaterInteractionComponent;                                // 0x03F8(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	UBuoyancyComponent*                                BuoyancyComponent;                                        // 0x0400(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	USpawnDependentTrackedOwnerComponent*              SpawnDependentTrackedOwnerComponent;                      // 0x0408(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	FRotator                                           RotationWhenPlacingWorldProxy;                            // 0x0410(0x000C) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ZOffsetWhenPlacingWorldProxy;                             // 0x041C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -38,14 +38,15 @@ public:
 
 
 // Class AsymmetricClientServerObjectsFramework.AsymmetricObjectServerManager
-// 0x0038 (0x0408 - 0x03D0)
+// 0x0058 (0x0428 - 0x03D0)
 class AAsymmetricObjectServerManager : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x18];                                      // 0x03D0(0x0018) MISSED OFFSET
-	class AAsymmetricClientObject*                     SpawnedObject;                                            // 0x03E8(0x0008) (ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             SceneComponent;                                           // 0x03F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	struct FStringAssetReference                       AsymmetricObjectAsset;                                    // 0x03F8(0x0010) (Edit, Net, ZeroConstructor, DisableEditOnInstance)
+	AAsymmetricClientObject*                           SpawnedObject;                                            // 0x03E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   SceneComponent;                                           // 0x03F0(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	FStringAssetReference                              AsymmetricObjectAsset;                                    // 0x03F8(0x0010) (Net, ZeroConstructor)
+	TAssetPtr<class UClass>                            ForcedAsymmetricObjectAsset;                              // 0x0408(0x0020) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

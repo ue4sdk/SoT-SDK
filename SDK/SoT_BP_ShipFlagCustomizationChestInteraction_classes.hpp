@@ -19,7 +19,7 @@ namespace SDK
 class ABP_ShipFlagCustomizationChestInteraction_C : public AShipCustomizationChestInteraction
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x04F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   DefaultSceneRoot;                                         // 0x04F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

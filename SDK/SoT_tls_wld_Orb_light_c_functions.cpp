@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_tls_wld_Orb_light_c_classes.hpp"
+#include "SoT_tls_wld_Orb_light_c_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Atls_wld_Orb_light_c_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function tls_wld_Orb_light_c.tls_wld_Orb_light_c_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Atls_wld_Orb_light_c_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

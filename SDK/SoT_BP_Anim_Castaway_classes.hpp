@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_Castaway.BP_Anim_Castaway_C
-// 0x0000 (0x1BF8 - 0x1BF8)
+// 0x0000 (0x1D00 - 0x1D00)
 class UBP_Anim_Castaway_C : public UBP_Anim_Castaway_Base_C
 {
 public:

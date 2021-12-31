@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SmallShip_WindowHatch_classes.hpp"
+#include "SoT_BP_SmallShip_WindowHatch_parameters.hpp"
 
 namespace SDK
 {
@@ -15,21 +15,15 @@ namespace SDK
 // Function BP_SmallShip_WindowHatch.BP_SmallShip_WindowHatch_C.GetClosestInteractionPoint
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                 ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          OutInteractionPointRadius      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FVector                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ABP_SmallShip_WindowHatch_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
+FVector ABP_SmallShip_WindowHatch_C::GetClosestInteractionPoint(const FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShip_WindowHatch.BP_SmallShip_WindowHatch_C.GetClosestInteractionPoint"));
 
-	struct
-	{
-		struct FVector                 ReferencePosition;
-		float                          OutInteractionPointRadius;
-		struct FVector                 ReturnValue;
-	} params;
-
+	ABP_SmallShip_WindowHatch_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -48,10 +42,7 @@ void ABP_SmallShip_WindowHatch_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShip_WindowHatch.BP_SmallShip_WindowHatch_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_SmallShip_WindowHatch_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -64,10 +55,7 @@ void ABP_SmallShip_WindowHatch_C::OnAnimationStarted()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShip_WindowHatch.BP_SmallShip_WindowHatch_C.OnAnimationStarted"));
 
-	struct
-	{
-	} params;
-
+	ABP_SmallShip_WindowHatch_C_OnAnimationStarted_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -80,10 +68,7 @@ void ABP_SmallShip_WindowHatch_C::OnAnimationCompleted()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShip_WindowHatch.BP_SmallShip_WindowHatch_C.OnAnimationCompleted"));
 
-	struct
-	{
-	} params;
-
+	ABP_SmallShip_WindowHatch_C_OnAnimationCompleted_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -98,11 +83,7 @@ void ABP_SmallShip_WindowHatch_C::ExecuteUbergraph_BP_SmallShip_WindowHatch(int 
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShip_WindowHatch.BP_SmallShip_WindowHatch_C.ExecuteUbergraph_BP_SmallShip_WindowHatch"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_SmallShip_WindowHatch_C_ExecuteUbergraph_BP_SmallShip_WindowHatch_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

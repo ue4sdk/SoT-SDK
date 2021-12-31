@@ -21,8 +21,8 @@ namespace SDK
 // 0x0020
 struct FMemoryVisualiserStat
 {
-	struct FName                                       StatName;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class FString                                      DisplayName;                                              // 0x0008(0x0010) (Edit, ZeroConstructor)
+	FName                                              StatName;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FString                                            DisplayName;                                              // 0x0008(0x0010) (Edit, ZeroConstructor)
 	float                                              MemoryUsageMB;                                            // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
@@ -31,10 +31,10 @@ struct FMemoryVisualiserStat
 // 0x0028
 struct FMemoryVisualiserClass
 {
-	class UClass*                                      ClassType;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UClass*                                            ClassType;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EMemoryGatheringMode>                  MemoryGatheringMode;                                      // 0x0008(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0009(0x0007) MISSED OFFSET
-	class FString                                      DisplayName;                                              // 0x0010(0x0010) (Edit, ZeroConstructor)
+	FString                                            DisplayName;                                              // 0x0010(0x0010) (Edit, ZeroConstructor)
 	float                                              MemoryUsageMB;                                            // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
 };
@@ -43,9 +43,9 @@ struct FMemoryVisualiserClass
 // 0x0058
 struct FMemoryVisualiserCategory
 {
-	class FString                                      CategoryName;                                             // 0x0000(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FMemoryVisualiserStat>               CategoryStats;                                            // 0x0010(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FMemoryVisualiserClass>              CategoryClasses;                                          // 0x0020(0x0010) (Edit, ZeroConstructor)
+	FString                                            CategoryName;                                             // 0x0000(0x0010) (Edit, ZeroConstructor)
+	TArray<FMemoryVisualiserStat>                      CategoryStats;                                            // 0x0010(0x0010) (Edit, ZeroConstructor)
+	TArray<FMemoryVisualiserClass>                     CategoryClasses;                                          // 0x0020(0x0010) (Edit, ZeroConstructor)
 	bool                                               CollectOnServer;                                          // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
 	float                                              XboxOneBudgetMB;                                          // 0x0034(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -63,14 +63,14 @@ struct FMemoryVisualiserCategory
 // 0x0010
 struct FStaticMeshComponentList
 {
-	TArray<class UStaticMeshComponent*>                Components;                                               // 0x0000(0x0010) (BlueprintVisible, ExportObject, ZeroConstructor)
+	TArray<UStaticMeshComponent*>                      Components;                                               // 0x0000(0x0010) (BlueprintVisible, ExportObject, ZeroConstructor)
 };
 
 // ScriptStruct RareEngine.StaticMeshActorList
 // 0x0010
 struct FStaticMeshActorList
 {
-	TArray<class AStaticMeshActor*>                    Actors;                                                   // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
+	TArray<AStaticMeshActor*>                          Actors;                                                   // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct RareEngine.MemoryCommonData

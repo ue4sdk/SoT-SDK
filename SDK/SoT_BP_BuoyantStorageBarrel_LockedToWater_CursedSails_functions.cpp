@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BuoyantStorageBarrel_LockedToWater_CursedSails_classes.hpp"
+#include "SoT_BP_BuoyantStorageBarrel_LockedToWater_CursedSails_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ unsigned char ABP_BuoyantStorageBarrel_LockedToWater_CursedSails_C::GetPxActorCa
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BuoyantStorageBarrel_LockedToWater_CursedSails.BP_BuoyantStorageBarrel_LockedToWater_CursedSails_C.GetPxActorCapacityForPhysXAggregate"));
 
-	struct
-	{
-		unsigned char                  ReturnValue;
-	} params;
-
+	ABP_BuoyantStorageBarrel_LockedToWater_CursedSails_C_GetPxActorCapacityForPhysXAggregate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,10 +36,7 @@ void ABP_BuoyantStorageBarrel_LockedToWater_CursedSails_C::UserConstructionScrip
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BuoyantStorageBarrel_LockedToWater_CursedSails.BP_BuoyantStorageBarrel_LockedToWater_CursedSails_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_BuoyantStorageBarrel_LockedToWater_CursedSails_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -36,12 +36,12 @@ public:
 class UOceanCrawlerAudioParamsDataAsset : public UDataAsset
 {
 public:
-	class UWwiseObjectPoolWrapper*                     WwiseObjectPoolWrapper;                                   // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FOceanCrawlerAudioKeyPair>           AudioKeyPairs;                                            // 0x0030(0x0010) (Edit, ZeroConstructor)
-	struct FWeightedProbabilityRangeOfRanges           BuffThankDelay;                                           // 0x0040(0x0030) (Edit)
-	struct FOceanCrawlerBuffAudioSettings              CrabBuffAudioSettings;                                    // 0x0070(0x0010) (Edit)
-	struct FOceanCrawlerBuffAudioSettings              EelBuffAudioSettings;                                     // 0x0080(0x0010) (Edit)
-	struct FOceanCrawlerBuffAudioSettings              HermitBuffAudioSettings;                                  // 0x0090(0x0010) (Edit)
+	UWwiseObjectPoolWrapper*                           WwiseObjectPoolWrapper;                                   // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<FOceanCrawlerAudioKeyPair>                  AudioKeyPairs;                                            // 0x0030(0x0010) (Edit, ZeroConstructor)
+	FWeightedProbabilityRangeOfRanges                  BuffThankDelay;                                           // 0x0040(0x0030) (Edit)
+	FOceanCrawlerBuffAudioSettings                     CrabBuffAudioSettings;                                    // 0x0070(0x0010) (Edit)
+	FOceanCrawlerBuffAudioSettings                     EelBuffAudioSettings;                                     // 0x0080(0x0010) (Edit)
+	FOceanCrawlerBuffAudioSettings                     HermitBuffAudioSettings;                                  // 0x0090(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -57,8 +57,8 @@ public:
 class UOceanCrawlerAudioBroadcaster : public UActorComponent
 {
 public:
-	class UOceanCrawlerAudioParamsDataAsset*           AudioDataAsset;                                           // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      CachedOwner;                                              // 0x00D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	UOceanCrawlerAudioParamsDataAsset*                 AudioDataAsset;                                           // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	AActor*                                            CachedOwner;                                              // 0x00D0(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xC8];                                      // 0x00D8(0x00C8) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -68,7 +68,7 @@ public:
 	}
 
 
-	void Multicast_PlayBuffAudio(const struct FEventOceanCrawlerAIBuffAudioRequest& InRequest);
+	void Multicast_PlayBuffAudio(const FEventOceanCrawlerAIBuffAudioRequest& InRequest);
 	void Multicast_PlayAudio(TEnumAsByte<EOceanCrawlerAbilityAudioKey> InAudioKey, float InAudioDelay);
 };
 

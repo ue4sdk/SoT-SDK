@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_EmissaryEncounteredKraken_classes.hpp"
+#include "SoT_BP_Prompt_EmissaryEncounteredKraken_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.OnEmissaryEncounteredKraken
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryEncounteredKrakenEvent NewParam                       (Parm)
+// FEmissaryEncounteredKrakenEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryEncounteredKraken_C::OnEmissaryEncounteredKraken(const struct FEmissaryEncounteredKrakenEvent& NewParam)
+void UBP_Prompt_EmissaryEncounteredKraken_C::OnEmissaryEncounteredKraken(const FEmissaryEncounteredKrakenEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.OnEmissaryEncounteredKraken"));
 
-	struct
-	{
-		struct FEmissaryEncounteredKrakenEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredKraken_C_OnEmissaryEncounteredKraken_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UBP_Prompt_EmissaryEncounteredKraken_C::OnEmissaryEncounteredKraken(const s
 // Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.EmissaryEncounteredKraken
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryEncounteredKrakenEvent NewParam                       (Parm)
+// FEmissaryEncounteredKrakenEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryEncounteredKraken_C::EmissaryEncounteredKraken(const struct FEmissaryEncounteredKrakenEvent& NewParam)
+void UBP_Prompt_EmissaryEncounteredKraken_C::EmissaryEncounteredKraken(const FEmissaryEncounteredKrakenEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.EmissaryEncounteredKraken"));
 
-	struct
-	{
-		struct FEmissaryEncounteredKrakenEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredKraken_C_EmissaryEncounteredKraken_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -59,10 +51,7 @@ void UBP_Prompt_EmissaryEncounteredKraken_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredKraken_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -75,10 +64,7 @@ void UBP_Prompt_EmissaryEncounteredKraken_C::RegisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.RegisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredKraken_C_RegisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -91,10 +77,7 @@ void UBP_Prompt_EmissaryEncounteredKraken_C::UnregisterOtherEvents_Implementable
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredKraken_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,11 +92,7 @@ void UBP_Prompt_EmissaryEncounteredKraken_C::ExecuteUbergraph_BP_Prompt_Emissary
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredKraken.BP_Prompt_EmissaryEncounteredKraken_C.ExecuteUbergraph_BP_Prompt_EmissaryEncounteredKraken"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredKraken_C_ExecuteUbergraph_BP_Prompt_EmissaryEncounteredKraken_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

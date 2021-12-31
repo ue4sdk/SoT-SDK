@@ -1,10 +1,10 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_CharacterSelect_classes.hpp"
+#include "SoT_BP_Anim_CharacterSelect_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_Anim_CharacterSelect_C::BlueprintInitializeAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_CharacterSelect.BP_Anim_CharacterSelect_C.BlueprintInitializeAnimation"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_CharacterSelect_C_BlueprintInitializeAnimation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UBP_Anim_CharacterSelect_C::AnimNotify_SelectedCameraZoom()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_CharacterSelect.BP_Anim_CharacterSelect_C.AnimNotify_SelectedCameraZoom"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_CharacterSelect_C_AnimNotify_SelectedCameraZoom_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void UBP_Anim_CharacterSelect_C::AnimNotify_BeginFade()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_CharacterSelect.BP_Anim_CharacterSelect_C.AnimNotify_BeginFade"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_CharacterSelect_C_AnimNotify_BeginFade_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -69,11 +60,7 @@ void UBP_Anim_CharacterSelect_C::ExecuteUbergraph_BP_Anim_CharacterSelect(int En
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_CharacterSelect.BP_Anim_CharacterSelect_C.ExecuteUbergraph_BP_Anim_CharacterSelect"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Anim_CharacterSelect_C_ExecuteUbergraph_BP_Anim_CharacterSelect_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

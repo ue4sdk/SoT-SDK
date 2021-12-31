@@ -20,7 +20,7 @@ namespace SDK
 // 0x0020
 struct FKey
 {
-	struct FName                                       KeyName;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              KeyName;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0008(0x0018) MISSED OFFSET
 
     inline FKey() : KeyName(), UnknownData00{} {}

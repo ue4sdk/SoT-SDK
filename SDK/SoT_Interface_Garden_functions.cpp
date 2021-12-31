@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Interface_Garden_classes.hpp"
+#include "SoT_Interface_Garden_parameters.hpp"
 
 namespace SDK
 {
@@ -23,13 +23,7 @@ void UInterface_Garden_C::Set_Garden_Parameters(float Radius, int Int, bool* Ins
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interface_Garden.Interface_Garden_C.Set Garden Parameters"));
 
-	struct
-	{
-		float                          Radius;
-		int                            Int;
-		bool                           Instances_Created;
-	} params;
-
+	UInterface_Garden_C_Set_Garden_Parameters_Params params;
 	params.Radius = Radius;
 	params.Int = Int;
 

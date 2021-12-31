@@ -21,7 +21,7 @@ namespace SDK
 // 0x0008
 struct FCaptureProtocolID
 {
-	struct FName                                       Identifier;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
+	FName                                              Identifier;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, EditConst, IsPlainOldData)
 };
 
 // ScriptStruct MovieSceneCapture.CaptureResolution
@@ -36,11 +36,11 @@ struct FCaptureResolution
 // 0x0050
 struct FMovieSceneCaptureSettings
 {
-	struct FDirectoryPath                              OutputDirectory;                                          // 0x0000(0x0010) (Edit, Config)
+	FDirectoryPath                                     OutputDirectory;                                          // 0x0000(0x0010) (Edit, Config)
 	bool                                               bCreateTemporaryCopiesOfLevels;                           // 0x0010(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
-	class UClass*                                      GameModeOverride;                                         // 0x0018(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class FString                                      OutputFormat;                                             // 0x0020(0x0010) (Edit, ZeroConstructor, Config)
+	UClass*                                            GameModeOverride;                                         // 0x0018(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FString                                            OutputFormat;                                             // 0x0020(0x0010) (Edit, ZeroConstructor, Config)
 	bool                                               bOverwriteExisting;                                       // 0x0030(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bUseRelativeFrameNumbers;                                 // 0x0031(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x2];                                       // 0x0032(0x0002) MISSED OFFSET
@@ -48,7 +48,7 @@ struct FMovieSceneCaptureSettings
 	unsigned char                                      ZeroPadFrameNumbers;                                      // 0x0038(0x0001) (ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0039(0x0003) MISSED OFFSET
 	int                                                FrameRate;                                                // 0x003C(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FCaptureResolution                          Resolution;                                               // 0x0040(0x0008) (Edit, Config)
+	FCaptureResolution                                 Resolution;                                               // 0x0040(0x0008) (Edit, Config)
 	bool                                               bEnableTextureStreaming;                                  // 0x0048(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bCinematicEngineScalability;                              // 0x0049(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	bool                                               bCinematicMode;                                           // 0x004A(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
@@ -63,7 +63,7 @@ struct FMovieSceneCaptureSettings
 // 0x0010
 struct FCompositionGraphCapturePasses
 {
-	TArray<class FString>                              Value;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
+	TArray<FString>                                    Value;                                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
 };
 
 }

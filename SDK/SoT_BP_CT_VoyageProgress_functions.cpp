@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CT_VoyageProgress_classes.hpp"
+#include "SoT_BP_CT_VoyageProgress_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void UBP_CT_VoyageProgress_C::IsPurchaseable(bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsPurchaseable"));
 
-	struct
-	{
-		bool                           Result;
-	} params;
-
+	UBP_CT_VoyageProgress_C_IsPurchaseable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -43,11 +39,7 @@ void UBP_CT_VoyageProgress_C::SetProgress(TEnumAsByte<ETutorialVoyageInternalSta
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.SetProgress"));
 
-	struct
-	{
-		TEnumAsByte<ETutorialVoyageInternalState> NewProgress;
-	} params;
-
+	UBP_CT_VoyageProgress_C_SetProgress_Params params;
 	params.NewProgress = NewProgress;
 
 	UObject::ProcessEvent(fn, &params);
@@ -64,12 +56,7 @@ void UBP_CT_VoyageProgress_C::IsCurrently(TEnumAsByte<ETutorialVoyageInternalSta
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsCurrently"));
 
-	struct
-	{
-		TEnumAsByte<ETutorialVoyageInternalState> ProgressState;
-		bool                           Result;
-	} params;
-
+	UBP_CT_VoyageProgress_C_IsCurrently_Params params;
 	params.ProgressState = ProgressState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -89,12 +76,7 @@ void UBP_CT_VoyageProgress_C::IsPast(TEnumAsByte<ETutorialVoyageInternalState> P
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.IsPast"));
 
-	struct
-	{
-		TEnumAsByte<ETutorialVoyageInternalState> ProgressState;
-		bool                           Result;
-	} params;
-
+	UBP_CT_VoyageProgress_C_IsPast_Params params;
 	params.ProgressState = ProgressState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -111,10 +93,7 @@ void UBP_CT_VoyageProgress_C::PopulateExistingState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.PopulateExistingState"));
 
-	struct
-	{
-	} params;
-
+	UBP_CT_VoyageProgress_C_PopulateExistingState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -129,11 +108,7 @@ void UBP_CT_VoyageProgress_C::Initialise(bool Disabled)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.Initialise"));
 
-	struct
-	{
-		bool                           Disabled;
-	} params;
-
+	UBP_CT_VoyageProgress_C_Initialise_Params params;
 	params.Disabled = Disabled;
 
 	UObject::ProcessEvent(fn, &params);
@@ -149,11 +124,7 @@ void UBP_CT_VoyageProgress_C::ExecuteUbergraph_BP_CT_VoyageProgress(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CT_VoyageProgress.BP_CT_VoyageProgress_C.ExecuteUbergraph_BP_CT_VoyageProgress"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_CT_VoyageProgress_C_ExecuteUbergraph_BP_CT_VoyageProgress_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

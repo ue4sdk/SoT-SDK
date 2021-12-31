@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Orderofsouls_TallTales_classes.hpp"
+#include "SoT_BP_Orderofsouls_TallTales_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Orderofsouls_TallTales_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Orderofsouls_TallTales.BP_Orderofsouls_TallTales_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Orderofsouls_TallTales_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

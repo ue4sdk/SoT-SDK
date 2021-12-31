@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_riddle_trigger_classes.hpp"
+#include "SoT_BP_riddle_trigger_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_riddle_trigger_C::Destroy()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_riddle_trigger.BP_riddle_trigger_C.Destroy"));
 
-	struct
-	{
-	} params;
-
+	ABP_riddle_trigger_C_Destroy_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_riddle_trigger_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_riddle_trigger.BP_riddle_trigger_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_riddle_trigger_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_EmissaryLevel_classes.hpp"
+#include "SoT_EmissaryLevel_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void UEmissaryActiveTableVisualiserComponent::OnControllerEndPlay(TEnumAsByte<EE
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function EmissaryLevel.EmissaryActiveTableVisualiserComponent.OnControllerEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	UEmissaryActiveTableVisualiserComponent_OnControllerEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -39,10 +35,7 @@ void UEmissaryParticipantComponent::OnRep_EmissaryLevel()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function EmissaryLevel.EmissaryParticipantComponent.OnRep_EmissaryLevel"));
 
-	struct
-	{
-	} params;
-
+	UEmissaryParticipantComponent_OnRep_EmissaryLevel_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,17 +44,13 @@ void UEmissaryParticipantComponent::OnRep_EmissaryLevel()
 // Function EmissaryLevel.EmissaryParticipantComponent.OnRep_AffiliatedCompany
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// struct FName                   PreviousId                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FName                          PreviousId                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UEmissaryParticipantComponent::OnRep_AffiliatedCompany(const struct FName& PreviousId)
+void UEmissaryParticipantComponent::OnRep_AffiliatedCompany(const FName& PreviousId)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function EmissaryLevel.EmissaryParticipantComponent.OnRep_AffiliatedCompany"));
 
-	struct
-	{
-		struct FName                   PreviousId;
-	} params;
-
+	UEmissaryParticipantComponent_OnRep_AffiliatedCompany_Params params;
 	params.PreviousId = PreviousId;
 
 	UObject::ProcessEvent(fn, &params);
@@ -75,26 +64,20 @@ void UEmissaryShipAffiliationTrackerComponent::OnRep_EmissaryCount()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function EmissaryLevel.EmissaryShipAffiliationTrackerComponent.OnRep_EmissaryCount"));
 
-	struct
-	{
-	} params;
-
+	UEmissaryShipAffiliationTrackerComponent_OnRep_EmissaryCount_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
 
 
-// Function EmissaryLevel.EmissaryVotingService.OnRep_Votes
-// (Final, RequiredAPI, Native, Private)
+// Function EmissaryLevel.EmissaryVoyageInlineVoteConsumerBase.OnRep_Votes
+// (Final, Native, Private)
 
-void AEmissaryVotingService::OnRep_Votes()
+void UEmissaryVoyageInlineVoteConsumerBase::OnRep_Votes()
 {
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function EmissaryLevel.EmissaryVotingService.OnRep_Votes"));
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function EmissaryLevel.EmissaryVoyageInlineVoteConsumerBase.OnRep_Votes"));
 
-	struct
-	{
-	} params;
-
+	UEmissaryVoyageInlineVoteConsumerBase_OnRep_Votes_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

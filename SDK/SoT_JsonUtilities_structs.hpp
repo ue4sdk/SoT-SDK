@@ -28,8 +28,8 @@ struct FJsonObjectWrapper
 // 0x0070
 struct FTestTextObject
 {
-	struct FText                                       TestText;                                                 // 0x0000(0x0038)
-	struct FText                                       TestTextExport;                                           // 0x0038(0x0038)
+	FText                                              TestText;                                                 // 0x0000(0x0038)
+	FText                                              TestTextExport;                                           // 0x0038(0x0038)
 };
 
 // ScriptStruct JsonUtilities.TestFloatObject
@@ -51,14 +51,14 @@ struct FTestEnumObject
 // 0x0008
 struct FTestMessageTimespan
 {
-	struct FTimespan                                   Timespan;                                                 // 0x0000(0x0008) (ZeroConstructor)
+	FTimespan                                          Timespan;                                                 // 0x0000(0x0008) (ZeroConstructor)
 };
 
 // ScriptStruct JsonUtilities.TestMessageDateTime
 // 0x0008
 struct FTestMessageDateTime
 {
-	struct FDateTime                                   DateTime;                                                 // 0x0000(0x0008) (ZeroConstructor)
+	FDateTime                                          DateTime;                                                 // 0x0000(0x0008) (ZeroConstructor)
 };
 
 // ScriptStruct JsonUtilities.TestSerializationObject
@@ -68,15 +68,15 @@ struct FTestSerializationObject
 	bool                                               TestBool;                                                 // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
 	int                                                TestInt;                                                  // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
-	class FString                                      TestString;                                               // 0x0008(0x0010) (ZeroConstructor)
-	struct FGuid                                       TestGuid;                                                 // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData)
+	FString                                            TestString;                                               // 0x0008(0x0010) (ZeroConstructor)
+	FGuid                                              TestGuid;                                                 // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct JsonUtilities.TestSerializationNestedObject
 // 0x0028
 struct FTestSerializationNestedObject
 {
-	struct FTestSerializationObject                    NestedObject;                                             // 0x0000(0x0028)
+	FTestSerializationObject                           NestedObject;                                             // 0x0000(0x0028)
 };
 
 // ScriptStruct JsonUtilities.TestMessageUInt64
@@ -97,28 +97,28 @@ struct FTestMessageInt64
 // 0x0050
 struct FTestUStructMapSerializationObject
 {
-	TMap<class FString, struct FTestSerializationObject> StructMap;                                                // 0x0000(0x0050) (ZeroConstructor)
+	TMap<FString, FTestSerializationObject>            StructMap;                                                // 0x0000(0x0050) (ZeroConstructor)
 };
 
 // ScriptStruct JsonUtilities.TestInt32MapSerializationObject
 // 0x0050
 struct FTestInt32MapSerializationObject
 {
-	TMap<class FString, int>                           Int32Map;                                                 // 0x0000(0x0050) (ZeroConstructor)
+	TMap<FString, int>                                 Int32Map;                                                 // 0x0000(0x0050) (ZeroConstructor)
 };
 
 // ScriptStruct JsonUtilities.TestInvalidStringMapSerializationObject
 // 0x0050
 struct FTestInvalidStringMapSerializationObject
 {
-	TMap<int, class FString>                           StringMap;                                                // 0x0000(0x0050) (ZeroConstructor)
+	TMap<int, FString>                                 StringMap;                                                // 0x0000(0x0050) (ZeroConstructor)
 };
 
 // ScriptStruct JsonUtilities.TestStringMapSerializationObject
 // 0x0050
 struct FTestStringMapSerializationObject
 {
-	TMap<class FString, class FString>                 StringMap;                                                // 0x0000(0x0050) (ZeroConstructor)
+	TMap<FString, FString>                             StringMap;                                                // 0x0000(0x0050) (ZeroConstructor)
 };
 
 }

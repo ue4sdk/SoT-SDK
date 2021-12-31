@@ -19,7 +19,7 @@ namespace SDK
 // 0x0010
 struct FADS_ObjectsNative
 {
-	TArray<struct FAthenaAnimationLoadObjectsWrapper>  Object_145_5145F88C4BCB8F97FE9B0FAE5E4D16F6;              // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<FAthenaAnimationLoadObjectsWrapper>         Object_145_5145F88C4BCB8F97FE9B0FAE5E4D16F6;              // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

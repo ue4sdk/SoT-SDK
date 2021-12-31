@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Music_classes.hpp"
+#include "SoT_Music_parameters.hpp"
 
 namespace SDK
 {
@@ -15,19 +15,14 @@ namespace SDK
 // Function Music.MusicZoneInterface.CanPlayForPlayer
 // (RequiredAPI, Native, Event, Public, BlueprintEvent, Const)
 // Parameters:
-// class AActor*                  Player                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Player                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UMusicZoneInterface::CanPlayForPlayer(class AActor* Player)
+bool UMusicZoneInterface::CanPlayForPlayer(AActor* Player)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneInterface.CanPlayForPlayer"));
 
-	struct
-	{
-		class AActor*                  Player;
-		bool                           ReturnValue;
-	} params;
-
+	UMusicZoneInterface_CanPlayForPlayer_Params params;
 	params.Player = Player;
 
 	UObject::ProcessEvent(fn, &params);
@@ -39,17 +34,13 @@ bool UMusicZoneInterface::CanPlayForPlayer(class AActor* Player)
 // Function Music.MusicZoneComponent.GetEmitter
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// struct FWwiseEmitter           ReturnValue                    (Parm, OutParm, ReturnParm)
+// FWwiseEmitter                  ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FWwiseEmitter UMusicZoneComponent::GetEmitter()
+FWwiseEmitter UMusicZoneComponent::GetEmitter()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.GetEmitter"));
 
-	struct
-	{
-		struct FWwiseEmitter           ReturnValue;
-	} params;
-
+	UMusicZoneComponent_GetEmitter_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -64,10 +55,7 @@ void UMusicZoneComponent::DisableZone()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.DisableZone"));
 
-	struct
-	{
-	} params;
-
+	UMusicZoneComponent_DisableZone_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -80,10 +68,7 @@ void UMusicZoneComponent::Client_StopMusicAndDisableZone()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.Client_StopMusicAndDisableZone"));
 
-	struct
-	{
-	} params;
-
+	UMusicZoneComponent_Client_StopMusicAndDisableZone_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -98,11 +83,7 @@ void UMusicZoneComponent::Client_PlayOneShot(int Index)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.Client_PlayOneShot"));
 
-	struct
-	{
-		int                            Index;
-	} params;
-
+	UMusicZoneComponent_Client_PlayOneShot_Params params;
 	params.Index = Index;
 
 	UObject::ProcessEvent(fn, &params);
@@ -116,10 +97,7 @@ void UMusicZoneComponent::ActivateZone()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.MusicZoneComponent.ActivateZone"));
 
-	struct
-	{
-	} params;
-
+	UMusicZoneComponent_ActivateZone_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -132,10 +110,7 @@ void UAISpawnerMusicZoneComponent::OnRep_SpawnerState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Music.AISpawnerMusicZoneComponent.OnRep_SpawnerState"));
 
-	struct
-	{
-	} params;
-
+	UAISpawnerMusicZoneComponent_OnRep_SpawnerState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

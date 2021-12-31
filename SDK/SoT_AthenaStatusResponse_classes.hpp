@@ -19,7 +19,7 @@ namespace SDK
 class UStatusResponseApplyOneShotStatus : public UStatusResponse
 {
 public:
-	struct FStatus                                     StatusToApply;                                            // 0x0030(0x0018) (Edit, DisableEditOnInstance)
+	FStatus                                            StatusToApply;                                            // 0x0030(0x0018) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -35,7 +35,7 @@ public:
 class UStatusResponseApplyPersistentStatus : public UStatusResponse
 {
 public:
-	struct FStatus                                     StatusToApply;                                            // 0x0030(0x0018) (Edit, DisableEditOnInstance)
+	FStatus                                            StatusToApply;                                            // 0x0030(0x0018) (Edit, DisableEditOnInstance)
 	float                                              DurationMultiplier;                                       // 0x0048(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
 
@@ -53,7 +53,7 @@ public:
 class UStatusResponseCancelStatus : public UStatusResponse
 {
 public:
-	TArray<class UClass*>                              Status;                                                   // 0x0030(0x0010) (Edit, ZeroConstructor)
+	TArray<UClass*>                                    Status;                                                   // 0x0030(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -101,8 +101,8 @@ public:
 class UStatusResponseReportNoiseEvent : public UStatusResponse
 {
 public:
-	class UClass*                                      NoiseInstigator;                                          // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       NoiseTag;                                                 // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            NoiseInstigator;                                          // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              NoiseTag;                                                 // 0x0038(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              NoiseRange;                                               // 0x0040(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              NoiseLoudness;                                            // 0x0044(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               NoiseMultipleTicks;                                       // 0x0048(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -124,7 +124,7 @@ public:
 class UStatusResponseSetScalarParamOnCharacter : public UStatusResponse
 {
 public:
-	TArray<struct FScalarParamInfo>                    ParamsToChange;                                           // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<FScalarParamInfo>                           ParamsToChange;                                           // 0x0030(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -140,7 +140,7 @@ public:
 class UStatusResponseSuspendStatus : public UStatusResponse
 {
 public:
-	TArray<class UClass*>                              Status;                                                   // 0x0030(0x0010) (Edit, ZeroConstructor)
+	TArray<UClass*>                                    Status;                                                   // 0x0030(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

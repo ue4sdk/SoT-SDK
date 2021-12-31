@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_OnlineSubsystem_classes.hpp"
+#include "SoT_OnlineSubsystem_parameters.hpp"
 
 namespace SDK
 {
@@ -15,19 +15,14 @@ namespace SDK
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class FString                  Match                          (Parm, ZeroConstructor)
+// FString                        Match                          (Parm, ZeroConstructor)
 // bool                           bDidBecomeActive               (Parm, ZeroConstructor, IsPlainOldData)
 
-void UTurnBasedMatchInterface::OnMatchReceivedTurn(const class FString& Match, bool bDidBecomeActive)
+void UTurnBasedMatchInterface::OnMatchReceivedTurn(const FString& Match, bool bDidBecomeActive)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchReceivedTurn"));
 
-	struct
-	{
-		class FString                  Match;
-		bool                           bDidBecomeActive;
-	} params;
-
+	UTurnBasedMatchInterface_OnMatchReceivedTurn_Params params;
 	params.Match = Match;
 	params.bDidBecomeActive = bDidBecomeActive;
 
@@ -38,17 +33,13 @@ void UTurnBasedMatchInterface::OnMatchReceivedTurn(const class FString& Match, b
 // Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class FString                  Match                          (Parm, ZeroConstructor)
+// FString                        Match                          (Parm, ZeroConstructor)
 
-void UTurnBasedMatchInterface::OnMatchEnded(const class FString& Match)
+void UTurnBasedMatchInterface::OnMatchEnded(const FString& Match)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function OnlineSubsystem.TurnBasedMatchInterface.OnMatchEnded"));
 
-	struct
-	{
-		class FString                  Match;
-	} params;
-
+	UTurnBasedMatchInterface_OnMatchEnded_Params params;
 	params.Match = Match;
 
 	UObject::ProcessEvent(fn, &params);

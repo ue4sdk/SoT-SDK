@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_WwiseAudio_classes.hpp"
+#include "SoT_WwiseAudio_parameters.hpp"
 
 namespace SDK
 {
@@ -15,23 +15,16 @@ namespace SDK
 // Function WwiseAudio.WwiseEvent.IsAudible
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 SoundPosition                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 ListenerPos                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        SoundPosition                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        ListenerPos                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          AttenuationScaler              (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UWwiseEvent::IsAudible(const struct FVector& SoundPosition, const struct FVector& ListenerPos, float AttenuationScaler)
+bool UWwiseEvent::IsAudible(const FVector& SoundPosition, const FVector& ListenerPos, float AttenuationScaler)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.IsAudible"));
 
-	struct
-	{
-		struct FVector                 SoundPosition;
-		struct FVector                 ListenerPos;
-		float                          AttenuationScaler;
-		bool                           ReturnValue;
-	} params;
-
+	UWwiseEvent_IsAudible_Params params;
 	params.SoundPosition = SoundPosition;
 	params.ListenerPos = ListenerPos;
 	params.AttenuationScaler = AttenuationScaler;
@@ -51,11 +44,7 @@ float UWwiseEvent::GetMaxAttenuation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.GetMaxAttenuation"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UWwiseEvent_GetMaxAttenuation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -72,11 +61,7 @@ TEnumAsByte<EWwiseEventDurationType> UWwiseEvent::GetDurationType()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.GetDurationType"));
 
-	struct
-	{
-		TEnumAsByte<EWwiseEventDurationType> ReturnValue;
-	} params;
-
+	UWwiseEvent_GetDurationType_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -93,11 +78,7 @@ float UWwiseEvent::GetDurationMin()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.GetDurationMin"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UWwiseEvent_GetDurationMin_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -114,11 +95,7 @@ float UWwiseEvent::GetDurationMax()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WwiseAudio.WwiseEvent.GetDurationMax"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UWwiseEvent_GetDurationMax_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 

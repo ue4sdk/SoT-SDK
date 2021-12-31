@@ -19,8 +19,8 @@ namespace SDK
 class ABarrelsOfPlentyDebugSpawnLocation : public AActor
 {
 public:
-	TArray<struct FBarrelsOfPlentyDebugLocationEntry>  Objects;                                                  // 0x03D0(0x0010) (Net, ZeroConstructor)
-	struct FVector                                     SpawnCentre;                                              // 0x03E0(0x000C) (Net, ZeroConstructor, IsPlainOldData)
+	TArray<FBarrelsOfPlentyDebugLocationEntry>         Objects;                                                  // 0x03D0(0x0010) (Net, ZeroConstructor)
+	FVector                                            SpawnCentre;                                              // 0x03E0(0x000C) (Net, ZeroConstructor, IsPlainOldData)
 	float                                              Radius;                                                   // 0x03EC(0x0004) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
@@ -37,9 +37,9 @@ public:
 class ABarrelsOfPlentySpawnProxy : public AActor
 {
 public:
-	class AShip*                                       Ship;                                                     // 0x03D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	AShip*                                             Ship;                                                     // 0x03D0(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x18];                                      // 0x03D8(0x0018) MISSED OFFSET
-	class USceneComponent*                             SceneComponent;                                           // 0x03F0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	USceneComponent*                                   SceneComponent;                                           // 0x03F0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -51,11 +51,10 @@ public:
 
 
 // Class BarrelsOfPlenty.SpawnBarrelsOfPlentyStep
-// 0x0008 (0x0070 - 0x0068)
+// 0x0000 (0x0090 - 0x0090)
 class USpawnBarrelsOfPlentyStep : public UTaleQuestStep
 {
 public:
-	class USpawnBarrelsOfPlentyStepDesc*               Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -67,11 +66,11 @@ public:
 
 
 // Class BarrelsOfPlenty.SpawnBarrelsOfPlentyStepDesc
-// 0x0010 (0x0040 - 0x0030)
+// 0x0010 (0x0090 - 0x0080)
 class USpawnBarrelsOfPlentyStepDesc : public UTaleQuestStepDesc
 {
 public:
-	struct FQuestVariableVector                        LocatorVar;                                               // 0x0030(0x0010) (Edit)
+	FQuestVariableVector                               LocatorVar;                                               // 0x0080(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{

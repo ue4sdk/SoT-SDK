@@ -19,8 +19,8 @@ namespace SDK
 class ABP_RotatableSignalCloud_C : public AGameplayEventSignal_StaticMesh
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class URotateMeshToLocalPlayerComponent*           RotateMeshToLocalPlayer;                                  // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x04B0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	URotateMeshToLocalPlayerComponent*                 RotateMeshToLocalPlayer;                                  // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

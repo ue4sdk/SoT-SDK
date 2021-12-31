@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RowboatSeat.BP_RowboatSeat_C
-// 0x0000 (0x0638 - 0x0638)
+// 0x0000 (0x0678 - 0x0678)
 class ABP_RowboatSeat_C : public ASeat
 {
 public:

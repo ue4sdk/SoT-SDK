@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_GlitterBeard_classes.hpp"
+#include "SoT_GlitterBeard_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function GlitterBeard.GlitterBeardFinaleCoordinatorComponent.OnRep_ReplicationState
 // (Final, RequiredAPI, Native, Private, HasOutParms)
 // Parameters:
-// struct FFinaleReplicationState OldState                       (ConstParm, Parm, OutParm, ReferenceParm)
+// FFinaleReplicationState        OldState                       (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UGlitterBeardFinaleCoordinatorComponent::OnRep_ReplicationState(const struct FFinaleReplicationState& OldState)
+void UGlitterBeardFinaleCoordinatorComponent::OnRep_ReplicationState(const FFinaleReplicationState& OldState)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GlitterBeard.GlitterBeardFinaleCoordinatorComponent.OnRep_ReplicationState"));
 
-	struct
-	{
-		struct FFinaleReplicationState OldState;
-	} params;
-
+	UGlitterBeardFinaleCoordinatorComponent_OnRep_ReplicationState_Params params;
 	params.OldState = OldState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -39,10 +35,7 @@ void AGlitterBeardTree::StopVocals()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GlitterBeard.GlitterBeardTree.StopVocals"));
 
-	struct
-	{
-	} params;
-
+	AGlitterBeardTree_StopVocals_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -57,11 +50,7 @@ bool AGlitterBeardTree::StopReaction()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GlitterBeard.GlitterBeardTree.StopReaction"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	AGlitterBeardTree_StopReaction_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,10 +65,7 @@ void AGlitterBeardTree::StartVocals()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GlitterBeard.GlitterBeardTree.StartVocals"));
 
-	struct
-	{
-	} params;
-
+	AGlitterBeardTree_StartVocals_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -94,11 +80,7 @@ bool AGlitterBeardTree::StartReaction()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GlitterBeard.GlitterBeardTree.StartReaction"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	AGlitterBeardTree_StartReaction_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -113,10 +95,7 @@ void AGlitterBeardTree::Reset_Impl()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GlitterBeard.GlitterBeardTree.Reset_Impl"));
 
-	struct
-	{
-	} params;
-
+	AGlitterBeardTree_Reset_Impl_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -131,11 +110,7 @@ void UGlitterBeardTreeVisualFeedbackComponent::OnRep_NextStateEvent(TArray<TEnum
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function GlitterBeard.GlitterBeardTreeVisualFeedbackComponent.OnRep_NextStateEvent"));
 
-	struct
-	{
-		TArray<TEnumAsByte<EGlitterbeardVFXState>> OldStates;
-	} params;
-
+	UGlitterBeardTreeVisualFeedbackComponent_OnRep_NextStateEvent_Params params;
 	params.OldStates = OldStates;
 
 	UObject::ProcessEvent(fn, &params);

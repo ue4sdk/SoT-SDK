@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Occlusion_classes.hpp"
+#include "SoT_Occlusion_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function Occlusion.OcclusionService.OnPrimaryActorEndPlay
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InActor                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UOcclusionService::OnPrimaryActorEndPlay(class AActor* InActor)
+void UOcclusionService::OnPrimaryActorEndPlay(AActor* InActor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Occlusion.OcclusionService.OnPrimaryActorEndPlay"));
 
-	struct
-	{
-		class AActor*                  InActor;
-	} params;
-
+	UOcclusionService_OnPrimaryActorEndPlay_Params params;
 	params.InActor = InActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UOcclusionService::OnPrimaryActorEndPlay(class AActor* InActor)
 // Function Occlusion.OcclusionService.OnIgnoredActorEndPlay
 // (Final, Native, Private)
 // Parameters:
-// class AActor*                  InActor                        (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InActor                        (Parm, ZeroConstructor, IsPlainOldData)
 
-void UOcclusionService::OnIgnoredActorEndPlay(class AActor* InActor)
+void UOcclusionService::OnIgnoredActorEndPlay(AActor* InActor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Occlusion.OcclusionService.OnIgnoredActorEndPlay"));
 
-	struct
-	{
-		class AActor*                  InActor;
-	} params;
-
+	UOcclusionService_OnIgnoredActorEndPlay_Params params;
 	params.InActor = InActor;
 
 	UObject::ProcessEvent(fn, &params);

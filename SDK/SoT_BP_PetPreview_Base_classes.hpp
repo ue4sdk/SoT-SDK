@@ -19,7 +19,7 @@ namespace SDK
 class ABP_PetPreview_Base_C : public APreviewPet
 {
 public:
-	class UCosmeticItemAnimationComponent*             CosmeticItemAnimation;                                    // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UCosmeticItemAnimationComponent*                   CosmeticItemAnimation;                                    // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

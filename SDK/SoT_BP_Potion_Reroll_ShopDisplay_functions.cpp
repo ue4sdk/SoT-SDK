@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Potion_Reroll_ShopDisplay_classes.hpp"
+#include "SoT_BP_Potion_Reroll_ShopDisplay_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Potion_Reroll_ShopDisplay_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Potion_Reroll_ShopDisplay.BP_Potion_Reroll_ShopDisplay_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Potion_Reroll_ShopDisplay_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

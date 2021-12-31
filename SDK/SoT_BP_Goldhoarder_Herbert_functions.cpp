@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Goldhoarder_Herbert_classes.hpp"
+#include "SoT_BP_Goldhoarder_Herbert_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Goldhoarder_Herbert_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Goldhoarder_Herbert.BP_Goldhoarder_Herbert_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Goldhoarder_Herbert_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

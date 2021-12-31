@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_DynamicDensityFogVolume_classes.hpp"
+#include "SoT_BP_DynamicDensityFogVolume_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void ABP_DynamicDensityFogVolume_C::BlendParams(float BlendAmount)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.BlendParams"));
 
-	struct
-	{
-		float                          BlendAmount;
-	} params;
-
+	ABP_DynamicDensityFogVolume_C_BlendParams_Params params;
 	params.BlendAmount = BlendAmount;
 
 	UObject::ProcessEvent(fn, &params);
@@ -39,10 +35,7 @@ void ABP_DynamicDensityFogVolume_C::OnRep_NextState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.OnRep_NextState"));
 
-	struct
-	{
-	} params;
-
+	ABP_DynamicDensityFogVolume_C_OnRep_NextState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -55,10 +48,7 @@ void ABP_DynamicDensityFogVolume_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_DynamicDensityFogVolume_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -71,10 +61,7 @@ void ABP_DynamicDensityFogVolume_C::StateBlend__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.StateBlend__FinishedFunc"));
 
-	struct
-	{
-	} params;
-
+	ABP_DynamicDensityFogVolume_C_StateBlend__FinishedFunc_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -87,10 +74,7 @@ void ABP_DynamicDensityFogVolume_C::StateBlend__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.StateBlend__UpdateFunc"));
 
-	struct
-	{
-	} params;
-
+	ABP_DynamicDensityFogVolume_C_StateBlend__UpdateFunc_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -103,10 +87,7 @@ void ABP_DynamicDensityFogVolume_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_DynamicDensityFogVolume_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -115,21 +96,15 @@ void ABP_DynamicDensityFogVolume_C::ReceiveBeginPlay()
 // Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.UpdateCanvas
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UCanvas*                 Canvas                         (Parm, ZeroConstructor, IsPlainOldData)
+// UCanvas*                       Canvas                         (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Width                          (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Height                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_DynamicDensityFogVolume_C::UpdateCanvas(class UCanvas* Canvas, int Width, int Height)
+void ABP_DynamicDensityFogVolume_C::UpdateCanvas(UCanvas* Canvas, int Width, int Height)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.UpdateCanvas"));
 
-	struct
-	{
-		class UCanvas*                 Canvas;
-		int                            Width;
-		int                            Height;
-	} params;
-
+	ABP_DynamicDensityFogVolume_C_UpdateCanvas_Params params;
 	params.Canvas = Canvas;
 	params.Width = Width;
 	params.Height = Height;
@@ -147,11 +122,7 @@ void ABP_DynamicDensityFogVolume_C::ChangeState(int State)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.ChangeState"));
 
-	struct
-	{
-		int                            State;
-	} params;
-
+	ABP_DynamicDensityFogVolume_C_ChangeState_Params params;
 	params.State = State;
 
 	UObject::ProcessEvent(fn, &params);
@@ -165,10 +136,7 @@ void ABP_DynamicDensityFogVolume_C::SetState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.SetState"));
 
-	struct
-	{
-	} params;
-
+	ABP_DynamicDensityFogVolume_C_SetState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -183,11 +151,7 @@ void ABP_DynamicDensityFogVolume_C::ExecuteUbergraph_BP_DynamicDensityFogVolume(
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicDensityFogVolume.BP_DynamicDensityFogVolume_C.ExecuteUbergraph_BP_DynamicDensityFogVolume"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_DynamicDensityFogVolume_C_ExecuteUbergraph_BP_DynamicDensityFogVolume_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

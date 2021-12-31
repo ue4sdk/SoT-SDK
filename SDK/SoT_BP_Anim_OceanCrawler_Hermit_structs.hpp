@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Animation_classes.hpp"
 #include "SoT_OceanCrawlersAnimation_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_Animation_classes.hpp"
 
 namespace SDK
 {

@@ -19,7 +19,7 @@ namespace SDK
 // 0x0028
 struct FADS_WaterPumpNative
 {
-	struct FAthenaAnimationWaterPumpAnimData           WaterPump_5_C3B3D3934CED931AA0DDF4BFE901E9B0;             // 0x0000(0x0028) (Edit, BlueprintVisible)
+	FAthenaAnimationWaterPumpAnimData                  WaterPump_5_C3B3D3934CED931AA0DDF4BFE901E9B0;             // 0x0000(0x0028) (Edit, BlueprintVisible)
 };
 
 }

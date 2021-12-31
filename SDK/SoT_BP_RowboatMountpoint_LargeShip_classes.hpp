@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RowboatMountpoint_LargeShip.BP_RowboatMountpoint_LargeShip_C
-// 0x0000 (0x0658 - 0x0658)
+// 0x0000 (0x0660 - 0x0660)
 class ABP_RowboatMountpoint_LargeShip_C : public ABP_RowboatMountpoint_Base_C
 {
 public:

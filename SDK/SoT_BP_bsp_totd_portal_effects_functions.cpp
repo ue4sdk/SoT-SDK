@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_bsp_totd_portal_effects_classes.hpp"
+#include "SoT_BP_bsp_totd_portal_effects_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_bsp_totd_portal_effects_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_bsp_totd_portal_effects.BP_bsp_totd_portal_effects_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_bsp_totd_portal_effects_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_bsp_totd_portal_effects_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_bsp_totd_portal_effects.BP_bsp_totd_portal_effects_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_bsp_totd_portal_effects_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void ABP_bsp_totd_portal_effects_C::ExecuteUbergraph_BP_bsp_totd_portal_effects(
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_bsp_totd_portal_effects.BP_bsp_totd_portal_effects_C.ExecuteUbergraph_BP_bsp_totd_portal_effects"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_bsp_totd_portal_effects_C_ExecuteUbergraph_BP_bsp_totd_portal_effects_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

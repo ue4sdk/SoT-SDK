@@ -19,9 +19,9 @@ namespace SDK
 class Acmn_cma_tree_01_d_C : public ACoveredMeshActor
 {
 public:
-	class UAudioEventToComponentMapComponent*          AudioEventToComponentMap;                                 // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UNonVagueNonUniqueLandmarkComponent*         NonVagueNonUniqueLandmark;                                // 0x03F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        wsp_trunk_01_a;                                           // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UAudioEventToComponentMapComponent*                AudioEventToComponentMap;                                 // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UNonVagueNonUniqueLandmarkComponent*               NonVagueNonUniqueLandmark;                                // 0x03F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStaticMeshComponent*                              wsp_trunk_01_a;                                           // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

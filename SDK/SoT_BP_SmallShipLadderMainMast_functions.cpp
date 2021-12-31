@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SmallShipLadderMainMast_classes.hpp"
+#include "SoT_BP_SmallShipLadderMainMast_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.GetDockableInfo
 // (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FDockableInfo           ReturnValue                    (Parm, OutParm, ReturnParm)
+// FDockableInfo                  ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FDockableInfo ABP_SmallShipLadderMainMast_C::GetDockableInfo()
+FDockableInfo ABP_SmallShipLadderMainMast_C::GetDockableInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.GetDockableInfo"));
 
-	struct
-	{
-		struct FDockableInfo           ReturnValue;
-	} params;
-
+	ABP_SmallShipLadderMainMast_C_GetDockableInfo_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,19 +32,14 @@ struct FDockableInfo ABP_SmallShipLadderMainMast_C::GetDockableInfo()
 // Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.Setup Spline
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class USplineComponent*        Spline                         (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Positions                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// USplineComponent*              Spline                         (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<FVector>                Positions                      (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ABP_SmallShipLadderMainMast_C::Setup_Spline(class USplineComponent* Spline, TArray<struct FVector>* Positions)
+void ABP_SmallShipLadderMainMast_C::Setup_Spline(USplineComponent* Spline, TArray<FVector>* Positions)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.Setup Spline"));
 
-	struct
-	{
-		class USplineComponent*        Spline;
-		TArray<struct FVector>         Positions;
-	} params;
-
+	ABP_SmallShipLadderMainMast_C_Setup_Spline_Params params;
 	params.Spline = Spline;
 
 	UObject::ProcessEvent(fn, &params);
@@ -61,19 +52,14 @@ void ABP_SmallShipLadderMainMast_C::Setup_Spline(class USplineComponent* Spline,
 // Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.CanInteract
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ABP_SmallShipLadderMainMast_C::CanInteract(class AActor* InInteractor)
+bool ABP_SmallShipLadderMainMast_C::CanInteract(AActor* InInteractor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.CanInteract"));
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		bool                           ReturnValue;
-	} params;
-
+	ABP_SmallShipLadderMainMast_C_CanInteract_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -89,10 +75,7 @@ void ABP_SmallShipLadderMainMast_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShipLadderMainMast.BP_SmallShipLadderMainMast_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_SmallShipLadderMainMast_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -27,15 +27,16 @@ struct FGameServiceMap
 // 0x0018
 struct FGameServiceCoordinatorUnit
 {
-	class UObject*                                     Service;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UObject*                                           Service;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
 };
 
 // ScriptStruct GameService.GameServiceCoordinator
-// 0x0010
+// 0x0020
 struct FGameServiceCoordinator
 {
-	TArray<struct FGameServiceCoordinatorUnit>         Services;                                                 // 0x0000(0x0010) (ZeroConstructor)
+	TArray<FGameServiceCoordinatorUnit>                Services;                                                 // 0x0000(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x10];                                      // 0x0010(0x0010) MISSED OFFSET
 };
 
 }

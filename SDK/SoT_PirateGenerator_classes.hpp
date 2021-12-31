@@ -21,7 +21,7 @@ class UAnimationSwitchDataAsset : public UDataAsset
 public:
 	float                                              Threshold;                                                // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	TArray<struct FAnimationSwitchEntry>               Entries;                                                  // 0x0030(0x0010) (Edit, ZeroConstructor)
+	TArray<FAnimationSwitchEntry>                      Entries;                                                  // 0x0030(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -30,7 +30,7 @@ public:
 	}
 
 
-	class UClass* GetAnimSetIdForDesc(const struct FPirateDescription& Desc);
+	UClass* GetAnimSetIdForDesc(const FPirateDescription& Desc);
 };
 
 
@@ -47,10 +47,10 @@ public:
 	}
 
 
-	static void BakeCharacterMeshAsync(class UCharacterMeshBakeSpecification* CharacterMeshSpecification, const struct FScriptDelegate& AsyncResult);
-	static class USkeletalMesh* BakeCharacterMesh(class UCharacterMeshBakeSpecification* CharacterMeshSpecification);
-	void AsyncBakeResultDynamic__DelegateSignature(class USkeletalMesh* Mesh);
-	static void AppendCharacterBlendShapes(class UCharacterMeshBakeSpecification* CharacterMeshSpecification, TArray<struct FIPGBlendShape> BlendShapes);
+	static void BakeCharacterMeshAsync(UCharacterMeshBakeSpecification* CharacterMeshSpecification, const FScriptDelegate& AsyncResult);
+	static USkeletalMesh* BakeCharacterMesh(UCharacterMeshBakeSpecification* CharacterMeshSpecification);
+	void AsyncBakeResultDynamic__DelegateSignature(USkeletalMesh* Mesh);
+	static void AppendCharacterBlendShapes(UCharacterMeshBakeSpecification* CharacterMeshSpecification, TArray<FIPGBlendShape> BlendShapes);
 };
 
 
@@ -77,14 +77,14 @@ class UCharacterMeshBakeSpecification : public UObject
 public:
 	bool                                               StripTopLOD;                                              // 0x0028(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-	class USkeletalMesh*                               CharacterMesh;                                            // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class USkeletalMesh*                               BaseMeshReferenceSkeleton;                                // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class USkeletonsDataAsset*                         SourceSkeletons;                                          // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FName>                               SourceSkeletonNames;                                      // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	USkeletalMesh*                                     CharacterMesh;                                            // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	USkeletalMesh*                                     BaseMeshReferenceSkeleton;                                // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	USkeletonsDataAsset*                               SourceSkeletons;                                          // 0x0040(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<FName>                                      SourceSkeletonNames;                                      // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 	TArray<float>                                      SourceSkeletonWeights;                                    // 0x0058(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FBlendedSubMeshSpecification>        BlendedSubMeshes;                                         // 0x0068(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<class USkeletalMesh*>                       UnblendedSubMeshes;                                       // 0x0078(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FIPGBlendShape>                      BlendShapes;                                              // 0x0088(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FBlendedSubMeshSpecification>               BlendedSubMeshes;                                         // 0x0068(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<USkeletalMesh*>                             UnblendedSubMeshes;                                       // 0x0078(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FIPGBlendShape>                             BlendShapes;                                              // 0x0088(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -108,10 +108,10 @@ public:
 	}
 
 
-	static class UCharacterMeshBakeSpecification* MakeCharacterMeshSpecification();
-	static void BlendMeshWithMeshPatchAssets(class USkeletalMesh* BaseMesh, float BaseMeshWeight, TArray<class UMeshPatchAsset*> MeshPatchAssets, TArray<float> MeshPatchAssetWeights, class USkeletalMesh** TargetMesh);
-	static class USkeletalMesh* BakeCharacterMeshFromClassDefault(class UClass* CharacterMeshBakeSpecificationClass);
-	static bool AreMeshesEquivalentByMeshPatchCriteria(class USkeletalMesh* MeshA, class USkeletalMesh* MeshB);
+	static UCharacterMeshBakeSpecification* MakeCharacterMeshSpecification();
+	static void BlendMeshWithMeshPatchAssets(USkeletalMesh* BaseMesh, float BaseMeshWeight, TArray<UMeshPatchAsset*> MeshPatchAssets, TArray<float> MeshPatchAssetWeights, USkeletalMesh** TargetMesh);
+	static USkeletalMesh* BakeCharacterMeshFromClassDefault(UClass* CharacterMeshBakeSpecificationClass);
+	static bool AreMeshesEquivalentByMeshPatchCriteria(USkeletalMesh* MeshA, USkeletalMesh* MeshB);
 };
 
 
@@ -120,7 +120,7 @@ public:
 class UColorTexture : public UTexture
 {
 public:
-	struct FLinearColor                                Color;                                                    // 0x0138(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FLinearColor                                       Color;                                                    // 0x0138(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -144,8 +144,8 @@ public:
 	}
 
 
-	static class FString GetMeshPatchAssetPathFromMeshPathAndTypeName(const class FString& MeshPath, const class FString& TypeName);
-	static class UMeshPatchAsset* GetMeshPatchAssetForMeshFromTypeName(class USkeletalMesh* Mesh, const class FString& TypeName);
+	static FString GetMeshPatchAssetPathFromMeshPathAndTypeName(const FString& MeshPath, const FString& TypeName);
+	static UMeshPatchAsset* GetMeshPatchAssetForMeshFromTypeName(USkeletalMesh* Mesh, const FString& TypeName);
 };
 
 
@@ -154,7 +154,7 @@ public:
 class UMaterialReferencesDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FMaterialReferencesEntry>            MaterialReferences;                                       // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FMaterialReferencesEntry>                   MaterialReferences;                                       // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -178,10 +178,10 @@ public:
 	}
 
 
-	static class FString GetHighestWeighted(float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights, float Threshold);
-	static bool FindBodyBlendsFromBodyShapeWheelRadialCoordinate(TEnumAsByte<EIPGGender> Gender, const struct FRadialCoordinate& BodyShapeWheelRadialCoordinate, float* BaseMeshBlendWeight, TArray<class FString>* BodyShapeBlendNames, TArray<float>* BodyShapeBlendWeights);
-	static struct FRadialCoordinate ConvertToRadialCoordinate(const struct FVector2D& UV);
-	static struct FVector2D ConvertFromRadialCoordinate(const struct FRadialCoordinate& Coord);
+	static FString GetHighestWeighted(float BaseMeshBlendWeight, TArray<FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights, float Threshold);
+	static bool FindBodyBlendsFromBodyShapeWheelRadialCoordinate(TEnumAsByte<EIPGGender> Gender, const FRadialCoordinate& BodyShapeWheelRadialCoordinate, float* BaseMeshBlendWeight, TArray<FString>* BodyShapeBlendNames, TArray<float>* BodyShapeBlendWeights);
+	static FRadialCoordinate ConvertToRadialCoordinate(const FVector2D& UV);
+	static FVector2D ConvertFromRadialCoordinate(const FRadialCoordinate& Coord);
 };
 
 
@@ -190,7 +190,7 @@ public:
 class UPirateGeneratorMaterials : public UObject
 {
 public:
-	TArray<class UMaterialInterface*>                  Materials;                                                // 0x0028(0x0010) (ZeroConstructor)
+	TArray<UMaterialInterface*>                        Materials;                                                // 0x0028(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -214,39 +214,41 @@ public:
 	}
 
 
-	static bool SavePirateDescription(const class FString& RelativePath, const struct FPirateDescription& InDesc);
-	static struct FRadialCoordinate RandomBodyShape(int Seed);
-	static bool LoadPirateDescription(const class FString& RelativePath, struct FPirateDescription* OutDesc);
-	static void K2_BakeFromDescriptionGameThread(const struct FPirateDescription& Desc, TEnumAsByte<EPirateBakeFlags> Flags, class USkeletalMesh** OutMesh, struct FPirateDescription* OutDesc);
+	static bool SavePirateDescription(const FString& RelativePath, const FPirateDescription& InDesc);
+	static FRadialCoordinate RandomBodyShape(int Seed);
+	static bool LoadPirateDescription(const FString& RelativePath, FPirateDescription* OutDesc);
+	static void K2_BakeFromDescriptionGameThread(const FPirateDescription& Desc, TEnumAsByte<EPirateBakeFlags> Flags, USkeletalMesh** OutMesh, FPirateDescription* OutDesc);
 	static int IPGLatestVersion();
-	static int GetSeedFromString(const class FString& RefName, const class FString& Str);
-	static void GetAllTextureReferences(class USkeletalMesh* Mesh, TArray<struct FPirateGeneratorTextureReference>* OutReferences);
-	static TArray<class FString> GetAllDescriptions();
-	static struct FPirateDescription GenerateRandomPirateWithVersion(int Seed, int Version, bool bOverrideBodyShape, const struct FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<struct FIPGDynamicSlider> DynamicSliders, TArray<struct FName> TextureReferences, TArray<struct FIPGScalarParameter> ScalarParameters);
-	static struct FPirateDescription GenerateRandomPirate(int Seed, bool bOverrideBodyShape, const struct FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<struct FIPGDynamicSlider> DynamicSliders, TArray<struct FName> TextureReferences, TArray<struct FIPGScalarParameter> ScalarParameters);
-	static void BakeFromDescriptionAsync(const struct FPirateDescription& Desc, TEnumAsByte<EPirateBakeFlags> Flags, const struct FScriptDelegate& AsyncResult);
+	static int GetSeedFromString(const FString& RefName, const FString& Str);
+	static void GetAllTextureReferences(USkeletalMesh* Mesh, TArray<FPirateGeneratorTextureReference>* OutReferences);
+	static TArray<FString> GetAllDescriptions();
+	static FPirateDescription GenerateRandomPirateWithVersion(int Seed, int Version, bool bOverrideBodyShape, const FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<FIPGDynamicSlider> DynamicSliders, TArray<FName> TextureReferences, TArray<FIPGScalarParameter> ScalarParameters);
+	static FPirateDescription GenerateRandomPirate(int Seed, bool bOverrideBodyShape, const FRadialCoordinate& BodyShapeOverride, TEnumAsByte<EIPGGender> SpecificGender, TEnumAsByte<EIPGEthnicity> SpecificEthnicity, TArray<FIPGDynamicSlider> DynamicSliders, TArray<FName> TextureReferences, TArray<FIPGScalarParameter> ScalarParameters);
+	static void BakeFromDescriptionAsync(const FPirateDescription& Desc, TEnumAsByte<EPirateBakeFlags> Flags, const FScriptDelegate& AsyncResult);
 };
 
 
 // Class PirateGenerator.PirateGeneratorSettings
-// 0x00E0 (0x0108 - 0x0028)
+// 0x00E8 (0x0110 - 0x0028)
 class UPirateGeneratorSettings : public UObject
 {
 public:
-	class FString                                      ConfigJson;                                               // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      PiratesFolder;                                            // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      WardrobeFolder;                                           // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       WardrobeDataAsset;                                        // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FName>                               DefaultWardrobeItems;                                     // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       MaterialReferencesDataAsset;                              // 0x0078(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       SkeletonsDataAsset;                                       // 0x0088(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               BaseSkeletonMeshes;                                       // 0x0098(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               Characterization;                                         // 0x00A8(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<class FString>                              SkeletonMeshFormats;                                      // 0x00B8(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       FirstPersonAnimations;                                    // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       ThirdPersonAnimations;                                    // 0x00D8(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            ConfigJson;                                               // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            PiratesFolder;                                            // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            WardrobeFolder;                                           // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
+	FStringAssetReference                              WardrobeDataAsset;                                        // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FName>                                      DefaultWardrobeItems;                                     // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
+	FStringAssetReference                              MaterialReferencesDataAsset;                              // 0x0078(0x0010) (Edit, ZeroConstructor, Config)
+	FStringAssetReference                              SkeletonsDataAsset;                                       // 0x0088(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FStringAssetReference>                      BaseSkeletonMeshes;                                       // 0x0098(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FStringAssetReference>                      Characterization;                                         // 0x00A8(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FString>                                    SkeletonMeshFormats;                                      // 0x00B8(0x0010) (Edit, ZeroConstructor, Config)
+	FStringAssetReference                              FirstPersonAnimations;                                    // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
+	FStringAssetReference                              ThirdPersonAnimations;                                    // 0x00D8(0x0010) (Edit, ZeroConstructor, Config)
 	TArray<float>                                      LODScreenSizes;                                           // 0x00E8(0x0010) (Edit, ZeroConstructor, Config)
 	TArray<float>                                      LODHysteresis;                                            // 0x00F8(0x0010) (Edit, ZeroConstructor, Config)
+	int                                                DefaultPirateGenerationSeed;                              // 0x0108(0x0004) (ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x010C(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -270,8 +272,8 @@ public:
 	}
 
 
-	static void PopulateSkeletonBlendsInCharacterMeshBakeSpecification(class UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification, class USkeletalMesh* MeshWithBaseSkeleton, class USkeletonsDataAsset* SkeletonsDataAsset, const class FString& MeshTypeSkeletonFileFormat, float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights);
-	static void PopulateBlendedSubMeshesInCharacterMeshBakeSpecification(class UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification, TArray<class USkeletalMesh*> SubMeshes, float BaseMeshBlendWeight, TArray<class FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights);
+	static void PopulateSkeletonBlendsInCharacterMeshBakeSpecification(UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification, USkeletalMesh* MeshWithBaseSkeleton, USkeletonsDataAsset* SkeletonsDataAsset, const FString& MeshTypeSkeletonFileFormat, float BaseMeshBlendWeight, TArray<FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights);
+	static void PopulateBlendedSubMeshesInCharacterMeshBakeSpecification(UCharacterMeshBakeSpecification* CharacterMeshBakeSpecification, TArray<USkeletalMesh*> SubMeshes, float BaseMeshBlendWeight, TArray<FString> BodyShapeBlendNames, TArray<float> BodyShapeBlendWeights);
 };
 
 
@@ -283,7 +285,7 @@ public:
 	unsigned char                                      UnknownData00[0x80];                                      // 0x0140(0x0080) MISSED OFFSET
 	bool                                               bDuplicated;                                              // 0x01C0(0x0001) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x01C1(0x0007) MISSED OFFSET
-	struct FTextureSwitchParameters                    DefaultParameters;                                        // 0x01C8(0x0058) (Edit, BlueprintVisible, BlueprintReadOnly)
+	FTextureSwitchParameters                           DefaultParameters;                                        // 0x01C8(0x0058) (Edit, BlueprintVisible, BlueprintReadOnly)
 
 	static UClass* StaticClass()
 	{
@@ -299,12 +301,12 @@ public:
 class UTextureSwitchBySeed : public UTextureSwitch
 {
 public:
-	struct FName                                       HashSource;                                               // 0x0220(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	FName                                              HashSource;                                               // 0x0220(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              FallbackProbability;                                      // 0x0228(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FName                                       FallbackReferenceName;                                    // 0x022C(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	FName                                              FallbackReferenceName;                                    // 0x022C(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0234(0x0004) MISSED OFFSET
-	struct FStringAssetReference                       FallbackTexture;                                          // 0x0238(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FTextureSwitchSeedEntry>             Entries;                                                  // 0x0248(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	FStringAssetReference                              FallbackTexture;                                          // 0x0238(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FTextureSwitchSeedEntry>                    Entries;                                                  // 0x0248(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -320,7 +322,7 @@ public:
 class UTextureSwitchByGender : public UTextureSwitch
 {
 public:
-	TArray<struct FTextureSwitchGenderEntry>           Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FTextureSwitchGenderEntry>                  Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -336,7 +338,7 @@ public:
 class UTextureSwitchByEthnicity : public UTextureSwitch
 {
 public:
-	TArray<struct FTextureSwitchEthnicityEntry>        Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FTextureSwitchEthnicityEntry>               Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -352,7 +354,7 @@ public:
 class UTextureSwitchByBodyShape : public UTextureSwitch
 {
 public:
-	TArray<struct FTextureSwitchBodyShapeEntry>        Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FTextureSwitchBodyShapeEntry>               Entries;                                                  // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -368,8 +370,8 @@ public:
 class UTextureSwitchByItem : public UTextureSwitch
 {
 public:
-	struct FStringAssetReference                       FallbackTexture;                                          // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FTextureSwitchItemEntry>             Entries;                                                  // 0x0230(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	FStringAssetReference                              FallbackTexture;                                          // 0x0220(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FTextureSwitchItemEntry>                    Entries;                                                  // 0x0230(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -385,8 +387,8 @@ public:
 class UColorTextureSwitchBySeed : public UTextureSwitch
 {
 public:
-	struct FName                                       HashSource;                                               // 0x0220(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FColorTextureSwitchSeedEntry>        Entries;                                                  // 0x0228(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	FName                                              HashSource;                                               // 0x0220(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<FColorTextureSwitchSeedEntry>               Entries;                                                  // 0x0228(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -402,7 +404,7 @@ public:
 class UWardrobeExcludeDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FName>                               ExcludeItems;                                             // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FName>                                      ExcludeItems;                                             // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -419,8 +421,8 @@ class UWardrobeDataAsset : public UDataAsset
 {
 public:
 	unsigned char                                      UnknownData00[0xA0];                                      // 0x0028(0x00A0) MISSED OFFSET
-	TArray<class UWardrobeExcludeDataAsset*>           ExcludeDataAssets;                                        // 0x00C8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FMeshPatchEntry>                     AssetMap;                                                 // 0x00D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<UWardrobeExcludeDataAsset*>                 ExcludeDataAssets;                                        // 0x00C8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FMeshPatchEntry>                            AssetMap;                                                 // 0x00D8(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -436,9 +438,9 @@ public:
 class UWardrobeOutfitDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FName>                               FemaleWardrobeItems;                                      // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FName>                               MaleWardrobeItems;                                        // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	TArray<struct FWardrobeOutfitCategoryBias>         BiasPerCategory;                                          // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FName>                                      FemaleWardrobeItems;                                      // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FName>                                      MaleWardrobeItems;                                        // 0x0038(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FWardrobeOutfitCategoryBias>                BiasPerCategory;                                          // 0x0048(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -447,7 +449,7 @@ public:
 	}
 
 
-	float GetBiasForCategory(const struct FName& Name);
+	float GetBiasForCategory(const FName& Name);
 };
 
 
@@ -464,16 +466,16 @@ public:
 	}
 
 
-	static void PickOutfitAsync(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender, const struct FScriptDelegate& AsyncResult);
-	static bool PickOutfit(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender, struct FWardrobeOutfitResult* Result);
-	static TArray<struct FName> GetRandomWardrobeItemsWithBias(int Seed, TArray<struct FName> InputItems, TArray<struct FWardrobeOutfitCategoryBias> BiasPerCategory);
-	static TArray<struct FName> GetRandomWardrobeItems(int Seed, TArray<struct FName> InputItems);
-	static TArray<struct FName> GetRandomOutfit(class UWardrobeOutfitDataAsset* Outfit, int Seed, TEnumAsByte<EIPGGender> Gender);
-	static TArray<struct FName> GetAllWardrobeTypes();
-	static TArray<struct FName> GetAllWardrobeItemsForType(const class FString& TypeName, TEnumAsByte<EIPGPirateType> PirateType, bool bWithExclusions);
-	static TArray<struct FName> GetAllWardrobeItems(TEnumAsByte<EIPGPirateType> PirateType);
-	static bool CanLoadOutfit(TArray<struct FName> ClothingItemNames, TArray<struct FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender);
-	void AsyncOutfitResultDynamic__DelegateSignature(bool Success, TArray<class USkeletalMesh*> Meshes);
+	static void PickOutfitAsync(TArray<FName> ClothingItemNames, TArray<FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender, const FScriptDelegate& AsyncResult);
+	static bool PickOutfit(TArray<FName> ClothingItemNames, TArray<FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender, FWardrobeOutfitResult* Result);
+	static TArray<FName> GetRandomWardrobeItemsWithBias(int Seed, TArray<FName> InputItems, TArray<FWardrobeOutfitCategoryBias> BiasPerCategory);
+	static TArray<FName> GetRandomWardrobeItems(int Seed, TArray<FName> InputItems);
+	static TArray<FName> GetRandomOutfit(UWardrobeOutfitDataAsset* Outfit, int Seed, TEnumAsByte<EIPGGender> Gender);
+	static TArray<FName> GetAllWardrobeTypes();
+	static TArray<FName> GetAllWardrobeItemsForType(const FString& TypeName, TEnumAsByte<EIPGPirateType> PirateType, bool bWithExclusions);
+	static TArray<FName> GetAllWardrobeItems(TEnumAsByte<EIPGPirateType> PirateType);
+	static bool CanLoadOutfit(TArray<FName> ClothingItemNames, TArray<FName> Tags, TEnumAsByte<EIPGPirateType> PirateType, TEnumAsByte<EIPGGender> Gender);
+	void AsyncOutfitResultDynamic__DelegateSignature(bool Success, TArray<USkeletalMesh*> Meshes);
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CliffGenerator_classes.hpp"
+#include "SoT_BP_CliffGenerator_parameters.hpp"
 
 namespace SDK
 {
@@ -25,15 +25,7 @@ void ABP_CliffGenerator_C::Draw_Debug_Numbers(int CurrentIndex, int NextIndex, c
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CliffGenerator.BP_CliffGenerator_C.Draw_Debug_Numbers"));
 
-	struct
-	{
-		int                            CurrentIndex;
-		int                            NextIndex;
-		struct FVector                 StartLocation;
-		struct FVector                 EndLocation;
-		struct FVector                 StartTangent;
-	} params;
-
+	ABP_CliffGenerator_C_Draw_Debug_Numbers_Params params;
 	params.CurrentIndex = CurrentIndex;
 	params.NextIndex = NextIndex;
 	params.StartLocation = StartLocation;
@@ -51,10 +43,7 @@ void ABP_CliffGenerator_C::Deform_Terrain()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CliffGenerator.BP_CliffGenerator_C.Deform_Terrain"));
 
-	struct
-	{
-	} params;
-
+	ABP_CliffGenerator_C_Deform_Terrain_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -70,12 +59,7 @@ void ABP_CliffGenerator_C::Build_Element(int Index, class UStaticMesh* ElementMe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CliffGenerator.BP_CliffGenerator_C.Build_Element"));
 
-	struct
-	{
-		int                            Index;
-		class UStaticMesh*             ElementMesh;
-	} params;
-
+	ABP_CliffGenerator_C_Build_Element_Params params;
 	params.Index = Index;
 	params.ElementMesh = ElementMesh;
 
@@ -90,10 +74,7 @@ void ABP_CliffGenerator_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CliffGenerator.BP_CliffGenerator_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_CliffGenerator_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

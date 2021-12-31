@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_LargeShip_StandardHull_Art_Doors_classes.hpp"
+#include "SoT_BP_LargeShip_StandardHull_Art_Doors_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_LargeShip_StandardHull_Art_Doors_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LargeShip_StandardHull_Art_Doors.BP_LargeShip_StandardHull_Art_Doors_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_LargeShip_StandardHull_Art_Doors_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_LargeShip_StandardHull_Art_Doors_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LargeShip_StandardHull_Art_Doors.BP_LargeShip_StandardHull_Art_Doors_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_LargeShip_StandardHull_Art_Doors_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void ABP_LargeShip_StandardHull_Art_Doors_C::ExecuteUbergraph_BP_LargeShip_Stand
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LargeShip_StandardHull_Art_Doors.BP_LargeShip_StandardHull_Art_Doors_C.ExecuteUbergraph_BP_LargeShip_StandardHull_Art_Doors"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_LargeShip_StandardHull_Art_Doors_C_ExecuteUbergraph_BP_LargeShip_StandardHull_Art_Doors_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

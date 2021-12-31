@@ -58,10 +58,10 @@ public:
 	}
 
 
-	static void UnregisterService(class UObject* Service, struct FGameServiceMap* ServiceMap);
-	static void RegisterService(class UObject* Service, class UClass* Class, struct FGameServiceMap* ServiceMap);
-	static class UObject* GetService(class UClass* Class, struct FGameServiceMap* ServiceMap);
-	static int GetNumServices(struct FGameServiceMap* ServiceMap);
+	static void UnregisterService(UObject* Service, FGameServiceMap* ServiceMap);
+	static void RegisterService(UObject* Service, UClass* Class, FGameServiceMap* ServiceMap);
+	static UObject* GetService(UClass* Class, FGameServiceMap* ServiceMap);
+	static int GetNumServices(FGameServiceMap* ServiceMap);
 };
 
 
@@ -78,9 +78,9 @@ public:
 	}
 
 
-	void UnregisterService(class UObject* Service);
-	void RegisterService(class UObject* Service, class UClass* Class);
-	class UObject* GetService(class UClass* Class);
+	void UnregisterService(UObject* Service);
+	void RegisterService(UObject* Service, UClass* Class);
+	UObject* GetService(UClass* Class);
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wld_Portal_classes.hpp"
+#include "SoT_wld_Portal_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awld_Portal_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wld_Portal.wld_Portal_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Awld_Portal_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

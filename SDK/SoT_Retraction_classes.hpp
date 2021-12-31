@@ -20,8 +20,8 @@ class URetractableComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x28];                                      // 0x00C8(0x0028) MISSED OFFSET
-	struct FName                                       FeatureToggle;                                            // 0x00F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FRetractorOrientationAdjustmentFlags        OrientationAdjustmentOnRetractFlags;                      // 0x00F8(0x0003) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              FeatureToggle;                                            // 0x00F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FRetractorOrientationAdjustmentFlags               OrientationAdjustmentOnRetractFlags;                      // 0x00F8(0x0003) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TEnumAsByte<EAxis>                                 RetractorBoxAxis;                                         // 0x00FB(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               ShouldAutoReleaseOnSuccessfulRetract;                     // 0x00FC(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               MigrateAttachedWithRetractor;                             // 0x00FD(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -106,8 +106,8 @@ public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
 	TScriptInterface<class URetractableInterface>      AttachedRetractable;                                      // 0x00D0(0x0010) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x30];                                      // 0x00E0(0x0030) MISSED OFFSET
-	class USceneComponent*                             RetractDestinationComponent;                              // 0x0110(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             RetractingComponent;                                      // 0x0118(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	USceneComponent*                                   RetractDestinationComponent;                              // 0x0110(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	USceneComponent*                                   RetractingComponent;                                      // 0x0118(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x8];                                       // 0x0120(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()

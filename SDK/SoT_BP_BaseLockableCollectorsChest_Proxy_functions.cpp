@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_BaseLockableCollectorsChest_Proxy_classes.hpp"
+#include "SoT_BP_BaseLockableCollectorsChest_Proxy_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_BaseLockableCollectorsChest_Proxy_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseLockableCollectorsChest_Proxy.BP_BaseLockableCollectorsChest_Proxy_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_BaseLockableCollectorsChest_Proxy_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_BaseLockableCollectorsChest_Proxy_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseLockableCollectorsChest_Proxy.BP_BaseLockableCollectorsChest_Proxy_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_BaseLockableCollectorsChest_Proxy_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -47,17 +41,13 @@ void ABP_BaseLockableCollectorsChest_Proxy_C::ReceiveBeginPlay()
 // Function BP_BaseLockableCollectorsChest_Proxy.BP_BaseLockableCollectorsChest_Proxy_C.BndEvt__Lock_K2Node_ComponentBoundEvent_12_OnLockOpenedDelegate__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
-// class AActor*                  Interactor                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Interactor                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_BaseLockableCollectorsChest_Proxy_C::BndEvt__Lock_K2Node_ComponentBoundEvent_12_OnLockOpenedDelegate__DelegateSignature(class AActor* Interactor)
+void ABP_BaseLockableCollectorsChest_Proxy_C::BndEvt__Lock_K2Node_ComponentBoundEvent_12_OnLockOpenedDelegate__DelegateSignature(AActor* Interactor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseLockableCollectorsChest_Proxy.BP_BaseLockableCollectorsChest_Proxy_C.BndEvt__Lock_K2Node_ComponentBoundEvent_12_OnLockOpenedDelegate__DelegateSignature"));
 
-	struct
-	{
-		class AActor*                  Interactor;
-	} params;
-
+	ABP_BaseLockableCollectorsChest_Proxy_C_BndEvt__Lock_K2Node_ComponentBoundEvent_12_OnLockOpenedDelegate__DelegateSignature_Params params;
 	params.Interactor = Interactor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -73,11 +63,7 @@ void ABP_BaseLockableCollectorsChest_Proxy_C::ExecuteUbergraph_BP_BaseLockableCo
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_BaseLockableCollectorsChest_Proxy.BP_BaseLockableCollectorsChest_Proxy_C.ExecuteUbergraph_BP_BaseLockableCollectorsChest_Proxy"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_BaseLockableCollectorsChest_Proxy_C_ExecuteUbergraph_BP_BaseLockableCollectorsChest_Proxy_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

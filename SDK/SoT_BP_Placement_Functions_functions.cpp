@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Placement_Functions_classes.hpp"
+#include "SoT_BP_Placement_Functions_parameters.hpp"
 
 namespace SDK
 {
@@ -15,25 +15,17 @@ namespace SDK
 // Function BP_Placement_Functions.BP_Placement_Functions_C.GenerateRadialXYPositionsAroundPoint
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                 Centre                         (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Centre                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Segments                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FVector>         Positions                      (Parm, OutParm, ZeroConstructor)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<FVector>                Positions                      (Parm, OutParm, ZeroConstructor)
 
-void UBP_Placement_Functions_C::GenerateRadialXYPositionsAroundPoint(const struct FVector& Centre, float Radius, int Segments, class UObject* __WorldContext, TArray<struct FVector>* Positions)
+void UBP_Placement_Functions_C::GenerateRadialXYPositionsAroundPoint(const FVector& Centre, float Radius, int Segments, UObject* __WorldContext, TArray<FVector>* Positions)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.GenerateRadialXYPositionsAroundPoint"));
 
-	struct
-	{
-		struct FVector                 Centre;
-		float                          Radius;
-		int                            Segments;
-		class UObject*                 __WorldContext;
-		TArray<struct FVector>         Positions;
-	} params;
-
+	UBP_Placement_Functions_C_GenerateRadialXYPositionsAroundPoint_Params params;
 	params.Centre = Centre;
 	params.Radius = Radius;
 	params.Segments = Segments;
@@ -50,23 +42,16 @@ void UBP_Placement_Functions_C::GenerateRadialXYPositionsAroundPoint(const struc
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Get First Valid Hit
 // (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FHitResult>      Hits                           (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<FHitResult>             Hits                           (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Is_Valid_Hit                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              Hit                            (Parm, OutParm)
+// FHitResult                     Hit                            (Parm, OutParm)
 
-void UBP_Placement_Functions_C::Get_First_Valid_Hit(class UObject* __WorldContext, TArray<struct FHitResult>* Hits, bool* Is_Valid_Hit, struct FHitResult* Hit)
+void UBP_Placement_Functions_C::Get_First_Valid_Hit(UObject* __WorldContext, TArray<FHitResult>* Hits, bool* Is_Valid_Hit, FHitResult* Hit)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Get First Valid Hit"));
 
-	struct
-	{
-		TArray<struct FHitResult>      Hits;
-		class UObject*                 __WorldContext;
-		bool                           Is_Valid_Hit;
-		struct FHitResult              Hit;
-	} params;
-
+	UBP_Placement_Functions_C_Get_First_Valid_Hit_Params params;
 	params.__WorldContext = __WorldContext;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -84,29 +69,19 @@ void UBP_Placement_Functions_C::Get_First_Valid_Hit(class UObject* __WorldContex
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Rotated Box Raycast
 // (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FRandomStream           Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector                 Centre                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Extent                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FRotator                Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Raycast_Start                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Raycast_End                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// FRandomStream                  Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// FVector                        Centre                         (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Extent                         (Parm, ZeroConstructor, IsPlainOldData)
+// FRotator                       Rotation                       (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Raycast_Start                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// FVector                        Raycast_End                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Generate_Random_Rotated_Box_Raycast(const struct FVector& Centre, const struct FVector& Extent, const struct FRotator& Rotation, class UObject* __WorldContext, struct FRandomStream* Random, struct FVector* Raycast_Start, struct FVector* Raycast_End)
+void UBP_Placement_Functions_C::Generate_Random_Rotated_Box_Raycast(const FVector& Centre, const FVector& Extent, const FRotator& Rotation, UObject* __WorldContext, FRandomStream* Random, FVector* Raycast_Start, FVector* Raycast_End)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Rotated Box Raycast"));
 
-	struct
-	{
-		struct FRandomStream           Random;
-		struct FVector                 Centre;
-		struct FVector                 Extent;
-		struct FRotator                Rotation;
-		class UObject*                 __WorldContext;
-		struct FVector                 Raycast_Start;
-		struct FVector                 Raycast_End;
-	} params;
-
+	UBP_Placement_Functions_C_Generate_Random_Rotated_Box_Raycast_Params params;
 	params.Centre = Centre;
 	params.Extent = Extent;
 	params.Rotation = Rotation;
@@ -127,31 +102,20 @@ void UBP_Placement_Functions_C::Generate_Random_Rotated_Box_Raycast(const struct
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Detonate Charge
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  Spawn                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Position                       (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Spawn                          (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Position                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius_Overlap                 (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Seed                           (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FLinearColor>    Blast_Radii                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FLinearColor>    Blast_Radii_Out                (Parm, OutParm, ZeroConstructor)
+// TArray<FLinearColor>           Blast_Radii                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<FLinearColor>           Blast_Radii_Out                (Parm, OutParm, ZeroConstructor)
 
-void UBP_Placement_Functions_C::Detonate_Charge(class AActor* Spawn, const struct FVector& Position, float Radius, float Radius_Overlap, int Seed, class UObject* __WorldContext, TArray<struct FLinearColor>* Blast_Radii, TArray<struct FLinearColor>* Blast_Radii_Out)
+void UBP_Placement_Functions_C::Detonate_Charge(AActor* Spawn, const FVector& Position, float Radius, float Radius_Overlap, int Seed, UObject* __WorldContext, TArray<FLinearColor>* Blast_Radii, TArray<FLinearColor>* Blast_Radii_Out)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Detonate Charge"));
 
-	struct
-	{
-		class AActor*                  Spawn;
-		struct FVector                 Position;
-		float                          Radius;
-		float                          Radius_Overlap;
-		int                            Seed;
-		TArray<struct FLinearColor>    Blast_Radii;
-		class UObject*                 __WorldContext;
-		TArray<struct FLinearColor>    Blast_Radii_Out;
-	} params;
-
+	UBP_Placement_Functions_C_Detonate_Charge_Params params;
 	params.Spawn = Spawn;
 	params.Position = Position;
 	params.Radius = Radius;
@@ -172,23 +136,16 @@ void UBP_Placement_Functions_C::Detonate_Charge(class AActor* Spawn, const struc
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Does A Delete B
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class FString                  A_String                       (Parm, ZeroConstructor)
-// class FString                  B_String                       (Parm, ZeroConstructor)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// FString                        A_String                       (Parm, ZeroConstructor)
+// FString                        B_String                       (Parm, ZeroConstructor)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Return                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Does_A_Delete_B(const class FString& A_String, const class FString& B_String, class UObject* __WorldContext, bool* Return)
+void UBP_Placement_Functions_C::Does_A_Delete_B(const FString& A_String, const FString& B_String, UObject* __WorldContext, bool* Return)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Does A Delete B"));
 
-	struct
-	{
-		class FString                  A_String;
-		class FString                  B_String;
-		class UObject*                 __WorldContext;
-		bool                           Return;
-	} params;
-
+	UBP_Placement_Functions_C_Does_A_Delete_B_Params params;
 	params.A_String = A_String;
 	params.B_String = B_String;
 	params.__WorldContext = __WorldContext;
@@ -204,23 +161,16 @@ void UBP_Placement_Functions_C::Does_A_Delete_B(const class FString& A_String, c
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Get Actor Placement Asset Type
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  Input_Actor                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Input_Actor                    (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Returning_Tag                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// class FString                  Asset_Tag                      (Parm, OutParm, ZeroConstructor)
+// FString                        Asset_Tag                      (Parm, OutParm, ZeroConstructor)
 
-void UBP_Placement_Functions_C::Get_Actor_Placement_Asset_Type(class AActor* Input_Actor, class UObject* __WorldContext, bool* Returning_Tag, class FString* Asset_Tag)
+void UBP_Placement_Functions_C::Get_Actor_Placement_Asset_Type(AActor* Input_Actor, UObject* __WorldContext, bool* Returning_Tag, FString* Asset_Tag)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Actor Placement Asset Type"));
 
-	struct
-	{
-		class AActor*                  Input_Actor;
-		class UObject*                 __WorldContext;
-		bool                           Returning_Tag;
-		class FString                  Asset_Tag;
-	} params;
-
+	UBP_Placement_Functions_C_Get_Actor_Placement_Asset_Type_Params params;
 	params.Input_Actor = Input_Actor;
 	params.__WorldContext = __WorldContext;
 
@@ -237,23 +187,16 @@ void UBP_Placement_Functions_C::Get_Actor_Placement_Asset_Type(class AActor* Inp
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Check Actor Overlap
 // (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  Input_Actor                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Input_Actor                    (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Delete_Actor                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          Overlaps_to_Delete             (Parm, OutParm, ZeroConstructor)
+// TArray<AActor*>                Overlaps_to_Delete             (Parm, OutParm, ZeroConstructor)
 
-void UBP_Placement_Functions_C::Check_Actor_Overlap(class AActor* Input_Actor, class UObject* __WorldContext, bool* Delete_Actor, TArray<class AActor*>* Overlaps_to_Delete)
+void UBP_Placement_Functions_C::Check_Actor_Overlap(AActor* Input_Actor, UObject* __WorldContext, bool* Delete_Actor, TArray<AActor*>* Overlaps_to_Delete)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Actor Overlap"));
 
-	struct
-	{
-		class AActor*                  Input_Actor;
-		class UObject*                 __WorldContext;
-		bool                           Delete_Actor;
-		TArray<class AActor*>          Overlaps_to_Delete;
-	} params;
-
+	UBP_Placement_Functions_C_Check_Actor_Overlap_Params params;
 	params.Input_Actor = Input_Actor;
 	params.__WorldContext = __WorldContext;
 
@@ -270,27 +213,18 @@ void UBP_Placement_Functions_C::Check_Actor_Overlap(class AActor* Input_Actor, c
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Get Mesh Instance Transform
 // (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPlacementGardenSeed    Selected_Mesh                  (Parm)
-// struct FRandomStream           Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector                 Location                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Normal                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              Transform                      (Parm, OutParm, IsPlainOldData)
+// FPlacementGardenSeed           Selected_Mesh                  (Parm)
+// FRandomStream                  Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// FVector                        Location                       (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Normal                         (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// FTransform                     Transform                      (Parm, OutParm, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Get_Mesh_Instance_Transform(const struct FPlacementGardenSeed& Selected_Mesh, const struct FVector& Location, const struct FVector& Normal, class UObject* __WorldContext, struct FRandomStream* Random, struct FTransform* Transform)
+void UBP_Placement_Functions_C::Get_Mesh_Instance_Transform(const FPlacementGardenSeed& Selected_Mesh, const FVector& Location, const FVector& Normal, UObject* __WorldContext, FRandomStream* Random, FTransform* Transform)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Mesh Instance Transform"));
 
-	struct
-	{
-		struct FPlacementGardenSeed    Selected_Mesh;
-		struct FRandomStream           Random;
-		struct FVector                 Location;
-		struct FVector                 Normal;
-		class UObject*                 __WorldContext;
-		struct FTransform              Transform;
-	} params;
-
+	UBP_Placement_Functions_C_Get_Mesh_Instance_Transform_Params params;
 	params.Selected_Mesh = Selected_Mesh;
 	params.Location = Location;
 	params.Normal = Normal;
@@ -309,21 +243,15 @@ void UBP_Placement_Functions_C::Get_Mesh_Instance_Transform(const struct FPlacem
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Normalise Mesh Probabilities
 // (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FPlacementGardenSeed> Charges                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<FPlacementGardenSeed>   Charges                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<float>                  Charge_Probabilities           (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Normalise_Mesh_Probabilities(class UObject* __WorldContext, TArray<struct FPlacementGardenSeed>* Charges, TArray<float>* Charge_Probabilities)
+void UBP_Placement_Functions_C::Normalise_Mesh_Probabilities(UObject* __WorldContext, TArray<FPlacementGardenSeed>* Charges, TArray<float>* Charge_Probabilities)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Normalise Mesh Probabilities"));
 
-	struct
-	{
-		TArray<struct FPlacementGardenSeed> Charges;
-		TArray<float>                  Charge_Probabilities;
-		class UObject*                 __WorldContext;
-	} params;
-
+	UBP_Placement_Functions_C_Normalise_Mesh_Probabilities_Params params;
 	params.__WorldContext = __WorldContext;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -339,45 +267,27 @@ void UBP_Placement_Functions_C::Normalise_Mesh_Probabilities(class UObject* __Wo
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Set Mesh
 // (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FPlacementGardenSeed> Meshes                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<FPlacementGardenSeed>   Meshes                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<float>                  Mesh_Probabilities             (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          Generator_Radius               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Spawn_Clustering               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Spawn_Radius_Multiplier        (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UObject*>         Physical_Materials             (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FLinearColor>    Mesh_Radii                     (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FRandomStream           Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<UObject*>               Physical_Materials             (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<FLinearColor>           Mesh_Radii                     (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// FRandomStream                  Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// AActor*                        Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Spawn_Permission               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              Transform                      (Parm, OutParm, IsPlainOldData)
+// FTransform                     Transform                      (Parm, OutParm, IsPlainOldData)
 // float                          Radius                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // int                            Mesh_Index                     (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FPlacementGardenSeed    Mesh                           (Parm, OutParm)
+// FPlacementGardenSeed           Mesh                           (Parm, OutParm)
 
-void UBP_Placement_Functions_C::Set_Mesh(float Generator_Radius, float Spawn_Clustering, float Spawn_Radius_Multiplier, class AActor* Actor, class UObject* __WorldContext, TArray<struct FPlacementGardenSeed>* Meshes, TArray<float>* Mesh_Probabilities, TArray<class UObject*>* Physical_Materials, TArray<struct FLinearColor>* Mesh_Radii, struct FRandomStream* Random, bool* Spawn_Permission, struct FTransform* Transform, float* Radius, int* Mesh_Index, struct FPlacementGardenSeed* Mesh)
+void UBP_Placement_Functions_C::Set_Mesh(float Generator_Radius, float Spawn_Clustering, float Spawn_Radius_Multiplier, AActor* Actor, UObject* __WorldContext, TArray<FPlacementGardenSeed>* Meshes, TArray<float>* Mesh_Probabilities, TArray<UObject*>* Physical_Materials, TArray<FLinearColor>* Mesh_Radii, FRandomStream* Random, bool* Spawn_Permission, FTransform* Transform, float* Radius, int* Mesh_Index, FPlacementGardenSeed* Mesh)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Set Mesh"));
 
-	struct
-	{
-		TArray<struct FPlacementGardenSeed> Meshes;
-		TArray<float>                  Mesh_Probabilities;
-		float                          Generator_Radius;
-		float                          Spawn_Clustering;
-		float                          Spawn_Radius_Multiplier;
-		TArray<class UObject*>         Physical_Materials;
-		TArray<struct FLinearColor>    Mesh_Radii;
-		struct FRandomStream           Random;
-		class AActor*                  Actor;
-		class UObject*                 __WorldContext;
-		bool                           Spawn_Permission;
-		struct FTransform              Transform;
-		float                          Radius;
-		int                            Mesh_Index;
-		struct FPlacementGardenSeed    Mesh;
-	} params;
-
+	UBP_Placement_Functions_C_Set_Mesh_Params params;
 	params.Generator_Radius = Generator_Radius;
 	params.Spawn_Clustering = Spawn_Clustering;
 	params.Spawn_Radius_Multiplier = Spawn_Radius_Multiplier;
@@ -413,43 +323,26 @@ void UBP_Placement_Functions_C::Set_Mesh(float Generator_Radius, float Spawn_Clu
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Set Charge
 // (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FPlacementBombCharge> Charges                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<FPlacementBombCharge>   Charges                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<float>                  Charge_Probabilities           (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          Generator_Radius               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Spawn_Clustering               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Box_Distribution               (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UObject*>         Physical_Materials             (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// TArray<struct FLinearColor>    Blast_Radii                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FRandomStream           Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<UObject*>               Physical_Materials             (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<FLinearColor>           Blast_Radii                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// FRandomStream                  Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// AActor*                        Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Spawn_Permission               (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Position                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// FVector                        Position                       (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FPlacementBombCharge    Charge                         (Parm, OutParm)
+// FPlacementBombCharge           Charge                         (Parm, OutParm)
 
-void UBP_Placement_Functions_C::Set_Charge(float Generator_Radius, float Spawn_Clustering, bool Box_Distribution, class AActor* Actor, class UObject* __WorldContext, TArray<struct FPlacementBombCharge>* Charges, TArray<float>* Charge_Probabilities, TArray<class UObject*>* Physical_Materials, TArray<struct FLinearColor>* Blast_Radii, struct FRandomStream* Random, bool* Spawn_Permission, struct FVector* Position, float* Radius, struct FPlacementBombCharge* Charge)
+void UBP_Placement_Functions_C::Set_Charge(float Generator_Radius, float Spawn_Clustering, bool Box_Distribution, AActor* Actor, UObject* __WorldContext, TArray<FPlacementBombCharge>* Charges, TArray<float>* Charge_Probabilities, TArray<UObject*>* Physical_Materials, TArray<FLinearColor>* Blast_Radii, FRandomStream* Random, bool* Spawn_Permission, FVector* Position, float* Radius, FPlacementBombCharge* Charge)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Set Charge"));
 
-	struct
-	{
-		TArray<struct FPlacementBombCharge> Charges;
-		TArray<float>                  Charge_Probabilities;
-		float                          Generator_Radius;
-		float                          Spawn_Clustering;
-		bool                           Box_Distribution;
-		TArray<class UObject*>         Physical_Materials;
-		TArray<struct FLinearColor>    Blast_Radii;
-		struct FRandomStream           Random;
-		class AActor*                  Actor;
-		class UObject*                 __WorldContext;
-		bool                           Spawn_Permission;
-		struct FVector                 Position;
-		float                          Radius;
-		struct FPlacementBombCharge    Charge;
-	} params;
-
+	UBP_Placement_Functions_C_Set_Charge_Params params;
 	params.Generator_Radius = Generator_Radius;
 	params.Spawn_Clustering = Spawn_Clustering;
 	params.Box_Distribution = Box_Distribution;
@@ -483,23 +376,16 @@ void UBP_Placement_Functions_C::Set_Charge(float Generator_Radius, float Spawn_C
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Check Surface Materials
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TArray<class UObject*>         Physical_Materials             (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UObject*                 Placement_Material             (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<UObject*>               Physical_Materials             (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// UObject*                       Placement_Material             (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Placement_Permission           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Check_Surface_Materials(class UObject* Placement_Material, class UObject* __WorldContext, TArray<class UObject*>* Physical_Materials, bool* Placement_Permission)
+void UBP_Placement_Functions_C::Check_Surface_Materials(UObject* Placement_Material, UObject* __WorldContext, TArray<UObject*>* Physical_Materials, bool* Placement_Permission)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Surface Materials"));
 
-	struct
-	{
-		TArray<class UObject*>         Physical_Materials;
-		class UObject*                 Placement_Material;
-		class UObject*                 __WorldContext;
-		bool                           Placement_Permission;
-	} params;
-
+	UBP_Placement_Functions_C_Check_Surface_Materials_Params params;
 	params.Placement_Material = Placement_Material;
 	params.__WorldContext = __WorldContext;
 
@@ -516,23 +402,16 @@ void UBP_Placement_Functions_C::Check_Surface_Materials(class UObject* Placement
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Check Slope
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FVector                 Normal                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Slope_Range                    (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Normal                         (Parm, ZeroConstructor, IsPlainOldData)
+// FVector2D                      Slope_Range                    (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Placement_Permission           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Check_Slope(const struct FVector& Normal, const struct FVector2D& Slope_Range, class UObject* __WorldContext, bool* Placement_Permission)
+void UBP_Placement_Functions_C::Check_Slope(const FVector& Normal, const FVector2D& Slope_Range, UObject* __WorldContext, bool* Placement_Permission)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Slope"));
 
-	struct
-	{
-		struct FVector                 Normal;
-		struct FVector2D               Slope_Range;
-		class UObject*                 __WorldContext;
-		bool                           Placement_Permission;
-	} params;
-
+	UBP_Placement_Functions_C_Check_Slope_Params params;
 	params.Normal = Normal;
 	params.Slope_Range = Slope_Range;
 	params.__WorldContext = __WorldContext;
@@ -548,23 +427,16 @@ void UBP_Placement_Functions_C::Check_Slope(const struct FVector& Normal, const 
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Check Height
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FVector                 Position                       (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector2D               Height_Range                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Position                       (Parm, ZeroConstructor, IsPlainOldData)
+// FVector2D                      Height_Range                   (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Placement_Permission           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Check_Height(const struct FVector& Position, const struct FVector2D& Height_Range, class UObject* __WorldContext, bool* Placement_Permission)
+void UBP_Placement_Functions_C::Check_Height(const FVector& Position, const FVector2D& Height_Range, UObject* __WorldContext, bool* Placement_Permission)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Height"));
 
-	struct
-	{
-		struct FVector                 Position;
-		struct FVector2D               Height_Range;
-		class UObject*                 __WorldContext;
-		bool                           Placement_Permission;
-	} params;
-
+	UBP_Placement_Functions_C_Check_Height_Params params;
 	params.Position = Position;
 	params.Height_Range = Height_Range;
 	params.__WorldContext = __WorldContext;
@@ -580,27 +452,18 @@ void UBP_Placement_Functions_C::Check_Height(const struct FVector& Position, con
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Check Radius Overlap
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// struct FVector                 Position                       (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Position                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius_Overlap                 (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<struct FLinearColor>    Blast_Radii                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<FLinearColor>           Blast_Radii                    (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Placement_Permission           (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Check_Radius_Overlap(const struct FVector& Position, float Radius, float Radius_Overlap, class UObject* __WorldContext, TArray<struct FLinearColor>* Blast_Radii, bool* Placement_Permission)
+void UBP_Placement_Functions_C::Check_Radius_Overlap(const FVector& Position, float Radius, float Radius_Overlap, UObject* __WorldContext, TArray<FLinearColor>* Blast_Radii, bool* Placement_Permission)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Check Radius Overlap"));
 
-	struct
-	{
-		struct FVector                 Position;
-		float                          Radius;
-		float                          Radius_Overlap;
-		TArray<struct FLinearColor>    Blast_Radii;
-		class UObject*                 __WorldContext;
-		bool                           Placement_Permission;
-	} params;
-
+	UBP_Placement_Functions_C_Check_Radius_Overlap_Params params;
 	params.Position = Position;
 	params.Radius = Radius;
 	params.Radius_Overlap = Radius_Overlap;
@@ -619,25 +482,17 @@ void UBP_Placement_Functions_C::Check_Radius_Overlap(const struct FVector& Posit
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Set Spawn Properties
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                 Object                         (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       Object                         (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Seed                           (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Cast_Success                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Set_Spawn_Properties(class UObject* Object, int Seed, float Radius, class UObject* __WorldContext, bool* Cast_Success)
+void UBP_Placement_Functions_C::Set_Spawn_Properties(UObject* Object, int Seed, float Radius, UObject* __WorldContext, bool* Cast_Success)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Set Spawn Properties"));
 
-	struct
-	{
-		class UObject*                 Object;
-		int                            Seed;
-		float                          Radius;
-		class UObject*                 __WorldContext;
-		bool                           Cast_Success;
-	} params;
-
+	UBP_Placement_Functions_C_Set_Spawn_Properties_Params params;
 	params.Object = Object;
 	params.Seed = Seed;
 	params.Radius = Radius;
@@ -654,27 +509,18 @@ void UBP_Placement_Functions_C::Set_Spawn_Properties(class UObject* Object, int 
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Box Raycast
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FRandomStream           Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FVector                 Centre                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Extent                         (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Raycast_Start                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Raycast_End                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// FRandomStream                  Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// FVector                        Centre                         (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Extent                         (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Raycast_Start                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// FVector                        Raycast_End                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Generate_Random_Box_Raycast(const struct FVector& Centre, const struct FVector& Extent, class UObject* __WorldContext, struct FRandomStream* Random, struct FVector* Raycast_Start, struct FVector* Raycast_End)
+void UBP_Placement_Functions_C::Generate_Random_Box_Raycast(const FVector& Centre, const FVector& Extent, UObject* __WorldContext, FRandomStream* Random, FVector* Raycast_Start, FVector* Raycast_End)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Box Raycast"));
 
-	struct
-	{
-		struct FRandomStream           Random;
-		struct FVector                 Centre;
-		struct FVector                 Extent;
-		class UObject*                 __WorldContext;
-		struct FVector                 Raycast_Start;
-		struct FVector                 Raycast_End;
-	} params;
-
+	UBP_Placement_Functions_C_Generate_Random_Box_Raycast_Params params;
 	params.Centre = Centre;
 	params.Extent = Extent;
 	params.__WorldContext = __WorldContext;
@@ -694,23 +540,16 @@ void UBP_Placement_Functions_C::Generate_Random_Box_Raycast(const struct FVector
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Get Box Sample Count
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Seed_Density                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Sample_Count                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Get_Box_Sample_Count(class AActor* Actor, float Seed_Density, class UObject* __WorldContext, int* Sample_Count)
+void UBP_Placement_Functions_C::Get_Box_Sample_Count(AActor* Actor, float Seed_Density, UObject* __WorldContext, int* Sample_Count)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Box Sample Count"));
 
-	struct
-	{
-		class AActor*                  Actor;
-		float                          Seed_Density;
-		class UObject*                 __WorldContext;
-		int                            Sample_Count;
-	} params;
-
+	UBP_Placement_Functions_C_Get_Box_Sample_Count_Params params;
 	params.Actor = Actor;
 	params.Seed_Density = Seed_Density;
 	params.__WorldContext = __WorldContext;
@@ -726,33 +565,21 @@ void UBP_Placement_Functions_C::Get_Box_Sample_Count(class AActor* Actor, float 
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Radial Raycast
 // (Static, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FRandomStream           Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// FRandomStream                  Random                         (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Centre                         (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Centre                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Spawn_Clustering               (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Spawn_Radius_Multiplier        (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTransform              Actor_Transform                (Parm, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Raycast_Start                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 Raycast_End                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// FTransform                     Actor_Transform                (Parm, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        Raycast_Start                  (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// FVector                        Raycast_End                    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Generate_Random_Radial_Raycast(float Radius, const struct FVector& Centre, float Spawn_Clustering, float Spawn_Radius_Multiplier, const struct FTransform& Actor_Transform, class UObject* __WorldContext, struct FRandomStream* Random, struct FVector* Raycast_Start, struct FVector* Raycast_End)
+void UBP_Placement_Functions_C::Generate_Random_Radial_Raycast(float Radius, const FVector& Centre, float Spawn_Clustering, float Spawn_Radius_Multiplier, const FTransform& Actor_Transform, UObject* __WorldContext, FRandomStream* Random, FVector* Raycast_Start, FVector* Raycast_End)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Generate Random Radial Raycast"));
 
-	struct
-	{
-		struct FRandomStream           Random;
-		float                          Radius;
-		struct FVector                 Centre;
-		float                          Spawn_Clustering;
-		float                          Spawn_Radius_Multiplier;
-		struct FTransform              Actor_Transform;
-		class UObject*                 __WorldContext;
-		struct FVector                 Raycast_Start;
-		struct FVector                 Raycast_End;
-	} params;
-
+	UBP_Placement_Functions_C_Generate_Random_Radial_Raycast_Params params;
 	params.Radius = Radius;
 	params.Centre = Centre;
 	params.Spawn_Clustering = Spawn_Clustering;
@@ -777,21 +604,14 @@ void UBP_Placement_Functions_C::Generate_Random_Radial_Raycast(float Radius, con
 // Parameters:
 // float                          Random_Float                   (Parm, ZeroConstructor, IsPlainOldData)
 // TArray<float>                  Charge_Probabilities           (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Index                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Calculate_Index_from_Probabilities(float Random_Float, class UObject* __WorldContext, TArray<float>* Charge_Probabilities, int* Index)
+void UBP_Placement_Functions_C::Calculate_Index_from_Probabilities(float Random_Float, UObject* __WorldContext, TArray<float>* Charge_Probabilities, int* Index)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Calculate Index from Probabilities"));
 
-	struct
-	{
-		float                          Random_Float;
-		TArray<float>                  Charge_Probabilities;
-		class UObject*                 __WorldContext;
-		int                            Index;
-	} params;
-
+	UBP_Placement_Functions_C_Calculate_Index_from_Probabilities_Params params;
 	params.Random_Float = Random_Float;
 	params.__WorldContext = __WorldContext;
 
@@ -810,21 +630,14 @@ void UBP_Placement_Functions_C::Calculate_Index_from_Probabilities(float Random_
 // Parameters:
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Spawn_Sample_Density           (Parm, ZeroConstructor, IsPlainOldData)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Sample_Count                   (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Get_Radial_Sample_Count(float Radius, float Spawn_Sample_Density, class UObject* __WorldContext, int* Sample_Count)
+void UBP_Placement_Functions_C::Get_Radial_Sample_Count(float Radius, float Spawn_Sample_Density, UObject* __WorldContext, int* Sample_Count)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Get Radial Sample Count"));
 
-	struct
-	{
-		float                          Radius;
-		float                          Spawn_Sample_Density;
-		class UObject*                 __WorldContext;
-		int                            Sample_Count;
-	} params;
-
+	UBP_Placement_Functions_C_Get_Radial_Sample_Count_Params params;
 	params.Radius = Radius;
 	params.Spawn_Sample_Density = Spawn_Sample_Density;
 	params.__WorldContext = __WorldContext;
@@ -840,21 +653,15 @@ void UBP_Placement_Functions_C::Get_Radial_Sample_Count(float Radius, float Spaw
 // Function BP_Placement_Functions.BP_Placement_Functions_C.Normalise Charge Probabilities
 // (Static, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<struct FPlacementBombCharge> Charges                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<FPlacementBombCharge>   Charges                        (Parm, OutParm, ZeroConstructor, ReferenceParm)
 // TArray<float>                  Charge_Probabilities           (Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UObject*                 __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       __WorldContext                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Placement_Functions_C::Normalise_Charge_Probabilities(class UObject* __WorldContext, TArray<struct FPlacementBombCharge>* Charges, TArray<float>* Charge_Probabilities)
+void UBP_Placement_Functions_C::Normalise_Charge_Probabilities(UObject* __WorldContext, TArray<FPlacementBombCharge>* Charges, TArray<float>* Charge_Probabilities)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Placement_Functions.BP_Placement_Functions_C.Normalise Charge Probabilities"));
 
-	struct
-	{
-		TArray<struct FPlacementBombCharge> Charges;
-		TArray<float>                  Charge_Probabilities;
-		class UObject*                 __WorldContext;
-	} params;
-
+	UBP_Placement_Functions_C_Normalise_Charge_Probabilities_Params params;
 	params.__WorldContext = __WorldContext;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();

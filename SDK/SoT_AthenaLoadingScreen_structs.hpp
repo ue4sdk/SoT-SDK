@@ -21,8 +21,8 @@ namespace SDK
 // 0x0020
 struct FSlateLoadingScreenImageParams
 {
-	struct FStringAssetReference                       ImageAsset;                                               // 0x0000(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FText>                               ImageTips;                                                // 0x0010(0x0010) (Edit, ZeroConstructor)
+	FStringAssetReference                              ImageAsset;                                               // 0x0000(0x0010) (Edit, ZeroConstructor)
+	TArray<FText>                                      ImageTips;                                                // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenStateResponse
@@ -43,14 +43,14 @@ struct FEventAthenaLoadingScreenStateRequest
 // 0x0010
 struct FEventAthenaLoadingScreenBlockUntilUIIntialisedClear
 {
-	class FString                                      Description;                                              // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
+	FString                                            Description;                                              // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenBlockUntilUIIntialised
 // 0x0010
 struct FEventAthenaLoadingScreenBlockUntilUIIntialised
 {
-	class FString                                      Description;                                              // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
+	FString                                            Description;                                              // 0x0000(0x0010) (BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct AthenaLoadingScreen.EventAthenaLoadingScreenClose

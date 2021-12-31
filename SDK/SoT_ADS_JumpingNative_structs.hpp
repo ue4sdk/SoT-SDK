@@ -19,7 +19,7 @@ namespace SDK
 // 0x0078
 struct FADS_JumpingNative
 {
-	struct FAthenaAnimationJumpingAnimData             JumpingBase_49_09E8A26E4C88A42E870AA890E62E4675;          // 0x0000(0x0078) (Edit, BlueprintVisible)
+	FAthenaAnimationJumpingAnimData                    JumpingBase_49_09E8A26E4C88A42E870AA890E62E4675;          // 0x0000(0x0078) (Edit, BlueprintVisible)
 };
 
 }

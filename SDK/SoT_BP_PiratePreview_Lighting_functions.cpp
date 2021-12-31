@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_PiratePreview_Lighting_classes.hpp"
+#include "SoT_BP_PiratePreview_Lighting_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_PiratePreview_Lighting_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_PiratePreview_Lighting_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -31,17 +28,13 @@ void ABP_PiratePreview_Lighting_C::UserConstructionScript()
 // Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewReady__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPiratePreviewReadyEvent Data                           (Parm)
+// FPiratePreviewReadyEvent       Data                           (Parm)
 
-void ABP_PiratePreview_Lighting_C::PreviewReady__DelegateSignature(const struct FPiratePreviewReadyEvent& Data)
+void ABP_PiratePreview_Lighting_C::PreviewReady__DelegateSignature(const FPiratePreviewReadyEvent& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewReady__DelegateSignature"));
 
-	struct
-	{
-		struct FPiratePreviewReadyEvent Data;
-	} params;
-
+	ABP_PiratePreview_Lighting_C_PreviewReady__DelegateSignature_Params params;
 	params.Data = Data;
 
 	UObject::ProcessEvent(fn, &params);
@@ -51,17 +44,13 @@ void ABP_PiratePreview_Lighting_C::PreviewReady__DelegateSignature(const struct 
 // Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewBusy__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPiratePreviewBusyEvent Data                           (Parm)
+// FPiratePreviewBusyEvent        Data                           (Parm)
 
-void ABP_PiratePreview_Lighting_C::PreviewBusy__DelegateSignature(const struct FPiratePreviewBusyEvent& Data)
+void ABP_PiratePreview_Lighting_C::PreviewBusy__DelegateSignature(const FPiratePreviewBusyEvent& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview_Lighting.BP_PiratePreview_Lighting_C.PreviewBusy__DelegateSignature"));
 
-	struct
-	{
-		struct FPiratePreviewBusyEvent Data;
-	} params;
-
+	ABP_PiratePreview_Lighting_C_PreviewBusy__DelegateSignature_Params params;
 	params.Data = Data;
 
 	UObject::ProcessEvent(fn, &params);

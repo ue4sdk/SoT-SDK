@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_gmp_wrld_res_wood3_fruit2_01_a_classes.hpp"
+#include "SoT_gmp_wrld_res_wood3_fruit2_01_a_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Agmp_wrld_res_wood3_fruit2_01_a_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function gmp_wrld_res_wood3_fruit2_01_a.gmp_wrld_res_wood3_fruit2_01_a_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Agmp_wrld_res_wood3_fruit2_01_a_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

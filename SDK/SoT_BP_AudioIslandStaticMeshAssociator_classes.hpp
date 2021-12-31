@@ -19,7 +19,7 @@ namespace SDK
 class ABP_AudioIslandStaticMeshAssociator_C : public AAudioIslandStaticMeshAssociatorBase
 {
 public:
-	class UStaticMeshAudioEmittersComponent*           StaticMeshAudioEmitters;                                  // 0x03D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStaticMeshAudioEmittersComponent*                 StaticMeshAudioEmitters;                                  // 0x03D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

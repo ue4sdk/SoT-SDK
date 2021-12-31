@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_NPC.BP_Anim_NPC_C
-// 0x15C5 (0x1BD5 - 0x0610)
+// 0x16CD (0x1CDD - 0x0610)
 class UBP_Anim_NPC_C : public UNPCAnimInstance
 {
 public:
@@ -79,15 +79,18 @@ public:
 	struct FAnimNode_SaveCachedPose                    AnimGraphNode_SaveCachedPose_3FB73333442254CF3E647297B442A16A;// 0x1A98(0x0090)
 	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_9FA7439E42A411590479CDAB19464071;// 0x1B28(0x0048)
 	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_EFB05AEE4D8E1C17D6047FA396129830;// 0x1B70(0x0048)
-	struct FVector2D                                   LookAtAngleClamp;                                         // 0x1BB8(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	bool                                               AnimgraphStarted;                                         // 0x1BC0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x1BC1(0x0003) MISSED OFFSET
-	float                                              LookAtChest;                                              // 0x1BC4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TEnumAsByte<EHIKLookAtLimits>                      LookAtClamp;                                              // 0x1BC8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x3];                                       // 0x1BC9(0x0003) MISSED OFFSET
-	float                                              LookAtActivationSpeed;                                    // 0x1BCC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              LookAtTargetPositionSpeed;                                // 0x1BD0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsPhased;                                                 // 0x1BD4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FAnimNode_RefPose                           AnimGraphNode_IdentityPose_5EE7533F425E2DFA7F2F558B7CAEB50E;// 0x1BB8(0x0038)
+	struct FAnimNode_Slot                              AnimGraphNode_Slot_DCCF4EB04FDD34507DD0BBB448559B7B;      // 0x1BF0(0x0060)
+	struct FAnimNode_ApplyAdditive                     AnimGraphNode_ApplyAdditive_3D9B5DDE40D2FDE6447ED696604352C6;// 0x1C50(0x0070)
+	struct FVector2D                                   LookAtAngleClamp;                                         // 0x1CC0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               AnimgraphStarted;                                         // 0x1CC8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x1CC9(0x0003) MISSED OFFSET
+	float                                              LookAtChest;                                              // 0x1CCC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TEnumAsByte<EHIKLookAtLimits>                      LookAtClamp;                                              // 0x1CD0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x3];                                       // 0x1CD1(0x0003) MISSED OFFSET
+	float                                              LookAtActivationSpeed;                                    // 0x1CD4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LookAtTargetPositionSpeed;                                // 0x1CD8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsPhased;                                                 // 0x1CDC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

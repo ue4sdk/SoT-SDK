@@ -19,7 +19,7 @@ namespace SDK
 class ABP_CapstanRelease_C : public ACapstanRelease
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UInteractableComponent*                            Interactable;                                             // 0x04B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,7 +28,7 @@ public:
 	}
 
 
-	struct FVector GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius);
+	FVector GetClosestInteractionPoint(const FVector& ReferencePosition, float* OutInteractionPointRadius);
 	void UserConstructionScript();
 };
 

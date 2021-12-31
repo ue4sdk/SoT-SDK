@@ -19,7 +19,7 @@ namespace SDK
 // 0x0050
 struct FADS_LocomotionNative
 {
-	struct FAthenaAnimationLocomotionAnimData          Locomotion_29_A586B449410EBBDE851BBD991F7C6A63;           // 0x0000(0x0050) (Edit, BlueprintVisible)
+	FAthenaAnimationLocomotionAnimData                 Locomotion_29_A586B449410EBBDE851BBD991F7C6A63;           // 0x0000(0x0050) (Edit, BlueprintVisible)
 };
 
 }

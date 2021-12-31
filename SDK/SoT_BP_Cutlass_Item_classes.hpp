@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Cutlass_Item.BP_Cutlass_Item_C
-// 0x0008 (0x0A68 - 0x0A60)
+// 0x0008 (0x0A88 - 0x0A80)
 class ABP_Cutlass_Item_C : public APlayerMeleeWeapon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A60(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x0A80(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
 
 	static UClass* StaticClass()
 	{
@@ -30,7 +30,7 @@ public:
 
 	void DoBlockEffect();
 	void UserConstructionScript();
-	void OnBlockedAttack(const struct FEventBlocked& Event);
+	void OnBlockedAttack(const FEventBlocked& Event);
 	void ExecuteUbergraph_BP_Cutlass_Item(int EntryPoint);
 };
 

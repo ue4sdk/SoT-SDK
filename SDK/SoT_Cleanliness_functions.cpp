@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Cleanliness_classes.hpp"
+#include "SoT_Cleanliness_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UCleanlinessComponent::OnRep_CleanlinessInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Cleanliness.CleanlinessComponent.OnRep_CleanlinessInfo"));
 
-	struct
-	{
-	} params;
-
+	UCleanlinessComponent_OnRep_CleanlinessInfo_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

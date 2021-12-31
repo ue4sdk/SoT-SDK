@@ -1,10 +1,10 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_sot_frontend_01_a_start_terrain_classes.hpp"
+#include "SoT_sot_frontend_01_a_start_terrain_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Asot_frontend_01_a_start_terrain_C::LeaveMapTableAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_start_terrain.sot_frontend_01_a_start_terrain_C.LeaveMapTableAnimation"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_start_terrain_C_LeaveMapTableAnimation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void Asot_frontend_01_a_start_terrain_C::GetFrontendCamera(class UFrontendCamera
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_start_terrain.sot_frontend_01_a_start_terrain_C.GetFrontendCamera"));
 
-	struct
-	{
-		class UFrontendCameraComponent* CameraComponent;
-	} params;
-
+	Asot_frontend_01_a_start_terrain_C_GetFrontendCamera_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -57,10 +50,7 @@ void Asot_frontend_01_a_start_terrain_C::K2Node_MatineeController_10_MatineeSequ
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_start_terrain.sot_frontend_01_a_start_terrain_C.K2Node_MatineeController_10_MatineeSequenceFinished"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_start_terrain_C_K2Node_MatineeController_10_MatineeSequenceFinished_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -73,10 +63,7 @@ void Asot_frontend_01_a_start_terrain_C::K2Node_MatineeController_10_Finished()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_start_terrain.sot_frontend_01_a_start_terrain_C.K2Node_MatineeController_10_Finished"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_start_terrain_C_K2Node_MatineeController_10_Finished_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -89,10 +76,7 @@ void Asot_frontend_01_a_start_terrain_C::PlayIntroMatinee()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_start_terrain.sot_frontend_01_a_start_terrain_C.PlayIntroMatinee"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_start_terrain_C_PlayIntroMatinee_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -105,10 +89,7 @@ void Asot_frontend_01_a_start_terrain_C::EnteredEngageState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_start_terrain.sot_frontend_01_a_start_terrain_C.EnteredEngageState"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_start_terrain_C_EnteredEngageState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -123,11 +104,7 @@ void Asot_frontend_01_a_start_terrain_C::SetMatineePlaybackRate(float PlaybackRa
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_start_terrain.sot_frontend_01_a_start_terrain_C.SetMatineePlaybackRate"));
 
-	struct
-	{
-		float                          PlaybackRate;
-	} params;
-
+	Asot_frontend_01_a_start_terrain_C_SetMatineePlaybackRate_Params params;
 	params.PlaybackRate = PlaybackRate;
 
 	UObject::ProcessEvent(fn, &params);
@@ -141,10 +118,7 @@ void Asot_frontend_01_a_start_terrain_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_start_terrain.sot_frontend_01_a_start_terrain_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_start_terrain_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -157,10 +131,7 @@ void Asot_frontend_01_a_start_terrain_C::ExitIntroMatinee()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_start_terrain.sot_frontend_01_a_start_terrain_C.ExitIntroMatinee"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_start_terrain_C_ExitIntroMatinee_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -175,11 +146,7 @@ void Asot_frontend_01_a_start_terrain_C::ExecuteUbergraph_sot_frontend_01_a_star
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_start_terrain.sot_frontend_01_a_start_terrain_C.ExecuteUbergraph_sot_frontend_01_a_start_terrain"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	Asot_frontend_01_a_start_terrain_C_ExecuteUbergraph_sot_frontend_01_a_start_terrain_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

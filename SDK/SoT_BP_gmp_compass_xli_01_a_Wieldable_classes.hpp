@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_gmp_compass_xli_01_a_Wieldable.BP_gmp_compass_xli_01_a_Wieldable_C
-// 0x0000 (0x0858 - 0x0858)
+// 0x0000 (0x0878 - 0x0878)
 class ABP_gmp_compass_xli_01_a_Wieldable_C : public ABP_Compass_C
 {
 public:

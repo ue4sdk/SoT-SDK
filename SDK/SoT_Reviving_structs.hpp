@@ -12,8 +12,8 @@
 #include "SoT_Engine_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_Interaction_classes.hpp"
-#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_StatusEffects_classes.hpp"
+#include "SoT_ActionStateMachine_classes.hpp"
 #include "SoT_RareAudio_classes.hpp"
 #include "SoT_Athena_classes.hpp"
 
@@ -38,14 +38,14 @@ struct FModeSpecificReviveSettings
 	float                                              DeathCameraStartDelay;                                    // 0x001C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	float                                              ReviveWindowDuration;                                     // 0x0020(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	float                                              GhostFadeDuration;                                        // 0x0024(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
-	class UReviveSettings*                             CachedReviveSettings;                                     // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UReviveSettings*                                   CachedReviveSettings;                                     // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 };
 
 // ScriptStruct Reviving.ReviveEffectsValues
 // 0x0020
 struct FReviveEffectsValues
 {
-	class UMaterialInstanceDynamic*                    AstralCordPostProcessMID;                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UMaterialInstanceDynamic*                          AstralCordPostProcessMID;                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0008(0x0018) MISSED OFFSET
 };
 
@@ -88,8 +88,8 @@ struct FEventRevivableRepresentationSpawnStarted
 // 0x0038 (0x0068 - 0x0030)
 struct FReviveableActionStateConstructionInfo : public FActorActionStateConstructionInfo
 {
-	class UClass*                                      ActionStateId;                                            // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FDamageInstance                             DamageInstance;                                           // 0x0038(0x0028)
+	UClass*                                            ActionStateId;                                            // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	FDamageInstance                                    DamageInstance;                                           // 0x0038(0x0028)
 	TEnumAsByte<ECharacterDeathType>                   CharacterDeathType;                                       // 0x0060(0x0001) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ECharacterType>                        CharacterType;                                            // 0x0061(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x0062(0x0006) MISSED OFFSET
@@ -108,7 +108,7 @@ struct FRevivedActionStateParams
 {
 	float                                              HealthRegained;                                           // 0x0000(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              ReviveDuration;                                           // 0x0004(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 ReviveGaspAudio;                                          // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UWwiseEvent*                                       ReviveGaspAudio;                                          // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Reviving.ReviveableActionStateStarted
@@ -122,7 +122,7 @@ struct FReviveableActionStateStarted
 // 0x0008
 struct FEventCharacterDiedDuringReviving
 {
-	class ACharacter*                                  OwningCharacter;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	ACharacter*                                        OwningCharacter;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Reviving.EventRevivePlayerActionStateLeft
@@ -199,19 +199,19 @@ struct FRevivingWindowEnd
 // 0x0038
 struct FRevivingWindowStart
 {
-	struct FDamageInstance                             DamageInstance;                                           // 0x0000(0x0028)
+	FDamageInstance                                    DamageInstance;                                           // 0x0000(0x0028)
 	TEnumAsByte<ECharacterDeathType>                   CharacterDeathType;                                       // 0x0028(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-	class ACharacter*                                  RevivableCharacter;                                       // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	ACharacter*                                        RevivableCharacter;                                       // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Reviving.RevivePlayerActionStateConstructionInfo
 // 0x0030 (0x0060 - 0x0030)
 struct FRevivePlayerActionStateConstructionInfo : public FActorActionStateConstructionInfo
 {
-	struct FNetActorPtr                                CharacterReviving;                                        // 0x0030(0x0014)
-	struct FNetSubObjectPtr                            CharacterBeingRevived;                                    // 0x0044(0x0014)
-	class UClass*                                      InputID;                                                  // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
+	FNetActorPtr                                       CharacterReviving;                                        // 0x0030(0x0014)
+	FNetSubObjectPtr                                   CharacterBeingRevived;                                    // 0x0044(0x0014)
+	UClass*                                            InputID;                                                  // 0x0058(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

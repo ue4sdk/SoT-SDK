@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_TT_Effigy_L_classes.hpp"
+#include "SoT_BP_Anim_TT_Effigy_L_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void UBP_Anim_TT_Effigy_L_C::ExecuteUbergraph_BP_Anim_TT_Effigy_L(int EntryPoint
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_TT_Effigy_L.BP_Anim_TT_Effigy_L_C.ExecuteUbergraph_BP_Anim_TT_Effigy_L"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Anim_TT_Effigy_L_C_ExecuteUbergraph_BP_Anim_TT_Effigy_L_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

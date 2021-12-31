@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Tethering_classes.hpp"
+#include "SoT_Tethering_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function Tethering.DynamicCordRenderComponent.SetCordEndPointB
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USceneComponent*         EndPointB                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// USceneComponent*               EndPointB                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UDynamicCordRenderComponent::SetCordEndPointB(class USceneComponent* EndPointB)
+void UDynamicCordRenderComponent::SetCordEndPointB(USceneComponent* EndPointB)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tethering.DynamicCordRenderComponent.SetCordEndPointB"));
 
-	struct
-	{
-		class USceneComponent*         EndPointB;
-	} params;
-
+	UDynamicCordRenderComponent_SetCordEndPointB_Params params;
 	params.EndPointB = EndPointB;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UDynamicCordRenderComponent::SetCordEndPointB(class USceneComponent* EndPoi
 // Function Tethering.DynamicCordRenderComponent.SetCordEndPointA
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USceneComponent*         EndPointA                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// USceneComponent*               EndPointA                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void UDynamicCordRenderComponent::SetCordEndPointA(class USceneComponent* EndPointA)
+void UDynamicCordRenderComponent::SetCordEndPointA(USceneComponent* EndPointA)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tethering.DynamicCordRenderComponent.SetCordEndPointA"));
 
-	struct
-	{
-		class USceneComponent*         EndPointA;
-	} params;
-
+	UDynamicCordRenderComponent_SetCordEndPointA_Params params;
 	params.EndPointA = EndPointA;
 
 	UObject::ProcessEvent(fn, &params);

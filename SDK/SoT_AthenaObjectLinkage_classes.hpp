@@ -45,11 +45,11 @@ public:
 	}
 
 
-	static bool IsValid(const struct FLinkEndpointId& Id);
-	static bool IsPathed(const struct FLinkEndpointId& Id);
-	static struct FLinkEndpointId CreateEndpointId(const class FString& String);
-	static class FString Conv_LinkEndpointIdToString(const struct FLinkEndpointId& Id);
-	static struct FLinkEndpointId CombineEndpointIds(const struct FLinkEndpointId& Root, const struct FLinkEndpointId& path);
+	static bool IsValid(const FLinkEndpointId& Id);
+	static bool IsPathed(const FLinkEndpointId& Id);
+	static FLinkEndpointId CreateEndpointId(const FString& String);
+	static FString Conv_LinkEndpointIdToString(const FLinkEndpointId& Id);
+	static FLinkEndpointId CombineEndpointIds(const FLinkEndpointId& Root, const FLinkEndpointId& path);
 };
 
 
@@ -66,8 +66,8 @@ public:
 	}
 
 
-	void ReceiveLink(const struct FLinkEndpointId& Id, class AActor* Instance);
-	void LoseLink(const struct FLinkEndpointId& Id);
+	void ReceiveLink(const FLinkEndpointId& Id, AActor* Instance);
+	void LoseLink(const FLinkEndpointId& Id);
 };
 
 
@@ -77,7 +77,7 @@ class ULinkerComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0xC8];                                      // 0x00C8(0x00C8) MISSED OFFSET
-	TArray<class UEndPlayHandler*>                     EndPlayHandlers;                                          // 0x0190(0x0010) (ZeroConstructor)
+	TArray<UEndPlayHandler*>                           EndPlayHandlers;                                          // 0x0190(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -86,14 +86,14 @@ public:
 	}
 
 
-	void UnregisterLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID);
-	void UnregisterEndpoint(const struct FLinkEndpointId& Id);
-	void SetParent(class AActor* Parent);
-	TEnumAsByte<EAddLinkResult> RegisterLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID);
-	TEnumAsByte<EAddEndpointResult> RegisterEndpoint(const struct FLinkEndpointId& Id, class AActor* Source);
-	void OnEndpointRemovedFromChild(class AActor* Child, const struct FLinkEndpointId& Id);
-	void OnEndpointAddedToChild(class AActor* Child, const struct FLinkEndpointId& Id, class AActor* Instance);
-	class AActor* LookupEndpoint(const struct FLinkEndpointId& Id);
+	void UnregisterLink(const FLinkEndpointId& SourceId, const FLinkEndpointId& TargetID);
+	void UnregisterEndpoint(const FLinkEndpointId& Id);
+	void SetParent(AActor* Parent);
+	TEnumAsByte<EAddLinkResult> RegisterLink(const FLinkEndpointId& SourceId, const FLinkEndpointId& TargetID);
+	TEnumAsByte<EAddEndpointResult> RegisterEndpoint(const FLinkEndpointId& Id, AActor* Source);
+	void OnEndpointRemovedFromChild(AActor* Child, const FLinkEndpointId& Id);
+	void OnEndpointAddedToChild(AActor* Child, const FLinkEndpointId& Id, AActor* Instance);
+	AActor* LookupEndpoint(const FLinkEndpointId& Id);
 	int GetNumSetLinks();
 	int GetNumRegisteredLinks();
 	int GetNumRegisteredEndpoints();
@@ -114,14 +114,14 @@ public:
 	}
 
 
-	void SetParent(class AActor* Parent);
-	void RemoveLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID);
-	void RemoveEndpoint(const struct FLinkEndpointId& Id);
-	void OnEndpointRemovedFromChild(class AActor* Child, const struct FLinkEndpointId& Id);
-	void OnEndpointAddedToChild(class AActor* Child, const struct FLinkEndpointId& Id, class AActor* Instance);
-	class AActor* LookupEndpoint(const struct FLinkEndpointId& Id);
-	bool AddLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID);
-	bool AddEndpoint(const struct FLinkEndpointId& Id, class AActor* Instance);
+	void SetParent(AActor* Parent);
+	void RemoveLink(const FLinkEndpointId& SourceId, const FLinkEndpointId& TargetID);
+	void RemoveEndpoint(const FLinkEndpointId& Id);
+	void OnEndpointRemovedFromChild(AActor* Child, const FLinkEndpointId& Id);
+	void OnEndpointAddedToChild(AActor* Child, const FLinkEndpointId& Id, AActor* Instance);
+	AActor* LookupEndpoint(const FLinkEndpointId& Id);
+	bool AddLink(const FLinkEndpointId& SourceId, const FLinkEndpointId& TargetID);
+	bool AddEndpoint(const FLinkEndpointId& Id, AActor* Instance);
 };
 
 

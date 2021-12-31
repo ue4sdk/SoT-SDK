@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SafeZoneReservationFramework_classes.hpp"
+#include "SoT_SafeZoneReservationFramework_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void USafeZoneComponent::SafeZoneIsEmpty__DelegateSignature()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("DelegateFunction SafeZoneReservationFramework.SafeZoneComponent.SafeZoneIsEmpty__DelegateSignature"));
 
-	struct
-	{
-	} params;
-
+	USafeZoneComponent_SafeZoneIsEmpty__DelegateSignature_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void USafeZoneComponent::OnRep_UpdateCollisionProfile()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.OnRep_UpdateCollisionProfile"));
 
-	struct
-	{
-	} params;
-
+	USafeZoneComponent_OnRep_UpdateCollisionProfile_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void USafeZoneComponent::OnRep_EmptyStateChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.OnRep_EmptyStateChanged"));
 
-	struct
-	{
-	} params;
-
+	USafeZoneComponent_OnRep_EmptyStateChanged_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -67,10 +58,7 @@ void USafeZoneComponent::DeactivateSafeZone()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.DeactivateSafeZone"));
 
-	struct
-	{
-	} params;
-
+	USafeZoneComponent_DeactivateSafeZone_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -83,10 +71,7 @@ void USafeZoneComponent::DeactivateCollider()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.DeactivateCollider"));
 
-	struct
-	{
-	} params;
-
+	USafeZoneComponent_DeactivateCollider_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -99,10 +84,7 @@ void USafeZoneComponent::ActivateSafeZone()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SafeZoneReservationFramework.SafeZoneComponent.ActivateSafeZone"));
 
-	struct
-	{
-	} params;
-
+	USafeZoneComponent_ActivateSafeZone_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

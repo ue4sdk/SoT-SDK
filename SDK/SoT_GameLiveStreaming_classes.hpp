@@ -38,7 +38,7 @@ public:
 class UQueryLiveStreamsCallbackProxy : public UOnlineBlueprintCallProxyBase
 {
 public:
-	struct FScriptMulticastDelegate                    OnQueriedLiveStreams;                                     // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	FScriptMulticastDelegate                           OnQueriedLiveStreams;                                     // 0x0028(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0038(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -48,7 +48,7 @@ public:
 	}
 
 
-	static class UQueryLiveStreamsCallbackProxy* QueryLiveStreams(const class FString& GameName);
+	static UQueryLiveStreamsCallbackProxy* QueryLiveStreams(const FString& GameName);
 };
 
 

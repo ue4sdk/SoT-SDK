@@ -12,6 +12,16 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum WwiseAudio.EAnimNotify_WwiseSound_PerspectiveRestriction
+enum class EAnimNotify_WwiseSound_PerspectiveRestriction : uint8_t
+{
+	EAnimNotify_WwiseSound_PerspectiveRestriction__NoRestriction = 0,
+	EAnimNotify_WwiseSound_PerspectiveRestriction__FirstPersonOnly = 1,
+	EAnimNotify_WwiseSound_PerspectiveRestriction__ThirdPersonOnly = 2,
+	EAnimNotify_WwiseSound_PerspectiveRestriction__EAnimNotify_WwiseSound_MAX = 3
+};
+
+
 // Enum WwiseAudio.EWwiseEventDurationType
 enum class EWwiseEventDurationType : uint8_t
 {

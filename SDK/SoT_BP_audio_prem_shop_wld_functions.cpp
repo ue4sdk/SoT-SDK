@@ -1,10 +1,10 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_audio_prem_shop_wld_classes.hpp"
+#include "SoT_BP_audio_prem_shop_wld_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_audio_prem_shop_wld_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_prem_shop_wld.BP_audio_prem_shop_wld_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_audio_prem_shop_wld_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_audio_prem_shop_wld_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_prem_shop_wld.BP_audio_prem_shop_wld_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_audio_prem_shop_wld_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -57,15 +51,7 @@ void ABP_audio_prem_shop_wld_C::BndEvt__AudioSpace_K2Node_ComponentBoundEvent_0_
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_prem_shop_wld.BP_audio_prem_shop_wld_C.BndEvt__AudioSpace_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature"));
 
-	struct
-	{
-		class AActor*                  OtherActor;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
-		bool                           bFromSweep;
-		struct FHitResult              SweepResult;
-	} params;
-
+	ABP_audio_prem_shop_wld_C_BndEvt__AudioSpace_K2Node_ComponentBoundEvent_0_ComponentBeginOverlapSignature__DelegateSignature_Params params;
 	params.OtherActor = OtherActor;
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
@@ -85,11 +71,7 @@ void ABP_audio_prem_shop_wld_C::ExecuteUbergraph_BP_audio_prem_shop_wld(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_prem_shop_wld.BP_audio_prem_shop_wld_C.ExecuteUbergraph_BP_audio_prem_shop_wld"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_audio_prem_shop_wld_C_ExecuteUbergraph_BP_audio_prem_shop_wld_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

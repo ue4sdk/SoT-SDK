@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CylinderLightingZone_classes.hpp"
+#include "SoT_BP_CylinderLightingZone_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_CylinderLightingZone_C::DrawCylinder()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CylinderLightingZone.BP_CylinderLightingZone_C.DrawCylinder"));
 
-	struct
-	{
-	} params;
-
+	ABP_CylinderLightingZone_C_DrawCylinder_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_CylinderLightingZone_C::Update_3D_Lighting_Zone()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CylinderLightingZone.BP_CylinderLightingZone_C.Update 3D Lighting Zone"));
 
-	struct
-	{
-	} params;
-
+	ABP_CylinderLightingZone_C_Update_3D_Lighting_Zone_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void ABP_CylinderLightingZone_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CylinderLightingZone.BP_CylinderLightingZone_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_CylinderLightingZone_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -67,10 +58,7 @@ void ABP_CylinderLightingZone_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CylinderLightingZone.BP_CylinderLightingZone_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_CylinderLightingZone_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -83,10 +71,7 @@ void ABP_CylinderLightingZone_C::DrawDebugCylinder()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CylinderLightingZone.BP_CylinderLightingZone_C.DrawDebugCylinder"));
 
-	struct
-	{
-	} params;
-
+	ABP_CylinderLightingZone_C_DrawDebugCylinder_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -99,10 +84,7 @@ void ABP_CylinderLightingZone_C::ClearDebugCylinder()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CylinderLightingZone.BP_CylinderLightingZone_C.ClearDebugCylinder"));
 
-	struct
-	{
-	} params;
-
+	ABP_CylinderLightingZone_C_ClearDebugCylinder_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -117,11 +99,7 @@ void ABP_CylinderLightingZone_C::ExecuteUbergraph_BP_CylinderLightingZone(int En
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CylinderLightingZone.BP_CylinderLightingZone_C.ExecuteUbergraph_BP_CylinderLightingZone"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_CylinderLightingZone_C_ExecuteUbergraph_BP_CylinderLightingZone_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

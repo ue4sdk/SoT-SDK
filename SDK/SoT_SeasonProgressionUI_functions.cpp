@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SeasonProgressionUI_classes.hpp"
+#include "SoT_SeasonProgressionUI_parameters.hpp"
 
 namespace SDK
 {
@@ -19,33 +19,9 @@ void USeasonProgressionUIComponent::OnHUDDestroyed()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SeasonProgressionUI.SeasonProgressionUIComponent.OnHUDDestroyed"));
 
-	struct
-	{
-	} params;
-
+	USeasonProgressionUIComponent_OnHUDDestroyed_Params params;
 
 	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function SeasonProgressionUI.SeasonProgressionUICompositeInputHandler.OnMenuButtonPressed
-// (Final, Native, Private)
-// Parameters:
-// TEnumAsByte<EInputHandlerResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
-
-TEnumAsByte<EInputHandlerResult> USeasonProgressionUICompositeInputHandler::OnMenuButtonPressed()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function SeasonProgressionUI.SeasonProgressionUICompositeInputHandler.OnMenuButtonPressed"));
-
-	struct
-	{
-		TEnumAsByte<EInputHandlerResult> ReturnValue;
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-
-	return params.ReturnValue;
 }
 
 

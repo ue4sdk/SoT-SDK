@@ -19,7 +19,7 @@ namespace SDK
 class ABP_SailHoist_C : public ASailHoist
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UInteractableComponent*                            Interactable;                                             // 0x07E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -28,7 +28,7 @@ public:
 	}
 
 
-	struct FDockableInfo GetDockableInfo();
+	FDockableInfo GetDockableInfo();
 	void UserConstructionScript();
 };
 

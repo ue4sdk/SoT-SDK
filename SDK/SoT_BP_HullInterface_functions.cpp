@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_HullInterface_classes.hpp"
+#include "SoT_BP_HullInterface_parameters.hpp"
 
 namespace SDK
 {
@@ -15,25 +15,17 @@ namespace SDK
 // Function BP_HullInterface.BP_HullInterface_C.Apply Hit
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                 HitPosition                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 HitNormal                      (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        HitPosition                    (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        HitNormal                      (Parm, ZeroConstructor, IsPlainOldData)
 // float                          HitStrength                    (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           Has_Decal                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UDecalComponent*         Decal                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// UDecalComponent*               Decal                          (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 
-void UBP_HullInterface_C::Apply_Hit(const struct FVector& HitPosition, const struct FVector& HitNormal, float HitStrength, bool Has_Decal, class UDecalComponent** Decal)
+void UBP_HullInterface_C::Apply_Hit(const FVector& HitPosition, const FVector& HitNormal, float HitStrength, bool Has_Decal, UDecalComponent** Decal)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_HullInterface.BP_HullInterface_C.Apply Hit"));
 
-	struct
-	{
-		struct FVector                 HitPosition;
-		struct FVector                 HitNormal;
-		float                          HitStrength;
-		bool                           Has_Decal;
-		class UDecalComponent*         Decal;
-	} params;
-
+	UBP_HullInterface_C_Apply_Hit_Params params;
 	params.HitPosition = HitPosition;
 	params.HitNormal = HitNormal;
 	params.HitStrength = HitStrength;

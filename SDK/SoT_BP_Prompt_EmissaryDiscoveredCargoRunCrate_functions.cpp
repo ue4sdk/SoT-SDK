@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_EmissaryDiscoveredCargoRunCrate_classes.hpp"
+#include "SoT_BP_Prompt_EmissaryDiscoveredCargoRunCrate_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.OnEmissaryDiscoveredCargoRunCrate
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryDiscoveredCargoRunCrateNetworkEvent NewParam                       (Parm)
+// FEmissaryDiscoveredCargoRunCrateNetworkEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::OnEmissaryDiscoveredCargoRunCrate(const struct FEmissaryDiscoveredCargoRunCrateNetworkEvent& NewParam)
+void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::OnEmissaryDiscoveredCargoRunCrate(const FEmissaryDiscoveredCargoRunCrateNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.OnEmissaryDiscoveredCargoRunCrate"));
 
-	struct
-	{
-		struct FEmissaryDiscoveredCargoRunCrateNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_OnEmissaryDiscoveredCargoRunCrate_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::OnEmissaryDiscoveredCargoRunC
 // Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.EmissaryDiscoveredCargoRunCrate
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryDiscoveredCargoRunCrateNetworkEvent NewParam                       (Parm)
+// FEmissaryDiscoveredCargoRunCrateNetworkEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::EmissaryDiscoveredCargoRunCrate(const struct FEmissaryDiscoveredCargoRunCrateNetworkEvent& NewParam)
+void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::EmissaryDiscoveredCargoRunCrate(const FEmissaryDiscoveredCargoRunCrateNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.EmissaryDiscoveredCargoRunCrate"));
 
-	struct
-	{
-		struct FEmissaryDiscoveredCargoRunCrateNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_EmissaryDiscoveredCargoRunCrate_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -59,10 +51,7 @@ void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -75,10 +64,7 @@ void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::RegisterOtherEvents_Implement
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.RegisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_RegisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -91,10 +77,7 @@ void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::UnregisterOtherEvents_Impleme
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,11 +92,7 @@ void UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C::ExecuteUbergraph_BP_Prompt_Em
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryDiscoveredCargoRunCrate.BP_Prompt_EmissaryDiscoveredCargoRunCrate_C.ExecuteUbergraph_BP_Prompt_EmissaryDiscoveredCargoRunCrate"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_EmissaryDiscoveredCargoRunCrate_C_ExecuteUbergraph_BP_Prompt_EmissaryDiscoveredCargoRunCrate_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

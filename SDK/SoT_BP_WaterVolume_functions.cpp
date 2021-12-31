@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_WaterVolume_classes.hpp"
+#include "SoT_BP_WaterVolume_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_WaterVolume_C::CollectRippleGenerators()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WaterVolume.BP_WaterVolume_C.CollectRippleGenerators"));
 
-	struct
-	{
-	} params;
-
+	ABP_WaterVolume_C_CollectRippleGenerators_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_WaterVolume_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WaterVolume.BP_WaterVolume_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_WaterVolume_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void ABP_WaterVolume_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WaterVolume.BP_WaterVolume_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_WaterVolume_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -69,11 +60,7 @@ void ABP_WaterVolume_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WaterVolume.BP_WaterVolume_C.ReceiveActorBeginOverlap"));
 
-	struct
-	{
-		class AActor*                  OtherActor;
-	} params;
-
+	ABP_WaterVolume_C_ReceiveActorBeginOverlap_Params params;
 	params.OtherActor = OtherActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -89,11 +76,7 @@ void ABP_WaterVolume_C::ReceiveActorEndOverlap(class AActor* OtherActor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WaterVolume.BP_WaterVolume_C.ReceiveActorEndOverlap"));
 
-	struct
-	{
-		class AActor*                  OtherActor;
-	} params;
-
+	ABP_WaterVolume_C_ReceiveActorEndOverlap_Params params;
 	params.OtherActor = OtherActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -109,11 +92,7 @@ void ABP_WaterVolume_C::ExecuteUbergraph_BP_WaterVolume(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_WaterVolume.BP_WaterVolume_C.ExecuteUbergraph_BP_WaterVolume"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_WaterVolume_C_ExecuteUbergraph_BP_WaterVolume_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

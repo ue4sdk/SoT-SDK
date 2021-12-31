@@ -19,9 +19,9 @@ namespace SDK
 class ABP_LargeShip_CageLatch_03_a_C : public APetCageSwitchMechanismTrigger
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0568(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        cap_cage_door_03_a;                                       // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x0568(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	UStaticMeshComponent*                              cap_cage_door_03_a;                                       // 0x0570(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UInteractableComponent*                            Interactable;                                             // 0x0578(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,7 +30,7 @@ public:
 	}
 
 
-	struct FVector GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius);
+	FVector GetClosestInteractionPoint(const FVector& ReferencePosition, float* OutInteractionPointRadius);
 	void UserConstructionScript();
 	void OnAnimationStarted();
 	void OnAnimationCompleted();

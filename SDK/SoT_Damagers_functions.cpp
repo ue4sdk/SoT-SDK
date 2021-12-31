@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Damagers_classes.hpp"
+#include "SoT_Damagers_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void URadialDamagerComponent::SetDamageRadius(float Radius)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.RadialDamagerComponent.SetDamageRadius"));
 
-	struct
-	{
-		float                          Radius;
-	} params;
-
+	URadialDamagerComponent_SetDamageRadius_Params params;
 	params.Radius = Radius;
 
 	UObject::ProcessEvent(fn, &params);
@@ -39,10 +35,7 @@ void URadialDamagerComponent::EndDamage()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.RadialDamagerComponent.EndDamage"));
 
-	struct
-	{
-	} params;
-
+	URadialDamagerComponent_EndDamage_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -55,62 +48,7 @@ void URadialDamagerComponent::BeginDamage()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.RadialDamagerComponent.BeginDamage"));
 
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Damagers.ShipDamagerComponent.SetShape
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UPrimitiveComponent*     InShape                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
-
-void UShipDamagerComponent::SetShape(class UPrimitiveComponent* InShape)
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShipDamagerComponent.SetShape"));
-
-	struct
-	{
-		class UPrimitiveComponent*     InShape;
-	} params;
-
-	params.InShape = InShape;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Damagers.ShipDamagerComponent.EndDamage
-// (Final, Native, Public, BlueprintCallable)
-
-void UShipDamagerComponent::EndDamage()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShipDamagerComponent.EndDamage"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function Damagers.ShipDamagerComponent.BeginDamage
-// (Final, Native, Public, BlueprintCallable)
-
-void UShipDamagerComponent::BeginDamage()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShipDamagerComponent.BeginDamage"));
-
-	struct
-	{
-	} params;
-
+	URadialDamagerComponent_BeginDamage_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -119,17 +57,13 @@ void UShipDamagerComponent::BeginDamage()
 // Function Damagers.ShockwaveDamagerInterface.StartShockwaveAtLocation
 // (Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 StartLocation                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        StartLocation                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UShockwaveDamagerInterface::StartShockwaveAtLocation(const struct FVector& StartLocation)
+void UShockwaveDamagerInterface::StartShockwaveAtLocation(const FVector& StartLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShockwaveDamagerInterface.StartShockwaveAtLocation"));
 
-	struct
-	{
-		struct FVector                 StartLocation;
-	} params;
-
+	UShockwaveDamagerInterface_StartShockwaveAtLocation_Params params;
 	params.StartLocation = StartLocation;
 
 	UObject::ProcessEvent(fn, &params);
@@ -143,10 +77,7 @@ void UShockwaveDamagerInterface::StartShockwave()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShockwaveDamagerInterface.StartShockwave"));
 
-	struct
-	{
-	} params;
-
+	UShockwaveDamagerInterface_StartShockwave_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -155,17 +86,13 @@ void UShockwaveDamagerInterface::StartShockwave()
 // Function Damagers.ShockwaveDamagerInterface.IgnoreGhostShip
 // (Native, Public, BlueprintCallable)
 // Parameters:
-// class AAggressiveGhostShip*    Ship                           (Parm, ZeroConstructor, IsPlainOldData)
+// AAggressiveGhostShip*          Ship                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void UShockwaveDamagerInterface::IgnoreGhostShip(class AAggressiveGhostShip* Ship)
+void UShockwaveDamagerInterface::IgnoreGhostShip(AAggressiveGhostShip* Ship)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShockwaveDamagerInterface.IgnoreGhostShip"));
 
-	struct
-	{
-		class AAggressiveGhostShip*    Ship;
-	} params;
-
+	UShockwaveDamagerInterface_IgnoreGhostShip_Params params;
 	params.Ship = Ship;
 
 	UObject::ProcessEvent(fn, &params);
@@ -181,11 +108,7 @@ float UShockwaveDamagerInterface::GetShockwaveRadius()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShockwaveDamagerInterface.GetShockwaveRadius"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UShockwaveDamagerInterface_GetShockwaveRadius_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -202,11 +125,7 @@ float UShockwaveDamagerInterface::GetShockwaveDuration()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShockwaveDamagerInterface.GetShockwaveDuration"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UShockwaveDamagerInterface_GetShockwaveDuration_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -217,18 +136,56 @@ float UShockwaveDamagerInterface::GetShockwaveDuration()
 // Function Damagers.ShockwaveDamagerComponent.Multi_StartShockwave
 // (Final, Net, NetReliable, Native, Event, NetMulticast, Private, HasDefaults)
 // Parameters:
-// struct FVector                 InStartLocation                (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        InStartLocation                (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UShockwaveDamagerComponent::Multi_StartShockwave(const struct FVector& InStartLocation)
+void UShockwaveDamagerComponent::Multi_StartShockwave(const FVector& InStartLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShockwaveDamagerComponent.Multi_StartShockwave"));
 
-	struct
-	{
-		struct FVector                 InStartLocation;
-	} params;
-
+	UShockwaveDamagerComponent_Multi_StartShockwave_Params params;
 	params.InStartLocation = InStartLocation;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Damagers.ShipDamagerComponent.SetShape
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// UPrimitiveComponent*           InShape                        (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+
+void UShipDamagerComponent::SetShape(UPrimitiveComponent* InShape)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShipDamagerComponent.SetShape"));
+
+	UShipDamagerComponent_SetShape_Params params;
+	params.InShape = InShape;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Damagers.ShipDamagerComponent.EndDamage
+// (Final, Native, Public, BlueprintCallable)
+
+void UShipDamagerComponent::EndDamage()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShipDamagerComponent.EndDamage"));
+
+	UShipDamagerComponent_EndDamage_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Damagers.ShipDamagerComponent.BeginDamage
+// (Final, Native, Public, BlueprintCallable)
+
+void UShipDamagerComponent::BeginDamage()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Damagers.ShipDamagerComponent.BeginDamage"));
+
+	UShipDamagerComponent_BeginDamage_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

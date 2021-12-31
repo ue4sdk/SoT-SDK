@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Tales_classes.hpp"
+#include "SoT_Tales_parameters.hpp"
 
 namespace SDK
 {
@@ -12,22 +12,30 @@ namespace SDK
 //Functions
 //---------------------------------------------------------------------------
 
+// Function Tales.TaleQuestStep.Signal
+// (Final, Native, Public)
+
+void UTaleQuestStep::Signal()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestStep.Signal"));
+
+	UTaleQuestStep_Signal_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
 // Function Tales.TaleQuestCargoRunContractsService.GetContract
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FGuid                   Guid                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UTaleQuestCargoRunContract* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FGuid                          Guid                           (Parm, ZeroConstructor, IsPlainOldData)
+// UTaleQuestCargoRunContract*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UTaleQuestCargoRunContract* UTaleQuestCargoRunContractsService::GetContract(const struct FGuid& Guid)
+UTaleQuestCargoRunContract* UTaleQuestCargoRunContractsService::GetContract(const FGuid& Guid)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestCargoRunContractsService.GetContract"));
 
-	struct
-	{
-		struct FGuid                   Guid;
-		class UTaleQuestCargoRunContract* ReturnValue;
-	} params;
-
+	UTaleQuestCargoRunContractsService_GetContract_Params params;
 	params.Guid = Guid;
 
 	UObject::ProcessEvent(fn, &params);
@@ -39,25 +47,17 @@ class UTaleQuestCargoRunContract* UTaleQuestCargoRunContractsService::GetContrac
 // Function Tales.TaleQuestCargoRunContractsService.AddContract
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// TArray<class UClass*>          InItems                        (Parm, ZeroConstructor)
-// class AActor*                  InCollectFromNPC               (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  InDeliverToNPC                 (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<UClass*>                InItems                        (Parm, ZeroConstructor)
+// AActor*                        InCollectFromNPC               (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InDeliverToNPC                 (Parm, ZeroConstructor, IsPlainOldData)
 // int                            InTimeLimitInMinutes           (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGuid                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FGuid                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FGuid UTaleQuestCargoRunContractsService::AddContract(TArray<class UClass*> InItems, class AActor* InCollectFromNPC, class AActor* InDeliverToNPC, int InTimeLimitInMinutes)
+FGuid UTaleQuestCargoRunContractsService::AddContract(TArray<UClass*> InItems, AActor* InCollectFromNPC, AActor* InDeliverToNPC, int InTimeLimitInMinutes)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestCargoRunContractsService.AddContract"));
 
-	struct
-	{
-		TArray<class UClass*>          InItems;
-		class AActor*                  InCollectFromNPC;
-		class AActor*                  InDeliverToNPC;
-		int                            InTimeLimitInMinutes;
-		struct FGuid                   ReturnValue;
-	} params;
-
+	UTaleQuestCargoRunContractsService_AddContract_Params params;
 	params.InItems = InItems;
 	params.InCollectFromNPC = InCollectFromNPC;
 	params.InDeliverToNPC = InDeliverToNPC;
@@ -72,19 +72,14 @@ struct FGuid UTaleQuestCargoRunContractsService::AddContract(TArray<class UClass
 // Function Tales.TaleQuestMerchantContractsService.GetContract
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FGuid                   Guid                           (Parm, ZeroConstructor, IsPlainOldData)
-// class UTaleQuestMerchantContract* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FGuid                          Guid                           (Parm, ZeroConstructor, IsPlainOldData)
+// UTaleQuestMerchantContract*    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UTaleQuestMerchantContract* UTaleQuestMerchantContractsService::GetContract(const struct FGuid& Guid)
+UTaleQuestMerchantContract* UTaleQuestMerchantContractsService::GetContract(const FGuid& Guid)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestMerchantContractsService.GetContract"));
 
-	struct
-	{
-		struct FGuid                   Guid;
-		class UTaleQuestMerchantContract* ReturnValue;
-	} params;
-
+	UTaleQuestMerchantContractsService_GetContract_Params params;
 	params.Guid = Guid;
 
 	UObject::ProcessEvent(fn, &params);
@@ -96,23 +91,16 @@ class UTaleQuestMerchantContract* UTaleQuestMerchantContractsService::GetContrac
 // Function Tales.TaleQuestMerchantContractsService.AddContract
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// TArray<struct FTaleQuestDeliveryRequest> Requests                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// struct FName                   InDeliveryDestination          (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<FTaleQuestDeliveryRequest> Requests                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// FName                          InDeliveryDestination          (Parm, ZeroConstructor, IsPlainOldData)
 // float                          InTimeLimit                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FGuid                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FGuid                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FGuid UTaleQuestMerchantContractsService::AddContract(TArray<struct FTaleQuestDeliveryRequest> Requests, const struct FName& InDeliveryDestination, float InTimeLimit)
+FGuid UTaleQuestMerchantContractsService::AddContract(TArray<FTaleQuestDeliveryRequest> Requests, const FName& InDeliveryDestination, float InTimeLimit)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestMerchantContractsService.AddContract"));
 
-	struct
-	{
-		TArray<struct FTaleQuestDeliveryRequest> Requests;
-		struct FName                   InDeliveryDestination;
-		float                          InTimeLimit;
-		struct FGuid                   ReturnValue;
-	} params;
-
+	UTaleQuestMerchantContractsService_AddContract_Params params;
 	params.Requests = Requests;
 	params.InDeliveryDestination = InDeliveryDestination;
 	params.InTimeLimit = InTimeLimit;
@@ -132,11 +120,7 @@ void UTaleQuestSelectorServiceBlueprintFunctionLibrary::SetDebugVoyageSeed(int S
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestSelectorServiceBlueprintFunctionLibrary.SetDebugVoyageSeed"));
 
-	struct
-	{
-		int                            Seed;
-	} params;
-
+	UTaleQuestSelectorServiceBlueprintFunctionLibrary_SetDebugVoyageSeed_Params params;
 	params.Seed = Seed;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -151,10 +135,7 @@ void UTaleQuestSelectorServiceBlueprintFunctionLibrary::ResetVoyageDebugSeed()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestSelectorServiceBlueprintFunctionLibrary.ResetVoyageDebugSeed"));
 
-	struct
-	{
-	} params;
-
+	UTaleQuestSelectorServiceBlueprintFunctionLibrary_ResetVoyageDebugSeed_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -164,17 +145,13 @@ void UTaleQuestSelectorServiceBlueprintFunctionLibrary::ResetVoyageDebugSeed()
 // Function Tales.CutsceneResponsesTaleService.TrackResponseCoordinator
 // (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
-// class UCutsceneResponseCoordinator* Coordinator                    (Parm, ZeroConstructor, IsPlainOldData)
+// UCutsceneResponseCoordinator*  Coordinator                    (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCutsceneResponsesTaleService::TrackResponseCoordinator(class UCutsceneResponseCoordinator* Coordinator)
+void UCutsceneResponsesTaleService::TrackResponseCoordinator(UCutsceneResponseCoordinator* Coordinator)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.CutsceneResponsesTaleService.TrackResponseCoordinator"));
 
-	struct
-	{
-		class UCutsceneResponseCoordinator* Coordinator;
-	} params;
-
+	UCutsceneResponsesTaleService_TrackResponseCoordinator_Params params;
 	params.Coordinator = Coordinator;
 
 	UObject::ProcessEvent(fn, &params);
@@ -184,23 +161,16 @@ void UCutsceneResponsesTaleService::TrackResponseCoordinator(class UCutsceneResp
 // Function Tales.CutsceneResponsesTaleService.StartCutsceneResponseSheet
 // (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        TargetActor                    (Parm, ZeroConstructor, IsPlainOldData)
 // TScriptInterface<class UCutsceneResponsePlayerInterface> CutsceneResponsePlayer         (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ResponseSheetClass             (Parm, ZeroConstructor, IsPlainOldData)
-// class UCutsceneResponseSheet*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UClass*                        ResponseSheetClass             (Parm, ZeroConstructor, IsPlainOldData)
+// UCutsceneResponseSheet*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UCutsceneResponseSheet* UCutsceneResponsesTaleService::StartCutsceneResponseSheet(class AActor* TargetActor, const TScriptInterface<class UCutsceneResponsePlayerInterface>& CutsceneResponsePlayer, class UClass* ResponseSheetClass)
+UCutsceneResponseSheet* UCutsceneResponsesTaleService::StartCutsceneResponseSheet(AActor* TargetActor, const TScriptInterface<class UCutsceneResponsePlayerInterface>& CutsceneResponsePlayer, UClass* ResponseSheetClass)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.CutsceneResponsesTaleService.StartCutsceneResponseSheet"));
 
-	struct
-	{
-		class AActor*                  TargetActor;
-		TScriptInterface<class UCutsceneResponsePlayerInterface> CutsceneResponsePlayer;
-		class UClass*                  ResponseSheetClass;
-		class UCutsceneResponseSheet*  ReturnValue;
-	} params;
-
+	UCutsceneResponsesTaleService_StartCutsceneResponseSheet_Params params;
 	params.TargetActor = TargetActor;
 	params.CutsceneResponsePlayer = CutsceneResponsePlayer;
 	params.ResponseSheetClass = ResponseSheetClass;
@@ -218,10 +188,7 @@ void UCutsceneResponsesTaleService::ClearAllActiveResponseSheets()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.CutsceneResponsesTaleService.ClearAllActiveResponseSheets"));
 
-	struct
-	{
-	} params;
-
+	UCutsceneResponsesTaleService_ClearAllActiveResponseSheets_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -230,17 +197,13 @@ void UCutsceneResponsesTaleService::ClearAllActiveResponseSheets()
 // Function Tales.CutsceneResponsesTaleService.AddResponseSheetRelevantActor
 // (Final, BlueprintAuthorityOnly, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Actor                          (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Actor                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void UCutsceneResponsesTaleService::AddResponseSheetRelevantActor(class AActor* Actor)
+void UCutsceneResponsesTaleService::AddResponseSheetRelevantActor(AActor* Actor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.CutsceneResponsesTaleService.AddResponseSheetRelevantActor"));
 
-	struct
-	{
-		class AActor*                  Actor;
-	} params;
-
+	UCutsceneResponsesTaleService_AddResponseSheetRelevantActor_Params params;
 	params.Actor = Actor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -258,13 +221,7 @@ int UTaleQuestSelectorService::GetRandomIntegerInRange(int Minimum, int Maximum)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestSelectorService.GetRandomIntegerInRange"));
 
-	struct
-	{
-		int                            Minimum;
-		int                            Maximum;
-		int                            ReturnValue;
-	} params;
-
+	UTaleQuestSelectorService_GetRandomIntegerInRange_Params params;
 	params.Minimum = Minimum;
 	params.Maximum = Maximum;
 
@@ -277,21 +234,15 @@ int UTaleQuestSelectorService::GetRandomIntegerInRange(int Minimum, int Maximum)
 // Function Tales.TaleQuestMapService.UpdateMerchantMap
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   MapId                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FName                          MapId                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // int                            Index                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FTaleQuestDeliverableItem Deliverable                    (Parm)
+// FTaleQuestDeliverableItem      Deliverable                    (Parm)
 
-void UTaleQuestMapService::UpdateMerchantMap(const struct FName& MapId, int Index, const struct FTaleQuestDeliverableItem& Deliverable)
+void UTaleQuestMapService::UpdateMerchantMap(const FName& MapId, int Index, const FTaleQuestDeliverableItem& Deliverable)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestMapService.UpdateMerchantMap"));
 
-	struct
-	{
-		struct FName                   MapId;
-		int                            Index;
-		struct FTaleQuestDeliverableItem Deliverable;
-	} params;
-
+	UTaleQuestMapService_UpdateMerchantMap_Params params;
 	params.MapId = MapId;
 	params.Index = Index;
 	params.Deliverable = Deliverable;
@@ -303,17 +254,13 @@ void UTaleQuestMapService::UpdateMerchantMap(const struct FName& MapId, int Inde
 // Function Tales.TaleQuestMapService.AdvanceRiddleMap
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   MapId                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FName                          MapId                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UTaleQuestMapService::AdvanceRiddleMap(const struct FName& MapId)
+void UTaleQuestMapService::AdvanceRiddleMap(const FName& MapId)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Tales.TaleQuestMapService.AdvanceRiddleMap"));
 
-	struct
-	{
-		struct FName                   MapId;
-	} params;
-
+	UTaleQuestMapService_AdvanceRiddleMap_Params params;
 	params.MapId = MapId;
 
 	UObject::ProcessEvent(fn, &params);

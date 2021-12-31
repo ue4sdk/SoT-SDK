@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_Cannon_classes.hpp"
+#include "SoT_BP_Anim_Cannon_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_Anim_Cannon_C::AnimNotify_FireEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Cannon.BP_Anim_Cannon_C.AnimNotify_FireEnd"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_Cannon_C_AnimNotify_FireEnd_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void UBP_Anim_Cannon_C::ExecuteUbergraph_BP_Anim_Cannon(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_Cannon.BP_Anim_Cannon_C.ExecuteUbergraph_BP_Anim_Cannon"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Anim_Cannon_C_ExecuteUbergraph_BP_Anim_Cannon_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

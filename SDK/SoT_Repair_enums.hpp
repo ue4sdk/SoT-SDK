@@ -19,7 +19,8 @@ enum class ERepairableState : uint8_t
 	ERepairableState__Repairable   = 1,
 	ERepairableState__Repairing    = 2,
 	ERepairableState__Repaired     = 3,
-	ERepairableState__ERepairableState_MAX = 4
+	ERepairableState__UndoingRepair = 4,
+	ERepairableState__ERepairableState_MAX = 5
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_MaidenVoyage_RowboatTutorial_classes.hpp"
+#include "SoT_BP_Prompt_MaidenVoyage_RowboatTutorial_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnStrokeEndedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.OnStrokeEndedFunc"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_OnStrokeEndedFunc_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnLeaveRowboatFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.OnLeaveRowboatFunc"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_OnLeaveRowboatFunc_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -47,17 +41,13 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnLeaveRowboatFunc()
 // Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.OnSitInRowboatFunc
 // (Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEventPlayerTakenControlOfControllable EventPlayerTakenControlOfControllable (ConstParm, Parm, OutParm, ReferenceParm)
+// FEventPlayerTakenControlOfControllable EventPlayerTakenControlOfControllable (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnSitInRowboatFunc(const struct FEventPlayerTakenControlOfControllable& EventPlayerTakenControlOfControllable)
+void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnSitInRowboatFunc(const FEventPlayerTakenControlOfControllable& EventPlayerTakenControlOfControllable)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.OnSitInRowboatFunc"));
 
-	struct
-	{
-		struct FEventPlayerTakenControlOfControllable EventPlayerTakenControlOfControllable;
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_OnSitInRowboatFunc_Params params;
 	params.EventPlayerTakenControlOfControllable = EventPlayerTakenControlOfControllable;
 
 	UObject::ProcessEvent(fn, &params);
@@ -71,10 +61,7 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::ResetState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.ResetState"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_ResetState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -87,10 +74,7 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::PostInitialize()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.PostInitialize"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_PostInitialize_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -103,10 +87,7 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -119,10 +100,7 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::UnregisterOtherEvents_Implementa
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -131,17 +109,13 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::UnregisterOtherEvents_Implementa
 // Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.OnSitInRowboat
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEventPlayerTakenControlOfControllable Event                          (Parm)
+// FEventPlayerTakenControlOfControllable Event                          (Parm)
 
-void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnSitInRowboat(const struct FEventPlayerTakenControlOfControllable& Event)
+void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnSitInRowboat(const FEventPlayerTakenControlOfControllable& Event)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.OnSitInRowboat"));
 
-	struct
-	{
-		struct FEventPlayerTakenControlOfControllable Event;
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_OnSitInRowboat_Params params;
 	params.Event = Event;
 
 	UObject::ProcessEvent(fn, &params);
@@ -151,17 +125,13 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnSitInRowboat(const struct FEve
 // Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.OnLeaveRowboat
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEventPlayerReliquishedControlOfControllable Event                          (Parm)
+// FEventPlayerReliquishedControlOfControllable Event                          (Parm)
 
-void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnLeaveRowboat(const struct FEventPlayerReliquishedControlOfControllable& Event)
+void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnLeaveRowboat(const FEventPlayerReliquishedControlOfControllable& Event)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.OnLeaveRowboat"));
 
-	struct
-	{
-		struct FEventPlayerReliquishedControlOfControllable Event;
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_OnLeaveRowboat_Params params;
 	params.Event = Event;
 
 	UObject::ProcessEvent(fn, &params);
@@ -171,17 +141,13 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnLeaveRowboat(const struct FEve
 // Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.OnStrokeEnded
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEventOarStrokeEnded    Event                          (Parm, ZeroConstructor, IsPlainOldData)
+// FEventOarStrokeEnded           Event                          (Parm, ZeroConstructor, IsPlainOldData)
 
-void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnStrokeEnded(const struct FEventOarStrokeEnded& Event)
+void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::OnStrokeEnded(const FEventOarStrokeEnded& Event)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.OnStrokeEnded"));
 
-	struct
-	{
-		struct FEventOarStrokeEnded    Event;
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_OnStrokeEnded_Params params;
 	params.Event = Event;
 
 	UObject::ProcessEvent(fn, &params);
@@ -197,11 +163,7 @@ void UBP_Prompt_MaidenVoyage_RowboatTutorial_C::ExecuteUbergraph_BP_Prompt_Maide
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_MaidenVoyage_RowboatTutorial.BP_Prompt_MaidenVoyage_RowboatTutorial_C.ExecuteUbergraph_BP_Prompt_MaidenVoyage_RowboatTutorial"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_MaidenVoyage_RowboatTutorial_C_ExecuteUbergraph_BP_Prompt_MaidenVoyage_RowboatTutorial_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

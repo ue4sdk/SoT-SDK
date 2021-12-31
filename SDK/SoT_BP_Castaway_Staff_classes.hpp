@@ -15,10 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Castaway_Staff.BP_Castaway_Staff_C
-// 0x0000 (0x0518 - 0x0518)
-class ABP_Castaway_Staff_C : public AStaticMeshWieldableReplica
+// 0x0008 (0x03D8 - 0x03D0)
+class ABP_Castaway_Staff_C : public AActor
 {
 public:
+	class UStaticMeshComponent*                        StaticMesh;                                               // 0x03D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -26,6 +27,8 @@ public:
 		return ptr;
 	}
 
+
+	void UserConstructionScript();
 };
 
 

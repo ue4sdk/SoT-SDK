@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_DamageZoneInterface_classes.hpp"
+#include "SoT_BP_DamageZoneInterface_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void UBP_DamageZoneInterface_C::GetNumExternalHits(int* NumExternalHits)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.GetNumExternalHits"));
 
-	struct
-	{
-		int                            NumExternalHits;
-	} params;
-
+	UBP_DamageZoneInterface_C_GetNumExternalHits_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -41,10 +37,7 @@ void UBP_DamageZoneInterface_C::ClearDecalFlags()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.ClearDecalFlags"));
 
-	struct
-	{
-	} params;
-
+	UBP_DamageZoneInterface_C_ClearDecalFlags_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,17 +46,13 @@ void UBP_DamageZoneInterface_C::ClearDecalFlags()
 // Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.AddExternalHit
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FHullDamageHit          Hit_Data                       (Parm)
+// FHullDamageHit                 Hit_Data                       (Parm)
 
-void UBP_DamageZoneInterface_C::AddExternalHit(const struct FHullDamageHit& Hit_Data)
+void UBP_DamageZoneInterface_C::AddExternalHit(const FHullDamageHit& Hit_Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DamageZoneInterface.BP_DamageZoneInterface_C.AddExternalHit"));
 
-	struct
-	{
-		struct FHullDamageHit          Hit_Data;
-	} params;
-
+	UBP_DamageZoneInterface_C_AddExternalHit_Params params;
 	params.Hit_Data = Hit_Data;
 
 	UObject::ProcessEvent(fn, &params);

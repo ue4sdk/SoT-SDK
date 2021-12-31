@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Rowboat_WithFrontHarpoon.BP_Rowboat_WithFrontHarpoon_C
-// 0x0008 (0x09D0 - 0x09C8)
+// 0x0008 (0x0A38 - 0x0A30)
 class ABP_Rowboat_WithFrontHarpoon_C : public ABP_Rowboat_C
 {
 public:
-	class UChildActorComponent*                        Harpoon;                                                  // 0x09C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UChildActorComponent*                        Harpoon;                                                  // 0x0A30(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

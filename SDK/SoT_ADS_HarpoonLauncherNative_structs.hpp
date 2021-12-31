@@ -19,7 +19,7 @@ namespace SDK
 // 0x0028
 struct FADS_HarpoonLauncherNative
 {
-	struct FAthenaAnimationHarpoonLauncherAnimData     HarpoonLauncher_29_F70E24474F5C470823E14AA7216D9971;      // 0x0000(0x0028) (Edit, BlueprintVisible)
+	FAthenaAnimationHarpoonLauncherAnimData            HarpoonLauncher_29_F70E24474F5C470823E14AA7216D9971;      // 0x0000(0x0028) (Edit, BlueprintVisible)
 };
 
 }

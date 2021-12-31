@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishingFish_Plentifin_05_Colour_01_Olive_classes.hpp"
+#include "SoT_BP_FishingFish_Plentifin_05_Colour_01_Olive_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishingFish_Plentifin_05_Colour_01_Olive_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishingFish_Plentifin_05_Colour_01_Olive.BP_FishingFish_Plentifin_05_Colour_01_Olive_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_FishingFish_Plentifin_05_Colour_01_Olive_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

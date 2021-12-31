@@ -19,7 +19,7 @@ namespace SDK
 // 0x0068
 struct FADS_LadderNative
 {
-	struct FAthenaAnimationLadderAnimData              Ladder_35_854F2A494E1FB6EBCFF72B8AB260262B;               // 0x0000(0x0068) (Edit, BlueprintVisible)
+	FAthenaAnimationLadderAnimData                     Ladder_35_854F2A494E1FB6EBCFF72B8AB260262B;               // 0x0000(0x0068) (Edit, BlueprintVisible)
 };
 
 }

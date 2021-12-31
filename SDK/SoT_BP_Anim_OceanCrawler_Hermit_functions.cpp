@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_OceanCrawler_Hermit_classes.hpp"
+#include "SoT_BP_Anim_OceanCrawler_Hermit_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_Anim_OceanCrawler_Hermit_C::AnimNotify_NewAttack()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_OceanCrawler_Hermit.BP_Anim_OceanCrawler_Hermit_C.AnimNotify_NewAttack"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_OceanCrawler_Hermit_C_AnimNotify_NewAttack_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UBP_Anim_OceanCrawler_Hermit_C::AnimNotify_AttackCompleted()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_OceanCrawler_Hermit.BP_Anim_OceanCrawler_Hermit_C.AnimNotify_AttackCompleted"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_OceanCrawler_Hermit_C_AnimNotify_AttackCompleted_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void UBP_Anim_OceanCrawler_Hermit_C::AnimNotify_StartingHitReact()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_OceanCrawler_Hermit.BP_Anim_OceanCrawler_Hermit_C.AnimNotify_StartingHitReact"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_OceanCrawler_Hermit_C_AnimNotify_StartingHitReact_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -69,11 +60,7 @@ void UBP_Anim_OceanCrawler_Hermit_C::ExecuteUbergraph_BP_Anim_OceanCrawler_Hermi
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_OceanCrawler_Hermit.BP_Anim_OceanCrawler_Hermit_C.ExecuteUbergraph_BP_Anim_OceanCrawler_Hermit"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Anim_OceanCrawler_Hermit_C_ExecuteUbergraph_BP_Anim_OceanCrawler_Hermit_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

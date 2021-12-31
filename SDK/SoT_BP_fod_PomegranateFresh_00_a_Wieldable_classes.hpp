@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_PomegranateFresh_00_a_Wieldable.BP_fod_PomegranateFresh_00_a_Wieldable_C
-// 0x0000 (0x0848 - 0x0848)
+// 0x0000 (0x0858 - 0x0858)
 class ABP_fod_PomegranateFresh_00_a_Wieldable_C : public ABP_StaticWieldableIngestible_C
 {
 public:

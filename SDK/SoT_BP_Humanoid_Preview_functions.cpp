@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Humanoid_Preview_classes.hpp"
+#include "SoT_BP_Humanoid_Preview_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void UBP_Humanoid_Preview_C::ExecuteUbergraph_BP_Humanoid_Preview(int EntryPoint
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Humanoid_Preview.BP_Humanoid_Preview_C.ExecuteUbergraph_BP_Humanoid_Preview"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Humanoid_Preview_C_ExecuteUbergraph_BP_Humanoid_Preview_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

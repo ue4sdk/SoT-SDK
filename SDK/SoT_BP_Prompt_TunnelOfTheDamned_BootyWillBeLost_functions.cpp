@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_classes.hpp"
+#include "SoT_BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Prompt_TunnelOfTheDamned_BootyWillBeLost.BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C.On Crew Entered Radius
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FCrewEnteredTunnelOfTheDamnedPortalProximityEvent Event                          (Parm)
+// FCrewEnteredTunnelOfTheDamnedPortalProximityEvent Event                          (Parm)
 
-void UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C::On_Crew_Entered_Radius(const struct FCrewEnteredTunnelOfTheDamnedPortalProximityEvent& Event)
+void UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C::On_Crew_Entered_Radius(const FCrewEnteredTunnelOfTheDamnedPortalProximityEvent& Event)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_TunnelOfTheDamned_BootyWillBeLost.BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C.On Crew Entered Radius"));
 
-	struct
-	{
-		struct FCrewEnteredTunnelOfTheDamnedPortalProximityEvent Event;
-	} params;
-
+	UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C_On_Crew_Entered_Radius_Params params;
 	params.Event = Event;
 
 	UObject::ProcessEvent(fn, &params);
@@ -39,10 +35,7 @@ void UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_TunnelOfTheDamned_BootyWillBeLost.BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -55,10 +48,7 @@ void UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C::RegisterOtherEvents_Impleme
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_TunnelOfTheDamned_BootyWillBeLost.BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C.RegisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C_RegisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -71,10 +61,7 @@ void UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C::UnregisterOtherEvents_Imple
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_TunnelOfTheDamned_BootyWillBeLost.BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -83,17 +70,13 @@ void UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C::UnregisterOtherEvents_Imple
 // Function BP_Prompt_TunnelOfTheDamned_BootyWillBeLost.BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C.Crew Entered Tunnel of The Damned Portal Proximity
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FCrewEnteredTunnelOfTheDamnedPortalProximityEvent Event                          (Parm)
+// FCrewEnteredTunnelOfTheDamnedPortalProximityEvent Event                          (Parm)
 
-void UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C::Crew_Entered_Tunnel_of_The_Damned_Portal_Proximity(const struct FCrewEnteredTunnelOfTheDamnedPortalProximityEvent& Event)
+void UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C::Crew_Entered_Tunnel_of_The_Damned_Portal_Proximity(const FCrewEnteredTunnelOfTheDamnedPortalProximityEvent& Event)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_TunnelOfTheDamned_BootyWillBeLost.BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C.Crew Entered Tunnel of The Damned Portal Proximity"));
 
-	struct
-	{
-		struct FCrewEnteredTunnelOfTheDamnedPortalProximityEvent Event;
-	} params;
-
+	UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C_Crew_Entered_Tunnel_of_The_Damned_Portal_Proximity_Params params;
 	params.Event = Event;
 
 	UObject::ProcessEvent(fn, &params);
@@ -109,11 +92,7 @@ void UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C::ExecuteUbergraph_BP_Prompt_
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_TunnelOfTheDamned_BootyWillBeLost.BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C.ExecuteUbergraph_BP_Prompt_TunnelOfTheDamned_BootyWillBeLost"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_TunnelOfTheDamned_BootyWillBeLost_C_ExecuteUbergraph_BP_Prompt_TunnelOfTheDamned_BootyWillBeLost_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

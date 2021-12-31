@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CapstanRelease_classes.hpp"
+#include "SoT_BP_CapstanRelease_parameters.hpp"
 
 namespace SDK
 {
@@ -15,21 +15,15 @@ namespace SDK
 // Function BP_CapstanRelease.BP_CapstanRelease_C.GetClosestInteractionPoint
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                 ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          OutInteractionPointRadius      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FVector                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ABP_CapstanRelease_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
+FVector ABP_CapstanRelease_C::GetClosestInteractionPoint(const FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanRelease.BP_CapstanRelease_C.GetClosestInteractionPoint"));
 
-	struct
-	{
-		struct FVector                 ReferencePosition;
-		float                          OutInteractionPointRadius;
-		struct FVector                 ReturnValue;
-	} params;
-
+	ABP_CapstanRelease_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -48,10 +42,7 @@ void ABP_CapstanRelease_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CapstanRelease.BP_CapstanRelease_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_CapstanRelease_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

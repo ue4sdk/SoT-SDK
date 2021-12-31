@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SkeletonAIController_classes.hpp"
+#include "SoT_BP_SkeletonAIController_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_SkeletonAIController_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SkeletonAIController.BP_SkeletonAIController_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_SkeletonAIController_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -31,17 +28,13 @@ void ABP_SkeletonAIController_C::UserConstructionScript()
 // Function BP_SkeletonAIController.BP_SkeletonAIController_C.OnPossess
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class APawn*                   PossessedPawn                  (Parm, ZeroConstructor, IsPlainOldData)
+// APawn*                         PossessedPawn                  (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_SkeletonAIController_C::OnPossess(class APawn* PossessedPawn)
+void ABP_SkeletonAIController_C::OnPossess(APawn* PossessedPawn)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SkeletonAIController.BP_SkeletonAIController_C.OnPossess"));
 
-	struct
-	{
-		class APawn*                   PossessedPawn;
-	} params;
-
+	ABP_SkeletonAIController_C_OnPossess_Params params;
 	params.PossessedPawn = PossessedPawn;
 
 	UObject::ProcessEvent(fn, &params);
@@ -57,11 +50,7 @@ void ABP_SkeletonAIController_C::ExecuteUbergraph_BP_SkeletonAIController(int En
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SkeletonAIController.BP_SkeletonAIController_C.ExecuteUbergraph_BP_SkeletonAIController"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_SkeletonAIController_C_ExecuteUbergraph_BP_SkeletonAIController_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

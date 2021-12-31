@@ -19,9 +19,9 @@ namespace SDK
 class ABP_ShipStorageBarrel_Cannonball_C : public AStorageContainer
 {
 public:
-	class UReplenishableComponent*                     Replenishable;                                            // 0x04C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UShipTelemetrySubjectComponent*              ShipTelemetrySubject;                                     // 0x04C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStorageContainerComponent*                  StorageContainer;                                         // 0x04D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UReplenishableComponent*                           Replenishable;                                            // 0x04C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UShipTelemetrySubjectComponent*                    ShipTelemetrySubject;                                     // 0x04C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStorageContainerComponent*                        StorageContainer;                                         // 0x04D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

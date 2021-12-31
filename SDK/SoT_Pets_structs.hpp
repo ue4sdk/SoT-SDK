@@ -9,11 +9,11 @@
 #include "SoT_Basic.hpp"
 #include "SoT_Pets_enums.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_AIModule_classes.hpp"
 #include "SoT_AthenaAI_classes.hpp"
+#include "SoT_Interaction_classes.hpp"
+#include "SoT_AIModule_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
-#include "SoT_Interaction_classes.hpp"
 #include "SoT_RareAudio_classes.hpp"
 #include "SoT_ActionStateMachine_classes.hpp"
 
@@ -27,35 +27,35 @@ namespace SDK
 // 0x0008
 struct FHangoutSpotId
 {
-	struct FName                                       Name;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              Name;                                                     // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.PetHangoutSpotParams
 // 0x00B8
 struct FPetHangoutSpotParams
 {
-	class UClass*                                      PetType;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FFloatRange                                 HangoutTime;                                              // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWeightedPetAnimationSelector               AnimationSelector;                                        // 0x0018(0x00A0) (Edit, DisableEditOnInstance)
+	UClass*                                            PetType;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FFloatRange                                        HangoutTime;                                              // 0x0008(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FWeightedPetAnimationSelector                      AnimationSelector;                                        // 0x0018(0x00A0) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct Pets.HangoutSpotParams
 // 0x0028
 struct FHangoutSpotParams
 {
-	struct FName                                       HangoutSpotName;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              HangoutSpotName;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	TArray<struct FPetHangoutSpotParams>               PetParams;                                                // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FName                                       FeatureName;                                              // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	TArray<FPetHangoutSpotParams>                      PetParams;                                                // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	FName                                              FeatureName;                                              // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Pets.PetCustomiationOverrideMappingEntry
 // 0x0018
 struct FPetCustomiationOverrideMappingEntry
 {
-	class FString                                      Identifier;                                               // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	class UPetCustomisationOverrideDataAsset*          OverrideAsset;                                            // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FString                                            Identifier;                                               // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	UPetCustomisationOverrideDataAsset*                OverrideAsset;                                            // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct Pets.PetDangerHearingThreatResponse
@@ -71,10 +71,10 @@ struct FPetDangerHearingThreatResponse
 // 0x0020
 struct FPetDangerHearingThreat
 {
-	struct FName                                       SoundTag;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FName                                              SoundTag;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              TimeBeforeForgotten;                                      // 0x0008(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
-	TArray<struct FPetDangerHearingThreatResponse>     Responses;                                                // 0x0010(0x0010) (Edit, ZeroConstructor)
+	TArray<FPetDangerHearingThreatResponse>            Responses;                                                // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct Pets.PetFeedingAnimationData
@@ -90,11 +90,11 @@ struct FPetFeedingAnimationData
 // 0x0038
 struct FPetFeedingParams
 {
-	struct FPetFeedingAnimationData                    EatingAnimData;                                           // 0x0000(0x0008) (Edit)
-	struct FPetFeedingAnimationData                    FedAnimData;                                              // 0x0008(0x0008) (Edit)
-	struct FPetFeedingAnimationData                    NotFedAnimData;                                           // 0x0010(0x0008) (Edit)
-	struct FPetFeedingAnimationData                    SickAnimData;                                             // 0x0018(0x0008) (Edit)
-	struct FPetFeedingAnimationData                    RefusalAnimData;                                          // 0x0020(0x0008) (Edit)
+	FPetFeedingAnimationData                           EatingAnimData;                                           // 0x0000(0x0008) (Edit)
+	FPetFeedingAnimationData                           FedAnimData;                                              // 0x0008(0x0008) (Edit)
+	FPetFeedingAnimationData                           NotFedAnimData;                                           // 0x0010(0x0008) (Edit)
+	FPetFeedingAnimationData                           SickAnimData;                                             // 0x0018(0x0008) (Edit)
+	FPetFeedingAnimationData                           RefusalAnimData;                                          // 0x0020(0x0008) (Edit)
 	float                                              TimeToStartEating;                                        // 0x0028(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              TimeUntilGivingUp;                                        // 0x002C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              DistToleranceSquared;                                     // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -105,18 +105,18 @@ struct FPetFeedingParams
 // 0x0080
 struct FHangoutSpotPosition
 {
-	struct FHangoutSpotId                              Id;                                                       // 0x0000(0x0008) (Edit)
+	FHangoutSpotId                                     Id;                                                       // 0x0000(0x0008) (Edit)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0008(0x0008) MISSED OFFSET
-	struct FTransform                                  Transform;                                                // 0x0010(0x0030) (Edit, IsPlainOldData)
+	FTransform                                         Transform;                                                // 0x0010(0x0030) (Edit, IsPlainOldData)
 	TEnumAsByte<EHangoutRotationMode>                  RotationMode;                                             // 0x0040(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EShipDeck>                             ShipDeck;                                                 // 0x0041(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x6];                                       // 0x0042(0x0006) MISSED OFFSET
-	class APawn*                                       Occupier;                                                 // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+	APawn*                                             Occupier;                                                 // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x10];                                      // 0x0050(0x0010) MISSED OFFSET
 	bool                                               IsPerch;                                                  // 0x0060(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               NeedOverrideInteractionPoint;                             // 0x0061(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x2];                                       // 0x0062(0x0002) MISSED OFFSET
-	struct FVector                                     OverrideInteractionPointPosition;                         // 0x0064(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	FVector                                            OverrideInteractionPointPosition;                         // 0x0064(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               BlockPetEmoteReactions;                                   // 0x0070(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               IgnorePickupFromHangoutTooltipDisplayOffset;              // 0x0071(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData04[0xE];                                       // 0x0072(0x000E) MISSED OFFSET
@@ -126,18 +126,18 @@ struct FHangoutSpotPosition
 // 0x0018
 struct FPetCustomisation
 {
-	class FString                                      PetName;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FAIPartId                                   PetPartId;                                                // 0x0010(0x0008) (Edit, DisableEditOnInstance)
+	FString                                            PetName;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	FAIPartId                                          PetPartId;                                                // 0x0010(0x0008) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct Pets.PetListingTypeEntry
 // 0x0038
 struct FPetListingTypeEntry
 {
-	struct FStringAssetReference                       PetPartsCategory;                                         // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FStringClassReference                       PetType;                                                  // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FName                                       FeatureToggleName;                                        // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class FString                                      PetListingName;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	FStringAssetReference                              PetPartsCategory;                                         // 0x0000(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	FStringClassReference                              PetType;                                                  // 0x0010(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	FName                                              FeatureToggleName;                                        // 0x0020(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FString                                            PetListingName;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct Pets.PetsServiceParams
@@ -154,14 +154,14 @@ struct FPetsServiceParams
 	float                                              MinPetProximityRespawnDelay;                              // 0x001C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              MaxPetProximityRespawnDelay;                              // 0x0020(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              HeldPetDespawnDelay;                                      // 0x0024(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	TArray<class UClass*>                              IllegalShipsSizesForSpawn;                                // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<UClass*>                                    IllegalShipsSizesForSpawn;                                // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct Pets.PetRelationship
 // 0x0020
 struct FPetRelationship
 {
-	class APetItemInfo*                                PetInfo;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	APetItemInfo*                                      PetInfo;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0008(0x0018) MISSED OFFSET
 };
 
@@ -169,15 +169,15 @@ struct FPetRelationship
 // 0x00D8
 struct FReactStateMapping
 {
-	struct FName                                       AnimationID;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              AnimationID;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               CanTimeout;                                               // 0x0008(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
 	float                                              AnimationTimeout;                                         // 0x000C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FWeightedPetAnimationSelector               PetStateSelector;                                         // 0x0010(0x00A0) (Edit, DisableEditOnInstance)
+	FWeightedPetAnimationSelector                      PetStateSelector;                                         // 0x0010(0x00A0) (Edit, DisableEditOnInstance)
 	float                                              AnimationChance;                                          // 0x00B0(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FFloatRange                                 AnimationDelay;                                           // 0x00B4(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FFloatRange                                        AnimationDelay;                                           // 0x00B4(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x00C4(0x0004) MISSED OFFSET
-	TArray<class UClass*>                              IgnoringStrategies;                                       // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<UClass*>                                    IgnoringStrategies;                                       // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 };
 
 // ScriptStruct Pets.WieldablePetDropTimeout
@@ -193,7 +193,7 @@ struct FWieldablePetDropTimeout
 // 0x0010
 struct FWieldablePetFoodSourceEntry
 {
-	class AActor*                                      FoodSourceActor;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            FoodSourceActor;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	float                                              TimeUntilConsumption;                                     // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
@@ -211,7 +211,7 @@ struct FWieldablePetHungerAnimationData
 // 0x0020
 struct FPetTurnToFaceData
 {
-	struct FQuat                                       EndRotation;                                              // 0x0000(0x0010) (IsPlainOldData)
+	FQuat                                              EndRotation;                                              // 0x0000(0x0010) (IsPlainOldData)
 	float                                              RotationTime;                                             // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xC];                                       // 0x0014(0x000C) MISSED OFFSET
 };
@@ -234,7 +234,7 @@ struct FEventNewPetThreatDetected
 // 0x0008
 struct FEventPetDismissed
 {
-	class AActor*                                      DismissingActor;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            DismissingActor;                                          // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.DismissPetNotificationEvent
@@ -248,14 +248,14 @@ struct FDismissPetNotificationEvent
 // 0x0010
 struct FEventPetFoodBase
 {
-	struct FGuid                                       FeedingInteractionId;                                     // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              FeedingInteractionId;                                     // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPetRefusedFood
 // 0x0008 (0x0018 - 0x0010)
 struct FEventPetRefusedFood : public FEventPetFoodBase
 {
-	class AActor*                                      FeedingActor;                                             // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            FeedingActor;                                             // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPetReactedToFood
@@ -270,15 +270,15 @@ struct FEventPetReactedToFood : public FEventPetFoodBase
 // 0x0008 (0x0018 - 0x0010)
 struct FEventPetNotFed : public FEventPetFoodBase
 {
-	class AActor*                                      FeedingActor;                                             // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            FeedingActor;                                             // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPetFed
 // 0x0010 (0x0020 - 0x0010)
 struct FEventPetFed : public FEventPetFoodBase
 {
-	class AActor*                                      FedWithActor;                                             // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      FeedingActor;                                             // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            FedWithActor;                                             // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            FeedingActor;                                             // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPetPerchSpotEnabledStateChanged
@@ -292,7 +292,7 @@ struct FEventPetPerchSpotEnabledStateChanged
 // 0x0008
 struct FEventPetLeftHangout
 {
-	class AActor*                                      Pet;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Pet;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPetEnteredHangout
@@ -320,7 +320,7 @@ struct FEventPetSadnessBegin
 // 0x0008
 struct FEventPetOwnerAssigned
 {
-	class AActor*                                      Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Owner;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPetCustomisationComplete
@@ -341,8 +341,8 @@ struct FEventPetCustomisationReady
 // 0x0020
 struct FEventWieldablePetPutOnPerch
 {
-	class AActor*                                      Pet;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       HangoutSpotName;                                          // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Pet;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              HangoutSpotName;                                          // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	uint32_t                                           HangoutSpotIndex;                                         // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 	TWeakObjectPtr<class AActor>                       WieldingActor;                                            // 0x0014(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
@@ -366,7 +366,7 @@ struct FEventPetPickedUp
 // 0x000C
 struct FEventPetReactBegun
 {
-	struct FName                                       ReactId;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              ReactId;                                                  // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EAthenaAnimationPetRoamingState>       ReactState;                                               // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
 };
@@ -375,38 +375,38 @@ struct FEventPetReactBegun
 // 0x0010
 struct FEventPetReactCancellation
 {
-	class AActor*                                      ReactSource;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       ReactId;                                                  // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            ReactSource;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              ReactId;                                                  // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPetReactRequest
 // 0x0010
 struct FEventPetReactRequest
 {
-	class AActor*                                      ReactSource;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       ReactId;                                                  // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            ReactSource;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              ReactId;                                                  // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.RespawnPetEvent
 // 0x0008
 struct FRespawnPetEvent
 {
-	class AActor*                                      PetOwner;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            PetOwner;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPetEndPlay
 // 0x0008
 struct FEventPetEndPlay
 {
-	class APawn*                                       LinkedPet;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	APawn*                                             LinkedPet;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPetSpawnedForShip
 // 0x0010
 struct FEventPetSpawnedForShip
 {
-	class APawn*                                       LinkedPet;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      LinkedShip;                                               // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	APawn*                                             LinkedPet;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            LinkedShip;                                               // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.PetBaseTelemetryFragmentInput
@@ -420,21 +420,21 @@ struct FPetBaseTelemetryFragmentInput : public FTelemetryFragmentInput
 // 0x0030
 struct FPetBaseTelemetryFragment
 {
-	class FString                                      OwnerId;                                                  // 0x0000(0x0010) (ZeroConstructor)
-	class FString                                      PetPartId;                                                // 0x0010(0x0010) (ZeroConstructor)
+	FString                                            OwnerId;                                                  // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            PetPartId;                                                // 0x0010(0x0010) (ZeroConstructor)
 	TEnumAsByte<EItemRepresentation>                   CurrentPetRepresentation;                                 // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
-	struct FVector                                     PetLocation;                                              // 0x0024(0x000C) (ZeroConstructor, IsPlainOldData)
+	FVector                                            PetLocation;                                              // 0x0024(0x000C) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.WieldablePetPutOnPerchTelemetryEvent
 // 0x0028
 struct FWieldablePetPutOnPerchTelemetryEvent
 {
-	class FString                                      HangoutSpotName;                                          // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            HangoutSpotName;                                          // 0x0000(0x0010) (ZeroConstructor)
 	uint32_t                                           HangoutSpotIndex;                                         // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-	class FString                                      WieldingActorTelemetrySubjectId;                          // 0x0018(0x0010) (ZeroConstructor)
+	FString                                            WieldingActorTelemetrySubjectId;                          // 0x0018(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct Pets.PetDismissedTelemetryEvent
@@ -448,15 +448,15 @@ struct FPetDismissedTelemetryEvent
 // 0x0020
 struct FPetRefusedFoodTelemetryEvent
 {
-	class FString                                      TryingToFeedPlayerId;                                     // 0x0000(0x0010) (ZeroConstructor)
-	struct FGuid                                       FeedingInteractionId;                                     // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	FString                                            TryingToFeedPlayerId;                                     // 0x0000(0x0010) (ZeroConstructor)
+	FGuid                                              FeedingInteractionId;                                     // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.PetReactedToFoodTelemetryEvent
 // 0x0014
 struct FPetReactedToFoodTelemetryEvent
 {
-	struct FGuid                                       FeedingInteractionId;                                     // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              FeedingInteractionId;                                     // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EPetFeedingReactionType>               FeedingReaction;                                          // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
 };
@@ -465,24 +465,24 @@ struct FPetReactedToFoodTelemetryEvent
 // 0x0020
 struct FPetNotFedTelemetryEvent
 {
-	class FString                                      IgnoringPlayerId;                                         // 0x0000(0x0010) (ZeroConstructor)
-	struct FGuid                                       FeedingInteractionId;                                     // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	FString                                            IgnoringPlayerId;                                         // 0x0000(0x0010) (ZeroConstructor)
+	FGuid                                              FeedingInteractionId;                                     // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.PetFedTelemetryEvent
 // 0x0030
 struct FPetFedTelemetryEvent
 {
-	class FString                                      FedWithItemId;                                            // 0x0000(0x0010) (ZeroConstructor)
-	class FString                                      FeedingPlayerId;                                          // 0x0010(0x0010) (ZeroConstructor)
-	struct FGuid                                       FeedingInteractionId;                                     // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
+	FString                                            FedWithItemId;                                            // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            FeedingPlayerId;                                          // 0x0010(0x0010) (ZeroConstructor)
+	FGuid                                              FeedingInteractionId;                                     // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.PetReactedTelemetryEvent
 // 0x0018
 struct FPetReactedTelemetryEvent
 {
-	class FString                                      ReactId;                                                  // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            ReactId;                                                  // 0x0000(0x0010) (ZeroConstructor)
 	TEnumAsByte<EAthenaAnimationPetRoamingState>       AnimationState;                                           // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 };
@@ -505,7 +505,7 @@ struct FPetPickedUpTelemetryEvent
 // 0x0008
 struct FPetControllerSetTickOrderEvent
 {
-	class AActor*                                      Actor;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Actor;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Pets.EventPerchHangoutSpotSetEnabledState
@@ -537,10 +537,10 @@ struct FPetDespawnActionStateParams
 	float                                              TakeOffTime;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TotalGhostShaderTime;                                     // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TimeToTriggerVFX;                                         // 0x000C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     DespawnVFX;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                DespawnVFXColour;                                         // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 DespawnSFX;                                               // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StopDespawnSFX;                                           // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UObject*                                           DespawnVFX;                                               // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FLinearColor                                       DespawnVFXColour;                                         // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UWwiseEvent*                                       DespawnSFX;                                               // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UWwiseEvent*                                       StopDespawnSFX;                                           // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TotalDespawningTime;                                      // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };
@@ -560,10 +560,10 @@ struct FPetSpawnActionStateParams
 	float                                              LandingTime;                                              // 0x0004(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TotalGhostShaderTime;                                     // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TimeToTriggerVFX;                                         // 0x000C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     SpawnVFX;                                                 // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FLinearColor                                SpawnVFXColour;                                           // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 SpawnSFX;                                                 // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 StopSpawnSFX;                                             // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UObject*                                           SpawnVFX;                                                 // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FLinearColor                                       SpawnVFXColour;                                           // 0x0018(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UWwiseEvent*                                       SpawnSFX;                                                 // 0x0028(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UWwiseEvent*                                       StopSpawnSFX;                                             // 0x0030(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              TotalSpawningTime;                                        // 0x0038(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
 };

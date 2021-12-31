@@ -19,11 +19,11 @@ namespace SDK
 class ABP_Mermaid_C : public AMermaid
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x09A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCapsuleComponent*                           PlayerHits;                                               // 0x09A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UAnimNotifyWwiseEmitterComponent*            AnimNotifyWwiseEmitter;                                   // 0x09B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkeletalMeshMemoryConstraintComponent*      SkeletalMeshMemoryConstraint;                             // 0x09B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCapsuleComponent*                           WorldHits;                                                // 0x09C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UInteractableComponent*                            Interactable;                                             // 0x09A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UCapsuleComponent*                                 PlayerHits;                                               // 0x09A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UAnimNotifyWwiseEmitterComponent*                  AnimNotifyWwiseEmitter;                                   // 0x09B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USkeletalMeshMemoryConstraintComponent*            SkeletalMeshMemoryConstraint;                             // 0x09B8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UCapsuleComponent*                                 WorldHits;                                                // 0x09C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

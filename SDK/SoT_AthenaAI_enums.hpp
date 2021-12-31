@@ -12,6 +12,16 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum AthenaAI.EAIKnockbackStrengthType
+enum class EAIKnockbackStrengthType : uint8_t
+{
+	EAIKnockbackStrengthType__Low  = 0,
+	EAIKnockbackStrengthType__Medium = 1,
+	EAIKnockbackStrengthType__High = 2,
+	EAIKnockbackStrengthType__EAIKnockbackStrengthType_MAX = 3
+};
+
+
 // Enum AthenaAI.EAIDialogueState
 enum class EAIDialogueState : uint8_t
 {
@@ -81,13 +91,144 @@ enum class EFaunaCratedState : uint8_t
 };
 
 
-// Enum AthenaAI.EAIKnockbackStrengthType
-enum class EAIKnockbackStrengthType : uint8_t
+// Enum AthenaAI.EDebugPetStateDescriptor
+enum class EDebugPetStateDescriptor : uint8_t
 {
-	EAIKnockbackStrengthType__Low  = 0,
-	EAIKnockbackStrengthType__Medium = 1,
-	EAIKnockbackStrengthType__High = 2,
-	EAIKnockbackStrengthType__EAIKnockbackStrengthType_MAX = 3
+	EDebugPetStateDescriptor__NoState = 0,
+	EDebugPetStateDescriptor__Hangout_Attached = 1,
+	EDebugPetStateDescriptor__Hangout_MoveToLocation = 2,
+	EDebugPetStateDescriptor__Reacting = 3,
+	EDebugPetStateDescriptor__Pursuit = 4,
+	EDebugPetStateDescriptor__Idle = 5,
+	EDebugPetStateDescriptor__Follow = 6,
+	EDebugPetStateDescriptor__Eating = 7,
+	EDebugPetStateDescriptor__Scared = 8,
+	EDebugPetStateDescriptor__ForcedIdle = 9,
+	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 10
+};
+
+
+// Enum AthenaAI.EPetSize
+enum class EPetSize : uint8_t
+{
+	EPetSize__Small                = 0,
+	EPetSize__Medium               = 1,
+	EPetSize__Large                = 2,
+	EPetSize__EPetSize_MAX         = 3
+};
+
+
+// Enum AthenaAI.ESwimRotationMode
+enum class ESwimRotationMode : uint8_t
+{
+	ESwimRotationMode__FaceMovement = 0,
+	ESwimRotationMode__UprightStrafe = 1,
+	ESwimRotationMode__LongwaysStrafe = 2,
+	ESwimRotationMode__ESwimRotationMode_MAX = 3
+};
+
+
+// Enum AthenaAI.EArcToTargetDirection
+enum class EArcToTargetDirection : uint8_t
+{
+	EArcToTargetDirection__VelocityOrRotation = 0,
+	EArcToTargetDirection__VelocityOrRotation2D = 1,
+	EArcToTargetDirection__InversedVelocityOrRotation = 2,
+	EArcToTargetDirection__InversedVelocityOrRotation2D = 3,
+	EArcToTargetDirection__Up      = 4,
+	EArcToTargetDirection__Down    = 5,
+	EArcToTargetDirection__GoalDirection2D = 6,
+	EArcToTargetDirection__EArcToTargetDirection_MAX = 7
+};
+
+
+// Enum AthenaAI.EArcFollowingMode
+enum class EArcFollowingMode : uint8_t
+{
+	EArcFollowingMode__SharkArc    = 0,
+	EArcFollowingMode__Simple3DArc = 1,
+	EArcFollowingMode__EArcFollowingMode_MAX = 2
+};
+
+
+// Enum AthenaAI.ESwimmingLineOfSightTest
+enum class ESwimmingLineOfSightTest : uint8_t
+{
+	ESwimmingLineOfSightTest__None = 0,
+	ESwimmingLineOfSightTest__Lazy = 1,
+	ESwimmingLineOfSightTest__Immediate = 2,
+	ESwimmingLineOfSightTest__ESwimmingLineOfSightTest_MAX = 3
+};
+
+
+// Enum AthenaAI.ESwimmingSyncMode
+enum class ESwimmingSyncMode : uint8_t
+{
+	ESwimmingSyncMode__Synchronous = 0,
+	ESwimmingSyncMode__Asynchronous = 1,
+	ESwimmingSyncMode__ESwimmingSyncMode_MAX = 2
+};
+
+
+// Enum AthenaAI.ESwimmingArcMode
+enum class ESwimmingArcMode : uint8_t
+{
+	ESwimmingArcMode__ArcToTarget  = 0,
+	ESwimmingArcMode__SwimDirectlyToTarget = 1,
+	ESwimmingArcMode__SwimDirectlyDown = 2,
+	ESwimmingArcMode__ESwimmingArcMode_MAX = 3
+};
+
+
+// Enum AthenaAI.ESwimmingGoalCheckMode
+enum class ESwimmingGoalCheckMode : uint8_t
+{
+	ESwimmingGoalCheckMode__Goal2D = 0,
+	ESwimmingGoalCheckMode__Goal3D = 1,
+	ESwimmingGoalCheckMode__ESwimmingGoalCheckMode_MAX = 2
+};
+
+
+// Enum AthenaAI.ETaskReaction
+enum class ETaskReaction : uint8_t
+{
+	ETaskReaction__Ignore          = 0,
+	ETaskReaction__SucceedTask     = 1,
+	ETaskReaction__FailTask        = 2,
+	ETaskReaction__ETaskReaction_MAX = 3
+};
+
+
+// Enum AthenaAI.ETinySharkDespawnReason
+enum class ETinySharkDespawnReason : uint8_t
+{
+	ETinySharkDespawnReason__Invalid = 0,
+	ETinySharkDespawnReason__Defeated = 1,
+	ETinySharkDespawnReason__TimedOut = 2,
+	ETinySharkDespawnReason__ETinySharkDespawnReason_MAX = 3
+};
+
+
+// Enum AthenaAI.ETinySharkActiveState
+enum class ETinySharkActiveState : uint8_t
+{
+	ETinySharkActiveState__TrackingTarget = 0,
+	ETinySharkActiveState__WaitingForTarget = 1,
+	ETinySharkActiveState__RepositionToTarget = 2,
+	ETinySharkActiveState__WaitingForRespawn = 3,
+	ETinySharkActiveState__ETinySharkActiveState_MAX = 4
+};
+
+
+// Enum AthenaAI.ETinySharkState
+enum class ETinySharkState : uint8_t
+{
+	ETinySharkState__Inactive      = 0,
+	ETinySharkState__Spawning      = 1,
+	ETinySharkState__Active        = 2,
+	ETinySharkState__Defeated      = 3,
+	ETinySharkState__Despawning    = 4,
+	ETinySharkState__ETinySharkState_MAX = 5
 };
 
 
@@ -314,147 +455,6 @@ enum class EOceanCrawlerAbilityAudioKey : uint8_t
 	EOceanCrawlerAbilityAudioKey__Eel_Play_EelelectricShieldFinishedOnTarget_OneShot = 23,
 	EOceanCrawlerAbilityAudioKey__Eel_Play_EelElectricEelThrowCharge_OneShot = 24,
 	EOceanCrawlerAbilityAudioKey__EOceanCrawlerAbilityAudioKey_MAX = 25
-};
-
-
-// Enum AthenaAI.ESwimRotationMode
-enum class ESwimRotationMode : uint8_t
-{
-	ESwimRotationMode__FaceMovement = 0,
-	ESwimRotationMode__UprightStrafe = 1,
-	ESwimRotationMode__LongwaysStrafe = 2,
-	ESwimRotationMode__ESwimRotationMode_MAX = 3
-};
-
-
-// Enum AthenaAI.EArcToTargetDirection
-enum class EArcToTargetDirection : uint8_t
-{
-	EArcToTargetDirection__VelocityOrRotation = 0,
-	EArcToTargetDirection__VelocityOrRotation2D = 1,
-	EArcToTargetDirection__InversedVelocityOrRotation = 2,
-	EArcToTargetDirection__InversedVelocityOrRotation2D = 3,
-	EArcToTargetDirection__Up      = 4,
-	EArcToTargetDirection__Down    = 5,
-	EArcToTargetDirection__GoalDirection2D = 6,
-	EArcToTargetDirection__EArcToTargetDirection_MAX = 7
-};
-
-
-// Enum AthenaAI.EArcFollowingMode
-enum class EArcFollowingMode : uint8_t
-{
-	EArcFollowingMode__SharkArc    = 0,
-	EArcFollowingMode__Simple3DArc = 1,
-	EArcFollowingMode__EArcFollowingMode_MAX = 2
-};
-
-
-// Enum AthenaAI.ESwimmingLineOfSightTest
-enum class ESwimmingLineOfSightTest : uint8_t
-{
-	ESwimmingLineOfSightTest__None = 0,
-	ESwimmingLineOfSightTest__Lazy = 1,
-	ESwimmingLineOfSightTest__Immediate = 2,
-	ESwimmingLineOfSightTest__ESwimmingLineOfSightTest_MAX = 3
-};
-
-
-// Enum AthenaAI.ESwimmingSyncMode
-enum class ESwimmingSyncMode : uint8_t
-{
-	ESwimmingSyncMode__Synchronous = 0,
-	ESwimmingSyncMode__Asynchronous = 1,
-	ESwimmingSyncMode__ESwimmingSyncMode_MAX = 2
-};
-
-
-// Enum AthenaAI.ESwimmingArcMode
-enum class ESwimmingArcMode : uint8_t
-{
-	ESwimmingArcMode__ArcToTarget  = 0,
-	ESwimmingArcMode__SwimDirectlyToTarget = 1,
-	ESwimmingArcMode__SwimDirectlyDown = 2,
-	ESwimmingArcMode__ESwimmingArcMode_MAX = 3
-};
-
-
-// Enum AthenaAI.ESwimmingGoalCheckMode
-enum class ESwimmingGoalCheckMode : uint8_t
-{
-	ESwimmingGoalCheckMode__Goal2D = 0,
-	ESwimmingGoalCheckMode__Goal3D = 1,
-	ESwimmingGoalCheckMode__ESwimmingGoalCheckMode_MAX = 2
-};
-
-
-// Enum AthenaAI.ETaskReaction
-enum class ETaskReaction : uint8_t
-{
-	ETaskReaction__Ignore          = 0,
-	ETaskReaction__SucceedTask     = 1,
-	ETaskReaction__FailTask        = 2,
-	ETaskReaction__ETaskReaction_MAX = 3
-};
-
-
-// Enum AthenaAI.ETinySharkDespawnReason
-enum class ETinySharkDespawnReason : uint8_t
-{
-	ETinySharkDespawnReason__Invalid = 0,
-	ETinySharkDespawnReason__Defeated = 1,
-	ETinySharkDespawnReason__TimedOut = 2,
-	ETinySharkDespawnReason__ETinySharkDespawnReason_MAX = 3
-};
-
-
-// Enum AthenaAI.ETinySharkActiveState
-enum class ETinySharkActiveState : uint8_t
-{
-	ETinySharkActiveState__TrackingTarget = 0,
-	ETinySharkActiveState__WaitingForTarget = 1,
-	ETinySharkActiveState__RepositionToTarget = 2,
-	ETinySharkActiveState__WaitingForRespawn = 3,
-	ETinySharkActiveState__ETinySharkActiveState_MAX = 4
-};
-
-
-// Enum AthenaAI.ETinySharkState
-enum class ETinySharkState : uint8_t
-{
-	ETinySharkState__Inactive      = 0,
-	ETinySharkState__Spawning      = 1,
-	ETinySharkState__Active        = 2,
-	ETinySharkState__Defeated      = 3,
-	ETinySharkState__Despawning    = 4,
-	ETinySharkState__ETinySharkState_MAX = 5
-};
-
-
-// Enum AthenaAI.EDebugPetStateDescriptor
-enum class EDebugPetStateDescriptor : uint8_t
-{
-	EDebugPetStateDescriptor__NoState = 0,
-	EDebugPetStateDescriptor__Hangout_Attached = 1,
-	EDebugPetStateDescriptor__Hangout_MoveToLocation = 2,
-	EDebugPetStateDescriptor__Reacting = 3,
-	EDebugPetStateDescriptor__Pursuit = 4,
-	EDebugPetStateDescriptor__Idle = 5,
-	EDebugPetStateDescriptor__Follow = 6,
-	EDebugPetStateDescriptor__Eating = 7,
-	EDebugPetStateDescriptor__Scared = 8,
-	EDebugPetStateDescriptor__ForcedIdle = 9,
-	EDebugPetStateDescriptor__EDebugPetStateDescriptor_MAX = 10
-};
-
-
-// Enum AthenaAI.EPetSize
-enum class EPetSize : uint8_t
-{
-	EPetSize__Small                = 0,
-	EPetSize__Medium               = 1,
-	EPetSize__Large                = 2,
-	EPetSize__EPetSize_MAX         = 3
 };
 
 

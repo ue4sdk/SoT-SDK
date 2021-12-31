@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Anim_NPC_ReapersBones_Skeleton_InCage_classes.hpp"
+#include "SoT_BP_Anim_NPC_ReapersBones_Skeleton_InCage_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::PlayItemAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.PlayItemAnimation"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_PlayItemAnimation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_2A19BABE441DD3A8A797A89DBDCEDAA4"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_2A19BABE441DD3A8A797A89DBDCEDAA4_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_06441C554627078856052B91835CA919"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_06441C554627078856052B91835CA919_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -67,10 +58,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_6FDC2D284DFBD56A28F530872CE00E36"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_6FDC2D284DFBD56A28F530872CE00E36_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -83,10 +71,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_D37C932C42DD5D36F58926AAF4013D68"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_D37C932C42DD5D36F58926AAF4013D68_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -99,10 +84,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_CB0BEC1F4FE866352673FA9E1D736D8A"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_CB0BEC1F4FE866352673FA9E1D736D8A_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -115,10 +97,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_F218C5CD406D08FDF06139960ED433FB"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_F218C5CD406D08FDF06139960ED433FB_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -131,10 +110,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_1777D02445DF620F5644A4AE9244283E"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_1777D02445DF620F5644A4AE9244283E_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -147,10 +123,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_9D1C567C49CA7C2997D16A92AEC95F96"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_9D1C567C49CA7C2997D16A92AEC95F96_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -163,10 +136,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_2BF3E127400369FDF04DCBA40242B051"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_2BF3E127400369FDF04DCBA40242B051_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -179,10 +149,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_05C84FA84FEE4E47B3142DB9435A4073"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_05C84FA84FEE4E47B3142DB9435A4073_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -195,10 +162,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_641261A0483D88B4E98E1688F7168816"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_641261A0483D88B4E98E1688F7168816_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -211,10 +175,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::EvaluateGraphExposedInputs_Exe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_013BF8874E9530826F3A2BA7C4A69C3F"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_EvaluateGraphExposedInputs_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_AnimGraphNode_TransitionResult_013BF8874E9530826F3A2BA7C4A69C3F_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -227,10 +188,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_StartLookat()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_StartLookat"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_StartLookat_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -243,10 +201,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_StopLookAt()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_StopLookAt"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_StopLookAt_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -259,10 +214,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_IdleVariantChange()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_IdleVariantChange"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_IdleVariantChange_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -275,10 +227,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_InactiveVariantChan
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_InactiveVariantChange"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_InactiveVariantChange_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -291,10 +240,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_InteractVariantChan
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_InteractVariantChange"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_InteractVariantChange_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -307,10 +253,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::BlueprintInitializeAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.BlueprintInitializeAnimation"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_BlueprintInitializeAnimation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -323,10 +266,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_NPCLookAtOn()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_NPCLookAtOn"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_NPCLookAtOn_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -339,10 +279,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_NPCLookAtOff()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_NPCLookAtOff"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_NPCLookAtOff_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -355,10 +292,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_EnteredNull()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_EnteredNull"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_EnteredNull_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -371,10 +305,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_EnteredOneShot()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_EnteredOneShot"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_EnteredOneShot_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -387,10 +318,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_EnteredContinuousOu
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_EnteredContinuousOut"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_EnteredContinuousOut_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -403,10 +331,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_EnteredContinuousLo
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_EnteredContinuousLoopB"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_EnteredContinuousLoopB_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -419,10 +344,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_EnteredContinuousLo
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_EnteredContinuousLoopA"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_EnteredContinuousLoopA_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -435,10 +357,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_EnteredContinuousIn
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_EnteredContinuousIn"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_EnteredContinuousIn_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -451,10 +370,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_NPCSelectNewCustomA
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_NPCSelectNewCustomAnim_B"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_NPCSelectNewCustomAnim_B_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -467,10 +383,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_NPCSelectNewCustomA
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_NPCSelectNewCustomAnim_A"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_NPCSelectNewCustomAnim_A_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -483,10 +396,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_NPCDeactivateCustom
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_NPCDeactivateCustomAnimSequence"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_NPCDeactivateCustomAnimSequence_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -499,10 +409,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_DetachSocketB()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_DetachSocketB"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_DetachSocketB_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -515,10 +422,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_DetachSocketB()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_DetachSocketB"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_DetachSocketB_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -531,10 +435,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_DetachSocketA()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_DetachSocketA"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_DetachSocketA_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -547,10 +448,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_DetachSocketA()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_DetachSocketA"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_DetachSocketA_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -563,10 +461,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_UseItem_11()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_UseItem_11"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_UseItem_11_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -579,10 +474,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_UseItem_10()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_UseItem_10"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_UseItem_10_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -595,10 +487,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_UseItem_9()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_UseItem_9"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_UseItem_9_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -611,10 +500,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_UseItem_8()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_UseItem_8"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_UseItem_8_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -627,10 +513,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_UseItem_7()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_UseItem_7"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_UseItem_7_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -643,10 +526,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_UseItem_6()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_UseItem_6"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_UseItem_6_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -659,10 +539,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_UseItem_11()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_UseItem_11"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_UseItem_11_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -675,10 +552,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_UseItem_10()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_UseItem_10"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_UseItem_10_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -691,10 +565,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_UseItem_9()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_UseItem_9"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_UseItem_9_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -707,10 +578,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_UseItem_8()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_UseItem_8"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_UseItem_8_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -723,10 +591,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_UseItem_7()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_UseItem_7"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_UseItem_7_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -739,10 +604,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_UseItem_6()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_UseItem_6"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_UseItem_6_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -755,10 +617,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_AttachItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_AttachItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_AttachItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -771,10 +630,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_AttachItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_AttachItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_AttachItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -787,10 +643,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_DetachItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_DetachItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_DetachItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -803,10 +656,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_DetachItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_DetachItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_DetachItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -819,10 +669,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_DestroyItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_DestroyItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_DestroyItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -835,10 +682,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_UseItem_5()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_UseItem_5"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_UseItem_5_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -851,10 +695,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_UseItem_4()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_UseItem_4"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_UseItem_4_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -867,10 +708,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_UseItem_3()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_UseItem_3"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_UseItem_3_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -883,10 +721,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_RH_UseItem_2()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_RH_UseItem_2"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_RH_UseItem_2_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -899,10 +734,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_DestroyItem()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_DestroyItem"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_DestroyItem_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -915,10 +747,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_UseItem_5()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_UseItem_5"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_UseItem_5_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -931,10 +760,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_UseItem_4()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_UseItem_4"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_UseItem_4_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -947,10 +773,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_UseItem_3()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_UseItem_3"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_UseItem_3_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -963,10 +786,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::AnimNotify_LH_UseItem_2()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.AnimNotify_LH_UseItem_2"));
 
-	struct
-	{
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_AnimNotify_LH_UseItem_2_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -981,11 +801,7 @@ void UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C::ExecuteUbergraph_BP_Anim_NPC_R
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Anim_NPC_ReapersBones_Skeleton_InCage.BP_Anim_NPC_ReapersBones_Skeleton_InCage_C.ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Anim_NPC_ReapersBones_Skeleton_InCage_C_ExecuteUbergraph_BP_Anim_NPC_ReapersBones_Skeleton_InCage_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

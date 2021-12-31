@@ -19,24 +19,24 @@ namespace SDK
 class USeasonPopupAsset : public UDataAsset
 {
 public:
-	struct FName                                       ThemeId;                                                  // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FSeasonIconPopupAsset>               TierInfos;                                                // 0x0030(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FSeasonGoalPopupAsset>               TrialInfos;                                               // 0x0040(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FSeasonGoalPopupAsset>               DeedInfos;                                                // 0x0050(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FSeasonGoalPopupAsset>               RenownActionInfos;                                        // 0x0060(0x0010) (Edit, ZeroConstructor)
-	struct FSeasonIconPopupAsset                       SeasonInfo;                                               // 0x0070(0x0068) (Edit)
-	struct FSeasonIconPopupAsset                       LevelIncreaseInfo;                                        // 0x00D8(0x0068) (Edit)
-	struct FSeasonIconPopupAsset                       RewardInfo;                                               // 0x0140(0x0068) (Edit)
-	struct FSeasonIconPopupAsset                       MultipleRewardsInfo;                                      // 0x01A8(0x0068) (Edit)
-	struct FStringAssetReference                       BackgroundImage;                                          // 0x0210(0x0010) (Edit, ZeroConstructor)
-	class FString                                      DefaultToastSfxEventName;                                 // 0x0220(0x0010) (Edit, ZeroConstructor)
-	class FString                                      DefaultToastEventName;                                    // 0x0230(0x0010) (Edit, ZeroConstructor)
-	class FString                                      DefaultToastSwitchName;                                   // 0x0240(0x0010) (Edit, ZeroConstructor)
-	class FString                                      DefaultToastSwitchValue;                                  // 0x0250(0x0010) (Edit, ZeroConstructor)
-	class FString                                      DefaultChatSfxEventName;                                  // 0x0260(0x0010) (Edit, ZeroConstructor)
-	class FString                                      DefaultChatEventName;                                     // 0x0270(0x0010) (Edit, ZeroConstructor)
-	class FString                                      DefaultChatSwitchName;                                    // 0x0280(0x0010) (Edit, ZeroConstructor)
-	class FString                                      DefaultChatSwitchValue;                                   // 0x0290(0x0010) (Edit, ZeroConstructor)
+	FName                                              ThemeId;                                                  // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<FSeasonIconPopupAsset>                      TierInfos;                                                // 0x0030(0x0010) (Edit, ZeroConstructor)
+	TArray<FSeasonGoalPopupAsset>                      TrialInfos;                                               // 0x0040(0x0010) (Edit, ZeroConstructor)
+	TArray<FSeasonGoalPopupAsset>                      DeedInfos;                                                // 0x0050(0x0010) (Edit, ZeroConstructor)
+	TArray<FSeasonGoalPopupAsset>                      RenownActionInfos;                                        // 0x0060(0x0010) (Edit, ZeroConstructor)
+	FSeasonIconPopupAsset                              SeasonInfo;                                               // 0x0070(0x0068) (Edit)
+	FSeasonIconPopupAsset                              LevelIncreaseInfo;                                        // 0x00D8(0x0068) (Edit)
+	FSeasonIconPopupAsset                              RewardInfo;                                               // 0x0140(0x0068) (Edit)
+	FSeasonIconPopupAsset                              MultipleRewardsInfo;                                      // 0x01A8(0x0068) (Edit)
+	FStringAssetReference                              BackgroundImage;                                          // 0x0210(0x0010) (Edit, ZeroConstructor)
+	FString                                            DefaultToastSfxEventName;                                 // 0x0220(0x0010) (Edit, ZeroConstructor)
+	FString                                            DefaultToastEventName;                                    // 0x0230(0x0010) (Edit, ZeroConstructor)
+	FString                                            DefaultToastSwitchName;                                   // 0x0240(0x0010) (Edit, ZeroConstructor)
+	FString                                            DefaultToastSwitchValue;                                  // 0x0250(0x0010) (Edit, ZeroConstructor)
+	FString                                            DefaultChatSfxEventName;                                  // 0x0260(0x0010) (Edit, ZeroConstructor)
+	FString                                            DefaultChatEventName;                                     // 0x0270(0x0010) (Edit, ZeroConstructor)
+	FString                                            DefaultChatSwitchName;                                    // 0x0280(0x0010) (Edit, ZeroConstructor)
+	FString                                            DefaultChatSwitchValue;                                   // 0x0290(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -52,7 +52,7 @@ public:
 class USeasonPopupListAsset : public UDataAsset
 {
 public:
-	TArray<class USeasonPopupAsset*>                   SeasonPopups;                                             // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<USeasonPopupAsset*>                         SeasonPopups;                                             // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -94,16 +94,14 @@ public:
 
 
 // Class SeasonProgressionUI.SeasonProgressionUIComponent
-// 0x0100 (0x01C8 - 0x00C8)
+// 0x00E8 (0x01B0 - 0x00C8)
 class USeasonProgressionUIComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x00C8(0x0010) MISSED OFFSET
-	class USeasonProgressionUIInputBinder*             InputBinder;                                              // 0x00D8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class USeasonProgressionUICompositeInputHandler*   InputHandler;                                             // 0x00E0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<struct FEnableMoreButtonEvent>              DetailsNavigationDesc;                                    // 0x00E8(0x0010) (ZeroConstructor)
-	struct FSeasonProgressionUITelemetryFragment       NextReceivedEventsTelemetryData;                          // 0x00F8(0x0018)
-	unsigned char                                      UnknownData01[0xB8];                                      // 0x0110(0x00B8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x00C8(0x0020) MISSED OFFSET
+	TArray<FEnableMoreButtonEvent>                     DetailsNavigationDesc;                                    // 0x00E8(0x0010) (ZeroConstructor)
+	FSeasonProgressionUITelemetryFragment              NextReceivedEventsTelemetryData;                          // 0x00F8(0x0018)
+	unsigned char                                      UnknownData01[0xA0];                                      // 0x0110(0x00A0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -113,39 +111,6 @@ public:
 
 
 	void OnHUDDestroyed();
-};
-
-
-// Class SeasonProgressionUI.SeasonProgressionUICompositeInputHandler
-// 0x0020 (0x00F8 - 0x00D8)
-class USeasonProgressionUICompositeInputHandler : public UCompositeInputHandler
-{
-public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x00D8(0x0020) MISSED OFFSET
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SeasonProgressionUI.SeasonProgressionUICompositeInputHandler"));
-		return ptr;
-	}
-
-
-	TEnumAsByte<EInputHandlerResult> OnMenuButtonPressed();
-};
-
-
-// Class SeasonProgressionUI.SeasonProgressionUIInputBinder
-// 0x0000 (0x0088 - 0x0088)
-class USeasonProgressionUIInputBinder : public UInputBinder
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class SeasonProgressionUI.SeasonProgressionUIInputBinder"));
-		return ptr;
-	}
-
 };
 
 
@@ -165,13 +130,13 @@ public:
 
 
 // Class SeasonProgressionUI.SeasonProgressionUIService
-// 0x0150 (0x0520 - 0x03D0)
+// 0x01C0 (0x0590 - 0x03D0)
 class ASeasonProgressionUIService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x30];                                      // 0x03D0(0x0030) MISSED OFFSET
-	class USeasonPopupListAsset*                       SeasonPopupListAsset;                                     // 0x0400(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x118];                                     // 0x0408(0x0118) MISSED OFFSET
+	USeasonPopupListAsset*                             SeasonPopupListAsset;                                     // 0x0400(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x188];                                     // 0x0408(0x0188) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -187,7 +152,7 @@ public:
 class USeasonProgressionUISettings : public UObject
 {
 public:
-	struct FStringAssetReference                       SeasonPopupListAsset;                                     // 0x0028(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+	FStringAssetReference                              SeasonPopupListAsset;                                     // 0x0028(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

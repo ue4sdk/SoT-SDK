@@ -27,11 +27,11 @@ public:
 	}
 
 
-	struct FGameTime GetTime();
-	struct FDateTime GetSmoothRealWorldTime();
-	struct FDateTime GetPreciseRealWorldTime();
-	struct FGameTime ConvertRealWorldTimeToGameWorldTime(const struct FDateTime& RealWorldTime);
-	struct FDateTime ConvertGameWorldTimeToRealWorldTime(const struct FGameTime& GameWorldTime);
+	FGameTime GetTime();
+	FDateTime GetSmoothRealWorldTime();
+	FDateTime GetPreciseRealWorldTime();
+	FGameTime ConvertRealWorldTimeToGameWorldTime(const FDateTime& RealWorldTime);
+	FDateTime ConvertGameWorldTimeToRealWorldTime(const FGameTime& GameWorldTime);
 };
 
 
@@ -51,7 +51,7 @@ public:
 	void SetTimeScalar(int RequestedTimeScalar);
 	void SetSunset(float SunsetHours);
 	void SetSunrise(float SunriseHours);
-	void SetGameWorldTime(const struct FGameTime& RequestedTime);
+	void SetGameWorldTime(const FGameTime& RequestedTime);
 	int GetTimeScalar();
 	void EnableQueryServiceTime(bool Enable);
 };
@@ -73,7 +73,7 @@ public:
 	void SetTimeScalar(int RequestedTimeScalar);
 	void SetSunset(float SunsetHours);
 	void SetSunrise(float SunriseHours);
-	void SetGameWorldTime(const struct FGameTime& RequestedTime);
+	void SetGameWorldTime(const FGameTime& RequestedTime);
 	int GetTimeScalar();
 	void EnableQueryServiceTime(bool Enable);
 };
@@ -107,10 +107,10 @@ public:
 	}
 
 
-	static struct FReplicatedDateTime MakeReplicatedDateTimeFromDateTime(const struct FDateTime& InDateTime);
-	static struct FDateTime MakeDateTimeFromReplicatedDateTime(const struct FReplicatedDateTime& InDateTime);
-	static struct FDateTime MakeDateTimeFromRaw(int Year, int Month, int Day, int Hour, int Minute, int Second, int Millisecond);
-	static bool DateTimesWithinTolerance(const struct FDateTime& FirstDateTime, const struct FDateTime& SecondDateTime, const struct FTimespan& Tolerance);
+	static FReplicatedDateTime MakeReplicatedDateTimeFromDateTime(const FDateTime& InDateTime);
+	static FDateTime MakeDateTimeFromReplicatedDateTime(const FReplicatedDateTime& InDateTime);
+	static FDateTime MakeDateTimeFromRaw(int Year, int Month, int Day, int Hour, int Minute, int Second, int Millisecond);
+	static bool DateTimesWithinTolerance(const FDateTime& FirstDateTime, const FDateTime& SecondDateTime, const FTimespan& Tolerance);
 };
 
 
@@ -135,7 +135,7 @@ class ATimeService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x38];                                      // 0x03D0(0x0038) MISSED OFFSET
-	struct FTimespan                                   GameWorldTimeOffset;                                      // 0x0408(0x0008) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+	FTimespan                                          GameWorldTimeOffset;                                      // 0x0408(0x0008) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0410(0x0004) MISSED OFFSET
 	uint32_t                                           TimeScalar;                                               // 0x0414(0x0004) (Edit, Net, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	uint32_t                                           NumberOfDaysInEachGameMonth;                              // 0x0418(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
@@ -153,7 +153,7 @@ public:
 	float                                              MaxLocalTimeUpdateAdjustPercentageToSpeedUp;              // 0x044C(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	uint32_t                                           MaxNumReplicatedTimeEntriesToAverage;                     // 0x0450(0x0004) (Edit, ZeroConstructor, Config, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData03[0x4C];                                      // 0x0454(0x004C) MISSED OFFSET
-	struct FReplicatedAuthoritativeTime                ReplicatedServerTime;                                     // 0x04A0(0x0010) (BlueprintVisible, BlueprintReadOnly, Net)
+	FReplicatedAuthoritativeTime                       ReplicatedServerTime;                                     // 0x04A0(0x0010) (BlueprintVisible, BlueprintReadOnly, Net)
 	unsigned char                                      UnknownData04[0x30];                                      // 0x04B0(0x0030) MISSED OFFSET
 
 	static UClass* StaticClass()

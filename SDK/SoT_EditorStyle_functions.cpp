@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_EditorStyle_classes.hpp"
+#include "SoT_EditorStyle_parameters.hpp"
 
 namespace SDK
 {

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wld_sea_rock_cluster_c_classes.hpp"
+#include "SoT_wld_sea_rock_cluster_c_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awld_sea_rock_cluster_c_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wld_sea_rock_cluster_c.wld_sea_rock_cluster_c_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Awld_sea_rock_cluster_c_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

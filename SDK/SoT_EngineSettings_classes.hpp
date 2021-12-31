@@ -21,8 +21,8 @@ class UConsoleSettings : public UObject
 public:
 	int                                                MaxScrollbackSize;                                        // 0x0028(0x0004) (Edit, ZeroConstructor, Config, GlobalConfig, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x002C(0x0004) MISSED OFFSET
-	TArray<struct FAutoCompleteCommand>                ManualAutoCompleteList;                                   // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<class FString>                              AutoCompleteMapPaths;                                     // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FAutoCompleteCommand>                       ManualAutoCompleteList;                                   // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FString>                                    AutoCompleteMapPaths;                                     // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -38,18 +38,18 @@ public:
 class UGameMapsSettings : public UObject
 {
 public:
-	class FString                                      EditorStartupMap;                                         // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      LocalMapOptions;                                          // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      TransitionMap;                                            // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            EditorStartupMap;                                         // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            LocalMapOptions;                                          // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            TransitionMap;                                            // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
 	bool                                               bUseSplitscreen;                                          // 0x0058(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	TEnumAsByte<ETwoPlayerSplitScreenType>             TwoPlayerSplitscreenLayout;                               // 0x0059(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	TEnumAsByte<EThreePlayerSplitScreenType>           ThreePlayerSplitscreenLayout;                             // 0x005A(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x5];                                       // 0x005B(0x0005) MISSED OFFSET
-	struct FStringClassReference                       GameInstanceClass;                                        // 0x0060(0x0010) (Edit, ZeroConstructor, Config, NoClear)
-	class FString                                      GameDefaultMap;                                           // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      ServerDefaultMap;                                         // 0x0080(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringClassReference                       GlobalDefaultGameMode;                                    // 0x0090(0x0010) (Edit, ZeroConstructor, Config, NoClear)
-	struct FStringClassReference                       GlobalDefaultServerGameMode;                              // 0x00A0(0x0010) (Edit, ZeroConstructor, Config)
+	FStringClassReference                              GameInstanceClass;                                        // 0x0060(0x0010) (Edit, ZeroConstructor, Config, NoClear)
+	FString                                            GameDefaultMap;                                           // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            ServerDefaultMap;                                         // 0x0080(0x0010) (Edit, ZeroConstructor, Config)
+	FStringClassReference                              GlobalDefaultGameMode;                                    // 0x0090(0x0010) (Edit, ZeroConstructor, Config, NoClear)
+	FStringClassReference                              GlobalDefaultServerGameMode;                              // 0x00A0(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -127,18 +127,18 @@ public:
 class UGeneralProjectSettings : public UObject
 {
 public:
-	class FString                                      CompanyName;                                              // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      CompanyDistinguishedName;                                 // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      CopyrightNotice;                                          // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      Description;                                              // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      Homepage;                                                 // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      LicensingTerms;                                           // 0x0078(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      PrivacyPolicy;                                            // 0x0088(0x0010) (Edit, ZeroConstructor, Config)
-	struct FGuid                                       ProjectID;                                                // 0x0098(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	class FString                                      ProjectName;                                              // 0x00A8(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      ProjectVersion;                                           // 0x00B8(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      SupportContact;                                           // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
-	struct FText                                       ProjectDisplayedTitle;                                    // 0x00D8(0x0038) (Edit, Config)
+	FString                                            CompanyName;                                              // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            CompanyDistinguishedName;                                 // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            CopyrightNotice;                                          // 0x0048(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            Description;                                              // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            Homepage;                                                 // 0x0068(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            LicensingTerms;                                           // 0x0078(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            PrivacyPolicy;                                            // 0x0088(0x0010) (Edit, ZeroConstructor, Config)
+	FGuid                                              ProjectID;                                                // 0x0098(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FString                                            ProjectName;                                              // 0x00A8(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            ProjectVersion;                                           // 0x00B8(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            SupportContact;                                           // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
+	FText                                              ProjectDisplayedTitle;                                    // 0x00D8(0x0038) (Edit, Config)
 
 	static UClass* StaticClass()
 	{
@@ -156,7 +156,7 @@ class UHudSettings : public UObject
 public:
 	unsigned char                                      bShowHUD : 1;                                             // 0x0028(0x0001) (Edit, Config)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0029(0x0007) MISSED OFFSET
-	TArray<struct FName>                               DebugDisplay;                                             // 0x0030(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig)
+	TArray<FName>                                      DebugDisplay;                                             // 0x0030(0x0010) (Edit, ZeroConstructor, Config, GlobalConfig)
 
 	static UClass* StaticClass()
 	{

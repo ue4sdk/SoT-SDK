@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Reviving_classes.hpp"
+#include "SoT_Reviving_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UDeathSelfInteractionComponent::SetGiveUpAvaliable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Reviving.DeathSelfInteractionComponent.SetGiveUpAvaliable"));
 
-	struct
-	{
-	} params;
-
+	UDeathSelfInteractionComponent_SetGiveUpAvaliable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UDeathSelfInteractionComponent::OnRep_HasGivenUp()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Reviving.DeathSelfInteractionComponent.OnRep_HasGivenUp"));
 
-	struct
-	{
-	} params;
-
+	UDeathSelfInteractionComponent_OnRep_HasGivenUp_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void UReviveComponent::OnRep_ReviveState(TEnumAsByte<EReviveState> PreviousReviv
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Reviving.ReviveComponent.OnRep_ReviveState"));
 
-	struct
-	{
-		TEnumAsByte<EReviveState>      PreviousReviveState;
-	} params;
-
+	UReviveComponent_OnRep_ReviveState_Params params;
 	params.PreviousReviveState = PreviousReviveState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -71,10 +61,7 @@ void UReviveComponent::HandleOwningCharacterEndPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Reviving.ReviveComponent.HandleOwningCharacterEndPlay"));
 
-	struct
-	{
-	} params;
-
+	UReviveComponent_HandleOwningCharacterEndPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -19,9 +19,9 @@ namespace SDK
 class UBP_Anim_Telescope_C : public UWieldableItemAnimationInstance
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0630(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	struct FAnimNode_Root                              AnimGraphNode_Root_1D97B58B48A1400F8187778D2053C701;      // 0x0638(0x0048)
-	struct FAnimNode_Slot                              AnimGraphNode_Slot_859C556A499268A85ED18B90F93B9E6B;      // 0x0680(0x0060)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x0630(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	FAnimNode_Root                                     AnimGraphNode_Root_1D97B58B48A1400F8187778D2053C701;      // 0x0638(0x0048)
+	FAnimNode_Slot                                     AnimGraphNode_Slot_859C556A499268A85ED18B90F93B9E6B;      // 0x0680(0x0060)
 
 	static UClass* StaticClass()
 	{

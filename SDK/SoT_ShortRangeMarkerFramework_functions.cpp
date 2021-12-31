@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ShortRangeMarkerFramework_classes.hpp"
+#include "SoT_ShortRangeMarkerFramework_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void AShortRangeMarker::Multicast_OnCleanUp()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ShortRangeMarkerFramework.ShortRangeMarker.Multicast_OnCleanUp"));
 
-	struct
-	{
-	} params;
-
+	AShortRangeMarker_Multicast_OnCleanUp_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -31,21 +28,15 @@ void AShortRangeMarker::Multicast_OnCleanUp()
 // Function ShortRangeMarkerFramework.ShortRangeMarkerBlueprintFunctionLibrary.RegisterActorsWithShortRangeMarker
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  InMarker                       (Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class AActor*>          InActors                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
+// UObject*                       WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InMarker                       (Parm, ZeroConstructor, IsPlainOldData)
+// TArray<AActor*>                InActors                       (Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void UShortRangeMarkerBlueprintFunctionLibrary::RegisterActorsWithShortRangeMarker(class UObject* WorldContextObject, class AActor* InMarker, TArray<class AActor*>* InActors)
+void UShortRangeMarkerBlueprintFunctionLibrary::RegisterActorsWithShortRangeMarker(UObject* WorldContextObject, AActor* InMarker, TArray<AActor*>* InActors)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ShortRangeMarkerFramework.ShortRangeMarkerBlueprintFunctionLibrary.RegisterActorsWithShortRangeMarker"));
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class AActor*                  InMarker;
-		TArray<class AActor*>          InActors;
-	} params;
-
+	UShortRangeMarkerBlueprintFunctionLibrary_RegisterActorsWithShortRangeMarker_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.InMarker = InMarker;
 

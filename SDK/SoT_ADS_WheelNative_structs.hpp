@@ -19,7 +19,7 @@ namespace SDK
 // 0x0088
 struct FADS_WheelNative
 {
-	struct FAthenaAnimationWheelAnimData               Wheel_91_8969912A40720F51A14632B86AF7E072;                // 0x0000(0x0088) (Edit, BlueprintVisible)
+	FAthenaAnimationWheelAnimData                      Wheel_91_8969912A40720F51A14632B86AF7E072;                // 0x0000(0x0088) (Edit, BlueprintVisible)
 };
 
 }

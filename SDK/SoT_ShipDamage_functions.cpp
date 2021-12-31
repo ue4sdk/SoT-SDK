@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ShipDamage_classes.hpp"
+#include "SoT_ShipDamage_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function ShipDamage.DamageablePartsInterface.UnregisterDamageablePart
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  DamageableActor                (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        DamageableActor                (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDamageablePartsInterface::UnregisterDamageablePart(class AActor* DamageableActor)
+void UDamageablePartsInterface::UnregisterDamageablePart(AActor* DamageableActor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ShipDamage.DamageablePartsInterface.UnregisterDamageablePart"));
 
-	struct
-	{
-		class AActor*                  DamageableActor;
-	} params;
-
+	UDamageablePartsInterface_UnregisterDamageablePart_Params params;
 	params.DamageableActor = DamageableActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UDamageablePartsInterface::UnregisterDamageablePart(class AActor* Damageabl
 // Function ShipDamage.DamageablePartsInterface.RegisterDamageablePart
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  DamageableActor                (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        DamageableActor                (Parm, ZeroConstructor, IsPlainOldData)
 
-void UDamageablePartsInterface::RegisterDamageablePart(class AActor* DamageableActor)
+void UDamageablePartsInterface::RegisterDamageablePart(AActor* DamageableActor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ShipDamage.DamageablePartsInterface.RegisterDamageablePart"));
 
-	struct
-	{
-		class AActor*                  DamageableActor;
-	} params;
-
+	UDamageablePartsInterface_RegisterDamageablePart_Params params;
 	params.DamageableActor = DamageableActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -55,17 +47,13 @@ void UDamageablePartsInterface::RegisterDamageablePart(class AActor* DamageableA
 // Function ShipDamage.DamageablePartsInterface.GetDamageableParts
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// TArray<class AActor*>          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// TArray<AActor*>                ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-TArray<class AActor*> UDamageablePartsInterface::GetDamageableParts()
+TArray<AActor*> UDamageablePartsInterface::GetDamageableParts()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function ShipDamage.DamageablePartsInterface.GetDamageableParts"));
 
-	struct
-	{
-		TArray<class AActor*>          ReturnValue;
-	} params;
-
+	UDamageablePartsInterface_GetDamageableParts_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 

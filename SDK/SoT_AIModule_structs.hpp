@@ -8,10 +8,10 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_AIModule_enums.hpp"
-#include "SoT_GameplayTags_classes.hpp"
-#include "SoT_GameplayTasks_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_GameplayTasks_classes.hpp"
+#include "SoT_GameplayTags_classes.hpp"
 
 namespace SDK
 {
@@ -23,9 +23,9 @@ namespace SDK
 // 0x0028
 struct FBlackboardKeySelector
 {
-	TArray<class UBlackboardKeyType*>                  AllowedTypes;                                             // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, Transient)
-	struct FName                                       SelectedKeyName;                                          // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
-	class UClass*                                      SelectedKeyType;                                          // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData)
+	TArray<UBlackboardKeyType*>                        AllowedTypes;                                             // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, Transient)
+	FName                                              SelectedKeyName;                                          // 0x0010(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
+	UClass*                                            SelectedKeyType;                                          // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData)
 	unsigned char                                      SelectedKeyID;                                            // 0x0020(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
 	unsigned char                                      bNoneIsAllowedValue : 1;                                  // 0x0024(0x0001) (Edit, BlueprintVisible, Transient)
@@ -36,7 +36,7 @@ struct FBlackboardKeySelector
 // 0x0010
 struct FEnvNamedValue
 {
-	struct FName                                       ParamName;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FName                                              ParamName;                                                // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EEnvQueryParam>                        ParamType;                                                // 0x0008(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
 	float                                              Value;                                                    // 0x000C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -47,16 +47,16 @@ struct FEnvNamedValue
 struct FAIDataProviderValue
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	class UProperty*                                   CachedProperty;                                           // 0x0008(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UAIDataProvider*                             DataBinding;                                              // 0x0010(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FName                                       DataField;                                                // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UProperty*                                         CachedProperty;                                           // 0x0008(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UAIDataProvider*                                   DataBinding;                                              // 0x0010(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	FName                                              DataField;                                                // 0x0018(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.AIDataProviderTypedValue
 // 0x0008 (0x0028 - 0x0020)
 struct FAIDataProviderTypedValue : public FAIDataProviderValue
 {
-	class UClass*                                      PropertyType;                                             // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
+	UClass*                                            PropertyType;                                             // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.AIDataProviderBoolValue
@@ -86,14 +86,14 @@ struct FAIRequestID
 // 0x0008
 struct FPawnActionStack
 {
-	class UPawnAction*                                 TopAction;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UPawnAction*                                       TopAction;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.PawnActionEvent
 // 0x0018
 struct FPawnActionEvent
 {
-	class UPawnAction*                                 Action;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UPawnAction*                                       Action;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0008(0x0010) MISSED OFFSET
 };
 
@@ -101,8 +101,8 @@ struct FPawnActionEvent
 // 0x0010
 struct FCustomDataProviderObjectPropertySelector
 {
-	class UClass*                                      ObjectClass;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       PropertyName;                                             // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UClass*                                            ObjectClass;                                              // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FName                                              PropertyName;                                             // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.AIStimulus
@@ -112,9 +112,9 @@ struct FAIStimulus
 	float                                              Age;                                                      // 0x0000(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              ExpirationAge;                                            // 0x0004(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Strength;                                                 // 0x0008(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     StimulusLocation;                                         // 0x000C(0x000C) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     ReceiverLocation;                                         // 0x0018(0x000C) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       Tag;                                                      // 0x0024(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            StimulusLocation;                                         // 0x000C(0x000C) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            ReceiverLocation;                                         // 0x0018(0x000C) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FName                                              Tag;                                                      // 0x0024(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xC];                                       // 0x002C(0x000C) MISSED OFFSET
 	unsigned char                                      UnknownData01 : 1;                                        // 0x0038(0x0001)
 	unsigned char                                      bSuccessfullySensed : 1;                                  // 0x0038(0x0001) (BlueprintVisible)
@@ -125,8 +125,8 @@ struct FAIStimulus
 // 0x0020
 struct FActorPerceptionBlueprintInfo
 {
-	class AActor*                                      Target;                                                   // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FAIStimulus>                         LastSensedStimuli;                                        // 0x0008(0x0010) (BlueprintVisible, ZeroConstructor)
+	AActor*                                            Target;                                                   // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<FAIStimulus>                                LastSensedStimuli;                                        // 0x0008(0x0010) (BlueprintVisible, ZeroConstructor)
 	unsigned char                                      bIsHostile : 1;                                           // 0x0018(0x0001) (BlueprintVisible)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
@@ -136,11 +136,11 @@ struct FActorPerceptionBlueprintInfo
 struct FAIDamageEvent
 {
 	float                                              Amount;                                                   // 0x0000(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Location;                                                 // 0x0004(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     HitLocation;                                              // 0x0010(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            Location;                                                 // 0x0004(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            HitLocation;                                              // 0x0010(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
-	class AActor*                                      DamagedActor;                                             // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Instigator;                                               // 0x0028(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	AActor*                                            DamagedActor;                                             // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	AActor*                                            Instigator;                                               // 0x0028(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.AINoiseEvent
@@ -148,11 +148,11 @@ struct FAIDamageEvent
 struct FAINoiseEvent
 {
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0000(0x0004) MISSED OFFSET
-	struct FVector                                     NoiseLocation;                                            // 0x0004(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            NoiseLocation;                                            // 0x0004(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              Loudness;                                                 // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              MaxRange;                                                 // 0x0014(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Instigator;                                               // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       Tag;                                                      // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	AActor*                                            Instigator;                                               // 0x0018(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FName                                              Tag;                                                      // 0x0020(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
 };
 
@@ -160,8 +160,8 @@ struct FAINoiseEvent
 // 0x0018
 struct FAIPredictionEvent
 {
-	class AActor*                                      Requestor;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      PredictedActor;                                           // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Requestor;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            PredictedActor;                                           // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
 };
 
@@ -170,8 +170,8 @@ struct FAIPredictionEvent
 struct FAITeamStimulusEvent
 {
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0000(0x0028) MISSED OFFSET
-	class AActor*                                      Broadcaster;                                              // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Enemy;                                                    // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Broadcaster;                                              // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Enemy;                                                    // 0x0030(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.AITouchEvent
@@ -179,8 +179,8 @@ struct FAITeamStimulusEvent
 struct FAITouchEvent
 {
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-	class AActor*                                      TouchReceiver;                                            // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      OtherActor;                                               // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            TouchReceiver;                                            // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            OtherActor;                                               // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.AISenseAffiliationFilter
@@ -206,18 +206,18 @@ struct FBTDecoratorLogic
 // 0x0030
 struct FBTCompositeChild
 {
-	class UBTCompositeNode*                            ChildComposite;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBTTaskNode*                                 ChildTask;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UBTDecorator*>                        Decorators;                                               // 0x0010(0x0010) (ZeroConstructor)
-	TArray<struct FBTDecoratorLogic>                   DecoratorOps;                                             // 0x0020(0x0010) (ZeroConstructor)
+	UBTCompositeNode*                                  ChildComposite;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UBTTaskNode*                                       ChildTask;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<UBTDecorator*>                              Decorators;                                               // 0x0010(0x0010) (ZeroConstructor)
+	TArray<FBTDecoratorLogic>                          DecoratorOps;                                             // 0x0020(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct AIModule.BehaviorTreeTemplateInfo
 // 0x0018
 struct FBehaviorTreeTemplateInfo
 {
-	class UBehaviorTree*                               Asset;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UBTCompositeNode*                            Template;                                                 // 0x0008(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UBehaviorTree*                                     Asset;                                                    // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UBTCompositeNode*                                  Template;                                                 // 0x0008(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0010(0x0008) MISSED OFFSET
 };
 
@@ -225,8 +225,8 @@ struct FBehaviorTreeTemplateInfo
 // 0x0018
 struct FBlackboardEntry
 {
-	struct FName                                       EntryName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UBlackboardKeyType*                          KeyType;                                                  // 0x0008(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	FName                                              EntryName;                                                // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UBlackboardKeyType*                                KeyType;                                                  // 0x0008(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	unsigned char                                      bInstanceSynced : 1;                                      // 0x0010(0x0001) (Edit)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
 };
@@ -259,7 +259,7 @@ struct FCrowdAvoidanceSamplingPattern
 // 0x0290
 struct FEnvQueryInstanceCache
 {
-	class UEnvQuery*                                   Template;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UEnvQuery*                                         Template;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x288];                                     // 0x0008(0x0288) MISSED OFFSET
 };
 
@@ -269,8 +269,8 @@ struct FEnvTraceData
 {
 	int                                                VersionNum;                                               // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0004(0x0004) MISSED OFFSET
-	class UClass*                                      NavigationFilter;                                         // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       OverrideNavMesh;                                          // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            NavigationFilter;                                         // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              OverrideNavMesh;                                          // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ProjectDown;                                              // 0x0018(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ProjectUp;                                                // 0x001C(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              ExtentX;                                                  // 0x0020(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
@@ -305,9 +305,9 @@ struct FAIDataProviderIntValue : public FAIDataProviderTypedValue
 // 0x0020
 struct FEnvDirection
 {
-	class UClass*                                      LineFrom;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      LineTo;                                                   // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      Rotation;                                                 // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            LineFrom;                                                 // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            LineTo;                                                   // 0x0008(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            Rotation;                                                 // 0x0010(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TEnumAsByte<EEnvDirection>                         DirMode;                                                  // 0x0018(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0019(0x0007) MISSED OFFSET
 };
@@ -316,7 +316,7 @@ struct FEnvDirection
 // 0x0040
 struct FAIMoveRequest
 {
-	class AActor*                                      GoalActor;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            GoalActor;                                                // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x38];                                      // 0x0008(0x0038) MISSED OFFSET
 };
 
@@ -347,8 +347,8 @@ struct FIgnoreActorInfo
 struct FAISightEvent
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0000(0x0008) MISSED OFFSET
-	class AActor*                                      SeenActor;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	class AActor*                                      Observer;                                                 // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            SeenActor;                                                // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Observer;                                                 // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.EnvBoolParam_DEPRECATED
@@ -357,7 +357,7 @@ struct FEnvBoolParam_DEPRECATED
 {
 	bool                                               Value;                                                    // 0x0000(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	struct FName                                       ParamName;                                                // 0x0004(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              ParamName;                                                // 0x0004(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.EnvBoolParam
@@ -372,7 +372,7 @@ struct FEnvBoolParam : public FEnvBoolParam_DEPRECATED
 struct FEnvIntParam_DEPRECATED
 {
 	int                                                Value;                                                    // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       ParamName;                                                // 0x0004(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              ParamName;                                                // 0x0004(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.EnvIntParam
@@ -387,7 +387,7 @@ struct FEnvIntParam : public FEnvIntParam_DEPRECATED
 struct FEnvFloatParam_DEPRECATED
 {
 	float                                              Value;                                                    // 0x0000(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FName                                       ParamName;                                                // 0x0004(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              ParamName;                                                // 0x0004(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 };
 
 // ScriptStruct AIModule.EnvFloatParam
@@ -402,7 +402,7 @@ struct FEnvFloatParam : public FEnvFloatParam_DEPRECATED
 struct FEnvQueryResult
 {
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0000(0x0010) MISSED OFFSET
-	class UClass*                                      ItemType;                                                 // 0x0010(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UClass*                                            ItemType;                                                 // 0x0010(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x14];                                      // 0x0018(0x0014) MISSED OFFSET
 	int                                                OptionIndex;                                              // 0x002C(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                QueryID;                                                  // 0x0030(0x0004) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
@@ -413,9 +413,9 @@ struct FEnvQueryResult
 // 0x0170
 struct FEnvQueryRequest
 {
-	class UEnvQuery*                                   QueryTemplate;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UObject*                                     Owner;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UWorld*                                      World;                                                    // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	UEnvQuery*                                         QueryTemplate;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UObject*                                           Owner;                                                    // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	UWorld*                                            World;                                                    // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x158];                                     // 0x0018(0x0158) MISSED OFFSET
 };
 

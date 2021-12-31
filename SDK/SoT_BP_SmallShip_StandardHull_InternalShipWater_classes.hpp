@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -19,9 +19,9 @@ namespace SDK
 class ABP_SmallShip_StandardHull_InternalShipWater_C : public AShipInternalWater
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0620(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UDynamicFlowComponent*                       DynamicFlow;                                              // 0x0628(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCurveFloat*                                 Foaminess;                                                // 0x0630(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x0620(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	UDynamicFlowComponent*                             DynamicFlow;                                              // 0x0628(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UCurveFloat*                                       Foaminess;                                                // 0x0630(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,9 +30,9 @@ public:
 	}
 
 
-	void GetLineIntersectionFromPlane(const struct FVector& LineStart, const struct FVector& LineEnd, bool* Intersect, struct FVector* IntersectionPoint);
+	void GetLineIntersectionFromPlane(const FVector& LineStart, const FVector& LineEnd, bool* Intersect, FVector* IntersectionPoint);
 	void GetWaterLevel(float* WaterLevel);
-	void GetDistanceFromPlane(const struct FVector& Location, float* Distance);
+	void GetDistanceFromPlane(const FVector& Location, float* Distance);
 	void UserConstructionScript();
 	void AddWater(float Water_Amount);
 	void ReceiveBeginPlay();

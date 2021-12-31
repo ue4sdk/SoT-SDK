@@ -20,8 +20,8 @@ class UWwiseEmitterComponent : public USceneComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
-	struct FWwiseEmitter                               Emitter;                                                  // 0x02B8(0x0020) (BlueprintVisible, BlueprintReadOnly)
-	class UWwiseObjectPoolWrapper*                     WwiseObjectPoolWrapper;                                   // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FWwiseEmitter                                      Emitter;                                                  // 0x02B8(0x0020) (BlueprintVisible, BlueprintReadOnly)
+	UWwiseObjectPoolWrapper*                           WwiseObjectPoolWrapper;                                   // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -52,10 +52,11 @@ public:
 class UAnimNotify_WwiseSound : public UAnimNotify
 {
 public:
-	class UWwiseEvent*                                 WwiseEvent;                                               // 0x0038(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UWwiseEvent*                                       WwiseEvent;                                               // 0x0038(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	bool                                               OwnedByWorld;                                             // 0x0040(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
-	class UWwiseObjectPoolWrapper*                     OwnedByWorldWisePoolToUse;                                // 0x0048(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EAnimNotify_WwiseSound_PerspectiveRestriction> PerspectiveRestriction;                                   // 0x0041(0x0001) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x0042(0x0006) MISSED OFFSET
+	UWwiseObjectPoolWrapper*                           OwnedByWorldWisePoolToUse;                                // 0x0048(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x20];                                      // 0x0050(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -72,8 +73,8 @@ public:
 class UAnimNotify_WwiseSoundMeshSwitch : public UAnimNotify_WwiseSound
 {
 public:
-	struct FName                                       SkeletalMeshSwitchGroup;                                  // 0x0070(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	TArray<struct FAnimNotify_SoundSwitch>             MeshOverrides;                                            // 0x0078(0x0010) (Edit, BlueprintReadOnly, ZeroConstructor)
+	FName                                              SkeletalMeshSwitchGroup;                                  // 0x0070(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	TArray<FAnimNotify_SoundSwitch>                    MeshOverrides;                                            // 0x0078(0x0010) (Edit, BlueprintReadOnly, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -89,8 +90,8 @@ public:
 class UAnimNotifyState_WwiseSound : public UAnimNotifyState
 {
 public:
-	class UWwiseEvent*                                 WwiseEvent;                                               // 0x0028(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 WwiseEventEnd;                                            // 0x0030(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UWwiseEvent*                                       WwiseEvent;                                               // 0x0028(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UWwiseEvent*                                       WwiseEventEnd;                                            // 0x0030(0x0008) (Edit, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x50];                                      // 0x0038(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -107,7 +108,7 @@ public:
 class AAudioEventToComponentMap : public AActor
 {
 public:
-	class UAudioEventToComponentMapComponent*          AudioEventToComponentMapComponent;                        // 0x03D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	UAudioEventToComponentMapComponent*                AudioEventToComponentMapComponent;                        // 0x03D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -117,8 +118,8 @@ public:
 
 
 	void ClearMappings();
-	void AddMappingWithSingleEmitterComponent(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, class UWwiseEmitterComponent** WwiseEmitterComponent);
-	void AddMapping(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<class UWwiseEmitterComponent*>* WwiseEmitterComponents);
+	void AddMappingWithSingleEmitterComponent(UWwiseEvent* PlayEvent, UWwiseEvent* StopEvent, UWwiseObjectPoolWrapper* WwiseEmitterPool, UWwiseEmitterComponent** WwiseEmitterComponent);
+	void AddMapping(UWwiseEvent* PlayEvent, UWwiseEvent* StopEvent, UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<UWwiseEmitterComponent*>* WwiseEmitterComponents);
 };
 
 
@@ -127,7 +128,7 @@ public:
 class UAudioEventToComponentMapComponent : public UActorComponent
 {
 public:
-	TArray<struct FEventToComponentMapping>            LocalComponentMappings;                                   // 0x00C8(0x0010) (ZeroConstructor)
+	TArray<FEventToComponentMapping>                   LocalComponentMappings;                                   // 0x00C8(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -137,8 +138,8 @@ public:
 
 
 	void ClearMappings();
-	void AddMappingWithSingleEmitterComponent(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, class UWwiseEmitterComponent** WwiseEmitterComponent);
-	void AddMapping(class UWwiseEvent* PlayEvent, class UWwiseEvent* StopEvent, class UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<class UWwiseEmitterComponent*>* WwiseEmitterComponents);
+	void AddMappingWithSingleEmitterComponent(UWwiseEvent* PlayEvent, UWwiseEvent* StopEvent, UWwiseObjectPoolWrapper* WwiseEmitterPool, UWwiseEmitterComponent** WwiseEmitterComponent);
+	void AddMapping(UWwiseEvent* PlayEvent, UWwiseEvent* StopEvent, UWwiseObjectPoolWrapper* WwiseEmitterPool, TArray<UWwiseEmitterComponent*>* WwiseEmitterComponents);
 };
 
 
@@ -155,37 +156,37 @@ public:
 	}
 
 
-	static void WwiseStopGlobalEvent(class UWwiseEvent* Event, float FadeTime);
-	static void WwiseSetState(const struct FName& StateGroup, const struct FName& StateValue);
-	static void WwiseSetGlobalRTPC(const struct FName& RTPCName, float RTPCValue);
-	static void WwisePostOneShotOnOwner(class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FWwiseEmitterCreationParams& CreationParams, const struct FVector& Offset, TEnumAsByte<EEmitterRelationship> Relationship);
-	static int WwisePostGlobalEvent(class UWwiseEvent* Event);
-	static int WwisePostEventAtLocation(class UWwiseEvent* Event, const struct FVector& Location, const struct FVector& Front, class UWwiseObjectPoolWrapper* EmitterPool, TEnumAsByte<EEmitterRelationship> Relationship, struct FWwiseEmitter* Emitter);
-	static bool WwiseIsGlobalEvent(class UWwiseEvent* Event);
-	static bool WwiseGetListenerInfo(int Viewport, struct FWwiseListenerInfo* InfoOut);
-	static bool WwiseGetListenerEmitter(class UObject* WorldContextObject, int ListenerIndex, const struct FName& Name, const struct FVector& Offset, bool bFollowOrientaion, class UWwiseObjectPoolWrapper* EmitterPool, struct FWwiseEmitter* Emitter);
-	static bool WwiseGetGlobalRTPC(const struct FName& RTPCName, float* RTPCValue);
-	static bool WwiseEmitterWaitToComplete(const struct FWwiseEmitter& Emitter, int PlayId, class UObject* WorldContextObject, const struct FLatentActionInfo& LatentInfo);
-	static bool WwiseEmitterStop(const struct FWwiseEmitter& Emitter, int PlayId, float FadeTime);
-	static bool WwiseEmitterSetSwitch(const struct FWwiseEmitter& Emitter, const struct FName& SwitchGroup, const struct FName& Value);
-	static bool WwiseEmitterSetRTPCOnAll(TArray<struct FWwiseEmitter> Emitters, const struct FName& Name, float Value);
-	static bool WwiseEmitterSetRTPC(const struct FWwiseEmitter& Emitter, const struct FName& Name, float Value);
-	static bool WwiseEmitterSetParams(const struct FWwiseEmitter& Emitter, const struct FWwiseEmitterParams& Params);
-	static bool WwiseEmitterSetLocation(const struct FWwiseEmitter& Emitter, const struct FVector& Location);
-	static TArray<int> WwiseEmitterPostEventOnAll(TArray<struct FWwiseEmitter> Emitters, class UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const struct FName& SourcePath, const struct FName& SourceObj);
-	static int WwiseEmitterPostEvent(const struct FWwiseEmitter& Emitter, class UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const struct FName& SourcePath, const struct FName& SourceObj);
-	static bool WwiseEmitterIsValid(const struct FWwiseEmitter& Emitter);
-	static bool WwiseEmitterIsPlaying(const struct FWwiseEmitter& Emitter, class UWwiseEvent* Event);
-	static bool WwiseEmitterGetRTPC(const struct FWwiseEmitter& Emitter, const struct FName& Name, float* Value);
-	static void WwiseEmitterDestroy(struct FWwiseEmitter* Emitter);
-	static bool WwiseEmitterComponentSetRTPCOnAll(TArray<class UWwiseEmitterComponent*> EmitterComponents, const struct FName& Name, float Value);
-	static bool WwiseEmitterComponentSetRTPC(class UWwiseEmitterComponent* EmitterComponent, const struct FName& Name, float Value);
-	static TArray<int> WwiseEmitterComponentPostEventOnAll(TArray<class UWwiseEmitterComponent*> EmitterComponents, class UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const struct FName& SourcePath, const struct FName& SourceObj);
-	static int WwiseEmitterComponentPostEvent(class UWwiseEmitterComponent* EmitterComponent, class UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const struct FName& SourcePath, const struct FName& SourceObj);
-	static bool WwiseCreateEmitter(const struct FName& Name, class UObject* Owner, class UWwiseObjectPoolWrapper* EmitterPool, const struct FVector& Offset, struct FWwiseEmitter* Emitter);
-	static int WwiseCreateDetachedEmitter(const struct FName& Name, class UWwiseObjectPoolWrapper* EmitterPool, const struct FVector& Location, const struct FWwiseEmitterCreationParams& CreationParams, TEnumAsByte<EEmitterRelationship> Relationship, const struct FVector& Forward, struct FWwiseEmitter* Emitter);
-	static bool SeekOnEvent(const struct FWwiseEmitter& WwiseEmitter, class UWwiseEvent* in_eventID, int in_iPosition, bool in_bSeekToNearestMarker, int in_PlayingID);
-	static bool GetPlaybackPosition(const struct FWwiseEmitter& WwiseEmitter, int in_PlayingID, int* PlaybackPositionInMs);
+	static void WwiseStopGlobalEvent(UWwiseEvent* Event, float FadeTime);
+	static void WwiseSetState(const FName& StateGroup, const FName& StateValue);
+	static void WwiseSetGlobalRTPC(const FName& RTPCName, float RTPCValue);
+	static void WwisePostOneShotOnOwner(UObject* Owner, UWwiseObjectPoolWrapper* EmitterPool, const FWwiseEmitterCreationParams& CreationParams, const FVector& Offset, TEnumAsByte<EEmitterRelationship> Relationship);
+	static int WwisePostGlobalEvent(UWwiseEvent* Event);
+	static int WwisePostEventAtLocation(UWwiseEvent* Event, const FVector& Location, const FVector& Front, UWwiseObjectPoolWrapper* EmitterPool, TEnumAsByte<EEmitterRelationship> Relationship, FWwiseEmitter* Emitter);
+	static bool WwiseIsGlobalEvent(UWwiseEvent* Event);
+	static bool WwiseGetListenerInfo(int Viewport, FWwiseListenerInfo* InfoOut);
+	static bool WwiseGetListenerEmitter(UObject* WorldContextObject, int ListenerIndex, const FName& Name, const FVector& Offset, bool bFollowOrientaion, UWwiseObjectPoolWrapper* EmitterPool, FWwiseEmitter* Emitter);
+	static bool WwiseGetGlobalRTPC(const FName& RTPCName, float* RTPCValue);
+	static bool WwiseEmitterWaitToComplete(const FWwiseEmitter& Emitter, int PlayId, UObject* WorldContextObject, const FLatentActionInfo& LatentInfo);
+	static bool WwiseEmitterStop(const FWwiseEmitter& Emitter, int PlayId, float FadeTime);
+	static bool WwiseEmitterSetSwitch(const FWwiseEmitter& Emitter, const FName& SwitchGroup, const FName& Value);
+	static bool WwiseEmitterSetRTPCOnAll(TArray<FWwiseEmitter> Emitters, const FName& Name, float Value);
+	static bool WwiseEmitterSetRTPC(const FWwiseEmitter& Emitter, const FName& Name, float Value);
+	static bool WwiseEmitterSetParams(const FWwiseEmitter& Emitter, const FWwiseEmitterParams& Params);
+	static bool WwiseEmitterSetLocation(const FWwiseEmitter& Emitter, const FVector& Location);
+	static TArray<int> WwiseEmitterPostEventOnAll(TArray<FWwiseEmitter> Emitters, UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const FName& SourcePath, const FName& SourceObj);
+	static int WwiseEmitterPostEvent(const FWwiseEmitter& Emitter, UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const FName& SourcePath, const FName& SourceObj);
+	static bool WwiseEmitterIsValid(const FWwiseEmitter& Emitter);
+	static bool WwiseEmitterIsPlaying(const FWwiseEmitter& Emitter, UWwiseEvent* Event);
+	static bool WwiseEmitterGetRTPC(const FWwiseEmitter& Emitter, const FName& Name, float* Value);
+	static void WwiseEmitterDestroy(FWwiseEmitter* Emitter);
+	static bool WwiseEmitterComponentSetRTPCOnAll(TArray<UWwiseEmitterComponent*> EmitterComponents, const FName& Name, float Value);
+	static bool WwiseEmitterComponentSetRTPC(UWwiseEmitterComponent* EmitterComponent, const FName& Name, float Value);
+	static TArray<int> WwiseEmitterComponentPostEventOnAll(TArray<UWwiseEmitterComponent*> EmitterComponents, UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const FName& SourcePath, const FName& SourceObj);
+	static int WwiseEmitterComponentPostEvent(UWwiseEmitterComponent* EmitterComponent, UWwiseEvent* WwiseEvent, TEnumAsByte<EEmitterRelationship> Relationship, const FName& SourcePath, const FName& SourceObj);
+	static bool WwiseCreateEmitter(const FName& Name, UObject* Owner, UWwiseObjectPoolWrapper* EmitterPool, const FVector& Offset, FWwiseEmitter* Emitter);
+	static int WwiseCreateDetachedEmitter(const FName& Name, UWwiseObjectPoolWrapper* EmitterPool, const FVector& Location, const FWwiseEmitterCreationParams& CreationParams, TEnumAsByte<EEmitterRelationship> Relationship, const FVector& Forward, FWwiseEmitter* Emitter);
+	static bool SeekOnEvent(const FWwiseEmitter& WwiseEmitter, UWwiseEvent* in_eventID, int in_iPosition, bool in_bSeekToNearestMarker, int in_PlayingID);
+	static bool GetPlaybackPosition(const FWwiseEmitter& WwiseEmitter, int in_PlayingID, int* PlaybackPositionInMs);
 };
 
 
@@ -202,25 +203,24 @@ public:
 	}
 
 
-	static bool GetNamedEmitter(const struct FName& InNameOfEmitterToRetrieve, class AActor* InActorToFindEmitterOn, struct FWwiseEmitter* OutEmitter);
-	static bool GetClosestNEmitters(const struct FVector& InFromPosition, int InNumEmittersToFind, class AActor* InActorToFindClosestEmitterOn, TArray<struct FWwiseEmitter>* OutEmitters);
-	static bool GetClosestEmitter(const struct FVector& InFromPosition, class AActor* InActorToFindClosestEmitterOn, struct FWwiseEmitter* OutEmitter);
+	static bool GetNamedEmitter(const FName& InNameOfEmitterToRetrieve, AActor* InActorToFindEmitterOn, FWwiseEmitter* OutEmitter);
+	static bool GetClosestNEmitters(const FVector& InFromPosition, int InNumEmittersToFind, AActor* InActorToFindClosestEmitterOn, TArray<FWwiseEmitter>* OutEmitters);
+	static bool GetClosestEmitter(const FVector& InFromPosition, AActor* InActorToFindClosestEmitterOn, FWwiseEmitter* OutEmitter);
 };
 
 
 // Class RareAudio.WwiseObjectPoolWrapper
-// 0x0058 (0x0080 - 0x0028)
+// 0x0050 (0x0078 - 0x0028)
 class UWwiseObjectPoolWrapper : public UObject
 {
 public:
-	struct FName                                       PoolName;                                                 // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	FName                                              PoolName;                                                 // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                MaxResources;                                             // 0x0030(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	int                                                MaxProxies;                                               // 0x0034(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableOcclusion;                                         // 0x0038(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	bool                                               DisableReverb;                                            // 0x0039(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x6];                                       // 0x003A(0x0006) MISSED OFFSET
-	struct FWwiseNativeEmitterPoolDensityParams        PoolDensityParams;                                        // 0x0040(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
-	unsigned char                                      UnknownData01[0x18];                                      // 0x0068(0x0018) MISSED OFFSET
+	bool                                               DisableOcclusion;                                         // 0x0034(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	bool                                               DisableReverb;                                            // 0x0035(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x0036(0x0002) MISSED OFFSET
+	FWwiseNativeEmitterPoolDensityParams               PoolDensityParams;                                        // 0x0038(0x0028) (Edit, BlueprintVisible, BlueprintReadOnly)
+	unsigned char                                      UnknownData01[0x18];                                      // 0x0060(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -251,8 +251,8 @@ public:
 class UAudioPortalComponent : public USceneComponent
 {
 public:
-	class UAudioSpaceDataAsset*                        AudioInsideSpace;                                         // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UAudioSpaceDataAsset*                        AudioOutsideSpace;                                        // 0x02B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UAudioSpaceDataAsset*                              AudioInsideSpace;                                         // 0x02B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UAudioSpaceDataAsset*                              AudioOutsideSpace;                                        // 0x02B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              PortalTriggerDistance;                                    // 0x02C0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              InsideRtpcUpdateDistance;                                 // 0x02C4(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              OutsideRtpcUpdateDistance;                                // 0x02C8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -266,7 +266,7 @@ public:
 	}
 
 
-	void SetParentShip(class AActor* ParentShip);
+	void SetParentShip(AActor* ParentShip);
 };
 
 
@@ -283,9 +283,9 @@ public:
 	}
 
 
-	void UnregisterPortal(class UAudioPortalComponent* AudioPortal);
-	void RegisterPortal(class UAudioPortalComponent* AudioPortal, class AActor* OwningActor);
-	TArray<TWeakObjectPtr<class UAudioPortalComponent>> GetAllRegisteredPortalsInSpecificSpace(class UAudioSpaceDataAsset* AudioSpace, class AActor* OwningActor);
+	void UnregisterPortal(UAudioPortalComponent* AudioPortal);
+	void RegisterPortal(UAudioPortalComponent* AudioPortal, AActor* OwningActor);
+	TArray<TWeakObjectPtr<class UAudioPortalComponent>> GetAllRegisteredPortalsInSpecificSpace(UAudioSpaceDataAsset* AudioSpace, AActor* OwningActor);
 	TArray<TWeakObjectPtr<class UAudioPortalComponent>> GetAllRegisteredPortals();
 };
 
@@ -307,12 +307,12 @@ public:
 
 
 // Class RareAudio.AudioSpaceComponent
-// 0x0010 (0x05F0 - 0x05E0)
+// 0x0010 (0x0600 - 0x05F0)
 class UAudioSpaceComponent : public UStaticMeshComponent
 {
 public:
-	class UAudioSpaceDataAsset*                        AudioSpace;                                               // 0x05E0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x8];                                       // 0x05E8(0x0008) MISSED OFFSET
+	UAudioSpaceDataAsset*                              AudioSpace;                                               // 0x05F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05F8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -321,8 +321,8 @@ public:
 	}
 
 
-	void OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const struct FHitResult& SweepResult);
+	void OnOverlapEnd(AActor* OtherActor, UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void OnOverlapBegin(AActor* OtherActor, UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const FHitResult& SweepResult);
 };
 
 
@@ -331,9 +331,9 @@ public:
 class UAudioSpaceDataAsset : public UDataAsset
 {
 public:
-	struct FName                                       RtpcToUpdate;                                             // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 AmbienceToStart;                                          // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 AmbienceToStop;                                           // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	FName                                              RtpcToUpdate;                                             // 0x0028(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UWwiseEvent*                                       AmbienceToStart;                                          // 0x0030(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UWwiseEvent*                                       AmbienceToStop;                                           // 0x0038(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -342,7 +342,7 @@ public:
 	}
 
 
-	struct FName GetRtpcName();
+	FName GetRtpcName();
 };
 
 
@@ -351,7 +351,7 @@ public:
 class UAudioSpaceTrackerComponent : public UActorComponent
 {
 public:
-	TArray<class UAudioSpaceComponent*>                CurrentSpaces;                                            // 0x00C8(0x0010) (ExportObject, ZeroConstructor, Transient)
+	TArray<UAudioSpaceComponent*>                      CurrentSpaces;                                            // 0x00C8(0x0010) (ExportObject, ZeroConstructor, Transient)
 
 	static UClass* StaticClass()
 	{
@@ -360,7 +360,7 @@ public:
 	}
 
 
-	class UAudioSpaceDataAsset* GetCurrentSpace();
+	UAudioSpaceDataAsset* GetCurrentSpace();
 };
 
 
@@ -385,7 +385,7 @@ public:
 class UStaticMeshAudioDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FStaticMeshAudioAssociation>         MeshToAudioAssociations;                                  // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<FStaticMeshAudioAssociation>                MeshToAudioAssociations;                                  // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -401,7 +401,7 @@ public:
 class UStaticMeshAudioEmittersComponent : public USceneComponent
 {
 public:
-	TArray<struct FStaticMeshComponentAudioAssociation> InstanceAssociations;                                     // 0x02B0(0x0010) (ZeroConstructor)
+	TArray<FStaticMeshComponentAudioAssociation>       InstanceAssociations;                                     // 0x02B0(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -419,7 +419,7 @@ public:
 class UTritonAcousticMap : public UObject
 {
 public:
-	class FString                                      TritonMapFilename;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
+	FString                                            TritonMapFilename;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      UnknownData00[0x28];                                      // 0x0038(0x0028) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -436,7 +436,7 @@ public:
 class UTritonComponent : public USceneComponent
 {
 public:
-	class UTritonAcousticMap*                          TritonMapAsset;                                           // 0x02B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UTritonAcousticMap*                                TritonMapAsset;                                           // 0x02B0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              TritonEffectRadius;                                       // 0x02B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x02BC(0x0004) MISSED OFFSET
 
@@ -455,9 +455,9 @@ class UTritonService : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0028(0x0010) MISSED OFFSET
-	TArray<class UTritonComponent*>                    RegisteredTritonComponents;                               // 0x0038(0x0010) (ExportObject, ZeroConstructor, Transient)
+	TArray<UTritonComponent*>                          RegisteredTritonComponents;                               // 0x0038(0x0010) (ExportObject, ZeroConstructor, Transient)
 	unsigned char                                      UnknownData01[0xA8];                                      // 0x0048(0x00A8) MISSED OFFSET
-	class UTritonComponent*                            CachedListenerInfo;                                       // 0x00F0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	UTritonComponent*                                  CachedListenerInfo;                                       // 0x00F0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x38];                                      // 0x00F8(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MA_LS_BuoyantStorageBarrel_LockedToWater_classes.hpp"
+#include "SoT_BP_MA_LS_BuoyantStorageBarrel_LockedToWater_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ unsigned char ABP_MA_LS_BuoyantStorageBarrel_LockedToWater_C::GetPxActorCapacity
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MA_LS_BuoyantStorageBarrel_LockedToWater.BP_MA_LS_BuoyantStorageBarrel_LockedToWater_C.GetPxActorCapacityForPhysXAggregate"));
 
-	struct
-	{
-		unsigned char                  ReturnValue;
-	} params;
-
+	ABP_MA_LS_BuoyantStorageBarrel_LockedToWater_C_GetPxActorCapacityForPhysXAggregate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,10 +36,7 @@ void ABP_MA_LS_BuoyantStorageBarrel_LockedToWater_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MA_LS_BuoyantStorageBarrel_LockedToWater.BP_MA_LS_BuoyantStorageBarrel_LockedToWater_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_MA_LS_BuoyantStorageBarrel_LockedToWater_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

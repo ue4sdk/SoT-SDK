@@ -4,13 +4,26 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ShipFlagCustomizationChest_classes.hpp"
+#include "SoT_BP_ShipFlagCustomizationChest_parameters.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_ShipFlagCustomizationChest.BP_ShipFlagCustomizationChest_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_ShipFlagCustomizationChest_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ShipFlagCustomizationChest.BP_ShipFlagCustomizationChest_C.UserConstructionScript"));
+
+	ABP_ShipFlagCustomizationChest_C_UserConstructionScript_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
 
 }
 

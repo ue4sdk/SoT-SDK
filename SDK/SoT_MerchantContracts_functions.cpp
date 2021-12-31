@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_MerchantContracts_classes.hpp"
+#include "SoT_MerchantContracts_parameters.hpp"
 
 namespace SDK
 {
@@ -17,19 +17,13 @@ namespace SDK
 // Parameters:
 // TScriptInterface<class UGameServiceProviderInterface> ServiceProviderInterface       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          TimeLimit                      (Parm, ZeroConstructor, IsPlainOldData)
-// struct FText                   ReturnValue                    (Parm, OutParm, ReturnParm)
+// FText                          ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FText UMerchantContractsBlueprintLibrary::GetDateFromTimeLimit(const TScriptInterface<class UGameServiceProviderInterface>& ServiceProviderInterface, float TimeLimit)
+FText UMerchantContractsBlueprintLibrary::GetDateFromTimeLimit(const TScriptInterface<class UGameServiceProviderInterface>& ServiceProviderInterface, float TimeLimit)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MerchantContracts.MerchantContractsBlueprintLibrary.GetDateFromTimeLimit"));
 
-	struct
-	{
-		TScriptInterface<class UGameServiceProviderInterface> ServiceProviderInterface;
-		float                          TimeLimit;
-		struct FText                   ReturnValue;
-	} params;
-
+	UMerchantContractsBlueprintLibrary_GetDateFromTimeLimit_Params params;
 	params.ServiceProviderInterface = ServiceProviderInterface;
 	params.TimeLimit = TimeLimit;
 

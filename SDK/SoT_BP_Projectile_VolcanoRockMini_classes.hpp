@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_VolcanoRockMini.BP_Projectile_VolcanoRockMini_C
-// 0x0010 (0x0648 - 0x0638)
+// 0x0010 (0x0668 - 0x0658)
 class ABP_Projectile_VolcanoRockMini_C : public AVolcanicRock
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x0638(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            Collision;                                                // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStaticMeshComponent*                              StaticMesh;                                               // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USphereComponent*                                  Collision;                                                // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

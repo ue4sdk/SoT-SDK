@@ -21,7 +21,7 @@ namespace SDK
 // 0x0008
 struct FGameTime
 {
-	struct FDateTime                                   DateTimeRepresentation;                                   // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor)
+	FDateTime                                          DateTimeRepresentation;                                   // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct Time.ReplicatedDateTime
@@ -35,16 +35,16 @@ struct FReplicatedDateTime
 // 0x0010
 struct FReplicatedAuthoritativeTime
 {
-	struct FReplicatedDateTime                         WorldTime;                                                // 0x0000(0x0008)
-	struct FReplicatedDateTime                         SyncTime;                                                 // 0x0008(0x0008)
+	FReplicatedDateTime                                WorldTime;                                                // 0x0000(0x0008)
+	FReplicatedDateTime                                SyncTime;                                                 // 0x0008(0x0008)
 };
 
 // ScriptStruct Time.GameTimeRange
 // 0x0010
 struct FGameTimeRange
 {
-	struct FGameTime                                   Start;                                                    // 0x0000(0x0008) (Edit)
-	struct FGameTime                                   End;                                                      // 0x0008(0x0008) (Edit)
+	FGameTime                                          Start;                                                    // 0x0000(0x0008) (Edit)
+	FGameTime                                          End;                                                      // 0x0008(0x0008) (Edit)
 };
 
 // ScriptStruct Time.EventSetDateTime

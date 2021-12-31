@@ -19,7 +19,7 @@ namespace SDK
 // 0x0010
 struct FADS_SkeletonSensing
 {
-	TArray<struct FAthenaAnimationSkeletonSensingAnimations> SkeletonSensing_8_C3B3D3934CED931AA0DDF4BFE901E9B0;       // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<FAthenaAnimationSkeletonSensingAnimations>  SkeletonSensing_8_C3B3D3934CED931AA0DDF4BFE901E9B0;       // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

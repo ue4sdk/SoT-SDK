@@ -38,17 +38,17 @@ struct FReverbPresetControllerSettings
 // 0x0064
 struct FWwiseAudioReverbPresets
 {
-	struct FName                                       ShortEarlyReflectionPresetName;                           // 0x0000(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       LongEarlyReflectionPresetName;                            // 0x0008(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       SpaceSizeRTPCName;                                        // 0x0010(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       EnclosedRatioRTPCName;                                    // 0x0018(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       MaterialThicknessRTPCName;                                // 0x0020(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       MaterialReflectivityRTPCName;                             // 0x0028(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              ShortEarlyReflectionPresetName;                           // 0x0000(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              LongEarlyReflectionPresetName;                            // 0x0008(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              SpaceSizeRTPCName;                                        // 0x0010(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              EnclosedRatioRTPCName;                                    // 0x0018(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              MaterialThicknessRTPCName;                                // 0x0020(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              MaterialReflectivityRTPCName;                             // 0x0028(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	TEnumAsByte<ECollisionChannel>                     EnvironmentTraceChannel;                                  // 0x0030(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
 	float                                              MinSpaceSizeWindowForEarlyReflections;                    // 0x0034(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	float                                              MaxSpaceSizeWindowforEarlyReflections;                    // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FReverbPresetControllerSettings             SamplingSettings;                                         // 0x003C(0x0028) (Edit, Config)
+	FReverbPresetControllerSettings                    SamplingSettings;                                         // 0x003C(0x0028) (Edit, Config)
 };
 
 // ScriptStruct WwiseAudio.WwiseBinkTrackMapping
@@ -67,18 +67,18 @@ struct FWwiseBinkTrackMappings
 {
 	TEnumAsByte<EWwiseLanguageOrder>                   mLanguage;                                                // 0x0000(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	TArray<struct FWwiseBinkTrackMapping>              mChannels;                                                // 0x0008(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FWwiseBinkTrackMapping>                     mChannels;                                                // 0x0008(0x0010) (Edit, ZeroConstructor, Config)
 };
 
 // ScriptStruct WwiseAudio.WwiseBinkSettings
 // 0x0038
 struct FWwiseBinkSettings
 {
-	struct FStringAssetReference                       PlayEvent;                                                // 0x0000(0x0010) (Edit, ZeroConstructor, Config)
-	struct FStringAssetReference                       StopEvent;                                                // 0x0010(0x0010) (Edit, ZeroConstructor, Config)
+	FStringAssetReference                              PlayEvent;                                                // 0x0000(0x0010) (Edit, ZeroConstructor, Config)
+	FStringAssetReference                              StopEvent;                                                // 0x0010(0x0010) (Edit, ZeroConstructor, Config)
 	int                                                PreBufferCount;                                           // 0x0020(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0024(0x0004) MISSED OFFSET
-	TArray<struct FWwiseBinkTrackMappings>             Mappings;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FWwiseBinkTrackMappings>                    Mappings;                                                 // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 };
 
 // ScriptStruct WwiseAudio.WwiseIOPriorityMappingConfig
@@ -94,27 +94,27 @@ struct FWwiseIOPriorityMappingConfig
 // 0x0018
 struct FWwiseNetworkRelationship
 {
-	struct FName                                       SwitchGroupName;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       RemotePlayerSwitchValue;                                  // 0x0008(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       LocalPlayerSwitchValue;                                   // 0x0010(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              SwitchGroupName;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              RemotePlayerSwitchValue;                                  // 0x0008(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              LocalPlayerSwitchValue;                                   // 0x0010(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
 };
 
 // ScriptStruct WwiseAudio.WwiseAudioGameStateSettings
 // 0x00A0
 struct FWwiseAudioGameStateSettings
 {
-	struct FName                                       AudioGameStateGroupName;                                  // 0x0000(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       AudioGameStateFrontend;                                   // 0x0008(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       AudioGameStateLoading;                                    // 0x0010(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       AudioGameStateIngame;                                     // 0x0018(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	TArray<struct FStringAssetReference>               EventsToPlayOnLobbyStart;                                 // 0x0020(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnLobbyEnd;                                   // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnEngageStart;                                // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnEngageEnd;                                  // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnLoadingStart;                               // 0x0060(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnLoadingEnd;                                 // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnFrontEndOrLoadingStart;                     // 0x0080(0x0010) (Edit, ZeroConstructor, Config)
-	TArray<struct FStringAssetReference>               EventsToPlayOnFrontEndOrLoadingEnd;                       // 0x0090(0x0010) (Edit, ZeroConstructor, Config)
+	FName                                              AudioGameStateGroupName;                                  // 0x0000(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              AudioGameStateFrontend;                                   // 0x0008(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              AudioGameStateLoading;                                    // 0x0010(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FName                                              AudioGameStateIngame;                                     // 0x0018(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	TArray<FStringAssetReference>                      EventsToPlayOnLobbyStart;                                 // 0x0020(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FStringAssetReference>                      EventsToPlayOnLobbyEnd;                                   // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FStringAssetReference>                      EventsToPlayOnEngageStart;                                // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FStringAssetReference>                      EventsToPlayOnEngageEnd;                                  // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FStringAssetReference>                      EventsToPlayOnLoadingStart;                               // 0x0060(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FStringAssetReference>                      EventsToPlayOnLoadingEnd;                                 // 0x0070(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FStringAssetReference>                      EventsToPlayOnFrontEndOrLoadingStart;                     // 0x0080(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FStringAssetReference>                      EventsToPlayOnFrontEndOrLoadingEnd;                       // 0x0090(0x0010) (Edit, ZeroConstructor, Config)
 };
 
 // ScriptStruct WwiseAudio.WwiseAudioAcousticSurfaceParams
@@ -129,8 +129,8 @@ struct FWwiseAudioAcousticSurfaceParams
 // 0x0018
 struct FAnimNotify_SoundSwitch
 {
-	struct FStringAssetReference                       SkeletalMeshReference;                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
-	struct FName                                       SkeletalMeshCategoryName;                                 // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FStringAssetReference                              SkeletalMeshReference;                                    // 0x0000(0x0010) (Edit, ZeroConstructor)
+	FName                                              SkeletalMeshCategoryName;                                 // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct WwiseAudio.WwiseEventParam
@@ -138,8 +138,8 @@ struct FAnimNotify_SoundSwitch
 struct FWwiseEventParam
 {
 	TWeakObjectPtr<class UWwiseEvent>                  WwiseEvent;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SourcePath;                                               // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       SourceObj;                                                // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FName                                              SourcePath;                                               // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FName                                              SourceObj;                                                // 0x0010(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct WwiseAudio.WwiseEmitterParams
@@ -154,11 +154,11 @@ struct FWwiseEmitterParams
 // 0x003C
 struct FWwiseListenerInfo
 {
-	struct FVector                                     Position;                                                 // 0x0000(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Up;                                                       // 0x000C(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Right;                                                    // 0x0018(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Front;                                                    // 0x0024(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Velocity;                                                 // 0x0030(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	FVector                                            Position;                                                 // 0x0000(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	FVector                                            Up;                                                       // 0x000C(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	FVector                                            Right;                                                    // 0x0018(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	FVector                                            Front;                                                    // 0x0024(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	FVector                                            Velocity;                                                 // 0x0030(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct WwiseAudio.WwiseNativeEmitterPoolDensityParams
@@ -167,9 +167,9 @@ struct FWwiseNativeEmitterPoolDensityParams
 {
 	bool                                               PlayPoolDensityAudio;                                     // 0x0000(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	class UWwiseEvent*                                 PoolDensityAudioPlayEvent;                                // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 PoolDensityAudioStopEvent;                                // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	struct FName                                       DensityRtpcName;                                          // 0x0018(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UWwiseEvent*                                       PoolDensityAudioPlayEvent;                                // 0x0008(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UWwiseEvent*                                       PoolDensityAudioStopEvent;                                // 0x0010(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	FName                                              DensityRtpcName;                                          // 0x0018(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	int                                                FullDensityAmount;                                        // 0x0020(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              DensityDistance;                                          // 0x0024(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
@@ -178,36 +178,36 @@ struct FWwiseNativeEmitterPoolDensityParams
 // 0x0010
 struct FWwiseExternalSource
 {
-	class FString                                      path;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	FString                                            path;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct WwiseAudio.WwiseSubtitle
 // 0x0010
 struct FWwiseSubtitle
 {
-	class FString                                      Subtitle;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	FString                                            Subtitle;                                                 // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 // ScriptStruct WwiseAudio.MovieSceneAkAudioEventTemplate
 // 0x0008 (0x0020 - 0x0018)
 struct FMovieSceneAkAudioEventTemplate : public FMovieSceneEvalTemplate
 {
-	class UMovieSceneAkAudioEventSection*              Section;                                                  // 0x0018(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	UMovieSceneAkAudioEventSection*                    Section;                                                  // 0x0018(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct WwiseAudio.MovieSceneAkAudioRTPCTemplate
 // 0x0008 (0x0020 - 0x0018)
 struct FMovieSceneAkAudioRTPCTemplate : public FMovieSceneEvalTemplate
 {
-	class UMovieSceneAkAudioRTPCSection*               Section;                                                  // 0x0018(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	UMovieSceneAkAudioRTPCSection*                     Section;                                                  // 0x0018(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct WwiseAudio.MovieSceneAkAudioRTPCSectionData
 // 0x0088
 struct FMovieSceneAkAudioRTPCSectionData
 {
-	class FString                                      RTPCName;                                                 // 0x0000(0x0010) (ZeroConstructor)
-	struct FRichCurve                                  RTPCCurve;                                                // 0x0010(0x0078)
+	FString                                            RTPCName;                                                 // 0x0000(0x0010) (ZeroConstructor)
+	FRichCurve                                         RTPCCurve;                                                // 0x0010(0x0078)
 };
 
 }

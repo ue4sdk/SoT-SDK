@@ -19,7 +19,7 @@ namespace SDK
 // 0x0028
 struct FADS_SkeletonCurseNative
 {
-	struct FAthenaAnimationSkeletonCurseAnimations     SkeletonCurse_5_76A42CEF49E6210508A542B0E971AEF1;         // 0x0000(0x0028) (Edit, BlueprintVisible)
+	FAthenaAnimationSkeletonCurseAnimations            SkeletonCurse_5_76A42CEF49E6210508A542B0E971AEF1;         // 0x0000(0x0028) (Edit, BlueprintVisible)
 };
 
 }

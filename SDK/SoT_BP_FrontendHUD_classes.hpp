@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FrontendHUD.BP_FrontendHUD_C
-// 0x0008 (0x06A8 - 0x06A0)
+// 0x0008 (0x0608 - 0x0600)
 class ABP_FrontendHUD_C : public AFrontendHUD
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x06A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0600(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

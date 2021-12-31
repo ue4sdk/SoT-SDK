@@ -18,6 +18,13 @@ namespace SDK
 //Script Structs
 //---------------------------------------------------------------------------
 
+// ScriptStruct ExplosionFramework.EventExplosionIgnitedActor
+// 0x0008
+struct FEventExplosionIgnitedActor
+{
+	AActor*                                            IgnitedActor;                                             // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
 // ScriptStruct ExplosionFramework.EventOnExploded
 // 0x000C
 struct FEventOnExploded
@@ -29,7 +36,7 @@ struct FEventOnExploded
 // 0x0008
 struct FEventExplosionOverlap
 {
-	class UClass*                                      DamagerType;                                              // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UClass*                                            DamagerType;                                              // 0x0000(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 }

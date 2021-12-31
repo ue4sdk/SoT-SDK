@@ -20,13 +20,13 @@ namespace SDK
 // 0x003A
 struct FPlacementGardenSeed
 {
-	class UStaticMesh*                                 Mesh_27_C9BD6A6847185FAAF40455801B2F864F;                 // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   RadiusRange_21_766F5E1545643AF109A1C48B8CD8A81B;          // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStaticMesh*                                       Mesh_27_C9BD6A6847185FAAF40455801B2F864F;                 // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector2D                                          RadiusRange_21_766F5E1545643AF109A1C48B8CD8A81B;          // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              RadiusOverlap_10_3A052E52449C395FA85BB99D6EB0A126;        // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   HeightRange_13_636ED5A34C3BA5D1D7AF0C8C9DCF2C3F;          // 0x0014(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   SlopeRange_16_50192CC54A727B5D84B1CFB25DEE7264;           // 0x001C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector2D                                          HeightRange_13_636ED5A34C3BA5D1D7AF0C8C9DCF2C3F;          // 0x0014(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector2D                                          SlopeRange_16_50192CC54A727B5D84B1CFB25DEE7264;           // 0x001C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              SpawnWeight_19_0B05BBF2449133E0187C478432462F27;          // 0x0024(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   ScaleRange_24_38A1B6C243AC344CC43846AE7098057E;           // 0x0028(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector2D                                          ScaleRange_24_38A1B6C243AC344CC43846AE7098057E;           // 0x0028(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               AlignToSurface_26_C7572FE34B448D93F9CCFA9294397210;       // 0x0030(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0031(0x0003) MISSED OFFSET
 	float                                              SinkDepth_30_33CCF791430745D7F68E33949E9163CB;            // 0x0034(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)

@@ -34,7 +34,7 @@ struct FCookerSmokeFeedbackEntry
 {
 	TEnumAsByte<ECookingSmokeFeedbackLevel>            FeedbackLevel;                                            // 0x0000(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	class UParticleSystem*                             SmokeVFX;                                                 // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UParticleSystem*                                   SmokeVFX;                                                 // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Cooking.CookingClientRepresentation
@@ -44,14 +44,14 @@ struct FCookingClientRepresentation
 	bool                                               Cooking;                                                  // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               HasItem;                                                  // 0x0001(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x0002(0x0006) MISSED OFFSET
-	class AItemInfo*                                   CurrentlyCookingItem;                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FText                                       CurrentCookingItemDisplayName;                            // 0x0010(0x0038)
-	class UClass*                                      CurrentCookingItemCategory;                               // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
+	AItemInfo*                                         CurrentlyCookingItem;                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	FText                                              CurrentCookingItemDisplayName;                            // 0x0010(0x0038)
+	UClass*                                            CurrentCookingItemCategory;                               // 0x0048(0x0008) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ECookingSmokeFeedbackLevel>            SmokeFeedbackLevel;                                       // 0x0050(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0051(0x0003) MISSED OFFSET
 	float                                              VisibleCookedExtent;                                      // 0x0054(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              CurrentItemPlacementAngle;                                // 0x0058(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       CurrentCookableTypeName;                                  // 0x005C(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              CurrentCookableTypeName;                                  // 0x005C(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x4];                                       // 0x0064(0x0004) MISSED OFFSET
 };
 
@@ -66,7 +66,7 @@ struct FCookingInfo
 // 0x0008
 struct FOnPlacedItemInCookingPot
 {
-	class AItemInfo*                                   ItemToCook;                                               // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	AItemInfo*                                         ItemToCook;                                               // 0x0000(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Cooking.OnItemStartedCooking
@@ -87,22 +87,22 @@ struct FOnItemStoppedCooking
 // 0x0030
 struct FCookEndTelemetryEvent
 {
-	class FString                                      ItemName;                                                 // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            ItemName;                                                 // 0x0000(0x0010) (ZeroConstructor)
 	TEnumAsByte<ECookingState>                         CookState;                                                // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
-	struct FVector                                     Location;                                                 // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CookId;                                                   // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
+	FVector                                            Location;                                                 // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              CookId;                                                   // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Cooking.CookStartTelemetryEvent
 // 0x0030
 struct FCookStartTelemetryEvent
 {
-	class FString                                      ItemName;                                                 // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            ItemName;                                                 // 0x0000(0x0010) (ZeroConstructor)
 	TEnumAsByte<ECookingState>                         CookState;                                                // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
-	struct FVector                                     Location;                                                 // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CookId;                                                   // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
+	FVector                                            Location;                                                 // 0x0014(0x000C) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              CookId;                                                   // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 }

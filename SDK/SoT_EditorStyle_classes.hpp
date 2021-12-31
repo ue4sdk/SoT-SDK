@@ -19,10 +19,10 @@ namespace SDK
 class UEditorStyleSettings : public UObject
 {
 public:
-	struct FLinearColor                                SelectionColor;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FLinearColor                                PressedSelectionColor;                                    // 0x0038(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FLinearColor                                InactiveSelectionColor;                                   // 0x0048(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FLinearColor                                KeyboardFocusColor;                                       // 0x0058(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FLinearColor                                       SelectionColor;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FLinearColor                                       PressedSelectionColor;                                    // 0x0038(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FLinearColor                                       InactiveSelectionColor;                                   // 0x0048(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	FLinearColor                                       KeyboardFocusColor;                                       // 0x0058(0x0010) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	TEnumAsByte<EColorVisionDeficiency>                ColorVisionDeficiencyPreviewType;                         // 0x0068(0x0001) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0069(0x0003) MISSED OFFSET
 	unsigned char                                      bUseSmallToolBarIcons : 1;                                // 0x006C(0x0001) (Edit, Config)

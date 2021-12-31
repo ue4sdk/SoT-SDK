@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AsymmetricClientServerObjectsFramework_classes.hpp"
+#include "SoT_AsymmetricClientServerObjectsFramework_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void AAsymmetricObjectServerManager::OnRep_AsymmetricObjectAsset()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AsymmetricClientServerObjectsFramework.AsymmetricObjectServerManager.OnRep_AsymmetricObjectAsset"));
 
-	struct
-	{
-	} params;
-
+	AAsymmetricObjectServerManager_OnRep_AsymmetricObjectAsset_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

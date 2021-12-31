@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_AthenasFortuneShopkeeper_classes.hpp"
+#include "SoT_BP_AthenasFortuneShopkeeper_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_AthenasFortuneShopkeeper_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_AthenasFortuneShopkeeper.BP_AthenasFortuneShopkeeper_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_AthenasFortuneShopkeeper_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

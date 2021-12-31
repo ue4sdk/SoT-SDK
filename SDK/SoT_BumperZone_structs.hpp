@@ -19,7 +19,7 @@ namespace SDK
 // 0x0028
 struct FBumperZoneData
 {
-	class AShipBumperZone*                             BumperZone;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AShipBumperZone*                                   BumperZone;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x20];                                      // 0x0008(0x0020) MISSED OFFSET
 };
 

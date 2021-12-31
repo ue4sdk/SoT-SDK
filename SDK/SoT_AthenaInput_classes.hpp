@@ -44,8 +44,8 @@ public:
 	}
 
 
-	void SetNotificationInputHandler(class UClass* Id, const struct FScriptDelegate& Handler);
-	void SetAnalogInputHandler(class UClass* Id, const struct FScriptDelegate& Handler);
+	void SetNotificationInputHandler(UClass* Id, const FScriptDelegate& Handler);
+	void SetAnalogInputHandler(UClass* Id, const FScriptDelegate& Handler);
 };
 
 
@@ -70,7 +70,7 @@ public:
 class UInputBinder : public UObject
 {
 public:
-	class UInputComponent*                             InputComponent;                                           // 0x0028(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	UInputComponent*                                   InputComponent;                                           // 0x0028(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x58];                                      // 0x0030(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -80,9 +80,9 @@ public:
 	}
 
 
-	void SpoofNotificationInput(class UClass* Id);
-	void SpoofAnalogInput(class UClass* Id, float Value);
-	bool IsContinuousActionActive(class UClass* BeginNotificationInputId);
+	void SpoofNotificationInput(UClass* Id);
+	void SpoofAnalogInput(UClass* Id, float Value);
+	bool IsContinuousActionActive(UClass* BeginNotificationInputId);
 	void IgnoreNonSpoofedInput(bool InShouldIgnore);
 };
 
@@ -100,8 +100,8 @@ public:
 	}
 
 
-	TEnumAsByte<EInputHandlerResult> HandleNotificationInput(class UClass* Id);
-	TEnumAsByte<EInputHandlerResult> HandleAnalogInput(class UClass* Id, float Input);
+	TEnumAsByte<EInputHandlerResult> HandleNotificationInput(UClass* Id);
+	TEnumAsByte<EInputHandlerResult> HandleAnalogInput(UClass* Id, float Input);
 };
 
 
@@ -185,12 +185,12 @@ public:
 	}
 
 
-	static class UCompositeInputHandler* MakeCompositeInputHandler();
+	static UCompositeInputHandler* MakeCompositeInputHandler();
 };
 
 
 // Class AthenaInput.MockInputHandlerCharacter
-// 0x0000 (0x05D0 - 0x05D0)
+// 0x0000 (0x05E0 - 0x05E0)
 class AMockInputHandlerCharacter : public ACharacter
 {
 public:
@@ -217,7 +217,7 @@ public:
 	}
 
 
-	struct FText GetNotificationInputDisplayName(class UClass* InputID);
+	FText GetNotificationInputDisplayName(UClass* InputID);
 };
 
 
@@ -227,7 +227,7 @@ class UNamedNotificationInputComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	TArray<struct FNotificationInputDisplayName>       NotificationInputDisplayNames;                            // 0x00D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<FNotificationInputDisplayName>              NotificationInputDisplayNames;                            // 0x00D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

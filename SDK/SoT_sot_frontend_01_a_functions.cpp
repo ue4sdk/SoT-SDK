@@ -1,10 +1,10 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_sot_frontend_01_a_classes.hpp"
+#include "SoT_sot_frontend_01_a_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void Asot_frontend_01_a_C::Get_Pirate_Selector_Component(class UPirateSelector**
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.Get Pirate Selector Component"));
 
-	struct
-	{
-		class UPirateSelector*         PirateSelectorComponent;
-	} params;
-
+	Asot_frontend_01_a_C_Get_Pirate_Selector_Component_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -43,11 +39,7 @@ void Asot_frontend_01_a_C::GetFrontendCameraComponent(class UFrontendCameraCompo
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.GetFrontendCameraComponent"));
 
-	struct
-	{
-		class UFrontendCameraComponent* Camera_Component;
-	} params;
-
+	Asot_frontend_01_a_C_GetFrontendCameraComponent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -63,10 +55,7 @@ void Asot_frontend_01_a_C::ResetLineUpPirates()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.ResetLineUpPirates"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_ResetLineUpPirates_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -79,10 +68,7 @@ void Asot_frontend_01_a_C::RefreshCharSlotStatus()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.RefreshCharSlotStatus"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_RefreshCharSlotStatus_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -97,11 +83,7 @@ void Asot_frontend_01_a_C::SetCharSlotId(int NewCharSlotID)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.SetCharSlotId"));
 
-	struct
-	{
-		int                            NewCharSlotID;
-	} params;
-
+	Asot_frontend_01_a_C_SetCharSlotId_Params params;
 	params.NewCharSlotID = NewCharSlotID;
 
 	UObject::ProcessEvent(fn, &params);
@@ -117,11 +99,7 @@ void Asot_frontend_01_a_C::PirateHighlight(float Time)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.PirateHighlight"));
 
-	struct
-	{
-		float                          Time;
-	} params;
-
+	Asot_frontend_01_a_C_PirateHighlight_Params params;
 	params.Time = Time;
 
 	UObject::ProcessEvent(fn, &params);
@@ -137,11 +115,7 @@ void Asot_frontend_01_a_C::GetSelectedPirate(class ABP_PirateGenerator_LineUp_C*
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.GetSelectedPirate"));
 
-	struct
-	{
-		class ABP_PirateGenerator_LineUp_C* Item;
-	} params;
-
+	Asot_frontend_01_a_C_GetSelectedPirate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -159,11 +133,7 @@ void Asot_frontend_01_a_C::GetPirateLineup(class ABP_PirateGenerator_LineUpUI_C*
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.GetPirateLineup"));
 
-	struct
-	{
-		class ABP_PirateGenerator_LineUpUI_C* Item;
-	} params;
-
+	Asot_frontend_01_a_C_GetPirateLineup_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -181,11 +151,7 @@ void Asot_frontend_01_a_C::InpActEvt_FrontendTavernSelect_UniqueObjectNameForCoo
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.InpActEvt_FrontendTavernSelect_UniqueObjectNameForCooking_1729007687"));
 
-	struct
-	{
-		struct FKey                    Key;
-	} params;
-
+	Asot_frontend_01_a_C_InpActEvt_FrontendTavernSelect_UniqueObjectNameForCooking_1729007687_Params params;
 	params.Key = Key;
 
 	UObject::ProcessEvent(fn, &params);
@@ -201,11 +167,7 @@ void Asot_frontend_01_a_C::InpActEvt_FrontendTavernNextPage_UniqueObjectNameForC
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.InpActEvt_FrontendTavernNextPage_UniqueObjectNameForCooking_1729007686"));
 
-	struct
-	{
-		struct FKey                    Key;
-	} params;
-
+	Asot_frontend_01_a_C_InpActEvt_FrontendTavernNextPage_UniqueObjectNameForCooking_1729007686_Params params;
 	params.Key = Key;
 
 	UObject::ProcessEvent(fn, &params);
@@ -219,10 +181,7 @@ void Asot_frontend_01_a_C::K2Node_MatineeController_5_Stop()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.K2Node_MatineeController_5_Stop"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_K2Node_MatineeController_5_Stop_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -235,10 +194,7 @@ void Asot_frontend_01_a_C::K2Node_MatineeController_5_Pause()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.K2Node_MatineeController_5_Pause"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_K2Node_MatineeController_5_Pause_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -251,10 +207,7 @@ void Asot_frontend_01_a_C::K2Node_MatineeController_5_Start()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.K2Node_MatineeController_5_Start"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_K2Node_MatineeController_5_Start_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -267,10 +220,7 @@ void Asot_frontend_01_a_C::K2Node_MatineeController_5_Finished()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.K2Node_MatineeController_5_Finished"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_K2Node_MatineeController_5_Finished_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -285,11 +235,7 @@ void Asot_frontend_01_a_C::InpActEvt_FrontendTavernChangeProfile_UniqueObjectNam
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.InpActEvt_FrontendTavernChangeProfile_UniqueObjectNameForCooking_1729007685"));
 
-	struct
-	{
-		struct FKey                    Key;
-	} params;
-
+	Asot_frontend_01_a_C_InpActEvt_FrontendTavernChangeProfile_UniqueObjectNameForCooking_1729007685_Params params;
 	params.Key = Key;
 
 	UObject::ProcessEvent(fn, &params);
@@ -305,11 +251,7 @@ void Asot_frontend_01_a_C::InpActEvt_FrontendTavernFavourite_UniqueObjectNameFor
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.InpActEvt_FrontendTavernFavourite_UniqueObjectNameForCooking_1729007684"));
 
-	struct
-	{
-		struct FKey                    Key;
-	} params;
-
+	Asot_frontend_01_a_C_InpActEvt_FrontendTavernFavourite_UniqueObjectNameForCooking_1729007684_Params params;
 	params.Key = Key;
 
 	UObject::ProcessEvent(fn, &params);
@@ -325,11 +267,7 @@ void Asot_frontend_01_a_C::InpActEvt_FrontendTavernQuitGame_UniqueObjectNameForC
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.InpActEvt_FrontendTavernQuitGame_UniqueObjectNameForCooking_1729007683"));
 
-	struct
-	{
-		struct FKey                    Key;
-	} params;
-
+	Asot_frontend_01_a_C_InpActEvt_FrontendTavernQuitGame_UniqueObjectNameForCooking_1729007683_Params params;
 	params.Key = Key;
 
 	UObject::ProcessEvent(fn, &params);
@@ -345,11 +283,7 @@ void Asot_frontend_01_a_C::InpAxisEvt_FrontendTavernRotate_K2Node_InputAxisEvent
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.InpAxisEvt_FrontendTavernRotate_K2Node_InputAxisEvent_22"));
 
-	struct
-	{
-		float                          AxisValue;
-	} params;
-
+	Asot_frontend_01_a_C_InpAxisEvt_FrontendTavernRotate_K2Node_InputAxisEvent_22_Params params;
 	params.AxisValue = AxisValue;
 
 	UObject::ProcessEvent(fn, &params);
@@ -363,10 +297,7 @@ void Asot_frontend_01_a_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -379,10 +310,7 @@ void Asot_frontend_01_a_C::BeginCelebration()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.BeginCelebration"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_BeginCelebration_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -395,10 +323,7 @@ void Asot_frontend_01_a_C::pirateSelectCam()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.pirateSelectCam"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_pirateSelectCam_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -411,10 +336,7 @@ void Asot_frontend_01_a_C::showShipSelectPirate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.showShipSelectPirate"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_showShipSelectPirate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -427,10 +349,7 @@ void Asot_frontend_01_a_C::reinstateSelectedPirateLoc()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.reinstateSelectedPirateLoc"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_reinstateSelectedPirateLoc_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -443,10 +362,7 @@ void Asot_frontend_01_a_C::StartGeneratingPirates()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.StartGeneratingPirates"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_StartGeneratingPirates_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -459,10 +375,7 @@ void Asot_frontend_01_a_C::SelectionCancelled()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.SelectionCancelled"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_SelectionCancelled_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -475,10 +388,7 @@ void Asot_frontend_01_a_C::SelectPirateButtonPressed()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.SelectPirateButtonPressed"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_SelectPirateButtonPressed_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -491,10 +401,7 @@ void Asot_frontend_01_a_C::RefreshPiratesButtonPressed()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.RefreshPiratesButtonPressed"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_RefreshPiratesButtonPressed_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -507,10 +414,7 @@ void Asot_frontend_01_a_C::FavoritePirateButtonPressed()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.FavoritePirateButtonPressed"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_FavoritePirateButtonPressed_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -525,11 +429,7 @@ void Asot_frontend_01_a_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.ReceiveTick"));
 
-	struct
-	{
-		float                          DeltaSeconds;
-	} params;
-
+	Asot_frontend_01_a_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -543,10 +443,7 @@ void Asot_frontend_01_a_C::PiratesInitializedEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.PiratesInitializedEvent"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_PiratesInitializedEvent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -559,10 +456,7 @@ void Asot_frontend_01_a_C::StartPirateCreationAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.StartPirateCreationAnimation"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_StartPirateCreationAnimation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -575,10 +469,7 @@ void Asot_frontend_01_a_C::OnLeavingSelectionState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.OnLeavingSelectionState"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_C_OnLeavingSelectionState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -593,11 +484,7 @@ void Asot_frontend_01_a_C::ExecuteUbergraph_sot_frontend_01_a(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a.sot_frontend_01_a_C.ExecuteUbergraph_sot_frontend_01_a"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	Asot_frontend_01_a_C_ExecuteUbergraph_sot_frontend_01_a_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

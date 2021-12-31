@@ -27,7 +27,7 @@ public:
 	}
 
 
-	static struct FText GetDateFromTimeLimit(const TScriptInterface<class UGameServiceProviderInterface>& ServiceProviderInterface, float TimeLimit);
+	static FText GetDateFromTimeLimit(const TScriptInterface<class UGameServiceProviderInterface>& ServiceProviderInterface, float TimeLimit);
 };
 
 
@@ -52,7 +52,7 @@ class UMerchantContractsService : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	TArray<struct FMerchantContract>                   Contracts;                                                // 0x0030(0x0010) (ZeroConstructor)
+	TArray<FMerchantContract>                          Contracts;                                                // 0x0030(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData01[0x18];                                      // 0x0040(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -85,7 +85,7 @@ class UPlayerMerchantContractsComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	TArray<struct FPlayerMerchantContract>             Contracts;                                                // 0x00D0(0x0010) (Net, ZeroConstructor)
+	TArray<FPlayerMerchantContract>                    Contracts;                                                // 0x00D0(0x0010) (Net, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

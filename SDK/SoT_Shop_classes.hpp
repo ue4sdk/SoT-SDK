@@ -19,7 +19,7 @@ namespace SDK
 class UCatalogOfferLicence : public UObject
 {
 public:
-	struct FGuid                                       LicenceId;                                                // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FGuid                                              LicenceId;                                                // 0x0028(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

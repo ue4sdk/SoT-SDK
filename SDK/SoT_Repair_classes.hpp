@@ -19,7 +19,7 @@ namespace SDK
 class URepairTypeId : public UObject
 {
 public:
-	struct FText                                       DisplayName;                                              // 0x0028(0x0038) (Edit, DisableEditOnInstance)
+	FText                                              DisplayName;                                              // 0x0028(0x0038) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -44,7 +44,8 @@ public:
 
 
 	void HandleDestroy();
-	class UClass* GetRepairType();
+	float GetUndoRepairTime(AActor* Interactor);
+	UClass* GetRepairType();
 	float GetRepairTime();
 	TEnumAsByte<ERepairableState> GetRepairableState();
 };
@@ -63,7 +64,7 @@ public:
 	}
 
 
-	class UClass* GetRepairType();
+	UClass* GetRepairType();
 };
 
 

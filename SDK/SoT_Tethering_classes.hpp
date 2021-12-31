@@ -30,14 +30,14 @@ public:
 
 
 // Class Tethering.CordRenderComponent
-// 0x0040 (0x0620 - 0x05E0)
+// 0x0040 (0x0630 - 0x05F0)
 class UCordRenderComponent : public UStaticMeshComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x05E0(0x0008) MISSED OFFSET
-	TArray<class UMaterialInstanceDynamic*>            CordMaterials;                                            // 0x05E8(0x0010) (ZeroConstructor, Transient)
-	float                                              ThicknessCm;                                              // 0x05F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x24];                                      // 0x05FC(0x0024) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x05F0(0x0008) MISSED OFFSET
+	TArray<UMaterialInstanceDynamic*>                  CordMaterials;                                            // 0x05F8(0x0010) (ZeroConstructor, Transient)
+	float                                              ThicknessCm;                                              // 0x0608(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x24];                                      // 0x060C(0x0024) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -49,13 +49,13 @@ public:
 
 
 // Class Tethering.DynamicCordRenderComponent
-// 0x0060 (0x0680 - 0x0620)
+// 0x0060 (0x0690 - 0x0630)
 class UDynamicCordRenderComponent : public UCordRenderComponent
 {
 public:
-	class USceneComponent*                             EndPointA;                                                // 0x0620(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class USceneComponent*                             EndPointB;                                                // 0x0628(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x50];                                      // 0x0630(0x0050) MISSED OFFSET
+	USceneComponent*                                   EndPointA;                                                // 0x0630(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	USceneComponent*                                   EndPointB;                                                // 0x0638(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x50];                                      // 0x0640(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -64,21 +64,21 @@ public:
 	}
 
 
-	void SetCordEndPointB(class USceneComponent* EndPointB);
-	void SetCordEndPointA(class USceneComponent* EndPointA);
+	void SetCordEndPointB(USceneComponent* EndPointB);
+	void SetCordEndPointA(USceneComponent* EndPointA);
 };
 
 
 // Class Tethering.HarpoonRenderComponent
-// 0x0020 (0x0640 - 0x0620)
+// 0x0020 (0x0650 - 0x0630)
 class UHarpoonRenderComponent : public UCordRenderComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0620(0x0008) MISSED OFFSET
-	float                                              LaunchAnimationDurationSecs;                              // 0x0628(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              HitAnimationDurationSecs;                                 // 0x062C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              QuickRetractAnimationSpeed;                               // 0x0630(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0xC];                                       // 0x0634(0x000C) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0630(0x0008) MISSED OFFSET
+	float                                              LaunchAnimationDurationSecs;                              // 0x0638(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              HitAnimationDurationSecs;                                 // 0x063C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              QuickRetractAnimationSpeed;                               // 0x0640(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0xC];                                       // 0x0644(0x000C) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -194,12 +194,12 @@ class ATether : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0xF8];                                      // 0x03D0(0x00F8) MISSED OFFSET
-	class USceneComponent*                             TetherPositionAnchorComponent;                            // 0x04C8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class USphereComponent*                            SourcePhysicsHandle;                                      // 0x04D0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class USphereComponent*                            TargetPhysicsHandle;                                      // 0x04D8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	class UDistanceJointComponent*                     JointComponent;                                           // 0x04E0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class AActor*                                      SourceActor;                                              // 0x04E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class AActor*                                      TargetActor;                                              // 0x04F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	USceneComponent*                                   TetherPositionAnchorComponent;                            // 0x04C8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	USphereComponent*                                  SourcePhysicsHandle;                                      // 0x04D0(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	USphereComponent*                                  TargetPhysicsHandle;                                      // 0x04D8(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	UDistanceJointComponent*                           JointComponent;                                           // 0x04E0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	AActor*                                            SourceActor;                                              // 0x04E8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	AActor*                                            TargetActor;                                              // 0x04F0(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	float                                              SlackCm;                                                  // 0x04F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              MaxLengthWhenGrowing;                                     // 0x04FC(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x8];                                       // 0x0500(0x0008) MISSED OFFSET
@@ -225,7 +225,7 @@ class UTetherCustomisationComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	class USceneComponent*                             ComponentToTetherTo;                                      // 0x00D0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	USceneComponent*                                   ComponentToTetherTo;                                      // 0x00D0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x48];                                      // 0x00D8(0x0048) MISSED OFFSET
 	float                                              MassIntertiaScale;                                        // 0x0120(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               CanBeTethered;                                            // 0x0124(0x0001) (Edit, ZeroConstructor, IsPlainOldData)

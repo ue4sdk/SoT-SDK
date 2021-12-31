@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_EnemyVFXComponent_classes.hpp"
+#include "SoT_BP_EnemyVFXComponent_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_EnemyVFXComponent_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EnemyVFXComponent.BP_EnemyVFXComponent_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	UBP_EnemyVFXComponent_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void UBP_EnemyVFXComponent_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlay
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EnemyVFXComponent.BP_EnemyVFXComponent_C.ReceiveEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	UBP_EnemyVFXComponent_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -57,11 +50,7 @@ void UBP_EnemyVFXComponent_C::ExecuteUbergraph_BP_EnemyVFXComponent(int EntryPoi
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EnemyVFXComponent.BP_EnemyVFXComponent_C.ExecuteUbergraph_BP_EnemyVFXComponent"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_EnemyVFXComponent_C_ExecuteUbergraph_BP_EnemyVFXComponent_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

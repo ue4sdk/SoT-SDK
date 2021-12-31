@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_KnockbackFramework_classes.hpp"
+#include "SoT_KnockbackFramework_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UKnockbackColliderComponent::OnRep_SolidState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function KnockbackFramework.KnockbackColliderComponent.OnRep_SolidState"));
 
-	struct
-	{
-	} params;
-
+	UKnockbackColliderComponent_OnRep_SolidState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

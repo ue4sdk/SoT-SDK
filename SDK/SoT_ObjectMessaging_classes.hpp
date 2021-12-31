@@ -73,34 +73,19 @@ public:
 	}
 
 
-	static void UnregisterEventsForObject(class UObject* EventSource, struct FObjectMessagingObjectScoper* ObjectScoper);
-	static void UnregisterEvents(struct FObjectMessagingObjectScoper* ObjectScoper);
-	static void UnregisterEventFromHandle(struct FObjectMessagingDispatcherHandle* Dispatcher, struct FObjectMessagingHandle* Handle);
-	static void UnregisterEvent(struct FObjectMessagingDispatcher* Dispatcher, struct FObjectMessagingHandle* Handle);
-	static void RegisterEventWithObjectScoper(class UObject* EventSource, class UObject* FunctionOwner, const class FString& FunctionName, class UStruct* EventType, struct FObjectMessagingObjectScoper* ObjectScoper);
-	static void RegisterEventFromHandle(class UObject* FunctionOwner, const class FString& FunctionName, class UStruct* EventType, struct FObjectMessagingDispatcherHandle* MessageDispatcher, struct FObjectMessagingHandle* Handle);
-	static void RegisterEvent(class UObject* FunctionOwner, const class FString& FunctionName, class UStruct* EventType, struct FObjectMessagingDispatcher* MessageDispatcher, struct FObjectMessagingHandle* Handle);
-	static bool IsObjectMessagingDispatcherValid(struct FObjectMessagingDispatcherHandle* Handle);
-	static bool IsHandleRegistered(struct FObjectMessagingHandle* Handle);
-	static struct FObjectMessagingDispatcherHandle GetObjectMessagingDispatcherFromActor(class UObject* Object);
-	static struct FObjectMessagingDispatcherHandle GetObjectMessagingDispatcher(const TScriptInterface<class UObjectMessagingDispatcherInterface>& ObjectMessagingDispatcher);
-	static void FireEventWithDataFromHandle(class UStruct* EventDataStruct, const class FString& Scope, const class FString& ScopeId, struct FObjectMessagingDispatcherHandle* MessageDispatcher, struct FGenericStruct* Value);
-	static void FireEventWithData(class UStruct* EventDataStruct, const class FString& Scope, const class FString& ScopeId, struct FObjectMessagingDispatcher* MessageDispatcher, struct FGenericStruct* Value);
-};
-
-
-// Class ObjectMessaging.ObjectMessagingReturnHandlerInterface
-// 0x0000 (0x0028 - 0x0028)
-class UObjectMessagingReturnHandlerInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class ObjectMessaging.ObjectMessagingReturnHandlerInterface"));
-		return ptr;
-	}
-
+	static void UnregisterEventsForObject(UObject* EventSource, FObjectMessagingObjectScoper* ObjectScoper);
+	static void UnregisterEvents(FObjectMessagingObjectScoper* ObjectScoper);
+	static void UnregisterEventFromHandle(FObjectMessagingDispatcherHandle* Dispatcher, FObjectMessagingHandle* Handle);
+	static void UnregisterEvent(FObjectMessagingDispatcher* Dispatcher, FObjectMessagingHandle* Handle);
+	static void RegisterEventWithObjectScoper(UObject* EventSource, UObject* FunctionOwner, const FString& FunctionName, UStruct* EventType, FObjectMessagingObjectScoper* ObjectScoper);
+	static void RegisterEventFromHandle(UObject* FunctionOwner, const FString& FunctionName, UStruct* EventType, FObjectMessagingDispatcherHandle* MessageDispatcher, FObjectMessagingHandle* Handle);
+	static void RegisterEvent(UObject* FunctionOwner, const FString& FunctionName, UStruct* EventType, FObjectMessagingDispatcher* MessageDispatcher, FObjectMessagingHandle* Handle);
+	static bool IsObjectMessagingDispatcherValid(FObjectMessagingDispatcherHandle* Handle);
+	static bool IsHandleRegistered(FObjectMessagingHandle* Handle);
+	static FObjectMessagingDispatcherHandle GetObjectMessagingDispatcherFromActor(UObject* Object);
+	static FObjectMessagingDispatcherHandle GetObjectMessagingDispatcher(const TScriptInterface<class UObjectMessagingDispatcherInterface>& ObjectMessagingDispatcher);
+	static void FireEventWithDataFromHandle(UStruct* EventDataStruct, const FString& Scope, const FString& ScopeId, FObjectMessagingDispatcherHandle* MessageDispatcher, FGenericStruct* Value);
+	static void FireEventWithData(UStruct* EventDataStruct, const FString& Scope, const FString& ScopeId, FObjectMessagingDispatcher* MessageDispatcher, FGenericStruct* Value);
 };
 
 

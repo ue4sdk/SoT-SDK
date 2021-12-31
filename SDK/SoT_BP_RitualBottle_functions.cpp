@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_RitualBottle_classes.hpp"
+#include "SoT_BP_RitualBottle_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_RitualBottle_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_RitualBottle.BP_RitualBottle_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_RitualBottle_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

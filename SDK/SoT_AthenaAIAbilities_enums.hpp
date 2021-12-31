@@ -18,7 +18,8 @@ enum class EMeleeAwarenessCollisionHitResult : uint8_t
 	EMeleeAwarenessCollisionHitResult__None = 0,
 	EMeleeAwarenessCollisionHitResult__Static = 1,
 	EMeleeAwarenessCollisionHitResult__Character = 2,
-	EMeleeAwarenessCollisionHitResult__EMeleeAwarenessCollisionHitResult_MAX = 3
+	EMeleeAwarenessCollisionHitResult__ToggleableCollider = 3,
+	EMeleeAwarenessCollisionHitResult__EMeleeAwarenessCollisionHitResult_MAX = 4
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ClothingChestInteraction_classes.hpp"
+#include "SoT_BP_ClothingChestInteraction_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_ClothingChestInteraction_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ClothingChestInteraction.BP_ClothingChestInteraction_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_ClothingChestInteraction_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

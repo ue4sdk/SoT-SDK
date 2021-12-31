@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_RenderToTexture_classes.hpp"
+#include "SoT_RenderToTexture_parameters.hpp"
 
 namespace SDK
 {
@@ -15,19 +15,14 @@ namespace SDK
 // Function RenderToTexture.RenderToTextureFunctionLibrary.GetRenderToTexture
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// struct FName                   Identifier                     (Parm, ZeroConstructor, IsPlainOldData)
-// class URenderToTextureSceneDetails* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FName                          Identifier                     (Parm, ZeroConstructor, IsPlainOldData)
+// URenderToTextureSceneDetails*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::GetRenderToTexture(const struct FName& Identifier)
+URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::GetRenderToTexture(const FName& Identifier)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureFunctionLibrary.GetRenderToTexture"));
 
-	struct
-	{
-		struct FName                   Identifier;
-		class URenderToTextureSceneDetails* ReturnValue;
-	} params;
-
+	URenderToTextureFunctionLibrary_GetRenderToTexture_Params params;
 	params.Identifier = Identifier;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -40,27 +35,18 @@ class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::GetRenderTo
 // Function RenderToTexture.RenderToTextureFunctionLibrary.CreateRenderToTexture
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FName                   Identifier                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  ClassToSpawn                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FIntPoint               Resolution                     (Parm, ZeroConstructor, IsPlainOldData)
+// FName                          Identifier                     (Parm, ZeroConstructor, IsPlainOldData)
+// UClass*                        ClassToSpawn                   (Parm, ZeroConstructor, IsPlainOldData)
+// FIntPoint                      Resolution                     (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bForceLinearGamma              (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bCaptureAlpha                  (Parm, ZeroConstructor, IsPlainOldData)
-// class URenderToTextureSceneDetails* ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// URenderToTextureSceneDetails*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::CreateRenderToTexture(const struct FName& Identifier, class UClass* ClassToSpawn, const struct FIntPoint& Resolution, bool bForceLinearGamma, bool bCaptureAlpha)
+URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::CreateRenderToTexture(const FName& Identifier, UClass* ClassToSpawn, const FIntPoint& Resolution, bool bForceLinearGamma, bool bCaptureAlpha)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureFunctionLibrary.CreateRenderToTexture"));
 
-	struct
-	{
-		struct FName                   Identifier;
-		class UClass*                  ClassToSpawn;
-		struct FIntPoint               Resolution;
-		bool                           bForceLinearGamma;
-		bool                           bCaptureAlpha;
-		class URenderToTextureSceneDetails* ReturnValue;
-	} params;
-
+	URenderToTextureFunctionLibrary_CreateRenderToTexture_Params params;
 	params.Identifier = Identifier;
 	params.ClassToSpawn = ClassToSpawn;
 	params.Resolution = Resolution;
@@ -77,17 +63,13 @@ class URenderToTextureSceneDetails* URenderToTextureFunctionLibrary::CreateRende
 // Function RenderToTexture.RenderToTextureSceneDetails.GetTexture
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UTextureRenderTarget2D*  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UTextureRenderTarget2D*        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UTextureRenderTarget2D* URenderToTextureSceneDetails::GetTexture()
+UTextureRenderTarget2D* URenderToTextureSceneDetails::GetTexture()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.GetTexture"));
 
-	struct
-	{
-		class UTextureRenderTarget2D*  ReturnValue;
-	} params;
-
+	URenderToTextureSceneDetails_GetTexture_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -98,17 +80,13 @@ class UTextureRenderTarget2D* URenderToTextureSceneDetails::GetTexture()
 // Function RenderToTexture.RenderToTextureSceneDetails.GetInstance
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// AActor*                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AActor* URenderToTextureSceneDetails::GetInstance()
+AActor* URenderToTextureSceneDetails::GetInstance()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.GetInstance"));
 
-	struct
-	{
-		class AActor*                  ReturnValue;
-	} params;
-
+	URenderToTextureSceneDetails_GetInstance_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -123,10 +101,7 @@ void URenderToTextureSceneDetails::DestroyTexture()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function RenderToTexture.RenderToTextureSceneDetails.DestroyTexture"));
 
-	struct
-	{
-	} params;
-
+	URenderToTextureSceneDetails_DestroyTexture_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

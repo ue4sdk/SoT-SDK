@@ -19,7 +19,7 @@ namespace SDK
 class UMovieScene3DConstraintSection : public UMovieSceneSection
 {
 public:
-	struct FGuid                                       ConstraintId;                                             // 0x0098(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              ConstraintId;                                             // 0x0098(0x0010) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -35,8 +35,8 @@ public:
 class UMovieScene3DAttachSection : public UMovieScene3DConstraintSection
 {
 public:
-	struct FName                                       AttachSocketName;                                         // 0x00A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       AttachComponentName;                                      // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FName                                              AttachSocketName;                                         // 0x00A8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FName                                              AttachComponentName;                                      // 0x00B0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bConstrainTx : 1;                                         // 0x00B8(0x0001) (Edit)
 	unsigned char                                      bConstrainTy : 1;                                         // 0x00B8(0x0001) (Edit)
 	unsigned char                                      bConstrainTz : 1;                                         // 0x00B8(0x0001) (Edit)
@@ -59,7 +59,7 @@ public:
 class UMovieScene3DPathSection : public UMovieScene3DConstraintSection
 {
 public:
-	struct FRichCurve                                  TimingCurve;                                              // 0x00A8(0x0078) (Edit)
+	FRichCurve                                         TimingCurve;                                              // 0x00A8(0x0078) (Edit)
 	TEnumAsByte<EMovieScene3DPathSection_Axis>         FrontAxisEnum;                                            // 0x0120(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EMovieScene3DPathSection_Axis>         UpAxisEnum;                                               // 0x0121(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x0122(0x0002) MISSED OFFSET
@@ -82,7 +82,7 @@ public:
 class UMovieScene3DConstraintTrack : public UMovieSceneTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  ConstraintSections;                                       // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        ConstraintSections;                                       // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -129,9 +129,9 @@ class UMovieScene3DTransformSection : public UMovieSceneSection
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
-	struct FRichCurve                                  Translation[0x3];                                         // 0x00A0(0x0078)
-	struct FRichCurve                                  Rotation[0x3];                                            // 0x0208(0x0078)
-	struct FRichCurve                                  Scale[0x3];                                               // 0x0370(0x0078)
+	FRichCurve                                         Translation[0x3];                                         // 0x00A0(0x0078)
+	FRichCurve                                         Rotation[0x3];                                            // 0x0208(0x0078)
+	FRichCurve                                         Scale[0x3];                                               // 0x0370(0x0078)
 
 	static UClass* StaticClass()
 	{
@@ -148,9 +148,9 @@ class UMovieSceneActorReferenceSection : public UMovieSceneSection
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
-	struct FIntegralCurve                              ActorGuidIndexCurve;                                      // 0x00A0(0x0070)
+	FIntegralCurve                                     ActorGuidIndexCurve;                                      // 0x00A0(0x0070)
 	unsigned char                                      UnknownData01[0x10];                                      // 0x0110(0x0010) MISSED OFFSET
-	TArray<class FString>                              ActorGuidStrings;                                         // 0x0120(0x0010) (ZeroConstructor)
+	TArray<FString>                                    ActorGuidStrings;                                         // 0x0120(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -166,13 +166,13 @@ public:
 class UMovieSceneAudioSection : public UMovieSceneSection
 {
 public:
-	class USoundBase*                                  Sound;                                                    // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	USoundBase*                                        Sound;                                                    // 0x0098(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              StartOffset;                                              // 0x00A0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              AudioStartTime;                                           // 0x00A4(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              AudioDilationFactor;                                      // 0x00A8(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              AudioVolume;                                              // 0x00AC(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
-	struct FRichCurve                                  SoundVolume;                                              // 0x00B0(0x0078) (Edit)
-	struct FRichCurve                                  PitchMultiplier;                                          // 0x0128(0x0078) (Edit)
+	FRichCurve                                         SoundVolume;                                              // 0x00B0(0x0078) (Edit)
+	FRichCurve                                         PitchMultiplier;                                          // 0x0128(0x0078) (Edit)
 	bool                                               bSuppressSubtitles;                                       // 0x01A0(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x01A1(0x0007) MISSED OFFSET
 
@@ -190,7 +190,7 @@ public:
 class UMovieSceneAudioTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  AudioSections;                                            // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        AudioSections;                                            // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -209,7 +209,7 @@ public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
 	bool                                               DefaultValue;                                             // 0x00A0(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x00A1(0x0007) MISSED OFFSET
-	struct FIntegralCurve                              BoolCurve;                                                // 0x00A8(0x0070)
+	FIntegralCurve                                     BoolCurve;                                                // 0x00A8(0x0070)
 
 	static UClass* StaticClass()
 	{
@@ -241,7 +241,7 @@ class UMovieSceneByteSection : public UMovieSceneSection
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
-	struct FIntegralCurve                              ByteCurve;                                                // 0x00A0(0x0070)
+	FIntegralCurve                                     ByteCurve;                                                // 0x00A0(0x0070)
 
 	static UClass* StaticClass()
 	{
@@ -257,8 +257,8 @@ public:
 class UMovieSceneCameraAnimSection : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneCameraAnimSectionData            AnimData;                                                 // 0x0098(0x0020) (Edit)
-	class UCameraAnim*                                 CameraAnim;                                               // 0x00B8(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
+	FMovieSceneCameraAnimSectionData                   AnimData;                                                 // 0x0098(0x0020) (Edit)
+	UCameraAnim*                                       CameraAnim;                                               // 0x00B8(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              PlayRate;                                                 // 0x00C0(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              PlayScale;                                                // 0x00C4(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              BlendInTime;                                              // 0x00C8(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
@@ -280,7 +280,7 @@ public:
 class UMovieSceneCameraAnimTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  CameraAnimSections;                                       // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        CameraAnimSections;                                       // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -296,7 +296,7 @@ public:
 class UMovieSceneCameraCutSection : public UMovieSceneSection
 {
 public:
-	struct FGuid                                       CameraGuid;                                               // 0x0098(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              CameraGuid;                                               // 0x0098(0x0010) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -312,7 +312,7 @@ public:
 class UMovieSceneCameraCutTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -328,12 +328,12 @@ public:
 class UMovieSceneCameraShakeSection : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneCameraShakeSectionData           ShakeData;                                                // 0x0098(0x0020) (Edit)
-	class UClass*                                      ShakeClass;                                               // 0x00B8(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
+	FMovieSceneCameraShakeSectionData                  ShakeData;                                                // 0x0098(0x0020) (Edit)
+	UClass*                                            ShakeClass;                                               // 0x00B8(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              PlayScale;                                                // 0x00C0(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	TEnumAsByte<ECameraAnimPlaySpace>                  PlaySpace;                                                // 0x00C4(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x00C5(0x0003) MISSED OFFSET
-	struct FRotator                                    UserDefinedPlaySpace;                                     // 0x00C8(0x000C) (ZeroConstructor, Deprecated, IsPlainOldData)
+	FRotator                                           UserDefinedPlaySpace;                                     // 0x00C8(0x000C) (ZeroConstructor, Deprecated, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x00D4(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -350,7 +350,7 @@ public:
 class UMovieSceneCameraShakeTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  CameraShakeSections;                                      // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        CameraShakeSections;                                      // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -367,10 +367,10 @@ class UMovieSceneColorSection : public UMovieSceneSection
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
-	struct FRichCurve                                  RedCurve;                                                 // 0x00A0(0x0078)
-	struct FRichCurve                                  GreenCurve;                                               // 0x0118(0x0078)
-	struct FRichCurve                                  BlueCurve;                                                // 0x0190(0x0078)
-	struct FRichCurve                                  AlphaCurve;                                               // 0x0208(0x0078)
+	FRichCurve                                         RedCurve;                                                 // 0x00A0(0x0078)
+	FRichCurve                                         GreenCurve;                                               // 0x0118(0x0078)
+	FRichCurve                                         BlueCurve;                                                // 0x0190(0x0078)
+	FRichCurve                                         AlphaCurve;                                               // 0x0208(0x0078)
 
 	static UClass* StaticClass()
 	{
@@ -387,7 +387,7 @@ class UMovieSceneEnumSection : public UMovieSceneSection
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
-	struct FIntegralCurve                              EnumCurve;                                                // 0x00A0(0x0070)
+	FIntegralCurve                                     EnumCurve;                                                // 0x00A0(0x0070)
 
 	static UClass* StaticClass()
 	{
@@ -403,8 +403,8 @@ public:
 class UMovieSceneEventSection : public UMovieSceneSection
 {
 public:
-	struct FNameCurve                                  Events;                                                   // 0x0098(0x0068) (Deprecated)
-	struct FMovieSceneEventSectionData                 EventData;                                                // 0x0100(0x0020)
+	FNameCurve                                         Events;                                                   // 0x0098(0x0068) (Deprecated)
+	FMovieSceneEventSectionData                        EventData;                                                // 0x0100(0x0020)
 	unsigned char                                      UnknownData00[0x88];                                      // 0x0120(0x0088) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -421,8 +421,8 @@ public:
 class UMovieSceneSpawnTrack : public UMovieSceneTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
-	struct FGuid                                       ObjectGuid;                                               // 0x0098(0x0010) (ZeroConstructor, IsPlainOldData)
+	TArray<UMovieSceneSection*>                        Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	FGuid                                              ObjectGuid;                                               // 0x0098(0x0010) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -441,7 +441,7 @@ public:
 	unsigned char                                      bFireEventsWhenForwards : 1;                              // 0x0088(0x0001) (Edit)
 	unsigned char                                      bFireEventsWhenBackwards : 1;                             // 0x0088(0x0001) (Edit)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0090(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        Sections;                                                 // 0x0090(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -458,7 +458,7 @@ class UMovieSceneFloatSection : public UMovieSceneSection
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
-	struct FRichCurve                                  FloatCurve;                                               // 0x00A0(0x0078)
+	FRichCurve                                         FloatCurve;                                               // 0x00A0(0x0078)
 
 	static UClass* StaticClass()
 	{
@@ -474,7 +474,7 @@ public:
 class UMovieSceneFadeSection : public UMovieSceneFloatSection
 {
 public:
-	struct FLinearColor                                FadeColor;                                                // 0x0118(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
+	FLinearColor                                       FadeColor;                                                // 0x0118(0x0010) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bFadeAudio : 1;                                           // 0x0128(0x0001) (Edit)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0129(0x0007) MISSED OFFSET
 
@@ -508,7 +508,7 @@ class UMovieSceneIntegerSection : public UMovieSceneSection
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
-	struct FIntegralCurve                              IntegerCurve;                                             // 0x00A0(0x0070)
+	FIntegralCurve                                     IntegerCurve;                                             // 0x00A0(0x0070)
 
 	static UClass* StaticClass()
 	{
@@ -526,7 +526,7 @@ class UMovieSceneLevelVisibilitySection : public UMovieSceneSection
 public:
 	TEnumAsByte<ELevelVisibility>                      Visibility;                                               // 0x0098(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0099(0x0007) MISSED OFFSET
-	TArray<struct FName>                               LevelNames;                                               // 0x00A0(0x0010) (Edit, ZeroConstructor)
+	TArray<FName>                                      LevelNames;                                               // 0x00A0(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -542,9 +542,9 @@ public:
 class UMovieScenePropertyTrack : public UMovieSceneNameableTrack
 {
 public:
-	struct FName                                       PropertyName;                                             // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      PropertyPath;                                             // 0x0090(0x0010) (ZeroConstructor)
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x00A0(0x0010) (ExportObject, ZeroConstructor)
+	FName                                              PropertyName;                                             // 0x0088(0x0008) (ZeroConstructor, IsPlainOldData)
+	FString                                            PropertyPath;                                             // 0x0090(0x0010) (ZeroConstructor)
+	TArray<UMovieSceneSection*>                        Sections;                                                 // 0x00A0(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -560,7 +560,7 @@ public:
 class UMovieSceneLevelVisibilityTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -576,9 +576,9 @@ public:
 class UMovieSceneParameterSection : public UMovieSceneSection
 {
 public:
-	TArray<struct FScalarParameterNameAndCurve>        ScalarParameterNamesAndCurves;                            // 0x0098(0x0010) (ZeroConstructor)
-	TArray<struct FVectorParameterNameAndCurves>       VectorParameterNamesAndCurves;                            // 0x00A8(0x0010) (ZeroConstructor)
-	TArray<struct FColorParameterNameAndCurves>        ColorParameterNamesAndCurves;                             // 0x00B8(0x0010) (ZeroConstructor)
+	TArray<FScalarParameterNameAndCurve>               ScalarParameterNamesAndCurves;                            // 0x0098(0x0010) (ZeroConstructor)
+	TArray<FVectorParameterNameAndCurves>              VectorParameterNamesAndCurves;                            // 0x00A8(0x0010) (ZeroConstructor)
+	TArray<FColorParameterNameAndCurves>               ColorParameterNamesAndCurves;                             // 0x00B8(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -594,7 +594,7 @@ public:
 class UMovieSceneMaterialTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -627,7 +627,7 @@ public:
 class UMovieSceneParticleParameterTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -643,7 +643,7 @@ public:
 class UMovieSceneParticleSection : public UMovieSceneSection
 {
 public:
-	struct FIntegralCurve                              ParticleKeys;                                             // 0x0098(0x0070)
+	FIntegralCurve                                     ParticleKeys;                                             // 0x0098(0x0070)
 
 	static UClass* StaticClass()
 	{
@@ -659,7 +659,7 @@ public:
 class UMovieSceneParticleTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  ParticleSections;                                         // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        ParticleSections;                                         // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -735,7 +735,7 @@ public:
 class UMovieSceneByteTrack : public UMovieScenePropertyTrack
 {
 public:
-	class UEnum*                                       Enum;                                                     // 0x00B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	UEnum*                                             Enum;                                                     // 0x00B0(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -768,7 +768,7 @@ public:
 class UMovieSceneEnumTrack : public UMovieScenePropertyTrack
 {
 public:
-	class UEnum*                                       Enum;                                                     // 0x00B0(0x0008) (ZeroConstructor, IsPlainOldData)
+	UEnum*                                             Enum;                                                     // 0x00B0(0x0008) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -876,15 +876,15 @@ public:
 class UMovieSceneSkeletalAnimationSection : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneSkeletalAnimationParams          Params;                                                   // 0x0098(0x0098) (Edit)
-	class UAnimSequence*                               AnimSequence;                                             // 0x0130(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
-	class UAnimSequenceBase*                           Animation;                                                // 0x0138(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
+	FMovieSceneSkeletalAnimationParams                 Params;                                                   // 0x0098(0x0098) (Edit)
+	UAnimSequence*                                     AnimSequence;                                             // 0x0130(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
+	UAnimSequenceBase*                                 Animation;                                                // 0x0138(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              StartOffset;                                              // 0x0140(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              EndOffset;                                                // 0x0144(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              PlayRate;                                                 // 0x0148(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	unsigned char                                      bReverse : 1;                                             // 0x014C(0x0001) (Deprecated)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x014D(0x0003) MISSED OFFSET
-	struct FName                                       SlotName;                                                 // 0x0150(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
+	FName                                              SlotName;                                                 // 0x0150(0x0008) (ZeroConstructor, Deprecated, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -900,7 +900,7 @@ public:
 class UMovieSceneSkeletalAnimationTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  AnimationSections;                                        // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        AnimationSections;                                        // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -917,7 +917,7 @@ class UMovieSceneStringSection : public UMovieSceneSection
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
-	struct FStringCurve                                StringCurve;                                              // 0x00A0(0x0078)
+	FStringCurve                                       StringCurve;                                              // 0x00A0(0x0078)
 
 	static UClass* StaticClass()
 	{
@@ -933,16 +933,16 @@ public:
 class UMovieSceneSubSection : public UMovieSceneSection
 {
 public:
-	struct FMovieSceneSectionParameters                Parameters;                                               // 0x0098(0x0010) (Edit)
+	FMovieSceneSectionParameters                       Parameters;                                               // 0x0098(0x0010) (Edit)
 	float                                              StartOffset;                                              // 0x00A8(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              TimeScale;                                                // 0x00AC(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	float                                              PrerollTime;                                              // 0x00B0(0x0004) (ZeroConstructor, Deprecated, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x00B4(0x0004) MISSED OFFSET
-	class UMovieSceneSequence*                         SubSequence;                                              // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UMovieSceneSequence*                               SubSequence;                                              // 0x00B8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	TLazyObjectPtr<class AActor>                       ActorToRecord;                                            // 0x00C0(0x001C) (Edit, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x00DC(0x0004) MISSED OFFSET
-	class FString                                      TargetSequenceName;                                       // 0x00E0(0x0010) (Edit, ZeroConstructor)
-	struct FDirectoryPath                              TargetPathToRecordTo;                                     // 0x00F0(0x0010) (Edit)
+	FString                                            TargetSequenceName;                                       // 0x00E0(0x0010) (Edit, ZeroConstructor)
+	FDirectoryPath                                     TargetPathToRecordTo;                                     // 0x00F0(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -958,7 +958,7 @@ public:
 class UMovieSceneCinematicShotSection : public UMovieSceneSubSection
 {
 public:
-	struct FText                                       DisplayName;                                              // 0x0100(0x0038)
+	FText                                              DisplayName;                                              // 0x0100(0x0038)
 
 	static UClass* StaticClass()
 	{
@@ -974,7 +974,7 @@ public:
 class UMovieSceneSubTrack : public UMovieSceneNameableTrack
 {
 public:
-	TArray<class UMovieSceneSection*>                  Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
+	TArray<UMovieSceneSection*>                        Sections;                                                 // 0x0088(0x0010) (ExportObject, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -1006,7 +1006,7 @@ class UMovieSceneVectorSection : public UMovieSceneSection
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0098(0x0008) MISSED OFFSET
-	struct FRichCurve                                  Curves[0x4];                                              // 0x00A0(0x0078)
+	FRichCurve                                         Curves[0x4];                                              // 0x00A0(0x0078)
 	int                                                ChannelsUsed;                                             // 0x0280(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x0284(0x0004) MISSED OFFSET
 

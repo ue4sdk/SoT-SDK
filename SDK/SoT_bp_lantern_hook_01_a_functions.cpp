@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_bp_lantern_hook_01_a_classes.hpp"
+#include "SoT_bp_lantern_hook_01_a_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Abp_lantern_hook_01_a_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bp_lantern_hook_01_a.bp_lantern_hook_01_a_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Abp_lantern_hook_01_a_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -27,7 +27,7 @@ public:
 	}
 
 
-	void Apply_Hit(const struct FVector& HitPosition, const struct FVector& HitNormal, float HitStrength, bool Has_Decal, class UDecalComponent** Decal);
+	void Apply_Hit(const FVector& HitPosition, const FVector& HitNormal, float HitStrength, bool Has_Decal, UDecalComponent** Decal);
 };
 
 

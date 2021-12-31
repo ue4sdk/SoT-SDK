@@ -63,15 +63,6 @@ enum class ECustomAnimationMontageType : uint8_t
 };
 
 
-// Enum Animation.EDockableSocketOverlapUpdates
-enum class EDockableSocketOverlapUpdates : uint8_t
-{
-	EDockableSocketOverlapUpdates__AllowUpdate = 0,
-	EDockableSocketOverlapUpdates__BlockUpdate = 1,
-	EDockableSocketOverlapUpdates__EDockableSocketOverlapUpdates_MAX = 2
-};
-
-
 }
 
 #ifdef _MSC_VER

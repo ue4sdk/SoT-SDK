@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_DynamicFogVolume_Tale2_classes.hpp"
+#include "SoT_BP_DynamicFogVolume_Tale2_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_DynamicFogVolume_Tale2_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicFogVolume_Tale2.BP_DynamicFogVolume_Tale2_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_DynamicFogVolume_Tale2_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void ABP_DynamicFogVolume_Tale2_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicFogVolume_Tale2.BP_DynamicFogVolume_Tale2_C.ReceiveTick"));
 
-	struct
-	{
-		float                          DeltaSeconds;
-	} params;
-
+	ABP_DynamicFogVolume_Tale2_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -57,11 +50,7 @@ void ABP_DynamicFogVolume_Tale2_C::ExecuteUbergraph_BP_DynamicFogVolume_Tale2(in
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_DynamicFogVolume_Tale2.BP_DynamicFogVolume_Tale2_C.ExecuteUbergraph_BP_DynamicFogVolume_Tale2"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_DynamicFogVolume_Tale2_C_ExecuteUbergraph_BP_DynamicFogVolume_Tale2_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

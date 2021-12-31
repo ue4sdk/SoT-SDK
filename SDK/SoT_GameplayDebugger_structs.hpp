@@ -22,11 +22,11 @@ namespace SDK
 // 0x0050
 struct FGDTCustomViewNames
 {
-	class FString                                      GameView1;                                                // 0x0000(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      GameView2;                                                // 0x0010(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      GameView3;                                                // 0x0020(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      GameView4;                                                // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      GameView5;                                                // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            GameView1;                                                // 0x0000(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            GameView2;                                                // 0x0010(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            GameView3;                                                // 0x0020(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            GameView4;                                                // 0x0030(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            GameView5;                                                // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
 };
 
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CompanyOnboardingStarter_classes.hpp"
+#include "SoT_BP_CompanyOnboardingStarter_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ bool UBP_CompanyOnboardingStarter_C::HasPrerequisites()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CompanyOnboardingStarter.BP_CompanyOnboardingStarter_C.HasPrerequisites"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UBP_CompanyOnboardingStarter_C_HasPrerequisites_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 

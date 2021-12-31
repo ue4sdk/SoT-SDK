@@ -23,7 +23,7 @@ namespace SDK
 // 0x0018
 struct FShantyPuzzleInteractionZoneDefinition
 {
-	struct FVector                                     Location;                                                 // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	FVector                                            Location;                                                 // 0x0000(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Radius;                                                   // 0x000C(0x0004) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	TEnumAsByte<EMusicalInstrumentType>                RequiredMusicalInstrumentType;                            // 0x0010(0x0001) (Edit, ZeroConstructor, DisableEditOnTemplate, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0011(0x0003) MISSED OFFSET
@@ -41,7 +41,7 @@ struct FShantyPuzzleUnlockCanceledEvent
 // 0x0010
 struct FShantyPuzzleSingleInteractionZoneStopInteractingEvent
 {
-	class AActor*                                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	int                                                InteractionZoneIdx;                                       // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
@@ -50,7 +50,7 @@ struct FShantyPuzzleSingleInteractionZoneStopInteractingEvent
 // 0x0010
 struct FShantyPuzzleSingleInteractionZoneUnlockEvent
 {
-	class AActor*                                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	int                                                InteractionZoneIdx;                                       // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
@@ -59,14 +59,14 @@ struct FShantyPuzzleSingleInteractionZoneUnlockEvent
 // 0x0008
 struct FShantyPuzzlePlayerExitInteractionZoneEvent
 {
-	class AActor*                                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ShantyPuzzle.ShantyPuzzlePlayerEnterInteractionZoneEvent
 // 0x0008
 struct FShantyPuzzlePlayerEnterInteractionZoneEvent
 {
-	class AActor*                                      Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            Player;                                                   // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct ShantyPuzzle.ShantyPuzzleUnlockedCompleteEvent

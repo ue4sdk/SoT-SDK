@@ -20,9 +20,9 @@ namespace SDK
 // 0x0030
 struct FAutoCompleteCommand
 {
-	class FString                                      Command;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      Desc;                                                     // 0x0010(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      Keywords;                                                 // 0x0020(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            Command;                                                  // 0x0000(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            Desc;                                                     // 0x0010(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            Keywords;                                                 // 0x0020(0x0010) (Edit, ZeroConstructor, Config)
 };
 
 }

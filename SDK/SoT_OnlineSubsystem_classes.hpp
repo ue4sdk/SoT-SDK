@@ -19,11 +19,11 @@ namespace SDK
 class UDefaultOnlineEnvironmentSettings : public UObject
 {
 public:
-	class FString                                      EnvironmentId;                                            // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            EnvironmentId;                                            // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 	uint32_t                                           TitleId;                                                  // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x003C(0x0004) MISSED OFFSET
-	class FString                                      ServiceConfigId;                                          // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
-	class FString                                      ClientCertificateThumbprint;                              // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            ServiceConfigId;                                          // 0x0040(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            ClientCertificateThumbprint;                              // 0x0050(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -39,8 +39,8 @@ public:
 class UNamedInterfaces : public UObject
 {
 public:
-	TArray<struct FNamedInterface>                     NamedInterfaces;                                          // 0x0028(0x0010) (ZeroConstructor)
-	TArray<struct FNamedInterfaceDef>                  NamedInterfaceDefs;                                       // 0x0038(0x0010) (ZeroConstructor, Config)
+	TArray<FNamedInterface>                            NamedInterfaces;                                          // 0x0028(0x0010) (ZeroConstructor)
+	TArray<FNamedInterfaceDef>                         NamedInterfaceDefs;                                       // 0x0038(0x0010) (ZeroConstructor, Config)
 	unsigned char                                      UnknownData00[0x18];                                      // 0x0048(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -65,8 +65,8 @@ public:
 	}
 
 
-	void OnMatchReceivedTurn(const class FString& Match, bool bDidBecomeActive);
-	void OnMatchEnded(const class FString& Match);
+	void OnMatchReceivedTurn(const FString& Match, bool bDidBecomeActive);
+	void OnMatchEnded(const FString& Match);
 };
 
 

@@ -21,7 +21,7 @@ namespace SDK
 // 0x0008
 struct FLinkEndpointId
 {
-	struct FName                                       Raw;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              Raw;                                                      // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

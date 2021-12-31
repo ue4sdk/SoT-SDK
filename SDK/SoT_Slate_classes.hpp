@@ -19,7 +19,7 @@ namespace SDK
 class UButtonWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FButtonStyle                                ButtonStyle;                                              // 0x0030(0x02A8) (Edit, BlueprintVisible)
+	FButtonStyle                                       ButtonStyle;                                              // 0x0030(0x02A8) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{
@@ -35,7 +35,7 @@ public:
 class UCheckBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FCheckBoxStyle                              CheckBoxStyle;                                            // 0x0030(0x05F0) (Edit)
+	FCheckBoxStyle                                     CheckBoxStyle;                                            // 0x0030(0x05F0) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -51,7 +51,7 @@ public:
 class UComboBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FComboBoxStyle                              ComboBoxStyle;                                            // 0x0030(0x0428) (Edit)
+	FComboBoxStyle                                     ComboBoxStyle;                                            // 0x0030(0x0428) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -67,7 +67,7 @@ public:
 class UComboButtonWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FComboButtonStyle                           ComboButtonStyle;                                         // 0x0030(0x03E0) (Edit)
+	FComboButtonStyle                                  ComboButtonStyle;                                         // 0x0030(0x03E0) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -83,7 +83,7 @@ public:
 class UEditableTextBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FEditableTextBoxStyle                       EditableTextBoxStyle;                                     // 0x0030(0x0860) (Edit)
+	FEditableTextBoxStyle                              EditableTextBoxStyle;                                     // 0x0030(0x0860) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -99,7 +99,7 @@ public:
 class UEditableTextWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FEditableTextStyle                          EditableTextStyle;                                        // 0x0030(0x0228) (Edit)
+	FEditableTextStyle                                 EditableTextStyle;                                        // 0x0030(0x0228) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -115,7 +115,7 @@ public:
 class UProgressWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FProgressBarStyle                           ProgressBarStyle;                                         // 0x0030(0x01B8) (Edit, BlueprintVisible)
+	FProgressBarStyle                                  ProgressBarStyle;                                         // 0x0030(0x01B8) (Edit, BlueprintVisible)
 
 	static UClass* StaticClass()
 	{
@@ -131,7 +131,7 @@ public:
 class UScrollBarWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FScrollBarStyle                             ScrollBarStyle;                                           // 0x0030(0x0518) (Edit)
+	FScrollBarStyle                                    ScrollBarStyle;                                           // 0x0030(0x0518) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -147,7 +147,7 @@ public:
 class UScrollBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FScrollBoxStyle                             ScrollBoxStyle;                                           // 0x0030(0x0248) (Edit)
+	FScrollBoxStyle                                    ScrollBoxStyle;                                           // 0x0030(0x0248) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -163,7 +163,7 @@ public:
 class USpinBoxWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FSpinBoxStyle                               SpinBoxStyle;                                             // 0x0030(0x0318) (Edit)
+	FSpinBoxStyle                                      SpinBoxStyle;                                             // 0x0030(0x0318) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -179,7 +179,7 @@ public:
 class UTextBlockWidgetStyle : public USlateWidgetStyleContainerBase
 {
 public:
-	struct FTextBlockStyle                             TextBlockStyle;                                           // 0x0030(0x0160) (Edit)
+	FTextBlockStyle                                    TextBlockStyle;                                           // 0x0030(0x0160) (Edit)
 
 	static UClass* StaticClass()
 	{

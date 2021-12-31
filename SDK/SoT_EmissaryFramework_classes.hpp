@@ -44,21 +44,6 @@ public:
 };
 
 
-// Class EmissaryFramework.EmissaryVotingServiceInterface
-// 0x0000 (0x0028 - 0x0028)
-class UEmissaryVotingServiceInterface : public UInterface
-{
-public:
-
-	static UClass* StaticClass()
-	{
-		static auto ptr = UObject::FindObject<UClass>(_xor_("Class EmissaryFramework.EmissaryVotingServiceInterface"));
-		return ptr;
-	}
-
-};
-
-
 }
 
 #ifdef _MSC_VER

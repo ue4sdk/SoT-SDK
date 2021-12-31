@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_FishingFish_Battlegill_03_Colour_03_Rum.BP_FishingFish_Battlegill_03_Colour_03_Rum_C
-// 0x0000 (0x0910 - 0x0910)
+// 0x0000 (0x0920 - 0x0920)
 class ABP_FishingFish_Battlegill_03_Colour_03_Rum_C : public ABP_FishingFish_Battlegill_03_C
 {
 public:

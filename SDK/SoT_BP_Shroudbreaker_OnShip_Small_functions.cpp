@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Shroudbreaker_OnShip_Small_classes.hpp"
+#include "SoT_BP_Shroudbreaker_OnShip_Small_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Shroudbreaker_OnShip_Small_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Shroudbreaker_OnShip_Small.BP_Shroudbreaker_OnShip_Small_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Shroudbreaker_OnShip_Small_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Constellation_classes.hpp"
+#include "SoT_BP_Constellation_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Constellation_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Constellation.BP_Constellation_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Constellation_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_Constellation_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Constellation.BP_Constellation_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_Constellation_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void ABP_Constellation_C::ExecuteUbergraph_BP_Constellation(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Constellation.BP_Constellation_C.ExecuteUbergraph_BP_Constellation"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_Constellation_C_ExecuteUbergraph_BP_Constellation_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

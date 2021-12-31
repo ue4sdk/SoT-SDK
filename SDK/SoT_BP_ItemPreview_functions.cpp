@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ItemPreview_classes.hpp"
+#include "SoT_BP_ItemPreview_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_ItemPreview_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ItemPreview.BP_ItemPreview_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_ItemPreview_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void ABP_ItemPreview_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ItemPreview.BP_ItemPreview_C.ReceiveEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	ABP_ItemPreview_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -55,10 +48,7 @@ void ABP_ItemPreview_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ItemPreview.BP_ItemPreview_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_ItemPreview_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -73,11 +63,7 @@ void ABP_ItemPreview_C::ExecuteUbergraph_BP_ItemPreview(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ItemPreview.BP_ItemPreview_C.ExecuteUbergraph_BP_ItemPreview"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_ItemPreview_C_ExecuteUbergraph_BP_ItemPreview_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);
@@ -87,17 +73,13 @@ void ABP_ItemPreview_C::ExecuteUbergraph_BP_ItemPreview(int EntryPoint)
 // Function BP_ItemPreview.BP_ItemPreview_C.PreviewShutdown__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPiratePreviewShutdownEvent Data                           (Parm)
+// FPiratePreviewShutdownEvent    Data                           (Parm)
 
-void ABP_ItemPreview_C::PreviewShutdown__DelegateSignature(const struct FPiratePreviewShutdownEvent& Data)
+void ABP_ItemPreview_C::PreviewShutdown__DelegateSignature(const FPiratePreviewShutdownEvent& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ItemPreview.BP_ItemPreview_C.PreviewShutdown__DelegateSignature"));
 
-	struct
-	{
-		struct FPiratePreviewShutdownEvent Data;
-	} params;
-
+	ABP_ItemPreview_C_PreviewShutdown__DelegateSignature_Params params;
 	params.Data = Data;
 
 	UObject::ProcessEvent(fn, &params);
@@ -107,17 +89,13 @@ void ABP_ItemPreview_C::PreviewShutdown__DelegateSignature(const struct FPirateP
 // Function BP_ItemPreview.BP_ItemPreview_C.PreviewReady__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPiratePreviewReadyEvent Data                           (Parm)
+// FPiratePreviewReadyEvent       Data                           (Parm)
 
-void ABP_ItemPreview_C::PreviewReady__DelegateSignature(const struct FPiratePreviewReadyEvent& Data)
+void ABP_ItemPreview_C::PreviewReady__DelegateSignature(const FPiratePreviewReadyEvent& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ItemPreview.BP_ItemPreview_C.PreviewReady__DelegateSignature"));
 
-	struct
-	{
-		struct FPiratePreviewReadyEvent Data;
-	} params;
-
+	ABP_ItemPreview_C_PreviewReady__DelegateSignature_Params params;
 	params.Data = Data;
 
 	UObject::ProcessEvent(fn, &params);
@@ -127,17 +105,13 @@ void ABP_ItemPreview_C::PreviewReady__DelegateSignature(const struct FPiratePrev
 // Function BP_ItemPreview.BP_ItemPreview_C.PreviewBusy__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPiratePreviewBusyEvent Data                           (Parm)
+// FPiratePreviewBusyEvent        Data                           (Parm)
 
-void ABP_ItemPreview_C::PreviewBusy__DelegateSignature(const struct FPiratePreviewBusyEvent& Data)
+void ABP_ItemPreview_C::PreviewBusy__DelegateSignature(const FPiratePreviewBusyEvent& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ItemPreview.BP_ItemPreview_C.PreviewBusy__DelegateSignature"));
 
-	struct
-	{
-		struct FPiratePreviewBusyEvent Data;
-	} params;
-
+	ABP_ItemPreview_C_PreviewBusy__DelegateSignature_Params params;
 	params.Data = Data;
 
 	UObject::ProcessEvent(fn, &params);

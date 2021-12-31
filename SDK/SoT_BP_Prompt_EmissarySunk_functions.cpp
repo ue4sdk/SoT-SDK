@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_EmissarySunk_classes.hpp"
+#include "SoT_BP_Prompt_EmissarySunk_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Prompt_EmissarySunk.BP_Prompt_EmissarySunk_C.OnEmissarySunk
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissarySunkNetworkEvent NewParam                       (Parm)
+// FEmissarySunkNetworkEvent      NewParam                       (Parm)
 
-void UBP_Prompt_EmissarySunk_C::OnEmissarySunk(const struct FEmissarySunkNetworkEvent& NewParam)
+void UBP_Prompt_EmissarySunk_C::OnEmissarySunk(const FEmissarySunkNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySunk.BP_Prompt_EmissarySunk_C.OnEmissarySunk"));
 
-	struct
-	{
-		struct FEmissarySunkNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissarySunk_C_OnEmissarySunk_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UBP_Prompt_EmissarySunk_C::OnEmissarySunk(const struct FEmissarySunkNetwork
 // Function BP_Prompt_EmissarySunk.BP_Prompt_EmissarySunk_C.EmissarySunk
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissarySunkNetworkEvent NewParam                       (Parm)
+// FEmissarySunkNetworkEvent      NewParam                       (Parm)
 
-void UBP_Prompt_EmissarySunk_C::EmissarySunk(const struct FEmissarySunkNetworkEvent& NewParam)
+void UBP_Prompt_EmissarySunk_C::EmissarySunk(const FEmissarySunkNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySunk.BP_Prompt_EmissarySunk_C.EmissarySunk"));
 
-	struct
-	{
-		struct FEmissarySunkNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissarySunk_C_EmissarySunk_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -59,10 +51,7 @@ void UBP_Prompt_EmissarySunk_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySunk.BP_Prompt_EmissarySunk_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissarySunk_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -75,10 +64,7 @@ void UBP_Prompt_EmissarySunk_C::RegisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySunk.BP_Prompt_EmissarySunk_C.RegisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissarySunk_C_RegisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -91,10 +77,7 @@ void UBP_Prompt_EmissarySunk_C::UnregisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySunk.BP_Prompt_EmissarySunk_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissarySunk_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,11 +92,7 @@ void UBP_Prompt_EmissarySunk_C::ExecuteUbergraph_BP_Prompt_EmissarySunk(int Entr
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissarySunk.BP_Prompt_EmissarySunk_C.ExecuteUbergraph_BP_Prompt_EmissarySunk"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_EmissarySunk_C_ExecuteUbergraph_BP_Prompt_EmissarySunk_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

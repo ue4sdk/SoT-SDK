@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_CommodityDemandFramework_classes.hpp"
+#include "SoT_CommodityDemandFramework_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ACommodityDemandService::OnRep_ActiveCommodityDemands()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function CommodityDemandFramework.CommodityDemandService.OnRep_ActiveCommodityDemands"));
 
-	struct
-	{
-	} params;
-
+	ACommodityDemandService_OnRep_ActiveCommodityDemands_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

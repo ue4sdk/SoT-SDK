@@ -19,7 +19,7 @@ namespace SDK
 class UAthenaProjectilesThrottledTickCollectionAsset : public UDataAsset
 {
 public:
-	TArray<struct FThrottledProjectileTickPool>        ProjectileTickPools;                                      // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<FThrottledProjectileTickPool>               ProjectileTickPools;                                      // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -35,7 +35,7 @@ public:
 class UProjectileLauncherSpecificSettings : public UDeveloperSettings
 {
 public:
-	TArray<struct FGlobalProjectileSettings>           GlobalSettings;                                           // 0x0038(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+	TArray<FGlobalProjectileSettings>                  GlobalSettings;                                           // 0x0038(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

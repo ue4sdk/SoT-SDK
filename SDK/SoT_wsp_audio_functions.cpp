@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_audio_classes.hpp"
+#include "SoT_wsp_audio_parameters.hpp"
 
 namespace SDK
 {

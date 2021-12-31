@@ -43,8 +43,8 @@ public:
 	}
 
 
-	void OnPrimaryActorEndPlay(class AActor* InActor);
-	void OnIgnoredActorEndPlay(class AActor* InActor);
+	void OnPrimaryActorEndPlay(AActor* InActor);
+	void OnIgnoredActorEndPlay(AActor* InActor);
 };
 
 

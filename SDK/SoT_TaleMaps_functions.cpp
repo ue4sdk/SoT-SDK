@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_TaleMaps_classes.hpp"
+#include "SoT_TaleMaps_parameters.hpp"
 
 namespace SDK
 {

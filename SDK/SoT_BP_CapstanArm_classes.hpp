@@ -19,8 +19,8 @@ namespace SDK
 class ABP_CapstanArm_C : public ACapstanArm
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             LookAtPos;                                                // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UInteractableComponent*                            Interactable;                                             // 0x0540(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   LookAtPos;                                                // 0x0548(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -29,12 +29,12 @@ public:
 	}
 
 
-	struct FVector GetLookAtPosBasisSpace();
-	struct FVector GetFrontFacingVector();
+	FVector GetLookAtPosBasisSpace();
+	FVector GetFrontFacingVector();
 	bool DoesRequireFacingFront();
-	struct FDockableInfo GetDockableInfo();
-	struct FVector GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius);
-	struct FVector GetLookAtPos();
+	FDockableInfo GetDockableInfo();
+	FVector GetClosestInteractionPoint(const FVector& ReferencePosition, float* OutInteractionPointRadius);
+	FVector GetLookAtPos();
 	void UserConstructionScript();
 };
 

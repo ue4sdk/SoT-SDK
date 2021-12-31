@@ -50,8 +50,8 @@ class UCleanlinessComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x10];                                      // 0x00C8(0x0010) MISSED OFFSET
-	class UCurveFloat*                                 DirtinessStrengthToMaterialStrength;                      // 0x00D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FCleanlinessInfo                            CleanlinessInfo;                                          // 0x00E0(0x000C) (Net, Transient)
+	UCurveFloat*                                       DirtinessStrengthToMaterialStrength;                      // 0x00D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FCleanlinessInfo                                   CleanlinessInfo;                                          // 0x00E0(0x000C) (Net, Transient)
 	float                                              DirtinessDecayRatePerSecond;                              // 0x00EC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              QuickCleanDirtynessDecayRatePerSecond;                    // 0x00F0(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x54];                                      // 0x00F4(0x0054) MISSED OFFSET

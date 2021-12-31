@@ -27,8 +27,8 @@ public:
 	}
 
 
-	static class URenderToTextureSceneDetails* GetRenderToTexture(const struct FName& Identifier);
-	static class URenderToTextureSceneDetails* CreateRenderToTexture(const struct FName& Identifier, class UClass* ClassToSpawn, const struct FIntPoint& Resolution, bool bForceLinearGamma, bool bCaptureAlpha);
+	static URenderToTextureSceneDetails* GetRenderToTexture(const FName& Identifier);
+	static URenderToTextureSceneDetails* CreateRenderToTexture(const FName& Identifier, UClass* ClassToSpawn, const FIntPoint& Resolution, bool bForceLinearGamma, bool bCaptureAlpha);
 };
 
 
@@ -37,12 +37,12 @@ public:
 class URenderToTextureSceneDetails : public UObject
 {
 public:
-	class UClass*                                      ClassToSpawn;                                             // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FIntPoint                                   Resolution;                                               // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UWorld*                                      World;                                                    // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UClass*                                            ClassToSpawn;                                             // 0x0028(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	FIntPoint                                          Resolution;                                               // 0x0030(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UWorld*                                            World;                                                    // 0x0038(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	TWeakObjectPtr<class UWorld>                       ParentWorld;                                              // 0x0040(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	TWeakObjectPtr<class AActor>                       SpawnedActor;                                             // 0x0048(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	class UTextureRenderTarget2D*                      RenderTarget;                                             // 0x0050(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UTextureRenderTarget2D*                            RenderTarget;                                             // 0x0050(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x50];                                      // 0x0058(0x0050) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -52,8 +52,8 @@ public:
 	}
 
 
-	class UTextureRenderTarget2D* GetTexture();
-	class AActor* GetInstance();
+	UTextureRenderTarget2D* GetTexture();
+	AActor* GetInstance();
 	void DestroyTexture();
 };
 

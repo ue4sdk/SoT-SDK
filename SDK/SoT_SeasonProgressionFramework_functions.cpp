@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SeasonProgressionFramework_classes.hpp"
+#include "SoT_SeasonProgressionFramework_parameters.hpp"
 
 namespace SDK
 {

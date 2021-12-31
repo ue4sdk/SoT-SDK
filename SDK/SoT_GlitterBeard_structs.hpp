@@ -26,7 +26,7 @@ struct FFinaleReplicationState
 {
 	TEnumAsByte<EFinaleState>                          State;                                                    // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	class UObject*                                     TargetEnsemble;                                           // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	UObject*                                           TargetEnsemble;                                           // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct GlitterBeard.UnlockEventData

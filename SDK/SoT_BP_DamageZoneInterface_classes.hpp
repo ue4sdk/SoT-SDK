@@ -29,7 +29,7 @@ public:
 
 	void GetNumExternalHits(int* NumExternalHits);
 	void ClearDecalFlags();
-	void AddExternalHit(const struct FHullDamageHit& Hit_Data);
+	void AddExternalHit(const FHullDamageHit& Hit_Data);
 };
 
 

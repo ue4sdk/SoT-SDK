@@ -33,9 +33,9 @@ struct FSessionServiceLogSubscribe
 // 0x0038
 struct FSessionServiceLog
 {
-	struct FName                                       Category;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class FString                                      Data;                                                     // 0x0008(0x0010) (ZeroConstructor)
-	struct FGuid                                       InstanceId;                                               // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData)
+	FName                                              Category;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FString                                            Data;                                                     // 0x0008(0x0010) (ZeroConstructor)
+	FGuid                                              InstanceId;                                               // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData)
 	double                                             TimeSeconds;                                              // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      Verbosity;                                                // 0x0030(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0031(0x0007) MISSED OFFSET
@@ -45,16 +45,16 @@ struct FSessionServiceLog
 // 0x0090
 struct FSessionServicePong
 {
-	class FString                                      BuildDate;                                                // 0x0000(0x0010) (ZeroConstructor)
-	class FString                                      DeviceName;                                               // 0x0010(0x0010) (ZeroConstructor)
-	struct FGuid                                       InstanceId;                                               // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
-	class FString                                      InstanceName;                                             // 0x0030(0x0010) (ZeroConstructor)
+	FString                                            BuildDate;                                                // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            DeviceName;                                               // 0x0010(0x0010) (ZeroConstructor)
+	FGuid                                              InstanceId;                                               // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
+	FString                                            InstanceName;                                             // 0x0030(0x0010) (ZeroConstructor)
 	bool                                               IsConsoleBuild;                                           // 0x0040(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0041(0x0007) MISSED OFFSET
-	class FString                                      PlatformName;                                             // 0x0048(0x0010) (ZeroConstructor)
-	struct FGuid                                       SessionId;                                                // 0x0058(0x0010) (ZeroConstructor, IsPlainOldData)
-	class FString                                      SessionName;                                              // 0x0068(0x0010) (ZeroConstructor)
-	class FString                                      SessionOwner;                                             // 0x0078(0x0010) (ZeroConstructor)
+	FString                                            PlatformName;                                             // 0x0048(0x0010) (ZeroConstructor)
+	FGuid                                              SessionId;                                                // 0x0058(0x0010) (ZeroConstructor, IsPlainOldData)
+	FString                                            SessionName;                                              // 0x0068(0x0010) (ZeroConstructor)
+	FString                                            SessionOwner;                                             // 0x0078(0x0010) (ZeroConstructor)
 	bool                                               Standalone;                                               // 0x0088(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0089(0x0007) MISSED OFFSET
 };

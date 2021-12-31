@@ -1,10 +1,10 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AnimNotify_PlayParticleEffect_classes.hpp"
+#include "SoT_AnimNotify_PlayParticleEffect_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ class FString UAnimNotify_PlayParticleEffect_C::GetNotifyName()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AnimNotify_PlayParticleEffect.AnimNotify_PlayParticleEffect_C.GetNotifyName"));
 
-	struct
-	{
-		class FString                  ReturnValue;
-	} params;
-
+	UAnimNotify_PlayParticleEffect_C_GetNotifyName_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -44,13 +40,7 @@ bool UAnimNotify_PlayParticleEffect_C::Received_Notify(class USkeletalMeshCompon
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AnimNotify_PlayParticleEffect.AnimNotify_PlayParticleEffect_C.Received_Notify"));
 
-	struct
-	{
-		class USkeletalMeshComponent*  MeshComp;
-		class UAnimSequenceBase*       Animation;
-		bool                           ReturnValue;
-	} params;
-
+	UAnimNotify_PlayParticleEffect_C_Received_Notify_Params params;
 	params.MeshComp = MeshComp;
 	params.Animation = Animation;
 

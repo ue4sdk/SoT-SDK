@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_CargoRun03_Drunk.BP_Anim_CargoRun03_Drunk_C
-// 0x0000 (0x1BD5 - 0x1BD5)
+// 0x0000 (0x1CDD - 0x1CDD)
 class UBP_Anim_CargoRun03_Drunk_C : public UBP_Anim_NPC_C
 {
 public:

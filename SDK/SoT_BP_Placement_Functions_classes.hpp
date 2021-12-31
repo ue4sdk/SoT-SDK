@@ -27,28 +27,28 @@ public:
 	}
 
 
-	static void GenerateRadialXYPositionsAroundPoint(const struct FVector& Centre, float Radius, int Segments, class UObject* __WorldContext, TArray<struct FVector>* Positions);
-	static void Get_First_Valid_Hit(class UObject* __WorldContext, TArray<struct FHitResult>* Hits, bool* Is_Valid_Hit, struct FHitResult* Hit);
-	static void Generate_Random_Rotated_Box_Raycast(const struct FVector& Centre, const struct FVector& Extent, const struct FRotator& Rotation, class UObject* __WorldContext, struct FRandomStream* Random, struct FVector* Raycast_Start, struct FVector* Raycast_End);
-	static void Detonate_Charge(class AActor* Spawn, const struct FVector& Position, float Radius, float Radius_Overlap, int Seed, class UObject* __WorldContext, TArray<struct FLinearColor>* Blast_Radii, TArray<struct FLinearColor>* Blast_Radii_Out);
-	static void Does_A_Delete_B(const class FString& A_String, const class FString& B_String, class UObject* __WorldContext, bool* Return);
-	static void Get_Actor_Placement_Asset_Type(class AActor* Input_Actor, class UObject* __WorldContext, bool* Returning_Tag, class FString* Asset_Tag);
-	static void Check_Actor_Overlap(class AActor* Input_Actor, class UObject* __WorldContext, bool* Delete_Actor, TArray<class AActor*>* Overlaps_to_Delete);
-	static void Get_Mesh_Instance_Transform(const struct FPlacementGardenSeed& Selected_Mesh, const struct FVector& Location, const struct FVector& Normal, class UObject* __WorldContext, struct FRandomStream* Random, struct FTransform* Transform);
-	static void Normalise_Mesh_Probabilities(class UObject* __WorldContext, TArray<struct FPlacementGardenSeed>* Charges, TArray<float>* Charge_Probabilities);
-	static void Set_Mesh(float Generator_Radius, float Spawn_Clustering, float Spawn_Radius_Multiplier, class AActor* Actor, class UObject* __WorldContext, TArray<struct FPlacementGardenSeed>* Meshes, TArray<float>* Mesh_Probabilities, TArray<class UObject*>* Physical_Materials, TArray<struct FLinearColor>* Mesh_Radii, struct FRandomStream* Random, bool* Spawn_Permission, struct FTransform* Transform, float* Radius, int* Mesh_Index, struct FPlacementGardenSeed* Mesh);
-	static void Set_Charge(float Generator_Radius, float Spawn_Clustering, bool Box_Distribution, class AActor* Actor, class UObject* __WorldContext, TArray<struct FPlacementBombCharge>* Charges, TArray<float>* Charge_Probabilities, TArray<class UObject*>* Physical_Materials, TArray<struct FLinearColor>* Blast_Radii, struct FRandomStream* Random, bool* Spawn_Permission, struct FVector* Position, float* Radius, struct FPlacementBombCharge* Charge);
-	static void Check_Surface_Materials(class UObject* Placement_Material, class UObject* __WorldContext, TArray<class UObject*>* Physical_Materials, bool* Placement_Permission);
-	static void Check_Slope(const struct FVector& Normal, const struct FVector2D& Slope_Range, class UObject* __WorldContext, bool* Placement_Permission);
-	static void Check_Height(const struct FVector& Position, const struct FVector2D& Height_Range, class UObject* __WorldContext, bool* Placement_Permission);
-	static void Check_Radius_Overlap(const struct FVector& Position, float Radius, float Radius_Overlap, class UObject* __WorldContext, TArray<struct FLinearColor>* Blast_Radii, bool* Placement_Permission);
-	static void Set_Spawn_Properties(class UObject* Object, int Seed, float Radius, class UObject* __WorldContext, bool* Cast_Success);
-	static void Generate_Random_Box_Raycast(const struct FVector& Centre, const struct FVector& Extent, class UObject* __WorldContext, struct FRandomStream* Random, struct FVector* Raycast_Start, struct FVector* Raycast_End);
-	static void Get_Box_Sample_Count(class AActor* Actor, float Seed_Density, class UObject* __WorldContext, int* Sample_Count);
-	static void Generate_Random_Radial_Raycast(float Radius, const struct FVector& Centre, float Spawn_Clustering, float Spawn_Radius_Multiplier, const struct FTransform& Actor_Transform, class UObject* __WorldContext, struct FRandomStream* Random, struct FVector* Raycast_Start, struct FVector* Raycast_End);
-	static void Calculate_Index_from_Probabilities(float Random_Float, class UObject* __WorldContext, TArray<float>* Charge_Probabilities, int* Index);
-	static void Get_Radial_Sample_Count(float Radius, float Spawn_Sample_Density, class UObject* __WorldContext, int* Sample_Count);
-	static void Normalise_Charge_Probabilities(class UObject* __WorldContext, TArray<struct FPlacementBombCharge>* Charges, TArray<float>* Charge_Probabilities);
+	static void GenerateRadialXYPositionsAroundPoint(const FVector& Centre, float Radius, int Segments, UObject* __WorldContext, TArray<FVector>* Positions);
+	static void Get_First_Valid_Hit(UObject* __WorldContext, TArray<FHitResult>* Hits, bool* Is_Valid_Hit, FHitResult* Hit);
+	static void Generate_Random_Rotated_Box_Raycast(const FVector& Centre, const FVector& Extent, const FRotator& Rotation, UObject* __WorldContext, FRandomStream* Random, FVector* Raycast_Start, FVector* Raycast_End);
+	static void Detonate_Charge(AActor* Spawn, const FVector& Position, float Radius, float Radius_Overlap, int Seed, UObject* __WorldContext, TArray<FLinearColor>* Blast_Radii, TArray<FLinearColor>* Blast_Radii_Out);
+	static void Does_A_Delete_B(const FString& A_String, const FString& B_String, UObject* __WorldContext, bool* Return);
+	static void Get_Actor_Placement_Asset_Type(AActor* Input_Actor, UObject* __WorldContext, bool* Returning_Tag, FString* Asset_Tag);
+	static void Check_Actor_Overlap(AActor* Input_Actor, UObject* __WorldContext, bool* Delete_Actor, TArray<AActor*>* Overlaps_to_Delete);
+	static void Get_Mesh_Instance_Transform(const FPlacementGardenSeed& Selected_Mesh, const FVector& Location, const FVector& Normal, UObject* __WorldContext, FRandomStream* Random, FTransform* Transform);
+	static void Normalise_Mesh_Probabilities(UObject* __WorldContext, TArray<FPlacementGardenSeed>* Charges, TArray<float>* Charge_Probabilities);
+	static void Set_Mesh(float Generator_Radius, float Spawn_Clustering, float Spawn_Radius_Multiplier, AActor* Actor, UObject* __WorldContext, TArray<FPlacementGardenSeed>* Meshes, TArray<float>* Mesh_Probabilities, TArray<UObject*>* Physical_Materials, TArray<FLinearColor>* Mesh_Radii, FRandomStream* Random, bool* Spawn_Permission, FTransform* Transform, float* Radius, int* Mesh_Index, FPlacementGardenSeed* Mesh);
+	static void Set_Charge(float Generator_Radius, float Spawn_Clustering, bool Box_Distribution, AActor* Actor, UObject* __WorldContext, TArray<FPlacementBombCharge>* Charges, TArray<float>* Charge_Probabilities, TArray<UObject*>* Physical_Materials, TArray<FLinearColor>* Blast_Radii, FRandomStream* Random, bool* Spawn_Permission, FVector* Position, float* Radius, FPlacementBombCharge* Charge);
+	static void Check_Surface_Materials(UObject* Placement_Material, UObject* __WorldContext, TArray<UObject*>* Physical_Materials, bool* Placement_Permission);
+	static void Check_Slope(const FVector& Normal, const FVector2D& Slope_Range, UObject* __WorldContext, bool* Placement_Permission);
+	static void Check_Height(const FVector& Position, const FVector2D& Height_Range, UObject* __WorldContext, bool* Placement_Permission);
+	static void Check_Radius_Overlap(const FVector& Position, float Radius, float Radius_Overlap, UObject* __WorldContext, TArray<FLinearColor>* Blast_Radii, bool* Placement_Permission);
+	static void Set_Spawn_Properties(UObject* Object, int Seed, float Radius, UObject* __WorldContext, bool* Cast_Success);
+	static void Generate_Random_Box_Raycast(const FVector& Centre, const FVector& Extent, UObject* __WorldContext, FRandomStream* Random, FVector* Raycast_Start, FVector* Raycast_End);
+	static void Get_Box_Sample_Count(AActor* Actor, float Seed_Density, UObject* __WorldContext, int* Sample_Count);
+	static void Generate_Random_Radial_Raycast(float Radius, const FVector& Centre, float Spawn_Clustering, float Spawn_Radius_Multiplier, const FTransform& Actor_Transform, UObject* __WorldContext, FRandomStream* Random, FVector* Raycast_Start, FVector* Raycast_End);
+	static void Calculate_Index_from_Probabilities(float Random_Float, UObject* __WorldContext, TArray<float>* Charge_Probabilities, int* Index);
+	static void Get_Radial_Sample_Count(float Radius, float Spawn_Sample_Density, UObject* __WorldContext, int* Sample_Count);
+	static void Normalise_Charge_Probabilities(UObject* __WorldContext, TArray<FPlacementBombCharge>* Charges, TArray<float>* Charge_Probabilities);
 };
 
 

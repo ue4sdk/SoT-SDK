@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishingFish_Wrecker_03_Colour_02_Blackcloud_classes.hpp"
+#include "SoT_BP_FishingFish_Wrecker_03_Colour_02_Blackcloud_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishingFish_Wrecker_03_Colour_02_Blackcloud_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishingFish_Wrecker_03_Colour_02_Blackcloud.BP_FishingFish_Wrecker_03_Colour_02_Blackcloud_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_FishingFish_Wrecker_03_Colour_02_Blackcloud_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

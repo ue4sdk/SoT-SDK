@@ -15,13 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_ShipStorageBarrel_Wood.BP_ShipStorageBarrel_Wood_C
-// 0x0018 (0x04D8 - 0x04C0)
+// 0x0020 (0x04E0 - 0x04C0)
 class ABP_ShipStorageBarrel_Wood_C : public AStorageContainer
 {
 public:
-	class UReplenishableComponent*                     Replenishable;                                            // 0x04C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UShipTelemetrySubjectComponent*              ShipTelemetrySubject;                                     // 0x04C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStorageContainerComponent*                  StorageContainer;                                         // 0x04D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UHitRegSnapshotRedirectImpactToReplicatedMovementAttachParentComponent* HitRegSnapshotRedirectImpactToReplicatedMovementAttachParent;// 0x04C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UReplenishableComponent*                           Replenishable;                                            // 0x04C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UShipTelemetrySubjectComponent*                    ShipTelemetrySubject;                                     // 0x04D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStorageContainerComponent*                        StorageContainer;                                         // 0x04D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,7 +31,7 @@ public:
 	}
 
 
-	bool ShouldDrawTooltipInWorldSpace(class AActor* InInteractor, struct FVector* DesiredTooltipWorldPosition);
+	bool ShouldDrawTooltipInWorldSpace(AActor* InInteractor, FVector* DesiredTooltipWorldPosition);
 	void UserConstructionScript();
 };
 

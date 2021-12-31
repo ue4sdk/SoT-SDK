@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AthenaAIAbilities_classes.hpp"
+#include "SoT_AthenaAIAbilities_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBurrowHealVFXComponent::OnRep_IsVFXActive()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAIAbilities.BurrowHealVFXComponent.OnRep_IsVFXActive"));
 
-	struct
-	{
-	} params;
-
+	UBurrowHealVFXComponent_OnRep_IsVFXActive_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UElectricShieldBuffComponent::OnRep_IsShieldActive()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAIAbilities.ElectricShieldBuffComponent.OnRep_IsShieldActive"));
 
-	struct
-	{
-	} params;
-
+	UElectricShieldBuffComponent_OnRep_IsShieldActive_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void UElectricShieldBuffComponent::DeactivateShield()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaAIAbilities.ElectricShieldBuffComponent.DeactivateShield"));
 
-	struct
-	{
-	} params;
-
+	UElectricShieldBuffComponent_DeactivateShield_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

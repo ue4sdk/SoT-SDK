@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Castaway_classes.hpp"
+#include "SoT_BP_Castaway_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Castaway_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Castaway.BP_Castaway_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Castaway_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void ABP_Castaway_C::TriggerAudioEvent(class UWwiseEvent* AudioEvent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Castaway.BP_Castaway_C.TriggerAudioEvent"));
 
-	struct
-	{
-		class UWwiseEvent*             AudioEvent;
-	} params;
-
+	ABP_Castaway_C_TriggerAudioEvent_Params params;
 	params.AudioEvent = AudioEvent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -55,17 +48,14 @@ void ABP_Castaway_C::StopCurrentAudioEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Castaway.BP_Castaway_C.StopCurrentAudioEvent"));
 
-	struct
-	{
-	} params;
-
+	ABP_Castaway_C_StopCurrentAudioEvent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
 
 
 // Function BP_Castaway.BP_Castaway_C.Multicast_TriggerAudioEvent
-// (Net, NetMulticast, BlueprintCallable, BlueprintEvent)
+// (Net, NetReliable, NetMulticast, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // int                            EventIdx                       (Parm, ZeroConstructor, IsPlainOldData)
 
@@ -73,11 +63,7 @@ void ABP_Castaway_C::Multicast_TriggerAudioEvent(int EventIdx)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Castaway.BP_Castaway_C.Multicast_TriggerAudioEvent"));
 
-	struct
-	{
-		int                            EventIdx;
-	} params;
-
+	ABP_Castaway_C_Multicast_TriggerAudioEvent_Params params;
 	params.EventIdx = EventIdx;
 
 	UObject::ProcessEvent(fn, &params);
@@ -91,10 +77,7 @@ void ABP_Castaway_C::ResetVisibility()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Castaway.BP_Castaway_C.ResetVisibility"));
 
-	struct
-	{
-	} params;
-
+	ABP_Castaway_C_ResetVisibility_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,11 +92,7 @@ void ABP_Castaway_C::ExecuteUbergraph_BP_Castaway(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Castaway.BP_Castaway_C.ExecuteUbergraph_BP_Castaway"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_Castaway_C_ExecuteUbergraph_BP_Castaway_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

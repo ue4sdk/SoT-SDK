@@ -19,7 +19,7 @@ namespace SDK
 // 0x0010
 struct FADS_CharacterSelectNative
 {
-	TArray<struct FAthenaAnimationCharacterSelect>     CharacterSelect_41_79356B9543A918FE5739F99C97F7EC6A;      // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<FAthenaAnimationCharacterSelect>            CharacterSelect_41_79356B9543A918FE5739F99C97F7EC6A;      // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

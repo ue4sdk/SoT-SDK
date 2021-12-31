@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Seagull01_32POI_Circling_Shipwreck_classes.hpp"
+#include "SoT_BP_Seagull01_32POI_Circling_Shipwreck_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Seagull01_32POI_Circling_Shipwreck_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Seagull01_32POI_Circling_Shipwreck.BP_Seagull01_32POI_Circling_Shipwreck_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Seagull01_32POI_Circling_Shipwreck_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MediumShipTemplate_classes.hpp"
+#include "SoT_BP_MediumShipTemplate_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ unsigned char ABP_MediumShipTemplate_C::GetPxActorCapacityForPhysXAggregate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShipTemplate.BP_MediumShipTemplate_C.GetPxActorCapacityForPhysXAggregate"));
 
-	struct
-	{
-		unsigned char                  ReturnValue;
-	} params;
-
+	ABP_MediumShipTemplate_C_GetPxActorCapacityForPhysXAggregate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -46,15 +42,7 @@ void ABP_MediumShipTemplate_C::SetupMastControls(class UChildActorComponent* Lef
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShipTemplate.BP_MediumShipTemplate_C.SetupMastControls"));
 
-	struct
-	{
-		class UChildActorComponent*    LeftHoist;
-		class UChildActorComponent*    RightHoist;
-		class UChildActorComponent*    LeftAngle;
-		class UChildActorComponent*    RightAngle;
-		struct FName                   RiggingGroupName;
-	} params;
-
+	ABP_MediumShipTemplate_C_SetupMastControls_Params params;
 	params.LeftHoist = LeftHoist;
 	params.RightHoist = RightHoist;
 	params.LeftAngle = LeftAngle;
@@ -72,10 +60,7 @@ void ABP_MediumShipTemplate_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShipTemplate.BP_MediumShipTemplate_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_MediumShipTemplate_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

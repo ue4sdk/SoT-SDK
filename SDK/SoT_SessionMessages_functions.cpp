@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SessionMessages_classes.hpp"
+#include "SoT_SessionMessages_parameters.hpp"
 
 namespace SDK
 {

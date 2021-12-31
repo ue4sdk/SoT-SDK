@@ -25,7 +25,7 @@ namespace SDK
 // 0x0010
 struct FMeleeAttackIdWeights
 {
-	class UClass*                                      MeleeAttackType;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            MeleeAttackType;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              Weight;                                                   // 0x0008(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x000C(0x0004) MISSED OFFSET
 };
@@ -34,8 +34,8 @@ struct FMeleeAttackIdWeights
 // 0x0018
 struct FAshenLordFireShroudParams
 {
-	class UClass*                                      FireShroudZoneClass;                                      // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     FireShroudCollisionVolume;                                // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	UClass*                                            FireShroudZoneClass;                                      // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FVector                                            FireShroudCollisionVolume;                                // 0x0008(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
@@ -43,8 +43,8 @@ struct FAshenLordFireShroudParams
 // 0x0020
 struct FAshenLordFireShroud
 {
-	class AStatusEffectOverlapZone*                    FireShroudOverlapZone;                                    // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FAshenLordFireShroudParams                  Params;                                                   // 0x0008(0x0018)
+	AStatusEffectOverlapZone*                          FireShroudOverlapZone;                                    // 0x0000(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	FAshenLordFireShroudParams                         Params;                                                   // 0x0008(0x0018)
 };
 
 }

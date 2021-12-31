@@ -19,10 +19,10 @@ namespace SDK
 class UWidgetReflectorNodeBase : public UObject
 {
 public:
-	struct FGeometry                                   Geometry;                                                 // 0x0028(0x0034) (IsPlainOldData)
+	FGeometry                                          Geometry;                                                 // 0x0028(0x0034) (IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x005C(0x0004) MISSED OFFSET
-	TArray<class UWidgetReflectorNodeBase*>            ChildNodes;                                               // 0x0060(0x0010) (ZeroConstructor)
-	struct FLinearColor                                Tint;                                                     // 0x0070(0x0010) (ZeroConstructor, IsPlainOldData)
+	TArray<UWidgetReflectorNodeBase*>                  ChildNodes;                                               // 0x0060(0x0010) (ZeroConstructor)
+	FLinearColor                                       Tint;                                                     // 0x0070(0x0010) (ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -54,16 +54,16 @@ public:
 class USnapshotWidgetReflectorNode : public UWidgetReflectorNodeBase
 {
 public:
-	struct FText                                       CachedWidgetType;                                         // 0x0080(0x0038)
-	struct FText                                       CachedWidgetVisibilityText;                               // 0x00B8(0x0038)
-	struct FText                                       CachedWidgetReadableLocation;                             // 0x00F0(0x0038)
-	class FString                                      CachedWidgetFile;                                         // 0x0128(0x0010) (ZeroConstructor)
+	FText                                              CachedWidgetType;                                         // 0x0080(0x0038)
+	FText                                              CachedWidgetVisibilityText;                               // 0x00B8(0x0038)
+	FText                                              CachedWidgetReadableLocation;                             // 0x00F0(0x0038)
+	FString                                            CachedWidgetFile;                                         // 0x0128(0x0010) (ZeroConstructor)
 	int                                                CachedWidgetLineNumber;                                   // 0x0138(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       CachedWidgetAssetName;                                    // 0x013C(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   CachedWidgetDesiredSize;                                  // 0x0144(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              CachedWidgetAssetName;                                    // 0x013C(0x0008) (ZeroConstructor, IsPlainOldData)
+	FVector2D                                          CachedWidgetDesiredSize;                                  // 0x0144(0x0008) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x014C(0x0004) MISSED OFFSET
-	struct FSlateColor                                 CachedWidgetForegroundColor;                              // 0x0150(0x0030)
-	class FString                                      CachedWidgetAddress;                                      // 0x0180(0x0010) (ZeroConstructor)
+	FSlateColor                                        CachedWidgetForegroundColor;                              // 0x0150(0x0030)
+	FString                                            CachedWidgetAddress;                                      // 0x0180(0x0010) (ZeroConstructor)
 	bool                                               CachedWidgetEnabled;                                      // 0x0190(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0191(0x0007) MISSED OFFSET
 

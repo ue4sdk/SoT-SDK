@@ -19,8 +19,8 @@ namespace SDK
 class UActorSequence : public UMovieSceneSequence
 {
 public:
-	class UMovieScene*                                 MovieScene;                                               // 0x02A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FActorSequenceObjectReferenceMap            ObjectReferences;                                         // 0x02B0(0x0020)
+	UMovieScene*                                       MovieScene;                                               // 0x02A8(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	FActorSequenceObjectReferenceMap                   ObjectReferences;                                         // 0x02B0(0x0020)
 
 	static UClass* StaticClass()
 	{
@@ -36,9 +36,9 @@ public:
 class UActorSequenceComponent : public UActorComponent
 {
 public:
-	struct FMovieSceneSequencePlaybackSettings         PlaybackSettings;                                         // 0x00C8(0x0028) (Edit)
-	class UActorSequence*                              Sequence;                                                 // 0x00F0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	class UActorSequencePlayer*                        SequencePlayer;                                           // 0x00F8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
+	FMovieSceneSequencePlaybackSettings                PlaybackSettings;                                         // 0x00C8(0x0028) (Edit)
+	UActorSequence*                                    Sequence;                                                 // 0x00F0(0x0008) (Edit, ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	UActorSequencePlayer*                              SequencePlayer;                                           // 0x00F8(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData)
 	bool                                               bAutoPlay;                                                // 0x0100(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0101(0x0007) MISSED OFFSET
 

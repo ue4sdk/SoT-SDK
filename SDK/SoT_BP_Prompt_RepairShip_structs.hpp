@@ -8,11 +8,11 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_BP_PromptCoordinator_Base_classes.hpp"
-#include "SoT_ObjectMessaging_classes.hpp"
 #include "SoT_Engine_classes.hpp"
-#include "SoT_Athena_classes.hpp"
-#include "SoT_ShipDamage_classes.hpp"
 #include "SoT_PrioritisedPrompts_classes.hpp"
+#include "SoT_ShipDamage_classes.hpp"
+#include "SoT_ObjectMessaging_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {

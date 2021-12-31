@@ -1,10 +1,10 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_cave_rocks_03_classes.hpp"
+#include "SoT_wsp_cave_rocks_03_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awsp_cave_rocks_03_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_cave_rocks_03.wsp_cave_rocks_03_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Awsp_cave_rocks_03_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

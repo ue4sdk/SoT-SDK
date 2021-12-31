@@ -21,8 +21,8 @@ class AShipBumperZone : public AActor
 public:
 	bool                                               UseInverseRightVector;                                    // 0x03D0(0x0001) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2F];                                      // 0x03D1(0x002F) MISSED OFFSET
-	class UBoxComponent*                               BumperZoneComponent;                                      // 0x0400(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
-	class USphereComponent*                            DistanceRadiusComponent;                                  // 0x0408(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	UBoxComponent*                                     BumperZoneComponent;                                      // 0x0400(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
+	USphereComponent*                                  DistanceRadiusComponent;                                  // 0x0408(0x0008) (Edit, ExportObject, ZeroConstructor, DisableEditOnInstance, InstancedReference, IsPlainOldData)
 	bool                                               ApplyAngularImpulse;                                      // 0x0410(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0411(0x0003) MISSED OFFSET
 	float                                              AngularImpulse;                                           // 0x0414(0x0004) (Edit, ZeroConstructor, IsPlainOldData)

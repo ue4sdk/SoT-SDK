@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Sail_classes.hpp"
+#include "SoT_BP_Sail_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Sail_C::Debug()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Sail.BP_Sail_C.Debug"));
 
-	struct
-	{
-	} params;
-
+	ABP_Sail_C_Debug_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -38,12 +35,7 @@ void ABP_Sail_C::Initialise(bool IsMainSail, float SailForceScalar)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Sail.BP_Sail_C.Initialise"));
 
-	struct
-	{
-		bool                           IsMainSail;
-		float                          SailForceScalar;
-	} params;
-
+	ABP_Sail_C_Initialise_Params params;
 	params.IsMainSail = IsMainSail;
 	params.SailForceScalar = SailForceScalar;
 
@@ -58,10 +50,7 @@ void ABP_Sail_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Sail.BP_Sail_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Sail_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

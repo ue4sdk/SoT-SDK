@@ -30,21 +30,21 @@ public:
 
 
 // Class KnockbackFramework.KnockbackColliderComponent
-// 0x0080 (0x0630 - 0x05B0)
+// 0x0080 (0x0640 - 0x05C0)
 class UKnockbackColliderComponent : public UBoxComponent
 {
 public:
-	struct FCollisionProfileName                       KnockbackTraceProfile;                                    // 0x05B0(0x0008) (Edit)
-	TEnumAsByte<EKnockbackType>                        KnockbackType;                                            // 0x05B8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x05B9(0x0003) MISSED OFFSET
-	struct FKnockBackInfo                              KnockbackParams;                                          // 0x05BC(0x0050) (Edit)
-	TWeakObjectPtr<class AActor>                       ActorToTarget;                                            // 0x060C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x4];                                       // 0x0614(0x0004) MISSED OFFSET
-	class UClass*                                      KnockbackDamageType;                                      // 0x0618(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	float                                              KnockbackInterval;                                        // 0x0620(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData02[0x4];                                       // 0x0624(0x0004) MISSED OFFSET
-	TEnumAsByte<ESolidState>                           SolidState;                                               // 0x0628(0x0001) (Net, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData03[0x7];                                       // 0x0629(0x0007) MISSED OFFSET
+	FCollisionProfileName                              KnockbackTraceProfile;                                    // 0x05C0(0x0008) (Edit)
+	TEnumAsByte<EKnockbackType>                        KnockbackType;                                            // 0x05C8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x05C9(0x0003) MISSED OFFSET
+	FKnockBackInfo                                     KnockbackParams;                                          // 0x05CC(0x0050) (Edit)
+	TWeakObjectPtr<class AActor>                       ActorToTarget;                                            // 0x061C(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x4];                                       // 0x0624(0x0004) MISSED OFFSET
+	UClass*                                            KnockbackDamageType;                                      // 0x0628(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	float                                              KnockbackInterval;                                        // 0x0630(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData02[0x4];                                       // 0x0634(0x0004) MISSED OFFSET
+	TEnumAsByte<ESolidState>                           SolidState;                                               // 0x0638(0x0001) (Net, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData03[0x7];                                       // 0x0639(0x0007) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

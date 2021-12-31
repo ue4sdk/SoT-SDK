@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_NetworkRegions_classes.hpp"
+#include "SoT_NetworkRegions_parameters.hpp"
 
 namespace SDK
 {

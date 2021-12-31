@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Fire_classes.hpp"
+#include "SoT_Fire_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UFlammableComponent::OnRep_OnFire()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableComponent.OnRep_OnFire"));
 
-	struct
-	{
-	} params;
-
+	UFlammableComponent_OnRep_OnFire_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -31,17 +28,13 @@ void UFlammableComponent::OnRep_OnFire()
 // Function Fire.FlammableComponent.Multicast_NotifyExtinguished_RPC
 // (Net, Native, Event, NetMulticast, Protected, HasDefaults)
 // Parameters:
-// struct FVector                 InExtinguishLocationWS         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        InExtinguishLocationWS         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UFlammableComponent::Multicast_NotifyExtinguished_RPC(const struct FVector& InExtinguishLocationWS)
+void UFlammableComponent::Multicast_NotifyExtinguished_RPC(const FVector& InExtinguishLocationWS)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableComponent.Multicast_NotifyExtinguished_RPC"));
 
-	struct
-	{
-		struct FVector                 InExtinguishLocationWS;
-	} params;
-
+	UFlammableComponent_Multicast_NotifyExtinguished_RPC_Params params;
 	params.InExtinguishLocationWS = InExtinguishLocationWS;
 
 	UObject::ProcessEvent(fn, &params);
@@ -57,11 +50,7 @@ bool UFlammableComponent::IsOnFire()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableComponent.IsOnFire"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UFlammableComponent_IsOnFire_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,10 +65,7 @@ void UFlammableComponent::IncrementFireSource()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableComponent.IncrementFireSource"));
 
-	struct
-	{
-	} params;
-
+	UFlammableComponent_IncrementFireSource_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -92,10 +78,7 @@ void UFlammableComponent::DecrementFireSource()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableComponent.DecrementFireSource"));
 
-	struct
-	{
-	} params;
-
+	UFlammableComponent_DecrementFireSource_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -108,10 +91,7 @@ void UFlammableInterface::IncrementFireSource()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableInterface.IncrementFireSource"));
 
-	struct
-	{
-	} params;
-
+	UFlammableInterface_IncrementFireSource_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -124,10 +104,7 @@ void UFlammableInterface::DecrementFireSource()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FlammableInterface.DecrementFireSource"));
 
-	struct
-	{
-	} params;
-
+	UFlammableInterface_DecrementFireSource_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -142,11 +119,7 @@ void UFirePropagationInterface::SetAllCellsState(TEnumAsByte<EFireCellState> Sta
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.FirePropagationInterface.SetAllCellsState"));
 
-	struct
-	{
-		TEnumAsByte<EFireCellState>    State;
-	} params;
-
+	UFirePropagationInterface_SetAllCellsState_Params params;
 	params.State = State;
 
 	UObject::ProcessEvent(fn, &params);
@@ -160,10 +133,7 @@ void UShipFirePropagationComponent::OnRep_CellData()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.ShipFirePropagationComponent.OnRep_CellData"));
 
-	struct
-	{
-	} params;
-
+	UShipFirePropagationComponent_OnRep_CellData_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -176,10 +146,7 @@ void UShipFirePropagationComponent::OnRep_CellCharringData()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Fire.ShipFirePropagationComponent.OnRep_CellCharringData"));
 
-	struct
-	{
-	} params;
-
+	UShipFirePropagationComponent_OnRep_CellCharringData_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

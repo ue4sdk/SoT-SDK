@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Treasure_Artifact_Proxy_impressive_01_a.BP_Treasure_Artifact_Proxy_impressive_01_a_C
-// 0x0000 (0x0808 - 0x0808)
+// 0x0000 (0x07C8 - 0x07C8)
 class ABP_Treasure_Artifact_Proxy_impressive_01_a_C : public ABP_TreasureArtifact_Proxy_Base_C
 {
 public:

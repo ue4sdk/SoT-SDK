@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_LowerDeckDamageZone_00_classes.hpp"
+#include "SoT_BP_LowerDeckDamageZone_00_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_LowerDeckDamageZone_00_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LowerDeckDamageZone_00.BP_LowerDeckDamageZone_00_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_LowerDeckDamageZone_00_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

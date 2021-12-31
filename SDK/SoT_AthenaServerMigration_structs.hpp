@@ -7,6 +7,7 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_AthenaEngine_classes.hpp"
 #include "SoT_Athena_classes.hpp"
@@ -21,7 +22,7 @@ namespace SDK
 // 0x000C
 struct FIncomingMigrationPreventionZone
 {
-	struct FVector2D                                   Location;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FVector2D                                          Location;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	float                                              Radius;                                                   // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
@@ -85,16 +86,16 @@ struct FServerMigrationCompleteEvent
 // 0x0078
 struct FServerMigrationHeartbeatEvent
 {
-	struct FGuid                                       ServerId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	class FString                                      ServerLocation;                                           // 0x0010(0x0010) (ZeroConstructor)
-	class FString                                      GameEndpoint;                                             // 0x0020(0x0010) (ZeroConstructor)
-	class FString                                      MigrationEndpoint;                                        // 0x0030(0x0010) (ZeroConstructor)
-	TArray<struct FServerMigrationCrewMigrationStatus> CrewsMigrationStatus;                                     // 0x0040(0x0010) (ZeroConstructor)
+	FGuid                                              ServerId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FString                                            ServerLocation;                                           // 0x0010(0x0010) (ZeroConstructor)
+	FString                                            GameEndpoint;                                             // 0x0020(0x0010) (ZeroConstructor)
+	FString                                            MigrationEndpoint;                                        // 0x0030(0x0010) (ZeroConstructor)
+	TArray<FServerMigrationCrewMigrationStatus>        CrewsMigrationStatus;                                     // 0x0040(0x0010) (ZeroConstructor)
 	int                                                SequenceId;                                               // 0x0050(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
-	struct FTimespan                                   ServerUptime;                                             // 0x0058(0x0008) (ZeroConstructor)
-	struct FTimespan                                   ExpectedServerLifetime;                                   // 0x0060(0x0008) (ZeroConstructor)
-	struct FTimespan                                   MessageInterval;                                          // 0x0068(0x0008) (ZeroConstructor)
+	FTimespan                                          ServerUptime;                                             // 0x0058(0x0008) (ZeroConstructor)
+	FTimespan                                          ExpectedServerLifetime;                                   // 0x0060(0x0008) (ZeroConstructor)
+	FTimespan                                          MessageInterval;                                          // 0x0068(0x0008) (ZeroConstructor)
 	bool                                               ContestMatchmaking;                                       // 0x0070(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0071(0x0007) MISSED OFFSET
 };
@@ -103,16 +104,16 @@ struct FServerMigrationHeartbeatEvent
 // 0x0020
 struct FServerMigrationRefusedEvent
 {
-	struct FGuid                                       MigrationId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       CrewId;                                                   // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              MigrationId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              CrewId;                                                   // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaServerMigration.ServerMigrationInstanceEventBase
 // 0x0020
 struct FServerMigrationInstanceEventBase
 {
-	struct FGuid                                       ServerId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       MigrationId;                                              // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              ServerId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              MigrationId;                                              // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct AthenaServerMigration.OutgoingServerMigrationAbortedEvent
@@ -140,17 +141,17 @@ struct FOutgoingServerMigrationStartedEvent : public FServerMigrationInstanceEve
 // 0x0008
 struct FServerMigrationSetServerConfigMessage
 {
-	struct FTimespan                                   ExpectedServerLifetime;                                   // 0x0000(0x0008) (ZeroConstructor)
+	FTimespan                                          ExpectedServerLifetime;                                   // 0x0000(0x0008) (ZeroConstructor)
 };
 
 // ScriptStruct AthenaServerMigration.ServerMigrationRequestEvent
 // 0x0040
 struct FServerMigrationRequestEvent
 {
-	struct FGuid                                       MigrationId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	class FString                                      DestinationAddress;                                       // 0x0010(0x0010) (ZeroConstructor)
-	struct FGuid                                       CrewId;                                                   // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
-	class FString                                      SubMode;                                                  // 0x0030(0x0010) (ZeroConstructor)
+	FGuid                                              MigrationId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FString                                            DestinationAddress;                                       // 0x0010(0x0010) (ZeroConstructor)
+	FGuid                                              CrewId;                                                   // 0x0020(0x0010) (ZeroConstructor, IsPlainOldData)
+	FString                                            SubMode;                                                  // 0x0030(0x0010) (ZeroConstructor)
 };
 
 }

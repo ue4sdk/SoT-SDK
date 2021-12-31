@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_SlateCore_classes.hpp"
+#include "SoT_SlateCore_parameters.hpp"
 
 namespace SDK
 {

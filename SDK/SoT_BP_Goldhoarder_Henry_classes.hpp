@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Goldhoarder_Henry.BP_Goldhoarder_Henry_C
-// 0x0000 (0x0690 - 0x0690)
+// 0x0000 (0x0630 - 0x0630)
 class ABP_Goldhoarder_Henry_C : public ABP_Goldhoarder_C
 {
 public:

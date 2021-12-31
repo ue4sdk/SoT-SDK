@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_Castaway_Base.BP_Anim_Castaway_Base_C
-// 0x15E8 (0x1BF8 - 0x0610)
+// 0x16F0 (0x1D00 - 0x0610)
 class UBP_Anim_Castaway_Base_C : public UNPCAnimInstance
 {
 public:
@@ -80,16 +80,19 @@ public:
 	struct FAnimationNode_TwoWayBlend                  AnimGraphNode_TwoWayBlend_DC67B22C43FE5B3ACF584D8F6C947179;// 0x1AC0(0x0070)
 	struct FAnimNode_UseCachedPose                     AnimGraphNode_UseCachedPose_3DCF2F2743B292DCCAA5849ABDE22B02;// 0x1B30(0x0048)
 	struct FAnimNode_Slot                              AnimGraphNode_Slot_0F5460ED406658E5F6DC8EB9B38FA9B5;      // 0x1B78(0x0060)
-	float                                              LookAtChest;                                              // 0x1BD8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	struct FVector2D                                   LookAtAngleClamp;                                         // 0x1BDC(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      LookAtClamp;                                              // 0x1BE4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x1BE5(0x0003) MISSED OFFSET
-	float                                              LookAtActivationSpeed;                                    // 0x1BE8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	float                                              LookAtTargetPositionSpeed;                                // 0x1BEC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               AnimgraphStarted;                                         // 0x1BF0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	bool                                               IsPhased;                                                 // 0x1BF1(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData01[0x2];                                       // 0x1BF2(0x0002) MISSED OFFSET
-	float                                              SequencerBlendWeight;                                     // 0x1BF4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	struct FAnimNode_ApplyAdditive                     AnimGraphNode_ApplyAdditive_B53112D04F420ED411D2D4834653EB93;// 0x1BD8(0x0070)
+	struct FAnimNode_RefPose                           AnimGraphNode_IdentityPose_BBAE480D4EB6C571F7DADE8874A05AF2;// 0x1C48(0x0038)
+	struct FAnimNode_Slot                              AnimGraphNode_Slot_4BE4FEE94EB433778EE56398000D22F5;      // 0x1C80(0x0060)
+	float                                              LookAtChest;                                              // 0x1CE0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	struct FVector2D                                   LookAtAngleClamp;                                         // 0x1CE4(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      LookAtClamp;                                              // 0x1CEC(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x1CED(0x0003) MISSED OFFSET
+	float                                              LookAtActivationSpeed;                                    // 0x1CF0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	float                                              LookAtTargetPositionSpeed;                                // 0x1CF4(0x0004) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               AnimgraphStarted;                                         // 0x1CF8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	bool                                               IsPhased;                                                 // 0x1CF9(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData01[0x2];                                       // 0x1CFA(0x0002) MISSED OFFSET
+	float                                              SequencerBlendWeight;                                     // 0x1CFC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

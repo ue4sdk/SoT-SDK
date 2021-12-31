@@ -1,10 +1,10 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_sot_frontend_01_a_IPGLineUp_classes.hpp"
+#include "SoT_sot_frontend_01_a_IPGLineUp_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Asot_frontend_01_a_IPGLineUp_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_IPGLineUp.sot_frontend_01_a_IPGLineUp_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_IPGLineUp_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void Asot_frontend_01_a_IPGLineUp_C::showPlayerMarker()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_IPGLineUp.sot_frontend_01_a_IPGLineUp_C.showPlayerMarker"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_IPGLineUp_C_showPlayerMarker_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void Asot_frontend_01_a_IPGLineUp_C::hidePlayerMarker()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_IPGLineUp.sot_frontend_01_a_IPGLineUp_C.hidePlayerMarker"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_IPGLineUp_C_hidePlayerMarker_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -69,11 +60,7 @@ void Asot_frontend_01_a_IPGLineUp_C::ExecuteUbergraph_sot_frontend_01_a_IPGLineU
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_IPGLineUp.sot_frontend_01_a_IPGLineUp_C.ExecuteUbergraph_sot_frontend_01_a_IPGLineUp"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	Asot_frontend_01_a_IPGLineUp_C_ExecuteUbergraph_sot_frontend_01_a_IPGLineUp_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

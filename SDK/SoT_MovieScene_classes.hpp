@@ -19,7 +19,7 @@ namespace SDK
 class UMovieSceneSignedObject : public UObject
 {
 public:
-	struct FGuid                                       Signature;                                                // 0x0028(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              Signature;                                                // 0x0028(0x0010) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x48];                                      // 0x0038(0x0048) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -36,13 +36,13 @@ public:
 class UMovieScene : public UMovieSceneSignedObject
 {
 public:
-	TArray<struct FMovieSceneSpawnable>                Spawnables;                                               // 0x0080(0x0010) (ZeroConstructor)
-	TArray<struct FMovieScenePossessable>              Possessables;                                             // 0x0090(0x0010) (ZeroConstructor)
-	TArray<struct FMovieSceneBinding>                  ObjectBindings;                                           // 0x00A0(0x0010) (ZeroConstructor)
-	TArray<class UMovieSceneTrack*>                    MasterTracks;                                             // 0x00B0(0x0010) (ExportObject, ZeroConstructor)
-	class UMovieSceneTrack*                            CameraCutTrack;                                           // 0x00C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
-	struct FFloatRange                                 SelectionRange;                                           // 0x00C8(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FFloatRange                                 PlaybackRange;                                            // 0x00D8(0x0010) (ZeroConstructor, IsPlainOldData)
+	TArray<FMovieSceneSpawnable>                       Spawnables;                                               // 0x0080(0x0010) (ZeroConstructor)
+	TArray<FMovieScenePossessable>                     Possessables;                                             // 0x0090(0x0010) (ZeroConstructor)
+	TArray<FMovieSceneBinding>                         ObjectBindings;                                           // 0x00A0(0x0010) (ZeroConstructor)
+	TArray<UMovieSceneTrack*>                          MasterTracks;                                             // 0x00B0(0x0010) (ExportObject, ZeroConstructor)
+	UMovieSceneTrack*                                  CameraCutTrack;                                           // 0x00C0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	FFloatRange                                        SelectionRange;                                           // 0x00C8(0x0010) (ZeroConstructor, IsPlainOldData)
+	FFloatRange                                        PlaybackRange;                                            // 0x00D8(0x0010) (ZeroConstructor, IsPlainOldData)
 	bool                                               bForceFixedFrameIntervalPlayback;                         // 0x00E8(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x00E9(0x0003) MISSED OFFSET
 	float                                              FixedFrameInterval;                                       // 0x00EC(0x0004) (ZeroConstructor, IsPlainOldData)
@@ -81,7 +81,7 @@ class UMovieSceneBindingOverrides : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	TArray<struct FMovieSceneBindingOverrideData>      BindingData;                                              // 0x0030(0x0010) (Edit, ZeroConstructor)
+	TArray<FMovieSceneBindingOverrideData>             BindingData;                                              // 0x0030(0x0010) (Edit, ZeroConstructor)
 	unsigned char                                      UnknownData01[0x58];                                      // 0x0040(0x0058) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -113,10 +113,10 @@ public:
 class UMovieSceneFolder : public UObject
 {
 public:
-	struct FName                                       FolderName;                                               // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
-	TArray<class UMovieSceneFolder*>                   ChildFolders;                                             // 0x0030(0x0010) (ZeroConstructor)
-	TArray<class UMovieSceneTrack*>                    ChildMasterTracks;                                        // 0x0040(0x0010) (ExportObject, ZeroConstructor)
-	TArray<class FString>                              ChildObjectBindingStrings;                                // 0x0050(0x0010) (ZeroConstructor)
+	FName                                              FolderName;                                               // 0x0028(0x0008) (ZeroConstructor, IsPlainOldData)
+	TArray<UMovieSceneFolder*>                         ChildFolders;                                             // 0x0030(0x0010) (ZeroConstructor)
+	TArray<UMovieSceneTrack*>                          ChildMasterTracks;                                        // 0x0040(0x0010) (ExportObject, ZeroConstructor)
+	TArray<FString>                                    ChildObjectBindingStrings;                                // 0x0050(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData00[0x10];                                      // 0x0060(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -134,20 +134,20 @@ class UMovieSceneSequencePlayer : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x368];                                     // 0x0028(0x0368) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnPlay;                                                   // 0x0390(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnStop;                                                   // 0x03A0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    OnPause;                                                  // 0x03B0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	FScriptMulticastDelegate                           OnPlay;                                                   // 0x0390(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	FScriptMulticastDelegate                           OnStop;                                                   // 0x03A0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	FScriptMulticastDelegate                           OnPause;                                                  // 0x03B0(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	unsigned char                                      bIsPlaying : 1;                                           // 0x03C0(0x0001)
 	unsigned char                                      bReversePlayback : 1;                                     // 0x03C0(0x0001)
 	unsigned char                                      bPendingFirstUpdate : 1;                                  // 0x03C0(0x0001)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x03C1(0x0007) MISSED OFFSET
-	class UMovieSceneSequence*                         Sequence;                                                 // 0x03C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	UMovieSceneSequence*                               Sequence;                                                 // 0x03C8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
 	float                                              TimeCursorPosition;                                       // 0x03D0(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              StartTime;                                                // 0x03D4(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              EndTime;                                                  // 0x03D8(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                CurrentNumLoops;                                          // 0x03DC(0x0004) (ZeroConstructor, Transient, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x10];                                      // 0x03E0(0x0010) MISSED OFFSET
-	struct FMovieSceneSequencePlaybackSettings         PlaybackSettings;                                         // 0x03F0(0x0028)
+	FMovieSceneSequencePlaybackSettings                PlaybackSettings;                                         // 0x03F0(0x0028)
 	unsigned char                                      UnknownData03[0x1E8];                                     // 0x0418(0x01E8) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -162,6 +162,7 @@ public:
 	void SetPlayRate(float PlayRate);
 	void SetPlaybackRange(float NewStartTime, float NewEndTime);
 	void SetPlaybackPosition(float NewPlaybackPosition);
+	void SetOverridePlaybackSettings(const FMovieSceneSequencePlaybackSettings& InSettings);
 	void PlayReverse();
 	void PlayLooping(int NumLoops);
 	void Play();
@@ -181,7 +182,7 @@ public:
 class UMovieSceneSection : public UMovieSceneSignedObject
 {
 public:
-	struct FMovieSceneSectionEvalOptions               EvalOptions;                                              // 0x0080(0x0002) (Edit)
+	FMovieSceneSectionEvalOptions                      EvalOptions;                                              // 0x0080(0x0002) (Edit)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x0082(0x0002) MISSED OFFSET
 	float                                              StartTime;                                                // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              EndTime;                                                  // 0x0088(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
@@ -206,7 +207,7 @@ public:
 class UMovieSceneTrack : public UMovieSceneSignedObject
 {
 public:
-	struct FMovieSceneTrackEvalOptions                 EvalOptions;                                              // 0x0080(0x0004) (Edit)
+	FMovieSceneTrackEvalOptions                        EvalOptions;                                              // 0x0080(0x0004) (Edit)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -223,8 +224,8 @@ public:
 class UMovieSceneSequence : public UMovieSceneSignedObject
 {
 public:
-	struct FCachedMovieSceneEvaluationTemplate         EvaluationTemplate;                                       // 0x0080(0x0220)
-	struct FMovieSceneTrackCompilationParams           TemplateParameters;                                       // 0x02A0(0x0001)
+	FCachedMovieSceneEvaluationTemplate                EvaluationTemplate;                                       // 0x0080(0x0220)
+	FMovieSceneTrackCompilationParams                  TemplateParameters;                                       // 0x02A0(0x0001)
 	bool                                               bParentContextsAreSignificant;                            // 0x02A1(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x02A2(0x0006) MISSED OFFSET
 

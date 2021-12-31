@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Interface_Bomb_classes.hpp"
+#include "SoT_Interface_Bomb_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UInterface_Bomb_C::Interface_Trigger()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interface_Bomb.Interface_Bomb_C.Interface Trigger"));
 
-	struct
-	{
-	} params;
-
+	UInterface_Bomb_C_Interface_Trigger_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -38,12 +35,7 @@ void UInterface_Bomb_C::Set_Bomb_Parameters(float Radius, int Seed)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interface_Bomb.Interface_Bomb_C.Set Bomb Parameters"));
 
-	struct
-	{
-		float                          Radius;
-		int                            Seed;
-	} params;
-
+	UInterface_Bomb_C_Set_Bomb_Parameters_Params params;
 	params.Radius = Radius;
 	params.Seed = Seed;
 

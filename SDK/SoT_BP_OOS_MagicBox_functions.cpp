@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_OOS_MagicBox_classes.hpp"
+#include "SoT_BP_OOS_MagicBox_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_OOS_MagicBox_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_OOS_MagicBox.BP_OOS_MagicBox_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_OOS_MagicBox_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

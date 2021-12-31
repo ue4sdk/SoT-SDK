@@ -19,10 +19,10 @@ namespace SDK
 class ABP_DistantLightProxy_C : public AActor
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x03D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UInstancedStaticMeshComponent*               InstancedStaticMesh;                                      // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FPointLightProxy>                    LightList;                                                // 0x03E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x03D0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	UInstancedStaticMeshComponent*                     InstancedStaticMesh;                                      // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   DefaultSceneRoot;                                         // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<FPointLightProxy>                           LightList;                                                // 0x03E8(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -31,10 +31,10 @@ public:
 	}
 
 
-	void FindExistingLight(const class FString& Name, bool* Result, int* Index);
+	void FindExistingLight(const FString& Name, bool* Result, int* Index);
 	void Create_Lights();
 	void UserConstructionScript();
-	void Add_Light(const struct FVector& Location, float Size, class UMaterialInterface* Material, const class FString& Name);
+	void Add_Light(const FVector& Location, float Size, UMaterialInterface* Material, const FString& Name);
 	void ExecuteUbergraph_BP_DistantLightProxy(int EntryPoint);
 };
 

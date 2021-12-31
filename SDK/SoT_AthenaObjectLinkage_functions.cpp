@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AthenaObjectLinkage_classes.hpp"
+#include "SoT_AthenaObjectLinkage_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ void UEndPlayHandler::OnEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.EndPlayHandler.OnEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	UEndPlayHandler_OnEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,19 +31,14 @@ void UEndPlayHandler::OnEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReason)
 // Function AthenaObjectLinkage.LinkEndpointIdUtilities.IsValid
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FLinkEndpointId         Id                             (ConstParm, Parm, OutParm, ReferenceParm)
+// FLinkEndpointId                Id                             (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULinkEndpointIdUtilities::IsValid(const struct FLinkEndpointId& Id)
+bool ULinkEndpointIdUtilities::IsValid(const FLinkEndpointId& Id)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointIdUtilities.IsValid"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-		bool                           ReturnValue;
-	} params;
-
+	ULinkEndpointIdUtilities_IsValid_Params params;
 	params.Id = Id;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -60,19 +51,14 @@ bool ULinkEndpointIdUtilities::IsValid(const struct FLinkEndpointId& Id)
 // Function AthenaObjectLinkage.LinkEndpointIdUtilities.IsPathed
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FLinkEndpointId         Id                             (ConstParm, Parm, OutParm, ReferenceParm)
+// FLinkEndpointId                Id                             (ConstParm, Parm, OutParm, ReferenceParm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULinkEndpointIdUtilities::IsPathed(const struct FLinkEndpointId& Id)
+bool ULinkEndpointIdUtilities::IsPathed(const FLinkEndpointId& Id)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointIdUtilities.IsPathed"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-		bool                           ReturnValue;
-	} params;
-
+	ULinkEndpointIdUtilities_IsPathed_Params params;
 	params.Id = Id;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -85,19 +71,14 @@ bool ULinkEndpointIdUtilities::IsPathed(const struct FLinkEndpointId& Id)
 // Function AthenaObjectLinkage.LinkEndpointIdUtilities.CreateEndpointId
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class FString                  String                         (Parm, ZeroConstructor)
-// struct FLinkEndpointId         ReturnValue                    (Parm, OutParm, ReturnParm)
+// FString                        String                         (Parm, ZeroConstructor)
+// FLinkEndpointId                ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FLinkEndpointId ULinkEndpointIdUtilities::CreateEndpointId(const class FString& String)
+FLinkEndpointId ULinkEndpointIdUtilities::CreateEndpointId(const FString& String)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointIdUtilities.CreateEndpointId"));
 
-	struct
-	{
-		class FString                  String;
-		struct FLinkEndpointId         ReturnValue;
-	} params;
-
+	ULinkEndpointIdUtilities_CreateEndpointId_Params params;
 	params.String = String;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -110,19 +91,14 @@ struct FLinkEndpointId ULinkEndpointIdUtilities::CreateEndpointId(const class FS
 // Function AthenaObjectLinkage.LinkEndpointIdUtilities.Conv_LinkEndpointIdToString
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FLinkEndpointId         Id                             (ConstParm, Parm, OutParm, ReferenceParm)
-// class FString                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
+// FLinkEndpointId                Id                             (ConstParm, Parm, OutParm, ReferenceParm)
+// FString                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm)
 
-class FString ULinkEndpointIdUtilities::Conv_LinkEndpointIdToString(const struct FLinkEndpointId& Id)
+FString ULinkEndpointIdUtilities::Conv_LinkEndpointIdToString(const FLinkEndpointId& Id)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointIdUtilities.Conv_LinkEndpointIdToString"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-		class FString                  ReturnValue;
-	} params;
-
+	ULinkEndpointIdUtilities_Conv_LinkEndpointIdToString_Params params;
 	params.Id = Id;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
@@ -135,21 +111,15 @@ class FString ULinkEndpointIdUtilities::Conv_LinkEndpointIdToString(const struct
 // Function AthenaObjectLinkage.LinkEndpointIdUtilities.CombineEndpointIds
 // (Final, Native, Static, Public, HasOutParms, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FLinkEndpointId         Root                           (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FLinkEndpointId         path                           (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FLinkEndpointId         ReturnValue                    (Parm, OutParm, ReturnParm)
+// FLinkEndpointId                Root                           (ConstParm, Parm, OutParm, ReferenceParm)
+// FLinkEndpointId                path                           (ConstParm, Parm, OutParm, ReferenceParm)
+// FLinkEndpointId                ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FLinkEndpointId ULinkEndpointIdUtilities::CombineEndpointIds(const struct FLinkEndpointId& Root, const struct FLinkEndpointId& path)
+FLinkEndpointId ULinkEndpointIdUtilities::CombineEndpointIds(const FLinkEndpointId& Root, const FLinkEndpointId& path)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointIdUtilities.CombineEndpointIds"));
 
-	struct
-	{
-		struct FLinkEndpointId         Root;
-		struct FLinkEndpointId         path;
-		struct FLinkEndpointId         ReturnValue;
-	} params;
-
+	ULinkEndpointIdUtilities_CombineEndpointIds_Params params;
 	params.Root = Root;
 	params.path = path;
 
@@ -163,19 +133,14 @@ struct FLinkEndpointId ULinkEndpointIdUtilities::CombineEndpointIds(const struct
 // Function AthenaObjectLinkage.LinkEndpointInterface.ReceiveLink
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinkEndpointId         Id                             (Parm)
-// class AActor*                  Instance                       (Parm, ZeroConstructor, IsPlainOldData)
+// FLinkEndpointId                Id                             (Parm)
+// AActor*                        Instance                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ULinkEndpointInterface::ReceiveLink(const struct FLinkEndpointId& Id, class AActor* Instance)
+void ULinkEndpointInterface::ReceiveLink(const FLinkEndpointId& Id, AActor* Instance)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointInterface.ReceiveLink"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-		class AActor*                  Instance;
-	} params;
-
+	ULinkEndpointInterface_ReceiveLink_Params params;
 	params.Id = Id;
 	params.Instance = Instance;
 
@@ -186,17 +151,13 @@ void ULinkEndpointInterface::ReceiveLink(const struct FLinkEndpointId& Id, class
 // Function AthenaObjectLinkage.LinkEndpointInterface.LoseLink
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinkEndpointId         Id                             (Parm)
+// FLinkEndpointId                Id                             (Parm)
 
-void ULinkEndpointInterface::LoseLink(const struct FLinkEndpointId& Id)
+void ULinkEndpointInterface::LoseLink(const FLinkEndpointId& Id)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkEndpointInterface.LoseLink"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-	} params;
-
+	ULinkEndpointInterface_LoseLink_Params params;
 	params.Id = Id;
 
 	UObject::ProcessEvent(fn, &params);
@@ -206,19 +167,14 @@ void ULinkEndpointInterface::LoseLink(const struct FLinkEndpointId& Id)
 // Function AthenaObjectLinkage.LinkerComponent.UnregisterLink
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FLinkEndpointId         SourceId                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FLinkEndpointId         TargetID                       (ConstParm, Parm, OutParm, ReferenceParm)
+// FLinkEndpointId                SourceId                       (ConstParm, Parm, OutParm, ReferenceParm)
+// FLinkEndpointId                TargetID                       (ConstParm, Parm, OutParm, ReferenceParm)
 
-void ULinkerComponent::UnregisterLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID)
+void ULinkerComponent::UnregisterLink(const FLinkEndpointId& SourceId, const FLinkEndpointId& TargetID)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.UnregisterLink"));
 
-	struct
-	{
-		struct FLinkEndpointId         SourceId;
-		struct FLinkEndpointId         TargetID;
-	} params;
-
+	ULinkerComponent_UnregisterLink_Params params;
 	params.SourceId = SourceId;
 	params.TargetID = TargetID;
 
@@ -229,17 +185,13 @@ void ULinkerComponent::UnregisterLink(const struct FLinkEndpointId& SourceId, co
 // Function AthenaObjectLinkage.LinkerComponent.UnregisterEndpoint
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FLinkEndpointId         Id                             (ConstParm, Parm, OutParm, ReferenceParm)
+// FLinkEndpointId                Id                             (ConstParm, Parm, OutParm, ReferenceParm)
 
-void ULinkerComponent::UnregisterEndpoint(const struct FLinkEndpointId& Id)
+void ULinkerComponent::UnregisterEndpoint(const FLinkEndpointId& Id)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.UnregisterEndpoint"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-	} params;
-
+	ULinkerComponent_UnregisterEndpoint_Params params;
 	params.Id = Id;
 
 	UObject::ProcessEvent(fn, &params);
@@ -249,17 +201,13 @@ void ULinkerComponent::UnregisterEndpoint(const struct FLinkEndpointId& Id)
 // Function AthenaObjectLinkage.LinkerComponent.SetParent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  Parent                         (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Parent                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ULinkerComponent::SetParent(class AActor* Parent)
+void ULinkerComponent::SetParent(AActor* Parent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.SetParent"));
 
-	struct
-	{
-		class AActor*                  Parent;
-	} params;
-
+	ULinkerComponent_SetParent_Params params;
 	params.Parent = Parent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -269,21 +217,15 @@ void ULinkerComponent::SetParent(class AActor* Parent)
 // Function AthenaObjectLinkage.LinkerComponent.RegisterLink
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FLinkEndpointId         SourceId                       (ConstParm, Parm, OutParm, ReferenceParm)
-// struct FLinkEndpointId         TargetID                       (ConstParm, Parm, OutParm, ReferenceParm)
+// FLinkEndpointId                SourceId                       (ConstParm, Parm, OutParm, ReferenceParm)
+// FLinkEndpointId                TargetID                       (ConstParm, Parm, OutParm, ReferenceParm)
 // TEnumAsByte<EAddLinkResult>    ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EAddLinkResult> ULinkerComponent::RegisterLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID)
+TEnumAsByte<EAddLinkResult> ULinkerComponent::RegisterLink(const FLinkEndpointId& SourceId, const FLinkEndpointId& TargetID)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.RegisterLink"));
 
-	struct
-	{
-		struct FLinkEndpointId         SourceId;
-		struct FLinkEndpointId         TargetID;
-		TEnumAsByte<EAddLinkResult>    ReturnValue;
-	} params;
-
+	ULinkerComponent_RegisterLink_Params params;
 	params.SourceId = SourceId;
 	params.TargetID = TargetID;
 
@@ -296,21 +238,15 @@ TEnumAsByte<EAddLinkResult> ULinkerComponent::RegisterLink(const struct FLinkEnd
 // Function AthenaObjectLinkage.LinkerComponent.RegisterEndpoint
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FLinkEndpointId         Id                             (ConstParm, Parm, OutParm, ReferenceParm)
-// class AActor*                  Source                         (Parm, ZeroConstructor, IsPlainOldData)
+// FLinkEndpointId                Id                             (ConstParm, Parm, OutParm, ReferenceParm)
+// AActor*                        Source                         (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EAddEndpointResult> ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-TEnumAsByte<EAddEndpointResult> ULinkerComponent::RegisterEndpoint(const struct FLinkEndpointId& Id, class AActor* Source)
+TEnumAsByte<EAddEndpointResult> ULinkerComponent::RegisterEndpoint(const FLinkEndpointId& Id, AActor* Source)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.RegisterEndpoint"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-		class AActor*                  Source;
-		TEnumAsByte<EAddEndpointResult> ReturnValue;
-	} params;
-
+	ULinkerComponent_RegisterEndpoint_Params params;
 	params.Id = Id;
 	params.Source = Source;
 
@@ -323,19 +259,14 @@ TEnumAsByte<EAddEndpointResult> ULinkerComponent::RegisterEndpoint(const struct 
 // Function AthenaObjectLinkage.LinkerComponent.OnEndpointRemovedFromChild
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class AActor*                  Child                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinkEndpointId         Id                             (ConstParm, Parm, OutParm, ReferenceParm)
+// AActor*                        Child                          (Parm, ZeroConstructor, IsPlainOldData)
+// FLinkEndpointId                Id                             (ConstParm, Parm, OutParm, ReferenceParm)
 
-void ULinkerComponent::OnEndpointRemovedFromChild(class AActor* Child, const struct FLinkEndpointId& Id)
+void ULinkerComponent::OnEndpointRemovedFromChild(AActor* Child, const FLinkEndpointId& Id)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.OnEndpointRemovedFromChild"));
 
-	struct
-	{
-		class AActor*                  Child;
-		struct FLinkEndpointId         Id;
-	} params;
-
+	ULinkerComponent_OnEndpointRemovedFromChild_Params params;
 	params.Child = Child;
 	params.Id = Id;
 
@@ -346,21 +277,15 @@ void ULinkerComponent::OnEndpointRemovedFromChild(class AActor* Child, const str
 // Function AthenaObjectLinkage.LinkerComponent.OnEndpointAddedToChild
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// class AActor*                  Child                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinkEndpointId         Id                             (ConstParm, Parm, OutParm, ReferenceParm)
-// class AActor*                  Instance                       (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Child                          (Parm, ZeroConstructor, IsPlainOldData)
+// FLinkEndpointId                Id                             (ConstParm, Parm, OutParm, ReferenceParm)
+// AActor*                        Instance                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ULinkerComponent::OnEndpointAddedToChild(class AActor* Child, const struct FLinkEndpointId& Id, class AActor* Instance)
+void ULinkerComponent::OnEndpointAddedToChild(AActor* Child, const FLinkEndpointId& Id, AActor* Instance)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.OnEndpointAddedToChild"));
 
-	struct
-	{
-		class AActor*                  Child;
-		struct FLinkEndpointId         Id;
-		class AActor*                  Instance;
-	} params;
-
+	ULinkerComponent_OnEndpointAddedToChild_Params params;
 	params.Child = Child;
 	params.Id = Id;
 	params.Instance = Instance;
@@ -372,19 +297,14 @@ void ULinkerComponent::OnEndpointAddedToChild(class AActor* Child, const struct 
 // Function AthenaObjectLinkage.LinkerComponent.LookupEndpoint
 // (Final, Native, Public, HasOutParms, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FLinkEndpointId         Id                             (ConstParm, Parm, OutParm, ReferenceParm)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FLinkEndpointId                Id                             (ConstParm, Parm, OutParm, ReferenceParm)
+// AActor*                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AActor* ULinkerComponent::LookupEndpoint(const struct FLinkEndpointId& Id)
+AActor* ULinkerComponent::LookupEndpoint(const FLinkEndpointId& Id)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.LookupEndpoint"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-		class AActor*                  ReturnValue;
-	} params;
-
+	ULinkerComponent_LookupEndpoint_Params params;
 	params.Id = Id;
 
 	UObject::ProcessEvent(fn, &params);
@@ -402,11 +322,7 @@ int ULinkerComponent::GetNumSetLinks()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.GetNumSetLinks"));
 
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
+	ULinkerComponent_GetNumSetLinks_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -423,11 +339,7 @@ int ULinkerComponent::GetNumRegisteredLinks()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.GetNumRegisteredLinks"));
 
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
+	ULinkerComponent_GetNumRegisteredLinks_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -444,11 +356,7 @@ int ULinkerComponent::GetNumRegisteredEndpoints()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.GetNumRegisteredEndpoints"));
 
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
+	ULinkerComponent_GetNumRegisteredEndpoints_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -465,11 +373,7 @@ int ULinkerComponent::GetNumPendingLinks()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerComponent.GetNumPendingLinks"));
 
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
+	ULinkerComponent_GetNumPendingLinks_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -480,17 +384,13 @@ int ULinkerComponent::GetNumPendingLinks()
 // Function AthenaObjectLinkage.LinkerInterface.SetParent
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  Parent                         (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Parent                         (Parm, ZeroConstructor, IsPlainOldData)
 
-void ULinkerInterface::SetParent(class AActor* Parent)
+void ULinkerInterface::SetParent(AActor* Parent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.SetParent"));
 
-	struct
-	{
-		class AActor*                  Parent;
-	} params;
-
+	ULinkerInterface_SetParent_Params params;
 	params.Parent = Parent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -500,19 +400,14 @@ void ULinkerInterface::SetParent(class AActor* Parent)
 // Function AthenaObjectLinkage.LinkerInterface.RemoveLink
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinkEndpointId         SourceId                       (Parm)
-// struct FLinkEndpointId         TargetID                       (Parm)
+// FLinkEndpointId                SourceId                       (Parm)
+// FLinkEndpointId                TargetID                       (Parm)
 
-void ULinkerInterface::RemoveLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID)
+void ULinkerInterface::RemoveLink(const FLinkEndpointId& SourceId, const FLinkEndpointId& TargetID)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.RemoveLink"));
 
-	struct
-	{
-		struct FLinkEndpointId         SourceId;
-		struct FLinkEndpointId         TargetID;
-	} params;
-
+	ULinkerInterface_RemoveLink_Params params;
 	params.SourceId = SourceId;
 	params.TargetID = TargetID;
 
@@ -523,17 +418,13 @@ void ULinkerInterface::RemoveLink(const struct FLinkEndpointId& SourceId, const 
 // Function AthenaObjectLinkage.LinkerInterface.RemoveEndpoint
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinkEndpointId         Id                             (Parm)
+// FLinkEndpointId                Id                             (Parm)
 
-void ULinkerInterface::RemoveEndpoint(const struct FLinkEndpointId& Id)
+void ULinkerInterface::RemoveEndpoint(const FLinkEndpointId& Id)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.RemoveEndpoint"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-	} params;
-
+	ULinkerInterface_RemoveEndpoint_Params params;
 	params.Id = Id;
 
 	UObject::ProcessEvent(fn, &params);
@@ -543,19 +434,14 @@ void ULinkerInterface::RemoveEndpoint(const struct FLinkEndpointId& Id)
 // Function AthenaObjectLinkage.LinkerInterface.OnEndpointRemovedFromChild
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  Child                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinkEndpointId         Id                             (Parm)
+// AActor*                        Child                          (Parm, ZeroConstructor, IsPlainOldData)
+// FLinkEndpointId                Id                             (Parm)
 
-void ULinkerInterface::OnEndpointRemovedFromChild(class AActor* Child, const struct FLinkEndpointId& Id)
+void ULinkerInterface::OnEndpointRemovedFromChild(AActor* Child, const FLinkEndpointId& Id)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.OnEndpointRemovedFromChild"));
 
-	struct
-	{
-		class AActor*                  Child;
-		struct FLinkEndpointId         Id;
-	} params;
-
+	ULinkerInterface_OnEndpointRemovedFromChild_Params params;
 	params.Child = Child;
 	params.Id = Id;
 
@@ -566,21 +452,15 @@ void ULinkerInterface::OnEndpointRemovedFromChild(class AActor* Child, const str
 // Function AthenaObjectLinkage.LinkerInterface.OnEndpointAddedToChild
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  Child                          (Parm, ZeroConstructor, IsPlainOldData)
-// struct FLinkEndpointId         Id                             (Parm)
-// class AActor*                  Instance                       (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        Child                          (Parm, ZeroConstructor, IsPlainOldData)
+// FLinkEndpointId                Id                             (Parm)
+// AActor*                        Instance                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void ULinkerInterface::OnEndpointAddedToChild(class AActor* Child, const struct FLinkEndpointId& Id, class AActor* Instance)
+void ULinkerInterface::OnEndpointAddedToChild(AActor* Child, const FLinkEndpointId& Id, AActor* Instance)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.OnEndpointAddedToChild"));
 
-	struct
-	{
-		class AActor*                  Child;
-		struct FLinkEndpointId         Id;
-		class AActor*                  Instance;
-	} params;
-
+	ULinkerInterface_OnEndpointAddedToChild_Params params;
 	params.Child = Child;
 	params.Id = Id;
 	params.Instance = Instance;
@@ -592,19 +472,14 @@ void ULinkerInterface::OnEndpointAddedToChild(class AActor* Child, const struct 
 // Function AthenaObjectLinkage.LinkerInterface.LookupEndpoint
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinkEndpointId         Id                             (Parm)
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FLinkEndpointId                Id                             (Parm)
+// AActor*                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AActor* ULinkerInterface::LookupEndpoint(const struct FLinkEndpointId& Id)
+AActor* ULinkerInterface::LookupEndpoint(const FLinkEndpointId& Id)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.LookupEndpoint"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-		class AActor*                  ReturnValue;
-	} params;
-
+	ULinkerInterface_LookupEndpoint_Params params;
 	params.Id = Id;
 
 	UObject::ProcessEvent(fn, &params);
@@ -616,21 +491,15 @@ class AActor* ULinkerInterface::LookupEndpoint(const struct FLinkEndpointId& Id)
 // Function AthenaObjectLinkage.LinkerInterface.AddLink
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinkEndpointId         SourceId                       (Parm)
-// struct FLinkEndpointId         TargetID                       (Parm)
+// FLinkEndpointId                SourceId                       (Parm)
+// FLinkEndpointId                TargetID                       (Parm)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULinkerInterface::AddLink(const struct FLinkEndpointId& SourceId, const struct FLinkEndpointId& TargetID)
+bool ULinkerInterface::AddLink(const FLinkEndpointId& SourceId, const FLinkEndpointId& TargetID)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.AddLink"));
 
-	struct
-	{
-		struct FLinkEndpointId         SourceId;
-		struct FLinkEndpointId         TargetID;
-		bool                           ReturnValue;
-	} params;
-
+	ULinkerInterface_AddLink_Params params;
 	params.SourceId = SourceId;
 	params.TargetID = TargetID;
 
@@ -643,21 +512,15 @@ bool ULinkerInterface::AddLink(const struct FLinkEndpointId& SourceId, const str
 // Function AthenaObjectLinkage.LinkerInterface.AddEndpoint
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FLinkEndpointId         Id                             (Parm)
-// class AActor*                  Instance                       (Parm, ZeroConstructor, IsPlainOldData)
+// FLinkEndpointId                Id                             (Parm)
+// AActor*                        Instance                       (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULinkerInterface::AddEndpoint(const struct FLinkEndpointId& Id, class AActor* Instance)
+bool ULinkerInterface::AddEndpoint(const FLinkEndpointId& Id, AActor* Instance)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaObjectLinkage.LinkerInterface.AddEndpoint"));
 
-	struct
-	{
-		struct FLinkEndpointId         Id;
-		class AActor*                  Instance;
-		bool                           ReturnValue;
-	} params;
-
+	ULinkerInterface_AddEndpoint_Params params;
 	params.Id = Id;
 	params.Instance = Instance;
 

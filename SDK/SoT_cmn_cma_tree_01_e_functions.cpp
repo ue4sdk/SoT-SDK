@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_cmn_cma_tree_01_e_classes.hpp"
+#include "SoT_cmn_cma_tree_01_e_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Acmn_cma_tree_01_e_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function cmn_cma_tree_01_e.cmn_cma_tree_01_e_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Acmn_cma_tree_01_e_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

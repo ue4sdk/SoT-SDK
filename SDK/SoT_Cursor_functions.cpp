@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Cursor_classes.hpp"
+#include "SoT_Cursor_parameters.hpp"
 
 namespace SDK
 {

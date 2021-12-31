@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // AnimBlueprintGeneratedClass BP_Anim_Premium.BP_Anim_Premium_C
-// 0x0000 (0x1BD5 - 0x1BD5)
+// 0x0000 (0x1CDD - 0x1CDD)
 class UBP_Anim_Premium_C : public UBP_Anim_NPC_C
 {
 public:

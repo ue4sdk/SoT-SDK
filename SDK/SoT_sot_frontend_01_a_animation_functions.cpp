@@ -1,10 +1,10 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_sot_frontend_01_a_animation_classes.hpp"
+#include "SoT_sot_frontend_01_a_animation_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Asot_frontend_01_a_animation_C::OnReturnToPirateSelection()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_animation.sot_frontend_01_a_animation_C.OnReturnToPirateSelection"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_animation_C_OnReturnToPirateSelection_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void Asot_frontend_01_a_animation_C::GetPirateSelector(class UPirateSelector** P
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_animation.sot_frontend_01_a_animation_C.GetPirateSelector"));
 
-	struct
-	{
-		class UPirateSelector*         PirateSelectorComponent;
-	} params;
-
+	Asot_frontend_01_a_animation_C_GetPirateSelector_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -59,11 +52,7 @@ void Asot_frontend_01_a_animation_C::GetFrontendCameraComponent(class UFrontendC
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_animation.sot_frontend_01_a_animation_C.GetFrontendCameraComponent"));
 
-	struct
-	{
-		class UFrontendCameraComponent* Frontend_Camera_Component;
-	} params;
-
+	Asot_frontend_01_a_animation_C_GetFrontendCameraComponent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,10 +68,7 @@ void Asot_frontend_01_a_animation_C::goToShipSelCam()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_animation.sot_frontend_01_a_animation_C.goToShipSelCam"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_animation_C_goToShipSelCam_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -95,10 +81,7 @@ void Asot_frontend_01_a_animation_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_animation.sot_frontend_01_a_animation_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_animation_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -111,10 +94,7 @@ void Asot_frontend_01_a_animation_C::ShipSelect()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_animation.sot_frontend_01_a_animation_C.ShipSelect"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_animation_C_ShipSelect_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -127,10 +107,7 @@ void Asot_frontend_01_a_animation_C::GenerateShipSelectionPirate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_animation.sot_frontend_01_a_animation_C.GenerateShipSelectionPirate"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_animation_C_GenerateShipSelectionPirate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -143,10 +120,7 @@ void Asot_frontend_01_a_animation_C::HideShipSelectionPirate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_animation.sot_frontend_01_a_animation_C.HideShipSelectionPirate"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_animation_C_HideShipSelectionPirate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -161,11 +135,7 @@ void Asot_frontend_01_a_animation_C::ExecuteUbergraph_sot_frontend_01_a_animatio
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_animation.sot_frontend_01_a_animation_C.ExecuteUbergraph_sot_frontend_01_a_animation"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	Asot_frontend_01_a_animation_C_ExecuteUbergraph_sot_frontend_01_a_animation_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

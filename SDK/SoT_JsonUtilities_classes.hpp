@@ -27,8 +27,8 @@ public:
 	}
 
 
-	static bool UStructToJsonObjectString(const struct FGenericStruct& Struct, class FString* OutJsonString);
-	static bool JsonObjectStringToUStruct(const class FString& InJsonString, const struct FGenericStruct& Struct);
+	static bool UStructToJsonObjectString(const FGenericStruct& Struct, FString* OutJsonString);
+	static bool JsonObjectStringToUStruct(const FString& InJsonString, const FGenericStruct& Struct);
 };
 
 

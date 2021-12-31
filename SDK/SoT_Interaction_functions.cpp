@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Interaction_classes.hpp"
+#include "SoT_Interaction_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function Interaction.InteractableComponent.SetBoxOrigin
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 IntBoxOrigin                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        IntBoxOrigin                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UInteractableComponent::SetBoxOrigin(const struct FVector& IntBoxOrigin)
+void UInteractableComponent::SetBoxOrigin(const FVector& IntBoxOrigin)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.SetBoxOrigin"));
 
-	struct
-	{
-		struct FVector                 IntBoxOrigin;
-	} params;
-
+	UInteractableComponent_SetBoxOrigin_Params params;
 	params.IntBoxOrigin = IntBoxOrigin;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UInteractableComponent::SetBoxOrigin(const struct FVector& IntBoxOrigin)
 // Function Interaction.InteractableComponent.SetBoxExtent
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FVector                 InBoxExtent                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        InBoxExtent                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UInteractableComponent::SetBoxExtent(const struct FVector& InBoxExtent)
+void UInteractableComponent::SetBoxExtent(const FVector& InBoxExtent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.SetBoxExtent"));
 
-	struct
-	{
-		struct FVector                 InBoxExtent;
-	} params;
-
+	UInteractableComponent_SetBoxExtent_Params params;
 	params.InBoxExtent = InBoxExtent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -55,17 +47,13 @@ void UInteractableComponent::SetBoxExtent(const struct FVector& InBoxExtent)
 // Function Interaction.InteractableComponent.GetInteractableArea
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UInteractableArea*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UInteractableArea*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UInteractableArea* UInteractableComponent::GetInteractableArea()
+UInteractableArea* UInteractableComponent::GetInteractableArea()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.GetInteractableArea"));
 
-	struct
-	{
-		class UInteractableArea*       ReturnValue;
-	} params;
-
+	UInteractableComponent_GetInteractableArea_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -76,17 +64,13 @@ class UInteractableArea* UInteractableComponent::GetInteractableArea()
 // Function Interaction.InteractableComponent.GetBoxWorldOrigin
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FVector                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UInteractableComponent::GetBoxWorldOrigin()
+FVector UInteractableComponent::GetBoxWorldOrigin()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.GetBoxWorldOrigin"));
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableComponent_GetBoxWorldOrigin_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -103,11 +87,7 @@ float UInteractableComponent::GetBoxSphereRadius()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.GetBoxSphereRadius"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UInteractableComponent_GetBoxSphereRadius_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -118,17 +98,13 @@ float UInteractableComponent::GetBoxSphereRadius()
 // Function Interaction.InteractableComponent.GetBoxOrigin
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData)
+// FVector                        ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData)
 
-struct FVector UInteractableComponent::GetBoxOrigin()
+FVector UInteractableComponent::GetBoxOrigin()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.GetBoxOrigin"));
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableComponent_GetBoxOrigin_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -139,17 +115,13 @@ struct FVector UInteractableComponent::GetBoxOrigin()
 // Function Interaction.InteractableComponent.GetBoxExtent
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData)
+// FVector                        ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData)
 
-struct FVector UInteractableComponent::GetBoxExtent()
+FVector UInteractableComponent::GetBoxExtent()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableComponent.GetBoxExtent"));
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableComponent_GetBoxExtent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -160,19 +132,14 @@ struct FVector UInteractableComponent::GetBoxExtent()
 // Function Interaction.CharacterInteractionComponent.IsInteractionValid
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 InInteractable                 (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       InInteractable                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UCharacterInteractionComponent::IsInteractionValid(class UObject* InInteractable)
+bool UCharacterInteractionComponent::IsInteractionValid(UObject* InInteractable)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.CharacterInteractionComponent.IsInteractionValid"));
 
-	struct
-	{
-		class UObject*                 InInteractable;
-		bool                           ReturnValue;
-	} params;
-
+	UCharacterInteractionComponent_IsInteractionValid_Params params;
 	params.InInteractable = InInteractable;
 
 	UObject::ProcessEvent(fn, &params);
@@ -188,10 +155,7 @@ void UCharacterInteractionComponent::InvalidateOptimalObject()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.CharacterInteractionComponent.InvalidateOptimalObject"));
 
-	struct
-	{
-	} params;
-
+	UCharacterInteractionComponent_InvalidateOptimalObject_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -200,17 +164,13 @@ void UCharacterInteractionComponent::InvalidateOptimalObject()
 // Function Interaction.CharacterInteractionComponent.GetOptimalFocusObject
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UInteractableArea*       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UInteractableArea*             ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UInteractableArea* UCharacterInteractionComponent::GetOptimalFocusObject()
+UInteractableArea* UCharacterInteractionComponent::GetOptimalFocusObject()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.CharacterInteractionComponent.GetOptimalFocusObject"));
 
-	struct
-	{
-		class UInteractableArea*       ReturnValue;
-	} params;
-
+	UCharacterInteractionComponent_GetOptimalFocusObject_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -225,10 +185,7 @@ void UCharacterInteractionComponent::ClearAllPolicies()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.CharacterInteractionComponent.ClearAllPolicies"));
 
-	struct
-	{
-	} params;
-
+	UCharacterInteractionComponent_ClearAllPolicies_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -237,17 +194,13 @@ void UCharacterInteractionComponent::ClearAllPolicies()
 // Function Interaction.InteractableArea.SetParent
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  InParent                       (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InParent                       (Parm, ZeroConstructor, IsPlainOldData)
 
-void UInteractableArea::SetParent(class AActor* InParent)
+void UInteractableArea::SetParent(AActor* InParent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.SetParent"));
 
-	struct
-	{
-		class AActor*                  InParent;
-	} params;
-
+	UInteractableArea_SetParent_Params params;
 	params.InParent = InParent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -257,17 +210,13 @@ void UInteractableArea::SetParent(class AActor* InParent)
 // Function Interaction.InteractableArea.SetInteractable
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class UObject*                 InInteractable                 (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       InInteractable                 (Parm, ZeroConstructor, IsPlainOldData)
 
-void UInteractableArea::SetInteractable(class UObject* InInteractable)
+void UInteractableArea::SetInteractable(UObject* InInteractable)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.SetInteractable"));
 
-	struct
-	{
-		class UObject*                 InInteractable;
-	} params;
-
+	UInteractableArea_SetInteractable_Params params;
 	params.InInteractable = InInteractable;
 
 	UObject::ProcessEvent(fn, &params);
@@ -277,17 +226,13 @@ void UInteractableArea::SetInteractable(class UObject* InInteractable)
 // Function Interaction.InteractableArea.SetAreaName
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FName                   InName                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FName                          InName                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UInteractableArea::SetAreaName(const struct FName& InName)
+void UInteractableArea::SetAreaName(const FName& InName)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.SetAreaName"));
 
-	struct
-	{
-		struct FName                   InName;
-	} params;
-
+	UInteractableArea_SetAreaName_Params params;
 	params.InName = InName;
 
 	UObject::ProcessEvent(fn, &params);
@@ -297,17 +242,13 @@ void UInteractableArea::SetAreaName(const struct FName& InName)
 // Function Interaction.InteractableArea.SetAreaBounds
 // (Final, Native, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FBoxSphereBounds        InBounds                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FBoxSphereBounds               InBounds                       (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UInteractableArea::SetAreaBounds(const struct FBoxSphereBounds& InBounds)
+void UInteractableArea::SetAreaBounds(const FBoxSphereBounds& InBounds)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.SetAreaBounds"));
 
-	struct
-	{
-		struct FBoxSphereBounds        InBounds;
-	} params;
-
+	UInteractableArea_SetAreaBounds_Params params;
 	params.InBounds = InBounds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -317,17 +258,13 @@ void UInteractableArea::SetAreaBounds(const struct FBoxSphereBounds& InBounds)
 // Function Interaction.InteractableArea.GetParent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class AActor*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// AActor*                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class AActor* UInteractableArea::GetParent()
+AActor* UInteractableArea::GetParent()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.GetParent"));
 
-	struct
-	{
-		class AActor*                  ReturnValue;
-	} params;
-
+	UInteractableArea_GetParent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -338,17 +275,13 @@ class AActor* UInteractableArea::GetParent()
 // Function Interaction.InteractableArea.GetInteractable
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UObject*                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UObject*                       ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UObject* UInteractableArea::GetInteractable()
+UObject* UInteractableArea::GetInteractable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.GetInteractable"));
 
-	struct
-	{
-		class UObject*                 ReturnValue;
-	} params;
-
+	UInteractableArea_GetInteractable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -359,17 +292,13 @@ class UObject* UInteractableArea::GetInteractable()
 // Function Interaction.InteractableArea.GetAreaName
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FName                   ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FName                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FName UInteractableArea::GetAreaName()
+FName UInteractableArea::GetAreaName()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.GetAreaName"));
 
-	struct
-	{
-		struct FName                   ReturnValue;
-	} params;
-
+	UInteractableArea_GetAreaName_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -380,17 +309,13 @@ struct FName UInteractableArea::GetAreaName()
 // Function Interaction.InteractableArea.GetAreaLocation
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FVector                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UInteractableArea::GetAreaLocation()
+FVector UInteractableArea::GetAreaLocation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.GetAreaLocation"));
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableArea_GetAreaLocation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -401,17 +326,13 @@ struct FVector UInteractableArea::GetAreaLocation()
 // Function Interaction.InteractableArea.GetAreaBounds
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// struct FBoxSphereBounds        ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData)
+// FBoxSphereBounds               ReturnValue                    (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, IsPlainOldData)
 
-struct FBoxSphereBounds UInteractableArea::GetAreaBounds()
+FBoxSphereBounds UInteractableArea::GetAreaBounds()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableArea.GetAreaBounds"));
 
-	struct
-	{
-		struct FBoxSphereBounds        ReturnValue;
-	} params;
-
+	UInteractableArea_GetAreaBounds_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -422,21 +343,15 @@ struct FBoxSphereBounds UInteractableArea::GetAreaBounds()
 // Function Interaction.InteractableInterface.ShouldDrawTooltipInWorldSpace
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 DesiredTooltipWorldPosition    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        DesiredTooltipWorldPosition    (Parm, OutParm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UInteractableInterface::ShouldDrawTooltipInWorldSpace(class AActor* InInteractor, struct FVector* DesiredTooltipWorldPosition)
+bool UInteractableInterface::ShouldDrawTooltipInWorldSpace(AActor* InInteractor, FVector* DesiredTooltipWorldPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.ShouldDrawTooltipInWorldSpace"));
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		struct FVector                 DesiredTooltipWorldPosition;
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_ShouldDrawTooltipInWorldSpace_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -457,11 +372,7 @@ bool UInteractableInterface::IsInteractableDisabled()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.IsInteractableDisabled"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_IsInteractableDisabled_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -472,19 +383,14 @@ bool UInteractableInterface::IsInteractableDisabled()
 // Function Interaction.InteractableInterface.Interact
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  NotificationInputId            (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
+// UClass*                        NotificationInputId            (Parm, ZeroConstructor, IsPlainOldData)
 
-void UInteractableInterface::Interact(class AActor* InInteractor, class UClass* NotificationInputId)
+void UInteractableInterface::Interact(AActor* InInteractor, UClass* NotificationInputId)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.Interact"));
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		class UClass*                  NotificationInputId;
-	} params;
-
+	UInteractableInterface_Interact_Params params;
 	params.InInteractor = InInteractor;
 	params.NotificationInputId = NotificationInputId;
 
@@ -501,11 +407,7 @@ TEnumAsByte<EInteractableState> UInteractableInterface::GetInteractionState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.GetInteractionState"));
 
-	struct
-	{
-		TEnumAsByte<EInteractableState> ReturnValue;
-	} params;
-
+	UInteractableInterface_GetInteractionState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -516,17 +418,13 @@ TEnumAsByte<EInteractableState> UInteractableInterface::GetInteractionState()
 // Function Interaction.InteractableInterface.GetFrontFacingVector
 // (Native, Event, Public, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FVector                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UInteractableInterface::GetFrontFacingVector()
+FVector UInteractableInterface::GetFrontFacingVector()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.GetFrontFacingVector"));
 
-	struct
-	{
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableInterface_GetFrontFacingVector_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -537,21 +435,15 @@ struct FVector UInteractableInterface::GetFrontFacingVector()
 // Function Interaction.InteractableInterface.GetClosestInteractionPoint
 // (Native, Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                 ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          OutInteractionPointRadius      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FVector                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector UInteractableInterface::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
+FVector UInteractableInterface::GetClosestInteractionPoint(const FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.GetClosestInteractionPoint"));
 
-	struct
-	{
-		struct FVector                 ReferencePosition;
-		float                          OutInteractionPointRadius;
-		struct FVector                 ReturnValue;
-	} params;
-
+	UInteractableInterface_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -566,17 +458,13 @@ struct FVector UInteractableInterface::GetClosestInteractionPoint(const struct F
 // Function Interaction.InteractableInterface.GetActorsToIgnoreDuringOcclusionChecker
 // (Native, Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// TArray<class AActor*>          ActorsToIgnore                 (Parm, OutParm, ZeroConstructor)
+// TArray<AActor*>                ActorsToIgnore                 (Parm, OutParm, ZeroConstructor)
 
-void UInteractableInterface::GetActorsToIgnoreDuringOcclusionChecker(TArray<class AActor*>* ActorsToIgnore)
+void UInteractableInterface::GetActorsToIgnoreDuringOcclusionChecker(TArray<AActor*>* ActorsToIgnore)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.GetActorsToIgnoreDuringOcclusionChecker"));
 
-	struct
-	{
-		TArray<class AActor*>          ActorsToIgnore;
-	} params;
-
+	UInteractableInterface_GetActorsToIgnoreDuringOcclusionChecker_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -588,17 +476,13 @@ void UInteractableInterface::GetActorsToIgnoreDuringOcclusionChecker(TArray<clas
 // Function Interaction.InteractableInterface.GetActionRulesComponent
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
 // Parameters:
-// class UActionRulesComponent*   ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
+// UActionRulesComponent*         ReturnValue                    (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, IsPlainOldData)
 
-class UActionRulesComponent* UInteractableInterface::GetActionRulesComponent()
+UActionRulesComponent* UInteractableInterface::GetActionRulesComponent()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.GetActionRulesComponent"));
 
-	struct
-	{
-		class UActionRulesComponent*   ReturnValue;
-	} params;
-
+	UInteractableInterface_GetActionRulesComponent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -615,11 +499,7 @@ bool UInteractableInterface::DoesRequireNotSwimming()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.DoesRequireNotSwimming"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_DoesRequireNotSwimming_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -636,11 +516,7 @@ bool UInteractableInterface::DoesRequireNotBeingAirborne()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.DoesRequireNotBeingAirborne"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_DoesRequireNotBeingAirborne_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -657,11 +533,7 @@ bool UInteractableInterface::DoesRequireFacingFront()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.DoesRequireFacingFront"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_DoesRequireFacingFront_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -672,21 +544,15 @@ bool UInteractableInterface::DoesRequireFacingFront()
 // Function Interaction.InteractableInterface.CanInteractWithNotificationInputId
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UClass*                  NotificationInputId            (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
+// UClass*                        NotificationInputId            (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UInteractableInterface::CanInteractWithNotificationInputId(class AActor* InInteractor, class UClass* NotificationInputId)
+bool UInteractableInterface::CanInteractWithNotificationInputId(AActor* InInteractor, UClass* NotificationInputId)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.CanInteractWithNotificationInputId"));
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		class UClass*                  NotificationInputId;
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_CanInteractWithNotificationInputId_Params params;
 	params.InInteractor = InInteractor;
 	params.NotificationInputId = NotificationInputId;
 
@@ -699,19 +565,14 @@ bool UInteractableInterface::CanInteractWithNotificationInputId(class AActor* In
 // Function Interaction.InteractableInterface.CanInteract
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                  InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InInteractor                   (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool UInteractableInterface::CanInteract(class AActor* InInteractor)
+bool UInteractableInterface::CanInteract(AActor* InInteractor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableInterface.CanInteract"));
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		bool                           ReturnValue;
-	} params;
-
+	UInteractableInterface_CanInteract_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -723,19 +584,14 @@ bool UInteractableInterface::CanInteract(class AActor* InInteractor)
 // Function Interaction.InteractableBlueprintFunctionLibrary.SetInteractionState
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class AActor*                  InteractableActor              (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InteractableActor              (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EInteractableState> NewInteractableState           (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 
-void UInteractableBlueprintFunctionLibrary::SetInteractionState(class AActor* InteractableActor, TEnumAsByte<EInteractableState> NewInteractableState)
+void UInteractableBlueprintFunctionLibrary::SetInteractionState(AActor* InteractableActor, TEnumAsByte<EInteractableState> NewInteractableState)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Interaction.InteractableBlueprintFunctionLibrary.SetInteractionState"));
 
-	struct
-	{
-		class AActor*                  InteractableActor;
-		TEnumAsByte<EInteractableState> NewInteractableState;
-	} params;
-
+	UInteractableBlueprintFunctionLibrary_SetInteractionState_Params params;
 	params.InteractableActor = InteractableActor;
 	params.NewInteractableState = NewInteractableState;
 

@@ -1,10 +1,10 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Audio_Play_Wwise_Event_Function_classes.hpp"
+#include "SoT_BP_Audio_Play_Wwise_Event_Function_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Audio_Play_Wwise_Event_Function_C::StopAudio()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Audio_Play_Wwise_Event_Function.BP_Audio_Play_Wwise_Event_Function_C.StopAudio"));
 
-	struct
-	{
-	} params;
-
+	ABP_Audio_Play_Wwise_Event_Function_C_StopAudio_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_Audio_Play_Wwise_Event_Function_C::PlayAudio()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Audio_Play_Wwise_Event_Function.BP_Audio_Play_Wwise_Event_Function_C.PlayAudio"));
 
-	struct
-	{
-	} params;
-
+	ABP_Audio_Play_Wwise_Event_Function_C_PlayAudio_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void ABP_Audio_Play_Wwise_Event_Function_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Audio_Play_Wwise_Event_Function.BP_Audio_Play_Wwise_Event_Function_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Audio_Play_Wwise_Event_Function_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -21,9 +21,9 @@ namespace SDK
 // 0x0038
 struct FDebugMenuDataAssetEntry
 {
-	class FString                                      MenuPath;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
-	class FString                                      DisplayName;                                              // 0x0010(0x0010) (Edit, ZeroConstructor)
-	class FString                                      ConsoleCommand;                                           // 0x0020(0x0010) (Edit, ZeroConstructor)
+	FString                                            MenuPath;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+	FString                                            DisplayName;                                              // 0x0010(0x0010) (Edit, ZeroConstructor)
+	FString                                            ConsoleCommand;                                           // 0x0020(0x0010) (Edit, ZeroConstructor)
 	bool                                               CloseMenuWhenExecuted;                                    // 0x0030(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               AvailableInShippingBuilds;                                // 0x0031(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               AddToCommonlyUsedMenu;                                    // 0x0032(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
@@ -34,9 +34,9 @@ struct FDebugMenuDataAssetEntry
 // 0x0040
 struct FDebugMenuButtonShortcut
 {
-	class FString                                      DisplayName;                                              // 0x0000(0x0010) (Edit, ZeroConstructor)
-	class FString                                      ConsoleCommand;                                           // 0x0010(0x0010) (Edit, ZeroConstructor)
-	TArray<struct FKey>                                Buttons;                                                  // 0x0020(0x0010) (Edit, ZeroConstructor)
+	FString                                            DisplayName;                                              // 0x0000(0x0010) (Edit, ZeroConstructor)
+	FString                                            ConsoleCommand;                                           // 0x0010(0x0010) (Edit, ZeroConstructor)
+	TArray<FKey>                                       Buttons;                                                  // 0x0020(0x0010) (Edit, ZeroConstructor)
 	float                                              RequiredHoldTime;                                         // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               AvailableInShippingBuilds;                                // 0x0034(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xB];                                       // 0x0035(0x000B) MISSED OFFSET
@@ -46,16 +46,23 @@ struct FDebugMenuButtonShortcut
 // 0x0020
 struct FDebugMenuUserItem
 {
-	class FString                                      path;                                                     // 0x0000(0x0010) (ZeroConstructor)
-	class FString                                      Command;                                                  // 0x0010(0x0010) (ZeroConstructor)
+	FString                                            path;                                                     // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            Command;                                                  // 0x0010(0x0010) (ZeroConstructor)
+};
+
+// ScriptStruct DebugMenu.DebugErrorHappeningEvent
+// 0x0001
+struct FDebugErrorHappeningEvent
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct DebugMenu.DebugMenuOptionExecutedEvent
 // 0x0020
 struct FDebugMenuOptionExecutedEvent
 {
-	class FString                                      DebugMenuItemName;                                        // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
-	class FString                                      ConsoleCommand;                                           // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	FString                                            DebugMenuItemName;                                        // 0x0000(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	FString                                            ConsoleCommand;                                           // 0x0010(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
 }

@@ -27,7 +27,7 @@ public:
 	}
 
 
-	bool CanPlayForPlayer(class AActor* Player);
+	bool CanPlayForPlayer(AActor* Player);
 };
 
 
@@ -39,17 +39,17 @@ public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x02B0(0x0008) MISSED OFFSET
 	float                                              InnerRadius;                                              // 0x02B8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              OuterRadius;                                              // 0x02BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       LocationRTPC;                                             // 0x02C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FName                                              LocationRTPC;                                             // 0x02C0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               LocalRTPC;                                                // 0x02C8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x02C9(0x0007) MISSED OFFSET
-	class UWwiseEvent*                                 PlayEvent;                                                // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseEvent*                                 StopEvent;                                                // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UWwiseEvent*>                         OneShotEvents;                                            // 0x02E0(0x0010) (Edit, ZeroConstructor)
-	class UWwiseObjectPoolWrapper*                     EmitterPool;                                              // 0x02F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UWwiseEvent*                                       PlayEvent;                                                // 0x02D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UWwiseEvent*                                       StopEvent;                                                // 0x02D8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<UWwiseEvent*>                               OneShotEvents;                                            // 0x02E0(0x0010) (Edit, ZeroConstructor)
+	UWwiseObjectPoolWrapper*                           EmitterPool;                                              // 0x02F0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               DisableAfterPlayThrough;                                  // 0x02F8(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               ActivateOnBeginPlay;                                      // 0x02F9(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x6];                                       // 0x02FA(0x0006) MISSED OFFSET
-	struct FScriptMulticastDelegate                    OnMusicZoneStarted;                                       // 0x0300(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	FScriptMulticastDelegate                           OnMusicZoneStarted;                                       // 0x0300(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	unsigned char                                      UnknownData03[0x60];                                      // 0x0310(0x0060) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -59,7 +59,7 @@ public:
 	}
 
 
-	struct FWwiseEmitter GetEmitter();
+	FWwiseEmitter GetEmitter();
 	void DisableZone();
 	void Client_StopMusicAndDisableZone();
 	void Client_PlayOneShot(int Index);
@@ -72,9 +72,9 @@ public:
 class UAISpawnerMusicZoneComponent : public UMusicZoneComponent
 {
 public:
-	class UWwiseEvent*                                 BattleWonEvent;                                           // 0x0370(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UAISpawner*                                  AISpawner;                                                // 0x0378(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	TArray<class APawn*>                               SpawnerPawns;                                             // 0x0380(0x0010) (Net, ZeroConstructor)
+	UWwiseEvent*                                       BattleWonEvent;                                           // 0x0370(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UAISpawner*                                        AISpawner;                                                // 0x0378(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	TArray<APawn*>                                     SpawnerPawns;                                             // 0x0380(0x0010) (Net, ZeroConstructor)
 	TEnumAsByte<EAISpawnerMusicZoneState>              SpawnerState;                                             // 0x0390(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xF];                                       // 0x0391(0x000F) MISSED OFFSET
 

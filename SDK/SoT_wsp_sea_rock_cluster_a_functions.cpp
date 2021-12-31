@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_wsp_sea_rock_cluster_a_classes.hpp"
+#include "SoT_wsp_sea_rock_cluster_a_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Awsp_sea_rock_cluster_a_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function wsp_sea_rock_cluster_a.wsp_sea_rock_cluster_a_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Awsp_sea_rock_cluster_a_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

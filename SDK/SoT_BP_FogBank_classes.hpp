@@ -19,7 +19,7 @@ namespace SDK
 class ABP_FogBank_C : public AFogBank
 {
 public:
-	class UAthenaPlayerZonePenetrationTrackerComponent* AthenaPlayerZonePenetrationTracker;                       // 0x0538(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UAthenaPlayerZonePenetrationTrackerComponent*      AthenaPlayerZonePenetrationTracker;                       // 0x0538(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -20,22 +20,22 @@ namespace SDK
 // 0x0010
 struct FSimpleOverlapInfo
 {
-	class AActor*                                      OtherActor;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	class UPrimitiveComponent*                         OtherComponent;                                           // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	AActor*                                            OtherActor;                                               // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UPrimitiveComponent*                               OtherComponent;                                           // 0x0008(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 };
 
 // ScriptStruct SimpleOverlaps.SimpleOverlapEnd
 // 0x0010
 struct FSimpleOverlapEnd
 {
-	struct FSimpleOverlapInfo                          OverlapInfo;                                              // 0x0000(0x0010)
+	FSimpleOverlapInfo                                 OverlapInfo;                                              // 0x0000(0x0010)
 };
 
 // ScriptStruct SimpleOverlaps.SimpleOverlapBegin
 // 0x0010
 struct FSimpleOverlapBegin
 {
-	struct FSimpleOverlapInfo                          OverlapInfo;                                              // 0x0000(0x0010)
+	FSimpleOverlapInfo                                 OverlapInfo;                                              // 0x0000(0x0010)
 };
 
 }

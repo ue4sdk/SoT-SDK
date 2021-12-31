@@ -19,9 +19,9 @@ namespace SDK
 class ABP_LargeShipLadder_C : public ALadder
 {
 public:
-	class UInteractableComponent*                      Interactable;                                             // 0x05C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<struct FVector>                             OffTopSplineComponentPositions;                           // 0x05C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
-	TArray<struct FVector>                             OnTopSplineComponentPositions;                            // 0x05D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	UInteractableComponent*                            Interactable;                                             // 0x05C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<FVector>                                    OffTopSplineComponentPositions;                           // 0x05C8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	TArray<FVector>                                    OnTopSplineComponentPositions;                            // 0x05D8(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -30,9 +30,9 @@ public:
 	}
 
 
-	struct FDockableInfo GetDockableInfo();
-	void Setup_Spline(class USplineComponent* Spline, TArray<struct FVector>* Positions);
-	bool CanInteract(class AActor* InInteractor);
+	FDockableInfo GetDockableInfo();
+	void Setup_Spline(USplineComponent* Spline, TArray<FVector>* Positions);
+	bool CanInteract(AActor* InInteractor);
 	void UserConstructionScript();
 };
 

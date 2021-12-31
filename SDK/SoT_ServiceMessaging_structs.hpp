@@ -7,9 +7,9 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_ObjectMessaging_classes.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_ObjectMessaging_classes.hpp"
 
 namespace SDK
 {
@@ -28,14 +28,14 @@ struct FServiceMessagingTestMessage
 // 0x0010
 struct FServiceMessagingUnsubscribedEvent
 {
-	class FString                                      RoutingKey;                                               // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            RoutingKey;                                               // 0x0000(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct ServiceMessaging.ServiceMessagingSubscribedEvent
 // 0x0010
 struct FServiceMessagingSubscribedEvent
 {
-	class FString                                      RoutingKey;                                               // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            RoutingKey;                                               // 0x0000(0x0010) (ZeroConstructor)
 };
 
 }

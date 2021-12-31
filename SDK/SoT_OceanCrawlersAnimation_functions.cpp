@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_OceanCrawlersAnimation_classes.hpp"
+#include "SoT_OceanCrawlersAnimation_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UOceanCrawlerAnimationInstance::ClearActiveAttack()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function OceanCrawlersAnimation.OceanCrawlerAnimationInstance.ClearActiveAttack"));
 
-	struct
-	{
-	} params;
-
+	UOceanCrawlerAnimationInstance_ClearActiveAttack_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UOceanCrawlerAnimationInstance::BeginNewAttack()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function OceanCrawlersAnimation.OceanCrawlerAnimationInstance.BeginNewAttack"));
 
-	struct
-	{
-	} params;
-
+	UOceanCrawlerAnimationInstance_BeginNewAttack_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AI_wpn_cutlass_Wieldable.BP_AI_wpn_cutlass_Wieldable_C
-// 0x0000 (0x0A58 - 0x0A58)
+// 0x0000 (0x0A78 - 0x0A78)
 class ABP_AI_wpn_cutlass_Wieldable_C : public ABP_Skeleton_Cutlass_Item_C
 {
 public:

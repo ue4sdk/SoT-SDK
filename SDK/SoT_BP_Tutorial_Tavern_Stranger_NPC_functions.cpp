@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Tutorial_Tavern_Stranger_NPC_classes.hpp"
+#include "SoT_BP_Tutorial_Tavern_Stranger_NPC_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Tutorial_Tavern_Stranger_NPC_C::UnhidePlayerPrompts()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Tutorial_Tavern_Stranger_NPC.BP_Tutorial_Tavern_Stranger_NPC_C.UnhidePlayerPrompts"));
 
-	struct
-	{
-	} params;
-
+	ABP_Tutorial_Tavern_Stranger_NPC_C_UnhidePlayerPrompts_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -38,12 +35,7 @@ bool ABP_Tutorial_Tavern_Stranger_NPC_C::CanInteract(class AActor* InInteractor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Tutorial_Tavern_Stranger_NPC.BP_Tutorial_Tavern_Stranger_NPC_C.CanInteract"));
 
-	struct
-	{
-		class AActor*                  InInteractor;
-		bool                           ReturnValue;
-	} params;
-
+	ABP_Tutorial_Tavern_Stranger_NPC_C_CanInteract_Params params;
 	params.InInteractor = InInteractor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -59,10 +51,7 @@ void ABP_Tutorial_Tavern_Stranger_NPC_C::StartOnboardingCutscene()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Tutorial_Tavern_Stranger_NPC.BP_Tutorial_Tavern_Stranger_NPC_C.StartOnboardingCutscene"));
 
-	struct
-	{
-	} params;
-
+	ABP_Tutorial_Tavern_Stranger_NPC_C_StartOnboardingCutscene_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -75,10 +64,7 @@ void ABP_Tutorial_Tavern_Stranger_NPC_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Tutorial_Tavern_Stranger_NPC.BP_Tutorial_Tavern_Stranger_NPC_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Tutorial_Tavern_Stranger_NPC_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -91,10 +77,7 @@ void ABP_Tutorial_Tavern_Stranger_NPC_C::QueueCutsceneActorDestruction()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Tutorial_Tavern_Stranger_NPC.BP_Tutorial_Tavern_Stranger_NPC_C.QueueCutsceneActorDestruction"));
 
-	struct
-	{
-	} params;
-
+	ABP_Tutorial_Tavern_Stranger_NPC_C_QueueCutsceneActorDestruction_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,11 +92,7 @@ void ABP_Tutorial_Tavern_Stranger_NPC_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReas
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Tutorial_Tavern_Stranger_NPC.BP_Tutorial_Tavern_Stranger_NPC_C.ReceiveEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	ABP_Tutorial_Tavern_Stranger_NPC_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -127,10 +106,7 @@ void ABP_Tutorial_Tavern_Stranger_NPC_C::CleanTutorialCutScene()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Tutorial_Tavern_Stranger_NPC.BP_Tutorial_Tavern_Stranger_NPC_C.CleanTutorialCutScene"));
 
-	struct
-	{
-	} params;
-
+	ABP_Tutorial_Tavern_Stranger_NPC_C_CleanTutorialCutScene_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -145,11 +121,7 @@ void ABP_Tutorial_Tavern_Stranger_NPC_C::ExecuteUbergraph_BP_Tutorial_Tavern_Str
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Tutorial_Tavern_Stranger_NPC.BP_Tutorial_Tavern_Stranger_NPC_C.ExecuteUbergraph_BP_Tutorial_Tavern_Stranger_NPC"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_Tutorial_Tavern_Stranger_NPC_C_ExecuteUbergraph_BP_Tutorial_Tavern_Stranger_NPC_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

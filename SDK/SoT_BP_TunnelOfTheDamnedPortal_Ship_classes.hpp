@@ -19,8 +19,8 @@ namespace SDK
 class ABP_TunnelOfTheDamnedPortal_Ship_C : public ATunnelOfTheDamnedPortal
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0640(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class USynchedMusicZoneComponent*                  SynchedMusicZone;                                         // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x0640(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	USynchedMusicZoneComponent*                        SynchedMusicZone;                                         // 0x0648(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

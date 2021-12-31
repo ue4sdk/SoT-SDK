@@ -15,17 +15,17 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Blunderbuss.BP_Blunderbuss_C
-// 0x0030 (0x0A50 - 0x0A20)
+// 0x0030 (0x0A80 - 0x0A50)
 class ABP_Blunderbuss_C : public AProjectileWeapon
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0A20(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UPostProcessComponent*                       PostProcess;                                              // 0x0A28(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TEnumAsByte<EEmitterRelationship>                  sfx_relationship;                                         // 0x0A30(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x7];                                       // 0x0A31(0x0007) MISSED OFFSET
-	class UMaterialInstanceDynamic*                    DynamicMaterial;                                          // 0x0A38(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UObject*                                     FiringVFX3rdPerson;                                       // 0x0A40(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UWwiseEvent*                                 Blunderbuss_Firing_sfx_3rd_person;                        // 0x0A48(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x0A50(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	UPostProcessComponent*                             PostProcess;                                              // 0x0A58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EEmitterRelationship>                  sfx_relationship;                                         // 0x0A60(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x7];                                       // 0x0A61(0x0007) MISSED OFFSET
+	UMaterialInstanceDynamic*                          DynamicMaterial;                                          // 0x0A68(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UObject*                                           FiringVFX3rdPerson;                                       // 0x0A70(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UWwiseEvent*                                       Blunderbuss_Firing_sfx_3rd_person;                        // 0x0A78(0x0008) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

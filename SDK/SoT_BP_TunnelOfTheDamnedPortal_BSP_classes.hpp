@@ -19,7 +19,7 @@ namespace SDK
 class ABP_TunnelOfTheDamnedPortal_BSP_C : public ABP_TunnelOfTheDamnedPortal_Ship_C
 {
 public:
-	class UChildActorComponent*                        PortalEffects;                                            // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UChildActorComponent*                              PortalEffects;                                            // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

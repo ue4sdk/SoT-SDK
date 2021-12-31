@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_LargeShipTemplate_classes.hpp"
+#include "SoT_BP_LargeShipTemplate_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ unsigned char ABP_LargeShipTemplate_C::GetPxActorCapacityForPhysXAggregate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.GetPxActorCapacityForPhysXAggregate"));
 
-	struct
-	{
-		unsigned char                  ReturnValue;
-	} params;
-
+	ABP_LargeShipTemplate_C_GetPxActorCapacityForPhysXAggregate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -36,25 +32,17 @@ unsigned char ABP_LargeShipTemplate_C::GetPxActorCapacityForPhysXAggregate()
 // Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.SetupMastControls
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UChildActorComponent*    LeftHoist                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UChildActorComponent*    RightHoist                     (Parm, ZeroConstructor, IsPlainOldData)
-// class UChildActorComponent*    LeftAngle                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UChildActorComponent*    RightAngle                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FName                   RiggingGroupName               (Parm, ZeroConstructor, IsPlainOldData)
+// UChildActorComponent*          LeftHoist                      (Parm, ZeroConstructor, IsPlainOldData)
+// UChildActorComponent*          RightHoist                     (Parm, ZeroConstructor, IsPlainOldData)
+// UChildActorComponent*          LeftAngle                      (Parm, ZeroConstructor, IsPlainOldData)
+// UChildActorComponent*          RightAngle                     (Parm, ZeroConstructor, IsPlainOldData)
+// FName                          RiggingGroupName               (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_LargeShipTemplate_C::SetupMastControls(class UChildActorComponent* LeftHoist, class UChildActorComponent* RightHoist, class UChildActorComponent* LeftAngle, class UChildActorComponent* RightAngle, const struct FName& RiggingGroupName)
+void ABP_LargeShipTemplate_C::SetupMastControls(UChildActorComponent* LeftHoist, UChildActorComponent* RightHoist, UChildActorComponent* LeftAngle, UChildActorComponent* RightAngle, const FName& RiggingGroupName)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.SetupMastControls"));
 
-	struct
-	{
-		class UChildActorComponent*    LeftHoist;
-		class UChildActorComponent*    RightHoist;
-		class UChildActorComponent*    LeftAngle;
-		class UChildActorComponent*    RightAngle;
-		struct FName                   RiggingGroupName;
-	} params;
-
+	ABP_LargeShipTemplate_C_SetupMastControls_Params params;
 	params.LeftHoist = LeftHoist;
 	params.RightHoist = RightHoist;
 	params.LeftAngle = LeftAngle;
@@ -72,10 +60,7 @@ void ABP_LargeShipTemplate_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_LargeShipTemplate.BP_LargeShipTemplate_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_LargeShipTemplate_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_PiratePreview_classes.hpp"
+#include "SoT_BP_PiratePreview_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_PiratePreview_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_PiratePreview_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_PiratePreview_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_PiratePreview_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -47,17 +41,13 @@ void ABP_PiratePreview_C::ReceiveBeginPlay()
 // Function BP_PiratePreview.BP_PiratePreview_C.PreviewBusy_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPiratePreviewBusyEvent Data                           (Parm)
+// FPiratePreviewBusyEvent        Data                           (Parm)
 
-void ABP_PiratePreview_C::PreviewBusy_Event(const struct FPiratePreviewBusyEvent& Data)
+void ABP_PiratePreview_C::PreviewBusy_Event(const FPiratePreviewBusyEvent& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.PreviewBusy_Event"));
 
-	struct
-	{
-		struct FPiratePreviewBusyEvent Data;
-	} params;
-
+	ABP_PiratePreview_C_PreviewBusy_Event_Params params;
 	params.Data = Data;
 
 	UObject::ProcessEvent(fn, &params);
@@ -67,17 +57,13 @@ void ABP_PiratePreview_C::PreviewBusy_Event(const struct FPiratePreviewBusyEvent
 // Function BP_PiratePreview.BP_PiratePreview_C.PreviewReady_Event
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPiratePreviewReadyEvent Data                           (Parm)
+// FPiratePreviewReadyEvent       Data                           (Parm)
 
-void ABP_PiratePreview_C::PreviewReady_Event(const struct FPiratePreviewReadyEvent& Data)
+void ABP_PiratePreview_C::PreviewReady_Event(const FPiratePreviewReadyEvent& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.PreviewReady_Event"));
 
-	struct
-	{
-		struct FPiratePreviewReadyEvent Data;
-	} params;
-
+	ABP_PiratePreview_C_PreviewReady_Event_Params params;
 	params.Data = Data;
 
 	UObject::ProcessEvent(fn, &params);
@@ -93,11 +79,7 @@ void ABP_PiratePreview_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> EndPlayReas
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.ReceiveEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	ABP_PiratePreview_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -113,11 +95,7 @@ void ABP_PiratePreview_C::ExecuteUbergraph_BP_PiratePreview(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.ExecuteUbergraph_BP_PiratePreview"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_PiratePreview_C_ExecuteUbergraph_BP_PiratePreview_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);
@@ -127,17 +105,13 @@ void ABP_PiratePreview_C::ExecuteUbergraph_BP_PiratePreview(int EntryPoint)
 // Function BP_PiratePreview.BP_PiratePreview_C.PreviewShutdown__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPiratePreviewShutdownEvent Data                           (Parm)
+// FPiratePreviewShutdownEvent    Data                           (Parm)
 
-void ABP_PiratePreview_C::PreviewShutdown__DelegateSignature(const struct FPiratePreviewShutdownEvent& Data)
+void ABP_PiratePreview_C::PreviewShutdown__DelegateSignature(const FPiratePreviewShutdownEvent& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.PreviewShutdown__DelegateSignature"));
 
-	struct
-	{
-		struct FPiratePreviewShutdownEvent Data;
-	} params;
-
+	ABP_PiratePreview_C_PreviewShutdown__DelegateSignature_Params params;
 	params.Data = Data;
 
 	UObject::ProcessEvent(fn, &params);
@@ -147,17 +121,13 @@ void ABP_PiratePreview_C::PreviewShutdown__DelegateSignature(const struct FPirat
 // Function BP_PiratePreview.BP_PiratePreview_C.PreviewReady__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPiratePreviewReadyEvent Data                           (Parm)
+// FPiratePreviewReadyEvent       Data                           (Parm)
 
-void ABP_PiratePreview_C::PreviewReady__DelegateSignature(const struct FPiratePreviewReadyEvent& Data)
+void ABP_PiratePreview_C::PreviewReady__DelegateSignature(const FPiratePreviewReadyEvent& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.PreviewReady__DelegateSignature"));
 
-	struct
-	{
-		struct FPiratePreviewReadyEvent Data;
-	} params;
-
+	ABP_PiratePreview_C_PreviewReady__DelegateSignature_Params params;
 	params.Data = Data;
 
 	UObject::ProcessEvent(fn, &params);
@@ -167,17 +137,13 @@ void ABP_PiratePreview_C::PreviewReady__DelegateSignature(const struct FPiratePr
 // Function BP_PiratePreview.BP_PiratePreview_C.PreviewBusy__DelegateSignature
 // (Public, Delegate, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FPiratePreviewBusyEvent Data                           (Parm)
+// FPiratePreviewBusyEvent        Data                           (Parm)
 
-void ABP_PiratePreview_C::PreviewBusy__DelegateSignature(const struct FPiratePreviewBusyEvent& Data)
+void ABP_PiratePreview_C::PreviewBusy__DelegateSignature(const FPiratePreviewBusyEvent& Data)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PiratePreview.BP_PiratePreview_C.PreviewBusy__DelegateSignature"));
 
-	struct
-	{
-		struct FPiratePreviewBusyEvent Data;
-	} params;
-
+	ABP_PiratePreview_C_PreviewBusy__DelegateSignature_Params params;
 	params.Data = Data;
 
 	UObject::ProcessEvent(fn, &params);

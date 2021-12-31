@@ -21,15 +21,15 @@ namespace SDK
 // 0x0018
 struct FOrientedPoint
 {
-	struct FVector                                     Location;                                                 // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    Rotation;                                                 // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            Location;                                                 // 0x0000(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FRotator                                           Rotation;                                                 // 0x000C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Maths.RotationUpdateResult
 // 0x0018
 struct FRotationUpdateResult
 {
-	struct FRotator                                    UpdatedRotation;                                          // 0x0000(0x000C) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FRotator                                           UpdatedRotation;                                          // 0x0000(0x000C) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              SpinAngle;                                                // 0x000C(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              TiltAngle;                                                // 0x0010(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              TiltDirection;                                            // 0x0014(0x0004) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -64,22 +64,22 @@ struct FWeightedProbabilityRangeOfRangesFloatPair
 // 0x0010 (0x0030 - 0x0020)
 struct FWeightedProbabilityRangeOfRanges : public FWeightedProbabilityRange
 {
-	TArray<struct FWeightedProbabilityRangeOfRangesFloatPair> SubRanges;                                                // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
+	TArray<FWeightedProbabilityRangeOfRangesFloatPair> SubRanges;                                                // 0x0020(0x0010) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor)
 };
 
 // ScriptStruct Maths.FixedStepInterpCurvePointVector2D
 // 0x0010
 struct FFixedStepInterpCurvePointVector2D
 {
-	struct FVector2D                                   OutVal;                                                   // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   Tangent;                                                  // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector2D                                          OutVal;                                                   // 0x0000(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector2D                                          Tangent;                                                  // 0x0008(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct Maths.FixedStepInterpCurveVector2D
 // 0x0018
 struct FFixedStepInterpCurveVector2D
 {
-	TArray<struct FFixedStepInterpCurvePointVector2D>  Points;                                                   // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<FFixedStepInterpCurvePointVector2D>         Points;                                                   // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	float                                              StepTime;                                                 // 0x0010(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               IsLooped;                                                 // 0x0014(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0015(0x0003) MISSED OFFSET

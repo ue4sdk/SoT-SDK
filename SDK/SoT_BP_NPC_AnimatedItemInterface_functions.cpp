@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_NPC_AnimatedItemInterface_classes.hpp"
+#include "SoT_BP_NPC_AnimatedItemInterface_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_NPC_AnimatedItemInterface_C::PlayItemAnimation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_NPC_AnimatedItemInterface.BP_NPC_AnimatedItemInterface_C.PlayItemAnimation"));
 
-	struct
-	{
-	} params;
-
+	UBP_NPC_AnimatedItemInterface_C_PlayItemAnimation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

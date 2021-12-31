@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_bsp_torch_a_classes.hpp"
+#include "SoT_bsp_torch_a_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Absp_torch_a_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bsp_torch_a.bsp_torch_a_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	Absp_torch_a_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void Absp_torch_a_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bsp_torch_a.bsp_torch_a_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	Absp_torch_a_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void Absp_torch_a_C::ExecuteUbergraph_bsp_torch_a(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function bsp_torch_a.bsp_torch_a_C.ExecuteUbergraph_bsp_torch_a"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	Absp_torch_a_C_ExecuteUbergraph_bsp_torch_a_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

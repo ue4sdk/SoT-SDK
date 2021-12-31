@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ItemQuality_classes.hpp"
+#include "SoT_ItemQuality_parameters.hpp"
 
 namespace SDK
 {

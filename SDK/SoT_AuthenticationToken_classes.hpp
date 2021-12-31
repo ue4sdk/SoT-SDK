@@ -19,7 +19,7 @@ namespace SDK
 class UJwtAuthenticationTokenSettings : public UObject
 {
 public:
-	class FString                                      TokenSecretKey;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            TokenSecretKey;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -35,7 +35,7 @@ public:
 class UJwtAuthenticationTokenEditorSettings : public UObject
 {
 public:
-	class FString                                      TokenSecretKey;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	FString                                            TokenSecretKey;                                           // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{

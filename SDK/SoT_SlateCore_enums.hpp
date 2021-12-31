@@ -12,6 +12,29 @@ namespace SDK
 //Enums
 //---------------------------------------------------------------------------
 
+// Enum SlateCore.EFontLanguage
+enum class EFontLanguage : uint8_t
+{
+	EFontLanguage__German          = 0,
+	EFontLanguage__English         = 1,
+	EFontLanguage__Spanish         = 2,
+	EFontLanguage__Mexican         = 3,
+	EFontLanguage__French          = 4,
+	EFontLanguage__Italian         = 5,
+	EFontLanguage__Korean          = 6,
+	EFontLanguage__Polish          = 7,
+	EFontLanguage__Portugese       = 8,
+	EFontLanguage__Russian         = 9,
+	EFontLanguage__SimplifiedChinese = 10,
+	EFontLanguage__TraditionalChinese = 11,
+	EFontLanguage__Japanese        = 12,
+	EFontLanguage__Thai            = 13,
+	EFontLanguage__Turkish         = 14,
+	EFontLanguage__COUNT           = 15,
+	EFontLanguage__EFontLanguage_MAX = 16
+};
+
+
 // Enum SlateCore.EFontHinting
 enum class EFontHinting : uint8_t
 {

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_PetChestInteraction_classes.hpp"
+#include "SoT_BP_PetChestInteraction_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_PetChestInteraction_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PetChestInteraction.BP_PetChestInteraction_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_PetChestInteraction_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

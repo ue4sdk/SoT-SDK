@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ESailAnimationState_classes.hpp"
+#include "SoT_ESailAnimationState_parameters.hpp"
 
 namespace SDK
 {

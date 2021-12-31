@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MediumShip_ServingHatch_Left_classes.hpp"
+#include "SoT_BP_MediumShip_ServingHatch_Left_parameters.hpp"
 
 namespace SDK
 {
@@ -23,13 +23,7 @@ struct FVector ABP_MediumShip_ServingHatch_Left_C::GetClosestInteractionPoint(co
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShip_ServingHatch_Left.BP_MediumShip_ServingHatch_Left_C.GetClosestInteractionPoint"));
 
-	struct
-	{
-		struct FVector                 ReferencePosition;
-		float                          OutInteractionPointRadius;
-		struct FVector                 ReturnValue;
-	} params;
-
+	ABP_MediumShip_ServingHatch_Left_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -48,10 +42,7 @@ void ABP_MediumShip_ServingHatch_Left_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShip_ServingHatch_Left.BP_MediumShip_ServingHatch_Left_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_MediumShip_ServingHatch_Left_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -64,10 +55,7 @@ void ABP_MediumShip_ServingHatch_Left_C::OnAnimationStarted()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShip_ServingHatch_Left.BP_MediumShip_ServingHatch_Left_C.OnAnimationStarted"));
 
-	struct
-	{
-	} params;
-
+	ABP_MediumShip_ServingHatch_Left_C_OnAnimationStarted_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -80,10 +68,7 @@ void ABP_MediumShip_ServingHatch_Left_C::OnAnimationCompleted()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShip_ServingHatch_Left.BP_MediumShip_ServingHatch_Left_C.OnAnimationCompleted"));
 
-	struct
-	{
-	} params;
-
+	ABP_MediumShip_ServingHatch_Left_C_OnAnimationCompleted_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -98,11 +83,7 @@ void ABP_MediumShip_ServingHatch_Left_C::ExecuteUbergraph_BP_MediumShip_ServingH
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumShip_ServingHatch_Left.BP_MediumShip_ServingHatch_Left_C.ExecuteUbergraph_BP_MediumShip_ServingHatch_Left"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_MediumShip_ServingHatch_Left_C_ExecuteUbergraph_BP_MediumShip_ServingHatch_Left_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SailHoist_classes.hpp"
+#include "SoT_BP_SailHoist_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_SailHoist.BP_SailHoist_C.GetDockableInfo
 // (Event, Public, HasOutParms, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FDockableInfo           ReturnValue                    (Parm, OutParm, ReturnParm)
+// FDockableInfo                  ReturnValue                    (Parm, OutParm, ReturnParm)
 
-struct FDockableInfo ABP_SailHoist_C::GetDockableInfo()
+FDockableInfo ABP_SailHoist_C::GetDockableInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SailHoist.BP_SailHoist_C.GetDockableInfo"));
 
-	struct
-	{
-		struct FDockableInfo           ReturnValue;
-	} params;
-
+	ABP_SailHoist_C_GetDockableInfo_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -40,10 +36,7 @@ void ABP_SailHoist_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SailHoist.BP_SailHoist_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_SailHoist_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

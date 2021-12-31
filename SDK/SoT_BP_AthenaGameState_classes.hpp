@@ -15,12 +15,12 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_AthenaGameState.BP_AthenaGameState_C
-// 0x0010 (0x0A58 - 0x0A48)
+// 0x0010 (0x0AD8 - 0x0AC8)
 class ABP_AthenaGameState_C : public AAthenaGameState
 {
 public:
-	class UWorldMarkerRoutingComponent*                WorldMarkerRouting;                                       // 0x0A48(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0A50(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UWorldMarkerRoutingComponent*                      WorldMarkerRouting;                                       // 0x0AC8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   DefaultSceneRoot;                                         // 0x0AD0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

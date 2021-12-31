@@ -19,8 +19,8 @@ namespace SDK
 class UAthenaAudioConfig : public UDataAsset
 {
 public:
-	class UWwiseObjectPoolWrapper*                     ItemProxyPool;                                            // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	class UWwiseObjectPoolWrapper*                     AnimNotifyPool;                                           // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UWwiseObjectPoolWrapper*                           ItemProxyPool;                                            // 0x0028(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UWwiseObjectPoolWrapper*                           AnimNotifyPool;                                           // 0x0030(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -36,7 +36,7 @@ public:
 class UAthenaAudioModuleSettings : public UDeveloperSettings
 {
 public:
-	struct FStringAssetReference                       AudioConfigAsset;                                         // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	FStringAssetReference                              AudioConfigAsset;                                         // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{

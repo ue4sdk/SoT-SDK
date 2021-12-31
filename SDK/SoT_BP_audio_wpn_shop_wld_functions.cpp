@@ -1,10 +1,10 @@
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_audio_wpn_shop_wld_classes.hpp"
+#include "SoT_BP_audio_wpn_shop_wld_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_audio_wpn_shop_wld_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_wpn_shop_wld.BP_audio_wpn_shop_wld_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_audio_wpn_shop_wld_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_audio_wpn_shop_wld_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_wpn_shop_wld.BP_audio_wpn_shop_wld_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_audio_wpn_shop_wld_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void ABP_audio_wpn_shop_wld_C::ExecuteUbergraph_BP_audio_wpn_shop_wld(int EntryP
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_audio_wpn_shop_wld.BP_audio_wpn_shop_wld_C.ExecuteUbergraph_BP_audio_wpn_shop_wld"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_audio_wpn_shop_wld_C_ExecuteUbergraph_BP_audio_wpn_shop_wld_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

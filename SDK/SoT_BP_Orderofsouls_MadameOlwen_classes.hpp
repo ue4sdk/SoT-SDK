@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Orderofsouls_MadameOlwen.BP_Orderofsouls_MadameOlwen_C
-// 0x0000 (0x05D8 - 0x05D8)
+// 0x0000 (0x0628 - 0x0628)
 class ABP_Orderofsouls_MadameOlwen_C : public ABP_Orderofsouls_C
 {
 public:

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_NPC_ReapersBones_Skeleton_InCage_classes.hpp"
+#include "SoT_BP_NPC_ReapersBones_Skeleton_InCage_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_NPC_ReapersBones_Skeleton_InCage_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_NPC_ReapersBones_Skeleton_InCage.BP_NPC_ReapersBones_Skeleton_InCage_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_NPC_ReapersBones_Skeleton_InCage_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

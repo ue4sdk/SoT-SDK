@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_NaturalDisasters_classes.hpp"
+#include "SoT_NaturalDisasters_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void AAshenLordAshCloud::UpdatePostSettingsBP()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.AshenLordAshCloud.UpdatePostSettingsBP"));
 
-	struct
-	{
-	} params;
-
+	AAshenLordAshCloud_UpdatePostSettingsBP_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void AAshenLordAshCloud::SetDissipationDensityBP(float CloudDensity)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.AshenLordAshCloud.SetDissipationDensityBP"));
 
-	struct
-	{
-		float                          CloudDensity;
-	} params;
-
+	AAshenLordAshCloud_SetDissipationDensityBP_Params params;
 	params.CloudDensity = CloudDensity;
 
 	UObject::ProcessEvent(fn, &params);
@@ -55,10 +48,7 @@ void AAshenLordAshCloud::OnRep_StateChanged()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.AshenLordAshCloud.OnRep_StateChanged"));
 
-	struct
-	{
-	} params;
-
+	AAshenLordAshCloud_OnRep_StateChanged_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -68,22 +58,15 @@ void AAshenLordAshCloud::OnRep_StateChanged()
 // (Final, Net, NetReliable, Native, Event, NetMulticast, Private, HasDefaults)
 // Parameters:
 // int                            WeightedVolcanoProjectileIndex (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 AuthoritySpawnLocation         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 LaunchVelocity                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// struct FVector                 RotationRate                   (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        AuthoritySpawnLocation         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        LaunchVelocity                 (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        RotationRate                   (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void AAshenLordVolcano::Multicast_FireProjectile(int WeightedVolcanoProjectileIndex, const struct FVector& AuthoritySpawnLocation, const struct FVector& LaunchVelocity, const struct FVector& RotationRate)
+void AAshenLordVolcano::Multicast_FireProjectile(int WeightedVolcanoProjectileIndex, const FVector& AuthoritySpawnLocation, const FVector& LaunchVelocity, const FVector& RotationRate)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.AshenLordVolcano.Multicast_FireProjectile"));
 
-	struct
-	{
-		int                            WeightedVolcanoProjectileIndex;
-		struct FVector                 AuthoritySpawnLocation;
-		struct FVector                 LaunchVelocity;
-		struct FVector                 RotationRate;
-	} params;
-
+	AAshenLordVolcano_Multicast_FireProjectile_Params params;
 	params.WeightedVolcanoProjectileIndex = WeightedVolcanoProjectileIndex;
 	params.AuthoritySpawnLocation = AuthoritySpawnLocation;
 	params.LaunchVelocity = LaunchVelocity;
@@ -100,10 +83,7 @@ void AAshenLordWorldEndCloud::OnRep_CloudStateChange()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.AshenLordWorldEndCloud.OnRep_CloudStateChange"));
 
-	struct
-	{
-	} params;
-
+	AAshenLordWorldEndCloud_OnRep_CloudStateChange_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -118,12 +98,72 @@ void AAshenLordWorldEndCloud::AnimateCloud(float AdjustedLifetime)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.AshenLordWorldEndCloud.AnimateCloud"));
 
-	struct
-	{
-		float                          AdjustedLifetime;
-	} params;
-
+	AAshenLordWorldEndCloud_AnimateCloud_Params params;
 	params.AdjustedLifetime = AdjustedLifetime;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function NaturalDisasters.Geyser.OnRep_GeyserState
+// (Final, Native, Private)
+
+void AGeyser::OnRep_GeyserState()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Geyser.OnRep_GeyserState"));
+
+	AGeyser_OnRep_GeyserState_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function NaturalDisasters.Geyser.Multicast_TriggerExplosion
+// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
+
+void AGeyser::Multicast_TriggerExplosion()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Geyser.Multicast_TriggerExplosion"));
+
+	AGeyser_Multicast_TriggerExplosion_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function NaturalDisasters.DisableGeyserMechanismAction.OnActionStateChanged
+// (Native, Public)
+// Parameters:
+// TScriptInterface<class UMechanismActionInterface> Action                         (Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMechanismActionState> PreviousState                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// TEnumAsByte<EMechanismActionState> NewState                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InInstigator                   (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADisableGeyserMechanismAction::OnActionStateChanged(const TScriptInterface<class UMechanismActionInterface>& Action, TEnumAsByte<EMechanismActionState> PreviousState, TEnumAsByte<EMechanismActionState> NewState, AActor* InInstigator)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.DisableGeyserMechanismAction.OnActionStateChanged"));
+
+	ADisableGeyserMechanismAction_OnActionStateChanged_Params params;
+	params.Action = Action;
+	params.PreviousState = PreviousState;
+	params.NewState = NewState;
+	params.InInstigator = InInstigator;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function NaturalDisasters.DisableGeyserMechanismAction.OnActionReset
+// (Native, Public)
+// Parameters:
+// TScriptInterface<class UMechanismResetInterface> Mechanism                      (Parm, ZeroConstructor, IsPlainOldData)
+
+void ADisableGeyserMechanismAction::OnActionReset(const TScriptInterface<class UMechanismResetInterface>& Mechanism)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.DisableGeyserMechanismAction.OnActionReset"));
+
+	ADisableGeyserMechanismAction_OnActionReset_Params params;
+	params.Mechanism = Mechanism;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -138,44 +178,8 @@ void AEarthquake::OnRep_EarthquakeState(TEnumAsByte<EEarthquakeState> OldEarthqu
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Earthquake.OnRep_EarthquakeState"));
 
-	struct
-	{
-		TEnumAsByte<EEarthquakeState>  OldEarthquakeState;
-	} params;
-
+	AEarthquake_OnRep_EarthquakeState_Params params;
 	params.OldEarthquakeState = OldEarthquakeState;
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function NaturalDisasters.Geyser.OnRep_GeyserState
-// (Final, Native, Private)
-
-void AGeyser::OnRep_GeyserState()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Geyser.OnRep_GeyserState"));
-
-	struct
-	{
-	} params;
-
-
-	UObject::ProcessEvent(fn, &params);
-}
-
-
-// Function NaturalDisasters.Geyser.Multicast_TriggerExplosion
-// (Final, Net, NetReliable, Native, Event, NetMulticast, Private)
-
-void AGeyser::Multicast_TriggerExplosion()
-{
-	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Geyser.Multicast_TriggerExplosion"));
-
-	struct
-	{
-	} params;
-
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -187,20 +191,13 @@ void AGeyser::Multicast_TriggerExplosion()
 // TScriptInterface<class UMechanismActionInterface> Action                         (Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EMechanismActionState> PreviousState                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // TEnumAsByte<EMechanismActionState> NewState                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// class AActor*                  InInstigator                   (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        InInstigator                   (Parm, ZeroConstructor, IsPlainOldData)
 
-void AMechanismGeyser::OnMechanismActionStateChanged(const TScriptInterface<class UMechanismActionInterface>& Action, TEnumAsByte<EMechanismActionState> PreviousState, TEnumAsByte<EMechanismActionState> NewState, class AActor* InInstigator)
+void AMechanismGeyser::OnMechanismActionStateChanged(const TScriptInterface<class UMechanismActionInterface>& Action, TEnumAsByte<EMechanismActionState> PreviousState, TEnumAsByte<EMechanismActionState> NewState, AActor* InInstigator)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.MechanismGeyser.OnMechanismActionStateChanged"));
 
-	struct
-	{
-		TScriptInterface<class UMechanismActionInterface> Action;
-		TEnumAsByte<EMechanismActionState> PreviousState;
-		TEnumAsByte<EMechanismActionState> NewState;
-		class AActor*                  InInstigator;
-	} params;
-
+	AMechanismGeyser_OnMechanismActionStateChanged_Params params;
 	params.Action = Action;
 	params.PreviousState = PreviousState;
 	params.NewState = NewState;
@@ -219,11 +216,7 @@ void AMechanismGeyser::OnMechanismActionReset(const TScriptInterface<class UMech
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.MechanismGeyser.OnMechanismActionReset"));
 
-	struct
-	{
-		TScriptInterface<class UMechanismResetInterface> Action;
-	} params;
-
+	AMechanismGeyser_OnMechanismActionReset_Params params;
 	params.Action = Action;
 
 	UObject::ProcessEvent(fn, &params);
@@ -233,17 +226,13 @@ void AMechanismGeyser::OnMechanismActionReset(const TScriptInterface<class UMech
 // Function NaturalDisasters.GeyserItemSpawnComponent.OnGeyserSpawned
 // (Final, Native, Private, HasOutParms, HasDefaults)
 // Parameters:
-// struct FVector                 GeyserSpawnLocation            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        GeyserSpawnLocation            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 
-void UGeyserItemSpawnComponent::OnGeyserSpawned(const struct FVector& GeyserSpawnLocation)
+void UGeyserItemSpawnComponent::OnGeyserSpawned(const FVector& GeyserSpawnLocation)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.GeyserItemSpawnComponent.OnGeyserSpawned"));
 
-	struct
-	{
-		struct FVector                 GeyserSpawnLocation;
-	} params;
-
+	UGeyserItemSpawnComponent_OnGeyserSpawned_Params params;
 	params.GeyserSpawnLocation = GeyserSpawnLocation;
 
 	UObject::ProcessEvent(fn, &params);
@@ -253,17 +242,13 @@ void UGeyserItemSpawnComponent::OnGeyserSpawned(const struct FVector& GeyserSpaw
 // Function NaturalDisasters.LavaZone.OnRep_ActorsInZone
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// TArray<class AActor*>          PreviousActors                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// TArray<AActor*>                PreviousActors                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
 
-void ALavaZone::OnRep_ActorsInZone(TArray<class AActor*> PreviousActors)
+void ALavaZone::OnRep_ActorsInZone(TArray<AActor*> PreviousActors)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.LavaZone.OnRep_ActorsInZone"));
 
-	struct
-	{
-		TArray<class AActor*>          PreviousActors;
-	} params;
-
+	ALavaZone_OnRep_ActorsInZone_Params params;
 	params.PreviousActors = PreviousActors;
 
 	UObject::ProcessEvent(fn, &params);
@@ -277,10 +262,7 @@ void ALavaZone::OnRep_Active()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.LavaZone.OnRep_Active"));
 
-	struct
-	{
-	} params;
-
+	ALavaZone_OnRep_Active_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -293,10 +275,7 @@ void ASuperheatedWater::OnRep_PlayersInZone()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.SuperheatedWater.OnRep_PlayersInZone"));
 
-	struct
-	{
-	} params;
-
+	ASuperheatedWater_OnRep_PlayersInZone_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -305,17 +284,13 @@ void ASuperheatedWater::OnRep_PlayersInZone()
 // Function NaturalDisasters.Volcano.OnRep_VolcanoState
 // (Final, Native, Private)
 // Parameters:
-// struct FVolcanoStateData       OldVolcanoState                (ConstParm, Parm)
+// FVolcanoStateData              OldVolcanoState                (ConstParm, Parm)
 
-void AVolcano::OnRep_VolcanoState(const struct FVolcanoStateData& OldVolcanoState)
+void AVolcano::OnRep_VolcanoState(const FVolcanoStateData& OldVolcanoState)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Volcano.OnRep_VolcanoState"));
 
-	struct
-	{
-		struct FVolcanoStateData       OldVolcanoState;
-	} params;
-
+	AVolcano_OnRep_VolcanoState_Params params;
 	params.OldVolcanoState = OldVolcanoState;
 
 	UObject::ProcessEvent(fn, &params);
@@ -325,19 +300,14 @@ void AVolcano::OnRep_VolcanoState(const struct FVolcanoStateData& OldVolcanoStat
 // Function NaturalDisasters.Volcano.Multicast_FireProjectile
 // (Final, Net, NetReliable, Native, Event, NetMulticast, Private, HasDefaults)
 // Parameters:
-// struct FVector                 AuthoritySpawnLocation         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// TArray<struct FVolcanoProjectileData> VolcanoProjectileDataArray     (ConstParm, Parm, ZeroConstructor, ReferenceParm)
+// FVector                        AuthoritySpawnLocation         (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// TArray<FVolcanoProjectileData> VolcanoProjectileDataArray     (ConstParm, Parm, ZeroConstructor, ReferenceParm)
 
-void AVolcano::Multicast_FireProjectile(const struct FVector& AuthoritySpawnLocation, TArray<struct FVolcanoProjectileData> VolcanoProjectileDataArray)
+void AVolcano::Multicast_FireProjectile(const FVector& AuthoritySpawnLocation, TArray<FVolcanoProjectileData> VolcanoProjectileDataArray)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function NaturalDisasters.Volcano.Multicast_FireProjectile"));
 
-	struct
-	{
-		struct FVector                 AuthoritySpawnLocation;
-		TArray<struct FVolcanoProjectileData> VolcanoProjectileDataArray;
-	} params;
-
+	AVolcano_Multicast_FireProjectile_Params params;
 	params.AuthoritySpawnLocation = AuthoritySpawnLocation;
 	params.VolcanoProjectileDataArray = VolcanoProjectileDataArray;
 

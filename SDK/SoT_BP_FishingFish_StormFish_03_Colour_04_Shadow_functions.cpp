@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishingFish_StormFish_03_Colour_04_Shadow_classes.hpp"
+#include "SoT_BP_FishingFish_StormFish_03_Colour_04_Shadow_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishingFish_StormFish_03_Colour_04_Shadow_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishingFish_StormFish_03_Colour_04_Shadow.BP_FishingFish_StormFish_03_Colour_04_Shadow_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_FishingFish_StormFish_03_Colour_04_Shadow_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

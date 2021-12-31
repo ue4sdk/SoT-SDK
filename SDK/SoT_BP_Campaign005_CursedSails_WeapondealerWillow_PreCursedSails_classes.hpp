@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Campaign005_CursedSails_WeapondealerWillow_PreCursedSails.BP_Campaign005_CursedSails_WeapondealerWillow_PreCursedSails_C
-// 0x0000 (0x0680 - 0x0680)
+// 0x0000 (0x0620 - 0x0620)
 class ABP_Campaign005_CursedSails_WeapondealerWillow_PreCursedSails_C : public ABP_Weapondealer_C
 {
 public:

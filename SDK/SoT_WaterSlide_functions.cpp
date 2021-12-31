@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_WaterSlide_classes.hpp"
+#include "SoT_WaterSlide_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function WaterSlide.WaterSlide.SetEntranceCollisionComponent
 // (Final, Native, Protected, BlueprintCallable)
 // Parameters:
-// class UPrimitiveComponent*     InEntranceCollisionComponent   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// UPrimitiveComponent*           InEntranceCollisionComponent   (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 
-void AWaterSlide::SetEntranceCollisionComponent(class UPrimitiveComponent* InEntranceCollisionComponent)
+void AWaterSlide::SetEntranceCollisionComponent(UPrimitiveComponent* InEntranceCollisionComponent)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WaterSlide.WaterSlide.SetEntranceCollisionComponent"));
 
-	struct
-	{
-		class UPrimitiveComponent*     InEntranceCollisionComponent;
-	} params;
-
+	AWaterSlide_SetEntranceCollisionComponent_Params params;
 	params.InEntranceCollisionComponent = InEntranceCollisionComponent;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,25 +31,17 @@ void AWaterSlide::SetEntranceCollisionComponent(class UPrimitiveComponent* InEnt
 // Function WaterSlide.WaterSlide.ComponentBeginOverlapCallBack
 // (Final, Native, Private, HasOutParms)
 // Parameters:
-// class AActor*                  InOtherActor                   (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     InOtherComp                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// AActor*                        InOtherActor                   (Parm, ZeroConstructor, IsPlainOldData)
+// UPrimitiveComponent*           InOtherComp                    (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            InOtherBodyIndex               (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           InFromSweep                    (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              InSweepResult                  (ConstParm, Parm, OutParm, ReferenceParm)
+// FHitResult                     InSweepResult                  (ConstParm, Parm, OutParm, ReferenceParm)
 
-void AWaterSlide::ComponentBeginOverlapCallBack(class AActor* InOtherActor, class UPrimitiveComponent* InOtherComp, int InOtherBodyIndex, bool InFromSweep, const struct FHitResult& InSweepResult)
+void AWaterSlide::ComponentBeginOverlapCallBack(AActor* InOtherActor, UPrimitiveComponent* InOtherComp, int InOtherBodyIndex, bool InFromSweep, const FHitResult& InSweepResult)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function WaterSlide.WaterSlide.ComponentBeginOverlapCallBack"));
 
-	struct
-	{
-		class AActor*                  InOtherActor;
-		class UPrimitiveComponent*     InOtherComp;
-		int                            InOtherBodyIndex;
-		bool                           InFromSweep;
-		struct FHitResult              InSweepResult;
-	} params;
-
+	AWaterSlide_ComponentBeginOverlapCallBack_Params params;
 	params.InOtherActor = InOtherActor;
 	params.InOtherComp = InOtherComp;
 	params.InOtherBodyIndex = InOtherBodyIndex;

@@ -49,7 +49,7 @@ public:
 
 
 	static float CalculateMagnitude(float InSubmersedVolume, float InFluidDensity, float InGravity);
-	static float CalcBlendedProbeCurveBuoyancy(class UCurveFloat* PrimaryBuoyancyCurve, class UCurveFloat* SecondaryBuoyancyCurve, class UCurveFloat* TertiaryBuoyancyCurve, float UnaryDistUnderwater, float Blend, TEnumAsByte<EBuoyancyBlend> BlendType);
+	static float CalcBlendedProbeCurveBuoyancy(UCurveFloat* PrimaryBuoyancyCurve, UCurveFloat* SecondaryBuoyancyCurve, UCurveFloat* TertiaryBuoyancyCurve, float UnaryDistUnderwater, float Blend, TEnumAsByte<EBuoyancyBlend> BlendType);
 };
 
 
@@ -84,11 +84,11 @@ public:
 	}
 
 
-	static float GetDistanceSquaredToCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline);
-	static float GetClosestTimeOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline);
-	static struct FVector GetClosestPositionOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline);
-	static float GetClosestPointOnCurve(const struct FVector& WorldSpacePos, class USplineComponent* Spline);
-	static struct FVector GetCentre(class USplineComponent* Spline);
+	static float GetDistanceSquaredToCurve(const FVector& WorldSpacePos, USplineComponent* Spline);
+	static float GetClosestTimeOnCurve(const FVector& WorldSpacePos, USplineComponent* Spline);
+	static FVector GetClosestPositionOnCurve(const FVector& WorldSpacePos, USplineComponent* Spline);
+	static float GetClosestPointOnCurve(const FVector& WorldSpacePos, USplineComponent* Spline);
+	static FVector GetCentre(USplineComponent* Spline);
 };
 
 
@@ -209,7 +209,7 @@ public:
 	}
 
 
-	static struct FTransform GetPointAsTransform(const struct FOrientedPoint& Point);
+	static FTransform GetPointAsTransform(const FOrientedPoint& Point);
 };
 
 
@@ -226,7 +226,7 @@ public:
 	}
 
 
-	static TArray<struct FVector> GeneratePoissonDiscDistributionAcrossPlane(const struct FVector& InCenter, const struct FQuat& InOrientation, float InWidth, float InHeight, float InMinDistance, int InRNGSeed);
+	static TArray<FVector> GeneratePoissonDiscDistributionAcrossPlane(const FVector& InCenter, const FQuat& InOrientation, float InWidth, float InHeight, float InMinDistance, int InRNGSeed);
 };
 
 
@@ -244,9 +244,9 @@ public:
 
 
 	static float PredictProjectileFlightTime(float Speed, float Gravity, float Pitch, float Height);
-	static float FindProjectileSpeedModifierToHitTarget(const struct FVector& From, const struct FVector& Target, float Pitch, float ProjectileSpeed, float Gravity);
-	static bool FindAimDirectionToHitTarget(const struct FVector& From, const struct FVector& Target, float ProjectileSpeed, float Gravity, bool PreferHigherAngles, struct FRotator* OutAimDirection);
-	static bool CalculateLaunchVelocity(const struct FVector& From, const struct FVector& Target, const struct FVector& TargetVelocity, float ProjectileSpeed, float Gravity, bool PreferHigherAngles, struct FVector* OutLaunchVelocty, float* OutFlightTime);
+	static float FindProjectileSpeedModifierToHitTarget(const FVector& From, const FVector& Target, float Pitch, float ProjectileSpeed, float Gravity);
+	static bool FindAimDirectionToHitTarget(const FVector& From, const FVector& Target, float ProjectileSpeed, float Gravity, bool PreferHigherAngles, FRotator* OutAimDirection);
+	static bool CalculateLaunchVelocity(const FVector& From, const FVector& Target, const FVector& TargetVelocity, float ProjectileSpeed, float Gravity, bool PreferHigherAngles, FVector* OutLaunchVelocty, float* OutFlightTime);
 };
 
 
@@ -263,10 +263,12 @@ public:
 	}
 
 
-	static struct FTransform TransformAroundArbitraryPivot(const struct FTransform& TargetTransform, const struct FTransform& BaseTransform, const struct FTransform& TransformToApply, bool LockFinalOrientation);
-	static struct FQuat RotatorToQuat(const struct FRotator& Rotation);
-	static bool AreRotatorsTheSameRotation(const struct FRotator& Rotator1, const struct FRotator& Rotator2, float ErrorTolerance);
-	static struct FRotationUpdateResult AdvanceRotationBySpinAndTiltSynced(const struct FRotator& StartRotation, const struct FRotator& TargetRotation, float RotationRateDegrees, float DeltaTime);
+	static FTransform TransformAroundArbitraryPivot(const FTransform& TargetTransform, const FTransform& BaseTransform, const FTransform& TransformToApply, bool LockFinalOrientation);
+	static FQuat RotatorToQuat(const FRotator& Rotation);
+	static FVector RotateDirectionInterpConstantTo(const FVector& CurrentDirectionNormalised, const FVector& TargetDirectionNormalised, float DeltaTime, float InterpSpeedRadPerSec);
+	static void FindRotationAxisAndRadAngleBetweenVectors(const FVector& FromVectorNormalised, const FVector& ToVectorNormalised, FVector* OutRotationAxis, float* OutRotationAngleRadians);
+	static bool AreRotatorsTheSameRotation(const FRotator& Rotator1, const FRotator& Rotator2, float ErrorTolerance);
+	static FRotationUpdateResult AdvanceRotationBySpinAndTiltSynced(const FRotator& StartRotation, const FRotator& TargetRotation, float RotationRateDegrees, float DeltaTime);
 };
 
 
@@ -283,11 +285,11 @@ public:
 	}
 
 
-	static bool IsPointOnOrWithinABox(class UBoxComponent* BoxComponent, const struct FVector& WorldSpaceReferencePoint);
-	static struct FVector FindClosestPointWithinASphere(class USphereComponent* SphereComponent, const struct FVector& WorldSpaceReferencePoint);
-	static struct FVector FindClosestPointWithinACylinder(class UCapsuleComponent* CylinderComponent, const struct FVector& WorldSpaceReferencePoint);
-	static struct FVector FindClosestPointWithinACapsule(class UCapsuleComponent* CapsuleComponent, const struct FVector& WorldSpaceReferencePoint);
-	static struct FVector FindClosestPointWithinABox(class UBoxComponent* BoxComponent, const struct FVector& WorldSpaceReferencePoint);
+	static bool IsPointOnOrWithinABox(UBoxComponent* BoxComponent, const FVector& WorldSpaceReferencePoint);
+	static FVector FindClosestPointWithinASphere(USphereComponent* SphereComponent, const FVector& WorldSpaceReferencePoint);
+	static FVector FindClosestPointWithinACylinder(UCapsuleComponent* CylinderComponent, const FVector& WorldSpaceReferencePoint);
+	static FVector FindClosestPointWithinACapsule(UCapsuleComponent* CapsuleComponent, const FVector& WorldSpaceReferencePoint);
+	static FVector FindClosestPointWithinABox(UBoxComponent* BoxComponent, const FVector& WorldSpaceReferencePoint);
 };
 
 
@@ -356,9 +358,9 @@ public:
 	}
 
 
-	static void UpdateInterval(float DeltaTime, float Value, struct FTimedBuffer* TimedBuffer);
-	static bool GetValueRange(float MinWindowLength, struct FTimedBuffer* TimedBuffer, float* ValueRange);
-	static struct FTimedBuffer CreateTimedBuffer(float WindowLength);
+	static void UpdateInterval(float DeltaTime, float Value, FTimedBuffer* TimedBuffer);
+	static bool GetValueRange(float MinWindowLength, FTimedBuffer* TimedBuffer, float* ValueRange);
+	static FTimedBuffer CreateTimedBuffer(float WindowLength);
 };
 
 
@@ -375,7 +377,7 @@ public:
 	}
 
 
-	static struct FTimespan GetDifference(const struct FDateTime& A, const struct FDateTime& B);
+	static FTimespan GetDifference(const FDateTime& A, const FDateTime& B);
 };
 
 
@@ -392,12 +394,12 @@ public:
 	}
 
 
-	static bool LineIntersectsSphere(const struct FVector& LineStart, const struct FVector& LineDir, const struct FVector& SphereCentre, float SphereRadius, struct FVector* ClosestIntersectionPoint);
-	static bool LineIntersectsCircleWithExitPoint(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, struct FVector2D* OutSecondaryIntersectionPoint, float* OutClosestIntersectionDistance, float* OutSecondaryIntersectionDistance);
-	static bool LineIntersectsCircle(const struct FVector2D& LineOrigin, const struct FVector2D& LineDir, const struct FVector2D& CircleOrigin, float CircleRadius, struct FVector2D* OutClosestIntersectionPoint, float* OutIntersectionDistance);
-	static TEnumAsByte<EPlaneLineIntersectionType> IntersectLineSegmentWithPlane(const struct FVector& LineStart, const struct FVector& LineEnd, const struct FVector& PlanePos, const struct FVector& PlaneNormal, float PlaneThickness, struct FVector* IntersectionPos, float* NormalisedIntersectionTOnLineSegment);
-	static float Distance(const struct FVector& A, const struct FVector& B);
-	static float Cross_Vector2DVector2D(const struct FVector2D& A, const struct FVector2D& B);
+	static bool LineIntersectsSphere(const FVector& LineStart, const FVector& LineDir, const FVector& SphereCentre, float SphereRadius, FVector* ClosestIntersectionPoint);
+	static bool LineIntersectsCircleWithExitPoint(const FVector2D& LineOrigin, const FVector2D& LineDir, const FVector2D& CircleOrigin, float CircleRadius, FVector2D* OutClosestIntersectionPoint, FVector2D* OutSecondaryIntersectionPoint, float* OutClosestIntersectionDistance, float* OutSecondaryIntersectionDistance);
+	static bool LineIntersectsCircle(const FVector2D& LineOrigin, const FVector2D& LineDir, const FVector2D& CircleOrigin, float CircleRadius, FVector2D* OutClosestIntersectionPoint, float* OutIntersectionDistance);
+	static TEnumAsByte<EPlaneLineIntersectionType> IntersectLineSegmentWithPlane(const FVector& LineStart, const FVector& LineEnd, const FVector& PlanePos, const FVector& PlaneNormal, float PlaneThickness, FVector* IntersectionPos, float* NormalisedIntersectionTOnLineSegment);
+	static float Distance(const FVector& A, const FVector& B);
+	static float Cross_Vector2DVector2D(const FVector2D& A, const FVector2D& B);
 };
 
 

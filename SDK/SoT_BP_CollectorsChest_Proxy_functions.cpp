@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CollectorsChest_Proxy_classes.hpp"
+#include "SoT_BP_CollectorsChest_Proxy_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_CollectorsChest_Proxy_C::OnRep_HideWaterOcclusionVolume()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.OnRep_HideWaterOcclusionVolume"));
 
-	struct
-	{
-	} params;
-
+	ABP_CollectorsChest_Proxy_C_OnRep_HideWaterOcclusionVolume_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ bool ABP_CollectorsChest_Proxy_C::IsAttachedToShip()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.IsAttachedToShip"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	ABP_CollectorsChest_Proxy_C_IsAttachedToShip_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -52,21 +45,15 @@ bool ABP_CollectorsChest_Proxy_C::IsAttachedToShip()
 // Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.GetClosestInteractionPoint
 // (Event, Public, HasOutParms, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FVector                 ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// FVector                        ReferencePosition              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
 // float                          OutInteractionPointRadius      (Parm, OutParm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// FVector                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-struct FVector ABP_CollectorsChest_Proxy_C::GetClosestInteractionPoint(const struct FVector& ReferencePosition, float* OutInteractionPointRadius)
+FVector ABP_CollectorsChest_Proxy_C::GetClosestInteractionPoint(const FVector& ReferencePosition, float* OutInteractionPointRadius)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.GetClosestInteractionPoint"));
 
-	struct
-	{
-		struct FVector                 ReferencePosition;
-		float                          OutInteractionPointRadius;
-		struct FVector                 ReturnValue;
-	} params;
-
+	ABP_CollectorsChest_Proxy_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -85,10 +72,7 @@ void ABP_CollectorsChest_Proxy_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_CollectorsChest_Proxy_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -101,10 +85,7 @@ void ABP_CollectorsChest_Proxy_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_CollectorsChest_Proxy_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -119,11 +100,7 @@ void ABP_CollectorsChest_Proxy_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> End
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ReceiveEndPlay"));
 
-	struct
-	{
-		TEnumAsByte<EEndPlayReason>    EndPlayReason;
-	} params;
-
+	ABP_CollectorsChest_Proxy_C_ReceiveEndPlay_Params params;
 	params.EndPlayReason = EndPlayReason;
 
 	UObject::ProcessEvent(fn, &params);
@@ -133,17 +110,13 @@ void ABP_CollectorsChest_Proxy_C::ReceiveEndPlay(TEnumAsByte<EEndPlayReason> End
 // Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ItemDropped
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEventWieldableItemDropped EventParam                     (Parm)
+// FEventWieldableItemDropped     EventParam                     (Parm)
 
-void ABP_CollectorsChest_Proxy_C::ItemDropped(const struct FEventWieldableItemDropped& EventParam)
+void ABP_CollectorsChest_Proxy_C::ItemDropped(const FEventWieldableItemDropped& EventParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ItemDropped"));
 
-	struct
-	{
-		struct FEventWieldableItemDropped EventParam;
-	} params;
-
+	ABP_CollectorsChest_Proxy_C_ItemDropped_Params params;
 	params.EventParam = EventParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -159,11 +132,7 @@ void ABP_CollectorsChest_Proxy_C::ExecuteUbergraph_BP_CollectorsChest_Proxy(int 
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CollectorsChest_Proxy.BP_CollectorsChest_Proxy_C.ExecuteUbergraph_BP_CollectorsChest_Proxy"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_CollectorsChest_Proxy_C_ExecuteUbergraph_BP_CollectorsChest_Proxy_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

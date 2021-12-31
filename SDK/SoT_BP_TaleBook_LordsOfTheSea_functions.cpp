@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TaleBook_LordsOfTheSea_classes.hpp"
+#include "SoT_BP_TaleBook_LordsOfTheSea_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_TaleBook_LordsOfTheSea_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TaleBook_LordsOfTheSea.BP_TaleBook_LordsOfTheSea_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_TaleBook_LordsOfTheSea_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

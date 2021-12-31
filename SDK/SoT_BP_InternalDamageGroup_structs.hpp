@@ -18,7 +18,7 @@ namespace SDK
 // 0x0010
 struct FBP_InternalDamageGroup
 {
-	TArray<class UObject*>                             DamageObjects_4_A06B18A346E5F8B48258C2901F169935;         // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<UObject*>                                   DamageObjects_4_A06B18A346E5F8B48258C2901F169935;         // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

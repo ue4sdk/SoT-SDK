@@ -1,10 +1,10 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_PirateGenerator_LineUpUI_classes.hpp"
+#include "SoT_BP_PirateGenerator_LineUpUI_parameters.hpp"
 
 namespace SDK
 {
@@ -22,12 +22,7 @@ void ABP_PirateGenerator_LineUpUI_C::GetLockStatus(int IndexToToggle, bool* Lock
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.GetLockStatus"));
 
-	struct
-	{
-		int                            IndexToToggle;
-		bool                           Locked;
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_GetLockStatus_Params params;
 	params.IndexToToggle = IndexToToggle;
 
 	UObject::ProcessEvent(fn, &params);
@@ -46,11 +41,7 @@ void ABP_PirateGenerator_LineUpUI_C::ToggleLockStatus(int IndexToToggle)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.ToggleLockStatus"));
 
-	struct
-	{
-		int                            IndexToToggle;
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_ToggleLockStatus_Params params;
 	params.IndexToToggle = IndexToToggle;
 
 	UObject::ProcessEvent(fn, &params);
@@ -64,10 +55,7 @@ void ABP_PirateGenerator_LineUpUI_C::ClearLockedPirates()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.ClearLockedPirates"));
 
-	struct
-	{
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_ClearLockedPirates_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -82,11 +70,7 @@ void ABP_PirateGenerator_LineUpUI_C::GetTransitionState(bool* Transitioning)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.GetTransitionState"));
 
-	struct
-	{
-		bool                           Transitioning;
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_GetTransitionState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -105,12 +89,7 @@ void ABP_PirateGenerator_LineUpUI_C::GetAnimationDataFromClass(class UClass* Cla
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.GetAnimationDataFromClass"));
 
-	struct
-	{
-		class UClass*                  Class;
-		class UAD_FrontendPirate_Default_C* AnimationData;
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_GetAnimationDataFromClass_Params params;
 	params.Class = Class;
 
 	UObject::ProcessEvent(fn, &params);
@@ -127,10 +106,7 @@ void ABP_PirateGenerator_LineUpUI_C::SanitizeAnimationPoses()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.SanitizeAnimationPoses"));
 
-	struct
-	{
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_SanitizeAnimationPoses_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -143,10 +119,7 @@ void ABP_PirateGenerator_LineUpUI_C::RandomizePirates()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.RandomizePirates"));
 
-	struct
-	{
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_RandomizePirates_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -159,10 +132,7 @@ void ABP_PirateGenerator_LineUpUI_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -175,10 +145,7 @@ void ABP_PirateGenerator_LineUpUI_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -191,10 +158,7 @@ void ABP_PirateGenerator_LineUpUI_C::LineUpPirateInitalized()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.LineUpPirateInitalized"));
 
-	struct
-	{
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_LineUpPirateInitalized_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -209,11 +173,7 @@ void ABP_PirateGenerator_LineUpUI_C::ExecuteUbergraph_BP_PirateGenerator_LineUpU
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.ExecuteUbergraph_BP_PirateGenerator_LineUpUI"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_ExecuteUbergraph_BP_PirateGenerator_LineUpUI_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);
@@ -227,10 +187,7 @@ void ABP_PirateGenerator_LineUpUI_C::PirateLineUpInitializedDispatcher__Delegate
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_PirateGenerator_LineUpUI.BP_PirateGenerator_LineUpUI_C.PirateLineUpInitializedDispatcher__DelegateSignature"));
 
-	struct
-	{
-	} params;
-
+	ABP_PirateGenerator_LineUpUI_C_PirateLineUpInitializedDispatcher__DelegateSignature_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

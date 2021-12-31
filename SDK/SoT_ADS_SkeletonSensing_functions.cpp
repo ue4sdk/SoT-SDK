@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ADS_SkeletonSensing_classes.hpp"
+#include "SoT_ADS_SkeletonSensing_parameters.hpp"
 
 namespace SDK
 {

@@ -21,7 +21,7 @@ namespace SDK
 // 0x0090 (0x00C0 - 0x0030)
 struct FAnimNode_CopyPoseFromMesh : public FAnimNode_Base
 {
-	class USkeletalMeshComponent*                      SourceMeshComponent;                                      // 0x0030(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	USkeletalMeshComponent*                            SourceMeshComponent;                                      // 0x0030(0x0008) (BlueprintVisible, ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
 	bool                                               bUseAttachedParent;                                       // 0x0038(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x87];                                      // 0x0039(0x0087) MISSED OFFSET
 };
@@ -30,9 +30,9 @@ struct FAnimNode_CopyPoseFromMesh : public FAnimNode_Base
 // 0x0028 (0x0058 - 0x0030)
 struct FAnimNode_SkeletalControlBase : public FAnimNode_Base
 {
-	struct FComponentSpacePoseLink                     ComponentPose;                                            // 0x0030(0x0018) (Edit, BlueprintVisible)
+	FComponentSpacePoseLink                            ComponentPose;                                            // 0x0030(0x0018) (Edit, BlueprintVisible)
 	float                                              Alpha;                                                    // 0x0048(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FInputScaleBias                             AlphaScaleBias;                                           // 0x004C(0x0008) (Edit, BlueprintVisible)
+	FInputScaleBias                                    AlphaScaleBias;                                           // 0x004C(0x0008) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0054(0x0004) MISSED OFFSET
 };
 
@@ -40,10 +40,10 @@ struct FAnimNode_SkeletalControlBase : public FAnimNode_Base
 // 0x0048 (0x00A0 - 0x0058)
 struct FAnimNode_BoneDrivenController : public FAnimNode_SkeletalControlBase
 {
-	struct FBoneReference                              SourceBone;                                               // 0x0058(0x000C) (Edit)
+	FBoneReference                                     SourceBone;                                               // 0x0058(0x000C) (Edit)
 	TEnumAsByte<EComponentType>                        SourceComponent;                                          // 0x0064(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0065(0x0003) MISSED OFFSET
-	class UCurveFloat*                                 DrivingCurve;                                             // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	UCurveFloat*                                       DrivingCurve;                                             // 0x0068(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              Multiplier;                                               // 0x0070(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               bUseRange;                                                // 0x0074(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0075(0x0003) MISSED OFFSET
@@ -51,7 +51,7 @@ struct FAnimNode_BoneDrivenController : public FAnimNode_SkeletalControlBase
 	float                                              RangeMax;                                                 // 0x007C(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              RemappedMin;                                              // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              RemappedMax;                                              // 0x0084(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FBoneReference                              TargetBone;                                               // 0x0088(0x000C) (Edit)
+	FBoneReference                                     TargetBone;                                               // 0x0088(0x000C) (Edit)
 	TEnumAsByte<EComponentType>                        TargetComponent;                                          // 0x0094(0x0001) (ZeroConstructor, Deprecated, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x0095(0x0003) MISSED OFFSET
 	unsigned char                                      bAffectTargetTranslationX : 1;                            // 0x0098(0x0001) (Edit)
@@ -72,8 +72,8 @@ struct FAnimNode_BoneDrivenController : public FAnimNode_SkeletalControlBase
 // 0x0020 (0x0078 - 0x0058)
 struct FAnimNode_CopyBone : public FAnimNode_SkeletalControlBase
 {
-	struct FBoneReference                              SourceBone;                                               // 0x0058(0x000C) (Edit, BlueprintVisible)
-	struct FBoneReference                              TargetBone;                                               // 0x0064(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     SourceBone;                                               // 0x0058(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     TargetBone;                                               // 0x0064(0x000C) (Edit, BlueprintVisible)
 	bool                                               bCopyTranslation;                                         // 0x0070(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bCopyRotation;                                            // 0x0071(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bCopyScale;                                               // 0x0072(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -85,14 +85,14 @@ struct FAnimNode_CopyBone : public FAnimNode_SkeletalControlBase
 struct FAnimNode_Fabrik : public FAnimNode_SkeletalControlBase
 {
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0058(0x0008) MISSED OFFSET
-	struct FTransform                                  EffectorTransform;                                        // 0x0060(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
+	FTransform                                         EffectorTransform;                                        // 0x0060(0x0030) (Edit, BlueprintVisible, IsPlainOldData)
 	TEnumAsByte<EBoneControlSpace>                     EffectorTransformSpace;                                   // 0x0090(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x3];                                       // 0x0091(0x0003) MISSED OFFSET
-	struct FBoneReference                              EffectorTransformBone;                                    // 0x0094(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     EffectorTransformBone;                                    // 0x0094(0x000C) (Edit, BlueprintVisible)
 	TEnumAsByte<EBoneRotationSource>                   EffectorRotationSource;                                   // 0x00A0(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x3];                                       // 0x00A1(0x0003) MISSED OFFSET
-	struct FBoneReference                              TipBone;                                                  // 0x00A4(0x000C) (Edit, BlueprintVisible)
-	struct FBoneReference                              RootBone;                                                 // 0x00B0(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     TipBone;                                                  // 0x00A4(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     RootBone;                                                 // 0x00B0(0x000C) (Edit, BlueprintVisible)
 	float                                              Precision;                                                // 0x00BC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	int                                                MaxIterations;                                            // 0x00C0(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bEnableDebugDraw;                                         // 0x00C4(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -103,11 +103,11 @@ struct FAnimNode_Fabrik : public FAnimNode_SkeletalControlBase
 // 0x0048 (0x00A0 - 0x0058)
 struct FAnimNode_HandIKRetargeting : public FAnimNode_SkeletalControlBase
 {
-	struct FBoneReference                              RightHandFK;                                              // 0x0058(0x000C) (Edit, BlueprintVisible)
-	struct FBoneReference                              LeftHandFK;                                               // 0x0064(0x000C) (Edit, BlueprintVisible)
-	struct FBoneReference                              RightHandIK;                                              // 0x0070(0x000C) (Edit, BlueprintVisible)
-	struct FBoneReference                              LeftHandIK;                                               // 0x007C(0x000C) (Edit, BlueprintVisible)
-	TArray<struct FBoneReference>                      IKBonesToMove;                                            // 0x0088(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	FBoneReference                                     RightHandFK;                                              // 0x0058(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     LeftHandFK;                                               // 0x0064(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     RightHandIK;                                              // 0x0070(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     LeftHandIK;                                               // 0x007C(0x000C) (Edit, BlueprintVisible)
+	TArray<FBoneReference>                             IKBonesToMove;                                            // 0x0088(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 	float                                              HandFKWeight;                                             // 0x0098(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 };
@@ -116,9 +116,9 @@ struct FAnimNode_HandIKRetargeting : public FAnimNode_SkeletalControlBase
 // 0x0068 (0x00C0 - 0x0058)
 struct FAnimNode_LookAt : public FAnimNode_SkeletalControlBase
 {
-	struct FBoneReference                              BoneToModify;                                             // 0x0058(0x000C) (Edit, BlueprintVisible)
-	struct FBoneReference                              LookAtBone;                                               // 0x0064(0x000C) (Edit, BlueprintVisible)
-	struct FVector                                     LookAtLocation;                                           // 0x0070(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FBoneReference                                     BoneToModify;                                             // 0x0058(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     LookAtBone;                                               // 0x0064(0x000C) (Edit, BlueprintVisible)
+	FVector                                            LookAtLocation;                                           // 0x0070(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EAxisOption>                           LookAtAxis;                                               // 0x007C(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bUseLookUpAxis;                                           // 0x007D(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EAxisOption>                           LookUpAxis;                                               // 0x007E(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -136,10 +136,10 @@ struct FAnimNode_LookAt : public FAnimNode_SkeletalControlBase
 // 0x0038 (0x0090 - 0x0058)
 struct FAnimNode_ModifyBone : public FAnimNode_SkeletalControlBase
 {
-	struct FBoneReference                              BoneToModify;                                             // 0x0058(0x000C) (Edit, BlueprintVisible)
-	struct FVector                                     Translation;                                              // 0x0064(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    Rotation;                                                 // 0x0070(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Scale;                                                    // 0x007C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FBoneReference                                     BoneToModify;                                             // 0x0058(0x000C) (Edit, BlueprintVisible)
+	FVector                                            Translation;                                              // 0x0064(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FRotator                                           Rotation;                                                 // 0x0070(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            Scale;                                                    // 0x007C(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EBoneModificationMode>                 TranslationMode;                                          // 0x0088(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EBoneModificationMode>                 RotationMode;                                             // 0x0089(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EBoneModificationMode>                 ScaleMode;                                                // 0x008A(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -153,13 +153,13 @@ struct FAnimNode_ModifyBone : public FAnimNode_SkeletalControlBase
 // 0x0038 (0x0090 - 0x0058)
 struct FAnimNode_ObserveBone : public FAnimNode_SkeletalControlBase
 {
-	struct FBoneReference                              BoneToObserve;                                            // 0x0058(0x000C) (Edit)
+	FBoneReference                                     BoneToObserve;                                            // 0x0058(0x000C) (Edit)
 	TEnumAsByte<EBoneControlSpace>                     DisplaySpace;                                             // 0x0064(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               bRelativeToRefPose;                                       // 0x0065(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x0066(0x0002) MISSED OFFSET
-	struct FVector                                     Translation;                                              // 0x0068(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FRotator                                    Rotation;                                                 // 0x0074(0x000C) (ZeroConstructor, IsPlainOldData)
-	struct FVector                                     Scale;                                                    // 0x0080(0x000C) (ZeroConstructor, IsPlainOldData)
+	FVector                                            Translation;                                              // 0x0068(0x000C) (ZeroConstructor, IsPlainOldData)
+	FRotator                                           Rotation;                                                 // 0x0074(0x000C) (ZeroConstructor, IsPlainOldData)
+	FVector                                            Scale;                                                    // 0x0080(0x000C) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x4];                                       // 0x008C(0x0004) MISSED OFFSET
 };
 
@@ -167,8 +167,8 @@ struct FAnimNode_ObserveBone : public FAnimNode_SkeletalControlBase
 // 0x0020 (0x0078 - 0x0058)
 struct FAnimNode_RotationMultiplier : public FAnimNode_SkeletalControlBase
 {
-	struct FBoneReference                              TargetBone;                                               // 0x0058(0x000C) (Edit, BlueprintVisible)
-	struct FBoneReference                              SourceBone;                                               // 0x0064(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     TargetBone;                                               // 0x0058(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     SourceBone;                                               // 0x0064(0x000C) (Edit, BlueprintVisible)
 	float                                              Multiplier;                                               // 0x0070(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EBoneAxis>                             RotationAxisToRefer;                                      // 0x0074(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bIsAdditive;                                              // 0x0075(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -179,7 +179,7 @@ struct FAnimNode_RotationMultiplier : public FAnimNode_SkeletalControlBase
 // 0x0050 (0x00A8 - 0x0058)
 struct FAnimNode_SpringBone : public FAnimNode_SkeletalControlBase
 {
-	struct FBoneReference                              SpringBone;                                               // 0x0058(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     SpringBone;                                               // 0x0058(0x000C) (Edit, BlueprintVisible)
 	bool                                               bLimitDisplacement;                                       // 0x0064(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0065(0x0003) MISSED OFFSET
 	float                                              MaxDisplacement;                                          // 0x0068(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -200,7 +200,7 @@ struct FAnimNode_SpringBone : public FAnimNode_SkeletalControlBase
 // 0x0088 (0x00E0 - 0x0058)
 struct FAnimNode_Trail : public FAnimNode_SkeletalControlBase
 {
-	struct FBoneReference                              TrailBone;                                                // 0x0058(0x000C) (Edit, BlueprintVisible)
+	FBoneReference                                     TrailBone;                                                // 0x0058(0x000C) (Edit, BlueprintVisible)
 	int                                                ChainLength;                                              // 0x0064(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EAxis>                                 ChainBoneAxis;                                            // 0x0068(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bInvertChainBoneAxis;                                     // 0x0069(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
@@ -208,7 +208,7 @@ struct FAnimNode_Trail : public FAnimNode_SkeletalControlBase
 	unsigned char                                      UnknownData00[0x1];                                       // 0x006B(0x0001) MISSED OFFSET
 	float                                              TrailRelaxation;                                          // 0x006C(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              StretchLimit;                                             // 0x0070(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     FakeVelocity;                                             // 0x0074(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            FakeVelocity;                                             // 0x0074(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	bool                                               bActorSpaceFakeVel;                                       // 0x0080(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x5F];                                      // 0x0081(0x005F) MISSED OFFSET
 };
@@ -217,11 +217,11 @@ struct FAnimNode_Trail : public FAnimNode_SkeletalControlBase
 // 0x0048 (0x00A0 - 0x0058)
 struct FAnimNode_TwoBoneIK : public FAnimNode_SkeletalControlBase
 {
-	struct FBoneReference                              IKBone;                                                   // 0x0058(0x000C) (Edit, BlueprintVisible)
-	struct FVector                                     EffectorLocation;                                         // 0x0064(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     JointTargetLocation;                                      // 0x0070(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FVector2D                                   StretchLimits;                                            // 0x007C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FName                                       EffectorSpaceBoneName;                                    // 0x0084(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FBoneReference                                     IKBone;                                                   // 0x0058(0x000C) (Edit, BlueprintVisible)
+	FVector                                            EffectorLocation;                                         // 0x0064(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector                                            JointTargetLocation;                                      // 0x0070(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FVector2D                                          StretchLimits;                                            // 0x007C(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FName                                              EffectorSpaceBoneName;                                    // 0x0084(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      bTakeRotationFromEffectorSpace : 1;                       // 0x008C(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bMaintainEffectorRelRot : 1;                              // 0x008C(0x0001) (Edit, BlueprintVisible)
 	unsigned char                                      bAllowStretching : 1;                                     // 0x008C(0x0001) (Edit, BlueprintVisible)
@@ -229,7 +229,7 @@ struct FAnimNode_TwoBoneIK : public FAnimNode_SkeletalControlBase
 	TEnumAsByte<EBoneControlSpace>                     EffectorLocationSpace;                                    // 0x0090(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EBoneControlSpace>                     JointTargetLocationSpace;                                 // 0x0091(0x0001) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x2];                                       // 0x0092(0x0002) MISSED OFFSET
-	struct FName                                       JointTargetSpaceBoneName;                                 // 0x0094(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FName                                              JointTargetSpaceBoneName;                                 // 0x0094(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x4];                                       // 0x009C(0x0004) MISSED OFFSET
 };
 

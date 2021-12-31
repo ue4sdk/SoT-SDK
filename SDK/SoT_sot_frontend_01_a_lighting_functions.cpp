@@ -1,10 +1,10 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_sot_frontend_01_a_lighting_classes.hpp"
+#include "SoT_sot_frontend_01_a_lighting_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void Asot_frontend_01_a_lighting_C::LightingTestEvent()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_lighting.sot_frontend_01_a_lighting_C.LightingTestEvent"));
 
-	struct
-	{
-	} params;
-
+	Asot_frontend_01_a_lighting_C_LightingTestEvent_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ void Asot_frontend_01_a_lighting_C::ExecuteUbergraph_sot_frontend_01_a_lighting(
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function sot_frontend_01_a_lighting.sot_frontend_01_a_lighting_C.ExecuteUbergraph_sot_frontend_01_a_lighting"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	Asot_frontend_01_a_lighting_C_ExecuteUbergraph_sot_frontend_01_a_lighting_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

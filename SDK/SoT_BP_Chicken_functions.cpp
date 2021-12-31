@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Chicken_classes.hpp"
+#include "SoT_BP_Chicken_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Chicken_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Chicken.BP_Chicken_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Chicken_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -31,17 +28,13 @@ void ABP_Chicken_C::UserConstructionScript()
 // Function BP_Chicken.BP_Chicken_C.ReceiveActorBeginOverlap
 // (Event, Public, BlueprintEvent)
 // Parameters:
-// class AActor*                  OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
+// AActor*                        OtherActor                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ABP_Chicken_C::ReceiveActorBeginOverlap(class AActor* OtherActor)
+void ABP_Chicken_C::ReceiveActorBeginOverlap(AActor* OtherActor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Chicken.BP_Chicken_C.ReceiveActorBeginOverlap"));
 
-	struct
-	{
-		class AActor*                  OtherActor;
-	} params;
-
+	ABP_Chicken_C_ReceiveActorBeginOverlap_Params params;
 	params.OtherActor = OtherActor;
 
 	UObject::ProcessEvent(fn, &params);
@@ -57,11 +50,7 @@ void ABP_Chicken_C::ExecuteUbergraph_BP_Chicken(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Chicken.BP_Chicken_C.ExecuteUbergraph_BP_Chicken"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_Chicken_C_ExecuteUbergraph_BP_Chicken_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

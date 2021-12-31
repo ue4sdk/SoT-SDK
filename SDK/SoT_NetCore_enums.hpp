@@ -31,7 +31,13 @@ enum class ERareNetworkEventType : uint8_t
 	ERareNetworkEventType__BeginContentBlock = 13,
 	ERareNetworkEventType__EndContentBlock = 14,
 	ERareNetworkEventType__WritePropertyHandle = 15,
-	ERareNetworkEventType__ERareNetworkEventType_MAX = 16
+	ERareNetworkEventType__PushBunch = 16,
+	ERareNetworkEventType__PopBunch = 17,
+	ERareNetworkEventType__StartActorScope = 18,
+	ERareNetworkEventType__StopActorScope = 19,
+	ERareNetworkEventType__DelayedSend = 20,
+	ERareNetworkEventType__Max     = 21,
+	ERareNetworkEventType__ERareNetworkEventType_MAX = 22
 };
 
 

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TunnelOfTheDamnedPortal_Ship_classes.hpp"
+#include "SoT_BP_TunnelOfTheDamnedPortal_Ship_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_TunnelOfTheDamnedPortal_Ship_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TunnelOfTheDamnedPortal_Ship.BP_TunnelOfTheDamnedPortal_Ship_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_TunnelOfTheDamnedPortal_Ship_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void ABP_TunnelOfTheDamnedPortal_Ship_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TunnelOfTheDamnedPortal_Ship.BP_TunnelOfTheDamnedPortal_Ship_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_TunnelOfTheDamnedPortal_Ship_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void ABP_TunnelOfTheDamnedPortal_Ship_C::ExecuteUbergraph_BP_TunnelOfTheDamnedPo
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TunnelOfTheDamnedPortal_Ship.BP_TunnelOfTheDamnedPortal_Ship_C.ExecuteUbergraph_BP_TunnelOfTheDamnedPortal_Ship"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_TunnelOfTheDamnedPortal_Ship_C_ExecuteUbergraph_BP_TunnelOfTheDamnedPortal_Ship_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

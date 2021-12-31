@@ -7,8 +7,10 @@
 #endif
 
 #include "SoT_Basic.hpp"
+#include "SoT_StatusEffects_enums.hpp"
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
+#include "SoT_Athena_classes.hpp"
 
 namespace SDK
 {
@@ -27,8 +29,8 @@ struct FStatusDescriptor
 // 0x0018
 struct FStatus
 {
-	TArray<class UClass*>                              Type;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
-	struct FStatusDescriptor                           Descriptor;                                               // 0x0010(0x0004) (Edit, BlueprintVisible)
+	TArray<UClass*>                                    Type;                                                     // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	FStatusDescriptor                                  Descriptor;                                               // 0x0010(0x0004) (Edit, BlueprintVisible)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };
 
@@ -36,15 +38,15 @@ struct FStatus
 // 0x0020
 struct FDebugMenuStatusDefinition
 {
-	struct FName                                       Identifier;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FStatus                                     Status;                                                   // 0x0008(0x0018) (Edit)
+	FName                                              Identifier;                                               // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FStatus                                            Status;                                                   // 0x0008(0x0018) (Edit)
 };
 
 // ScriptStruct StatusEffects.DelayedStatusEffect
 // 0x0020
 struct FDelayedStatusEffect
 {
-	struct FStatus                                     StatusEffect;                                             // 0x0000(0x0018) (Edit)
+	FStatus                                            StatusEffect;                                             // 0x0000(0x0018) (Edit)
 	float                                              InEffectTime;                                             // 0x0018(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x001C(0x0004) MISSED OFFSET
 };
@@ -53,43 +55,44 @@ struct FDelayedStatusEffect
 // 0x0018
 struct FFeatureToggledStatusResponseList
 {
-	struct FName                                       Feature;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UStatusResponseAsset*>                ResponseAssets;                                           // 0x0008(0x0010) (Edit, ZeroConstructor)
+	FName                                              Feature;                                                  // 0x0000(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<UStatusResponseAsset*>                      ResponseAssets;                                           // 0x0008(0x0010) (Edit, ZeroConstructor)
 };
 
 // ScriptStruct StatusEffects.ActiveStatusEffect
 // 0x0050
 struct FActiveStatusEffect
 {
-	TArray<class UClass*>                              SourceStatus;                                             // 0x0000(0x0010) (ZeroConstructor)
-	struct FStatusDescriptor                           Descriptor;                                               // 0x0010(0x0004)
+	TArray<UClass*>                                    SourceStatus;                                             // 0x0000(0x0010) (ZeroConstructor)
+	FStatusDescriptor                                  Descriptor;                                               // 0x0010(0x0004)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
-	TArray<class UStatusResponse*>                     ResponseTemplates;                                        // 0x0018(0x0010) (ZeroConstructor)
-	TArray<class UStatusResponse*>                     InstancedResponses;                                       // 0x0028(0x0010) (ZeroConstructor, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
+	TArray<UStatusResponse*>                           ResponseTemplates;                                        // 0x0018(0x0010) (ZeroConstructor)
+	TArray<UStatusResponse*>                           InstancedResponses;                                       // 0x0028(0x0010) (ZeroConstructor, RepSkip, RepNotify, Interp, NonTransactional, EditorOnly, NoDestructor, AutoWeak, ContainsInstancedReference, AssetRegistrySearchable, SimpleDisplay, AdvancedDisplay, Protected, BlueprintCallable, BlueprintAuthorityOnly, TextExportTransient, NonPIEDuplicateTransient, ExposeOnSpawn, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic, NativeAccessSpecifierProtected, NativeAccessSpecifierPrivate)
 	bool                                               ResponsesAreActive;                                       // 0x0038(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x17];                                      // 0x0039(0x0017) MISSED OFFSET
 };
 
 // ScriptStruct StatusEffects.EventAppliedStatusToTargets
-// 0x0020
+// 0x0028
 struct FEventAppliedStatusToTargets
 {
-	TArray<class UClass*>                              StatusApplied;                                            // 0x0000(0x0010) (ZeroConstructor)
-	TArray<class AActor*>                              Targets;                                                  // 0x0010(0x0010) (ZeroConstructor)
+	TArray<UClass*>                                    StatusApplied;                                            // 0x0000(0x0010) (ZeroConstructor)
+	TArray<AActor*>                                    Targets;                                                  // 0x0010(0x0010) (ZeroConstructor)
+	AActor*                                            StatusSource;                                             // 0x0020(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StatusEffects.StatusEffectPersistenceKey
 // 0x0018
 struct FStatusEffectPersistenceKey
 {
-	struct FStatus                                     AppliedStatuses;                                          // 0x0000(0x0018)
+	FStatus                                            AppliedStatuses;                                          // 0x0000(0x0018)
 };
 
 // ScriptStruct StatusEffects.ApplyStatusEvent
 // 0x0018
 struct FApplyStatusEvent
 {
-	struct FStatus                                     StatusToApply;                                            // 0x0000(0x0018)
+	FStatus                                            StatusToApply;                                            // 0x0000(0x0018)
 };
 
 // ScriptStruct StatusEffects.BuffedTargetData
@@ -104,24 +107,24 @@ struct FBuffedTargetData
 // 0x0018
 struct FStatusDeactivatedEvent
 {
-	struct FGuid                                       Id;                                                       // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       StatusName;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              Id;                                                       // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FName                                              StatusName;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StatusEffects.StatusActivatedEvent
 // 0x0018
 struct FStatusActivatedEvent
 {
-	struct FGuid                                       Id;                                                       // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       StatusName;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              Id;                                                       // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FName                                              StatusName;                                               // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StatusEffects.EventStatusMaterialEffectEnded
 // 0x0014
 struct FEventStatusMaterialEffectEnded
 {
-	struct FName                                       MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       CanShowMaterialParam;                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              CanShowMaterialParam;                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
 	float                                              FadeOutAcceleration;                                      // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
@@ -129,10 +132,10 @@ struct FEventStatusMaterialEffectEnded
 // 0x0030
 struct FEventStatusMaterialEffectStarted
 {
-	struct FName                                       MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       CanShowMaterialParam;                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       TintParamName;                                            // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                TintColor;                                                // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData)
+	FName                                              MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              CanShowMaterialParam;                                     // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              TintParamName;                                            // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
+	FLinearColor                                       TintColor;                                                // 0x0018(0x0010) (ZeroConstructor, IsPlainOldData)
 	float                                              TargetEffectStrength;                                     // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              FadeInAcceleration;                                       // 0x002C(0x0004) (ZeroConstructor, IsPlainOldData)
 };
@@ -141,7 +144,7 @@ struct FEventStatusMaterialEffectStarted
 // 0x000C
 struct FEventStatusScreenEffectEnded
 {
-	struct FName                                       MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	float                                              FadeOutAcceleration;                                      // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
 };
 
@@ -149,23 +152,23 @@ struct FEventStatusScreenEffectEnded
 // 0x0008
 struct FEventStatusScreenSpaceParticleEffectEnded
 {
-	class UObject*                                     ParticleSystem;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UObject*                                           ParticleSystem;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StatusEffects.EventStatusScreenSpaceParticleEffectStarted
 // 0x0008
 struct FEventStatusScreenSpaceParticleEffectStarted
 {
-	class UObject*                                     ParticleSystem;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UObject*                                           ParticleSystem;                                           // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct StatusEffects.EventStatusScreenEffectStarted
 // 0x0028
 struct FEventStatusScreenEffectStarted
 {
-	struct FName                                       MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FName                                       TintParamName;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FLinearColor                                TintColor;                                                // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	FName                                              MaterialParamName;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              TintParamName;                                            // 0x0008(0x0008) (ZeroConstructor, IsPlainOldData)
+	FLinearColor                                       TintColor;                                                // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
 	float                                              TargetEffectStrength;                                     // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	float                                              FadeInAcceleration;                                       // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
 };

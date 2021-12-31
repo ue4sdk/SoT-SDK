@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_tls_shovel_smp_01_a_ItemInfo.BP_tls_shovel_smp_01_a_ItemInfo_C
-// 0x0008 (0x0510 - 0x0508)
+// 0x0008 (0x0508 - 0x0500)
 class ABP_tls_shovel_smp_01_a_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0508(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   DefaultSceneRoot;                                         // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

@@ -40,15 +40,15 @@ public:
 class ULiquidContainerComponent : public UActorComponent
 {
 public:
-	struct FName                                       LiquidMaterialName;                                       // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FName                                       LiquidMaterialParameterName;                              // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<struct FLiquidTypeParams>                   LiquidTypeParams;                                         // 0x00D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	FName                                              LiquidMaterialName;                                       // 0x00C8(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FName                                              LiquidMaterialParameterName;                              // 0x00D0(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	TArray<FLiquidTypeParams>                          LiquidTypeParams;                                         // 0x00D8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 	float                                              StartingLiquidLevelNormalised;                            // 0x00E8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x00EC(0x0004) MISSED OFFSET
-	class UCurveFloat*                                 TransitionCurve;                                          // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UCurveFloat*                                       TransitionCurve;                                          // 0x00F0(0x0008) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              TransitionSpeedDecrease;                                  // 0x00F8(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	float                                              TransitionSpeedIncrease;                                  // 0x00FC(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	TArray<class UMaterialInstanceDynamic*>            LiquidMaterials;                                          // 0x0100(0x0010) (ZeroConstructor)
+	TArray<UMaterialInstanceDynamic*>                  LiquidMaterials;                                          // 0x0100(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData01[0x18];                                      // 0x0110(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -61,7 +61,7 @@ public:
 	void SetLiquidType(TEnumAsByte<ELiquidType> LiquidType);
 	void SetLiquidLevel(float Level);
 	float GetLiquidLevel();
-	void CollectLiquidMaterials(class UMeshComponent* MeshComponent);
+	void CollectLiquidMaterials(UMeshComponent* MeshComponent);
 };
 
 

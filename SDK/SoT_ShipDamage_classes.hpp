@@ -27,9 +27,9 @@ public:
 	}
 
 
-	void UnregisterDamageablePart(class AActor* DamageableActor);
-	void RegisterDamageablePart(class AActor* DamageableActor);
-	TArray<class AActor*> GetDamageableParts();
+	void UnregisterDamageablePart(AActor* DamageableActor);
+	void RegisterDamageablePart(AActor* DamageableActor);
+	TArray<AActor*> GetDamageableParts();
 };
 
 

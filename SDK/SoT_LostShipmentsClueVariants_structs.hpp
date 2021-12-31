@@ -24,7 +24,7 @@ namespace SDK
 // 0x0028
 struct FClueDestinationToTextIndex
 {
-	class UClass*                                      DestinationType;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            DestinationType;                                          // 0x0000(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	TAssetPtr<class UAbandonedNoteClueTextIndexAssetBase> RequiredIndexAsset;                                       // 0x0008(0x0020) (Edit, DisableEditOnInstance)
 };
 
@@ -32,7 +32,7 @@ struct FClueDestinationToTextIndex
 // 0x0010
 struct FClueDestinationChoice
 {
-	class UClueDestinationDescriptor*                  Destination;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UClueDestinationDescriptor*                        Destination;                                              // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	int16_t                                            ClueChoice;                                               // 0x0008(0x0002) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x6];                                       // 0x000A(0x0006) MISSED OFFSET
 };
@@ -41,23 +41,23 @@ struct FClueDestinationChoice
 // 0x0070
 struct FGenderSpecificTextPairings
 {
-	struct FText                                       MasculineClueDestinationDescription;                      // 0x0000(0x0038) (Edit, DisableEditOnInstance)
-	struct FText                                       FeminineClueDestinationDescription;                       // 0x0038(0x0038) (Edit, DisableEditOnInstance)
+	FText                                              MasculineClueDestinationDescription;                      // 0x0000(0x0038) (Edit, DisableEditOnInstance)
+	FText                                              FeminineClueDestinationDescription;                       // 0x0038(0x0038) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct LostShipmentsClueVariants.TextEntryWithLayout
 // 0x0058
 struct FTextEntryWithLayout
 {
-	struct FText                                       TextEntry;                                                // 0x0000(0x0038) (Edit, DisableEditOnInstance)
-	struct FTreasureMapWidgetText                      TextLayout;                                               // 0x0038(0x0020) (Edit, DisableEditOnInstance)
+	FText                                              TextEntry;                                                // 0x0000(0x0038) (Edit, DisableEditOnInstance)
+	FTreasureMapWidgetText                             TextLayout;                                               // 0x0038(0x0020) (Edit, DisableEditOnInstance)
 };
 
 // ScriptStruct LostShipmentsClueVariants.MapRadialIconData
 // 0x0018
 struct FMapRadialIconData
 {
-	struct FStringAssetReference                       AssetReference;                                           // 0x0000(0x0010) (ZeroConstructor)
+	FStringAssetReference                              AssetReference;                                           // 0x0000(0x0010) (ZeroConstructor)
 	float                                              Rotation;                                                 // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x0014(0x0004) MISSED OFFSET
 };

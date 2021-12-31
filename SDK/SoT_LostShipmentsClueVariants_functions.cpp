@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_LostShipmentsClueVariants_classes.hpp"
+#include "SoT_LostShipmentsClueVariants_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentTitleText()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentTitleText"));
 
-	struct
-	{
-	} params;
-
+	UAbandonedNoteClueDestinationContainerComponent_OnRep_CurrentTitleText_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UAbandonedNoteClueDestinationContainerComponent::OnRep_CurrentClueDestinati
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.AbandonedNoteClueDestinationContainerComponent.OnRep_CurrentClueDestination"));
 
-	struct
-	{
-	} params;
-
+	UAbandonedNoteClueDestinationContainerComponent_OnRep_CurrentClueDestination_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -51,10 +45,7 @@ void AClueSiteCircleMapWieldable::OnRep_MapRadialIconData()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.ClueSiteCircleMapWieldable.OnRep_MapRadialIconData"));
 
-	struct
-	{
-	} params;
-
+	AClueSiteCircleMapWieldable_OnRep_MapRadialIconData_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -63,19 +54,14 @@ void AClueSiteCircleMapWieldable::OnRep_MapRadialIconData()
 // Function LostShipmentsClueVariants.ClueVariantsBlueprintFunctionLibrary.GiveClueDescriptorToItem
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class AItemInfo*               ItemInfo                       (Parm, ZeroConstructor, IsPlainOldData)
-// class UClueDescriptor*         Clue                           (Parm, ZeroConstructor, IsPlainOldData)
+// AItemInfo*                     ItemInfo                       (Parm, ZeroConstructor, IsPlainOldData)
+// UClueDescriptor*               Clue                           (Parm, ZeroConstructor, IsPlainOldData)
 
-void UClueVariantsBlueprintFunctionLibrary::GiveClueDescriptorToItem(class AItemInfo* ItemInfo, class UClueDescriptor* Clue)
+void UClueVariantsBlueprintFunctionLibrary::GiveClueDescriptorToItem(AItemInfo* ItemInfo, UClueDescriptor* Clue)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.ClueVariantsBlueprintFunctionLibrary.GiveClueDescriptorToItem"));
 
-	struct
-	{
-		class AItemInfo*               ItemInfo;
-		class UClueDescriptor*         Clue;
-	} params;
-
+	UClueVariantsBlueprintFunctionLibrary_GiveClueDescriptorToItem_Params params;
 	params.ItemInfo = ItemInfo;
 	params.Clue = Clue;
 
@@ -91,10 +77,7 @@ void UCompositeClueDestinationDescriptor::OnRep_DestinationInfo()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.CompositeClueDestinationDescriptor.OnRep_DestinationInfo"));
 
-	struct
-	{
-	} params;
-
+	UCompositeClueDestinationDescriptor_OnRep_DestinationInfo_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -103,17 +86,13 @@ void UCompositeClueDestinationDescriptor::OnRep_DestinationInfo()
 // Function LostShipmentsClueVariants.GooseChaseClueBlueprintFunctionLibrary.CreateEndOfGooseChaseClue
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
-// class UClueDescriptor*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UClueDescriptor*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UClueDescriptor* UGooseChaseClueBlueprintFunctionLibrary::CreateEndOfGooseChaseClue()
+UClueDescriptor* UGooseChaseClueBlueprintFunctionLibrary::CreateEndOfGooseChaseClue()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.GooseChaseClueBlueprintFunctionLibrary.CreateEndOfGooseChaseClue"));
 
-	struct
-	{
-		class UClueDescriptor*         ReturnValue;
-	} params;
-
+	UGooseChaseClueBlueprintFunctionLibrary_CreateEndOfGooseChaseClue_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -125,29 +104,19 @@ class UClueDescriptor* UGooseChaseClueBlueprintFunctionLibrary::CreateEndOfGoose
 // Function LostShipmentsClueVariants.ShipwreckClueBlueprintFunctionLibrary.CreateCluePointingToShipwreck
 // (Final, Native, Static, Public, HasOutParms, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UClueConnectionConfig*   ConnectionConfiguration        (Parm, ZeroConstructor, IsPlainOldData)
+// UClueConnectionConfig*         ConnectionConfiguration        (Parm, ZeroConstructor, IsPlainOldData)
 // int                            Difficulty                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// TArray<class UClass*>          AllowedClueTypes               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
-// class UTaleQuestSelectorService* SelectorService                (Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 SourceLocation                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
-// class AShipwreck*              Shipwreck                      (Parm, ZeroConstructor, IsPlainOldData)
-// class UClueDescriptor*         ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// TArray<UClass*>                AllowedClueTypes               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm)
+// UTaleQuestSelectorService*     SelectorService                (Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        SourceLocation                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData)
+// AShipwreck*                    Shipwreck                      (Parm, ZeroConstructor, IsPlainOldData)
+// UClueDescriptor*               ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UClueDescriptor* UShipwreckClueBlueprintFunctionLibrary::CreateCluePointingToShipwreck(class UClueConnectionConfig* ConnectionConfiguration, int Difficulty, TArray<class UClass*> AllowedClueTypes, class UTaleQuestSelectorService* SelectorService, const struct FVector& SourceLocation, class AShipwreck* Shipwreck)
+UClueDescriptor* UShipwreckClueBlueprintFunctionLibrary::CreateCluePointingToShipwreck(UClueConnectionConfig* ConnectionConfiguration, int Difficulty, TArray<UClass*> AllowedClueTypes, UTaleQuestSelectorService* SelectorService, const FVector& SourceLocation, AShipwreck* Shipwreck)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.ShipwreckClueBlueprintFunctionLibrary.CreateCluePointingToShipwreck"));
 
-	struct
-	{
-		class UClueConnectionConfig*   ConnectionConfiguration;
-		int                            Difficulty;
-		TArray<class UClass*>          AllowedClueTypes;
-		class UTaleQuestSelectorService* SelectorService;
-		struct FVector                 SourceLocation;
-		class AShipwreck*              Shipwreck;
-		class UClueDescriptor*         ReturnValue;
-	} params;
-
+	UShipwreckClueBlueprintFunctionLibrary_CreateCluePointingToShipwreck_Params params;
 	params.ConnectionConfiguration = ConnectionConfiguration;
 	params.Difficulty = Difficulty;
 	params.AllowedClueTypes = AllowedClueTypes;
@@ -165,17 +134,13 @@ class UClueDescriptor* UShipwreckClueBlueprintFunctionLibrary::CreateCluePointin
 // Function LostShipmentsClueVariants.TaleQuestClueInventoryService.SetClueTitleText
 // (Final, Native, Public, HasOutParms, BlueprintCallable)
 // Parameters:
-// struct FText                   InTitleText                    (ConstParm, Parm, OutParm, ReferenceParm)
+// FText                          InTitleText                    (ConstParm, Parm, OutParm, ReferenceParm)
 
-void UTaleQuestClueInventoryService::SetClueTitleText(const struct FText& InTitleText)
+void UTaleQuestClueInventoryService::SetClueTitleText(const FText& InTitleText)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.TaleQuestClueInventoryService.SetClueTitleText"));
 
-	struct
-	{
-		struct FText                   InTitleText;
-	} params;
-
+	UTaleQuestClueInventoryService_SetClueTitleText_Params params;
 	params.InTitleText = InTitleText;
 
 	UObject::ProcessEvent(fn, &params);
@@ -191,11 +156,7 @@ int UTaleQuestClueInventoryService::GetCollectedClueCount()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function LostShipmentsClueVariants.TaleQuestClueInventoryService.GetCollectedClueCount"));
 
-	struct
-	{
-		int                            ReturnValue;
-	} params;
-
+	UTaleQuestClueInventoryService_GetCollectedClueCount_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 

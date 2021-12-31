@@ -4,13 +4,26 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_EquipmentChest_classes.hpp"
+#include "SoT_BP_EquipmentChest_parameters.hpp"
 
 namespace SDK
 {
 //---------------------------------------------------------------------------
 //Functions
 //---------------------------------------------------------------------------
+
+// Function BP_EquipmentChest.BP_EquipmentChest_C.UserConstructionScript
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void ABP_EquipmentChest_C::UserConstructionScript()
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_EquipmentChest.BP_EquipmentChest_C.UserConstructionScript"));
+
+	ABP_EquipmentChest_C_UserConstructionScript_Params params;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
 
 }
 

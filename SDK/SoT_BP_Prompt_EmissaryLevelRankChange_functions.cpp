@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_EmissaryLevelRankChange_classes.hpp"
+#include "SoT_BP_Prompt_EmissaryLevelRankChange_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.OnEmissaryLevelRankChange
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryLevel_FEmissaryLevelRankChange NewParam                       (Parm)
+// FEmissaryLevel_FEmissaryLevelRankChange NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryLevelRankChange_C::OnEmissaryLevelRankChange(const struct FEmissaryLevel_FEmissaryLevelRankChange& NewParam)
+void UBP_Prompt_EmissaryLevelRankChange_C::OnEmissaryLevelRankChange(const FEmissaryLevel_FEmissaryLevelRankChange& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.OnEmissaryLevelRankChange"));
 
-	struct
-	{
-		struct FEmissaryLevel_FEmissaryLevelRankChange NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryLevelRankChange_C_OnEmissaryLevelRankChange_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UBP_Prompt_EmissaryLevelRankChange_C::OnEmissaryLevelRankChange(const struc
 // Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.EmissaryLevelRankChange
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryLevel_FEmissaryLevelRankChange NewParam                       (Parm)
+// FEmissaryLevel_FEmissaryLevelRankChange NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryLevelRankChange_C::EmissaryLevelRankChange(const struct FEmissaryLevel_FEmissaryLevelRankChange& NewParam)
+void UBP_Prompt_EmissaryLevelRankChange_C::EmissaryLevelRankChange(const FEmissaryLevel_FEmissaryLevelRankChange& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.EmissaryLevelRankChange"));
 
-	struct
-	{
-		struct FEmissaryLevel_FEmissaryLevelRankChange NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryLevelRankChange_C_EmissaryLevelRankChange_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -59,10 +51,7 @@ void UBP_Prompt_EmissaryLevelRankChange_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryLevelRankChange_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -75,10 +64,7 @@ void UBP_Prompt_EmissaryLevelRankChange_C::RegisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.RegisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryLevelRankChange_C_RegisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -91,10 +77,7 @@ void UBP_Prompt_EmissaryLevelRankChange_C::UnregisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryLevelRankChange_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,11 +92,7 @@ void UBP_Prompt_EmissaryLevelRankChange_C::ExecuteUbergraph_BP_Prompt_EmissaryLe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryLevelRankChange.BP_Prompt_EmissaryLevelRankChange_C.ExecuteUbergraph_BP_Prompt_EmissaryLevelRankChange"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_EmissaryLevelRankChange_C_ExecuteUbergraph_BP_Prompt_EmissaryLevelRankChange_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

@@ -11,6 +11,7 @@
 #include "SoT_Engine_classes.hpp"
 #include "SoT_CoreUObject_classes.hpp"
 #include "SoT_Athena_classes.hpp"
+#include "SoT_AthenaEngine_classes.hpp"
 
 namespace SDK
 {
@@ -22,33 +23,40 @@ namespace SDK
 // 0x0010
 struct FPlayerTrackedObjective
 {
-	struct FGuid                                       ObjectiveId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              ObjectiveId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct SeasonProgressionFramework.SeasonReward
 // 0x0020
 struct FSeasonReward
 {
-	struct FGuid                                       Id;                                                       // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              Id;                                                       // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 	int64_t                                            Tier;                                                     // 0x0010(0x0008) (ZeroConstructor, IsPlainOldData)
 	int64_t                                            Level;                                                    // 0x0018(0x0008) (ZeroConstructor, IsPlainOldData)
+};
+
+// ScriptStruct SeasonProgressionFramework.SeasonServiceDataUpdatedEvent
+// 0x0001
+struct FSeasonServiceDataUpdatedEvent
+{
+	unsigned char                                      UnknownData00[0x1];                                       // 0x0000(0x0001) MISSED OFFSET
 };
 
 // ScriptStruct SeasonProgressionFramework.SeasonRewardEarnedEvent
 // 0x0028
 struct FSeasonRewardEarnedEvent
 {
-	struct FGuid                                       SeasonId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              SeasonId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 	bool                                               MultipleRewards;                                          // 0x0010(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0011(0x0007) MISSED OFFSET
-	TArray<struct FSeasonReward>                       Rewards;                                                  // 0x0018(0x0010) (ZeroConstructor)
+	TArray<FSeasonReward>                              Rewards;                                                  // 0x0018(0x0010) (ZeroConstructor)
 };
 
 // ScriptStruct SeasonProgressionFramework.LevelCompletionEvent
 // 0x0024
 struct FLevelCompletionEvent
 {
-	struct FGuid                                       SeasonId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              SeasonId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
 	int                                                Level;                                                    // 0x0010(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                TimeSpentInLevel;                                         // 0x0014(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                Tier;                                                     // 0x0018(0x0004) (ZeroConstructor, IsPlainOldData)
@@ -62,8 +70,8 @@ struct FLevelCompletionEvent
 // 0x0030
 struct FLevelProgressionEvent
 {
-	struct FGuid                                       SeasonId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       SourceGoalId;                                             // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              SeasonId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              SourceGoalId;                                             // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
 	int                                                XpChange;                                                 // 0x0020(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                CurrentXP;                                                // 0x0024(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                CurrentTier;                                              // 0x0028(0x0004) (ZeroConstructor, IsPlainOldData)
@@ -74,11 +82,11 @@ struct FLevelProgressionEvent
 // 0x0034
 struct FSeasonGoalCompletionEvent
 {
-	struct FGuid                                       SeasonId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       GoalId;                                                   // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              SeasonId;                                                 // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              GoalId;                                                   // 0x0010(0x0010) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ESeasonGoalType>                       GoalType;                                                 // 0x0020(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0021(0x0003) MISSED OFFSET
-	struct FGuid                                       GoalGroupId;                                              // 0x0024(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              GoalGroupId;                                              // 0x0024(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct SeasonProgressionFramework.SeasonGoalProgressionEvent
@@ -88,32 +96,37 @@ struct FSeasonGoalProgressionEvent
 	int                                                PreviousProgress;                                         // 0x0000(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                CurrentProgress;                                          // 0x0004(0x0004) (ZeroConstructor, IsPlainOldData)
 	int                                                CompletionThreshold;                                      // 0x0008(0x0004) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       SeasonId;                                                 // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       GoalId;                                                   // 0x001C(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              SeasonId;                                                 // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              GoalId;                                                   // 0x001C(0x0010) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<ESeasonGoalType>                       GoalType;                                                 // 0x002C(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x002D(0x0003) MISSED OFFSET
-	struct FGuid                                       GoalGroupId;                                              // 0x0030(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              GoalGroupId;                                              // 0x0030(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct SeasonProgressionFramework.TrackedObjectiveCompletionMessage
-// 0x00D8
+// 0x00E0
 struct FTrackedObjectiveCompletionMessage
 {
-	struct FGuid                                       ObjectiveId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FPirateIdentity                             PirateIdentity;                                           // 0x0010(0x0078)
-	struct FPlayerBaseTelemetryFragment                PlayerInfo;                                               // 0x0088(0x0048)
-	double                                             CreatedAt;                                                // 0x00D0(0x0008) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              ObjectiveId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FPirateIdentity                                    PirateIdentity;                                           // 0x0010(0x0078)
+	FPlayerBaseTelemetryFragment                       PlayerInfo;                                               // 0x0088(0x0048)
+	TEnumAsByte<EPlayMode>                             Playmode;                                                 // 0x00D0(0x0001) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPlayModeVariant>                      PlayModeVariant;                                          // 0x00D1(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x6];                                       // 0x00D2(0x0006) MISSED OFFSET
+	double                                             CreatedAt;                                                // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct SeasonProgressionFramework.TrackedObjectiveProgressUpdateMessage
 // 0x00E0
 struct FTrackedObjectiveProgressUpdateMessage
 {
-	struct FGuid                                       ObjectiveId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
-	struct FPirateIdentity                             PirateIdentity;                                           // 0x0010(0x0078)
-	struct FPlayerBaseTelemetryFragment                PlayerInfo;                                               // 0x0088(0x0048)
-	int                                                Value;                                                    // 0x00D0(0x0004) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x00D4(0x0004) MISSED OFFSET
+	FGuid                                              ObjectiveId;                                              // 0x0000(0x0010) (ZeroConstructor, IsPlainOldData)
+	FPirateIdentity                                    PirateIdentity;                                           // 0x0010(0x0078)
+	FPlayerBaseTelemetryFragment                       PlayerInfo;                                               // 0x0088(0x0048)
+	TEnumAsByte<EPlayMode>                             Playmode;                                                 // 0x00D0(0x0001) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<EPlayModeVariant>                      PlayModeVariant;                                          // 0x00D1(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x2];                                       // 0x00D2(0x0002) MISSED OFFSET
+	int                                                Value;                                                    // 0x00D4(0x0004) (ZeroConstructor, IsPlainOldData)
 	double                                             CreatedAt;                                                // 0x00D8(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 

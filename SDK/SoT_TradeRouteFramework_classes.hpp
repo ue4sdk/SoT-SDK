@@ -32,16 +32,16 @@ public:
 
 
 // Class TradeRouteFramework.TradeRouteData
-// 0x00A0 (0x00C8 - 0x0028)
+// 0x0098 (0x00C0 - 0x0028)
 class UTradeRouteData : public UDataAsset
 {
 public:
-	struct FIslandSelectionType                        StartIsland;                                              // 0x0028(0x0008) (Edit, DisableEditOnInstance)
-	struct FIslandSelectionType                        EndIsland;                                                // 0x0030(0x0008) (Edit, DisableEditOnInstance)
-	struct FPlayerStat                                 RouteCompletionStat;                                      // 0x0038(0x000C) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
-	TEnumAsByte<ETradeRouteMapOrientation>             MapOrientation;                                           // 0x0044(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x3];                                       // 0x0045(0x0003) MISSED OFFSET
-	struct FTradeRouteMapData                          TradeRouteMapData;                                        // 0x0048(0x0080) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	FIslandSelectionType                               StartIsland;                                              // 0x0028(0x0008) (Edit, DisableEditOnInstance)
+	FIslandSelectionType                               EndIsland;                                                // 0x0030(0x0008) (Edit, DisableEditOnInstance)
+	FPlayerStat                                        RouteCompletionStat;                                      // 0x0038(0x0004) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
+	TEnumAsByte<ETradeRouteMapOrientation>             MapOrientation;                                           // 0x003C(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x003D(0x0003) MISSED OFFSET
+	FTradeRouteMapData                                 TradeRouteMapData;                                        // 0x0040(0x0080) (Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -53,11 +53,11 @@ public:
 
 
 // Class TradeRouteFramework.TaleQuestGetProjectionPointOnTradeRouteStep
-// 0x0038 (0x00A0 - 0x0068)
+// 0x0038 (0x00C8 - 0x0090)
 class UTaleQuestGetProjectionPointOnTradeRouteStep : public UTaleQuestStep
 {
 public:
-	unsigned char                                      UnknownData00[0x38];                                      // 0x0068(0x0038) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x38];                                      // 0x0090(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -69,15 +69,15 @@ public:
 
 
 // Class TradeRouteFramework.TaleQuestGetProjectionPointOnTradeRouteStepDesc
-// 0x0038 (0x0068 - 0x0030)
+// 0x0038 (0x00B8 - 0x0080)
 class UTaleQuestGetProjectionPointOnTradeRouteStepDesc : public UTaleQuestStepDesc
 {
 public:
-	float                                              ProjectionProportion;                                     // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	struct FQuestVariableVector                        SourcePoint;                                              // 0x0038(0x0010) (Edit)
-	struct FQuestVariableTradeRouteData                TradeRouteData;                                           // 0x0048(0x0010) (Edit)
-	struct FQuestVariableVector                        ProjectedPoint;                                           // 0x0058(0x0010) (Edit)
+	float                                              ProjectionProportion;                                     // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+	FQuestVariableVector                               SourcePoint;                                              // 0x0088(0x0010) (Edit)
+	FQuestVariableTradeRouteData                       TradeRouteData;                                           // 0x0098(0x0010) (Edit)
+	FQuestVariableVector                               ProjectedPoint;                                           // 0x00A8(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -89,12 +89,12 @@ public:
 
 
 // Class TradeRouteFramework.TaleQuestSelectTradeRouteStep
-// 0x0020 (0x0088 - 0x0068)
+// 0x0020 (0x00B0 - 0x0090)
 class UTaleQuestSelectTradeRouteStep : public UTaleQuestStep
 {
 public:
-	class UTaleQuestSelectTradeRouteStepDesc*          Desc;                                                     // 0x0068(0x0008) (ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x18];                                      // 0x0070(0x0018) MISSED OFFSET
+	UTaleQuestSelectTradeRouteStepDesc*                Desc;                                                     // 0x0090(0x0008) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x18];                                      // 0x0098(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -106,16 +106,16 @@ public:
 
 
 // Class TradeRouteFramework.TaleQuestSelectTradeRouteStepDesc
-// 0x0048 (0x0078 - 0x0030)
+// 0x0048 (0x00C8 - 0x0080)
 class UTaleQuestSelectTradeRouteStepDesc : public UTaleQuestStepDesc
 {
 public:
-	int                                                NumSelectFromClosestIslands;                              // 0x0030(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0034(0x0004) MISSED OFFSET
-	struct FQuestVariableVector                        SelectionOriginPointVar;                                  // 0x0038(0x0010) (Edit)
-	struct FQuestVariableInt                           TradeRouteDifficulty;                                     // 0x0048(0x0010) (Edit)
-	struct FQuestVariableTradeRouteData                TradeRoute;                                               // 0x0058(0x0010) (Edit)
-	struct FQuestVariableTaleResourceHandle            AllocatedTradeRouteHandleVar;                             // 0x0068(0x0010) (Edit)
+	int                                                NumSelectFromClosestIslands;                              // 0x0080(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x0084(0x0004) MISSED OFFSET
+	FQuestVariableVector                               SelectionOriginPointVar;                                  // 0x0088(0x0010) (Edit)
+	FQuestVariableInt                                  TradeRouteDifficulty;                                     // 0x0098(0x0010) (Edit)
+	FQuestVariableTradeRouteData                       TradeRoute;                                               // 0x00A8(0x0010) (Edit)
+	FQuestVariableTaleResourceHandle                   AllocatedTradeRouteHandleVar;                             // 0x00B8(0x0010) (Edit)
 
 	static UClass* StaticClass()
 	{
@@ -131,7 +131,7 @@ public:
 class UTradeRoutesDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FTradeRouteMapping>                  TradeRouteMappings;                                       // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<FTradeRouteMapping>                         TradeRouteMappings;                                       // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{

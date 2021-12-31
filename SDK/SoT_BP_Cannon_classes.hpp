@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Cannon.BP_Cannon_C
-// 0x0018 (0x0B70 - 0x0B58)
+// 0x0018 (0x0C20 - 0x0C08)
 class ABP_Cannon_C : public ACannon
 {
 public:
-	class UGroupedInteractableAreaComponent*           GroupedInteractableArea;                                  // 0x0B58(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UInteractableComponent*                      Interactable;                                             // 0x0B60(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        Collision;                                                // 0x0B68(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UGroupedInteractableAreaComponent*                 GroupedInteractableArea;                                  // 0x0C08(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UInteractableComponent*                            Interactable;                                             // 0x0C10(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStaticMeshComponent*                              Collision;                                                // 0x0C18(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -30,7 +30,7 @@ public:
 	}
 
 
-	struct FDockableInfo GetDockableInfo();
+	FDockableInfo GetDockableInfo();
 	void UserConstructionScript();
 };
 

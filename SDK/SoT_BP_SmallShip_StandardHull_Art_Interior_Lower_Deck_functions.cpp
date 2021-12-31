@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_SmallShip_StandardHull_Art_Interior_Lower_Deck_classes.hpp"
+#include "SoT_BP_SmallShip_StandardHull_Art_Interior_Lower_Deck_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_SmallShip_StandardHull_Art_Interior_Lower_Deck_C::UserConstructionScrip
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_SmallShip_StandardHull_Art_Interior_Lower_Deck.BP_SmallShip_StandardHull_Art_Interior_Lower_Deck_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_SmallShip_StandardHull_Art_Interior_Lower_Deck_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

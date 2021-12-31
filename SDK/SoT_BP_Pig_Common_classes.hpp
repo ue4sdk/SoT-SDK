@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Pig_Common.BP_Pig_Common_C
-// 0x0000 (0x0B58 - 0x0B58)
+// 0x0000 (0x0BC8 - 0x0BC8)
 class ABP_Pig_Common_C : public ABP_Pig_C
 {
 public:

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Landscape_classes.hpp"
+#include "SoT_Landscape_parameters.hpp"
 
 namespace SDK
 {
@@ -15,7 +15,7 @@ namespace SDK
 // Function Landscape.LandscapeProxy.EditorApplySpline
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USplineComponent*        InSplineComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// USplineComponent*              InSplineComponent              (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // float                          StartWidth                     (Parm, ZeroConstructor, IsPlainOldData)
 // float                          EndWidth                       (Parm, ZeroConstructor, IsPlainOldData)
 // float                          StartSideFalloff               (Parm, ZeroConstructor, IsPlainOldData)
@@ -25,27 +25,13 @@ namespace SDK
 // int                            NumSubdivisions                (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bRaiseHeights                  (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bLowerHeights                  (Parm, ZeroConstructor, IsPlainOldData)
-// class ULandscapeLayerInfoObject* PaintLayer                     (Parm, ZeroConstructor, IsPlainOldData)
+// ULandscapeLayerInfoObject*     PaintLayer                     (Parm, ZeroConstructor, IsPlainOldData)
 
-void ALandscapeProxy::EditorApplySpline(class USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, class ULandscapeLayerInfoObject* PaintLayer)
+void ALandscapeProxy::EditorApplySpline(USplineComponent* InSplineComponent, float StartWidth, float EndWidth, float StartSideFalloff, float EndSideFalloff, float StartRoll, float EndRoll, int NumSubdivisions, bool bRaiseHeights, bool bLowerHeights, ULandscapeLayerInfoObject* PaintLayer)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Landscape.LandscapeProxy.EditorApplySpline"));
 
-	struct
-	{
-		class USplineComponent*        InSplineComponent;
-		float                          StartWidth;
-		float                          EndWidth;
-		float                          StartSideFalloff;
-		float                          EndSideFalloff;
-		float                          StartRoll;
-		float                          EndRoll;
-		int                            NumSubdivisions;
-		bool                           bRaiseHeights;
-		bool                           bLowerHeights;
-		class ULandscapeLayerInfoObject* PaintLayer;
-	} params;
-
+	ALandscapeProxy_EditorApplySpline_Params params;
 	params.InSplineComponent = InSplineComponent;
 	params.StartWidth = StartWidth;
 	params.EndWidth = EndWidth;
@@ -71,11 +57,7 @@ void ALandscapeProxy::ChangeLODDistanceFactor(float InLODDistanceFactor)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Landscape.LandscapeProxy.ChangeLODDistanceFactor"));
 
-	struct
-	{
-		float                          InLODDistanceFactor;
-	} params;
-
+	ALandscapeProxy_ChangeLODDistanceFactor_Params params;
 	params.InLODDistanceFactor = InLODDistanceFactor;
 
 	UObject::ProcessEvent(fn, &params);

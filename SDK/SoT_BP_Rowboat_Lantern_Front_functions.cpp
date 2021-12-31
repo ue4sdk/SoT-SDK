@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Rowboat_Lantern_Front_classes.hpp"
+#include "SoT_BP_Rowboat_Lantern_Front_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_Rowboat_Lantern_Front_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Rowboat_Lantern_Front.BP_Rowboat_Lantern_Front_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_Rowboat_Lantern_Front_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

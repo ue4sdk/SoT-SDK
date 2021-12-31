@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishingFish_Plentifin_05_classes.hpp"
+#include "SoT_BP_FishingFish_Plentifin_05_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishingFish_Plentifin_05_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishingFish_Plentifin_05.BP_FishingFish_Plentifin_05_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_FishingFish_Plentifin_05_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

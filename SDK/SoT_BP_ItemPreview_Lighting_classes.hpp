@@ -19,15 +19,15 @@ namespace SDK
 class ABP_ItemPreview_Lighting_C : public AActor
 {
 public:
-	class UExponentialHeightFogComponent*              ExponentialHeightFog;                                     // 0x03D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USkyLightComponent*                          SkyLight;                                                 // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USpotLightComponent*                         SpotLight2;                                               // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USpotLightComponent*                         SpotLight1;                                               // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USpotLightComponent*                         SpotLight;                                                // 0x03F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UPostProcessComponent*                       PostProcess;                                              // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0400(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FScriptMulticastDelegate                    PreviewBusy;                                              // 0x0408(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
-	struct FScriptMulticastDelegate                    PreviewReady;                                             // 0x0418(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	UExponentialHeightFogComponent*                    ExponentialHeightFog;                                     // 0x03D0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USkyLightComponent*                                SkyLight;                                                 // 0x03D8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USpotLightComponent*                               SpotLight2;                                               // 0x03E0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USpotLightComponent*                               SpotLight1;                                               // 0x03E8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USpotLightComponent*                               SpotLight;                                                // 0x03F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UPostProcessComponent*                             PostProcess;                                              // 0x03F8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USceneComponent*                                   DefaultSceneRoot;                                         // 0x0400(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FScriptMulticastDelegate                           PreviewBusy;                                              // 0x0408(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
+	FScriptMulticastDelegate                           PreviewReady;                                             // 0x0418(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable)
 
 	static UClass* StaticClass()
 	{
@@ -37,8 +37,8 @@ public:
 
 
 	void UserConstructionScript();
-	void PreviewReady__DelegateSignature(const struct FPiratePreviewReadyEvent& Data);
-	void PreviewBusy__DelegateSignature(const struct FPiratePreviewBusyEvent& Data);
+	void PreviewReady__DelegateSignature(const FPiratePreviewReadyEvent& Data);
+	void PreviewBusy__DelegateSignature(const FPiratePreviewBusyEvent& Data);
 };
 
 

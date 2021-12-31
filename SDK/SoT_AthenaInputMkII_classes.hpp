@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // Class AthenaInputMkII.AthenaCharacterBaseMovementComponent
-// 0x00D8 (0x0228 - 0x0150)
+// 0x0128 (0x0278 - 0x0150)
 class UAthenaCharacterBaseMovementComponent : public UInputComponent
 {
 public:
-	unsigned char                                      UnknownData00[0xD8];                                      // 0x0150(0x00D8) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x128];                                     // 0x0150(0x0128) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -31,11 +31,11 @@ public:
 
 
 // Class AthenaInputMkII.AthenaCharacterBaseMovementComponentWithInterference
-// 0x0008 (0x0230 - 0x0228)
+// 0x0008 (0x0280 - 0x0278)
 class UAthenaCharacterBaseMovementComponentWithInterference : public UAthenaCharacterBaseMovementComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x0228(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x0278(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -47,11 +47,11 @@ public:
 
 
 // Class AthenaInputMkII.MovementInterferenceComponent
-// 0x0020 (0x0170 - 0x0150)
+// 0x0070 (0x01C0 - 0x0150)
 class UMovementInterferenceComponent : public UInputComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x0150(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x70];                                      // 0x0150(0x0070) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -59,9 +59,6 @@ public:
 		return ptr;
 	}
 
-
-	void OnMoveRightInput(float Value);
-	void OnMoveForwardInput(float Value);
 };
 
 

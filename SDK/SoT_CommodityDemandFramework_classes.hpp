@@ -19,7 +19,7 @@ namespace SDK
 class UCommodityDemandFrameworkEditorSettings : public UDeveloperSettings
 {
 public:
-	struct FStringAssetReference                       CommodityDataFileLocation;                                // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
+	FStringAssetReference                              CommodityDataFileLocation;                                // 0x0038(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -31,19 +31,17 @@ public:
 
 
 // Class CommodityDemandFramework.CommodityDemandFrameworkSettings
-// 0x00A0 (0x00D8 - 0x0038)
+// 0x0030 (0x0068 - 0x0038)
 class UCommodityDemandFrameworkSettings : public UDeveloperSettings
 {
 public:
 	float                                              DemandRefreshFrequencyInSeconds;                          // 0x0038(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FName                                       DemandCollectionId;                                       // 0x003C(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	unsigned char                                      UnknownData00[0x4];                                       // 0x0044(0x0004) MISSED OFFSET
-	struct FText                                       EmissaryLockedCommodityOfferDescription;                  // 0x0048(0x0038) (Edit, Config)
-	struct FText                                       OutOfStockLockedCommodityOfferDescription;                // 0x0080(0x0038) (Edit, Config)
-	int                                                CommodityPurchaseLockoutInGameDays;                       // 0x00B8(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	int                                                InGameHourWhenCommoditiesRestock;                         // 0x00BC(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
-	struct FGameTime                                   CommodityRedemptionTimeOutPeriodInDays;                   // 0x00C0(0x0008) (Edit, Config)
-	struct FStringAssetReference                       NPCListAsset;                                             // 0x00C8(0x0010) (Edit, ZeroConstructor, Config)
+	FName                                              DemandCollectionId;                                       // 0x003C(0x0008) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int                                                CommodityPurchaseLockoutInGameDays;                       // 0x0044(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	int                                                InGameHourWhenCommoditiesRestock;                         // 0x0048(0x0004) (Edit, ZeroConstructor, Config, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x4];                                       // 0x004C(0x0004) MISSED OFFSET
+	FGameTime                                          CommodityRedemptionTimeOutPeriodInDays;                   // 0x0050(0x0008) (Edit, Config)
+	FStringAssetReference                              NPCListAsset;                                             // 0x0058(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -75,7 +73,7 @@ class ACommodityDemandService : public AActor
 {
 public:
 	unsigned char                                      UnknownData00[0x20];                                      // 0x03D0(0x0020) MISSED OFFSET
-	struct FActiveNPCDemands                           ActiveCommodityDemands;                                   // 0x03F0(0x0020) (Net)
+	FActiveNPCDemands                                  ActiveCommodityDemands;                                   // 0x03F0(0x0020) (Net)
 
 	static UClass* StaticClass()
 	{
@@ -123,7 +121,7 @@ public:
 class UCommodityEntitlementRedemptionAsset : public UDataAsset
 {
 public:
-	TArray<struct FEntitlementToRedeemItems>           CommoditiesForRedemption;                                 // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<FEntitlementToRedeemItems>                  CommoditiesForRedemption;                                 // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -139,7 +137,7 @@ public:
 class UCommodityItemDesc : public UBootyItemDesc
 {
 public:
-	struct FCommoditySelectionType                     CommodityType;                                            // 0x0130(0x0008) (Edit, DisableEditOnInstance)
+	FCommoditySelectionType                            CommodityType;                                            // 0x0130(0x0008) (Edit, DisableEditOnInstance)
 	TEnumAsByte<ECommodityDemand>                      CommodityDemand;                                          // 0x0138(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0139(0x0007) MISSED OFFSET
 
@@ -184,12 +182,14 @@ public:
 
 
 // Class CommodityDemandFramework.CommodityRedemptionComponent
-// 0x0090 (0x0158 - 0x00C8)
+// 0x00C8 (0x0190 - 0x00C8)
 class UCommodityRedemptionComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x80];                                      // 0x00C8(0x0080) MISSED OFFSET
-	TArray<class AActor*>                              PendingRedemptions;                                       // 0x0148(0x0010) (ZeroConstructor)
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	FText                                              RedeemTooltipText;                                        // 0x00D0(0x0038) (Edit)
+	unsigned char                                      UnknownData01[0x78];                                      // 0x0108(0x0078) MISSED OFFSET
+	TArray<AActor*>                                    PendingRedemptions;                                       // 0x0180(0x0010) (ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -221,7 +221,7 @@ class UCommoditySourceComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
-	struct FName                                       NPCIdentifier;                                            // 0x00D0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	FName                                              NPCIdentifier;                                            // 0x00D0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -237,8 +237,8 @@ public:
 class UCommodityTokenEntitlementDesc : public UEntitlementDesc
 {
 public:
-	struct FName                                       NPCToRedeemAt;                                            // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      ItemToRedeemFor;                                          // 0x00E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	FName                                              NPCToRedeemAt;                                            // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            ItemToRedeemFor;                                          // 0x00E0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -254,7 +254,7 @@ public:
 class UCommodityTypeDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FCommodityTypeDataEntry>             CommodityEntries;                                         // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<FCommodityTypeDataEntry>                    CommodityEntries;                                         // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -297,7 +297,7 @@ public:
 
 
 // Class CommodityDemandFramework.DeliverableCommodityRequirement
-// 0x0000 (0x0028 - 0x0028)
+// 0x0000 (0x0030 - 0x0030)
 class UDeliverableCommodityRequirement : public UDeliverableRequirementBase
 {
 public:
@@ -322,6 +322,23 @@ public:
 	static UClass* StaticClass()
 	{
 		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CommodityDemandFramework.IsWieldedCommodityItemInDemandStatCondition"));
+		return ptr;
+	}
+
+};
+
+
+// Class CommodityDemandFramework.SpecificItemsCrateFillerComponent
+// 0x0018 (0x00E0 - 0x00C8)
+class USpecificItemsCrateFillerComponent : public UActorComponent
+{
+public:
+	unsigned char                                      UnknownData00[0x8];                                       // 0x00C8(0x0008) MISSED OFFSET
+	TArray<FStorageContainerNode>                      ItemsToFillCrateWith;                                     // 0x00D0(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindObject<UClass>(_xor_("Class CommodityDemandFramework.SpecificItemsCrateFillerComponent"));
 		return ptr;
 	}
 

@@ -20,25 +20,25 @@ namespace SDK
 // 0x0018
 struct FEmissaryGlobalActionRewardBoostServiceEvent
 {
-	class UClass*                                      FinishedEventType;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
-	struct FGuid                                       AssociatedCrew;                                           // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
+	UClass*                                            FinishedEventType;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              AssociatedCrew;                                           // 0x0008(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct EmissaryFramework.EmissaryCompanyActionRewardBoostServiceEvent
 // 0x001C
 struct FEmissaryCompanyActionRewardBoostServiceEvent
 {
-	struct FName                                       AssociatedCompany;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	FName                                              AssociatedCompany;                                        // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 	TEnumAsByte<EEmisaryCompanyActionType>             CompanyActionType;                                        // 0x0008(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0009(0x0003) MISSED OFFSET
-	struct FGuid                                       AssociatedCrew;                                           // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              AssociatedCrew;                                           // 0x000C(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct EmissaryFramework.EmissaryGlobalActionRewardBoostEvent
 // 0x0008
 struct FEmissaryGlobalActionRewardBoostEvent
 {
-	class UClass*                                      GameEventType;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	UClass*                                            GameEventType;                                            // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct EmissaryFramework.EmissaryNonQuestCompanyActionRewardBoostEvent
@@ -54,7 +54,7 @@ struct FEmissaryQuestCompanyActionRewardBoostEvent
 {
 	TEnumAsByte<EEmisaryCompanyActionType>             CompanyActionType;                                        // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x3];                                       // 0x0001(0x0003) MISSED OFFSET
-	struct FGuid                                       QuestId;                                                  // 0x0004(0x0010) (ZeroConstructor, IsPlainOldData)
+	FGuid                                              QuestId;                                                  // 0x0004(0x0010) (ZeroConstructor, IsPlainOldData)
 };
 
 // ScriptStruct EmissaryFramework.EmissaryCompanyChangedEvent
@@ -68,7 +68,7 @@ struct FEmissaryCompanyChangedEvent
 // 0x0010
 struct FEmissaryLedgerVisited
 {
-	class FString                                      CompanyId;                                                // 0x0000(0x0010) (ZeroConstructor)
+	FString                                            CompanyId;                                                // 0x0000(0x0010) (ZeroConstructor)
 };
 
 }

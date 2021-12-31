@@ -19,8 +19,8 @@ namespace SDK
 class UCompanyTutorialVoyageProgress : public UObject
 {
 public:
-	class UClass*                                      AssignedVoyageProposalDescClass;                          // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UClass*                                      AssignedTaleRankDescClass;                                // 0x0030(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UClass*                                            AssignedVoyageProposalDescClass;                          // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UClass*                                            AssignedTaleRankDescClass;                                // 0x0030(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0xA8];                                      // 0x0038(0x00A8) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -30,8 +30,8 @@ public:
 	}
 
 
-	bool IsSameVoyage(const struct FText& VoyageName);
-	void AssignVoyage(class UClass* VoyageProposalDescClass, class UClass* TaleRankDescClass);
+	bool IsSameVoyage(const FText& VoyageName);
+	void AssignVoyage(UClass* VoyageProposalDescClass, UClass* TaleRankDescClass);
 };
 
 
@@ -40,8 +40,8 @@ public:
 class UContextualTutorialComponent : public UActorComponent
 {
 public:
-	TArray<struct FContextualTutorialPromptDesc>       ContextualTutorialClasses;                                // 0x00C8(0x0010) (Edit, ZeroConstructor)
-	TArray<class AActor*>                              SpawnedPromptActors;                                      // 0x00D8(0x0010) (ZeroConstructor)
+	TArray<FContextualTutorialPromptDesc>              ContextualTutorialClasses;                                // 0x00C8(0x0010) (Edit, ZeroConstructor)
+	TArray<AActor*>                                    SpawnedPromptActors;                                      // 0x00D8(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData00[0x38];                                      // 0x00E8(0x0038) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -97,7 +97,7 @@ public:
 class UTutorial2019ContextualDelegatingComponent : public UTutorial2019Component
 {
 public:
-	class UContextualTutorialComponent*                ContextualTutorialComponent;                              // 0x00D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	UContextualTutorialComponent*                      ContextualTutorialComponent;                              // 0x00D0(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -121,7 +121,7 @@ public:
 	}
 
 
-	static struct FTeleportLocation GetNearestOnboardingSpawnPoint(class AActor* CharacterToTeleport);
+	static FTeleportLocation GetNearestOnboardingSpawnPoint(AActor* CharacterToTeleport);
 };
 
 
@@ -138,7 +138,7 @@ public:
 	}
 
 
-	static void FirePromptCompleted(class UClass* AccessKey, class UObject* WorldContextObject);
+	static void FirePromptCompleted(UClass* AccessKey, UObject* WorldContextObject);
 };
 
 
@@ -147,11 +147,11 @@ public:
 class UTutorialManager : public UActorComponent
 {
 public:
-	class UClass*                                      CompanyOnboardingStarterClass;                            // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      MaidenVoyageStarterClass;                                 // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      BeachNPCSpawnFlowStarterClass;                            // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class UClass*                                      SelectedTutorialClass;                                    // 0x00E0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
-	class UTutorialStarter*                            SelectedTutorial;                                         // 0x00E8(0x0008) (ZeroConstructor, IsPlainOldData)
+	UClass*                                            CompanyOnboardingStarterClass;                            // 0x00C8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            MaidenVoyageStarterClass;                                 // 0x00D0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            BeachNPCSpawnFlowStarterClass;                            // 0x00D8(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	UClass*                                            SelectedTutorialClass;                                    // 0x00E0(0x0008) (Net, ZeroConstructor, IsPlainOldData)
+	UTutorialStarter*                                  SelectedTutorial;                                         // 0x00E8(0x0008) (ZeroConstructor, IsPlainOldData)
 	bool                                               HasEverPlayedFirstPersonAnimation;                        // 0x00F0(0x0001) (Net, ZeroConstructor, IsPlainOldData)
 	bool                                               HasStartedTutorial;                                       // 0x00F1(0x0001) (ZeroConstructor, IsPlainOldData)
 	bool                                               HasReceivedEntitlements;                                  // 0x00F2(0x0001) (ZeroConstructor, IsPlainOldData)
@@ -174,11 +174,11 @@ public:
 class UTutorialStarter : public UObject
 {
 public:
-	class AAthenaPlayerController*                     AthenaPlayerController;                                   // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	AAthenaPlayerController*                           AthenaPlayerController;                                   // 0x0028(0x0008) (BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	bool                                               ShouldPlayIntroAnimatic;                                  // 0x0030(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	bool                                               ShouldDisableAllIntroBehaviour;                           // 0x0031(0x0001) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x2];                                       // 0x0032(0x0002) MISSED OFFSET
-	struct FFirstPersonAnimaticSettings                IntroAnimationSettings;                                   // 0x0034(0x002C) (Edit, DisableEditOnInstance)
+	FFirstPersonAnimaticSettings                       IntroAnimationSettings;                                   // 0x0034(0x002C) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{

@@ -74,12 +74,12 @@ public:
 	}
 
 
-	void SetExtendedPlaneComponent(class UFFTWaterExtendedPlaneComponent* InFFTWaterComponent);
-	void SetComponent(class UFFTWaterComponent* InFFTWaterComponent);
-	void SetActor(class AAthenaFFTWater* InFFTWaterActor);
-	class UFFTWaterExtendedPlaneComponent* GetExtendedPlaneComponent();
-	class UFFTWaterComponent* GetComponent();
-	class AAthenaFFTWater* GetActor();
+	void SetExtendedPlaneComponent(UFFTWaterExtendedPlaneComponent* InFFTWaterComponent);
+	void SetComponent(UFFTWaterComponent* InFFTWaterComponent);
+	void SetActor(AAthenaFFTWater* InFFTWaterActor);
+	UFFTWaterExtendedPlaneComponent* GetExtendedPlaneComponent();
+	UFFTWaterComponent* GetComponent();
+	AAthenaFFTWater* GetActor();
 };
 
 
@@ -88,7 +88,7 @@ public:
 class UWaterProperties : public UObject
 {
 public:
-	TArray<struct FWaterInformation>                   WaterInfo;                                                // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
+	TArray<FWaterInformation>                          WaterInfo;                                                // 0x0028(0x0010) (Edit, ZeroConstructor, Config)
 
 	static UClass* StaticClass()
 	{
@@ -113,13 +113,13 @@ public:
 
 
 	bool IsReadyToBeQueried();
-	TEnumAsByte<EWaterQueryResult> GetWaterInformationWithScaledChoppyness(const struct FVector& SamplePosition, class AActor* Actor, float ChoppynessScalar, float* Height, struct FVector2D* ApproxVelocity, struct FVector* Normal);
-	TEnumAsByte<EWaterQueryResult> GetWaterInformationBatched(TArray<struct FVector2D> SamplePositions, class AActor* Actor, TArray<float>* Heights, TArray<struct FVector2D>* ApproxVelocities, TArray<struct FVector>* Normals);
-	TEnumAsByte<EWaterQueryResult> GetWaterInformation(const struct FVector& SamplePosition, class AActor* Actor, float* Height, struct FVector2D* ApproxVelocity, struct FVector* Normal);
-	TEnumAsByte<EWaterQueryResult> GetWaterHeightWithScaledChoppyness(const struct FVector& SamplePosition, class AActor* Actor, bool Interpolate, float ChoppynessScalar, float* Height);
-	TEnumAsByte<EWaterQueryResult> GetWaterHeight(const struct FVector& SamplePosition, class AActor* Actor, bool Interpolate, float* Height);
-	struct FWaterSimPlane GetActorWaterPlane(class AActor* Actor);
-	struct FWaterInformation GetActorWaterInformation(class AActor* Actor);
+	TEnumAsByte<EWaterQueryResult> GetWaterInformationWithScaledChoppyness(const FVector& SamplePosition, AActor* Actor, float ChoppynessScalar, float* Height, FVector2D* ApproxVelocity, FVector* Normal);
+	TEnumAsByte<EWaterQueryResult> GetWaterInformationBatched(TArray<FVector2D> SamplePositions, AActor* Actor, TArray<float>* Heights, TArray<FVector2D>* ApproxVelocities, TArray<FVector>* Normals);
+	TEnumAsByte<EWaterQueryResult> GetWaterInformation(const FVector& SamplePosition, AActor* Actor, float* Height, FVector2D* ApproxVelocity, FVector* Normal);
+	TEnumAsByte<EWaterQueryResult> GetWaterHeightWithScaledChoppyness(const FVector& SamplePosition, AActor* Actor, bool Interpolate, float ChoppynessScalar, float* Height);
+	TEnumAsByte<EWaterQueryResult> GetWaterHeight(const FVector& SamplePosition, AActor* Actor, bool Interpolate, float* Height);
+	FWaterSimPlane GetActorWaterPlane(AActor* Actor);
+	FWaterInformation GetActorWaterInformation(AActor* Actor);
 };
 
 
@@ -148,11 +148,11 @@ public:
 
 
 // Class Water.FlatWaterPlaneComponent
-// 0x0010 (0x05A0 - 0x0590)
+// 0x0010 (0x05B0 - 0x05A0)
 class UFlatWaterPlaneComponent : public UBaseWaterComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x10];                                      // 0x0590(0x0010) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x10];                                      // 0x05A0(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -161,9 +161,9 @@ public:
 	}
 
 
-	void OnActorLeaveWaterPlane(class AActor* Actor);
-	void OnActorEnterWaterPlane(class AActor* Actor);
-	struct FVector2D ConvertToWaterSpace(const struct FVector& WorldSpacePosition);
+	void OnActorLeaveWaterPlane(AActor* Actor);
+	void OnActorEnterWaterPlane(AActor* Actor);
+	FVector2D ConvertToWaterSpace(const FVector& WorldSpacePosition);
 };
 
 
@@ -188,7 +188,7 @@ public:
 class UMockWaterServiceWithValidWaterPlane : public UMockWaterInterface
 {
 public:
-	class UFFTWaterComponent*                          DefaultWaterComponent;                                    // 0x0038(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	UFFTWaterComponent*                                DefaultWaterComponent;                                    // 0x0038(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -249,7 +249,7 @@ public:
 class USplashProbeDataAsset : public UDataAsset
 {
 public:
-	TArray<struct FSplashProbe>                        Probes;                                                   // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	TArray<FSplashProbe>                               Probes;                                                   // 0x0028(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -266,10 +266,10 @@ class USplashProbeVFXComponent : public UActorComponent
 {
 public:
 	unsigned char                                      UnknownData00[0x28];                                      // 0x00C8(0x0028) MISSED OFFSET
-	class USplashProbeDataAsset*                       Probes;                                                   // 0x00F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
-	class USplashProbeDataAsset*                       ProbesInstance;                                           // 0x00F8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
-	struct FActorComponentSelector                     AttachProbesToOwner;                                      // 0x0100(0x0010) (Edit, DisableEditOnInstance)
-	class USceneComponent*                             AttachProbesToComponent;                                  // 0x0110(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
+	USplashProbeDataAsset*                             Probes;                                                   // 0x00F0(0x0008) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+	USplashProbeDataAsset*                             ProbesInstance;                                           // 0x00F8(0x0008) (ZeroConstructor, Transient, IsPlainOldData)
+	FActorComponentSelector                            AttachProbesToOwner;                                      // 0x0100(0x0010) (Edit, DisableEditOnInstance)
+	USceneComponent*                                   AttachProbesToComponent;                                  // 0x0110(0x0008) (ExportObject, ZeroConstructor, InstancedReference, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -308,10 +308,10 @@ public:
 	}
 
 
-	static float TickBuoyancy(class AActor* InOwner, float InDeltaTime, float InChoppinessScalar, float FakeZOffsetGeneratorScalar, struct FWaterBuoyancy* InWaterBuoyancy);
-	static void SetBuoyancySamplesZOffsetSymmetricalAroundXAxis(float ZOffset, struct FWaterBuoyancy* InWaterBuoyancy);
-	static void SetBuoyancyProbeCurveBlendDebugOverride(float UnaryBlendOverride, struct FWaterBuoyancy* InWaterBuoyancy);
-	static void SetBuoyancyProbeCurveBlend(float Blend, TEnumAsByte<EBuoyancyBlend> BlendType, struct FWaterBuoyancy* InWaterBuoyancy);
+	static float TickBuoyancy(AActor* InOwner, float InDeltaTime, float InChoppinessScalar, float FakeZOffsetGeneratorScalar, FWaterBuoyancy* InWaterBuoyancy);
+	static void SetBuoyancySamplesZOffsetSymmetricalAroundXAxis(float ZOffset, FWaterBuoyancy* InWaterBuoyancy);
+	static void SetBuoyancyProbeCurveBlendDebugOverride(float UnaryBlendOverride, FWaterBuoyancy* InWaterBuoyancy);
+	static void SetBuoyancyProbeCurveBlend(float Blend, TEnumAsByte<EBuoyancyBlend> BlendType, FWaterBuoyancy* InWaterBuoyancy);
 };
 
 
@@ -328,10 +328,10 @@ public:
 	}
 
 
-	static void TickLocalSampleMovement(class AActor* InActor, float DeltaTime, struct FWaterBuoyancy* InWaterBuoyancy, struct FBuoyancySampleMovement* InSampleMovement);
-	static void StartMovingVolumeSamplesLocallyByRandomConfigurationIndex(class AActor* InActor, struct FWaterBuoyancy* InWaterBuoyancy, struct FBuoyancySampleMovement* InSampleMovement);
-	static void StartMovingVolumeSamplesLocallyByConfigurationIndex(class AActor* InActor, int ConfigurationIndex, struct FWaterBuoyancy* InWaterBuoyancy, struct FBuoyancySampleMovement* InSampleMovement);
-	static void StartMovingVolumeSamplesLocally(class AActor* InActor, class UCurveVector* InCenterOfMassOffsetCurve, float BuoyancyScalarAtNewPosition, class UCurveFloat* BuoyancyScalarCurve, class UCurveFloat* ProbeMovementCurve, float MoveTime, struct FWaterBuoyancy* InWaterBuoyancy, struct FBuoyancySampleMovement* InSampleMovement, TArray<struct FBuoyancySampleMovementConfigurationEntry>* NewSampleData);
+	static void TickLocalSampleMovement(AActor* InActor, float DeltaTime, FWaterBuoyancy* InWaterBuoyancy, FBuoyancySampleMovement* InSampleMovement);
+	static void StartMovingVolumeSamplesLocallyByRandomConfigurationIndex(AActor* InActor, FWaterBuoyancy* InWaterBuoyancy, FBuoyancySampleMovement* InSampleMovement);
+	static void StartMovingVolumeSamplesLocallyByConfigurationIndex(AActor* InActor, int ConfigurationIndex, FWaterBuoyancy* InWaterBuoyancy, FBuoyancySampleMovement* InSampleMovement);
+	static void StartMovingVolumeSamplesLocally(AActor* InActor, UCurveVector* InCenterOfMassOffsetCurve, float BuoyancyScalarAtNewPosition, UCurveFloat* BuoyancyScalarCurve, UCurveFloat* ProbeMovementCurve, float MoveTime, FWaterBuoyancy* InWaterBuoyancy, FBuoyancySampleMovement* InSampleMovement, TArray<FBuoyancySampleMovementConfigurationEntry>* NewSampleData);
 };
 
 
@@ -382,11 +382,11 @@ public:
 
 
 // Class Water.WaterInteractionComponent
-// 0x0020 (0x05D0 - 0x05B0)
+// 0x0020 (0x05E0 - 0x05C0)
 class UWaterInteractionComponent : public UBoxComponent
 {
 public:
-	unsigned char                                      UnknownData00[0x20];                                      // 0x05B0(0x0020) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x20];                                      // 0x05C0(0x0020) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -395,23 +395,24 @@ public:
 	}
 
 
-	void LeaveWaterPlane(class UBaseWaterComponent* WaterComponent);
+	void LeaveWaterPlane(UBaseWaterComponent* WaterComponent);
 	void LeaveWaterExclusionZone();
 	bool IsUsingWaterExcludedZone();
 	bool IsUsingNonDefaultWaterPlane();
 	bool IsInWaterExcludedZone();
-	class UBaseWaterComponent* GetWaterPlaneComponent();
+	UBaseWaterComponent* GetWaterPlaneComponent();
 	unsigned char GetNumberOfWaterPlanes();
-	void EnterWaterPlane(class UBaseWaterComponent* WaterComponent);
+	void EnterWaterPlane(UBaseWaterComponent* WaterComponent);
 	void EnterWaterExclusionZone();
 };
 
 
 // Class Water.WaterPlaneExclusionComponent
-// 0x0000 (0x00C8 - 0x00C8)
+// 0x0010 (0x00D8 - 0x00C8)
 class UWaterPlaneExclusionComponent : public UActorComponent
 {
 public:
+	FActorComponentSelector                            UseSpecificComponentForOverlaps;                          // 0x00C8(0x0010) (Edit, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -420,8 +421,8 @@ public:
 	}
 
 
-	void OnOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex);
-	void OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const struct FHitResult& SweepResult);
+	void OnOverlapEnd(AActor* OtherActor, UPrimitiveComponent* OtherComp, int OtherBodyIndex);
+	void OnOverlapBegin(AActor* OtherActor, UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool FromSweep, const FHitResult& SweepResult);
 };
 
 
@@ -453,10 +454,10 @@ public:
 	}
 
 
-	static void TickProbes(class AActor* InOwner, float InDeltaTime, TArray<struct FWaterSplashProbe>* InSplashProbes);
-	static void TickProbe(class AActor* InOwner, float InDeltaTime, struct FWaterSplashProbe* InSplashProbe);
-	static void SetSamplingTime(float SamplingTime, TArray<struct FWaterSplashProbe>* InSplashProbes);
-	static struct FVector GetRelativeWaterHeightChangeSpd(int ProbeIndex, TArray<struct FWaterSplashProbe>* InSplashProbes);
+	static void TickProbes(AActor* InOwner, float InDeltaTime, TArray<FWaterSplashProbe>* InSplashProbes);
+	static void TickProbe(AActor* InOwner, float InDeltaTime, FWaterSplashProbe* InSplashProbe);
+	static void SetSamplingTime(float SamplingTime, TArray<FWaterSplashProbe>* InSplashProbes);
+	static FVector GetRelativeWaterHeightChangeSpd(int ProbeIndex, TArray<FWaterSplashProbe>* InSplashProbes);
 };
 
 
@@ -465,22 +466,22 @@ public:
 class UWaterSpoutVFXComponent : public UActorComponent
 {
 public:
-	TArray<struct FWaterSpout>                         WaterSpouts;                                              // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
-	struct FVector                                     SplashEffectPointBottomZ;                                 // 0x00D8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<FWaterSpout>                                WaterSpouts;                                              // 0x00C8(0x0010) (Edit, ZeroConstructor, DisableEditOnInstance)
+	FVector                                            SplashEffectPointBottomZ;                                 // 0x00D8(0x000C) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x4];                                       // 0x00E4(0x0004) MISSED OFFSET
-	class UObject*                                     SpoutParticleSystem;                                      // 0x00E8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
-	class UObject*                                     SplashParticleSystem;                                     // 0x00F0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UObject*                                           SpoutParticleSystem;                                      // 0x00E8(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UObject*                                           SplashParticleSystem;                                     // 0x00F0(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 	float                                              WaterSplashDelayMin;                                      // 0x00F8(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              WaterSplashDelayMax;                                      // 0x00FC(0x0004) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
 	float                                              SplashEffectVFXOffset;                                    // 0x0100(0x0004) (Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
 	float                                              SplashSweepRadius;                                        // 0x0104(0x0004) (Edit, ZeroConstructor, IsPlainOldData)
 	bool                                               ShouldSpawnKillPlaneAtSplash;                             // 0x0108(0x0001) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData01[0x7];                                       // 0x0109(0x0007) MISSED OFFSET
-	class UStaticMesh*                                 SplashKillPlaneMesh;                                      // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FVector                                     SplashKillPlaneScale;                                     // 0x0118(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
+	UStaticMesh*                                       SplashKillPlaneMesh;                                      // 0x0110(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FVector                                            SplashKillPlaneScale;                                     // 0x0118(0x000C) (Edit, ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData02[0x4];                                       // 0x0124(0x0004) MISSED OFFSET
-	class UStaticMeshComponent*                        SplashKillPlane;                                          // 0x0128(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
-	TArray<struct FWaterSpout>                         ActiveWaterSpouts;                                        // 0x0130(0x0010) (ZeroConstructor)
+	UStaticMeshComponent*                              SplashKillPlane;                                          // 0x0128(0x0008) (ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData)
+	TArray<FWaterSpout>                                ActiveWaterSpouts;                                        // 0x0130(0x0010) (ZeroConstructor)
 	unsigned char                                      UnknownData03[0x18];                                      // 0x0140(0x0018) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -490,7 +491,7 @@ public:
 	}
 
 
-	void AddSplashVFXSpawnerWithLocation(struct FWaterSpout* WaterSplashLocator);
+	void AddSplashVFXSpawnerWithLocation(FWaterSpout* WaterSplashLocator);
 	void ActivateSplashVFXWithDelay();
 };
 

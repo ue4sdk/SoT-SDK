@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Spyglass.BP_Spyglass_C
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x0890 - 0x0890)
 class ABP_Spyglass_C : public ASpyglass
 {
 public:

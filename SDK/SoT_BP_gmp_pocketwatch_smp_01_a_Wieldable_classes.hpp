@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_gmp_pocketwatch_smp_01_a_Wieldable.BP_gmp_pocketwatch_smp_01_a_Wieldable_C
-// 0x0000 (0x0A60 - 0x0A60)
+// 0x0000 (0x0A80 - 0x0A80)
 class ABP_gmp_pocketwatch_smp_01_a_Wieldable_C : public ABP_PocketWatch_C
 {
 public:

@@ -19,7 +19,7 @@ namespace SDK
 class ABP_FishingFloat_C : public AFishingFloat
 {
 public:
-	class UStaticMeshComponent*                        StaticMesh;                                               // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStaticMeshComponent*                              StaticMesh;                                               // 0x07F0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

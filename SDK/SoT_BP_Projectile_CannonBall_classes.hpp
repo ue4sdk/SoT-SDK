@@ -15,13 +15,13 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_Projectile_CannonBall.BP_Projectile_CannonBall_C
-// 0x0018 (0x0648 - 0x0630)
+// 0x0018 (0x0668 - 0x0650)
 class ABP_Projectile_CannonBall_C : public ACannonProjectile
 {
 public:
-	class USphereCollisionExtentAdjustOverTimeComponent* SphereCollisionExtentAdjustOverTime;                      // 0x0630(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        CannonBall;                                               // 0x0638(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USphereComponent*                            Collision;                                                // 0x0640(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USphereCollisionExtentAdjustOverTimeComponent*     SphereCollisionExtentAdjustOverTime;                      // 0x0650(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStaticMeshComponent*                              CannonBall;                                               // 0x0658(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	USphereComponent*                                  Collision;                                                // 0x0660(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

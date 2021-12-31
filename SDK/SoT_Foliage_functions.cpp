@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Foliage_classes.hpp"
+#include "SoT_Foliage_parameters.hpp"
 
 namespace SDK
 {
@@ -15,25 +15,17 @@ namespace SDK
 // Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UStaticMesh*             StaticMesh                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FVector                 CenterPosition                 (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// UStaticMesh*                   StaticMesh                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// FVector                        CenterPosition                 (Parm, ZeroConstructor, IsPlainOldData)
 // float                          Radius                         (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UFoliageStatistics::FoliageOverlappingSphereCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FVector& CenterPosition, float Radius)
+int UFoliageStatistics::FoliageOverlappingSphereCount(UObject* WorldContextObject, UStaticMesh* StaticMesh, const FVector& CenterPosition, float Radius)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount"));
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class UStaticMesh*             StaticMesh;
-		struct FVector                 CenterPosition;
-		float                          Radius;
-		int                            ReturnValue;
-	} params;
-
+	UFoliageStatistics_FoliageOverlappingSphereCount_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.StaticMesh = StaticMesh;
 	params.CenterPosition = CenterPosition;
@@ -49,23 +41,16 @@ int UFoliageStatistics::FoliageOverlappingSphereCount(class UObject* WorldContex
 // Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount
 // (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
-// class UObject*                 WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
-// class UStaticMesh*             StaticMesh                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
-// struct FBox                    Box                            (Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       WorldContextObject             (Parm, ZeroConstructor, IsPlainOldData)
+// UStaticMesh*                   StaticMesh                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// FBox                           Box                            (Parm, ZeroConstructor, IsPlainOldData)
 // int                            ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-int UFoliageStatistics::FoliageOverlappingBoxCount(class UObject* WorldContextObject, class UStaticMesh* StaticMesh, const struct FBox& Box)
+int UFoliageStatistics::FoliageOverlappingBoxCount(UObject* WorldContextObject, UStaticMesh* StaticMesh, const FBox& Box)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount"));
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		class UStaticMesh*             StaticMesh;
-		struct FBox                    Box;
-		int                            ReturnValue;
-	} params;
-
+	UFoliageStatistics_FoliageOverlappingBoxCount_Params params;
 	params.WorldContextObject = WorldContextObject;
 	params.StaticMesh = StaticMesh;
 	params.Box = Box;
@@ -80,25 +65,17 @@ int UFoliageStatistics::FoliageOverlappingBoxCount(class UObject* WorldContextOb
 // Function Foliage.InteractiveFoliageActor.CapsuleTouched
 // (Final, Native, Protected, HasOutParms)
 // Parameters:
-// class AActor*                  Other                          (Parm, ZeroConstructor, IsPlainOldData)
-// class UPrimitiveComponent*     OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
+// AActor*                        Other                          (Parm, ZeroConstructor, IsPlainOldData)
+// UPrimitiveComponent*           OtherComp                      (Parm, ZeroConstructor, InstancedReference, IsPlainOldData)
 // int                            OtherBodyIndex                 (Parm, ZeroConstructor, IsPlainOldData)
 // bool                           bFromSweep                     (Parm, ZeroConstructor, IsPlainOldData)
-// struct FHitResult              OverlapInfo                    (ConstParm, Parm, OutParm, ReferenceParm)
+// FHitResult                     OverlapInfo                    (ConstParm, Parm, OutParm, ReferenceParm)
 
-void AInteractiveFoliageActor::CapsuleTouched(class AActor* Other, class UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const struct FHitResult& OverlapInfo)
+void AInteractiveFoliageActor::CapsuleTouched(AActor* Other, UPrimitiveComponent* OtherComp, int OtherBodyIndex, bool bFromSweep, const FHitResult& OverlapInfo)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Foliage.InteractiveFoliageActor.CapsuleTouched"));
 
-	struct
-	{
-		class AActor*                  Other;
-		class UPrimitiveComponent*     OtherComp;
-		int                            OtherBodyIndex;
-		bool                           bFromSweep;
-		struct FHitResult              OverlapInfo;
-	} params;
-
+	AInteractiveFoliageActor_CapsuleTouched_Params params;
 	params.Other = Other;
 	params.OtherComp = OtherComp;
 	params.OtherBodyIndex = OtherBodyIndex;
@@ -118,11 +95,7 @@ void UProceduralFoliageSpawner::Simulate(int NumSteps)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Foliage.ProceduralFoliageSpawner.Simulate"));
 
-	struct
-	{
-		int                            NumSteps;
-	} params;
-
+	UProceduralFoliageSpawner_Simulate_Params params;
 	params.NumSteps = NumSteps;
 
 	UObject::ProcessEvent(fn, &params);

@@ -35,7 +35,7 @@ public:
 class UAssetReferencer : public UDataAsset
 {
 public:
-	TArray<TAssetPtr<class UClass>>                    AssetsToReference;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
+	TArray<TAssetPtr<class UObject>>                   AssetsToReference;                                        // 0x0028(0x0010) (Edit, ZeroConstructor)
 
 	static UClass* StaticClass()
 	{
@@ -76,7 +76,7 @@ public:
 
 
 	static void SetHitchThreshold(int InThreshold);
-	static class FString GetMaxHitchNameThisFrame();
+	static FString GetMaxHitchNameThisFrame();
 	static int GetMaxHitchLengthThisFrameMs();
 	static void DumpThisFramesHitchesToLog();
 	static bool DidHitchOccurThisFrame();
@@ -88,7 +88,7 @@ public:
 class UMemoryUsageVisualiserSettings : public UObject
 {
 public:
-	TArray<struct FMemoryVisualiserCategory>           VisualiserCategories;                                     // 0x0028(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
+	TArray<FMemoryVisualiserCategory>                  VisualiserCategories;                                     // 0x0028(0x0010) (Edit, ZeroConstructor, Config, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -120,7 +120,7 @@ class UStallDetector : public UObject
 {
 public:
 	unsigned char                                      UnknownData00[0x8];                                       // 0x0028(0x0008) MISSED OFFSET
-	struct FScriptMulticastDelegate                    Callback;                                                 // 0x0030(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
+	FScriptMulticastDelegate                           Callback;                                                 // 0x0030(0x0010) (ZeroConstructor, InstancedReference, BlueprintAssignable)
 	unsigned char                                      UnknownData01[0x10];                                      // 0x0040(0x0010) MISSED OFFSET
 
 	static UClass* StaticClass()
@@ -131,7 +131,7 @@ public:
 
 
 	void Deactivate();
-	static class UStallDetector* CreateStallDetector(float Delay, bool CreateActive);
+	static UStallDetector* CreateStallDetector(float Delay, bool CreateActive);
 	void Activate();
 };
 
@@ -149,8 +149,8 @@ public:
 	}
 
 
-	static void FindAllStaticMeshComponents(class UObject* WorldContextObject, TArray<class UStaticMesh*> MeshFilter, class ULevel* RestrictToLevel, TArray<struct FStaticMeshComponentList>* OutComponentLists);
-	static void FindAllStaticMeshActors(class UObject* WorldContextObject, TArray<class UStaticMesh*> MeshFilter, class ULevel* RestrictToLevel, TArray<struct FStaticMeshActorList>* OutActorLists);
+	static void FindAllStaticMeshComponents(UObject* WorldContextObject, TArray<UStaticMesh*> MeshFilter, ULevel* RestrictToLevel, TArray<FStaticMeshComponentList>* OutComponentLists);
+	static void FindAllStaticMeshActors(UObject* WorldContextObject, TArray<UStaticMesh*> MeshFilter, ULevel* RestrictToLevel, TArray<FStaticMeshActorList>* OutActorLists);
 };
 
 

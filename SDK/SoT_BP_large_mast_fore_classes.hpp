@@ -19,9 +19,9 @@ namespace SDK
 class ABP_large_mast_fore_C : public ABP_Mast_C
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x09F8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        shp_flag_pennant_pole_01_a;                               // 0x0A00(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UStaticMeshComponent*                        shp_flag_pennant_01_a;                                    // 0x0A08(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x09F8(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	UStaticMeshComponent*                              shp_flag_pennant_pole_01_a;                               // 0x0A00(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	UStaticMeshComponent*                              shp_flag_pennant_01_a;                                    // 0x0A08(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{
@@ -31,7 +31,7 @@ public:
 
 
 	void UserConstructionScript();
-	void OnMastDescLoaded(class UMastDescAsset* MastDesc);
+	void OnMastDescLoaded(UMastDescAsset* MastDesc);
 	void ExecuteUbergraph_BP_large_mast_fore(int EntryPoint);
 };
 

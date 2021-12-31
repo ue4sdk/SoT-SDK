@@ -15,11 +15,11 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_wpn_flintlock_pistol_shd_01_a_v01_ItemInfo.BP_wpn_flintlock_pistol_shd_01_a_v01_ItemInfo_C
-// 0x0008 (0x0510 - 0x0508)
+// 0x0008 (0x0508 - 0x0500)
 class ABP_wpn_flintlock_pistol_shd_01_a_v01_ItemInfo_C : public AItemInfo
 {
 public:
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0508(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

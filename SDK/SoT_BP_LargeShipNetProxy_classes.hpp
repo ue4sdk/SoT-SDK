@@ -19,9 +19,9 @@ namespace SDK
 class ABP_LargeShipNetProxy_C : public AShipNetProxy
 {
 public:
-	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x04C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
-	class UStaticMeshComponent*                        EmissaryFlags;                                            // 0x04C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	TArray<class UMaterialInstanceDynamic*>            Dynamic_Materials;                                        // 0x04D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
+	FPointerToUberGraphFrame                           UberGraphFrame;                                           // 0x04C0(0x0008) (ZeroConstructor, Transient, DuplicateTransient)
+	UStaticMeshComponent*                              EmissaryFlags;                                            // 0x04C8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	TArray<UMaterialInstanceDynamic*>                  Dynamic_Materials;                                        // 0x04D0(0x0010) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance)
 
 	static UClass* StaticClass()
 	{
@@ -30,8 +30,8 @@ public:
 	}
 
 
-	void Set_Colour_on_All_Materials(const struct FName& Variable_Name, const struct FLinearColor& Value);
-	void Set_Value_on_All_Materials(const struct FName& Variable_Name, float Value);
+	void Set_Colour_on_All_Materials(const FName& Variable_Name, const FLinearColor& Value);
+	void Set_Value_on_All_Materials(const FName& Variable_Name, float Value);
 	void Apply_Bits_to_Lanterns(int Lantern_Bits);
 	void Create_Dynamic_Materials();
 	void UserConstructionScript();

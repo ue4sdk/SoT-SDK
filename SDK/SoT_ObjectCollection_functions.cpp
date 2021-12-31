@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_ObjectCollection_classes.hpp"
+#include "SoT_ObjectCollection_parameters.hpp"
 
 namespace SDK
 {

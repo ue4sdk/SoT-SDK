@@ -30,11 +30,11 @@ public:
 
 
 // Class SeasonProgression.PlayerSeasonProgressionComponent
-// 0x00B0 (0x0178 - 0x00C8)
+// 0x00C0 (0x0188 - 0x00C8)
 class UPlayerSeasonProgressionComponent : public UActorComponent
 {
 public:
-	unsigned char                                      UnknownData00[0xB0];                                      // 0x00C8(0x00B0) MISSED OFFSET
+	unsigned char                                      UnknownData00[0xC0];                                      // 0x00C8(0x00C0) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{

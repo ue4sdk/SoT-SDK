@@ -27,8 +27,8 @@ public:
 	}
 
 
-	void GetLineIntersectionFromPlane(const struct FVector& LineStart, const struct FVector& LineEnd, bool* Intersect, struct FVector* IntersectionPoint);
-	void GetDistanceFromPlane(const struct FVector& Location, float* Distance);
+	void GetLineIntersectionFromPlane(const FVector& LineStart, const FVector& LineEnd, bool* Intersect, FVector* IntersectionPoint);
+	void GetDistanceFromPlane(const FVector& Location, float* Distance);
 	void GetWaterLevel(float* WaterLevel);
 	void AddWater(float Water_Amount);
 };

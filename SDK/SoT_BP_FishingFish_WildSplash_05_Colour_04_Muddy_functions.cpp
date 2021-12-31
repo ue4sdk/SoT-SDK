@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_FishingFish_WildSplash_05_Colour_04_Muddy_classes.hpp"
+#include "SoT_BP_FishingFish_WildSplash_05_Colour_04_Muddy_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_FishingFish_WildSplash_05_Colour_04_Muddy_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_FishingFish_WildSplash_05_Colour_04_Muddy.BP_FishingFish_WildSplash_05_Colour_04_Muddy_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_FishingFish_WildSplash_05_Colour_04_Muddy_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

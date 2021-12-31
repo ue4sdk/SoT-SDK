@@ -55,9 +55,9 @@ struct FWindServiceParams
 // 0x0070
 struct FWindTurbulenceParameters
 {
-	struct FFloatRange                                 GustPower;                                                // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	struct FWeightedProbabilityRangeOfRanges           GustTime;                                                 // 0x0010(0x0030) (Edit, BlueprintVisible)
-	struct FWeightedProbabilityRangeOfRanges           CalmTime;                                                 // 0x0040(0x0030) (Edit, BlueprintVisible)
+	FFloatRange                                        GustPower;                                                // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	FWeightedProbabilityRangeOfRanges                  GustTime;                                                 // 0x0010(0x0030) (Edit, BlueprintVisible)
+	FWeightedProbabilityRangeOfRanges                  CalmTime;                                                 // 0x0040(0x0030) (Edit, BlueprintVisible)
 };
 
 // ScriptStruct Wind.WindMagnitudeChanged

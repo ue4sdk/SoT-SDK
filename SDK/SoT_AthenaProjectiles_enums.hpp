@@ -19,7 +19,8 @@ enum class EProjectileFiredFrom : uint8_t
 	EProjectileFiredFrom__Character = 1,
 	EProjectileFiredFrom__DeepSeaCannon = 2,
 	EProjectileFiredFrom__DeepSeaCharacter = 3,
-	EProjectileFiredFrom__EProjectileFiredFrom_MAX = 4
+	EProjectileFiredFrom__RowboatCannon = 4,
+	EProjectileFiredFrom__EProjectileFiredFrom_MAX = 5
 };
 
 

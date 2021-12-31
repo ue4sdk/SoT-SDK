@@ -27,8 +27,8 @@ public:
 	}
 
 
-	float GetDampeningFactor(const struct FVector2D& InPosition);
-	float GetChoppinessFactor(const struct FVector2D& InPosition);
+	float GetDampeningFactor(const FVector2D& InPosition);
+	float GetChoppinessFactor(const FVector2D& InPosition);
 };
 
 

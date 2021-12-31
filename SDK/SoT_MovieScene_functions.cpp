@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_MovieScene_classes.hpp"
+#include "SoT_MovieScene_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UMovieSceneSequencePlayer::Stop()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.Stop"));
 
-	struct
-	{
-	} params;
-
+	UMovieSceneSequencePlayer_Stop_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -35,10 +32,7 @@ void UMovieSceneSequencePlayer::StartPlayingNextTick()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.StartPlayingNextTick"));
 
-	struct
-	{
-	} params;
-
+	UMovieSceneSequencePlayer_StartPlayingNextTick_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -53,11 +47,7 @@ void UMovieSceneSequencePlayer::SetPlayRate(float PlayRate)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.SetPlayRate"));
 
-	struct
-	{
-		float                          PlayRate;
-	} params;
-
+	UMovieSceneSequencePlayer_SetPlayRate_Params params;
 	params.PlayRate = PlayRate;
 
 	UObject::ProcessEvent(fn, &params);
@@ -74,12 +64,7 @@ void UMovieSceneSequencePlayer::SetPlaybackRange(float NewStartTime, float NewEn
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.SetPlaybackRange"));
 
-	struct
-	{
-		float                          NewStartTime;
-		float                          NewEndTime;
-	} params;
-
+	UMovieSceneSequencePlayer_SetPlaybackRange_Params params;
 	params.NewStartTime = NewStartTime;
 	params.NewEndTime = NewEndTime;
 
@@ -96,12 +81,24 @@ void UMovieSceneSequencePlayer::SetPlaybackPosition(float NewPlaybackPosition)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.SetPlaybackPosition"));
 
-	struct
-	{
-		float                          NewPlaybackPosition;
-	} params;
-
+	UMovieSceneSequencePlayer_SetPlaybackPosition_Params params;
 	params.NewPlaybackPosition = NewPlaybackPosition;
+
+	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function MovieScene.MovieSceneSequencePlayer.SetOverridePlaybackSettings
+// (Final, Native, Public, HasOutParms, BlueprintCallable)
+// Parameters:
+// FMovieSceneSequencePlaybackSettings InSettings                     (ConstParm, Parm, OutParm, ReferenceParm)
+
+void UMovieSceneSequencePlayer::SetOverridePlaybackSettings(const FMovieSceneSequencePlaybackSettings& InSettings)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.SetOverridePlaybackSettings"));
+
+	UMovieSceneSequencePlayer_SetOverridePlaybackSettings_Params params;
+	params.InSettings = InSettings;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -114,10 +111,7 @@ void UMovieSceneSequencePlayer::PlayReverse()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.PlayReverse"));
 
-	struct
-	{
-	} params;
-
+	UMovieSceneSequencePlayer_PlayReverse_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -132,11 +126,7 @@ void UMovieSceneSequencePlayer::PlayLooping(int NumLoops)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.PlayLooping"));
 
-	struct
-	{
-		int                            NumLoops;
-	} params;
-
+	UMovieSceneSequencePlayer_PlayLooping_Params params;
 	params.NumLoops = NumLoops;
 
 	UObject::ProcessEvent(fn, &params);
@@ -150,10 +140,7 @@ void UMovieSceneSequencePlayer::Play()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.Play"));
 
-	struct
-	{
-	} params;
-
+	UMovieSceneSequencePlayer_Play_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -166,10 +153,7 @@ void UMovieSceneSequencePlayer::Pause()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.Pause"));
 
-	struct
-	{
-	} params;
-
+	UMovieSceneSequencePlayer_Pause_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -184,11 +168,7 @@ bool UMovieSceneSequencePlayer::IsPlaying()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.IsPlaying"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UMovieSceneSequencePlayer_IsPlaying_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -205,11 +185,7 @@ float UMovieSceneSequencePlayer::GetPlayRate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.GetPlayRate"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UMovieSceneSequencePlayer_GetPlayRate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -226,11 +202,7 @@ float UMovieSceneSequencePlayer::GetPlaybackStart()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackStart"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UMovieSceneSequencePlayer_GetPlaybackStart_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -247,11 +219,7 @@ float UMovieSceneSequencePlayer::GetPlaybackPosition()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackPosition"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UMovieSceneSequencePlayer_GetPlaybackPosition_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -268,11 +236,7 @@ float UMovieSceneSequencePlayer::GetPlaybackEnd()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.GetPlaybackEnd"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UMovieSceneSequencePlayer_GetPlaybackEnd_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -289,11 +253,7 @@ float UMovieSceneSequencePlayer::GetLength()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.GetLength"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	UMovieSceneSequencePlayer_GetLength_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -308,10 +268,7 @@ void UMovieSceneSequencePlayer::ChangePlaybackDirection()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function MovieScene.MovieSceneSequencePlayer.ChangePlaybackDirection"));
 
-	struct
-	{
-	} params;
-
+	UMovieSceneSequencePlayer_ChangePlaybackDirection_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }

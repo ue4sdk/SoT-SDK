@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_ProposeVoyage_classes.hpp"
+#include "SoT_BP_Prompt_ProposeVoyage_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void UBP_Prompt_ProposeVoyage_C::PostInitialize()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_ProposeVoyage.BP_Prompt_ProposeVoyage_C.PostInitialize"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_ProposeVoyage_C_PostInitialize_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -31,17 +28,13 @@ void UBP_Prompt_ProposeVoyage_C::PostInitialize()
 // Function BP_Prompt_ProposeVoyage.BP_Prompt_ProposeVoyage_C.Prompt_OfferPurchased
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FOfferPurchasedEvent    Ev                             (Parm)
+// FAthena_FOfferPurchasedEvent   Ev                             (Parm)
 
-void UBP_Prompt_ProposeVoyage_C::Prompt_OfferPurchased(const struct FOfferPurchasedEvent& Ev)
+void UBP_Prompt_ProposeVoyage_C::Prompt_OfferPurchased(const FAthena_FOfferPurchasedEvent& Ev)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_ProposeVoyage.BP_Prompt_ProposeVoyage_C.Prompt_OfferPurchased"));
 
-	struct
-	{
-		struct FOfferPurchasedEvent    Ev;
-	} params;
-
+	UBP_Prompt_ProposeVoyage_C_Prompt_OfferPurchased_Params params;
 	params.Ev = Ev;
 
 	UObject::ProcessEvent(fn, &params);
@@ -55,10 +48,7 @@ void UBP_Prompt_ProposeVoyage_C::UnregisterOtherEvents_Implementable()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_ProposeVoyage.BP_Prompt_ProposeVoyage_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_ProposeVoyage_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -71,10 +61,7 @@ void UBP_Prompt_ProposeVoyage_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_ProposeVoyage.BP_Prompt_ProposeVoyage_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_ProposeVoyage_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -89,11 +76,7 @@ void UBP_Prompt_ProposeVoyage_C::ExecuteUbergraph_BP_Prompt_ProposeVoyage(int En
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_ProposeVoyage.BP_Prompt_ProposeVoyage_C.ExecuteUbergraph_BP_Prompt_ProposeVoyage"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_ProposeVoyage_C_ExecuteUbergraph_BP_Prompt_ProposeVoyage_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

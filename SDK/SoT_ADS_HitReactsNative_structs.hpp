@@ -19,7 +19,7 @@ namespace SDK
 // 0x0040
 struct FADS_HitReactsNative
 {
-	struct FAthenaAnimationHitReactsAnimData           HitReacts_5_DC8106B64C5F1676B9DD179112A43691;             // 0x0000(0x0040) (Edit, BlueprintVisible)
+	FAthenaAnimationHitReactsAnimData                  HitReacts_5_DC8106B64C5F1676B9DD179112A43691;             // 0x0000(0x0040) (Edit, BlueprintVisible)
 };
 
 }

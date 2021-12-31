@@ -7,8 +7,8 @@
 #endif
 
 #include "SoT_Basic.hpp"
-#include "SoT_Engine_classes.hpp"
 #include "SoT_OnlineSubsystemUtils_classes.hpp"
+#include "SoT_Engine_classes.hpp"
 
 namespace SDK
 {
@@ -20,9 +20,9 @@ namespace SDK
 // 0x0030
 struct FBlueprintLiveStreamInfo
 {
-	class FString                                      GameName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
-	class FString                                      StreamName;                                               // 0x0010(0x0010) (Edit, ZeroConstructor)
-	class FString                                      URL;                                                      // 0x0020(0x0010) (Edit, ZeroConstructor)
+	FString                                            GameName;                                                 // 0x0000(0x0010) (Edit, ZeroConstructor)
+	FString                                            StreamName;                                               // 0x0010(0x0010) (Edit, ZeroConstructor)
+	FString                                            URL;                                                      // 0x0020(0x0010) (Edit, ZeroConstructor)
 };
 
 }

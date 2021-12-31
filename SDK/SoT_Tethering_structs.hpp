@@ -21,7 +21,7 @@ namespace SDK
 // 0x0008
 struct FTetherProjectileImpact
 {
-	class AActor*                                      HitActor;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
+	AActor*                                            HitActor;                                                 // 0x0000(0x0008) (ZeroConstructor, IsPlainOldData)
 };
 
 }

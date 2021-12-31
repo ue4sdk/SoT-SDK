@@ -1,10 +1,10 @@
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MediumMapTable_classes.hpp"
+#include "SoT_BP_MediumMapTable_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_MediumMapTable_C::UpdateBlurEffect()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumMapTable.BP_MediumMapTable_C.UpdateBlurEffect"));
 
-	struct
-	{
-	} params;
-
+	ABP_MediumMapTable_C_UpdateBlurEffect_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -39,13 +36,7 @@ struct FVector ABP_MediumMapTable_C::GetClosestInteractionPoint(const struct FVe
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumMapTable.BP_MediumMapTable_C.GetClosestInteractionPoint"));
 
-	struct
-	{
-		struct FVector                 ReferencePosition;
-		float                          OutInteractionPointRadius;
-		struct FVector                 ReturnValue;
-	} params;
-
+	ABP_MediumMapTable_C_GetClosestInteractionPoint_Params params;
 	params.ReferencePosition = ReferencePosition;
 
 	UObject::ProcessEvent(fn, &params);
@@ -64,10 +55,7 @@ void ABP_MediumMapTable_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumMapTable.BP_MediumMapTable_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_MediumMapTable_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -80,10 +68,7 @@ void ABP_MediumMapTable_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumMapTable.BP_MediumMapTable_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_MediumMapTable_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -96,10 +81,7 @@ void ABP_MediumMapTable_C::SetEffectActiveWhenClose()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumMapTable.BP_MediumMapTable_C.SetEffectActiveWhenClose"));
 
-	struct
-	{
-	} params;
-
+	ABP_MediumMapTable_C_SetEffectActiveWhenClose_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -115,12 +97,7 @@ void ABP_MediumMapTable_C::OnMapActivate(bool IsMapActive, class UTextureRenderT
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumMapTable.BP_MediumMapTable_C.OnMapActivate"));
 
-	struct
-	{
-		bool                           IsMapActive;
-		class UTextureRenderTarget2D*  Texture;
-	} params;
-
+	ABP_MediumMapTable_C_OnMapActivate_Params params;
 	params.IsMapActive = IsMapActive;
 	params.Texture = Texture;
 
@@ -138,12 +115,7 @@ void ABP_MediumMapTable_C::OnMapMove(const struct FVector2D& CentreLocation, con
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumMapTable.BP_MediumMapTable_C.OnMapMove"));
 
-	struct
-	{
-		struct FVector2D               CentreLocation;
-		struct FVector2D               ZoomLevel;
-	} params;
-
+	ABP_MediumMapTable_C_OnMapMove_Params params;
 	params.CentreLocation = CentreLocation;
 	params.ZoomLevel = ZoomLevel;
 
@@ -160,11 +132,7 @@ void ABP_MediumMapTable_C::ExecuteUbergraph_BP_MediumMapTable(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MediumMapTable.BP_MediumMapTable_C.ExecuteUbergraph_BP_MediumMapTable"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_MediumMapTable_C_ExecuteUbergraph_BP_MediumMapTable_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

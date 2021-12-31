@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_ActorGlow_classes.hpp"
+#include "SoT_BP_ActorGlow_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_ActorGlow_C::StartGlowEffect()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ActorGlow.BP_ActorGlow_C.StartGlowEffect"));
 
-	struct
-	{
-	} params;
-
+	ABP_ActorGlow_C_StartGlowEffect_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -37,11 +34,7 @@ bool ABP_ActorGlow_C::StartReaction()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ActorGlow.BP_ActorGlow_C.StartReaction"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	ABP_ActorGlow_C_StartReaction_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,11 +51,7 @@ bool ABP_ActorGlow_C::StopReaction()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ActorGlow.BP_ActorGlow_C.StopReaction"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	ABP_ActorGlow_C_StopReaction_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -77,10 +66,7 @@ void ABP_ActorGlow_C::CollectDecalMaterials()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ActorGlow.BP_ActorGlow_C.CollectDecalMaterials"));
 
-	struct
-	{
-	} params;
-
+	ABP_ActorGlow_C_CollectDecalMaterials_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -93,10 +79,7 @@ void ABP_ActorGlow_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ActorGlow.BP_ActorGlow_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_ActorGlow_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,10 +92,7 @@ void ABP_ActorGlow_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ActorGlow.BP_ActorGlow_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_ActorGlow_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -127,11 +107,7 @@ void ABP_ActorGlow_C::ExecuteUbergraph_BP_ActorGlow(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_ActorGlow.BP_ActorGlow_C.ExecuteUbergraph_BP_ActorGlow"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_ActorGlow_C_ExecuteUbergraph_BP_ActorGlow_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

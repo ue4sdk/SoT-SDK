@@ -23,7 +23,7 @@ struct FRegionAssetsList
 {
 	TEnumAsByte<ENetworkRegion>                        Region;                                                   // 0x0000(0x0001) (ZeroConstructor, IsPlainOldData)
 	unsigned char                                      UnknownData00[0x7];                                       // 0x0001(0x0007) MISSED OFFSET
-	TArray<struct FStringAssetReference>               CachedAssetsForRegion;                                    // 0x0008(0x0010) (ZeroConstructor)
+	TArray<FStringAssetReference>                      CachedAssetsForRegion;                                    // 0x0008(0x0010) (ZeroConstructor)
 };
 
 }

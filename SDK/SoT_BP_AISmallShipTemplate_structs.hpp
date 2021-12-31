@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.0) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -8,8 +8,8 @@
 
 #include "SoT_Basic.hpp"
 #include "SoT_Athena_classes.hpp"
-#include "SoT_AIShips_classes.hpp"
 #include "SoT_Engine_classes.hpp"
+#include "SoT_AIShips_classes.hpp"
 
 namespace SDK
 {

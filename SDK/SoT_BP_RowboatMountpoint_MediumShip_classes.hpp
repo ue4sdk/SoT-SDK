@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,7 +15,7 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_RowboatMountpoint_MediumShip.BP_RowboatMountpoint_MediumShip_C
-// 0x0000 (0x0658 - 0x0658)
+// 0x0000 (0x0660 - 0x0660)
 class ABP_RowboatMountpoint_MediumShip_C : public ABP_RowboatMountpoint_Base_C
 {
 public:

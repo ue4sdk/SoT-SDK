@@ -19,7 +19,7 @@ namespace SDK
 // 0x0068
 struct FADS_CapstanNative
 {
-	struct FAthenaAnimationCapstanAnimData             Capstan_96_579F170245AA51983D5CFEA6301823EF;              // 0x0000(0x0068) (Edit, BlueprintVisible)
+	FAthenaAnimationCapstanAnimData                    Capstan_96_579F170245AA51983D5CFEA6301823EF;              // 0x0000(0x0068) (Edit, BlueprintVisible)
 };
 
 }

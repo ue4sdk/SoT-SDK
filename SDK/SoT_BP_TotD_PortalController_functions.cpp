@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_TotD_PortalController_classes.hpp"
+#include "SoT_BP_TotD_PortalController_parameters.hpp"
 
 namespace SDK
 {
@@ -25,15 +25,7 @@ void ABP_TotD_PortalController_C::SetParameters(float PortalOpen, float LightSca
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TotD_PortalController.BP_TotD_PortalController_C.SetParameters"));
 
-	struct
-	{
-		float                          PortalOpen;
-		float                          LightScale;
-		float                          CrackVisibility;
-		float                          PortalSwirlVisibility;
-		float                          CloudVisibility;
-	} params;
-
+	ABP_TotD_PortalController_C_SetParameters_Params params;
 	params.PortalOpen = PortalOpen;
 	params.LightScale = LightScale;
 	params.CrackVisibility = CrackVisibility;
@@ -51,10 +43,7 @@ void ABP_TotD_PortalController_C::SetPortalPositionAndOrientation()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TotD_PortalController.BP_TotD_PortalController_C.SetPortalPositionAndOrientation"));
 
-	struct
-	{
-	} params;
-
+	ABP_TotD_PortalController_C_SetPortalPositionAndOrientation_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -67,10 +56,7 @@ void ABP_TotD_PortalController_C::CollectMaterialsAndLights()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TotD_PortalController.BP_TotD_PortalController_C.CollectMaterialsAndLights"));
 
-	struct
-	{
-	} params;
-
+	ABP_TotD_PortalController_C_CollectMaterialsAndLights_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -83,10 +69,7 @@ void ABP_TotD_PortalController_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TotD_PortalController.BP_TotD_PortalController_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_TotD_PortalController_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -99,10 +82,7 @@ void ABP_TotD_PortalController_C::Timeline_0__FinishedFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TotD_PortalController.BP_TotD_PortalController_C.Timeline_0__FinishedFunc"));
 
-	struct
-	{
-	} params;
-
+	ABP_TotD_PortalController_C_Timeline_0__FinishedFunc_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -115,10 +95,7 @@ void ABP_TotD_PortalController_C::Timeline_0__UpdateFunc()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TotD_PortalController.BP_TotD_PortalController_C.Timeline_0__UpdateFunc"));
 
-	struct
-	{
-	} params;
-
+	ABP_TotD_PortalController_C_Timeline_0__UpdateFunc_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -131,10 +108,7 @@ void ABP_TotD_PortalController_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TotD_PortalController.BP_TotD_PortalController_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_TotD_PortalController_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -149,11 +123,7 @@ void ABP_TotD_PortalController_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TotD_PortalController.BP_TotD_PortalController_C.ReceiveTick"));
 
-	struct
-	{
-		float                          DeltaSeconds;
-	} params;
-
+	ABP_TotD_PortalController_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -167,10 +137,7 @@ void ABP_TotD_PortalController_C::OpenPortal()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TotD_PortalController.BP_TotD_PortalController_C.OpenPortal"));
 
-	struct
-	{
-	} params;
-
+	ABP_TotD_PortalController_C_OpenPortal_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -185,11 +152,7 @@ void ABP_TotD_PortalController_C::ExecuteUbergraph_BP_TotD_PortalController(int 
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_TotD_PortalController.BP_TotD_PortalController_C.ExecuteUbergraph_BP_TotD_PortalController"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_TotD_PortalController_C_ExecuteUbergraph_BP_TotD_PortalController_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

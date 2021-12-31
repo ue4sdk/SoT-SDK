@@ -30,9 +30,9 @@ struct FQuestVariableTradeRouteData : public FQuestVariable
 // 0x0020
 struct FTradeRouteMapping
 {
-	struct FIslandSelectionType                        StartIsland;                                              // 0x0000(0x0008) (Edit)
-	class UClass*                                      DifficultyBand;                                           // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
-	struct FStringAssetReference                       TradeRouteReference;                                      // 0x0010(0x0010) (Edit, ZeroConstructor)
+	FIslandSelectionType                               StartIsland;                                              // 0x0000(0x0008) (Edit)
+	UClass*                                            DifficultyBand;                                           // 0x0008(0x0008) (Edit, ZeroConstructor, IsPlainOldData)
+	FStringAssetReference                              TradeRouteReference;                                      // 0x0010(0x0010) (Edit, ZeroConstructor)
 };
 
 }

@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_Prompt_EmissaryEncounteredSkellyFort_classes.hpp"
+#include "SoT_BP_Prompt_EmissaryEncounteredSkellyFort_parameters.hpp"
 
 namespace SDK
 {
@@ -15,17 +15,13 @@ namespace SDK
 // Function BP_Prompt_EmissaryEncounteredSkellyFort.BP_Prompt_EmissaryEncounteredSkellyFort_C.OnEmissaryEncounteredSkellyFort
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryEncounteredSkellyFortNetworkEvent NewParam                       (Parm)
+// FEmissaryEncounteredSkellyFortNetworkEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryEncounteredSkellyFort_C::OnEmissaryEncounteredSkellyFort(const struct FEmissaryEncounteredSkellyFortNetworkEvent& NewParam)
+void UBP_Prompt_EmissaryEncounteredSkellyFort_C::OnEmissaryEncounteredSkellyFort(const FEmissaryEncounteredSkellyFortNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredSkellyFort.BP_Prompt_EmissaryEncounteredSkellyFort_C.OnEmissaryEncounteredSkellyFort"));
 
-	struct
-	{
-		struct FEmissaryEncounteredSkellyFortNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredSkellyFort_C_OnEmissaryEncounteredSkellyFort_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -35,17 +31,13 @@ void UBP_Prompt_EmissaryEncounteredSkellyFort_C::OnEmissaryEncounteredSkellyFort
 // Function BP_Prompt_EmissaryEncounteredSkellyFort.BP_Prompt_EmissaryEncounteredSkellyFort_C.EmissaryEncounteredSkellyFort
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// struct FEmissaryEncounteredSkellyFortNetworkEvent NewParam                       (Parm)
+// FEmissaryEncounteredSkellyFortNetworkEvent NewParam                       (Parm)
 
-void UBP_Prompt_EmissaryEncounteredSkellyFort_C::EmissaryEncounteredSkellyFort(const struct FEmissaryEncounteredSkellyFortNetworkEvent& NewParam)
+void UBP_Prompt_EmissaryEncounteredSkellyFort_C::EmissaryEncounteredSkellyFort(const FEmissaryEncounteredSkellyFortNetworkEvent& NewParam)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredSkellyFort.BP_Prompt_EmissaryEncounteredSkellyFort_C.EmissaryEncounteredSkellyFort"));
 
-	struct
-	{
-		struct FEmissaryEncounteredSkellyFortNetworkEvent NewParam;
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredSkellyFort_C_EmissaryEncounteredSkellyFort_Params params;
 	params.NewParam = NewParam;
 
 	UObject::ProcessEvent(fn, &params);
@@ -59,10 +51,7 @@ void UBP_Prompt_EmissaryEncounteredSkellyFort_C::Evaluate()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredSkellyFort.BP_Prompt_EmissaryEncounteredSkellyFort_C.Evaluate"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredSkellyFort_C_Evaluate_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -75,10 +64,7 @@ void UBP_Prompt_EmissaryEncounteredSkellyFort_C::RegisterOtherEvents_Implementab
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredSkellyFort.BP_Prompt_EmissaryEncounteredSkellyFort_C.RegisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredSkellyFort_C_RegisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -91,10 +77,7 @@ void UBP_Prompt_EmissaryEncounteredSkellyFort_C::UnregisterOtherEvents_Implement
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredSkellyFort.BP_Prompt_EmissaryEncounteredSkellyFort_C.UnregisterOtherEvents_Implementable"));
 
-	struct
-	{
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredSkellyFort_C_UnregisterOtherEvents_Implementable_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -109,11 +92,7 @@ void UBP_Prompt_EmissaryEncounteredSkellyFort_C::ExecuteUbergraph_BP_Prompt_Emis
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_Prompt_EmissaryEncounteredSkellyFort.BP_Prompt_EmissaryEncounteredSkellyFort_C.ExecuteUbergraph_BP_Prompt_EmissaryEncounteredSkellyFort"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	UBP_Prompt_EmissaryEncounteredSkellyFort_C_ExecuteUbergraph_BP_Prompt_EmissaryEncounteredSkellyFort_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

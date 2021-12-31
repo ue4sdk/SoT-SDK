@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_Repair_classes.hpp"
+#include "SoT_Repair_parameters.hpp"
 
 namespace SDK
 {
@@ -19,29 +19,41 @@ void URepairableInterface::HandleDestroy()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Repair.RepairableInterface.HandleDestroy"));
 
-	struct
-	{
-	} params;
-
+	URepairableInterface_HandleDestroy_Params params;
 
 	UObject::ProcessEvent(fn, &params);
+}
+
+
+// Function Repair.RepairableInterface.GetUndoRepairTime
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// AActor*                        Interactor                     (Parm, ZeroConstructor, IsPlainOldData)
+// float                          ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+
+float URepairableInterface::GetUndoRepairTime(AActor* Interactor)
+{
+	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Repair.RepairableInterface.GetUndoRepairTime"));
+
+	URepairableInterface_GetUndoRepairTime_Params params;
+	params.Interactor = Interactor;
+
+	UObject::ProcessEvent(fn, &params);
+
+	return params.ReturnValue;
 }
 
 
 // Function Repair.RepairableInterface.GetRepairType
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UClass*                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UClass* URepairableInterface::GetRepairType()
+UClass* URepairableInterface::GetRepairType()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Repair.RepairableInterface.GetRepairType"));
 
-	struct
-	{
-		class UClass*                  ReturnValue;
-	} params;
-
+	URepairableInterface_GetRepairType_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -58,11 +70,7 @@ float URepairableInterface::GetRepairTime()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Repair.RepairableInterface.GetRepairTime"));
 
-	struct
-	{
-		float                          ReturnValue;
-	} params;
-
+	URepairableInterface_GetRepairTime_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -79,11 +87,7 @@ TEnumAsByte<ERepairableState> URepairableInterface::GetRepairableState()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Repair.RepairableInterface.GetRepairableState"));
 
-	struct
-	{
-		TEnumAsByte<ERepairableState>  ReturnValue;
-	} params;
-
+	URepairableInterface_GetRepairableState_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -94,17 +98,13 @@ TEnumAsByte<ERepairableState> URepairableInterface::GetRepairableState()
 // Function Repair.RepairingInterface.GetRepairType
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UClass*                  ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
+// UClass*                        ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-class UClass* URepairingInterface::GetRepairType()
+UClass* URepairingInterface::GetRepairType()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function Repair.RepairingInterface.GetRepairType"));
 
-	struct
-	{
-		class UClass*                  ReturnValue;
-	} params;
-
+	URepairingInterface_GetRepairType_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 

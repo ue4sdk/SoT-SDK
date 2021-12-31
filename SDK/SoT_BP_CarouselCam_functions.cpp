@@ -1,10 +1,10 @@
-// Sea of Thieves (1.4) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_CarouselCam_classes.hpp"
+#include "SoT_BP_CarouselCam_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_CarouselCam_C::resetLockIconVis()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.resetLockIconVis"));
 
-	struct
-	{
-	} params;
-
+	ABP_CarouselCam_C_resetLockIconVis_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -38,12 +35,7 @@ void ABP_CarouselCam_C::fadeLockIcon(int CharID, bool* IconFadeDone)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.fadeLockIcon"));
 
-	struct
-	{
-		int                            CharID;
-		bool                           IconFadeDone;
-	} params;
-
+	ABP_CarouselCam_C_fadeLockIcon_Params params;
 	params.CharID = CharID;
 
 	UObject::ProcessEvent(fn, &params);
@@ -62,11 +54,7 @@ void ABP_CarouselCam_C::toggleLockIcon(int CharID)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.toggleLockIcon"));
 
-	struct
-	{
-		int                            CharID;
-	} params;
-
+	ABP_CarouselCam_C_toggleLockIcon_Params params;
 	params.CharID = CharID;
 
 	UObject::ProcessEvent(fn, &params);
@@ -80,10 +68,7 @@ void ABP_CarouselCam_C::resetCamLoc()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.resetCamLoc"));
 
-	struct
-	{
-	} params;
-
+	ABP_CarouselCam_C_resetCamLoc_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -96,10 +81,7 @@ void ABP_CarouselCam_C::initLights()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.initLights"));
 
-	struct
-	{
-	} params;
-
+	ABP_CarouselCam_C_initLights_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -123,20 +105,7 @@ void ABP_CarouselCam_C::camAnimViaCurves(class UCameraComponent* Camera, class U
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.camAnimViaCurves"));
 
-	struct
-	{
-		class UCameraComponent*        Camera;
-		class UCurveVector*            Location;
-		class UCurveVector*            Rotation;
-		class UCurveFloat*             FOV;
-		float                          Time;
-		bool                           Reverse;
-		float                          PlayRate;
-		bool                           done;
-		float                          DeltaTime;
-		struct FVector                 cameraLoc;
-	} params;
-
+	ABP_CarouselCam_C_camAnimViaCurves_Params params;
 	params.Camera = Camera;
 	params.Location = Location;
 	params.Rotation = Rotation;
@@ -166,12 +135,7 @@ void ABP_CarouselCam_C::setLightSector(int sectorID, struct FRotator* Rotator)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.setLightSector"));
 
-	struct
-	{
-		int                            sectorID;
-		struct FRotator                Rotator;
-	} params;
-
+	ABP_CarouselCam_C_setLightSector_Params params;
 	params.sectorID = sectorID;
 
 	UObject::ProcessEvent(fn, &params);
@@ -194,15 +158,7 @@ void ABP_CarouselCam_C::lightSwitch(bool onLights, bool offLights, float Timespa
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.lightSwitch"));
 
-	struct
-	{
-		bool                           onLights;
-		bool                           offLights;
-		float                          Timespan;
-		TArray<class ULightComponent*> LightSet;
-		TArray<float>                  LightSetIntensity;
-	} params;
-
+	ABP_CarouselCam_C_lightSwitch_Params params;
 	params.onLights = onLights;
 	params.offLights = offLights;
 	params.Timespan = Timespan;
@@ -226,12 +182,7 @@ void ABP_CarouselCam_C::getSectorID(int* sectorID, float* Remainder)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.getSectorID"));
 
-	struct
-	{
-		int                            sectorID;
-		float                          Remainder;
-	} params;
-
+	ABP_CarouselCam_C_getSectorID_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -254,14 +205,7 @@ void ABP_CarouselCam_C::getCamIdleTime(float Time, float* IdleTime, float* MaxId
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.getCamIdleTime"));
 
-	struct
-	{
-		float                          Time;
-		float                          IdleTime;
-		float                          MaxIdleTime;
-		bool                           idleStatus;
-	} params;
-
+	ABP_CarouselCam_C_getCamIdleTime_Params params;
 	params.Time = Time;
 
 	UObject::ProcessEvent(fn, &params);
@@ -284,11 +228,7 @@ void ABP_CarouselCam_C::getCamRotDelta(float* rotDelta)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.getCamRotDelta"));
 
-	struct
-	{
-		float                          rotDelta;
-	} params;
-
+	ABP_CarouselCam_C_getCamRotDelta_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -307,12 +247,7 @@ void ABP_CarouselCam_C::zeroTest(float Float, bool* Result)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.zeroTest"));
 
-	struct
-	{
-		float                          Float;
-		bool                           Result;
-	} params;
-
+	ABP_CarouselCam_C_zeroTest_Params params;
 	params.Float = Float;
 
 	UObject::ProcessEvent(fn, &params);
@@ -336,16 +271,7 @@ void ABP_CarouselCam_C::zoomCam(float Time, bool zoomInTrigger, bool zoomOutTrig
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.zoomCam"));
 
-	struct
-	{
-		float                          Time;
-		bool                           zoomInTrigger;
-		bool                           zoomOutTrigger;
-		bool                           selectedZoomTrigger;
-		bool                           zoomInDone;
-		bool                           zoomOutDone;
-	} params;
-
+	ABP_CarouselCam_C_zoomCam_Params params;
 	params.Time = Time;
 	params.zoomInTrigger = zoomInTrigger;
 	params.zoomOutTrigger = zoomOutTrigger;
@@ -370,12 +296,7 @@ void ABP_CarouselCam_C::getCamLoc(class USceneComponent* CameraRef, struct FVect
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.getCamLoc"));
 
-	struct
-	{
-		class USceneComponent*         CameraRef;
-		struct FVector                 CamLoc;
-	} params;
-
+	ABP_CarouselCam_C_getCamLoc_Params params;
 	params.CameraRef = CameraRef;
 
 	UObject::ProcessEvent(fn, &params);
@@ -394,11 +315,7 @@ void ABP_CarouselCam_C::matchRotPerChar(bool* rotMatch)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.matchRotPerChar"));
 
-	struct
-	{
-		bool                           rotMatch;
-	} params;
-
+	ABP_CarouselCam_C_matchRotPerChar_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -417,12 +334,7 @@ void ABP_CarouselCam_C::set_timeSpan(float StartTime, float* Timespan)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.set_timeSpan"));
 
-	struct
-	{
-		float                          StartTime;
-		float                          Timespan;
-	} params;
-
+	ABP_CarouselCam_C_set_timeSpan_Params params;
 	params.StartTime = StartTime;
 
 	UObject::ProcessEvent(fn, &params);
@@ -441,11 +353,7 @@ void ABP_CarouselCam_C::matchTimespan(bool* timesup)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.matchTimespan"));
 
-	struct
-	{
-		bool                           timesup;
-	} params;
-
+	ABP_CarouselCam_C_matchTimespan_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -467,15 +375,7 @@ void ABP_CarouselCam_C::set_camAimRot(float YawValue, float Timespan, bool Conti
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.set_camAimRot"));
 
-	struct
-	{
-		float                          YawValue;
-		float                          Timespan;
-		bool                           Continuous;
-		float                          ResultYawValue;
-		bool                           rotSnapDone;
-	} params;
-
+	ABP_CarouselCam_C_set_camAimRot_Params params;
 	params.YawValue = YawValue;
 	params.Timespan = Timespan;
 	params.Continuous = Continuous;
@@ -498,11 +398,7 @@ void ABP_CarouselCam_C::get_camAimRot(struct FRotator* Rotation)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.get_camAimRot"));
 
-	struct
-	{
-		struct FRotator                Rotation;
-	} params;
-
+	ABP_CarouselCam_C_get_camAimRot_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -520,11 +416,7 @@ void ABP_CarouselCam_C::set_maxTimespan(float* cameraMoveTime)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.set_maxTimespan"));
 
-	struct
-	{
-		float                          cameraMoveTime;
-	} params;
-
+	ABP_CarouselCam_C_set_maxTimespan_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 
@@ -545,14 +437,7 @@ void ABP_CarouselCam_C::Reset(bool lockIconVis, bool Continuous, bool Stop, floa
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.Reset"));
 
-	struct
-	{
-		bool                           lockIconVis;
-		bool                           Continuous;
-		bool                           Stop;
-		float                          initTime;
-	} params;
-
+	ABP_CarouselCam_C_Reset_Params params;
 	params.lockIconVis = lockIconVis;
 	params.Continuous = Continuous;
 	params.Stop = Stop;
@@ -582,20 +467,7 @@ void ABP_CarouselCam_C::moveCam(float Time, bool rotTrigger, float rotFactor, bo
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.moveCam"));
 
-	struct
-	{
-		float                          Time;
-		bool                           rotTrigger;
-		float                          rotFactor;
-		bool                           Continuous;
-		bool                           rotSnap;
-		bool                           Mouse;
-		int                            sectorID;
-		bool                           atDefaultZoom;
-		bool                           rotSnapDone;
-		struct FRotator                sectorRotator;
-	} params;
-
+	ABP_CarouselCam_C_moveCam_Params params;
 	params.Time = Time;
 	params.rotTrigger = rotTrigger;
 	params.rotFactor = rotFactor;
@@ -623,10 +495,7 @@ void ABP_CarouselCam_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_CarouselCam_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -639,10 +508,7 @@ void ABP_CarouselCam_C::ReceiveBeginPlay()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.ReceiveBeginPlay"));
 
-	struct
-	{
-	} params;
-
+	ABP_CarouselCam_C_ReceiveBeginPlay_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
@@ -657,11 +523,7 @@ void ABP_CarouselCam_C::ReceiveTick(float DeltaSeconds)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.ReceiveTick"));
 
-	struct
-	{
-		float                          DeltaSeconds;
-	} params;
-
+	ABP_CarouselCam_C_ReceiveTick_Params params;
 	params.DeltaSeconds = DeltaSeconds;
 
 	UObject::ProcessEvent(fn, &params);
@@ -677,11 +539,7 @@ void ABP_CarouselCam_C::ExecuteUbergraph_BP_CarouselCam(int EntryPoint)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_CarouselCam.BP_CarouselCam_C.ExecuteUbergraph_BP_CarouselCam"));
 
-	struct
-	{
-		int                            EntryPoint;
-	} params;
-
+	ABP_CarouselCam_C_ExecuteUbergraph_BP_CarouselCam_Params params;
 	params.EntryPoint = EntryPoint;
 
 	UObject::ProcessEvent(fn, &params);

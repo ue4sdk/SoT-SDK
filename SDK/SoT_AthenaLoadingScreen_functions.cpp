@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_AthenaLoadingScreen_classes.hpp"
+#include "SoT_AthenaLoadingScreen_parameters.hpp"
 
 namespace SDK
 {
@@ -21,11 +21,7 @@ bool UAthenaLoadingScreenBlueprintFunctionLibrary::IsLoadingScreenVisible()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary.IsLoadingScreenVisible"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UAthenaLoadingScreenBlueprintFunctionLibrary_IsLoadingScreenVisible_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -43,11 +39,7 @@ bool UAthenaLoadingScreenBlueprintFunctionLibrary::IsLoadingScreenRegistered()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaLoadingScreen.AthenaLoadingScreenBlueprintFunctionLibrary.IsLoadingScreenRegistered"));
 
-	struct
-	{
-		bool                           ReturnValue;
-	} params;
-
+	UAthenaLoadingScreenBlueprintFunctionLibrary_IsLoadingScreenRegistered_Params params;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();
 	defaultObj->ProcessEvent(fn, &params);
@@ -59,19 +51,14 @@ bool UAthenaLoadingScreenBlueprintFunctionLibrary::IsLoadingScreenRegistered()
 // Function AthenaLoadingScreen.LoadingUtilities.IsStreaming
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// class UObject*                 WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
+// UObject*                       WorldContextObject             (ConstParm, Parm, ZeroConstructor, IsPlainOldData)
 // bool                           ReturnValue                    (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData)
 
-bool ULoadingUtilities::IsStreaming(class UObject* WorldContextObject)
+bool ULoadingUtilities::IsStreaming(UObject* WorldContextObject)
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function AthenaLoadingScreen.LoadingUtilities.IsStreaming"));
 
-	struct
-	{
-		class UObject*                 WorldContextObject;
-		bool                           ReturnValue;
-	} params;
-
+	ULoadingUtilities_IsStreaming_Params params;
 	params.WorldContextObject = WorldContextObject;
 
 	static auto defaultObj = StaticClass()->CreateDefaultObject();

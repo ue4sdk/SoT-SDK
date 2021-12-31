@@ -18,7 +18,7 @@ namespace SDK
 // 0x0010
 struct FBP_AnimSequenceVariants
 {
-	TArray<class UAnimSequence*>                       AnimSequence_47_0C261F9545659CFDCCC15C9F19F605D0;         // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
+	TArray<UAnimSequence*>                             AnimSequence_47_0C261F9545659CFDCCC15C9F19F605D0;         // 0x0000(0x0010) (Edit, BlueprintVisible, ZeroConstructor)
 };
 
 }

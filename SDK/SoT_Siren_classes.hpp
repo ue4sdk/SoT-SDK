@@ -135,11 +135,11 @@ public:
 
 
 // Class Siren.SirenController
-// 0x0008 (0x09D8 - 0x09D0)
+// 0x0008 (0x09E0 - 0x09D8)
 class ASirenController : public AAthenaSwimmingAIController
 {
 public:
-	unsigned char                                      UnknownData00[0x8];                                       // 0x09D0(0x0008) MISSED OFFSET
+	unsigned char                                      UnknownData00[0x8];                                       // 0x09D8(0x0008) MISSED OFFSET
 
 	static UClass* StaticClass()
 	{
@@ -170,7 +170,7 @@ public:
 class USirenPartsDesc : public UMeshMemoryConstraintsAIPartsDesc
 {
 public:
-	class UClass*                                      AnimationID;                                              // 0x0080(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
+	UClass*                                            AnimationID;                                              // 0x0080(0x0008) (Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

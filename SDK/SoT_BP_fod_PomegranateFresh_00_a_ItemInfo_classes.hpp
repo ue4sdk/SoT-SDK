@@ -1,6 +1,6 @@
 #pragma once
 
-// Sea of Thieves (2.1) SDK
+// Sea of Thieves (2) SDK
 
 #ifdef _MSC_VER
 	#pragma pack(push, 0x8)
@@ -15,14 +15,14 @@ namespace SDK
 //---------------------------------------------------------------------------
 
 // BlueprintGeneratedClass BP_fod_PomegranateFresh_00_a_ItemInfo.BP_fod_PomegranateFresh_00_a_ItemInfo_C
-// 0x0020 (0x0528 - 0x0508)
+// 0x0020 (0x0520 - 0x0500)
 class ABP_fod_PomegranateFresh_00_a_ItemInfo_C : public AItemInfo
 {
 public:
-	class UMaterialManipulationSettingsComponent*      MaterialManipulationSettings;                             // 0x0508(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class ULightWeightStatusEffectManagerComponent*    LightweightStatusEffectManager;                           // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class UCookableComponent*                          Cookable;                                                 // 0x0518(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
-	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0520(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UMaterialManipulationSettingsComponent*      MaterialManipulationSettings;                             // 0x0500(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class ULightWeightStatusEffectManagerComponent*    LightweightStatusEffectManager;                           // 0x0508(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UCookableComponent*                          Cookable;                                                 // 0x0510(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             DefaultSceneRoot;                                         // 0x0518(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
 
 	static UClass* StaticClass()
 	{

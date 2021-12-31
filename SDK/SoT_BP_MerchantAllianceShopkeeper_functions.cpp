@@ -4,7 +4,7 @@
 	#pragma pack(push, 0x8)
 #endif
 
-#include "SoT_BP_MerchantAllianceShopkeeper_classes.hpp"
+#include "SoT_BP_MerchantAllianceShopkeeper_parameters.hpp"
 
 namespace SDK
 {
@@ -19,10 +19,7 @@ void ABP_MerchantAllianceShopkeeper_C::UserConstructionScript()
 {
 	static auto fn = UObject::FindObject<UFunction>(_xor_("Function BP_MerchantAllianceShopkeeper.BP_MerchantAllianceShopkeeper_C.UserConstructionScript"));
 
-	struct
-	{
-	} params;
-
+	ABP_MerchantAllianceShopkeeper_C_UserConstructionScript_Params params;
 
 	UObject::ProcessEvent(fn, &params);
 }
